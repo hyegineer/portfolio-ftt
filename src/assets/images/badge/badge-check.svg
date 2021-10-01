@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="76" height="36" viewBox="0 0 76 36">
+  <g id="badge-check" transform="translate(-386.305 -4517.348)">
+    <g id="그룹_4142" data-name="그룹 4142" transform="translate(387.063 4517.348)">
+      <path id="패스_103" data-name="패스 103" d="M2784.242,705h-70.033l-5.967,36,10.011-9.671h62.522l-3.466-13.164Z" transform="translate(-2709 -705)" fill="#00eb79"/>
+    </g>
+    <text id="About" transform="translate(398.552 4535.561)" fill="#171820" font-size="14" font-family="Montserrat-BoldItalic, Montserrat" font-weight="700" font-style="italic"><tspan x="0" y="0">Check!</tspan></text>
+  </g>
+</svg>

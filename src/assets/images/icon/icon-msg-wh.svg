@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29.301" height="29.449" viewBox="0 0 29.301 29.449">
+  <defs>
+    <filter id="제외_2" x="0" y="0.555" width="29.301" height="28.895" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.149"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="icon-msg-wh" transform="translate(1.648)">
+    <rect id="사각형_2053" data-name="사각형 2053" width="26" height="26" fill="#fff" opacity="0"/>
+    <g transform="matrix(1, 0, 0, 1, -1.65, 0)" filter="url(#제외_2)">
+      <path id="제외_2-2" data-name="제외 2" d="M24767.549,24352.9a.189.189,0,0,1-.15-.08.186.186,0,0,1-.027-.174l.609-1.9a9.226,9.226,0,0,1-6.979-8.645,8.586,8.586,0,0,1,2.973-6.43,11,11,0,0,1,14.354,0,8.407,8.407,0,0,1,.719,12.146,10.394,10.394,0,0,1-5.65,3.152l-5.783,1.922A.205.205,0,0,1,24767.549,24352.9Zm8.834-11.965a1.253,1.253,0,1,0,1.256,1.256A1.256,1.256,0,0,0,24776.383,24340.934Zm-5.107,0a1.253,1.253,0,1,0,1.258,1.256A1.256,1.256,0,0,0,24771.275,24340.934Zm-5.1,0a1.253,1.253,0,1,0,1.25,1.256A1.256,1.256,0,0,0,24766.176,24340.934Z" transform="translate(-24756.5 -24329.95)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

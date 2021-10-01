@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29.01" height="27.257" viewBox="0 0 29.01 27.257">
+  <defs>
+    <filter id="패스_6691" x="0.037" y="4.5" width="28.935" height="16.631" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.149"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="패스_6689" x="13.264" y="7.037" width="15.746" height="17.709" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-2"/>
+      <feFlood flood-opacity="0.149"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="패스_6690" x="0" y="7.037" width="15.746" height="17.709" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-3"/>
+      <feFlood flood-opacity="0.149"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="패스_6692" x="0.04" y="12.236" width="28.93" height="15.022" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-4"/>
+      <feFlood flood-opacity="0.149"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="icon-msg-email" transform="translate(1.808 0.308)">
+    <rect id="사각형_2053" data-name="사각형 2053" width="26" height="26" transform="translate(-0.308 -0.308)" fill="#fff" opacity="0"/>
+    <g id="그룹_6055" data-name="그룹 6055">
+      <g transform="matrix(1, 0, 0, 1, -1.81, -0.31)" filter="url(#패스_6691)">
+        <path id="패스_6691-2" data-name="패스 6691" d="M19.682,80H2.173A1.235,1.235,0,0,0,.96,81.064l9.967,6.567,9.967-6.567A1.235,1.235,0,0,0,19.682,80Z" transform="translate(3.58 -74)" fill="#fff"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -1.81, -0.31)" filter="url(#패스_6689)">
+        <path id="패스_6689-2" data-name="패스 6689" d="M339.392,149.341l6.746,4.265V144.9Z" transform="translate(-321.63 -136.36)" fill="#fff"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -1.81, -0.31)" filter="url(#패스_6690)">
+        <path id="패스_6690-2" data-name="패스 6690" d="M0,144.9v8.709l6.746-4.265Z" transform="translate(4.5 -136.36)" fill="#fff"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -1.81, -0.31)" filter="url(#패스_6692)">
+        <path id="패스_6692-2" data-name="패스 6692" d="M13.1,277.921l-1.77,1.166a.628.628,0,0,1-.688,0l-1.77-1.167-7.851,4.966a1.233,1.233,0,0,0,1.211,1.056H19.743a1.233,1.233,0,0,0,1.211-1.056Z" transform="translate(3.52 -264.18)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

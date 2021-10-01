@@ -1,0 +1,51 @@
+// gray color는 따로 사용하고, red등의 컬러 추가해서 사용
+$color-set: (
+  primary: #6900d9,
+  active-bd-color: #8f58ff,
+);
+
+$zIndex-set: (
+  popup: 100,
+  header: 20,
+  fixed: 10,
+  default: 1,
+  zero: 0,
+  minus: -1,
+);
+
+$path-set: (
+  btn: "~@/assets/images/btn/",
+  icon: "~@/assets/images/icon/",
+  img: "~@/assets/images/img/",
+  logo: "~@/assets/images/logo/",
+);
+
+$breakpoints: (
+  mb: (
+    600px: "모바일",
+  ),
+  sm: (
+    360px: "갤럭시 작은버전",
+  ),
+  xsm: (
+    350px: "아이폰 작은버전",
+  ),
+);
+
+$max-width: 1200px;
+$narrow-width: 460px;
+$narrow-width-320: 320px;
+$g-hd-height: em(90);
+$g-mb-hd-height: em(50);
+$g-ft-height: 207px;
+
+$g-box-radius: 10px;
+$g-box-dark-color: #1e1e1e;
+
+$g-gra-white: linear-gradient(to bottom, #fff, #e4dbef);
+
+$g-gra-bottom: linear-gradient(to bottom, #a34dff 26%, #6900d9);
+$g-gra-right: linear-gradient(to right, #a34dff 26%, #6900d9);
+$g-gra-45deg: linear-gradient(45deg, #a34dff, #6900d9);
+
+$g-mb-x-pd: 15px;

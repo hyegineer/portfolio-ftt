@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+  <g id="icon-expan" transform="translate(-885 -677)">
+    <rect id="사각형_2331" data-name="사각형 2331" width="42" height="42" transform="translate(885 677)" fill="#171820" opacity="0.5"/>
+    <g id="그룹_6394" data-name="그룹 6394">
+      <g id="그룹_6391" data-name="그룹 6391" transform="translate(0 -1)">
+        <path id="합치기_3" data-name="합치기 3" d="M-5549-12822v-8h8v1h-7v7Z" transform="translate(6442 13516)" fill="#fff"/>
+        <path id="합치기_4" data-name="합치기 4" d="M-5542-12822v-7h-7v-1h8v8Z" transform="translate(6460 13516)" fill="#fff"/>
+        <path id="합치기_6" data-name="합치기 6" d="M-5548-12822h-1v-8h1v7h7v1Z" transform="translate(6442 13534)" fill="#fff"/>
+        <path id="합치기_5" data-name="합치기 5" d="M-5542-12822h-7v-1h7v-7h1v8Z" transform="translate(6460 13534)" fill="#fff"/>
+      </g>
+      <g id="그룹_6393" data-name="그룹 6393" transform="translate(2 2)">
+        <g id="타원_378" data-name="타원 378" transform="translate(898 690)" fill="none" stroke="#fff" stroke-width="1.5">
+          <circle cx="5" cy="5" r="5" stroke="none"/>
+          <circle cx="5" cy="5" r="4.25" fill="none"/>
+        </g>
+        <line id="선_1057" data-name="선 1057" x2="3" y2="3" transform="translate(906.5 698.5)" fill="none" stroke="#fff" stroke-width="1.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

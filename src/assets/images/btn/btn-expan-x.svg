@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42.749" height="42.749" viewBox="0 0 42.749 42.749">
+  <defs>
+    <filter id="합치기_7" x="0" y="0" width="42.749" height="42.749" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="btn-expan-x" transform="translate(-1298.626 -280.626)">
+    <rect id="사각형_2337" data-name="사각형 2337" width="30" height="30" transform="translate(1305 287)" fill="#fff" opacity="0"/>
+    <g id="그룹_6396" data-name="그룹 6396" transform="translate(-126.375 -112.999)">
+      <g transform="matrix(1, 0, 0, 1, 1425, 393.63)" filter="url(#합치기_7)">
+        <path id="합치기_7-2" data-name="합치기 7" d="M-10234.627-12524.091l-8.838,8.839-3.534-3.534,8.838-8.839-8.838-8.838,3.534-3.538,8.84,8.84,8.838-8.84,3.534,3.534-8.838,8.84,8.841,8.841-3.537,3.534Z" transform="translate(10256 12549)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

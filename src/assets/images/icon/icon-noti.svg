@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00eb79"/>
+      <stop offset="1" stop-color="#00bb60"/>
+    </linearGradient>
+  </defs>
+  <g id="icon-noti" transform="translate(-433 -560)">
+    <circle id="타원_341" data-name="타원 341" cx="12" cy="12" r="12" transform="translate(433 560)" fill="url(#linear-gradient)"/>
+    <path id="About" d="M1.04-14H4.76L4.14-4.86H1.66ZM2.9.16A1.9,1.9,0,0,1,1.53-.37,1.724,1.724,0,0,1,.98-1.66a1.675,1.675,0,0,1,.54-1.27A1.929,1.929,0,0,1,2.9-3.44a1.929,1.929,0,0,1,1.38.51,1.675,1.675,0,0,1,.54,1.27A1.724,1.724,0,0,1,4.27-.37,1.9,1.9,0,0,1,2.9.16Z" transform="translate(442.02 579)" fill="#fff"/>
+  </g>
+</svg>

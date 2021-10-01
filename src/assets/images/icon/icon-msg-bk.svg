@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+  <g id="icon-msg-bk" transform="translate(0 -1)">
+    <g id="사각형_2240" data-name="사각형 2240" transform="translate(0 1)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="15" height="15" stroke="none"/>
+      <rect x="0.5" y="0.5" width="14" height="14" fill="none"/>
+    </g>
+    <g id="icon-msg-bk-2" data-name="icon-msg-bk" transform="translate(-2.057 -1.268)">
+      <path id="패스_4656" data-name="패스 4656" d="M14.033,94.321c0-3.472-3.141-6.287-7.016-6.287S0,90.849,0,94.321a6.4,6.4,0,0,0,4.825,5.973L4.4,101.609a.135.135,0,0,0,.169.172l4-1.328A6.485,6.485,0,0,0,14.033,94.321Z" transform="translate(2.541 -85.291)" fill="#171820"/>
+      <g id="그룹_4489" data-name="그룹 4489" transform="translate(5.249 8.225)">
+        <circle id="타원_10" data-name="타원 10" cx="0.868" cy="0.868" r="0.868" transform="translate(3.528)" fill="#fff"/>
+        <circle id="타원_11" data-name="타원 11" cx="0.868" cy="0.868" r="0.868" fill="#fff"/>
+        <circle id="타원_12" data-name="타원 12" cx="0.868" cy="0.868" r="0.868" transform="translate(7.055)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

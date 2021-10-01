@@ -1,0 +1,45 @@
+/* =================== font =================== */
+/* ---------- NexonLv2Gothic ---------- */
+@font-face {
+  font-family: "NexonLv2Gothic";
+  font-weight: 600;
+  src: url("~@/assets/fonts/A_NEXON_Lv2_Gothic/NexonLv2GothicBold.woff2")
+      format("woff2"),
+    url("~@/assets/fonts/A_NEXON_Lv2_Gothic/NexonLv2GothicBold.woff")
+      format("woff"),
+    url("~@/assets/fonts/A_NEXON_Lv2_Gothic/NexonLv2GothicBold.ttf")
+      format("truetype"),
+}
+
+@font-face {
+  font-family: "NexonLv2Gothic";
+  font-weight: 500;
+  src: url("~@/assets/fonts/A_NEXON_Lv2_Gothic/NexonLv2GothicMedium.woff2")
+      format("woff2"),
+    url("~@/assets/fonts/A_NEXON_Lv2_Gothic/NexonLv2GothicMedium.woff")
+      format("woff"),
+    url("~@/assets/fonts/A_NEXON_Lv2_Gothic/NexonLv2GothicMedium.ttf")
+      format("truetype"),
+}
+
+@font-face {
+  font-family: "NexonLv2Gothic";
+  font-weight: 400;
+  src: url("~@/assets/fonts/A_NEXON_Lv2_Gothic/NexonLv2Gothic.woff2")
+      format("woff2"),
+    url("~@/assets/fonts/A_NEXON_Lv2_Gothic/NexonLv2Gothic.woff")
+      format("woff"),
+    url("~@/assets/fonts/A_NEXON_Lv2_Gothic/NexonLv2Gothic.ttf")
+      format("truetype"),
+}
+
+@font-face {
+  font-family: "NexonLv2Gothic";
+  font-weight: 300;
+  src: url("~@/assets/fonts/A_NEXON_Lv2_Gothic/NexonLv2GothicLight.woff2")
+      format("woff2"),
+    url("~@/assets/fonts/A_NEXON_Lv2_Gothic/NexonLv2GothicLight.woff")
+      format("woff"),
+    url("~@/assets/fonts/A_NEXON_Lv2_Gothic/NexonLv2GothicLight.ttf")
+      format("truetype"),
+}
