@@ -10,7 +10,6 @@ import processImageFile from '~@/lib/processImageFile';
 import formDatas from '~@/lib/formDatas';
 
 import example from '~@/constants/example';
-import policyMent from '~@/constants/policy-ment';
 import addrList from '~@/constants/addr-list';
 import dayOfTheWeek from '~@/constants/day-of-the-week';
 import bankcode from '~@/constants/bankcode';
@@ -34,7 +33,6 @@ const mixin = {
 
         this.$constants = {
             example,
-            policyMent,
             addrList,
             dayOfTheWeek,
             bankcode,
@@ -114,11 +112,6 @@ const mixin = {
         ...pagination,
         ...processImageFile,
         formDatas,
-        /*
-    convertTime(time) {
-      return this.$moment(time).format('HH시 mm분 ss초')
-    },
-    */
         formatDate(date) {
             return this.$moment(date).format('YYYY.MM.DD');
         },
@@ -141,44 +134,15 @@ const mixin = {
         formatPrice(price) {
             return `${Number(price).toLocaleString()}`;
         },
-        formatStartEndDate(start, end) {
-            const isSame = Boolean(`${this.formatDate(start)}` === `${this.formatDate(end)}`);
-            
-            // 방송예정일 시작일과 종료일이 같을 경우
-            if(isSame) { // ex) 2021.09.21(화) 10:00~12:30
-                return `${this.formatWeeks24Date(start)}~${this.$moment(end).format('HH:mm')}`;
-            }
-
-            // 방송예정일 시작일과 종료일이 다를 경우
-            if(!isSame) { // ex) 2021.09.21(화) 10:00 ~ 2021.09.22(수) 10:00
-                return `${this.formatWeeks24Date(start)}~${this.formatWeeks24Date(end)}`;
-            }
-
-            if(!start && !end) {
-                return '방송예정일 없음';
-            }
-        },
-        formatStarAvg(obj) {
-            delete obj.avg; // 담고있는 avg 삭제
-      
-            const stars = Object.values(obj); // 8개 항목 value 합
-            let sum = null;
-
-            stars.forEach(x => {
-                sum += x;
-            });
-
-            return (sum / stars.length).toFixed(1);
-        },
-        // - 포함해서 숫자만 입력하게 하는 정규식
+        // - 포함해서 숫자만 입력하게 하는 정규식 (계좌번호 입력할 때)
         onlyNumAndHyphen(data) {
             return data.replace(/[^0-9-]/gi, '');
         },
         // 모든 특수문자 제외해서 숫자만 입력하게 하는 정규식
-        // onlyNum(data) {
-        //     return data.replace(/[^0-9]/g, '');
-        // },
-        // "10,000" -> 10000 으로 변환 
+        onlyNum(data) {
+            return data.replace(/[^0-9]/g, '');
+        },
+        // String "10,000" -> Number 10000 으로 변환 
         strToNum(str) {
             if(str) {
                 return parseInt(str.replace(/,/g, ''));
@@ -205,39 +169,21 @@ const mixin = {
                 return comma(uncomma(num));
             }
         },
-        hostName(data) { // user_type, user_name, user_org 필요
-            if(data.user_type === 'host') {
-                if(data.user_name) { 
-                    return `${data.user_name}`; 
-                }
-
-                return '실명 미입력';
-            }
-
-            if(data.user_type === 'host-org') {
-                if(data.user_org) { 
-                    return `${data.user_org}`;
-                }
-
-                return '업체명 미입력';
-            }
-        },
         scrollToTop() {
             // 스크롤 컨테이너 전체 스크롤 위로 이동
             document.querySelectorAll('html,body,#app,#page').forEach(x => { x.scrollTop = 0; });
         },
         lockScroll() {
             document.querySelector('html').style.overflow = 'hidden';
-            if (window.innerWidth >= 600) {
-                document.querySelector('html').style.paddingRight = 4 + 'px';
-            }
-            // console.log('스크롤막기 설정')
+            // if (window.innerWidth >= 600) {
+            //     document.querySelector('html').style.paddingRight = 4 + 'px';
+            // }
         },
         unlockScroll() {
             document.querySelector('html').style.overflow = 'auto';
-            if (window.innerWidth >= 600) {
-                document.querySelector('html').style.paddingRight = 0;
-            }
+            // if (window.innerWidth >= 600) {
+            //     document.querySelector('html').style.paddingRight = 0;
+            // }
         },
         savePositions(selectors = []) {
             // 주의! : $router.push, $router.replace 호출 직전에 실행
@@ -422,28 +368,6 @@ const mixin = {
             this.toggleModal({
                 visible: false,
                 type: null,
-            });
-        },
-        openTooltip(type) {
-            this.lockScroll();
-            this.toggleTooltip({
-                visible: true,
-                type: type,
-            });
-        },
-        openSellerDetail(type, data) {
-            this.lockScroll();
-            this.toggleTooltip({
-                visible: true,
-                type: type,
-            });
-            this.putSellerDetail(data);
-        },
-        closeTooltip(type = null) {
-            this.unlockScroll();
-            this.toggleTooltip({
-                visible: false,
-                type: type,
             });
         },
     },

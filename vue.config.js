@@ -33,10 +33,10 @@ module.exports = {
             },
         },
     },
-    devServer: isLocal // ...
-        ? undefined
-        : {
-            public: 'https://testapi.villains.link',
-            disableHostCheck: true,
-        },
+    // devServer: isLocal // ...
+    //     ? undefined
+    //     : {
+    //         public: 'https://testapi.villains.link',
+    //         disableHostCheck: true,
+    //     },
 };

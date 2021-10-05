@@ -34,7 +34,7 @@ VueRouter.prototype.replace = function replace(location) {
 };
 
 const routes = [
-    // 메인(광고주) - 광고주가 기본임
+    // 메인
     {
         path: '/',
         name: 'Index',
@@ -50,22 +50,10 @@ const routes = [
             next();
         },
     },
-    // 검색결과
-    {
-        path: '/search-index',
-        name: 'SearchIndex',
-        component: () => import('~@/views/SearchIndex'),
-        meta: { requiresResetScrollHeight: true },
-    },
     {
         path: '/util-postcode', // 우편번호 찾기
         name: 'UtilPostcode',
         component: () => import('~@/views/util/Postcode'),
-    },
-    {
-        path: '/purchase-redirect', // 결제 후 처리
-        name: 'PurchaseRedirect',
-        component: () => import('~@/views/util/PurchaseRedirect'),
     },
     /* ====================== auth ====================== */
     // 로그인
@@ -84,75 +72,13 @@ const routes = [
             next();
         },
     },
-    // 회원가입 인트로
-    {
-        path: '/register-intro',
-        name: 'RegisterIntro',
-        component: () => import('~@/views/auth/RegisterIntro'),
-        beforeEnter: (to, from, next) => {
-            if (store.getters.isUser && store.getters.isUserVerified) {
-                return next({
-                    replace: true,
-                    name: 'Index',
-                });
-            }
-            next();
-        },
-    },
-    // 회원가입-광고주
-    {
-        path: '/register',
-        name: 'Register',
-        component: () => import('~@/views/auth/Register'),
-        meta: { requiresResetScrollHeight: true },
-        beforeEnter: (to, from, next) => {
-            if (store.getters.isUser && store.getters.isUserVerified) {
-                return next({
-                    replace: true,
-                    name: 'Index',
-                });
-            }
-            next();
-        },
-    },
-    // 회원가입-쇼호스트
-    {
-        path: '/register-seller01',
-        name: 'RegisterSeller01',
-        component: () => import('~@/views/auth/RegisterSeller01'),
-        meta: { requiresResetScrollHeight: true },
-        beforeEnter: (to, from, next) => {
-            if (store.getters.isUser && store.getters.isUserVerified) {
-                return next({
-                    replace: true,
-                    name: 'Index',
-                });
-            }
-            next();
-        },
-    },
-    // 회원가입-커머스대행사
-    {
-        path: '/register-seller02',
-        name: 'RegisterSeller02',
-        component: () => import('~@/views/auth/RegisterSeller02'),
-        meta: { requiresResetScrollHeight: true },
-        beforeEnter: (to, from, next) => {
-            if (store.getters.isUser && store.getters.isUserVerified) {
-                return next({
-                    replace: true,
-                    name: 'Index',
-                });
-            }
-            next();
-        },
-    },
     // 아이디찾기
     {
         path: '/find-id',
         name: 'FindId',
         component: () => import('~@/views/auth/FindId'),
-        meta: { requiresResetScrollHeight: true },
+        meta: { requiresResetScrollHeight: true }, // 최상단 가게
+        // meta: { requiresAuth: true }, // 로그인안할 때 팅기게
     },
     // 비밀번호찾기
     {
@@ -197,219 +123,82 @@ const routes = [
         component: () => import('~@/views/company/Faq'),
         meta: { requiresResetScrollHeight: true },
     },
-    // 이벤트
-    {
-        path: '/event',
-        name: 'Event',
-        component: () => import('~@/views/company/Event'),
-        meta: { requiresResetScrollHeight: true },
-    },
-    /* ====================== 광고주와 쇼호스트 공통화면  ====================== */
-    // 쇼호스트&대행사 상세
-    {
-        path: '/sellers-detail/:id',
-        name: 'SellersDetail',
-        component: () => import('~@/views/common/SellersDetail'),
-        meta: { requiresAuth: true, requiresResetScrollHeight: true },
-    },
-    // 메세지
-    {
-        path: '/message',
-        name: 'Message',
-        component: () => import('~@/views/common/Message'),
-        meta: { requiresAuth: true, requiresResetScrollHeight: true },
-    },
-    /* ====================== users (광고주) ====================== */
+    /* ====================== 회원형태 1 ====================== */
     // 아래 페이지들은 모두 로그인 후 이용가능
-    {
-        path: '/users',
-        name: 'UsersIndex',
-        component: () => import('~@/views/users/Index'),
-        meta: { requiresAuth: true, requiresResetScrollHeight: true },
-        children: [
-            // 마이페이지
-            {
-                path: 'mypage-main',
-                name: 'UsersMypageMain',
-                component: () => import('~@/views/users/MypageMain'),
-            },
-            // 마이페이지-내정보수정
-            {
-                path: 'mypage-edit',
-                name: 'UsersMypageEdit',
-                component: () => import('~@/views/users/MypageEdit'),
-            },
-            // 마이페이지-찜목록
-            {
-                path: 'mypage-fav-list',
-                name: 'MypageFavList',
-                component: () => import('~@/views/users/MypageFavList'),
-            },
-            // 마이페이지-예약내역
-            {
-                path: 'mypage-rsv-list',
-                name: 'UsersMypageRsvList',
-                component: () => import('~@/views/users/MypageRsvList'),
-            },
-            // 마이페이지-리뷰관리
-            {
-                path: 'mypage-review-list',
-                name: 'MypageReviewList',
-                component: () => import('~@/views/users/MypageReviewList'),
-            },
-            // 마이페이지-리뷰 전체보기
-            {
-                path: 'mypage-total-review/:id',
-                name: 'MypageTotalReview',
-                component: () => import('~@/views/users/MypageTotalReview'),
-            },
-            // 결제하기
-            {
-                path: 'payment',
-                name: 'UsersPayment',
-                component: () => import('~@/views/users/Payment'),
-            },
-            // 결제하기-결제완료/결제실패
-            {
-                path: 'payment-complete',
-                name: 'UsersPaymentComplete',
-                component: () => import('~@/views/users/PaymentComplete'),
-            },
-            // 결제하기-결제내역
-            {
-                path: 'payment-history',
-                name: 'PaymentHistory',
-                component: () => import('~@/views/users/PaymentHistory'),
-            },
-            // 모바일용 검색옵션
-            {
-                path: 'mobile-search-option',
-                name: 'MobileSearchOption',
-                component: () => import('~@/views/users/MobileSearchOption'),
-            },
-            // best 쇼호스트 & 대행사
-            {
-                path: 'show-hosts',
-                name: 'ShowHosts',
-                component: () => import('~@/views/users/ShowHosts'),
-            },
-        ],
-    },
-    /* ====================== seller (쇼호스트/대행사) ====================== */
-    // 아래 페이지들은 모두 로그인 후 이용가능
-    {
-        path: '/sellers',
-        name: 'SellersIndex',
-        component: () => import('~@/views/sellers/Index'),
-        // meta: { requiresAuth: true },
-        children: [
-            // 메인(쇼호스트/대행사)
-            {
-                path: 'main',
-                name: 'SellersMain',
-                component: () => import('~@/views/sellers/SellersMain'),
-                meta: { requiresAuth: true, requiresResetScrollHeight: true },
-            },
-            // 마이페이지
-            {
-                path: 'mypage-main',
-                name: 'SellersMypageMain',
-                component: () => import('~@/views/sellers/MypageMain'),
-                meta: { requiresAuth: true, requiresResetScrollHeight: true },
-            },
-            // 모바일용 마이페이지-내 정보
-            {
-                path: 'mobile-mypage-info-main',
-                name: 'MobileMypageInfoMain',
-                component: () => import('~@/views/sellers/MobileMypageInfoMain'),
-                meta: { requiresAuth: true, requiresResetScrollHeight: true },
-            },
-            // 마이페이지-내정보수정
-            {
-                path: 'mypage-edit',
-                name: 'MypageEdit',
-                component: () => import('~@/views/sellers/MypageEdit'),
-                meta: { requiresAuth: true },
-            },
-            // 마이페이지-프로필설정
-            {
-                path: 'mypage-profile-main',
-                name: 'MypageProfileMain',
-                component: () => import('~@/views/sellers/MypageProfileMain'),
-                meta: { requiresAuth: true },
-            },
-            // 마이페이지-프로필설정-프로필수정
-            {
-                path: 'mypage-profile-edit',
-                name: 'MypageProfileEdit',
-                component: () => import('~@/views/sellers/MypageProfileEdit'),
-                meta: { requiresAuth: true },
-            },
-            // 마이페이지-리뷰전체보기
-            {
-                path: 'mypage-review-list',
-                name: 'UsersMypageReviewList',
-                component: () => import('~@/views/sellers/MypageReviewList'),
-                meta: { requiresAuth: true, requiresResetScrollHeight: true },
-            },
-            // 마이페이지-친구초대
-            {
-                path: 'mypage-friend-main',
-                name: 'MypageFriendMain',
-                component: () => import('~@/views/sellers/MypageFriendMain'),
-                meta: { requiresAuth: true, requiresResetScrollHeight: true },
-            },
-            // 마이페이지-구독모델
-            {
-                path: 'mypage-subs-main',
-                name: 'MypageSubsMain',
-                component: () => import('~@/views/sellers/MypageSubsMain'),
-                meta: { requiresAuth: true, requiresResetScrollHeight: true },
-            },
-            // 마이페이지-구독모델-결제내역
-            {
-                path: 'mypage-subs-history',
-                name: 'MypageSubsHistory',
-                component: () => import('~@/views/sellers/MypageSubsHistory'),
-                meta: { requiresAuth: true, requiresResetScrollHeight: true },
-            },
-            // 마이페이지-구독모델-결제하기
-            {
-                path: 'payment',
-                name: 'Payment',
-                component: () => import('~@/views/sellers/Payment'),
-                meta: { requiresAuth: true, requiresResetScrollHeight: true },
-            },
-            // 결제하기-결제완료/결제실패
-            {
-                path: 'payment-complete',
-                name: 'SellersPaymentComplete',
-                component: () => import('~@/views/sellers/PaymentComplete'),
-                meta: { requiresAuth: true, requiresResetScrollHeight: true },
-            },
-            // 마이페이지-정산관리
-            {
-                path: 'mypage-calc-main',
-                name: 'MypageCalcMain',
-                component: () => import('~@/views/sellers/MypageCalcMain'),
-                meta: { requiresAuth: true, requiresResetScrollHeight: true },
-            },
-            // 마이페이지-예약내역
-            {
-                path: 'mypage-rsv-list',
-                name: 'MypageRsvList',
-                component: () => import('~@/views/sellers/MypageRsvList'),
-                meta: { requiresAuth: true, requiresResetScrollHeight: true },
-            },
-            // 모바일용 현황관리
-            {
-                path: 'mobile-sellers-main',
-                name: 'MobileSellersMain',
-                component: () => import('~@/views/sellers/MobileSellersMain'),
-                meta: { requiresAuth: true, requiresResetScrollHeight: true },
-            },
-        ],
-    },
+    // {
+    //     path: '/users',
+    //     name: 'UsersIndex',
+    //     component: () => import('~@/views/users/Index'),
+    //     meta: { requiresAuth: true, requiresResetScrollHeight: true },
+    //     children: [
+    //         // 마이페이지
+    //         {
+    //             path: 'mypage-main',
+    //             name: 'UsersMypageMain',
+    //             component: () => import('~@/views/users/MypageMain'),
+    //         },
+    //         // 마이페이지-내정보수정
+    //         {
+    //             path: 'mypage-edit',
+    //             name: 'UsersMypageEdit',
+    //             component: () => import('~@/views/users/MypageEdit'),
+    //         },
+    //         // 마이페이지-찜목록
+    //         {
+    //             path: 'mypage-fav-list',
+    //             name: 'MypageFavList',
+    //             component: () => import('~@/views/users/MypageFavList'),
+    //         },
+    //         // 마이페이지-예약내역
+    //         {
+    //             path: 'mypage-rsv-list',
+    //             name: 'UsersMypageRsvList',
+    //             component: () => import('~@/views/users/MypageRsvList'),
+    //         },
+    //         // 마이페이지-리뷰관리
+    //         {
+    //             path: 'mypage-review-list',
+    //             name: 'MypageReviewList',
+    //             component: () => import('~@/views/users/MypageReviewList'),
+    //         },
+    //         // 마이페이지-리뷰 전체보기
+    //         {
+    //             path: 'mypage-total-review/:id',
+    //             name: 'MypageTotalReview',
+    //             component: () => import('~@/views/users/MypageTotalReview'),
+    //         },
+    //         // 결제하기
+    //         {
+    //             path: 'payment',
+    //             name: 'UsersPayment',
+    //             component: () => import('~@/views/users/Payment'),
+    //         },
+    //         // 결제하기-결제완료/결제실패
+    //         {
+    //             path: 'payment-complete',
+    //             name: 'UsersPaymentComplete',
+    //             component: () => import('~@/views/users/PaymentComplete'),
+    //         },
+    //         // 결제하기-결제내역
+    //         {
+    //             path: 'payment-history',
+    //             name: 'PaymentHistory',
+    //             component: () => import('~@/views/users/PaymentHistory'),
+    //         },
+    //         // 모바일용 검색옵션
+    //         {
+    //             path: 'mobile-search-option',
+    //             name: 'MobileSearchOption',
+    //             component: () => import('~@/views/users/MobileSearchOption'),
+    //         },
+    //         // best 쇼호스트 & 대행사
+    //         {
+    //             path: 'show-hosts',
+    //             name: 'ShowHosts',
+    //             component: () => import('~@/views/users/ShowHosts'),
+    //         },
+    //     ],
+    // },
     /* ====================== etc ====================== */
     // 이용약관
     {
@@ -429,7 +218,7 @@ const routes = [
     {
         path: '/developer-info',
         name: 'DeveloperInfo',
-        component: () => import('~@/components/DeveloperInfo.vue'),
+        component: () => import('~@/views/company/DeveloperInfo.vue'),
         meta: { requiresResetScrollHeight: true },
     },
     {
