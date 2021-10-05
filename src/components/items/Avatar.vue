@@ -7,29 +7,29 @@
       class="avatar-img"
     >
 
-    <!-- <img
+    <img
       v-if="!src"
-      src="@/assets/images/img/profile-dft.svg"
+      src="@/assets/images/dft/dft-logo.png"
       :alt="`${src}`"
       class="avatar-img"
-    > -->
+    >
   </div>
 </template>
 
 <script>
 export default {
-    name: 'Avatar',
-    props: {
-        src: {
-            type: String,
-            default: null,
-        },
+  name: 'Avatar',
+  props: {
+    src: {
+      type: String,
+      default: null,
     },
-    data() {
-        return{
-            avatarImg: true,
-        };
-    },
+  },
+  data() {
+    return{
+      avatarImg: true,
+    };
+  },
 };
 </script>
 

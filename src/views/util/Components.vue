@@ -444,103 +444,105 @@
         5. 썸네일, 아바타
       </h1>
 
-      <div />
+      <div class="section-cont ">
+        <avatar />
+      </div>
     </section>
   </div>
 </template>
 
 <script>
 export default {
-    data() {
-        return{
-            mbMdOptions1: {
-                visible: false,
-            },
-            mbMdOptions2: {
-                visible: false,
-            },
-            customSlct1: {
-                visible: false,
-                value: false,
-            },
-            customSlct2: {
-                visible: false,
-                value: false,
-            },
-            exInput: null,
-        };
+  data() {
+    return{
+      mbMdOptions1: {
+        visible: false,
+      },
+      mbMdOptions2: {
+        visible: false,
+      },
+      customSlct1: {
+        visible: false,
+        value: false,
+      },
+      customSlct2: {
+        visible: false,
+        value: false,
+      },
+      exInput: null,
+    };
+  },
+  methods: {
+    mbMdOpen(opt) {
+      if(window.innerWidth <= 600) {
+        switch (opt) {
+        case 'star':
+          this.mbMdOptions1.visible = true;
+          break;
+        case 'question':
+          this.mbMdOptions2.visible = true;
+          break;
+        }
+      }
     },
-    methods: {
-        mbMdOpen(opt) {
-            if(window.innerWidth <= 600) {
-                switch (opt) {
-                case 'star':
-                    this.mbMdOptions1.visible = true;
-                    break;
-                case 'question':
-                    this.mbMdOptions2.visible = true;
-                    break;
-                }
-            }
-        },
-        mbMdClose(opt) {
-            if(window.innerWidth <= 600) {
-                switch (opt) {
-                case 'star':
-                    this.mbMdOptions1.visible = false;
-                    break;
-                case 'question':
-                    this.mbMdOptions2.visible = false;
-                    break;
-                }
-            }
-        },
-        selectOpt(opt, val) {
-            switch (opt) {
-            case 1:
-                this.customSlct1.value = val;
-                this.customSlct1.visible = false;
-                break;
-            case 2:
-                this.customSlct2.value = val;
-                this.customSlct2.visible = false;
-                break;
-            }
-        },
+    mbMdClose(opt) {
+      if(window.innerWidth <= 600) {
+        switch (opt) {
+        case 'star':
+          this.mbMdOptions1.visible = false;
+          break;
+        case 'question':
+          this.mbMdOptions2.visible = false;
+          break;
+        }
+      }
     },
+    selectOpt(opt, val) {
+      switch (opt) {
+      case 1:
+        this.customSlct1.value = val;
+        this.customSlct1.visible = false;
+        break;
+      case 2:
+        this.customSlct2.value = val;
+        this.customSlct2.visible = false;
+        break;
+      }
+    },
+  },
 };
 </script>
 
 <style lang="scss">
 .components-page {
-    width: 100%;
-    max-width: 1200px;
-    margin: 50px auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
 
-    .cp-ttl {
-        font-size: 20px;
-        font-weight: 700;
-        margin-bottom: 20px;
-    }
+  .cp-ttl {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
 
-    .section {
-        border-bottom: 1px solid #ebebeb;
+  .section {
+    border-bottom: 1px solid #ebebeb;
 
-        padding: 20px 0;
-    }
+    padding: 20px 0;
+  }
 
-    .section-btns-cont {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        align-items: flex-start;
-    }
+  .section-btns-cont {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
 }
 
 .section-input-cont {
-    & > h2 {
-        margin: 15px 0;
-        font-weight: 500;
-    }
+  & > h2 {
+    margin: 15px 0;
+    font-weight: 500;
+  }
 }
 </style>
