@@ -1,0 +1,442 @@
+/* 버튼 스타일 */
+
+// 버튼 스타일 초기화 믹스인
+@mixin btn-default{
+  @include input-reset;
+  
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn{
+  @include btn-default;
+}
+
+%btn-default{
+  @include btn-default;
+}
+
+/* 버튼의 클래스명 작성은 <컬러 - 모양 - 높이> 순서로 한다. 
+   ex: class="btn-solid btn-rounded btn-xsm" */
+
+/* ----------------- 1. 컬러 ----------------- */
+// solid
+@mixin btn-solid{
+  @extend %btn-default;
+
+  background-color: #00EB79;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s;
+
+  &:disabled{
+    background-color: #B8BAC7;
+    cursor: default;
+  }
+
+  @include media(1200px, min){
+    &:hover{
+      background-color: darken(#00EB79, 2%);
+    }
+  }
+
+  &:active{
+    transition: all 0s;
+    background-color: darken(#00EB79, 3%);
+  }
+}
+
+.btn-solid{
+  @include btn-solid;
+}
+
+// bd-dark
+@mixin btn-bd-dark{
+  @extend %btn-default;
+
+  box-shadow: 0 0 0 1px #5C5E70;
+  background-color: white;
+  font-weight: 600;
+  color: #171820;
+  transition: all 0.2s;
+
+  @include media(1200px, min){
+    &:hover{
+      background-color: darken(#fff, 3%);
+    }
+  }
+
+  &:active{
+    transition: all 0s;
+    background-color: darken(#fff, 5%);
+  }
+}
+
+.btn-bd-dark{
+  @include btn-bd-dark;
+}
+
+// bd
+@mixin btn-bd{
+  @extend %btn-default;
+
+  box-shadow: 0 0 0 1px #8E909F;
+  background-color: white;
+  font-weight: 500;
+  transition: all 0.2s;
+
+  @include media(1200px, min){
+    &:hover{
+      background-color: darken(#fff, 3%);
+    }
+  }
+
+  &:active{
+    transition: all 0s;
+    background-color: darken(#fff, 5%);
+  }
+
+  &.btn-xlg{
+    font-size: 16px;
+  }
+}
+
+.btn-bd{
+  @include btn-bd;
+}
+
+// bd-light
+@mixin btn-bd-light{
+  @extend %btn-default;
+
+  box-shadow: 0 0 0 1px #DDDEE6;
+  background-color: white;
+  font-weight: 400;
+  transition: all 0.2s;
+
+  @include media(1200px, min){
+    &:hover{
+      background-color: darken(#fff, 3%);
+    }
+  }
+
+  &:active{
+    transition: all 0s;
+    background-color: darken(#fff, 5%);
+  }
+}
+
+.btn-bd-light{
+  @include btn-bd-light;
+
+  &-sm{ // height: 40px;
+    @include btn-bd-light;
+
+    font-size: 14px;
+    padding: 12px 15px;
+  }
+}
+
+/* ----------------- END 1. 컬러 ----------------- */
+
+/* ----------------- 2. 모양 ----------------- */
+.btn-rounded {
+  border-radius: 50px;
+}
+/* ----------------- END 2. 모양 ----------------- */
+
+/* ----------------- 3. 사이즈 (세로높이) ----------------- */
+.btn-xlg{ // height가 65일 때
+  padding: 21px 15px;
+  font-size: 20px;
+}
+
+.btn-lg{ // height가 55일 때
+  padding: 17px 15px;
+  font-size: 18px;
+}
+
+.btn-md{ // height가 50일 때
+  padding: 17px 15px;
+  font-size: 14px;
+}
+
+.btn-sm{ // height가 40일 때
+  padding: 12px 15px;
+  font-size: 14px;
+}
+
+.btn-xsm{ // height가 30일 때
+  padding: 8.5px 10px;
+  font-size: 13px;
+}
+/* ----------------- END 3. 사이즈 (세로높이) ----------------- */
+
+/* ----------------- 4. 사이즈 (가로넓이) ----------------- */
+.btn-full{
+  width: 100%;
+}
+/* ----------------- END 4. 사이즈 (가로넓이) ----------------- */
+
+/* 기타 버튼 스타일 */
+.btn-square-bd{
+  @include input-reset;
+  @include flex-center;
+  
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 1px solid #E0E0E0;
+
+  @include media(1200px, min){
+    &:hover{
+      background-color: darken(#fff, 2%);
+    }
+  }
+
+  &:active{
+    background-color: darken(#fff, 4%);
+  }
+}
+
+.btn-txt{
+  @include input-reset;
+
+  cursor: pointer;
+
+  .icon-pen{
+    margin-right: 3px;
+  }
+
+  .txt{
+    @include font-op($c: #171820, $w: 600){
+      font-size: 15px;
+    }
+  }
+}
+
+/* 뱃지 스타일 */
+.badge-rounded{
+  background-color: #DFFFE8;
+  padding: 5px 10px 7px;
+  border-radius: 30px;
+  font-weight: 600;
+  display: inline-block;
+  vertical-align: middle;
+
+  .txt{
+    @include font-op($w: 600, $c: #00ce6a){
+      font-size: 13px;
+    };
+  }
+}
+
+.badge-state{
+  background-color: #171820;
+  padding: 1.5px 8px 4px;
+
+  .txt{
+    @include font-op($w: 500, $c: #fff){
+      font-size: 13px;
+    };
+  }
+}
+
+.badge-p{
+  @include bg-op($s: 7px, $p: 50% 50%);
+  @include circle(18px);
+
+  background-color: #171820;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.256' height='9.5' viewBox='0 0 7.256 9.5'%3E%3Cpath id='패스_6880' data-name='패스 6880' d='M683.487,379.706h-3.658v9.5h2.108v-3.381h1.55c2.253,0,3.6-1.143,3.6-3.059S685.74,379.706,683.487,379.706Zm1.49,3.06c0,.764-.543,1.2-1.49,1.2h-1.55v-2.4h1.551a1.607,1.607,0,0,1,1.179.381A1.124,1.124,0,0,1,684.977,382.766Z' transform='translate(-679.829 -379.706)' fill='%2353ff81'/%3E%3C/svg%3E%0A");
+}
+
+.badge-qus{
+  @include bg-op($s: 7px, $p: 50% 50%);
+  @include circle(20px);
+
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.07' height='12.124' viewBox='0 0 7.07 12.124'%3E%3Cpath id='About' d='M3.423-7.154c0-1.792-1.05-3.248-3.57-3.248a3.545,3.545,0,0,0-3.5,3.654h1.876c0-1.2.658-2.058,1.624-2.058A1.5,1.5,0,0,1,1.547-7.154c0,.854-.6,1.4-1.344,2a3.328,3.328,0,0,0-1.47,2.59v.728H.581v-.728c0-.742.5-1.19,1.33-1.862A3.506,3.506,0,0,0,3.423-7.154ZM.931.462A1.241,1.241,0,0,0-.343-.8,1.241,1.241,0,0,0-1.617.462,1.241,1.241,0,0,0-.343,1.722,1.241,1.241,0,0,0,.931.462Z' transform='translate(3.647 10.402)' fill='%23b8bac7'/%3E%3C/svg%3E%0A");
+  border: 1px solid #8E909F;
+}
+
+/* 토글 스타일 */
+.toggle-onoff{
+  background-color: #8E909F;
+  display: inline-block;
+  width: 30px;
+  height: 14px;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  @include media(1200px, min){
+    &:hover{
+      background-color: darken(#8e909f, 5%);
+    }
+  }
+
+  @include make-before{
+    @include circle(10px);
+
+    background-color: white;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s;
+  }
+
+  @at-root .toggle-switch:checked + &{
+    background-color: #3060FF;
+
+    &:before{
+      left: calc(100% - 12px);
+    }
+  }
+}
+
+/* 체크박스 스타일 */
+.check-onoff{
+  @include bg-op($s: 16px, $p: 50% 50%);
+
+  background-color: white;
+  border: 1px solid #DDDEE6;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.793' height='14.176' viewBox='0 0 17.793 14.176'%3E%3Cpath id='패스_158' data-name='패스 158' d='M5.115,11.5l5.437,4.956,9.563-10' transform='translate(-3.767 -5.076)' fill='none' stroke='%23dddee6' stroke-width='4'/%3E%3C/svg%3E%0A");
+  transition: all 0.2s;
+  cursor: pointer;
+
+  @at-root .check-switch:checked + &{
+    background-color: #171820;
+    border-color: #171820;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.793' height='14.176' viewBox='0 0 17.793 14.176'%3E%3Cpath id='패스_158' data-name='패스 158' d='M5.115,11.5l5.437,4.956,9.563-10' transform='translate(-3.767 -5.076)' fill='none' stroke='%2353ff81' stroke-width='4'/%3E%3C/svg%3E%0A");
+  }
+}
+
+/* 별점 */
+.hover-desc{
+  position: relative;
+
+  @include media(1200px, min){
+    &:hover{
+      .hover-desc-box{
+        opacity: 1;
+        pointer-events: visible;
+      }
+    }
+  }
+
+  .star-txt{
+    cursor: pointer;
+    position: relative;
+  }
+
+  .txt{
+    @include font-op($w: 600, $c: #5C5E70){
+      font-size: 16px;
+    }
+
+    vertical-align: middle;
+    margin-left: 4px;
+  }
+}
+
+.hover-overlay{
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+  z-index: 9980;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.hover-overlay.is-show{
+  opacity: 0.7;
+  pointer-events: visible;
+}
+
+.hover-desc-box{
+  @include absolute($t: 10px, $l: 80%);
+
+  z-index: 1;
+  background-color: white;
+  padding: 15px 15px 18px;
+  box-shadow: 0 5px 8px rgba(#000, 0.16);
+  min-width: 135px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.1s;
+
+  @include mobile{
+    position: fixed;
+    z-index: 9990;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    bottom: auto;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s;
+  }
+
+  .ttl{
+    width: 100%;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #171820;
+    margin-bottom: 8px;
+  }
+
+  .desc{
+    font-size: 12px;
+    color: #5C5E70;
+  }
+
+  .star-desc-list{
+    @include flex{
+      @include flex-op(flex-end, flex-start);
+    };
+
+    margin: 6px 0;
+
+    &:first-of-type{
+      margin-top: 0;
+    }
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  .desc-ttl{
+    font-size: 12px;
+    color: #8E909F;
+    margin-right: 13px;
+  }
+
+  .desc-dt{
+    margin-left: auto;
+    
+    .txt{
+      color: #171820;
+      font-size: 12px;
+    }
+  }
+}
+
+.hover-desc-box.is-show{
+  opacity: 1;
+  pointer-events: visible;
+}
