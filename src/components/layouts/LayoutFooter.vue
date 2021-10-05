@@ -16,6 +16,8 @@
                 >
               </a>
             </h2>
+          </div>
+          <div class="ft-info-wrap">
             <p class="company-info">
               <span class="company-type">주식회사</span>
               <span class="company-name">포켓컴퍼니</span>
@@ -41,6 +43,21 @@
               <span class="ft-info-cont">제 2021-00호</span>
             </span>
           </div>
+        </div>
+        <div class="ft-bottom">
+          <div class="ft-gnb">
+            <a
+              href="#"
+              class="ft-gnb-link"
+            >개인정보 처리방침</a>
+            <a
+              href="#"
+              class="ft-gnb-link"
+            >서비스 이용약관</a>
+          </div>
+          <p class="copyright">
+            Copyright Factsheet. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

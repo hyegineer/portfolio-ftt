@@ -1,12 +1,46 @@
 .footer {
   width: 100%;
   background-color: #171820;
+  padding-top: 40px;
 }
 
 .footer-inner {
   width: 90%;
   max-width: 1090px;
-  height: 70px;
   margin: 0 auto;
-  border: 1px solid #000;
+}
+
+.ft-top {
+  padding-bottom: 33px;
+  border-bottom: 1px solid #373944;
+}
+
+.ft-logo-wrap {
+  margin-bottom: 30px;
+}
+
+.ft-logo {
+  width: 135px;
+
+  .ft-logo-img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.ft-info-wrap {
+  color: #8E909F;
+  font-weight: 400;
+
+  .company-info {
+    font-size: rem(15);
+  }
+
+  .ft-info-grp {
+    font-size: rem(13);
+  }
+}
+
+.ft-bottom {
+  padding: 20px 0;
 }
