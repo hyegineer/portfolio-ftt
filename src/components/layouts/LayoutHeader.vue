@@ -6,6 +6,7 @@
           <button
             type="button"
             class="btn-hamburger"
+            @click="viewSidebar = true"
           >
             <i class="icon icon-hamburger" />
           </button>
@@ -37,6 +38,7 @@
               class="gnb-link"
             >1:1문의</a>
             <a
+              v-if="authCheck === true && memberType !== 'fact-checker'"
               href="#"
               class="gnb-link"
             >쪽지함</a>
@@ -44,13 +46,17 @@
           <button
             type="button"
             class="btn-hd-search"
+            @click="viewSearchbar = !viewSearchbar"
           >
             스타트업 검색
           </button>
         </div>
         <div class="hd-right">
-          <!-- TODO: 로그인 전 -->
-          <div class="auth-wrap">
+          <!-- INFO: 로그인 전 -->
+          <div
+            v-if="authCheck === false"
+            class="auth-wrap"
+          >
             <a
               href="#"
               class="auth-link"
@@ -60,25 +66,122 @@
               class="auth-link"
             >회원가입</a>
           </div>
-          <!-- TODO: END 로그인 전 -->
-          <!-- TODO: 로그인 후 -->
-          <!-- <div class="greeting-wrap">
-            <div class="greeting-name-wrap">
+          <!-- INFO: END 로그인 전 -->
+          <!-- INFO: 로그인 후 -->
+          <div
+            v-if="authCheck === true"
+            class="greeting-wrap"
+          >
+            <div class="greeting-name-wrap underline-color">
               <span class="greeting-name">{{ '이투자' }}</span>
-              <span class="greeting-title">{{ '님' }}</span>
+              <span class="greeting-title">{{ memberType === 'investor' || memberType === 'startup' ? '님' : '팩트체커' }}</span>
             </div>
-            <div class="greeting-ment-wrap">
-              <span class="greeting-ment">
-                <b class="bold-txt">멤버십에 가입</b>해보세요!
-              </span>
-              <span class="greeting-date">
+            <div
+              v-if="memberType === 'investor'"
+              class="greeting-ment-wrap"
+            >
+              <span
+                v-if="memberType === 'investor' && membership === true"
+                class="greeting-date"
+              >
                 멤버십 2021.12.31 까지
               </span>
+              <span
+                v-if="memberType === 'investor' && membership === false"
+                class="greeting-ment"
+              >
+                <b class="bold-txt underline-bk">멤버십에 가입</b>해보세요!
+              </span>
             </div>
-          </div> -->
-          <!-- TODO: END 로그인 후 -->
+          </div>
+          <!-- INFO: END 로그인 후 -->
         </div>
       </div>
+      <!-- search-bar -->
+      <!-- TODO: is-active에 서치바 출력 -->
+      <div
+        class="hd-search-wrap"
+        :class="{'is-active': viewSearchbar}"
+      />
+      <!-- END search-bar -->
+      <!-- side-bar -->
+      <div
+        class="side-overlay"
+        :class="{'is-active': viewSidebar}"
+        @click="viewSidebar = false"
+      />
+      <!-- TODO: is-active에 사이드바 출력 -->
+      <div
+        class="hd-side-wrap"
+        :class="{'is-active': viewSidebar}"
+      >
+        <div class="hd-side-inner">
+          <div class="hd-side-top">
+            <div class="btn-close-wrap">
+              <button
+                type="button"
+                class="btn-close"
+                @click="viewSidebar = false"
+              >
+                닫기
+              </button>
+            </div>
+            <p class="dec">
+              팩트시트에 <b class="bold-txt">회원가입</b> 하고<br>다양한 서비스를 이용해보세요!
+            </p>
+            <div class="auth-wrap">
+              <a
+                href="#"
+                class="link"
+              >로그인</a>
+              <a
+                href="#"
+                class="link"
+              >회원가입</a>
+            </div>
+          </div>
+          <div class="hd-side-bottom">
+            <div class="sidemenu-wrap">
+              <a
+                href="#"
+                class="sidemenu-link"
+              >
+                <span class="sidemenu-txt">스타트업 찾기</span>
+              </a>
+              <a
+                href="#"
+                class="sidemenu-link"
+              >
+                <span class="sidemenu-txt">공지사항</span>
+              </a>
+              <a
+                href="#"
+                class="sidemenu-link"
+              >
+                <span class="sidemenu-txt">자주 묻는 질문</span>
+              </a>
+              <div class="sidemenu-grp">
+                <a
+                  href="#"
+                  class="sidemenu-link"
+                >
+                  <span class="sidemenu-txt">1:1문의</span>
+                </a>
+                <div class="sidemenu-depth2">
+                  <a href="sidemenu-depth2-link">문의하기</a>
+                </div>
+              </div>
+              <a
+                href="#"
+                class="sidemenu-link"
+              >
+                <span class="sidemenu-txt">약관</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END sidemenu-bar -->
     </header>
   </div>
 </template>
@@ -86,5 +189,14 @@
 <script>
 export default {
   name: 'LayoutHeader',
+  data() {
+    return {
+      authCheck: true,
+      memberType: 'fact-checker', // startup, investor, fact-checker
+      membership: true,
+      viewSearchbar: false,
+      viewSidebar: false,
+    };
+  },
 };
 </script>
