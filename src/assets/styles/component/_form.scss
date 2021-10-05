@@ -1,0 +1,239 @@
+// form
+
+// 인풋 스타일 초기화 믹스인
+@mixin inp-default{
+  @include input-reset;
+  @include font-op($w: 400, $c: #171820){
+    font-size: 14px;
+  }
+
+  width: 100%;
+  border: 1px solid #DDDEE6;
+  padding: 16px 15px;
+  margin: 2.5px 0;
+  background-color: white;
+  text-align: left;
+
+  &::placeholder{
+    color: #B8BAC7;
+  }
+
+  &:focus,
+  &.is-focus{
+    border-color: #00EB79;
+    box-shadow: 0 4px 8px rgba(#B8BAC7, 0.3);
+  }
+
+  &:disabled{
+    background-color: #F9F9FB;
+    color: #B8BAC7;
+  }
+
+  .icon-cal{
+    margin-right: 8px;
+  }
+}
+
+.inp{
+  @include inp-default;
+}
+
+%inp-default{
+  @include inp-default;
+}
+/* 인풋 + 검색버튼 */
+
+/* 라벨 + 인풋 */
+.lbel-inp-grp{
+  @include flex;
+  
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 17px 0;
+
+  .lbel{
+    width: 100%;
+  }
+}
+
+.lbel{
+  margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #171820;
+  display: inline-block;
+
+  .required{
+    color: #FF5175;
+    font-weight: 500;
+    font-size: 12px;
+  }
+}
+
+/* 단위있는 인풋 */
+.inp-unit-grp{
+  width: 100%;
+  position: relative;
+
+  .inp{
+    width: 100%;
+    text-align: right;
+    padding-right: 40px;
+  }
+
+  .inp-unit{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #5C5E70;
+  }
+}
+
+/* 셀렉트 */
+.slct{
+  @extend %inp-default;
+  @include bg-op($p:calc(100% - 15px) 50%, $s: 12px);
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath id='다각형_2' data-name='다각형 2' d='M6,0l6,7H0Z' transform='translate(12 7) rotate(180)' fill='%23b8bac7'/%3E%3C/svg%3E%0A");
+  padding-right: 40px;
+}
+
+/* 커스텀 셀렉트 */
+.custom-slct{
+  position: relative;
+
+  .slct{
+    cursor: default;
+    color: #B8BAC7;
+  }
+}
+
+.custom-slct01{
+  .slct.is-selected{
+    color: #171820;
+  }
+  
+  .slct-opts-grp{
+    top: 59px;
+  }
+}
+
+.custom-slct02{
+  .slct{
+    background-position: 100% 50%;
+    color: #171820;
+    font-size: 13px;
+    padding: 12.5px 0;
+    padding-right: 20px;
+    border: 0;
+  }
+
+  .slct-opts-grp{
+    top: 40px;
+  }
+}
+
+.slct-opts-grp{
+  background-color: white;
+  padding: 10px 0;
+  box-shadow: 0 3px 8px rgba(#171820, 0.1);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+
+  .slct-opts-list{
+    @include font-op($w: 400, $c: #5C5E70){
+      font-size: 15px;
+    };
+
+    text-align: left;
+    padding: 5px 15px;
+    cursor: pointer;
+
+    &:hover{
+      // FIXME: 모바일에선 hover효과 막기
+      background-color: #F9F9FB;
+    }
+
+    &:active{
+      background-color: darken(#F9F9FB, 2%);
+    }
+  }
+}
+
+.slct-opts-grp.is-show{
+  opacity: 1;
+  pointer-events: visible;
+}
+
+/* 인풋 + 검색버튼 */
+.inp-sch-grp{
+  position: relative;
+
+  .inp{
+    font-size: 13px; 
+    padding: 11.5px 15px;
+    padding-right: 75px;
+  }
+
+  .inp-strong{
+    font-size: 15px;
+    border-width: 3px;
+    padding: 14px 15px;
+    padding-right: 75px;
+  }
+
+  .inp-del-btn,
+  .inp-sch-btn{
+    @include absolute($t: 50%, $r: 10px);
+
+    transform: translateY(-50%);
+  }
+
+  .inp-del-btn{
+    right: 45px;
+  }
+}
+
+.inp-del-btn{
+  @include input-reset;
+  @include circle(20px);
+  @include bg-op($s: 10px);
+
+  cursor: pointer;
+  background-color: #C8C9D5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.768' height='9.768' viewBox='0 0 9.768 9.768'%3E%3Cg id='그룹_6173' data-name='그룹 6173' transform='translate(0.884 0.884)'%3E%3Cline id='선_975' data-name='선 975' x2='8' y2='8' fill='none' stroke='%23fff' stroke-width='2.5'/%3E%3Cline id='선_976' data-name='선 976' x1='8' y2='8' fill='none' stroke='%23fff' stroke-width='2.5'/%3E%3C/g%3E%3C/svg%3E%0A");
+
+  &:hover{
+    background-color: darken(#C8C9D5, 3%);
+  }
+}
+
+.inp-sch-btn{
+  @include input-reset;
+  @include bg-op($s: 20px);
+
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg id='btn-sch-wh' xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Crect id='사각형_10' data-name='사각형 10' width='20' height='20' fill='%23fff' opacity='0'/%3E%3Cg id='그룹_4367' data-name='그룹 4367' transform='translate(1 1)'%3E%3Cg id='타원_1' data-name='타원 1' fill='none' stroke='%23171820' stroke-width='3'%3E%3Ccircle cx='8' cy='8' r='8' stroke='none'/%3E%3Ccircle cx='8' cy='8' r='6.5' fill='none'/%3E%3C/g%3E%3Cline id='선_1' data-name='선 1' x2='4.387' y2='4.388' transform='translate(13.5 13.5)' fill='none' stroke='%23171820' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E%0A");
+
+  &:hover{
+    background-color: #ebebed;
+  }
+
+  &:active{
+    background-color: darken(#ebebed, 3%);
+  }
+}

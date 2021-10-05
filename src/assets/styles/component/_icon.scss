@@ -1,0 +1,40 @@
+// icon
+
+.icon{
+    @include bg-op($s: contain, $p: center);
+
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+}
+
+.icon-check{
+    width: 14px;
+    height: 13px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.095' height='11.132' viewBox='0 0 14.095 11.132'%3E%3Cpath id='icon-check-gn' d='M5.115,10.494l4.35,3.965,7.65-8' transform='translate(-4.104 -5.422)' fill='none' stroke='%2353ff81' stroke-width='3'/%3E%3C/svg%3E%0A");
+}
+
+.icon-msg{
+    width: 26px;
+    height: 26px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='26' height='26' viewBox='0 0 26 26'%3E%3Cdefs%3E%3ClinearGradient id='linear-gradient' x1='0.155' y1='0.198' x2='1.214' y2='1.204' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%2353ff81'/%3E%3Cstop offset='1' stop-color='%233060ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg id='icon-msg-gra' transform='translate(0.309 0.309)'%3E%3Crect id='사각형_2053' data-name='사각형 2053' width='26' height='26' transform='translate(-0.309 -0.309)' fill='%23fff' opacity='0'/%3E%3Cpath id='패스_4656' data-name='패스 4656' d='M20.3,97.129c0-5.023-4.545-9.1-10.151-9.1S0,92.106,0,97.129a9.255,9.255,0,0,0,6.98,8.642l-.609,1.9a.2.2,0,0,0,.244.249L12.395,106C16.921,105.086,20.3,101.461,20.3,97.129Z' transform='translate(2.541 -85.291)' fill='url(%23linear-gradient)'/%3E%3Cg id='그룹_4489' data-name='그룹 4489' transform='translate(6.459 10.674)'%3E%3Ccircle id='타원_10' data-name='타원 10' cx='1.255' cy='1.255' r='1.255' transform='translate(5.104)' fill='%23fff'/%3E%3Ccircle id='타원_11' data-name='타원 11' cx='1.255' cy='1.255' r='1.255' fill='%23fff'/%3E%3Ccircle id='타원_12' data-name='타원 12' cx='1.255' cy='1.255' r='1.255' transform='translate(10.207)' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.icon-star{
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.5' height='16' viewBox='0 0 16.5 16'%3E%3Cpath id='icon-star-yl' d='M7.393,1.422a1,1,0,0,1,1.713,0l1.817,3.015a1,1,0,0,0,.618.455l3.4.837a1,1,0,0,1,.528,1.612l-2.29,2.739a1,1,0,0,0-.23.717l.272,3.569a1,1,0,0,1-1.385,1l-3.2-1.348a1,1,0,0,0-.776,0l-3.2,1.348a1,1,0,0,1-1.385-1L3.547,10.8a1,1,0,0,0-.23-.717L1.028,7.341a1,1,0,0,1,.528-1.612l3.4-.837a1,1,0,0,0,.618-.455Z' fill='%23ffd500'/%3E%3C/svg%3E%0A");   
+}
+
+.icon-pen{
+  width: 15px;
+  height: 15px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 15 15'%3E%3Cg id='icon-write' transform='translate(0 -1)'%3E%3Cg id='사각형_2240' data-name='사각형 2240' transform='translate(0 1)' fill='%23fff' stroke='%23707070' stroke-width='1' opacity='0'%3E%3Crect width='15' height='15' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='14' height='14' fill='none'/%3E%3C/g%3E%3Cg id='icon-write-2' data-name='icon-write' transform='translate(-7.521 2)'%3E%3Cpath id='패스_6639' data-name='패스 6639' d='M9.239,9.822a.425.425,0,0,0-.115.214l-.594,2.97a.42.42,0,0,0,.412.5.4.4,0,0,0,.082-.008l2.969-.594a.418.418,0,0,0,.215-.115l6.645-6.645L15.886,3.177Z' transform='translate(0 -0.508)' fill='%23171820'/%3E%3Cpath id='패스_6640' data-name='패스 6640' d='M22.481.615a2.1,2.1,0,0,0-2.969,0L18.349,1.777l2.969,2.969,1.162-1.162a2.1,2.1,0,0,0,0-2.969Z' transform='translate(-1.573 0)' fill='%23171820'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.icon-cal{
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cg id='btn-date' transform='translate(-394 -39)'%3E%3Crect id='사각형_2223' data-name='사각형 2223' width='20' height='20' transform='translate(394 39)' fill='%23fff' opacity='0'/%3E%3Cg id='그룹_6151' data-name='그룹 6151' transform='translate(-581 -965.318)'%3E%3Cpath id='calendar' d='M17.5,2.5h-.833V.833A.834.834,0,0,0,15.833,0H15a.834.834,0,0,0-.833.833V2.5H5.833V.833A.834.834,0,0,0,5,0H4.167a.834.834,0,0,0-.833.833V2.5H2.5A2.5,2.5,0,0,0,0,5V17.5A2.5,2.5,0,0,0,2.5,20h15A2.5,2.5,0,0,0,20,17.5V5a2.5,2.5,0,0,0-2.5-2.5Zm.833,15a.835.835,0,0,1-.833.833H2.5a.835.835,0,0,1-.833-.833V7.367H18.333Zm0,0' transform='translate(975 1004.319)' fill='%235c5e70'/%3E%3Cline id='선_959' data-name='선 959' x2='9' transform='translate(980.5 1017)' fill='none' stroke='%235c5e70' stroke-width='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
