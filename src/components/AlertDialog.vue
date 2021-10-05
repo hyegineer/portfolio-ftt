@@ -44,24 +44,24 @@
 
 <script>
 export default {
-    name: 'AlertDialog',
-    props: {
-        title: {
-            type: String,
-            default: '', // 기본 알러트창 입니다.
-        },
-        desc: {
-            type: String,
-            default: '', // 부가 설명 텍스트가 들어가는 자리입니다.
-        },
+  name: 'AlertDialog',
+  props: {
+    title: {
+      type: String,
+      default: '', // 기본 알러트창 입니다.
     },
-    watch: {
-        '$store.state.alertPopup.isPopupVisible': function() {
-            if (this.$store.state.alertPopup.isPopupVisible) {
-                setTimeout(() => this.$refs.onClose.focus(), 0);
-            }
-        },
+    desc: {
+      type: String,
+      default: '', // 부가 설명 텍스트가 들어가는 자리입니다.
     },
+  },
+  watch: {
+    '$store.state.alertPopup.isPopupVisible': function() {
+      if (this.$store.state.alertPopup.isPopupVisible) {
+        setTimeout(() => this.$refs.onClose.focus(), 0);
+      }
+    },
+  },
 };
 </script>
 

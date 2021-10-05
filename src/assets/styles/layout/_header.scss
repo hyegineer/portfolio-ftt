@@ -1,6 +1,7 @@
 // common
 .underline-color {
   position: relative;
+  z-index: 0;
 
   &::after {
     content: '';
@@ -11,7 +12,8 @@
     bottom : -2px;
     width: 100%;
     height: 6px;
-    background-color: rgba(#53FF81, .8);
+    background-color: #53FF81;
+    z-index: -1;
   }
 }
 
@@ -34,6 +36,7 @@
 
 .header {
   width: 100%;
+  background-color: #fff;
 }
 
 .header-inner {
@@ -56,13 +59,8 @@
     margin-right: 21px;
   }
 
-  .hd-logo-wrap {
-    padding-bottom: 2px;
-  }
-
   .hd-logo {
     width: 119px;
-    height: 22px;
     
     .hd-logo-img {
       object-fit: cover;
@@ -77,8 +75,23 @@
 
     .gnb-link {
       font-size: rem(16);
-      font-weight: 600;
+      font-weight: 500;
       color: #171820;
+
+      &.update-point {
+        position: relative;
+        
+        &::after {
+          position: absolute;
+          left: auto;
+          right: -13px;
+          top: 0;
+          content: '';
+          display: inline-block;
+          @include circle(8px);
+          background-color: #FF5175;
+        }
+      }
     }
   }
 
@@ -240,7 +253,7 @@
     display: flex;
     gap: 31px;
     
-    .link {
+    .auth-link {
       font-size: rem(16);
       color: #5C5E70;
       font-weight: 400;
@@ -315,6 +328,7 @@
     font-size: rem(16);
     font-weight: 400;
     color: #8E909F;
+    margin-bottom: 10px;
   }
 }
 

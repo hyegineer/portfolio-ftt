@@ -37,10 +37,11 @@
               href="#"
               class="gnb-link"
             >1:1문의</a>
+            <!-- TODO: update-point 있으면 업데이트 표시 -->
             <a
               v-if="authCheck === true && memberType !== 'fact-checker'"
               href="#"
-              class="gnb-link"
+              class="gnb-link update-point"
             >쪽지함</a>
           </div>
           <button
@@ -132,11 +133,11 @@
             <div class="auth-wrap">
               <a
                 href="#"
-                class="link"
+                class="auth-link"
               >로그인</a>
               <a
                 href="#"
-                class="link"
+                class="auth-link"
               >회원가입</a>
             </div>
           </div>
@@ -192,7 +193,7 @@ export default {
   data() {
     return {
       authCheck: true,
-      memberType: 'fact-checker', // startup, investor, fact-checker
+      memberType: 'investor', // startup, investor, fact-checker
       membership: true,
       viewSearchbar: false,
       viewSidebar: false,

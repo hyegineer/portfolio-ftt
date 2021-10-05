@@ -1,6 +1,7 @@
 <template>
   <div>
     <layout-header />
+    <layout-footer />
   </div>
 </template>
 
