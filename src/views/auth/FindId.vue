@@ -1,7 +1,9 @@
 <template>
   <div class="page auth-page">
     <layout-header />
-    <div class="narrow-panel auth-panel">
+    <div
+      class="narrow-panel auth-panel"
+    >
       <h3 class="ttl">
         아이디 찾기
       </h3>
