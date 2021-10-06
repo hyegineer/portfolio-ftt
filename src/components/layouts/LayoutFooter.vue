@@ -34,6 +34,7 @@
               <span class="ft-info-type">이메일: </span>
               <span class="ft-info-cont">factsheet@fact.com</span>
             </span>
+            <br>
             <span class="ft-info-grp">
               <span class="ft-info-type">엑셀러레이터 등록번호: </span>
               <span class="ft-info-cont">제 2021-00호</span>
