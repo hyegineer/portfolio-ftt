@@ -4,6 +4,12 @@
 
   &.auth-page {
     background-color: #F9F9FB;
+
+    .page-container{
+      width: 100%;
+      height: calc(100vh - 330px); // viewport height에 header + footer 높이 빼기
+      padding: 40px 0;
+    }
   }
 
   &.login-page {
@@ -17,7 +23,7 @@
 }
 
 .auth-panel {
-  margin: 40px auto 150px;
+  margin: 0 auto 150px;
   padding: 40px 20px 30px;
   background-color: #fff;
 

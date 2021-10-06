@@ -72,6 +72,14 @@ const routes = [
       next();
     },
   },
+  // 회원가입 인트로
+  {
+    path: '/register-intro',
+    name: 'RegisterIntro',
+    component: () => import('~@/views/auth/RegisterIntro'),
+    meta: { requiresResetScrollHeight: true }, // 최상단 가게
+    // meta: { requiresAuth: true }, // 로그인안할 때 팅기게
+  },
   // 아이디찾기
   {
     path: '/find-id',
