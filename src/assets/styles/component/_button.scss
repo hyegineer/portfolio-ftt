@@ -33,6 +33,10 @@
   &:disabled{
     background-color: #B8BAC7;
     cursor: default;
+
+    &:hover{
+      background-color: #B8BAC7;
+    }
   }
 
   @include media(1200px, min){
@@ -51,15 +55,40 @@
   @include btn-solid;
 }
 
+// solid-dark
+@mixin btn-solid-dark{
+  @extend %btn-default;
+
+  background-color: #171820;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s;
+
+  &:disabled{
+    background-color: #a1a3af;
+    cursor: default;
+  }
+
+  &:active{
+    transition: all 0s;
+    background-color:#000;
+  }
+}
+
+.btn-solid-dark{
+  @include btn-solid-dark;
+}
+
 // bd-dark
 @mixin btn-bd-dark{
   @extend %btn-default;
 
   box-shadow: 0 0 0 1px #5C5E70;
   background-color: white;
-  font-weight: 600;
+  font-weight: 400;
   color: #171820;
   transition: all 0.2s;
+  -webkit-text-stroke: 0.5px #171820;
 
   @include media(1200px, min){
     &:hover{
@@ -83,8 +112,9 @@
 
   box-shadow: 0 0 0 1px #8E909F;
   background-color: white;
-  font-weight: 500;
+  font-weight: 400;
   transition: all 0.2s;
+  -webkit-text-stroke: 0.5px #171820;
 
   @include media(1200px, min){
     &:hover{

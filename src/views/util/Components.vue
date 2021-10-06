@@ -274,7 +274,37 @@
         </button>
         <!-- // 인풋만 -->
 
-        <h2>4-2. 인풋 + 검색버튼</h2>
+        
+        <h2>4-2. 인풋 + 인증번호</h2>
+        <div class="inp-btn-grp">
+          <input
+            type="text"
+            class="inp"
+            placeholder="검색어를 입력하세요"
+          >
+          <btn-bd class="btn-md">
+            인증번호 발송
+          </btn-bd>
+        </div>
+        
+        <div class="inp-btn-grp">
+          <div class="inp-time-grp">
+            <input
+              type="text"
+              class="inp"
+              placeholder="검색어를 입력하세요"
+            >
+            <span class="inp-time">3:00</span>
+          </div>
+          <button
+            type="button"
+            class="btn-solid-dark btn-md"
+          >
+            인증하기
+          </button>
+        </div>
+
+        <h2>4-3. 인풋 + 검색버튼</h2>
         <div class="inp-sch-grp">
           <input
             v-model="exInput"
@@ -322,7 +352,7 @@
         </div>
         <!-- // 인풋 + 검색버튼 -->
 
-        <h2>4-3. 라벨 + 인풋</h2>
+        <h2>4-4. 라벨 + 인풋</h2>
         <div class="lbel-inp-grp">
           <label class="lbel">대표자명 <span class="required">*</span></label>
           <input
@@ -333,7 +363,7 @@
         </div>
         <!-- // 라벨 + 인풋 -->
 
-        <h2>4-4. 단위있는 인풋</h2>
+        <h2>4-5. 단위있는 인풋</h2>
         <div class="inp-unit-grp">
           <input
             type="text"
@@ -344,7 +374,7 @@
         </div>
         <!-- // 단위있는 인풋 -->
         
-        <h2>4-5. 셀렉트</h2>
+        <h2>4-6. 셀렉트</h2>
         <select
           id="#"
           name="#"
@@ -359,7 +389,7 @@
         </select>
         <!-- // 셀렉트 -->
 
-        <h2>4-6. 커스텀 셀렉트</h2>
+        <h2>4-7. 커스텀 셀렉트</h2>
         <!-- 커스텀 셀렉트 1 -->
         <div
           class="custom-slct custom-slct01"
