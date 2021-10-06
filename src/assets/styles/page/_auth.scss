@@ -1,4 +1,9 @@
 /* ========== 로그인 ========== */
+.color-gray {
+  color: #B8BAC7;
+  font-weight: 600;
+}
+
 .page {
   width: 100%;
 
@@ -26,10 +31,6 @@
   margin: 0 auto 150px;
   padding: 40px 20px 30px;
   background-color: #fff;
-
-  &.login-panel {
-    padding: 0 20px 30px;
-  }
 }
 
 .banner-wrap {
@@ -148,3 +149,19 @@
 /* ========== END 로그인 ========== */
 
 /* ========== 아이디 찾기 ========== */
+
+.confirm-ment {
+  font-size: rem(13);
+  font-weight: 500;
+  color: #3060FF;
+}
+
+.find-id-btn-wrap {
+  display: flex;
+  gap: 5px;
+
+  .btn-prev {
+    max-width: 140px;
+  }
+}
+

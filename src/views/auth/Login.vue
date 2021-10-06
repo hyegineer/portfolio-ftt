@@ -1,74 +1,76 @@
 <template>
   <div class="page login-page">
     <layout-header />
-    <div class="narrow-panel auth-panel login-panel">
-      <div
-        class="banner-wrap"
-        style="border: 5px solid orange"
-      >
-        배너영역 420X160
-      </div>
-      <p class="effect-ttl">
-        <b class="bold-txt">팩트시트에 로그인</b>하고,<br>다양한 서비스를 이용해보세요!
-      </p>
-      <div class="effect-inp-wrap">
+    <div class="page-container">
+      <div class="narrow-panel auth-panel">
         <div
-          class="effect-inp-grp"
-          :class="{'is-focused' : isFocused.userId}"
+          class="banner-wrap"
+          style="border: 5px solid orange"
         >
-          <label
-            for=""
-            class="label"
-          >이메일 아이디</label>
-          <input
-            v-model="payload.userId"
-            type="text"
-            class="input"
-            @focus="isFocused.userId = true"
-            @blur="awayInputId"
-          >
+          배너영역 420X160
         </div>
-        <div
-          class="effect-inp-grp"
-          :class="{'is-focused' : isFocused.pw}"
-        >
-          <label
-            for=""
-            class="label"
-          >비밀번호</label>
-          <input
-            v-model="payload.password"
-            type="password"
-            class="input"
-            @focus="isFocused.pw = true"
-            @blur="awayInputPw"
-          >
-        </div>
-      </div>
-      <btn-solid
-        class="btn-xlg btn-full"
-        @click="window.alert('로그인 버튼을 클릭하셨습니다.')"
-      >
-        로그인
-      </btn-solid>
-      <div class="find-wrap">
-        <p class="dec">
-          계정을 잊으셨나요?
+        <p class="effect-ttl">
+          <b class="bold-txt">팩트시트에 로그인</b>하고,<br>다양한 서비스를 이용해보세요!
         </p>
-        <div class="btn-wrap">
-          <a
-            href="#"
-            class="find-link"
-          >아이디 찾기</a>
-          <a
-            href="#"
-            class="find-link"
-          >비밀번호 찾기</a>
+        <div class="effect-inp-wrap">
+          <div
+            class="effect-inp-grp"
+            :class="{'is-focused' : isFocused.userId}"
+          >
+            <label
+              for=""
+              class="label"
+            >이메일 아이디</label>
+            <input
+              v-model="payload.userId"
+              type="text"
+              class="input"
+              @focus="isFocused.userId = true"
+              @blur="awayInputId"
+            >
+          </div>
+          <div
+            class="effect-inp-grp"
+            :class="{'is-focused' : isFocused.pw}"
+          >
+            <label
+              for=""
+              class="label"
+            >비밀번호</label>
+            <input
+              v-model="payload.password"
+              type="password"
+              class="input"
+              @focus="isFocused.pw = true"
+              @blur="awayInputPw"
+            >
+          </div>
         </div>
+        <btn-solid
+          class="btn-xlg btn-full"
+          @click="window.alert('로그인 버튼을 클릭하셨습니다.')"
+        >
+          로그인
+        </btn-solid>
+        <div class="find-wrap">
+          <p class="dec">
+            계정을 잊으셨나요?
+          </p>
+          <div class="btn-wrap">
+            <a
+              href="#"
+              class="find-link"
+            >아이디 찾기</a>
+            <a
+              href="#"
+              class="find-link"
+            >비밀번호 찾기</a>
+          </div>
+        </div>
+        <btn-bd-dark class="btn-md btn-full">
+          팩트시트 가입하기
+        </btn-bd-dark>
       </div>
-      <btn-bd-dark class="btn-md btn-full">
-        팩트시트 가입하기
-      </btn-bd-dark>
     </div>
     <layout-footer />
   </div>
