@@ -28,6 +28,10 @@
     width: 100%;
     max-width: 140px;
   }
+
+  @at-root .auth-panel &{
+    margin-top: 60px;
+  }
 }
 
 /* 버튼의 클래스명 작성은 <컬러 - 모양 - 높이> 순서로 한다. 
@@ -259,6 +263,14 @@
   }
 }
 
+.btn-upload{
+  @include circle(30px);
+  @include flex-center;
+
+  background-color: white;
+  border: 1px solid #B0B1BC;
+}
+
 /* 뱃지 스타일 */
 .badge-rounded{
   background-color: #DFFFE8;
@@ -267,11 +279,20 @@
   font-weight: 600;
   display: inline-block;
   vertical-align: middle;
+  cursor: pointer;
 
   .txt{
     @include font-op($w: 600, $c: #00ce6a){
       font-size: 13px;
     };
+  }
+
+  .btn{
+    .icon{
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cg id='btn-del-tag' transform='translate(-888 -1059)'%3E%3Crect id='사각형_2114' data-name='사각형 2114' width='14' height='14' transform='translate(888 1059)' fill='rgba(255,255,255,0)'/%3E%3Cg id='그룹_5805' data-name='그룹 5805' transform='translate(-14.5 0.5)'%3E%3Cline id='선_889' data-name='선 889' x2='10' y2='10' transform='translate(904.5 1060.5)' fill='none' stroke='%2300be77' stroke-width='2'/%3E%3Cline id='선_890' data-name='선 890' x1='10' y2='10' transform='translate(904.5 1060.5)' fill='none' stroke='%2300be77' stroke-width='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+      width: 14px;
+      height: 14px;
+    }
   }
 }
 
@@ -301,6 +322,18 @@
   cursor: pointer;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.07' height='12.124' viewBox='0 0 7.07 12.124'%3E%3Cpath id='About' d='M3.423-7.154c0-1.792-1.05-3.248-3.57-3.248a3.545,3.545,0,0,0-3.5,3.654h1.876c0-1.2.658-2.058,1.624-2.058A1.5,1.5,0,0,1,1.547-7.154c0,.854-.6,1.4-1.344,2a3.328,3.328,0,0,0-1.47,2.59v.728H.581v-.728c0-.742.5-1.19,1.33-1.862A3.506,3.506,0,0,0,3.423-7.154ZM.931.462A1.241,1.241,0,0,0-.343-.8,1.241,1.241,0,0,0-1.617.462,1.241,1.241,0,0,0-.343,1.722,1.241,1.241,0,0,0,.931.462Z' transform='translate(3.647 10.402)' fill='%23b8bac7'/%3E%3C/svg%3E%0A");
   border: 1px solid #8E909F;
+}
+
+.badge-auth{
+  @include font-op($w: 500, $c: #8E909F){
+    font-size: 12px;
+  }
+
+  border: 1px solid #8E909F;  
+  padding: 3.5px 9px;
+  border-radius: 50px;
+  -webkit-text-stroke: 0;
+  vertical-align: middle;
 }
 
 /* 토글 스타일 */
