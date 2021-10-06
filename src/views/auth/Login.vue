@@ -8,57 +8,71 @@
       >
         배너영역 420X160
       </div>
-      <p class="big-ttl">
+      <p class="effect-ttl">
         <b class="bold-txt">팩트시트에 로그인</b>하고,<br>다양한 서비스를 이용해보세요!
       </p>
-      <div class="input-grp">
-        <input
-          type="text"
-          class="input"
+      <div class="effect-inp-wrap">
+        <div
+          class="effect-inp-grp"
+          :class="{'is-focused' : isFocused.userId}"
         >
-        <label
-          for=""
-          class="label"
-        >이메일 아이디</label>
+          <label
+            for=""
+            class="label"
+          >이메일 아이디</label>
+          <input
+            v-model="payload.userId"
+            type="text"
+            class="input"
+            @focus="isFocused.userId = true"
+            @blur="awayInputId"
+          >
+        </div>
+        <div
+          class="effect-inp-grp"
+          :class="{'is-focused' : isFocused.pw}"
+        >
+          <label
+            for=""
+            class="label"
+          >비밀번호 입력</label>
+          <input
+            v-model="payload.password"
+            type="password"
+            class="input"
+            @focus="isFocused.pw = true"
+            @blur="awayInputPw"
+          >
+        </div>
       </div>
-
-
-      <!-- 혜진코드 -->
-      <div
-        class="effect-inp-grp"
-        :class="{'is-focused' : isFocused.userId}"
+      <btn-solid
+        class="btn-xlg btn-full"
+        @click="window.alert('로그인 버튼을 클릭하셨습니다.')"
       >
-        <label
-          for=""
-          class="label"
-        >이메일 아이디</label>
-        <input
-          v-model="payload.userId"
-          type="text"
-          class="input"
-          @focus="isFocused.userId = true"
-          @blur="awayInputId" 
-        >
+        로그인
+      </btn-solid>
+      <div class="find-wrap">
+        <p class="dec">
+          계정을 잊으셨나요?
+        </p>
+        <div class="btn-wrap">
+          <a
+            href="#"
+            class="find-link"
+          >아이디 찾기</a>
+          <a
+            href="#"
+            class="find-link"
+          >비밀번호 찾기</a>
+        </div>
       </div>
-
-      <div
-        class="effect-inp-grp"
-        :class="{'is-focused' : isFocused.pw}"
+      <btn-solid
+        class="btn-bd-dark btn-md btn-full"
       >
-        <label
-          for=""
-          class="label"
-        >비밀번호 입력</label>
-        <input
-          v-model="payload.password"
-          type="password"
-          class="input"
-          @focus="isFocused.pw = true"
-          @blur="awayInputPw"
-        >
-      </div>
-      <!-- // 혜진코드 -->
+        팩트시트 가입하기
+      </btn-solid>
     </div>
+    <layout-footer />
   </div>
 </template>
 
