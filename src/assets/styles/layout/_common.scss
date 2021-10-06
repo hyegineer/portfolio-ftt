@@ -178,3 +178,31 @@
     @include font-op($w: 600, $c: #303038);
   }
 }
+
+// 구성요소 - auth 관련 title group
+.auth-hgrp{
+  width: 100%;
+  text-align: left;
+
+  .ttl{
+    @include font-op($w: 400, $c: #171820){
+      font-size: 25px;
+    }
+
+    -webkit-text-stroke: 1px #171820;
+    margin-bottom: 12px;
+  }
+
+  .ttl-sub{
+    @include font-op($c: #171820){
+      font-size: 16px;
+    }
+
+    line-height: 1.5;
+  }
+}
+
+.symbol-fs{
+  max-width: 30px;
+  margin-bottom: 24px;
+}
