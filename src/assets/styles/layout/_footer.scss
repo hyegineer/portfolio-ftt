@@ -31,16 +31,66 @@
 .ft-info-wrap {
   color: #8E909F;
   font-weight: 400;
+  line-height: 1.5;
 
   .company-info {
     font-size: rem(15);
   }
 
   .ft-info-grp {
+    position: relative;
     font-size: rem(13);
+    margin-right: 20px;
+
+    &:nth-child(4) {
+      
+      &::after {
+        display: none;
+      }
+    }
+
+    &:last-child {
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      left: auto;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      content: '';
+      display: inline-block;
+      width: 1px;
+      height:80%;
+      background: #8E909F;
+    }
   }
 }
 
 .ft-bottom {
   padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .ft-gnb-link {
+    font-size: rem(13);
+    color: #B8BAC7;
+    font-weight: 600;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .copyright {
+    font-size: rem(13);
+    font-weight: 400;
+    color: #8E909F;
+  }
 }
