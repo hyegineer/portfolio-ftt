@@ -664,8 +664,8 @@
             <!-- // 회사이름 -->
 
             <!-- 회사정보 -->
-            <div class="card-dlist-grp">
-              <dl class="card-dlist">
+            <div class="dlist-grp">
+              <dl class="dlist">
                 <dt class="lbel">
                   대표자
                 </dt>
@@ -674,7 +674,7 @@
                 </dd>
               </dl>
               
-              <dl class="card-dlist">
+              <dl class="dlist">
                 <dt class="lbel">
                   사업자번호
                 </dt>
@@ -683,7 +683,7 @@
                 </dd>
               </dl>
               
-              <dl class="card-dlist">
+              <dl class="dlist">
                 <dt class="lbel">
                   본사주소
                 </dt>
@@ -692,7 +692,7 @@
                 </dd>
               </dl>
               
-              <dl class="card-dlist">
+              <dl class="dlist">
                 <dt class="lbel">
                   연락처
                 </dt>
@@ -701,7 +701,7 @@
                 </dd>
               </dl>
               
-              <dl class="card-dlist">
+              <dl class="dlist">
                 <dt class="lbel">
                   기업규모
                 </dt>
@@ -710,7 +710,7 @@
                 </dd>
               </dl>
               
-              <dl class="card-dlist">
+              <dl class="dlist">
                 <dt class="lbel">
                   산업분류
                 </dt>
@@ -719,7 +719,7 @@
                 </dd>
               </dl>
               
-              <dl class="card-dlist">
+              <dl class="dlist">
                 <dt class="lbel">
                   산업분야
                 </dt>
@@ -728,7 +728,7 @@
                 </dd>
               </dl>
               
-              <dl class="card-dlist">
+              <dl class="dlist">
                 <dt class="lbel">
                   설립일
                 </dt>

@@ -45,6 +45,10 @@
   @include inp-default;
 }
 
+textarea.inp{
+  resize: none;
+}
+
 /* 기본 인풋그룹 */
 .inp-grp{
   @include flex{
@@ -52,7 +56,7 @@
   }
 
   width: 100%;
-  margin: 5px 0;
+  margin: 2.5px 0;
   gap: 5px;
 }
 
@@ -82,7 +86,10 @@
   margin: 17px 0;
 
   .lbel{
+    margin-bottom: 5px;
     width: 100%;
+    font-weight: 500;
+    color: #171820;
   }
 }
 
@@ -108,17 +115,16 @@
 }
 
 .lbel{
-  margin-bottom: 5px;
   font-size: 13px;
   font-weight: 400;
   color: #171820;
   display: inline-block;
+}
 
-  .required{
-    color: #FF5175;
-    font-weight: 500;
-    font-size: 12px;
-  }
+.required{
+  color: #FF5175;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 /* 인풋 + 단위 */
@@ -293,4 +299,92 @@
   &:active{
     background-color: darken(#ebebed, 3%);
   }
+}
+
+/* 폼양식 */
+.ffieldset{ // form-fieldset 줄임말
+  width: 100%;
+  border-bottom: 1px solid #DDDEE6;
+  padding: 30px 0;
+
+  &:first-child,
+  &:first-of-type{
+    padding-top: 0;
+  }
+
+  &:last-child,
+  &:last-of-type{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  & > * {
+    float: left;
+    width: 100%;
+  }
+
+  .lbel-inp-grp{
+    margin: 10px 0;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  .ffieldset-ttl{
+    @include font-op($w: 400, $c: #171820){
+      font-size: 16px;
+    }
+
+    -webkit-text-stroke: 1px #171820;
+    margin-bottom: 10px;
+  }
+
+  .ffieldset-ttl ~ .ffieldset-guide{
+    margin-bottom: 10px;
+  }
+
+  .ffieldset-guide{
+    @include font-op($c: #8E909F){
+      font-size: 12px;
+    }
+
+    line-height: 1.5;
+    margin: 5px 0;
+  }
+}
+
+/* 파일첨부 인풋 그룹 */
+.file-inp-grp{
+  width: 100%;
+  margin: 10px 0;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  .lbel{
+    font-size: 14px;
+    font-weight: 400;
+    -webkit-text-stroke: 0.5px #171820;
+    margin-bottom: 10px;
+  }
+
+  .input-img-frame{
+    margin-bottom: 10px;
+  }
+}
+
+.fvalidate-msg{
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.fvalidate-msg.is-success{
+  color: #3060FF;
+}
+
+.fvalidate-msg.is-fail{
+  color: #FF5175;
 }

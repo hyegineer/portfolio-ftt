@@ -147,42 +147,6 @@
   gap: 20px;
 }
 
-.card-dlist-grp{
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 7px;
-  row-gap: 18px;
-}
-
-.card-dlist{
-  @include flex{
-    @include flex-op(flex-start, flex-start);
-  }
-  
-  font-size: 15px;
-  width: 100%;
-
-  .lbel{
-    @include font-op($w: 400, $c: #8e909f){
-      font-size: inherit;
-    };
-
-    margin-bottom: 0;
-    width: 100%;
-    max-width: 85px;
-    padding-right: 10px;
-  }
-
-  .txt{
-    color: #171820;
-
-    & > span{
-      @include ellipse(1, 17px);
-    }
-  }
-}
-
 .card-keyword-badge-grp{
   @include flex{
     @include flex-op(center, flex-start);

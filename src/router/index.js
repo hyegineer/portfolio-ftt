@@ -80,6 +80,14 @@ const routes = [
     meta: { requiresResetScrollHeight: true }, // 최상단 가게
     // meta: { requiresAuth: true }, // 로그인안할 때 팅기게
   },
+  // 회원가입 중 기업선택
+  {
+    path: '/register-search-company',
+    name: 'RegisterSearchCompany',
+    component: () => import('~@/views/auth/RegisterSearchCompany'),
+    meta: { requiresResetScrollHeight: true }, // 최상단 가게
+    // meta: { requiresAuth: true }, // 로그인안할 때 팅기게
+  },
   // 스타트업 회원가입 인트로
   {
     path: '/register-intro-startup',
@@ -88,11 +96,27 @@ const routes = [
     meta: { requiresResetScrollHeight: true }, // 최상단 가게
     // meta: { requiresAuth: true }, // 로그인안할 때 팅기게
   },
+  // 스타트업 회원가입
+  {
+    path: '/register-startup',
+    name: 'RegisterStartup',
+    component: () => import('~@/views/auth/RegisterStartup'),
+    meta: { requiresResetScrollHeight: true }, // 최상단 가게
+    // meta: { requiresAuth: true }, // 로그인안할 때 팅기게
+  },
   // 투자자 회원가입 인트로
   {
     path: '/register-intro-investor',
     name: 'RegisterIntroInvestor',
     component: () => import('~@/views/auth/RegisterIntroInvestor'),
+    meta: { requiresResetScrollHeight: true }, // 최상단 가게
+    // meta: { requiresAuth: true }, // 로그인안할 때 팅기게
+  },
+  // 투자자 회원가입
+  {
+    path: '/register-investor',
+    name: 'RegisterInvestor',
+    component: () => import('~@/views/auth/RegisterInvestor'),
     meta: { requiresResetScrollHeight: true }, // 최상단 가게
     // meta: { requiresAuth: true }, // 로그인안할 때 팅기게
   },

@@ -68,7 +68,7 @@
 
 <script>
 export default {
-  name: 'RegisterIntro',
+  name: 'RegisterIntroStartup',
   data() {
     return{
       registerType: null,
@@ -76,17 +76,18 @@ export default {
   },
   methods: {
     clickNext() {
-      switch(this.registerType) {
-      case null: 
+      if(!this.registerType) {
         window.alert('기업에 소속된 형태를 선택해주세요.');
-        break;
-      case 'ceo':
-        window.alert('대표입니다.');
-        break;
-      case 'staff':
-        window.alert('직원입니다.');
-        break;
+        return;
       }
+      
+      this.$router.push({
+        name: 'RegisterSearchCompany',
+        query: {
+          type01: 'startup',
+          type02: this.registerType,
+        },
+      });
     },
   },
 };
