@@ -249,46 +249,58 @@
       </h1>
       <div class="section-cont section-input-cont">
         <h2>4-1. 인풋만</h2>
-        <input
-          type="text"
-          class="inp"
-          placeholder="플레이스 홀더"
-        >
-        <input
-          type="text"
-          class="inp"
-          value="작성된 내용"
-        >
-        <input
-          type="text"
-          class="inp"
-          disabled
-          value="작성할 수 없는 입력영역"
-        >
-        <button
-          type="button"
-          class="inp"
-        >
-          <i class="icon icon-cal" />
-          <span>2021.10.05</span>
-        </button>
+        <div class="inp-grp">
+          <input
+            type="text"
+            class="inp"
+            placeholder="플레이스 홀더"
+          >
+        </div>
+        
+        <div class="inp-grp">
+          <input
+            type="text"
+            class="inp"
+            value="작성된 내용"
+          >
+        </div>
+        
+        <div class="inp-grp">
+          <input
+            type="text"
+            class="inp"
+            disabled
+            value="작성할 수 없는 입력영역"
+          >
+        </div>
+        
+        <div class="inp-grp">
+          <button
+            type="button"
+            class="inp"
+          >
+            <i class="icon icon-cal" />
+            <span>2021.10.05</span>
+          </button>
+        </div>
         <!-- // 인풋만 -->
 
         
         <h2>4-2. 인풋 + 인증번호</h2>
-        <div class="inp-btn-grp">
+        <div class="inp-grp inp-btn-grp">
           <input
             type="text"
             class="inp"
             placeholder="검색어를 입력하세요"
           >
+
           <btn-bd class="btn-md">
             인증번호 발송
           </btn-bd>
         </div>
         
-        <div class="inp-btn-grp">
-          <div class="inp-time-grp">
+        <div class="inp-grp inp-btn-grp">
+          <div class="inp-grp inp-time-grp">
             <input
               type="text"
               class="inp"
@@ -296,6 +308,7 @@
             >
             <span class="inp-time">3:00</span>
           </div>
+
           <button
             type="button"
             class="btn-solid-dark btn-md"
@@ -305,7 +318,7 @@
         </div>
 
         <h2>4-3. 인풋 + 검색버튼</h2>
-        <div class="inp-sch-grp">
+        <div class="inp-grp inp-sch-grp">
           <input
             v-model="exInput"
             type="text"
@@ -327,8 +340,7 @@
             <span class="is-voice-only">검색하기</span>
           </button>
         </div>
-        
-        <div class="inp-sch-grp">
+        <div class="inp-grp inp-sch-grp">
           <input
             v-model="exInput"
             type="text"
@@ -355,16 +367,18 @@
         <h2>4-4. 라벨 + 인풋</h2>
         <div class="lbel-inp-grp">
           <label class="lbel">대표자명 <span class="required">*</span></label>
-          <input
-            type="text"
-            class="inp"
-            placeholder="플레이스 홀더"
-          >
+          <div class="inp-grp">
+            <input
+              type="text"
+              class="inp"
+              placeholder="플레이스 홀더"
+            >
+          </div>
         </div>
         <!-- // 라벨 + 인풋 -->
 
         <h2>4-5. 단위있는 인풋</h2>
-        <div class="inp-unit-grp">
+        <div class="inp-grp inp-unit-grp">
           <input
             type="text"
             class="inp"
