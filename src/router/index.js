@@ -136,11 +136,33 @@ const routes = [
     meta: { requiresResetScrollHeight: true }, // 최상단 가게
     // meta: { requiresAuth: true }, // 로그인안할 때 팅기게
   },
+  // 아이디찾기완료
+  {
+    path: '/find-id-complete',
+    name: 'FindIdComplete',
+    component: () => import('~@/views/auth/FindIdComplete'),
+    meta: { requiresResetScrollHeight: true }, // 최상단 가게
+    // meta: { requiresAuth: true }, // 로그인안할 때 팅기게
+  },
   // 비밀번호찾기
   {
     path: '/find-pw',
     name: 'FindPw',
     component: () => import('~@/views/auth/FindPw'),
+    meta: { requiresResetScrollHeight: true },
+  },
+  // 비밀번호찾기-이메일전송
+  {
+    path: '/find-pw-send',
+    name: 'FindPwSend',
+    component: () => import('~@/views/auth/FindPwSend'),
+    meta: { requiresResetScrollHeight: true },
+  },
+  // 비밀번호찾기-비밀번호변경
+  {
+    path: '/find-pw-reset',
+    name: 'FindPwReset',
+    component: () => import('~@/views/auth/FindPwReset'),
     meta: { requiresResetScrollHeight: true },
   },
   // 비밀번호재설정

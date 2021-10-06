@@ -13,6 +13,7 @@
             휴대폰 번호로 아이디를 찾습니다.
           </p>
         </div>
+        <!-- FIXME: 전체 감싸는 필드셋 필요 -->
         <div class="lbel-inp-grp">
           <label class="lbel">이름</label>
           <div class="inp-grp">

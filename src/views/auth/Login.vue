@@ -67,9 +67,11 @@
             >비밀번호 찾기</a>
           </div>
         </div>
-        <btn-bd-dark class="btn-md btn-full">
-          팩트시트 가입하기
-        </btn-bd-dark>
+        <div class="btn-join-wrap">
+          <btn-bd-dark class="btn-md btn-full">
+            팩트시트 가입하기
+          </btn-bd-dark>
+        </div>
       </div>
     </div>
     <layout-footer />
