@@ -102,7 +102,7 @@
 }
 
 .find-wrap {
-  margin: 20px 0 40px;
+  margin: 20px 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -146,6 +146,10 @@
     }
   }
 }
+
+.btn-join-wrap {
+  padding-top: 20px;
+}
 /* ========== END 로그인 ========== */
 
 /* ========== 아이디 찾기 ========== */
@@ -162,6 +166,53 @@
 
   .btn-prev {
     max-width: 140px;
+  }
+}
+
+.print-grp {
+  padding-bottom: 90px;
+
+  &.print-pw-grp {
+    padding-bottom: 30px;
+  }
+
+  .print-ment {
+    font-size: rem(14);
+    font-weight: 500;
+    color: #5C5E70;
+    text-align: center;
+    margin-bottom: 14px;
+    line-height: 1.45;
+  }
+
+  .print-value {
+    font-size: rem(20);
+    font-weight: 600;
+    color: #171820;
+    text-align: center;
+    padding: 17px 0;
+    background-color: #F9F9FB;
+  }
+}
+
+/* ========== END 아이디 찾기 ========== */
+
+/* ========== 비밀번호 찾기 - 이메일 전송 ========== */
+.time-btn-wrap {
+  text-align: center;
+  padding: 4px 0 10px;
+
+  .time {
+    font-size: rem(14);
+    font-weight: 600;
+    color: #171820;
+    margin-bottom: 10px;
+    letter-spacing: -.5px;
+    text-decoration: underline;
+  }
+
+  .btn-resend {
+    min-width: 100px;
   }
 }
 
