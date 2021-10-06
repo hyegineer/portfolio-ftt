@@ -1,6 +1,14 @@
-/* ========== common ========== */
+/* ========== 로그인 ========== */
 .page {
   width: 100%;
+
+  &.auth-page {
+    background-color: #F9F9FB;
+  }
+
+  &.login-page {
+    background-color: #fff;
+  }
 }
 
 .narrow-panel {
@@ -9,7 +17,13 @@
 }
 
 .auth-panel {
-  padding: 40px 0 150px;
+  margin: 40px auto 150px;
+  padding: 40px 20px 30px;
+  background-color: #fff;
+
+  &.login-panel {
+    padding: 0 20px 30px;
+  }
 }
 
 .banner-wrap {
@@ -124,5 +138,7 @@
       }
     }
   }
-
 }
+/* ========== END 로그인 ========== */
+
+/* ========== 아이디 찾기 ========== */
