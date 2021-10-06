@@ -1,7 +1,7 @@
 <template>
-  <div class="page">
+  <div class="page login-page">
     <layout-header />
-    <div class="narrow-panel auth-panel">
+    <div class="narrow-panel auth-panel login-panel">
       <div
         class="banner-wrap"
         style="border: 5px solid orange"
@@ -35,7 +35,7 @@
           <label
             for=""
             class="label"
-          >비밀번호 입력</label>
+          >비밀번호</label>
           <input
             v-model="payload.password"
             type="password"
@@ -66,11 +66,9 @@
           >비밀번호 찾기</a>
         </div>
       </div>
-      <btn-solid
-        class="btn-bd-dark btn-md btn-full"
-      >
+      <btn-bd-dark class="btn-md btn-full">
         팩트시트 가입하기
-      </btn-solid>
+      </btn-bd-dark>
     </div>
     <layout-footer />
   </div>
