@@ -5,12 +5,14 @@
       <div
         class="narrow-panel auth-panel"
       >
-        <h3 class="ttl">
-          아이디 찾기
-        </h3>
-        <p class="dec">
-          휴대폰 번호로 아이디를 찾습니다.
-        </p>
+        <div class="auth-hgrp">
+          <h3 class="ttl">
+            아이디 찾기
+          </h3>
+          <p class="ttl-sub">
+            휴대폰 번호로 아이디를 찾습니다.
+          </p>
+        </div>
         <div class="lbel-inp-grp">
           <label class="lbel">이름</label>
           <div class="inp-grp">
@@ -56,12 +58,20 @@
             인증이 완료되었습니다.
           </p>
         </div>
-        <btn-solid
-          class="btn-lg btn-full"
-          @click="window.alert('다음 버튼을 클릭하셨습니다.')"
-        >
-          다음
-        </btn-solid>
+        <div class="find-id-btn-wrap">
+          <btn-bd-light
+            class="btn-lg btn-full color-gray btn-prev"
+            @click="window.alert('이전 버튼을 클릭하셨습니다.')"
+          >
+            이전
+          </btn-bd-light>
+          <btn-solid
+            class="btn-lg btn-full"
+            @click="window.alert('완료 버튼을 클릭하셨습니다.')"
+          >
+            완료
+          </btn-solid>
+        </div>
       </div>
     </div>
     <layout-footer />
