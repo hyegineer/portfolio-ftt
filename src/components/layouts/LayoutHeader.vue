@@ -132,7 +132,7 @@
               </custom-slct-opt>
             
               <custom-slct-opt 
-                @click="hdSearchOptions.depth01 = '산업분류 1'"
+                @click="hdSearchOptions.depth01 = '산업분류 2'"
               >
                 산업분류 2
               </custom-slct-opt>
@@ -157,7 +157,7 @@
               </custom-slct-opt>
             
               <custom-slct-opt 
-                @click="hdSearchOptions.depth02 = '산업분야 1'"
+                @click="hdSearchOptions.depth02 = '산업분야 2'"
               >
                 산업분야 2
               </custom-slct-opt>
