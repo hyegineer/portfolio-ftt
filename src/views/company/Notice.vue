@@ -1,7 +1,46 @@
 <template>
-  <div>
+  <div class="page company-page">
     <layout-header />
-    <div style="height: 500px" />
+    <div class="page-container">
+      <div class="company-hgrp">
+        <div class="wide-panel">
+          <h5 class="ttl">
+            공지사항
+          </h5>
+          <p class="ttl-sub">
+            팩트시트의 새로운 소식과 <br>정보를 알려드립니다.
+          </p>
+        </div>
+      </div>
+      <div class="company-cont-wrap">
+        <div class="wide-panel">
+          <div class="board-tab-all-wrap">
+            <div class="board-cont-list-wrap">
+              <div class="board-cont-list is-active">
+                <div class="board-cont-ttl-box">
+                  <div class="ttl-box-left">
+                    <span class="no">10</span>
+                    <span class="ttl">공지사항 제목</span>
+                  </div>
+                  <div class="ttl-box-right">
+                    <span class="ttl-box-date">2021.00.00</span>
+                    <i class="icon ttl-box-icon" />
+                  </div>
+                </div>
+                <div class="board-cont-box">
+                  <div class="q-cont-box">
+                    <p class="q-cont">
+                      공지사항 내용 텍스트입니다.
+                      공지사항 내용 텍스트입니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <layout-footer />
   </div>
 </template>

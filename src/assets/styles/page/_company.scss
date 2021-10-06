@@ -1,0 +1,108 @@
+/* ========== 공지사항 ========== */
+.wide-panel {
+  width: 90%;
+  max-width: 1090px;
+  margin: 0 auto;
+}
+
+.company-hgrp {
+  background-color: #fff;
+  padding: 90px 0 80px;
+
+  .ttl {
+    font-size: rem(18);
+    font-weight: 500;
+    color: #171820;
+    margin-bottom: 40px;
+  }
+
+  .ttl-sub {
+    font-size: rem(45);
+    font-weight: 500;
+    color: #171820;
+    line-height: 1.25;
+  }
+}
+
+
+.company-cont-wrap {
+  background-color: #F9F9FB;
+  padding: 50px 0 140px;
+}
+
+.board-tab-all-wrap {
+  background-color: #fff;
+}
+
+.board-cont-list-wrap {
+  padding: 0 40px;
+}
+
+.board-cont-list {
+
+  &.is-active {
+
+    .board-cont-ttl-box {
+      border-bottom: 1px solid #DDDEE6;
+    }
+
+    .ttl-box-left {
+
+      .ttl {
+        font-weight: 500;
+      }
+    }
+    
+    .board-cont-box {
+      display: block;
+    }
+
+    .ttl-box-icon {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.board-cont-ttl-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 0;
+  cursor: pointer;
+}
+
+.ttl-box-left {
+
+  .no {
+    display: inline-block;
+    width: 70px;
+    font-size: rem(14);
+    font-weight: 400;
+    color: #8E909F;
+  }
+
+  .ttl {
+    font-size: rem(18);
+    font-weight: 400;
+    color: #171820;
+  }
+}
+
+.ttl-box-date {
+  font-size: rem(13);
+  font-weight: 500;
+  color: #B0B1BC;
+  margin-right: 22px;
+  letter-spacing: -0.5px;
+}
+
+.board-cont-box {
+  padding: 40px 70px;
+  display: none;
+  
+  .q-cont {
+    font-size: rem(16);
+    font-weight: 400;
+    color: #5C5E70;
+  }
+}
+
