@@ -1,0 +1,16 @@
+// 구성요소 - empty-wrap
+.empty-wrap{
+  text-align: center;
+
+  .empty-icon{
+    width: 100%;
+    max-width: 188px;
+    margin: 0 auto 18px;
+  }
+
+  .empty-txt{
+    @include font-op($c: #8E909F){
+      font-size: 15px;
+    };
+  }
+}

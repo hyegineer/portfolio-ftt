@@ -1,10 +1,11 @@
 <template>
   <div class="empty-wrap">
-    <!-- <img
-      src="@/assets/images/icon/icon-empty.svg"
-      alt="돋보기 아이콘"
+    <img
+      src="@/assets/images/icon/icon-empty-data.svg"
+      alt="내역없음 일러스트"
       class="empty-icon"
-    > -->
+    >
+
     <p class="empty-txt">
       {{ txt }}
     </p>
@@ -13,13 +14,13 @@
 
 <script>
 export default {
-    name: 'EmptyContents',
-    props: {
-        txt: {
-            type: String,
-            default: '내역이 없습니다.',
-        },
+  name: 'EmptyContents',
+  props: {
+    txt: {
+      type: String,
+      default: '내역이 없습니다.',
     },
+  },
 };
 </script>
 

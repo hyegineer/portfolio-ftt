@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    class="btn-solid"
+    class="btn-bd-light"
     @click="click"
   >
     <slot />

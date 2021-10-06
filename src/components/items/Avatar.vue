@@ -1,5 +1,8 @@
 <template>
-  <div class="avatar">
+  <div
+    class="avatar"
+    :class="{'is-lg' : lg}"
+  >
     <img
       v-if="src"
       :src="src"
@@ -8,7 +11,14 @@
     >
 
     <img
-      v-if="!src"
+      v-else-if="!src && lg"
+      src="@/assets/images/dft/dft-profile.svg"
+      :alt="`${src}`"
+      class="avatar-img"
+    >
+    
+    <img
+      v-else-if="!src && !lg"
       src="@/assets/images/dft/dft-logo.png"
       :alt="`${src}`"
       class="avatar-img"
@@ -20,6 +30,10 @@
 export default {
   name: 'Avatar',
   props: {
+    lg: {
+      type: Boolean,
+      default: false,
+    },
     src: {
       type: String,
       default: null,
