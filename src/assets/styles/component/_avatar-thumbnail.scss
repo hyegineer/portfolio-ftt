@@ -1,3 +1,44 @@
 .avatar{
+  @include circle(40px);
+
+  border: 1px solid #DDDEE6;
+  overflow: hidden;
   
+  .avatar-img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.avatar.is-lg{
+  @include circle(100px);
+}
+
+.thumbnail{
+  width: 100%;
+  max-width: 260px;
+
+  .thumbnail-ratio{
+    width: 100%;
+    padding-top: 68.467%;
+    position: relative;
+    border: 1px solid #EBECF5;
+    background-color: #ffffff;
+  }
+
+  .thumbnail-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.thumbnail.is-lg{
+  max-width: 410px;
 }

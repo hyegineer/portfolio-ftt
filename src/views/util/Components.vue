@@ -8,47 +8,51 @@
       <div class="section-cont section-btns-cont">
         <btn-solid
           class="btn-lg btn-full"
-          @click="window.alert('준비 중입니다.')"
+          @click="window.alert('다음 버튼을 클릭하셨습니다.')"
         >
           다음
         </btn-solid>
 
         <btn-solid
           class="btn-xlg btn-full"
+          @click="window.alert('로그인 버튼을 클릭하셨습니다.')"
         >
           로그인
         </btn-solid>
 
-        <button
-          type="button"
-          class="btn-bd btn-xlg"
+        <btn-bd
+          class="btn-xlg"
+          @click="window.alert('기업정보 업데이트 버튼을 클릭하셨습니다.')"
         >
           기업정보 업데이트
-        </button>
-        <button
-          type="button"
-          class="btn-bd-dark btn-sm"
+        </btn-bd>
+        
+        <btn-bd-dark
+          class="btn-sm"
+          @click="window.alert('설정하기 버튼을 클릭하셨습니다.')"
         >
           설정하기
-        </button>
-        <button
-          type="button"
-          class="btn-bd-dark btn-md"
+        </btn-bd-dark>
+
+        <btn-bd-dark
+          class="btn-md"
+          @click="window.alert('인증번호 발송 버튼을 클릭하셨습니다.')"
         >
           인증번호 발송
-        </button>
-        <button
-          type="button"
-          class="btn-bd-light btn-sm"
+        </btn-bd-dark>
+
+        <btn-bd-light
+          class="btn-sm"
+          @click="window.alert('엑셀양식 다운로드 버튼을 클릭하셨습니다.')"
         >
           엑셀양식 다운로드
-        </button>
-        <button
-          type="button"
-          class="btn-bd-light btn-rounded btn-xsm"
+        </btn-bd-light>
+
+        <btn-bd-light
+          class="btn-rounded btn-xsm"
         >
           버튼명
-        </button>
+        </btn-bd-light>
       </div>
     </section>
     
@@ -439,13 +443,83 @@
         <!-- // 커스텀 셀렉트 2 -->
       </div>
     </section>
+
     <section class="section">
       <h1 class="cp-ttl">
-        5. 썸네일, 아바타
+        5. 아바타 & 썸네일
       </h1>
 
       <div class="section-cont ">
+        <h2>5-1. 기업로고 아바타</h2>
         <avatar />
+        
+        <h2>5-2. 기업구성원 아바타</h2>
+        <avatar lg />
+        
+        <h2>5-3. 썸네일</h2>
+        <thumbnail />
+        
+        <h2>5-4. 썸네일 큰사이즈</h2>
+        <thumbnail lg />
+      </div>
+    </section>
+    
+    <section class="section">
+      <h1 class="cp-ttl">
+        6. 내용이 없을 때
+      </h1>
+
+      <div class="section-cont ">
+        <empty-contents txt="등록된 문의사항이 없습니다." />
+      </div>
+    </section>
+
+    <section class="section">
+      <h1 class="cp-ttl">
+        7. 프로필
+      </h1>
+
+      <div class="section-cont section-card-cont">
+        <div class="card">
+          <div class="card-thumb">
+            <thumbnail />
+            <span class="ribbon">정보 업데이트</span>
+          </div>
+
+          <ul class="card-subtxt-grp">
+            <li class="card-subtxt-list">
+              기업규모
+            </li>
+            <li class="card-subtxt-list">
+              산업분류
+            </li>
+            <li class="card-subtxt-list">
+              산업분야
+            </li>
+          </ul>
+
+          <h6 class="card-name">
+            주식회사 팩트컴퍼니
+          </h6>
+
+          <ul class="card-tag-grp">
+            <li class="card-tag-list">
+              #태그텍스트여덟자
+            </li>
+            <li class="card-tag-list">
+              #태그텍스트여덟자
+            </li>
+            <li class="card-tag-list">
+              #태그텍스트여덟자
+            </li>
+            <li class="card-tag-list">
+              #태그텍스트여덟자
+            </li>
+            <li class="card-tag-list">
+              #태그텍스트여덟자
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   </div>
@@ -529,6 +603,10 @@ export default {
     border-bottom: 1px solid #ebebeb;
 
     padding: 20px 0;
+
+    &:last-child {
+      border-bottom: 0;
+    }
   }
 
   .section-btns-cont {
@@ -537,9 +615,20 @@ export default {
     flex-wrap: wrap;
     align-items: flex-start;
   }
+
+  .section-card-cont {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    & > * {
+      flex-shrink: 0;
+    }
+  }
 }
 
-.section-input-cont {
+.section-cont {
   & > h2 {
     margin: 15px 0;
     font-weight: 500;
