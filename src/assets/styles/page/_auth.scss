@@ -54,3 +54,46 @@
     }
   }
 }
+
+.effect-inp-grp{
+  width: 100%;
+  margin: 25px 0;
+  position: relative;
+  height: 50px;
+  
+  .label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    font-size: rem(16);
+    color: #B8BAC7;
+    font-weight: 400;
+    transition: all .2s;
+    z-index: 0;
+  }
+
+  .input {
+    @include input-reset;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-bottom: 1px solid #B8BAC7;
+
+    &:focus {
+      border-bottom: 1px solid #00EB79;
+    }
+  }
+}
+
+.effect-inp-grp.is-focused{
+  .label {
+    font-size: rem(12);
+    top: 0;
+  }
+}

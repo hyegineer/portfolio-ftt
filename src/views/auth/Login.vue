@@ -21,13 +21,74 @@
           class="label"
         >이메일 아이디</label>
       </div>
+
+
+      <!-- 혜진코드 -->
+      <div
+        class="effect-inp-grp"
+        :class="{'is-focused' : isFocused.userId}"
+      >
+        <label
+          for=""
+          class="label"
+        >이메일 아이디</label>
+        <input
+          v-model="payload.userId"
+          type="text"
+          class="input"
+          @focus="isFocused.userId = true"
+          @blur="awayInputId" 
+        >
+      </div>
+
+      <div
+        class="effect-inp-grp"
+        :class="{'is-focused' : isFocused.pw}"
+      >
+        <label
+          for=""
+          class="label"
+        >비밀번호 입력</label>
+        <input
+          v-model="payload.password"
+          type="password"
+          class="input"
+          @focus="isFocused.pw = true"
+          @blur="awayInputPw"
+        >
+      </div>
+      <!-- // 혜진코드 -->
     </div>
   </div>
 </template>
 
 <script>
 export default {
-
+  name: 'Login',
+  data() {
+    return{
+      payload: {
+        userId: null,
+        password: null,
+      },
+      isFocused: {
+        userId: false,
+        pw: false,
+      },
+    };
+  },
+  methods: {
+    awayInputId() {
+      if(!this.payload.userId) {
+        this.isFocused.userId = false;
+      }
+    },
+    awayInputPw() {
+      if(!this.payload.password) {
+        this.isFocused.pw = false;
+      }
+    },
+  },
 };
 </script>
 
