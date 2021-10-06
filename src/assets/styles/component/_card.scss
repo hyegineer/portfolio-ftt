@@ -1,6 +1,18 @@
 .card{
   width: 100%;
   max-width: 260px;
+  
+  .card-thumb{
+    margin-bottom: 15px;
+  }
+
+  .card-name{
+    margin-top: 10px;
+  }
+
+  .card-tag-grp{
+    margin-top: 11px;
+  }
 }
 
 .card-thumb{
@@ -8,14 +20,15 @@
   position: relative;
 
   .ribbon{
+    @include absolute($t: 10px);
     @include bg-op($p: 0 50%, $s: contain);
 
+    z-index: 1;
     background-color: #41424A;
     color: white;
     font-size: 12px;
     font-weight: 600;
     padding: 6px 10px;
-    position: relative;
 
     @include make-before{
       position: absolute;
@@ -68,16 +81,12 @@
   @include font-op($w: 600, $c: #171820){
     font-size: 19px;
   }
-
-  margin-top: 10px;
 }
 
 .card-tag-grp{
   @include font-op($c: #00CE6A){
     font-size: 12px;
   }
-  
-  margin-top: 11px;
 }
 
 .card-tag-list{
