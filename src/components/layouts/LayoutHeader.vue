@@ -10,6 +10,7 @@
           >
             <i class="icon icon-hamburger" />
           </button>
+
           <div class="hd-logo-wrap">
             <h1 class="hd-logo">
               <a
@@ -24,6 +25,7 @@
               </a>
             </h1>
           </div>
+
           <div class="gnb-group">
             <a
               href="#"
@@ -39,11 +41,12 @@
             >1:1문의</a>
             <!-- TODO: update-point 있으면 업데이트 표시 -->
             <a
-              v-if="authCheck === true && memberType !== 'fact-checker'"
+              v-if="testIsUser && testUserType !== 'fact-checker'"
               href="#"
               class="gnb-link update-point"
             >쪽지함</a>
           </div>
+
           <button
             type="button"
             class="btn-hd-search"
@@ -52,43 +55,48 @@
             스타트업 검색
           </button>
         </div>
+
         <div class="hd-right">
           <!-- INFO: 로그인 전 -->
           <div
-            v-if="authCheck === false"
+            v-if="!testIsUser"
             class="auth-wrap"
           >
             <a
               href="#"
               class="auth-link"
             >로그인</a>
+
             <a
               href="#"
               class="auth-link"
             >회원가입</a>
           </div>
           <!-- INFO: END 로그인 전 -->
+
           <!-- INFO: 로그인 후 -->
           <div
-            v-if="authCheck === true"
+            v-if="testIsUser"
             class="greeting-wrap"
           >
             <div class="greeting-name-wrap underline-color">
               <span class="greeting-name">{{ '이투자' }}</span>
-              <span class="greeting-title">{{ memberType === 'investor' || memberType === 'startup' ? '님' : '팩트체커' }}</span>
+              <span class="greeting-title">{{ testUserType === 'investor' || testUserType === 'startup' ? '님' : '팩트체커' }}</span>
             </div>
+
             <div
-              v-if="memberType === 'investor'"
+              v-if="testUserType === 'investor'"
               class="greeting-ment-wrap"
             >
               <span
-                v-if="memberType === 'investor' && membership === true"
+                v-if="testUserType === 'investor' && testMembership"
                 class="greeting-date"
               >
                 멤버십 2021.12.31 까지
               </span>
+              
               <span
-                v-if="memberType === 'investor' && membership === false"
+                v-if="testUserType === 'investor' && !testMembership"
                 class="greeting-ment"
               >
                 <b class="bold-txt underline-bk">멤버십에 가입</b>해보세요!
@@ -98,6 +106,7 @@
           <!-- INFO: END 로그인 후 -->
         </div>
       </div>
+
       <!-- search-bar -->
       <!-- TODO: is-active에 서치바 출력 -->
       <div
@@ -105,6 +114,7 @@
         :class="{'is-active': viewSearchbar}"
       />
       <!-- END search-bar -->
+
       <!-- side-bar -->
       <div
         class="side-overlay"
@@ -192,9 +202,9 @@ export default {
   name: 'LayoutHeader',
   data() {
     return {
-      authCheck: true,
-      memberType: 'investor', // startup, investor, fact-checker
-      membership: true,
+      testIsUser: true,
+      testUserType: 'investor', // startup, investor, fact-checker
+      testMembership: false,
       viewSearchbar: false,
       viewSidebar: false,
     };
