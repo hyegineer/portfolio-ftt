@@ -491,6 +491,8 @@
       </h1>
 
       <div class="section-cont section-card-cont">
+        <!--  -->
+        
         <div class="card">
           <div class="card-thumb">
             <thumbnail />
