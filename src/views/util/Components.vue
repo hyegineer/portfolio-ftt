@@ -87,13 +87,10 @@
         <!-- // 체크박스 -->
 
         <!-- 채팅 버튼 -->
-        <button
-          type="button"
-          class="btn-square-bd"
-        >
+        <btn-square-bd @click="window.alert('메세지 버튼 누르기')">
           <i class="icon icon-msg" />
           <span class="is-voice-only">메세지</span>
-        </button>
+        </btn-square-bd>
         <!-- // 채팅 버튼 -->
 
         <!-- 작성 버튼 -->
@@ -767,6 +764,66 @@
             <!-- // 회사 관련 키워드뱃지 -->
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h1 class="cp-ttl">
+        11. 페이지네이션
+      </h1>
+
+      <div class="pagination">
+        <btn-square-bd @click="window.alert('이전 버튼 누르기')">
+          <i class="icon icon-page-prev" />
+          <span class="is-voice-only">이전</span>
+        </btn-square-bd>
+
+        <button
+          type="button"
+          class="num-btn is-active"
+        >
+          1
+        </button>
+        
+        <button
+          type="button" 
+          class="num-btn"
+        >
+          2
+        </button>
+        
+        <button
+          type="button" 
+          class="num-btn"
+        >
+          3
+        </button>
+        
+        <button
+          type="button" 
+          class="num-btn"
+        >
+          4
+        </button>
+
+        <button
+          type="button" 
+          class="num-btn"
+        >
+          ···
+        </button>
+        
+        <button
+          type="button" 
+          class="num-btn"
+        >
+          10
+        </button>
+        
+        <btn-square-bd @click="window.alert('다음 버튼 누르기')">
+          <i class="icon icon-page-next" />
+          <span class="is-voice-only">다음</span>
+        </btn-square-bd>
       </div>
     </section>
   </div>

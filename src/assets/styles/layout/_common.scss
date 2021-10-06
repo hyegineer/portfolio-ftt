@@ -142,3 +142,39 @@
     @include ellipse(2, 19.5px);
   }
 }
+
+// 구성요소 - pagination
+.pagination{
+  @include flex-center;
+
+  gap: 10px;
+
+  .btn-square-bd{
+    width: 40px;
+    height: 40px;
+    border-color: #C3C3CE;
+  }
+
+  .num-btn{
+    @include input-reset;
+
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    color: #8E909F;
+
+    &:hover{
+      // FIXME 모바일에선 수정해야할 수도
+      background-color: #ebebed;
+    }
+
+    &:active{
+      background-color: darken(#ebebed, 3%);
+    }
+  }
+
+  .num-btn.is-active{
+    @include font-op($w: 600, $c: #303038);
+  }
+}
