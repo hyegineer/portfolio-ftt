@@ -19,7 +19,7 @@
           </div>
           <div class="ft-info-wrap">
             <p class="company-info">
-              <span class="company-type">주식회사</span>
+              <span class="company-type">주식회사 </span>
               <span class="company-name">포켓컴퍼니</span>
             </p>
             <span class="ft-info-grp">

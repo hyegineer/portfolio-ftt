@@ -84,13 +84,13 @@
       color: #171820;
 
       &.update-point {
-        position: relative;
         
         &::after {
-          position: absolute;
+          position: relative;
           left: auto;
-          right: -13px;
-          top: 0;
+          right: 0;
+          top: -5px;
+          margin-left: 5px;
           content: '';
           display: inline-block;
           @include circle(8px);
@@ -297,7 +297,6 @@
     line-height: 1.4;
     color: #171820;
     margin-bottom: 37px;
-    letter-spacing: 0;
 
     .bold-txt {
       font-weight: 500;
