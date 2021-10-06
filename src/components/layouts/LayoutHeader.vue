@@ -50,7 +50,7 @@
           <button
             type="button"
             class="btn-hd-search"
-            @click="viewSearchbar = !viewSearchbar"
+            @click="viewSearchbarToggle"
           >
             스타트업 검색
           </button>
@@ -112,7 +112,90 @@
       <div
         class="hd-search-wrap"
         :class="{'is-active': viewSearchbar}"
-      />
+      >
+        <div class="hd-search-grp">
+          <custom-slct 
+            class="custom-slct01 slct-depth01"
+            :selected="hdSearchOptions.depth01"
+          >
+            <template #select>
+              <span class="word">
+                {{ hdSearchOptions.depth01 || '산업분류 전체' }}
+              </span>
+            </template>
+
+            <template #options>
+              <custom-slct-opt 
+                @click="hdSearchOptions.depth01 = '산업분류 1'"
+              >
+                산업분류 1
+              </custom-slct-opt>
+            
+              <custom-slct-opt 
+                @click="hdSearchOptions.depth01 = '산업분류 1'"
+              >
+                산업분류 2
+              </custom-slct-opt>
+            </template>
+          </custom-slct>
+          
+          <custom-slct 
+            class="custom-slct01 slct-depth02"
+            :selected="hdSearchOptions.depth02"
+          >
+            <template #select>
+              <span class="word">
+                {{ hdSearchOptions.depth02 || '산업분야 전체' }}
+              </span>
+            </template>
+
+            <template #options>
+              <custom-slct-opt 
+                @click="hdSearchOptions.depth02 = '산업분야 1'"
+              >
+                산업분야 1
+              </custom-slct-opt>
+            
+              <custom-slct-opt 
+                @click="hdSearchOptions.depth02 = '산업분야 1'"
+              >
+                산업분야 2
+              </custom-slct-opt>
+            </template>
+          </custom-slct>
+          
+          <div class="inp-grp inp-sch-grp">
+            <input
+              v-model="hdSearchOptions.keyword"
+              type="text"
+              class="inp inp-strong"
+              placeholder="스타트업 검색"
+            >
+            <button
+              v-if="hdSearchOptions.keyword"
+              type="button"
+              class="inp-del-btn"
+              @click="hdSearchOptions.keyword = ''"
+            >
+              <span class="is-voice-only">검색어 지우기</span>
+            </button>
+            <button
+              type="button" 
+              class="inp-sch-btn"
+            >
+              <span class="is-voice-only">검색하기</span>
+            </button>
+          </div>
+
+          <button
+            type="button"
+            class="btn close-btn"
+            @click="viewSearchbarToggle"
+          >
+            <i class="icon icon-primary-close" />
+          </button>
+        </div>
+      </div>
       <!-- END search-bar -->
 
       <!-- side-bar -->
@@ -207,7 +290,22 @@ export default {
       testMembership: false,
       viewSearchbar: false,
       viewSidebar: false,
+      hdSearchOptions: {
+        depth01: null,
+        depth02: null,
+        keyword: '',
+      },
     };
+  },
+  methods: {
+    viewSearchbarToggle() {
+      this.viewSearchbar = !this.viewSearchbar;
+      this.hdSearchOptions = {
+        depth01: null,
+        depth02: null,
+        keyword: '',
+      };
+    },
   },
 };
 </script>
