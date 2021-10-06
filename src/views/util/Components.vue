@@ -115,12 +115,9 @@
 
       <div class="section-cont section-btns-cont">
         <!-- 기본뱃지 -->
-        <div class="badge-rounded">
-          <span class="txt">
-            최대여덟글자입력
-          </span>
-          <button type="button" />
-        </div>
+        <badge-rounded>
+          최대여덟글자입력
+        </badge-rounded>
         <!-- // 기본뱃지 -->
         
         <!-- 완료뱃지 -->
@@ -468,10 +465,14 @@
         <avatar lg />
         
         <h2>5-3. 썸네일</h2>
-        <thumbnail />
+        <div class="card-thumb">
+          <thumbnail />
+        </div>
         
         <h2>5-4. 썸네일 큰사이즈</h2>
-        <thumbnail lg />
+        <div class="card-thumb card-thumb-lg">
+          <thumbnail />
+        </div>
       </div>
     </section>
     
@@ -487,12 +488,11 @@
 
     <section class="section">
       <h1 class="cp-ttl">
-        7. 프로필
+        7. 프로필 카드
       </h1>
 
-      <div class="section-cont section-card-cont">
-        <!--  -->
-        
+      <div class="section-cont">
+        <h2>7-1. 검색결과 프로필 카드</h2>
         <div class="card">
           <div class="card-thumb">
             <thumbnail />
@@ -532,6 +532,240 @@
               #태그텍스트여덟자
             </li>
           </ul>
+        </div>
+        
+        <h2>7-2. 투자자 프로필 카드</h2>
+        <div class="card">
+          <div class="card-thumb">
+            <thumbnail />
+          </div>
+          
+          <span class="card-user-type">
+            개인 투자자
+          </span>
+
+          <h6 class="card-name">
+            투자자명
+          </h6>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h1 class="cp-ttl">
+        8. 아바타 + 정보
+      </h1>
+
+      <div class="section-cont">
+        <h2>8-1. 아바타 + 회사정보</h2>
+        <div class="avatar-with-name">
+          <avatar />
+          <div class="name-grp">
+            <span class="name">
+              주식회사 팩트컴퍼니
+            </span>
+            
+            <ul class="name-subtxt-grp">
+              <li class="name-subtxt-list">
+                기업규모
+              </li>
+              <li class="name-subtxt-list">
+                산업분류
+              </li>
+              <li class="name-subtxt-list">
+                산업분야
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <h2>8-2. 아바타 + 투자자 타입</h2>
+        <div class="avatar-with-name">
+          <avatar />
+          <div class="name-grp">
+            <span class="name-user-type">개인 투자자</span>
+            <span class="name">
+              주식회사 팩트컴퍼니
+            </span>
+          </div>
+        </div>
+        
+        <h2>8-2. 아바타 + 회사정보</h2>
+        <div class="avatar-with-name col-avatar-with-name">
+          <avatar />
+          <div class="name-grp">
+            <span class="name">
+              주식회사 팩트컴퍼니
+            </span>
+            
+            <ul class="name-subtxt-grp">
+              <li class="name-subtxt-list">
+                기업규모
+              </li>
+              <li class="name-subtxt-list">
+                산업분류
+              </li>
+              <li class="name-subtxt-list">
+                산업분야
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h1 class="cp-ttl">
+        9. 기타 정보
+      </h1>
+
+      <div class="section-cont">
+        <div class="icon-with-txt">
+          <i class="icon icon-jump" />
+          <a
+            href="#"
+            class="txt"
+          >www.팩트컴퍼니.com</a>
+        </div>
+        
+        <div class="icon-with-txt">
+          <i class="icon icon-loca" />
+          <span class="txt">서울특별시 강남구 테헤란로 312 비전타워...</span>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h1 class="cp-ttl">
+        10. 회사정보 카드
+      </h1>
+
+      <div class="section-cont">
+        <div class="info-card">
+          <div class="card-thumb card-thumb-lg">
+            <thumbnail lg />
+          </div>
+
+          <div class="card-company-info">
+            <!-- 회사이름 -->
+            <div class="avatar-with-name">
+              <avatar />
+              <div class="name-grp">
+                <span class="name">
+                  {{ '스타트업명' }}
+                </span>
+
+                <div class="icon-with-txt">
+                  <i class="icon icon-jump" />
+                  <a
+                    href="#"
+                    class="txt"
+                  >{{ 'www.팩트컴퍼니.com' }}</a>
+                </div>
+              </div>
+            </div>
+            <!-- // 회사이름 -->
+
+            <!-- 회사정보 -->
+            <div class="card-dlist-grp">
+              <dl class="card-dlist">
+                <dt class="lbel">
+                  대표자
+                </dt>
+                <dd class="txt">
+                  <span>{{ '김철수' }}</span>
+                </dd>
+              </dl>
+              
+              <dl class="card-dlist">
+                <dt class="lbel">
+                  사업자번호
+                </dt>
+                <dd class="txt">
+                  <span>{{ '000-00-00***' }}</span>
+                </dd>
+              </dl>
+              
+              <dl class="card-dlist">
+                <dt class="lbel">
+                  본사주소
+                </dt>
+                <dd class="txt">
+                  <span>{{ '서울특별시 강남구 테헤란로 312 비전타워' }}</span>
+                </dd>
+              </dl>
+              
+              <dl class="card-dlist">
+                <dt class="lbel">
+                  연락처
+                </dt>
+                <dd class="txt">
+                  <span>{{ '02-1234-5678' }}</span>
+                </dd>
+              </dl>
+              
+              <dl class="card-dlist">
+                <dt class="lbel">
+                  기업규모
+                </dt>
+                <dd class="txt">
+                  <span>{{ '소기업' }}</span>
+                </dd>
+              </dl>
+              
+              <dl class="card-dlist">
+                <dt class="lbel">
+                  산업분류
+                </dt>
+                <dd class="txt">
+                  <span>-</span>
+                </dd>
+              </dl>
+              
+              <dl class="card-dlist">
+                <dt class="lbel">
+                  산업분야
+                </dt>
+                <dd class="txt">
+                  <span>-</span>
+                </dd>
+              </dl>
+              
+              <dl class="card-dlist">
+                <dt class="lbel">
+                  설립일
+                </dt>
+                <dd class="txt">
+                  <span>{{ '2021년 03월 10일' }}</span>
+                </dd>
+              </dl>
+            </div>
+            <!-- // 회사정보 -->
+
+            <!-- 회사 관련 키워드뱃지 -->
+            <div class="card-keyword-badge-grp">
+              <badge-rounded>
+                최대여덟글자입력
+              </badge-rounded>
+              
+              <badge-rounded>
+                최대여덟글자입력
+              </badge-rounded>
+            
+              <badge-rounded>
+                최대여덟글자입력
+              </badge-rounded>
+            
+              <badge-rounded>
+                최대여덟글자입력
+              </badge-rounded>
+            
+              <badge-rounded>
+                최대여덟글자입력
+              </badge-rounded>
+            </div>
+            <!-- // 회사 관련 키워드뱃지 -->
+          </div>
         </div>
       </div>
     </section>

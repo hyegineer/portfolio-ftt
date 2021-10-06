@@ -1,7 +1,6 @@
 <template>
   <figure
     class="thumbnail"
-    :class="{'is-lg' : lg}"
   >
     <div class="thumbnail-ratio">
       <img
@@ -26,10 +25,6 @@
 export default {
   name: 'Avatar',
   props: {
-    lg: {
-      type: Boolean,
-      default: false,
-    },
     src: {
       type: String,
       default: null,
