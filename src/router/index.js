@@ -80,6 +80,30 @@ const routes = [
     meta: { requiresResetScrollHeight: true }, // 최상단 가게
     // meta: { requiresAuth: true }, // 로그인안할 때 팅기게
   },
+  // 스타트업 회원가입 인트로
+  {
+    path: '/register-intro-startup',
+    name: 'RegisterIntroStartup',
+    component: () => import('~@/views/auth/RegisterIntroStartup'),
+    meta: { requiresResetScrollHeight: true }, // 최상단 가게
+    // meta: { requiresAuth: true }, // 로그인안할 때 팅기게
+  },
+  // 투자자 회원가입 인트로
+  {
+    path: '/register-intro-investor',
+    name: 'RegisterIntroInvestor',
+    component: () => import('~@/views/auth/RegisterIntroInvestor'),
+    meta: { requiresResetScrollHeight: true }, // 최상단 가게
+    // meta: { requiresAuth: true }, // 로그인안할 때 팅기게
+  },
+  // 팩트체커 회원가입
+  {
+    path: '/register-fact-checker',
+    name: 'RegisterFactChecker',
+    component: () => import('~@/views/auth/RegisterFactChecker'),
+    meta: { requiresResetScrollHeight: true }, // 최상단 가게
+    // meta: { requiresAuth: true }, // 로그인안할 때 팅기게
+  },
   // 아이디찾기
   {
     path: '/find-id',

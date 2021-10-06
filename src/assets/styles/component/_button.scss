@@ -17,6 +17,19 @@
   @include btn-default;
 }
 
+.btn-grp{
+  @include flex{
+    @include flex-op(center, flex-start);
+  }
+
+  gap: 5px;
+
+  .btn-prev{
+    width: 100%;
+    max-width: 140px;
+  }
+}
+
 /* 버튼의 클래스명 작성은 <컬러 - 모양 - 높이> 순서로 한다. 
    ex: class="btn-solid btn-rounded btn-xsm" */
 
@@ -159,12 +172,11 @@
 
 .btn-bd-light{
   @include btn-bd-light;
-
-  &-sm{ // height: 40px;
-    @include btn-bd-light;
-
-    font-size: 14px;
-    padding: 12px 15px;
+  
+  &.btn-prev{
+    font-weight: 600;
+    color: #B8BAC7;
+    padding: 16px 15px;
   }
 }
 

@@ -183,6 +183,7 @@
 .auth-hgrp{
   width: 100%;
   text-align: left;
+  margin-bottom: 50px;
 
   .ttl{
     @include font-op($w: 400, $c: #171820){
@@ -205,4 +206,87 @@
 .symbol-fs{
   max-width: 30px;
   margin-bottom: 24px;
+}
+
+// 구성요소 - auth 관련 type 선택
+.type-slct-grp{
+  @at-root .auth-panel &{
+    margin-top: -20px;
+    margin-bottom: 60px;
+  }
+}
+
+.type-slct-list{
+  @include font-op($w: 500, $c: #171820){
+    font-size: 20px;
+  }
+
+  width: 100%;
+  border-bottom: 1px solid #DDDEE6;
+  padding: 10px 0;
+  cursor: pointer;
+
+  @include media(1200px, min){
+    &:hover{
+      .type-name{
+        font-weight: 600;
+      }
+
+      .type-name:before{
+        width: 20px;
+        margin-right: 10px;
+        opacity: 1;
+      }
+    }
+  }
+
+  .type-grp{
+    @include flex{
+      @include flex-op(center, space-between);
+    };
+
+    padding: 21px 0;
+    position: relative;
+  }
+
+  .type-name{
+    @include flex{
+      @include flex-op(center, flex-start);
+    }
+    
+    position: relative;
+
+    @include make-before{
+      opacity: 0;
+      width: 0;
+      height: 1px;
+      background-color: #171820;
+      margin-right: 0;
+      display: inline-block;
+      transition: all 0.3s;
+    }
+  }
+
+  .icon-check{
+    width: 23px;
+    height: 13px;
+    opacity: 0;
+    transition: all 0.2s;
+  }
+}
+
+.type-slct-list.is-active{
+  .type-name{
+    font-weight: 600;
+  }
+
+  .type-name:before{
+    width: 20px;
+    margin-right: 10px;
+    opacity: 1;
+  }
+
+  .icon-check{
+    opacity: 1;
+  }
 }
