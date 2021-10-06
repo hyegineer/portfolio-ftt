@@ -149,6 +149,10 @@
 
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath id='다각형_2' data-name='다각형 2' d='M6,0l6,7H0Z' transform='translate(12 7) rotate(180)' fill='%23b8bac7'/%3E%3C/svg%3E%0A");
   padding-right: 40px;
+
+  &:hover{
+    border-color: #00EB79;
+  }
 }
 
 /* 커스텀 셀렉트 */
@@ -158,6 +162,10 @@
   .slct{
     cursor: default;
     color: #B8BAC7;
+
+    .word{
+      @include ellipse(1, 16px);
+    }
   }
 }
 
@@ -205,7 +213,7 @@
     };
 
     text-align: left;
-    padding: 5px 15px;
+    padding: 6.5px 15px;
     cursor: pointer;
 
     &:hover{
@@ -237,7 +245,7 @@
   .inp-strong{
     font-size: 15px;
     border-width: 3px;
-    padding: 14px 15px;
+    padding: 13.5px 15px;
     padding-right: 75px;
   }
 

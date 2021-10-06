@@ -405,85 +405,52 @@
 
         <h2>4-7. 커스텀 셀렉트</h2>
         <!-- 커스텀 셀렉트 1 -->
-        <div
-          class="custom-slct custom-slct01"
+        <custom-slct 
+          class="custom-slct01"
+          :selected="testOption"
         >
-          <!-- 셀렉트 -->
-          <div
-            class="slct" 
-            :class="{'is-focus': customSlct1.visible, 'is-selected': customSlct1.value}"
-            @click="customSlct1.visible = true"
-          >
-            <span>{{ customSlct1.value || '옵션을 선택해주세요.' }}</span>
-          </div>
-          <!-- // 셀렉트 -->
+          <template #select>
+            {{ testOption || '옵션을 선택해주세요ㅋㅋ' }}
+          </template>
 
-          <!-- 셀렉트 옵션 -->
-          <!-- FIXME: 다른곳 클릭하면 is-show 해제되어야함 -->
-          <ul
-            class="slct-opts-grp"
-            :class="{'is-show': customSlct1.visible}"
-          >
-            <li
-              class="slct-opts-list"
-              @click="selectOpt(1, '선택사항1')"
+          <template #options>
+            <custom-slct-opt 
+              @click="testOption = '선택사항1'"
             >
-              선택사항1
-            </li>
-            <li
-              class="slct-opts-list"
-              @click="selectOpt(1, '선택사항2')"
+              선택사항 1
+            </custom-slct-opt>
+            
+            <custom-slct-opt 
+              @click="testOption = '선택사항2'"
             >
-              선택사항2
-            </li>
-            <li
-              class="slct-opts-list"
-              @click="selectOpt(1, '선택사항3')"
-            >
-              선택사항3
-            </li>
-          </ul>
-          <!-- // 셀렉트 옵션 -->
-        </div>
+              선택사항 2
+            </custom-slct-opt>
+          </template>
+        </custom-slct>
         <!-- // 커스텀 셀렉트 1 -->
         
-        <!-- 커스텀 셀렉트 2 -->
-        <div class="custom-slct custom-slct02">
-          <!-- 셀렉트 -->
-          <div
-            class="slct" 
-            @click="customSlct2.visible = true"
-          >
-            <span>{{ customSlct2.value || '팩트체크 요청순' }}</span>
-          </div>
-          <!-- // 셀렉트 -->
+        <custom-slct
+          class="custom-slct02"
+          :selected="testOption"
+        >
+          <template #select>
+            {{ testOption || '팩트체크 요청순' }}
+          </template>
 
-          <!-- 셀렉트 옵션 -->
-          <ul
-            class="slct-opts-grp" 
-            :class="{'is-show': customSlct2.visible}"
-          >
-            <li
-              class="slct-opts-list"
-              @click="selectOpt(2, '선택사항1')"
+          <template #options>
+            <custom-slct-opt 
+              @click="testOption = '선택사항1'"
             >
-              선택사항1
-            </li>
-            <li
-              class="slct-opts-list"
-              @click="selectOpt(2, '선택사항2')"
+              선택사항 1
+            </custom-slct-opt>
+            
+            <custom-slct-opt 
+              @click="testOption = '선택사항2'"
             >
-              선택사항2
-            </li>
-            <li
-              class="slct-opts-list"
-              @click="selectOpt(2, '선택사항3')"
-            >
-              선택사항3
-            </li>
-          </ul>
-          <!-- // 셀렉트 옵션 -->
-        </div>
+              선택사항 2
+            </custom-slct-opt>
+          </template>
+        </custom-slct>
         <!-- // 커스텀 셀렉트 2 -->
       </div>
     </section>
@@ -588,6 +555,7 @@ export default {
         value: false,
       },
       exInput: null,
+      testOption: null,
     };
   },
   methods: {
@@ -619,13 +587,27 @@ export default {
       switch (opt) {
       case 1:
         this.customSlct1.value = val;
-        this.customSlct1.visible = false;
+        this.customSlct1.visible = !this.customSlct1.visible;
+        this.away();
         break;
       case 2:
         this.customSlct2.value = val;
-        this.customSlct2.visible = false;
+        this.customSlct2.visible = !this.customSlct2.visible;
         break;
       }
+    },
+    showOpt(opt) {
+      switch (opt) {
+      case 1:
+        this.customSlct1.visible = !this.customSlct1.visible;
+        break;
+      case 2:
+        this.customSlct2.visible = !this.customSlct2.visible;
+        break;
+      }
+    },
+    away() {
+      this.customSlct1.visible = false;
     },
   },
 };
