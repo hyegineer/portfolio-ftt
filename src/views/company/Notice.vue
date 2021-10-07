@@ -34,7 +34,7 @@
                   </div>
                   <div class="ttl-box-right">
                     <span class="ttl-box-date">2021.00.00</span>
-                    <i class="icon ttl-box-icon" />
+                    <i class="icon icon-ttl-box" />
                   </div>
                 </div>
                 <div class="board-cont-box">

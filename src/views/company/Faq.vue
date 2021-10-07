@@ -5,10 +5,10 @@
       <div class="company-hgrp">
         <div class="wide-panel">
           <h5 class="ttl">
-            <span class="txt">공지사항</span>
+            <span class="txt">자주 묻는 질문</span>
           </h5>
           <p class="ttl-sub">
-            <span class="txt">팩트시트의 새로운 소식과 <br>정보를 알려드립니다.</span>
+            <span class="txt">팩트시트에 대해 <br>궁금한 내용을 확인하세요.</span>
           </p>
         </div>
       </div>
@@ -29,20 +29,26 @@
                   @click="isOpen = !isOpen"
                 >
                   <div class="ttl-box-left">
-                    <span class="no">10</span>
-                    <span class="ttl">공지사항 제목</span>
+                    <span class="icon-box">
+                      <i class="icon icon-q" />
+                    </span>
+                    <span class="ttl">자주 묻는 질문 제목</span>
                   </div>
                   <div class="ttl-box-right">
                     <span class="ttl-box-date">2021.00.00</span>
-                    <i class="icon ttl-box-icon" />
+                    <i class="icon icon-ttl-box" />
                   </div>
                 </div>
                 <div class="board-cont-box">
                   <div class="q-cont-box">
-                    <p class="q-cont">
-                      공지사항 내용 텍스트입니다.
-                      공지사항 내용 텍스트입니다.
-                    </p>
+                    <i class="icon icon-a" />
+                    <span class="q-cont">
+                      자주 묻는 질문 내용 텍스트입니다.
+                      자주 묻는 질문 내용 텍스트입니다.
+                      자주 묻는 질문 내용 텍스트입니다.
+                      자주 묻는 질문 내용 텍스트입니다.
+                      자주 묻는 질문 내용 텍스트입니다.
+                    </span>
                   </div>
                 </div>
               </div>
