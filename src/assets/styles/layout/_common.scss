@@ -179,6 +179,61 @@
   }
 }
 
+// 구성요소 - detail list grp
+.dlist-grp{ // detail list grp
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 7px;
+  row-gap: 18px;
+}
+
+.dlist{
+  @include flex{
+    @include flex-op(flex-start, flex-start);
+  }
+  
+  font-size: 15px;
+  width: 100%;
+
+  .lbel{
+    @include font-op($w: 400, $c: #8e909f){
+      font-size: inherit;
+    };
+
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 85px;
+    padding-right: 10px;
+  }
+
+  .txt{
+    width: 100%;
+    color: #171820;
+
+    & > span{
+      @include ellipse(1, 17px);
+    }
+  }
+}
+
+.dlist-col1-grp{
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 7px;
+
+  .dlist{
+    font-size: 14px;
+
+    .lbel{
+      max-width: 140px;
+    }
+
+    .txt{
+      text-align: right;
+    }
+  }
+}
+
 // 구성요소 - auth 관련 title group
 .auth-hgrp{
   width: 100%;
@@ -202,7 +257,7 @@
     }
 
     .badge-auth{
-      margin-left: 5px;
+      margin-left: 6px;
     }
   }
 
@@ -232,9 +287,6 @@
 .symbol-fs{
   max-width: 30px;
   margin-bottom: 24px;
-}
-
-.badge-flag{
 }
 
 // 구성요소 - auth 관련 type 선택
@@ -374,61 +426,6 @@
   border-color: #ebecf5;
 }
 
-// 구성요소 - detail list grp
-.dlist-grp{ // detail list grp
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 7px;
-  row-gap: 18px;
-}
-
-.dlist{
-  @include flex{
-    @include flex-op(flex-start, flex-start);
-  }
-  
-  font-size: 15px;
-  width: 100%;
-
-  .lbel{
-    @include font-op($w: 400, $c: #8e909f){
-      font-size: inherit;
-    };
-
-    margin-bottom: 0;
-    width: 100%;
-    max-width: 85px;
-    padding-right: 10px;
-  }
-
-  .txt{
-    width: 100%;
-    color: #171820;
-
-    & > span{
-      @include ellipse(1, 17px);
-    }
-  }
-}
-
-.dlist-col1-grp{
-  grid-template-columns: repeat(1, 1fr);
-  row-gap: 7px;
-
-  .dlist{
-    font-size: 14px;
-
-    .lbel{
-      max-width: 140px;
-    }
-
-    .txt{
-      text-align: right;
-    }
-  }
-}
-
 // 구성요소 - auth 관련 경력사항 항목 추가 input list
 .add-inp-grp{
   width: 100%;
@@ -474,5 +471,35 @@
 
   & > *{
     flex-shrink: 0;
+  }
+}
+
+// 구성요소 - auth 관련 회원가입 완료 박스
+.auth-complete-cont{
+  margin-top: -15px;
+  color: #171820;
+
+  .ttl-grp{
+    margin-bottom: 30px;
+  }
+
+  .ttl{
+    font-size: 29px;
+    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+  }
+
+  .ttl-sub{
+    font-size: 16px;
+    line-height: 1.5;
+
+    .bold{
+      font-weight: 300;
+      -webkit-text-stroke: 1px #171820;
+    }
+  }
+
+  .inp-btn-grp{
+    margin-bottom: 50px;
   }
 }

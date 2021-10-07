@@ -23,8 +23,8 @@
         <div class="type-slct-grp">
           <div
             class="type-slct-list"
-            :class="{'is-active' : registerType === 'ceo'}"
-            @click="registerType = 'ceo'"
+            :class="{'is-active' : userTypeForm === 'ceo'}"
+            @click="userTypeForm = 'ceo'"
           >
             <div class="type-grp">
               <span class="type-name">기업의 대표입니다.</span>
@@ -34,8 +34,8 @@
           
           <div
             class="type-slct-list"
-            :class="{'is-active' : registerType === 'staff'}"
-            @click="registerType = 'staff'"
+            :class="{'is-active' : userTypeForm === 'staff'}"
+            @click="userTypeForm = 'staff'"
           >
             <div class="type-grp">
               <span class="type-name">기업의 직원입니다.</span>
@@ -71,12 +71,12 @@ export default {
   name: 'RegisterIntroStartup',
   data() {
     return{
-      registerType: null,
+      userTypeForm: null,
     };
   },
   methods: {
     clickNext() {
-      if(!this.registerType) {
+      if(!this.userTypeForm) {
         window.alert('기업에 소속된 형태를 선택해주세요.');
         return;
       }
@@ -84,8 +84,8 @@ export default {
       this.$router.push({
         name: 'RegisterSearchCompany',
         query: {
-          type01: 'startup',
-          type02: this.registerType,
+          userType: 'startup',
+          userTypeForm: this.userTypeForm,
         },
       });
     },

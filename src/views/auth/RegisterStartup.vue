@@ -15,7 +15,7 @@
         
           <h3 class="ttl">
             <span class="ttl-txt">스타트업 회원가입</span>
-            <span class="badge-auth">{{ registerFormType() }}</span>
+            <span class="badge-auth">{{ $constants.userTypeForm[$route.query.userTypeForm] }}</span>
           </h3>
           <p class="ttl-sub">
             새로운 기업정보를 등록합니다.
@@ -223,7 +223,7 @@
         
           <h3 class="ttl">
             <span class="ttl-txt">스타트업 회원가입</span>
-            <span class="badge-auth">{{ registerFormType() }}</span>
+            <span class="badge-auth">{{ $constants.userTypeForm[$route.query.userTypeForm] }}</span>
           </h3>
           <p class="ttl-sub">
             계정 정보를 입력하여 회원가입을 완료합니다.
@@ -402,7 +402,7 @@
             <!-- [D] 필수항목 다 기재되면 disabled 해제 -->
             <btn-solid
               class="btn-lg btn-full"
-              disabled
+              @click="clickComplete"
             >
               다음
             </btn-solid>
@@ -417,16 +417,19 @@
 </template>
 
 <script>
+// FIXME: this.$route.query.userTypeForm 이 없을 때 예외처리 필요함. ex: 잘못된 접근입니다
+
 export default {
   name: 'RegisterStartup',
   methods: {
-    registerFormType() {
-      switch(this.$route.query.formType) {
-      case 'ceo':
-        return '대표';
-      case 'staff':
-        return '직원';
-      }
+    clickComplete() {
+      this.$router.push({
+        name: 'RegisterComplete',
+        query: {
+          userType: 'startup',
+          userTypeForm: this.$route.query.userTypeForm,
+        },
+      });
     },
   },
 };

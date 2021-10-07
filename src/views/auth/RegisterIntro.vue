@@ -22,8 +22,8 @@
         <div class="type-slct-grp">
           <div
             class="type-slct-list"
-            :class="{'is-active' : registerType === 'startup'}"
-            @click="registerType = 'startup'"
+            :class="{'is-active' : userType === 'startup'}"
+            @click="userType = 'startup'"
           >
             <div class="type-grp">
               <span class="type-name">스타트업 회원가입</span>
@@ -33,8 +33,8 @@
           
           <div
             class="type-slct-list"
-            :class="{'is-active' : registerType === 'investor'}"
-            @click="registerType = 'investor'"
+            :class="{'is-active' : userType === 'investor'}"
+            @click="userType = 'investor'"
           >
             <div class="type-grp">
               <span class="type-name">투자자 회원가입</span>
@@ -44,8 +44,8 @@
           
           <div
             class="type-slct-list"
-            :class="{'is-active' : registerType === 'fact-checker'}"
-            @click="registerType = 'fact-checker'"
+            :class="{'is-active' : userType === 'fact-checker'}"
+            @click="userType = 'fact-checker'"
           >
             <div class="type-grp">
               <span class="type-name">팩트체커 회원가입</span>
@@ -72,12 +72,12 @@ export default {
   name: 'RegisterIntro',
   data() {
     return{
-      registerType: null,
+      userType: null,
     };
   },
   methods: {
     clickNext() {
-      switch(this.registerType) {
+      switch(this.userType) {
       case null: 
         window.alert('회원 유형을 선택해주세요.');
         break;
