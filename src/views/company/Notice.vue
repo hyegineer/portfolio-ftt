@@ -15,9 +15,19 @@
       <div class="company-cont-wrap">
         <div class="wide-panel">
           <div class="board-tab-all-wrap">
-            <div class="board-cont-list-wrap">
-              <div class="board-cont-list is-active">
-                <div class="board-cont-ttl-box">
+            <div
+              v-for="(item, idx) in 5"
+              :key="idx"
+              class="board-cont-list-wrap"
+            >
+              <div
+                class="board-cont-list"
+                :class="{'is-active': isOpen}"
+              >
+                <div
+                  class="board-cont-ttl-box"
+                  @click="isOpen = !isOpen"
+                >
                   <div class="ttl-box-left">
                     <span class="no">10</span>
                     <span class="ttl">공지사항 제목</span>
@@ -36,6 +46,7 @@
                   </div>
                 </div>
               </div>
+              <div class="board-cont-list-space" />
             </div>
           </div>
         </div>
@@ -47,7 +58,12 @@
 
 <script>
 export default {
-
+  name: 'Notice',
+  data() {
+    return {
+      isOpen: false,
+    };
+  },
 };
 </script>
 
