@@ -55,7 +55,7 @@
 
 <script>
 export default {
-    name: 'ContentGuide',
+  name: 'ContentGuide',
 };
 </script>
 

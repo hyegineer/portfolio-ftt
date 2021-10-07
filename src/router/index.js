@@ -55,6 +55,18 @@ const routes = [
     name: 'UtilPostcode',
     component: () => import('~@/views/util/Postcode'),
   },
+  // 스타트업 찾기
+  {
+    path: '/search-startup',
+    name: 'SearchStartup',
+    component: () => import('~@/views/SearchStartup'),
+  },
+  // 검색 결과
+  {
+    path: '/search-result/:id',
+    name: 'SearchResult',
+    component: () => import('~@/views/SearchResult'),
+  },
   /* ====================== auth ====================== */
   // 로그인
   {
