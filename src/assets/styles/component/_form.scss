@@ -47,6 +47,7 @@
 
 textarea.inp{
   resize: none;
+  line-height: 1.5;
 }
 
 /* 기본 인풋그룹 */
@@ -91,6 +92,12 @@ textarea.inp{
     font-weight: 500;
     color: #171820;
   }
+
+  .lbel-lg{
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
 }
 
 /* 제한시간 있는 인풋 */
@@ -119,6 +126,12 @@ textarea.inp{
   font-weight: 400;
   color: #171820;
   display: inline-block;
+}
+
+.lbel-lg{
+  font-size: 16px;
+  font-weight: 300;
+  -webkit-text-stroke: 1px #171820;
 }
 
 .required{

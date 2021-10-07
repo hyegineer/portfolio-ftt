@@ -13,12 +13,8 @@
           >
         
           <h3 class="ttl">
-            <span class="ttl-txt">
-              {{ `${registerType()} 회원가입` }}
-            </span>
-            <span class="badge-auth">
-              {{ `${registerFormType()}` }}
-            </span>
+            <span class="ttl-txt">{{ `${registerType()} 회원가입` }}</span>
+            <span class="badge-auth">{{ `${registerFormType()}` }}</span>
           </h3>
           <p class="ttl-sub">
             소속된 기업을 선택하세요. <br> 기업조회가 되지 않으면, 건너뛰기를 선택하세요.
@@ -29,7 +25,7 @@
         </div>
 
         <fieldset class="lbel-inp-grp">
-          <label class="lbel">선택된 기업정보</label>
+          <label class="lbel lbel-lg">선택된 기업정보</label>
           <div class="inp-grp">
             <input
               type="text"
