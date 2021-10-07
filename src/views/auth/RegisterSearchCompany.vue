@@ -13,8 +13,8 @@
           >
         
           <h3 class="ttl">
-            <span class="ttl-txt">{{ `${registerType()} 회원가입` }}</span>
-            <span class="badge-auth">{{ `${registerFormType()}` }}</span>
+            <span class="ttl-txt">{{ `${$constants.userType[$route.query.userType]} 회원가입` }}</span>
+            <span class="badge-auth">{{ $constants.userTypeForm[$route.query.userTypeForm] }}</span>
           </h3>
           <p class="ttl-sub">
             소속된 기업을 선택하세요. <br> 기업조회가 되지 않으면, 건너뛰기를 선택하세요.
@@ -86,37 +86,18 @@
 </template>
 
 <script>
+// FIXME: this.$route.query.userTypeForm 이 없을 때 예외처리 필요함. ex: 잘못된 접근입니다
+
 export default {
   name: 'RegisterSearchCompany',
   methods: {
-    registerType() {
-      switch(this.$route.query.type01) {
-      case 'startup':
-        return '스타트업';
-      case 'investor':
-        return '투자자';
-      }
-    },
-    registerFormType() {
-      switch(this.$route.query.type02) {
-      case 'ceo':
-        return '대표';
-      case 'staff':
-        return '직원';
-      case 'indivisual':
-        return '개인';
-      case 'enterprise':
-        return '기업';
-      }
-    },
     clickNext() {
-      switch(this.$route.query.type01) {
+      switch(this.$route.query.userType) {
       case 'startup':
         this.$router.push({
           name: 'RegisterStartup',
           query: {
-            selectedInfo: true, 
-            formType: this.$route.query.type02,
+            userTypeForm: this.$route.query.userTypeForm,
           },
         });
         break;
@@ -124,8 +105,7 @@ export default {
         this.$router.push({
           name: 'RegisterInvestor',
           query: {
-            selectedInfo: true, 
-            formType: this.$route.query.type02,
+            userTypeForm: this.$route.query.userTypeForm,
           },
         });
         break;

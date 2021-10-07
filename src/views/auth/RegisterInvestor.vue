@@ -15,7 +15,7 @@
         
           <h3 class="ttl">
             <span class="ttl-txt">투자자 회원가입</span>
-            <span class="badge-auth">{{ registerFormType() }}</span>
+            <span class="badge-auth">{{ $constants.userTypeForm[$route.query.userTypeForm] }}</span>
           </h3>
           <p class="ttl-sub">
             새로운 기업정보를 등록합니다.
@@ -90,7 +90,7 @@
             4. 기업고유아이디
           -->
           <fieldset
-            v-if="$route.query.formType === 'indivisual'"
+            v-if="$route.query.userTypeForm === 'indivisual'"
             class="ffieldset"
           >
             <legend class="ffieldset-ttl">
@@ -167,7 +167,7 @@
             7. 기업고유아이디
           -->
           <fieldset
-            v-if="$route.query.formType === 'enterprise'"
+            v-if="$route.query.userTypeForm === 'enterprise'"
             class="ffieldset"
           >
             <legend class="ffieldset-ttl">
@@ -300,7 +300,7 @@
         
           <h3 class="ttl">
             <span class="ttl-txt">투자자 회원가입</span>
-            <span class="badge-auth">{{ registerFormType() }}</span>
+            <span class="badge-auth">{{ $constants.userTypeForm[$route.query.userTypeForm] }}</span>
           </h3>
           <p class="ttl-sub">
             계정 정보를 입력하여 회원가입을 완료합니다.
@@ -479,7 +479,7 @@
             <!-- [D] 필수항목 다 기재되면 disabled 해제 -->
             <btn-solid
               class="btn-lg btn-full"
-              disabled
+              @click="clickComplete"
             >
               다음
             </btn-solid>
@@ -494,16 +494,19 @@
 </template>
 
 <script>
+// FIXME: this.$route.query.userTypeForm 이 없을 때 예외처리 필요함. ex: 잘못된 접근입니다
+
 export default {
   name: 'RegisterInvestor',
   methods: {
-    registerFormType() {
-      switch(this.$route.query.formType) {
-      case 'indivisual':
-        return '개인';
-      case 'enterprise':
-        return '기업';
-      }
+    clickComplete() {
+      this.$router.push({
+        name: 'RegisterComplete',
+        query: {
+          userType: 'investor',
+          userTypeForm: this.$route.query.userTypeForm,
+        },
+      });
     },
   },
 };

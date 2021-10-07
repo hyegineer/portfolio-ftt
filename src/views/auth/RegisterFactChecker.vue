@@ -289,7 +289,7 @@
             <!-- [D] 필수항목 다 기재되면 disabled 해제 -->
             <btn-solid
               class="btn-lg btn-full"
-              disabled
+              @click="clickComplete"
             >
               다음
             </btn-solid>
@@ -315,13 +315,13 @@ export default {
     };
   },
   methods: {
-    registerFormType() {
-      switch(this.$route.query.formType) {
-      case 'indivisual':
-        return '개인';
-      case 'enterprise':
-        return '기업';
-      }
+    clickComplete() {
+      this.$router.push({
+        name: 'RegisterComplete',
+        query: {
+          userType: 'fact-checker',
+        },
+      });
     },
   },
 };

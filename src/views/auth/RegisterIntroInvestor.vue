@@ -23,8 +23,8 @@
         <div class="type-slct-grp">
           <div
             class="type-slct-list"
-            :class="{'is-active' : registerType === 'indivisual'}"
-            @click="registerType = 'indivisual'"
+            :class="{'is-active' : userTypeForm === 'indivisual'}"
+            @click="userTypeForm = 'indivisual'"
           >
             <div class="type-grp">
               <span class="type-name">개인투자자</span>
@@ -34,8 +34,8 @@
           
           <div
             class="type-slct-list"
-            :class="{'is-active' : registerType === 'enterprise'}"
-            @click="registerType = 'enterprise'"
+            :class="{'is-active' : userTypeForm === 'enterprise'}"
+            @click="userTypeForm = 'enterprise'"
           >
             <div class="type-grp">
               <span class="type-name">기업투자자</span>
@@ -71,12 +71,12 @@ export default {
   name: 'RegisterIntroInvestor',
   data() {
     return{
-      registerType: null,
+      userTypeForm: null,
     };
   },
   methods: {
     clickNext() {
-      if(!this.registerType) {
+      if(!this.userTypeForm) {
         window.alert('투자하시는 형태를 선택해주세요.');
         return;
       }
@@ -84,8 +84,8 @@ export default {
       this.$router.push({
         name: 'RegisterSearchCompany',
         query: {
-          type01: 'investor',
-          type02: this.registerType,
+          userType: 'investor',
+          userTypeForm: this.userTypeForm,
         },
       });
     },
