@@ -8,7 +8,8 @@
             <span class="txt">자주 묻는 질문</span>
           </h5>
           <p class="ttl-sub">
-            <span class="txt">팩트시트에 대해 <br>궁금한 내용을 확인하세요.</span>
+            <span class="txt1">팩트시트에 대해</span><br>
+            <span class="txt2">궁금한 내용을 확인하세요.</span>
           </p>
         </div>
       </div>
