@@ -18,7 +18,7 @@
             <a
               href="#"
               class="txt"
-            >{{ 'www.팩트컴퍼니.com' }}</a>
+            >{{ 'www.naver.com' }}</a>
           </div>
         </div>
       </div>
