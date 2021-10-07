@@ -828,6 +828,31 @@
         </btn-square-bd>
       </div>
     </section>
+
+    <section class="section">
+      <h1 class="cp-ttl">
+        12. 슬라이드
+      </h1>
+
+      <div class="section-cont test-section">
+        <div
+          v-swiper:infoSlide="slideOptions"
+          class="swiper-container main-swiper-container"
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <info-card />
+            </div>
+            <div class="swiper-slide">
+              <info-card />
+            </div>
+            <div class="swiper-slide">
+              <info-card />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -851,6 +876,21 @@ export default {
       },
       exInput: null,
       testOption: null,
+      slideOptions: {
+        // grabCursor: true,
+        loop: true, 
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        direction: 'vertical',
+        effect: 'coverflow',
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 435,
+          depth: 180,
+          modifier: 1,
+          slideShadows: false,
+        },
+      },
     };
   },
   methods: {

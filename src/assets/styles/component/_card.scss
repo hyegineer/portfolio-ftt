@@ -1,9 +1,5 @@
 .card{ // 프로필 카드
   width: 100%;
-
-  @at-root .components-page &{
-    max-width: 260px;
-  }
   
   .card-thumb{
     margin-bottom: 10px;
@@ -21,10 +17,6 @@
 .card-thumb{
   width: 100%;
   position: relative;
-
-  @at-root .components-page &{
-    max-width: 260px;
-  }
 
   .ribbon{
     @include absolute($t: 10px);
@@ -130,7 +122,7 @@
   };
 
   width: 100%;
-  max-width: 1090px;
+  // max-width: 1090px;
   background-color: white;
   padding: 20px 23px;
   box-shadow: 0 10px 20px rgba(#171820, 0.08);
