@@ -195,11 +195,24 @@ const routes = [
     meta: { requiresResetScrollHeight: true },
   },
   // 1:1문의하기
-  // 로그인 후 이용가능
   {
     path: '/inquiry',
     name: 'Inquiry',
     component: () => import('~@/views/company/Inquiry'),
+    meta: { requiresResetScrollHeight: true },
+  },
+  // 1:1문의하기 내역
+  {
+    path: '/inquiry-history',
+    name: 'InquiryHistory',
+    component: () => import('~@/views/company/InquiryHistory'),
+    meta: { requiresResetScrollHeight: true },
+  }, 
+  // 1:1문의하기 내역 상세
+  {
+    path: '/inquiry-history-detail',
+    name: 'InquiryHistoryDetail',
+    component: () => import('~@/views/company/InquiryHistoryDetail'),
     meta: { requiresResetScrollHeight: true },
   },
   // 자주묻는질문

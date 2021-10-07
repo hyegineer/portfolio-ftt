@@ -1,3 +1,5 @@
+
+
 // 구성요소 - empty-wrap
 .empty-wrap{
   text-align: center;
@@ -501,5 +503,169 @@
 
   .inp-btn-grp{
     margin-bottom: 50px;
+  }
+}
+
+// 구성요소 - 탭
+.tab{
+  width: 100%;
+  border-bottom: 1px solid #DDDEE6;
+
+  .tab-btn{
+    @include font-op($w: 400, $c: #171820){
+      font-size: 18px;
+    }
+    @include input-reset;
+
+    cursor: pointer;
+    padding: 20px 0;
+    margin-right: 30px;
+    position: relative;
+  }
+
+  .tab-btn.is-active{
+    font-weight: 300;
+    -webkit-text-stroke: 1px #171820;
+    
+    @include make-before{
+      @include absolute($b: 0);
+
+      width: 100%;
+      height: 3px;
+      background-color: #00EB79;
+    }
+  }
+}
+
+// 구성요소 - 체크박스 + 멘트
+.check-lbel-ment{
+  @include flex-op(flex-start, flex-start);
+  display: inline-flex;
+
+  .check-onoff{
+    flex-shrink: 0;
+    margin-right: 7px;
+  }
+
+  .ment{
+    @include font-op($w: 300, $c: #8E909F){
+      font-size: 15px;
+    }
+
+    -webkit-text-stroke: 0.5px #8e909f;
+    line-height: 1.5;
+    display: inline-block;
+    padding-top: 2px;
+  }
+
+  .dark-ment{
+    color: #171820;
+    -webkit-text-stroke: 0.5px #171820;
+  }
+}
+
+// 구성요소 - 개인정보 동의관련 박스
+.agree-cont-box{
+  background-color: #F9F9FB;
+  padding: 44px 40px;
+
+  .ttl-grp{
+    @include flex{
+      @include flex-op(center, space-between);
+    }
+
+    margin-bottom: 20px;
+
+    .ttl{
+      color: #171820;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+} 
+
+.agree-cont{
+  @include custom-scroll(#dddee6);
+
+  width: 100%;
+  background-color: white;
+  min-height: 200px;
+  max-height: 310px;
+  overflow: auto;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+// 구성요소 - 게시판 list들
+.board-list-grp-ttl{
+  font-size: 16px;
+  color: #171820;
+  margin-bottom: 15px;
+
+  .bold{
+    font-weight: 300;
+    -webkit-text-stroke: 1px #171820;
+  }
+}
+
+.board-list-grp{
+  border-top: 1px solid #171820;
+  margin-bottom: 60px;
+
+  .empty-wrap{
+    padding: 40px 0;
+  }
+}
+
+.board-list{
+  @include flex{
+    @include flex-op(center, flex-start);
+  }
+
+  width: 100%;
+  border-bottom: 1px solid #DDDEE6;
+  color: #171820;
+  padding: 26px 40px;
+
+  &:hover{
+    // FIXME: 모바일일 때 제외해야할 수도
+    background-color: #F6FFFB;
+    cursor: pointer;
+  }
+
+  td{
+    padding: 0 10px;
+    flex-shrink: 0;
+  }
+  
+  .td-num{
+    text-align: left;
+  }
+
+  .td-word-num{
+    font-size: 14px;
+    color: #8E909F;
+  }
+
+  .td-word-cat{
+    font-size: 14px;
+    font-weight: 400;
+    -webkit-text-stroke: 0.5px #171820;
+  }
+
+  .td-subject{
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .td-word-subject{
+    @include ellipse(1, 19px);
+
+    font-size: 18px;
+  }
+
+  .td-date{
+    font-size: 13px;
+    color: #B0B1BC;
   }
 }
