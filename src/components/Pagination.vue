@@ -91,63 +91,63 @@
 
 <script>
 export default {
-    name: 'Pagination',
-    props: {
-        isLoading: { // 로딩 여부
-            type: Boolean,
-            default: false,
-        },
-        offset: {
-            type: Number,
-            default: 0,
-        },
-        limit: {
-            type: Number,
-            default: 10,
-        },
-        pages: { // 전체 페이지 갯수
-            type: Number,
-            default: null,
-        },
-        pageCount: { // 버튼으로 표시할 페이지 갯수
-            type: Number,
-            default: 3,
-        },
-        activePage: { // 현재 페이지 번호(외부)
-            type: Number,
-            default: 1,
-        },
+  name: 'Pagination',
+  props: {
+    isLoading: { // 로딩 여부
+      type: Boolean,
+      default: false,
     },
-    data() {
-        return {
-            page: this.activePage, // 현재 페이지 번호(내부)
-        };
+    offset: {
+      type: Number,
+      default: 0,
     },
-    watch: {
-        activePage() {
-            if (this.page !== this.activePage) {
-                this.page = this.activePage;
-            }
-        },
-        page() {
-            if (this.page <= 0) {
-                this.page = 1;
-                return;
-            }
+    limit: {
+      type: Number,
+      default: 10,
+    },
+    pages: { // 전체 페이지 갯수
+      type: Number,
+      default: null,
+    },
+    pageCount: { // 버튼으로 표시할 페이지 갯수
+      type: Number,
+      default: 3,
+    },
+    activePage: { // 현재 페이지 번호(외부)
+      type: Number,
+      default: 1,
+    },
+  },
+  data() {
+    return {
+      page: this.activePage, // 현재 페이지 번호(내부)
+    };
+  },
+  watch: {
+    activePage() {
+      if (this.page !== this.activePage) {
+        this.page = this.activePage;
+      }
+    },
+    page() {
+      if (this.page <= 0) {
+        this.page = 1;
+        return;
+      }
 
-            if (this.page > this.pages) {
-                this.page = this.pages;
-                return;
-            }
+      if (this.page > this.pages) {
+        this.page = this.pages;
+        return;
+      }
 
-            // 상위 컴포넌트에 변경된 페이지 번호 전달
-            this.$emit('update:activePage', this.page);
-        },
+      // 상위 컴포넌트에 변경된 페이지 번호 전달
+      this.$emit('update:activePage', this.page);
     },
-    created() {
-        if (this.pageCount <= 1 || this.pageCount % 2 === 0) {
-            throw new Error('pageCount의 값은 1보다 큰 홀수만 가능합니다');
-        }
-    },
+  },
+  created() {
+    if (this.pageCount <= 1 || this.pageCount % 2 === 0) {
+      throw new Error('pageCount의 값은 1보다 큰 홀수만 가능합니다');
+    }
+  },
 };
 </script>

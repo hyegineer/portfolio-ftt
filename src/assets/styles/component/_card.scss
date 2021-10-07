@@ -1,6 +1,9 @@
 .card{ // 프로필 카드
   width: 100%;
-  max-width: 260px;
+
+  @at-root .components-page &{
+    max-width: 260px;
+  }
   
   .card-thumb{
     margin-bottom: 10px;
@@ -17,8 +20,11 @@
 
 .card-thumb{
   width: 100%;
-  max-width: 260px;
   position: relative;
+
+  @at-root .components-page &{
+    max-width: 260px;
+  }
 
   .ribbon{
     @include absolute($t: 10px);
@@ -51,6 +57,12 @@
       border-bottom: 12px solid #41424a;
       border-right: 5px solid transparent;
     }
+  }
+
+  .avatar{
+    @include absolute($b: -8px, $r: 8px);
+    
+    z-index: 1;
   }
 }
 
@@ -99,14 +111,17 @@
 }
 
 .card-tag-grp{
-  @include font-op($c: #00CE6A){
-    font-size: 12px;
-  }
+  width: 100%;
 }
 
 .card-tag-list{
+  @include font-op($w: 300,$c: #00CE6A){
+    font-size: 12px;
+  }
+
   display: inline;
   line-height: 1.5;
+  -webkit-text-stroke: 0.5px #00CE6A;
 }
 
 .info-card { // 회사 정보 프로필 카드

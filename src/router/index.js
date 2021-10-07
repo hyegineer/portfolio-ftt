@@ -55,6 +55,18 @@ const routes = [
     name: 'UtilPostcode',
     component: () => import('~@/views/util/Postcode'),
   },
+  // 스타트업 찾기
+  {
+    path: '/search-startup',
+    name: 'SearchStartup',
+    component: () => import('~@/views/SearchStartup'),
+  },
+  // 검색 결과
+  {
+    path: '/search-result/:id',
+    name: 'SearchResult',
+    component: () => import('~@/views/SearchResult'),
+  },
   /* ====================== auth ====================== */
   // 로그인
   {
@@ -195,11 +207,24 @@ const routes = [
     meta: { requiresResetScrollHeight: true },
   },
   // 1:1문의하기
-  // 로그인 후 이용가능
   {
     path: '/inquiry',
     name: 'Inquiry',
     component: () => import('~@/views/company/Inquiry'),
+    meta: { requiresResetScrollHeight: true },
+  },
+  // 1:1문의하기 내역
+  {
+    path: '/inquiry-history',
+    name: 'InquiryHistory',
+    component: () => import('~@/views/company/InquiryHistory'),
+    meta: { requiresResetScrollHeight: true },
+  }, 
+  // 1:1문의하기 내역 상세
+  {
+    path: '/inquiry-history-detail',
+    name: 'InquiryHistoryDetail',
+    component: () => import('~@/views/company/InquiryHistoryDetail'),
     meta: { requiresResetScrollHeight: true },
   },
   // 자주묻는질문
