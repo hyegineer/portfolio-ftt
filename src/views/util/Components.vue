@@ -494,6 +494,7 @@
           <div class="card-thumb">
             <thumbnail />
             <span class="ribbon">정보 업데이트</span>
+            <avatar />
           </div>
 
           <ul class="card-subtxt-grp">
@@ -509,7 +510,7 @@
           </ul>
 
           <h6 class="card-name">
-            주식회사 팩트컴퍼니
+            주식회사 팩트컴퍼니z
           </h6>
 
           <ul class="card-tag-grp">
@@ -535,6 +536,7 @@
         <div class="card">
           <div class="card-thumb">
             <thumbnail />
+            <avatar />
           </div>
           
           <span class="card-user-type">

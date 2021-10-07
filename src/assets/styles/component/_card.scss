@@ -52,6 +52,12 @@
       border-right: 5px solid transparent;
     }
   }
+
+  .avatar{
+    @include absolute($b: -8px, $r: 8px);
+    
+    z-index: 1;
+  }
 }
 
 .card-thumb-lg{
