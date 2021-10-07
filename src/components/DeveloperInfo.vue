@@ -25,9 +25,9 @@
         <p
           class="terms-paragraph"
         >
-          안녕하세요. 빌런즈 고객지원팀입니다.
-          빌런즈를 이용해주셔서 감사합니다.
-          저희 빌런즈 이용 중 궁금한 점이나
+          안녕하세요. [회사명or서비스명] 고객지원팀입니다.
+          [회사명or서비스명]를 이용해주셔서 감사합니다.
+          저희 [회사명or서비스명] 이용 중 궁금한 점이나
           문제가 발생했을 시, 아래 방법으로 연락해주시기 바랍니다.
         </p>
       </article>
@@ -61,29 +61,29 @@ export default {
 
 <style lang="scss" scoped>
 .terms-section {
-    text-align: center;
+  text-align: center;
 }
 
 .terms-article {
-    padding: 20px;
-    display: block;
-    text-align: initial;
-    min-width: 280px;
-    max-width: 375px;
-    margin: 0 auto;
+  padding: 20px;
+  display: block;
+  text-align: initial;
+  min-width: 280px;
+  max-width: 375px;
+  margin: 0 auto;
 }
 
 .terms-paragraph {
-    color: white;
+  color: white;
 }
 
 .terms-article-title {
-    font-weight: bold;
-    color: white;
+  font-weight: bold;
+  color: white;
 }
 
 p {
-    white-space: pre-line;
-    word-break: keep-all;
+  white-space: pre-line;
+  word-break: keep-all;
 }
 </style>
