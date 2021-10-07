@@ -28,7 +28,7 @@
     font-size: rem(18);
     font-weight: 500;
     color: #171820;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     overflow: hidden;
 
     .txt {
@@ -45,10 +45,16 @@
     line-height: 1.25;
     overflow: hidden;
 
-    .txt {
+    .txt1 {
       display: inline-block;
       animation-name: slideup;
-      animation-duration: 1.3s;
+      animation-duration: 1.6s;
+    }
+
+    .txt2 {
+      display: inline-block;
+      animation-name: slideup;
+      animation-duration: 1.9s;
     }
   }
 }
@@ -57,7 +63,7 @@
   background-color: #F9F9FB;
   padding: 50px 0 140px;
   animation-name: slideup;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 .board-tab-all-wrap {
@@ -144,6 +150,11 @@
 .board-cont-box {
   padding: 40px 0 40px 70px;
   display: none;
+
+  .q-cont-box {
+    display: flex;
+    align-items: flex-start;
+  }
   
   .q-cont {
     font-size: rem(16);
@@ -152,4 +163,21 @@
     line-height: 1.5;
   }
 }
+/* ========== END 공지사항 ========== */
 
+/* ========== 자주묻는질문 ========== */
+.icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 50%;
+  background-color: #171820;
+  margin-right: 34px;
+}
+
+.icon-a {
+  margin-right: 15px;
+  margin-top: 2px;
+}
