@@ -1,0 +1,148 @@
+/* ========== 관련 애니메이션 ========== */
+@keyframes ifn-rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+/* ========== END 관련 애니메이션 ========== */
+
+/* ========== 메인 ========== */
+.section-visual {
+  position: relative;
+  width: 100%;
+  height: 490px;
+  padding: 68px 0 181.5px;
+  @include bg-url('img', 'img-main-visual.png');
+  background-size: cover;
+
+  .icon-factsheet {
+    margin-bottom: 21.5px;
+  }
+
+  .main-hgrp {
+    margin-bottom: 40px;
+  }
+
+  .ttl-sub {
+    font-size: rem(26);
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 7px;
+  }
+
+  .ttl {
+    font-size: rem(40);
+    font-weight: 500;
+    color: #fff;
+
+    .bold-txt {
+      font-weight: 600;
+    }
+  }
+
+  .obj01 {
+    position: absolute;
+    left: auto;
+    right: 50%;
+    margin-right: -630px;
+    top: 165px;
+    z-index: 1;
+    opacity: 0.3;
+    animation-name: ifn-rotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
+.main-search-grp {
+  width: 100%;
+}
+
+.section-join {
+  
+  .join-grp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-73px);
+  }
+
+  .join-list {
+    flex-grow: 1;
+    flex-basis: 33.3%;
+    padding: 37px 25px 40px;
+    background-repeat: no-repeat;
+    background-position: right 16px top 47px;
+
+    &.list-startup {
+      background-color: #24252E;
+      @include bg-url('img', 'img-join-start.svg');
+    }
+
+    &.list-investor {
+      background-color: #171820;
+      @include bg-url('img', 'img-join-invest.svg');
+    }
+
+    &.list-fact-checker {
+      background-color: #000;
+      @include bg-url('img', 'img-join-checker.svg');
+    }
+  }
+
+  .role-ttl {
+    font-size: rem(26);
+    font-weight: 600;
+    color: #53FF81;
+    margin-bottom: 13px;
+  }
+
+  .role-sub {
+    font-size: rem(18);
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 22px;
+  }
+  
+  .role-dec {
+    font-size: rem(14);
+    font-weight: 400;
+    color: #fff;
+    opacity: .7;
+    line-height: 1.5;
+    margin-bottom: 21px;
+  }
+
+  .role-link {
+    padding: 7px 18px;
+    font-size: rem(14);
+    font-weight: 400;
+    color: #00EB79;
+    border: 2px solid #00CE6A;
+    border-radius: 50px;
+  }
+}
+
+// .swiper-wrapper {
+//   height: 485px;
+// }
+
+// .swiper-slide {
+  // transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) !important;
+  // border: 1px solid #000;
+  // height: 450px;
+// }
+
+// .swiper-slide-prev {
+//   transform: translateY(50%) scale(.8) !important;
+//   opacity: .5 !important;
+// }
+
+// .swiper-slide-next {
+//   transform: translateY(-50%) scale(.8) !important;
+//   opacity: .5 !important;
+// }
