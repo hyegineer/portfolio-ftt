@@ -1,3 +1,18 @@
+/* ========== 관련 애니메이션 ========== */
+@keyframes slideup {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.895, 0, 0.18, 1);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* ========== END 관련 애니메이션 ========== */
+
+
 /* ========== 공지사항 ========== */
 .wide-panel {
   width: 90%;
@@ -14,6 +29,13 @@
     font-weight: 500;
     color: #171820;
     margin-bottom: 40px;
+    overflow: hidden;
+
+    .txt {
+      display: inline-block;
+      animation-name: slideup;
+      animation-duration: 1.3s;
+    }
   }
 
   .ttl-sub {
@@ -21,13 +43,21 @@
     font-weight: 500;
     color: #171820;
     line-height: 1.25;
+    overflow: hidden;
+
+    .txt {
+      display: inline-block;
+      animation-name: slideup;
+      animation-duration: 1.3s;
+    }
   }
 }
-
 
 .company-cont-wrap {
   background-color: #F9F9FB;
   padding: 50px 0 140px;
+  animation-name: slideup;
+  animation-duration: 3s;
 }
 
 .board-tab-all-wrap {

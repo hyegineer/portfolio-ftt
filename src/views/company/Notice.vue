@@ -5,10 +5,10 @@
       <div class="company-hgrp">
         <div class="wide-panel">
           <h5 class="ttl">
-            공지사항
+            <span class="txt">공지사항</span>
           </h5>
           <p class="ttl-sub">
-            팩트시트의 새로운 소식과 <br>정보를 알려드립니다.
+            <span class="txt">팩트시트의 새로운 소식과 <br>정보를 알려드립니다.</span>
           </p>
         </div>
       </div>
