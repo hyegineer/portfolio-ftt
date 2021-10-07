@@ -10,7 +10,8 @@
             <span class="txt">1:1문의</span>
           </h5>
           <p class="ttl-sub">
-            <span class="txt">고객님께서 문의하신 <br>1:1문의 내역입니다.</span>
+            <span class="txt1">고객님께서 문의하신 </span><br>
+            <span class="txt2">1:1문의 내역입니다.</span>
           </p>
         </div>
       </div>

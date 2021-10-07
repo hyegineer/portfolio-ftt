@@ -10,8 +10,8 @@
             <span class="txt">1:1문의</span>
           </h5>
           <p class="ttl-sub">
-            <span class="txt">아래 양식을 작성하여 보내주시면, <br>
-              빠르고 정확하게 답변드리겠습니다.</span>
+            <span class="txt1">아래 양식을 작성하여 보내주시면, </span>
+            <span class="txt2">빠르고 정확하게 답변드리겠습니다.</span>
           </p>
         </div>
       </div>

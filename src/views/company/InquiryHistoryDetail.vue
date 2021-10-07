@@ -61,7 +61,10 @@
               <span class="txt">이전글</span>
             </div>
 
-            <btn-bd class="btn-sm bnav-ctrl-list">
+            <btn-bd
+              class="btn-sm bnav-ctrl-list"
+              @click="$router.push('/inquiry-history')"
+            >
               목록으로
             </btn-bd>
             
