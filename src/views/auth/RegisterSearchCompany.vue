@@ -60,8 +60,10 @@
             이전
           </btn-bd-light>
 
+          <!-- 기업이 선택되지 않았을 때 넘길 수 없음 -->
           <btn-solid
             class="btn-lg btn-full"
+            disabled
             @click="clickNext"
           >
             다음
@@ -97,6 +99,7 @@ export default {
         this.$router.push({
           name: 'RegisterStartup',
           query: {
+            selectedCompany: null,
             userTypeForm: this.$route.query.userTypeForm,
           },
         });
@@ -105,6 +108,7 @@ export default {
         this.$router.push({
           name: 'RegisterInvestor',
           query: {
+            selectedCompany: null,
             userTypeForm: this.$route.query.userTypeForm,
           },
         });
