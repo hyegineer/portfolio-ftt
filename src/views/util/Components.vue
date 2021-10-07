@@ -828,6 +828,29 @@
         </btn-square-bd>
       </div>
     </section>
+
+    <section class="section">
+      <h1 class="cp-ttl">
+        12. 슬라이드
+      </h1>
+
+      <div class="section-cont test-section">
+        <div
+          v-swiper:infoSlide="slideOptions"
+          class="swiper-container main-swiper-container"
+        >
+          <div class="swiper-wrapper">
+            <div
+              v-for="(item, index) in 10"
+              :key="index"
+              class="swiper-slide"
+            >
+              <info-card />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -851,7 +874,28 @@ export default {
       },
       exInput: null,
       testOption: null,
+      slideOptions: {
+        // grabCursor: true,
+        loop: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        direction: 'vertical',
+        effect: 'coverflow',
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 435,
+          depth: 180,
+          modifier: 1.014,
+          slideShadows: false,
+        },
+      },
     };
+  },
+  created() {
+    window.addEventListener('click', (e) => {
+      console.log(e);
+      console.log(e.target);
+    });
   },
   methods: {
     mbMdOpen(opt) {
@@ -953,6 +997,60 @@ export default {
   & > h2 {
     margin: 15px 0;
     font-weight: 500;
+  }
+}
+
+// TO. 관수
+
+.main-swiper-container {
+  .swiper-wrapper {
+    // padding: 0 20px;
+  }
+
+  .swiper-slide {
+    padding: 0 20px;
+    .info-card {
+      position: relative;
+      border: 1px solid #dddee6;
+      box-shadow: none;
+      cursor: pointer;
+      z-index: 10;
+
+      @include make-before {
+        @include absolute($t: -1px, $l: -1px);
+
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        background-color: white;
+        z-index: 10;
+        opacity: 0.4;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  .swiper-slide-active {
+    .info-card {
+      box-shadow: 0 10px 20px rgb(23 24 32 / 8%);
+      z-index: 20;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+.test-section {
+  width: 100%;
+  height: 485px;
+  overflow: hidden;
+  position: relative;
+
+  .swiper-container {
+    position: absolute;
+    top: -954.3%;
+    width: 100%;
   }
 }
 </style>
