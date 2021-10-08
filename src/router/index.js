@@ -234,8 +234,219 @@ const routes = [
     component: () => import('~@/views/company/Faq'),
     meta: { requiresResetScrollHeight: true },
   },
-  /* ====================== 회원형태 1 ====================== */
-  // 아래 페이지들은 모두 로그인 후 이용가능
+  /* ====================== 회원형태 - 스타트업 ====================== */
+  // 아래 페이지들은 모두 로그인 후 이용가능// 
+  {
+    path: '/startup',
+    name: 'StartupIndex',
+    component: () => import('~@/views/user-startup/Index'),
+    // meta: { requiresAuth: true, requiresResetScrollHeight: true },
+    children: [
+      // 스타트업 마이페이지
+      {
+        path: 'mypage',
+        name: 'SMypage',
+        component: () => import('~@/views/user-startup/SMypage'),
+        children: [
+          // ===================== 기업정보 미확정 =====================
+          // 신청대기중, 마이페이지 - 신청거절/그룹강퇴
+          {
+            path: 'wating-main',
+            name: 'SWatingMain',
+            component: () => import('~@/views/user-startup/wating/SWatingMain'),
+            // meta: { requiresAuth: true },
+          },
+          // 신규업체등록
+          {
+            path: 'wating-create',
+            name: 'SWatingCreate',
+            component: () => import('~@/views/user-startup/wating/SWatingCreate'),
+            // meta: { requiresAuth: true },
+          },
+          // 기존업체등록
+          {
+            path: 'wating-search-company',
+            name: 'SWatingSearchCompany',
+            component: () => import('~@/views/user-startup/wating/SWatingSearchCompany'),
+            // meta: { requiresAuth: true },
+          },
+          // 신규/기존업체 등록완료
+          {
+            path: 'wating-complete',
+            name: 'SWatingComplete',
+            component: () => import('~@/views/user-startup/wating/SWatingComplete'),
+            // meta: { requiresAuth: true },
+          },
+          // ===================== 대시보드 =====================
+          // 대시보드
+          {
+            path: 'dashboard-main',
+            name: 'SDashboardMain',
+            component: () => import('~@/views/user-startup/dashboard/SDashboardMain'),
+            // meta: { requiresAuth: true },
+          },
+          // 대시보드-투자기업에관심을가진투자자
+          {
+            path: 'dashboard-investor-list',
+            name: 'SDashboardInvestorList',
+            component: () => import('~@/views/user-startup/dashboard/SDashboardInvestorList'),
+            // meta: { requiresAuth: true },
+          },
+          // 대시보드-투자기업에관심을가진투자자 상세
+          {
+            path: 'dashboard-investor-detail',
+            name: 'SDashboardInvestorDetail',
+            component: () => import('~@/views/user-startup/dashboard/SDashboardInvestorDetail'),
+            // meta: { requiresAuth: true },
+          },
+          // ===================== 내 정보 =====================
+          // 내정보
+          {
+            path: 'myinfo-main',
+            name: 'SMyInfoMain',
+            component: () => import('~@/views/user-startup/my-info/SMyInfoMain'),
+            // meta: { requiresAuth: true },
+          },
+          // 내정보-내정보수정
+          {
+            path: 'myinfo-edit',
+            name: 'SMyInfoEdit',
+            component: () => import('~@/views/user-startup/my-info/SMyInfoEdit'),
+            // meta: { requiresAuth: true },
+          },
+          // 내정보-회원탈퇴
+          {
+            path: 'myinfo-leave',
+            name: 'SMyInfoLeave',
+            component: () => import('~@/views/user-startup/my-info/SMyInfoLeave'),
+            // meta: { requiresAuth: true },
+          },
+          // ===================== 기업정보 =====================
+          // 기업정보-기본정보
+          {
+            path: 'etpr-default-info',
+            name: 'SEtprDefaultInfo',
+            component: () => import('~@/views/user-startup/enterprise-info/SEtprDefaultInfo'),
+            // meta: { requiresAuth: true },
+          },
+          // 기업정보-기본정보 수정
+          {
+            path: 'etpr-default-info-edit',
+            name: 'SEtprDefaultInfoEdit',
+            component: () => import('~@/views/user-startup/enterprise-info/SEtprDefaultInfoEdit'),
+            // meta: { requiresAuth: true },
+          },
+          // 기업정보-상세정보
+          {
+            path: 'etpr-detail-info',
+            name: 'SEtprDetailInfo',
+            component: () => import('~@/views/user-startup/enterprise-info/SEtprDetailInfo'),
+            // meta: { requiresAuth: true },
+          },
+          // 기업정보-상세정보 수정
+          {
+            path: 'etpr-detail-info-edit',
+            name: 'SEtprDetailInfoEdit',
+            component: () => import('~@/views/user-startup/enterprise-info/SEtprDetailInfoEdit'),
+            // meta: { requiresAuth: true },
+          },
+          // 기업정보-제출서류관리
+          {
+            path: 'etpr-document-manage',
+            name: 'SEtprDocumentManage',
+            component: () => import('~@/views/user-startup/enterprise-info/SEtprDocumentManage'),
+            // meta: { requiresAuth: true },
+          },
+          // 기업정보-구성원관리
+          {
+            path: 'etpr-member-manage',
+            name: 'SEtprMemberManage',
+            component: () => import('~@/views/user-startup/enterprise-info/SEtprMemberManage'),
+            // meta: { requiresAuth: true },
+          },
+          // 기업정보-그룹관리
+          {
+            path: 'etpr-group-manage',
+            name: 'SEtprGroupManage',
+            component: () => import('~@/views/user-startup/enterprise-info/SEtprGroupManage'),
+            // meta: { requiresAuth: true },
+          },
+          // ===================== 관심기업 =====================
+          {
+            path: 'fav-list',
+            name: 'SFavlist',
+            component: () => import('~@/views/user-startup/list-enterprise/SFavlist'),
+            // meta: { requiresAuth: true },
+          },
+          // ===================== 최근 조회한 기업 =====================
+          {
+            path: 'recent-list',
+            name: 'SRecentList',
+            component: () => import('~@/views/user-startup/list-enterprise/SRecentList'),
+            // meta: { requiresAuth: true },
+          },
+          // ===================== 팩트체크 =====================
+          // 팩트체크-팩트체커신청
+          {
+            path: 'apply-ftck-main',
+            name: 'SApplyFtckMain',
+            component: () => import('~@/views/user-startup/factcheck/SApplyFtckMain'),
+            // meta: { requiresAuth: true },
+          },
+          // 팩트체크-팩트체커신청-신청서작성
+          {
+            path: 'apply-ftck-create',
+            name: 'SApplyFtckCreate',
+            component: () => import('~@/views/user-startup/factcheck/SApplyFtckCreate'),
+            // meta: { requiresAuth: true },
+          },
+          // 팩트체크-팩트체커신청-신청서작성완료
+          {
+            path: 'apply-ftck-complete',
+            name: 'SApplyFtckComplete',
+            component: () => import('~@/views/user-startup/factcheck/SApplyFtckComplete'),
+            // meta: { requiresAuth: true },
+          },
+          // 팩트체크-받은팩트체크 목록
+          {
+            path: 'ftck-list',
+            name: 'SFtckList',
+            component: () => import('~@/views/user-startup/factcheck/SFtckList'),
+            // meta: { requiresAuth: true },
+          },
+          // 팩트체크-받은팩트체크 상세
+          {
+            path: 'ftck-detail',
+            name: 'SFtckDetail',
+            component: () => import('~@/views/user-startup/factcheck/SFtckDetail'),
+            // meta: { requiresAuth: true },
+          },
+          // ===================== 쪽지함 =====================
+          // 마이페이지 - 쪽지함 목록
+          {
+            path: 'note-list',
+            name: 'SNoteList',
+            component: () => import('~@/views/user-startup/note/SNoteList'),
+            // meta: { requiresAuth: true },
+          },
+          // 마이페이지 - 쪽지함 상세
+          {
+            path: 'note-detail',
+            name: 'SNoteDetail',
+            component: () => import('~@/views/user-startup/note/SNoteDetail'),
+            // meta: { requiresAuth: true },
+          },
+          // 마이페이지 - 쪽지 보내기
+          {
+            path: 'note-create',
+            name: 'SNoteCreate',
+            component: () => import('~@/views/user-startup/note/SNoteCreate'),
+            // meta: { requiresAuth: true },
+          },
+        ],
+      },
+    ],
+  },
   // {
   //     path: '/users',
   //     name: 'UsersIndex',
