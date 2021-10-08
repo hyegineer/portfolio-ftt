@@ -29,7 +29,7 @@
         </p>
       </div>
 
-      <!-- 등록된 기업이 있을 때 -->
+      <!-- 기업이 있을 때 -->
       <div class="card-grid-grp">
         <div
           v-for="(item, index) in 1"
@@ -84,7 +84,7 @@
         </div>
       </div>
 
-      <!-- 등록된 기업이 없을 때 -->
+      <!-- 기업이 없을 때 -->
       <empty-contents txt="목록이 없습니다." />
       <!-- // 리스트 -->
 
