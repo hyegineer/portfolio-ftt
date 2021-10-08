@@ -259,13 +259,74 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-button-next recent-button-next" />
-              <div class="swiper-button-prev recent-button-prev" />
+              <div class="recent-btn-grp">
+                <div class="swiper-button-prev recent-btn-prev" />
+                <div class="swiper-button-next recent-btn-next" />
+                <button
+                  type="button"
+                  class="recent-btn recent-btn-pause"
+                  @click="recentSlide.autoplay.stop()"
+                />
+                <button
+                  type="button"
+                  class="recent-btn recent-btn-play"
+                  @click="recentSlide.autoplay.start()"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
       <!-- END section-recent-review -->
+      <!-- section-subscribe -->
+      <section class="section-subscribe">
+        <div class="wide-panel">
+          <div class="subscribe-hgrp">
+            <img
+              src="@/assets/images/badge/badge-subs.svg"
+              alt="최근 등록한 리뷰"
+              class="badge-flag"
+            >
+            <h3 class="ttl">
+              이메일 주소만 입력하면<br>
+              팩트시트 최신소식을 받아보실 수 있습니다!
+            </h3>
+          </div>
+          <div>
+            <div class="chk-grp">
+              <input
+                id="check-box"
+                type="checkbox"
+                class="is-none check-switch"
+              >
+              <label
+                for="check-box"
+                class="check-onoff"
+              />
+              <label
+                for="check-box"
+                class="check-box-lb"
+              >개인정보 취급방침에 동의합니다.</label>
+            </div>
+            <div class="inp-grp inp-btn-grp">
+              <div class="inp-grp inp-time-grp">
+                <input
+                  type="text"
+                  class="inp"
+                  placeholder="구독하실 이메일 주소를 입력해주세요!"
+                >
+              </div>
+
+              <btn-solid-dark
+                class="btn-md"
+              >
+                구독하기
+              </btn-solid-dark>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END section-subscribe -->
     </div>
     <layout-footer />
   </div>
@@ -312,8 +373,8 @@ export default {
         slidesPerView: 5.5,
         spaceBetween: 10,
         navigation: {
-          nextEl: '.recent-button-next',
-          prevEl: '.recent-button-prev',
+          nextEl: '.recent-btn-next',
+          prevEl: '.recent-btn-prev',
         },
 
       },
