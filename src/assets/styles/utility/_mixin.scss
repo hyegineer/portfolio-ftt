@@ -247,9 +247,9 @@
   color: white;
 }
 
-@mixin custom-scroll($c: null, $sub-c: #fafafa, $r: 0) {
+@mixin custom-scroll($c: null, $sub-c: #fafafa, $r: 0, $w: 4px) {
   &::-webkit-scrollbar {
-    width: 4px;
+    width: $w;
     height: 4px;
   }
 

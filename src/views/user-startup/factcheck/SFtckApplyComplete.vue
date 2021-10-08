@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'SApplyFtckComplete',
+  name: 'SFtckApplyComplete',
 };
 </script>
 
