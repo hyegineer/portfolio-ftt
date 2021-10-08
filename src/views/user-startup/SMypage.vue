@@ -75,6 +75,7 @@
               <router-link
                 class="lnb-btn"
                 to="/startup/mypage/etpr-default-info"
+                :class="{'router-link-active': $route.path.startsWith(`/startup/mypage/etpr-default-info`)}"
               >
                 기본정보
               </router-link>
@@ -82,6 +83,7 @@
               <router-link
                 class="lnb-btn"
                 to="/startup/mypage/etpr-detail-info"
+                :class="{'router-link-active': $route.path.startsWith(`/startup/mypage/etpr-detail-info`)}"
               >
                 상세정보
               </router-link>

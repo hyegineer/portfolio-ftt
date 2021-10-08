@@ -22,7 +22,9 @@
     <!-- // 마이페이지 페이지 제목 -->
 
     <!-- 마이페이지 컨텐츠 영역 -->
-    <div class="mypage-cont-wrap" />
+    <div class="mypage-cont-wrap">
+      대시보드 메인페이지~
+    </div>
     <!-- // 마이페이지 컨텐츠 영역 -->
   </div>
 </template>
