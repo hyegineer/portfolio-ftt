@@ -22,7 +22,7 @@
             </h4>
           </div>
           <div class="hd-search-grp main-search-grp">
-            <custom-slct 
+            <custom-slct
               class="custom-slct01 slct-depth01"
               :selected="hdSearchOptions.depth01"
             >
@@ -33,21 +33,21 @@
               </template>
 
               <template #options>
-                <custom-slct-opt 
+                <custom-slct-opt
                   @click="hdSearchOptions.depth01 = '산업분류 1'"
                 >
                   산업분류 1
                 </custom-slct-opt>
-              
-                <custom-slct-opt 
+
+                <custom-slct-opt
                   @click="hdSearchOptions.depth01 = '산업분류 2'"
                 >
                   산업분류 2
                 </custom-slct-opt>
               </template>
             </custom-slct>
-            
-            <custom-slct 
+
+            <custom-slct
               class="custom-slct01 slct-depth02"
               :selected="hdSearchOptions.depth02"
             >
@@ -58,20 +58,20 @@
               </template>
 
               <template #options>
-                <custom-slct-opt 
+                <custom-slct-opt
                   @click="hdSearchOptions.depth02 = '산업분야 1'"
                 >
                   산업분야 1
                 </custom-slct-opt>
-              
-                <custom-slct-opt 
+
+                <custom-slct-opt
                   @click="hdSearchOptions.depth02 = '산업분야 2'"
                 >
                   산업분야 2
                 </custom-slct-opt>
               </template>
             </custom-slct>
-            
+
             <div class="inp-grp inp-sch-grp">
               <input
                 v-model="hdSearchOptions.keyword"
@@ -88,7 +88,7 @@
                 <span class="is-voice-only">검색어 지우기</span>
               </button>
               <button
-                type="button" 
+                type="button"
                 class="inp-sch-btn"
               >
                 <span class="is-voice-only">검색하기</span>
@@ -124,12 +124,12 @@
             <div class="join-list list-investor">
               <p class="role-ttl">
                 투자자
-              </p> 
+              </p>
               <p class="role-sub">
                 포트폴리오 관리하기
               </p>
               <p class="role-dec">
-                관리할 인력은 부족한데<br> 
+                관리할 인력은 부족한데<br>
                 투자 기업 찾기 어렵고 관리할 투자 기업이 많다면<br>
                 팩트시트에게 관리를 맡기세요.<br>
                 엄밀하게 검수한 정보만 투자자에게 보여드립니다.
@@ -161,157 +161,6 @@
         </div>
       </section>
       <!-- END section-join -->
-      <!-- section-slide -->
-      <section class="section-slide">
-        <div class="wide-panel">
-          <div
-            v-swiper:mainSlide="swiperOptions"
-            class="swiper-container"
-          >
-            <div class="swiper-wrapper">
-              <div
-                v-for="(item, idx) in 10"
-                :key="idx"
-                class="swiper-slide"
-              >
-                <div class="section-cont">
-                  <div class="info-card">
-                    <div class="card-thumb card-thumb-lg">
-                      <thumbnail lg />
-                      <span class="ribbon">정보 업데이트</span>
-                    </div>
-
-                    <div class="card-company-info">
-                      <!-- 회사이름 -->
-                      <div class="avatar-with-name">
-                        <avatar />
-                        <div class="name-grp">
-                          <span class="name">
-                            {{ '스타트업명' }}
-                          </span>
-
-                          <div class="icon-with-txt">
-                            <i class="icon icon-jump" />
-                            <a
-                              href="#"
-                              class="txt"
-                            >{{ 'www.팩트컴퍼니.com' }}</a>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- // 회사이름 -->
-
-                      <!-- 회사정보 -->
-                      <div class="dlist-grp">
-                        <dl class="dlist">
-                          <dt class="lbel">
-                            대표자
-                          </dt>
-                          <dd class="txt">
-                            <span>{{ '김철수' }}</span>
-                          </dd>
-                        </dl>
-              
-                        <dl class="dlist">
-                          <dt class="lbel">
-                            사업자번호
-                          </dt>
-                          <dd class="txt">
-                            <span>{{ '000-00-00***' }}</span>
-                          </dd>
-                        </dl>
-              
-                        <dl class="dlist">
-                          <dt class="lbel">
-                            본사주소
-                          </dt>
-                          <dd class="txt">
-                            <span>{{ '서울특별시 강남구 테헤란로 312 비전타워' }}</span>
-                          </dd>
-                        </dl>
-              
-                        <dl class="dlist">
-                          <dt class="lbel">
-                            연락처
-                          </dt>
-                          <dd class="txt">
-                            <span>{{ '02-1234-5678' }}</span>
-                          </dd>
-                        </dl>
-              
-                        <dl class="dlist">
-                          <dt class="lbel">
-                            기업규모
-                          </dt>
-                          <dd class="txt">
-                            <span>{{ '소기업' }}</span>
-                          </dd>
-                        </dl>
-              
-                        <dl class="dlist">
-                          <dt class="lbel">
-                            산업분류
-                          </dt>
-                          <dd class="txt">
-                            <span>-</span>
-                          </dd>
-                        </dl>
-              
-                        <dl class="dlist">
-                          <dt class="lbel">
-                            산업분야
-                          </dt>
-                          <dd class="txt">
-                            <span>-</span>
-                          </dd>
-                        </dl>
-              
-                        <dl class="dlist">
-                          <dt class="lbel">
-                            설립일
-                          </dt>
-                          <dd class="txt">
-                            <span>{{ '2021년 03월 10일' }}</span>
-                          </dd>
-                        </dl>
-                      </div>
-                      <!-- // 회사정보 -->
-
-                      <!-- 회사 관련 키워드뱃지 -->
-                      <div class="card-keyword-badge-grp">
-                        <badge-rounded>
-                          최대여덟글자입력
-                        </badge-rounded>
-              
-                        <badge-rounded>
-                          최대여덟글자입력
-                        </badge-rounded>
-            
-                        <badge-rounded>
-                          최대여덟글자입력
-                        </badge-rounded>
-            
-                        <badge-rounded>
-                          최대여덟글자입력
-                        </badge-rounded>
-            
-                        <badge-rounded>
-                          최대여덟글자입력
-                        </badge-rounded>
-                      </div>
-                      <!-- // 회사 관련 키워드뱃지 -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-button-next" />
-            <div class="swiper-button-prev" />
-            <div class="swiper-pagination" />
-          </div>
-        </div>
-      </section>
-      <!-- END section-slide -->
       <!-- section-video -->
       <section class="section-video">
         <div class="wide-panel">
@@ -343,6 +192,80 @@
         </div>
       </section>
       <!-- END section-video -->
+      <!-- section-recent-review -->
+      <section class="section-recent-review">
+        <div class="wide-panel">
+          <div class="recent-review-hgrp">
+            <img
+              src="@/assets/images/badge/badge-review.svg"
+              alt="최근 등록한 리뷰"
+              class="badge-flag"
+            >
+            <h3 class="ttl">
+              최근 등록된 리뷰
+            </h3>
+            <p class="dec">
+              투자자가 등록한 리뷰를 참고하여<br>
+              원하는 스타트업을 찾아보세요!
+            </p>
+          </div>
+          <div class="slide-grp">
+            <div
+              v-swiper:recentSlide="recentOptions"
+              class="swiper-container recent-container"
+            >
+              <div class="swiper-wrapper recent-review-wrapper">
+                <div
+                  v-for="(item, idx) in 10"
+                  :key="idx"
+                  class="swiper-slide"
+                >
+                  <div
+                    class="review-card"
+                  >
+                    <div class="top-info-grp">
+                      <div class="left-box">
+                        <p class="name">
+                          익명
+                        </p>
+                        <p class="role">
+                          개인 투자자
+                        </p>
+                      </div>
+                      <div class="right-box">
+                        <div class="hover-desc">
+                          <span
+                            class="hover-overlay mb-show"
+                          />
+
+                          <div
+                            class="star-txt"
+                          >
+                            <i class="icon icon-star" />
+                            <span class="txt">4.3</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cont-grp">
+                      <p class="review-cont">
+                        투자자 리뷰 텍스트 자리입니다. 최대 6줄까지 표시하고 그이후로는 말줄임표로 생략합니다. 투자자 리뷰 텍스트 자리입니다. 최대 6줄까지 표시하고
+                        투자자 리뷰 텍스트 자리입니다. 최대 6줄까지 표시하고 그이후로는 말줄임표로 생략합니다. 투자자 리뷰 텍스트 자리입니다. 최대 6줄까지 표시하고
+                      </p>
+                      <p class="review-date">
+                        2021.00.00 00:00
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next recent-button-next" />
+              <div class="swiper-button-prev recent-button-prev" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END section-recent-review -->
     </div>
     <layout-footer />
   </div>
@@ -359,29 +282,40 @@ export default {
         depth02: null,
         keyword: '',
       },
-      swiperOptions: { 
-        grabCursor: true,
+      // swiperOptions: {
+      //   grabCursor: true,
+      //   loop: true,
+      //   slidesPerView: 'auto',
+      //   centeredSlides: true,
+      //   direction: 'vertical',
+      //   effect: 'coverflow',
+      //   coverflowEffect: {
+      //     rotate: 0,
+      //     stretch: 435,
+      //     depth: 180,
+      //     modifier: 1,
+      //     slideShadows: false,
+      //   },
+      //   navigation: {
+      //     nextEl: '.swiper-button-next',
+      //     prevEl: '.swiper-button-prev',
+      //   },
+      //   pagination: {
+      //     el: '.swiper-pagination',
+      //     type: 'bullets',
+      //     clickable: true,
+      //   },
+      // },
+      recentOptions: {
+        autoplay: true,
         loop: true,
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        direction: 'vertical',
-        effect: 'coverflow',
-        coverflowEffect: {
-          rotate: 0,
-          stretch: 435,
-          depth: 180,
-          modifier: 1,
-          slideShadows: false,
-        },
+        slidesPerView: 5.5,
+        spaceBetween: 10,
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: '.recent-button-next',
+          prevEl: '.recent-button-prev',
         },
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'bullets',
-          clickable: true,
-        },
+
       },
     };
   },
