@@ -165,12 +165,12 @@
       <section class="section-slide">
         <div class="wide-panel">
           <div
-            v-swiper:factSlide="swiperOptions"
+            v-swiper:mainSlide="swiperOptions"
             class="swiper-container"
           >
             <div class="swiper-wrapper">
               <div
-                v-for="(item, idx) in 5"
+                v-for="(item, idx) in 10"
                 :key="idx"
                 class="swiper-slide"
               >
@@ -312,6 +312,37 @@
         </div>
       </section>
       <!-- END section-slide -->
+      <!-- section-video -->
+      <section class="section-video">
+        <div class="wide-panel">
+          <div class="video-hgrp">
+            <img
+              src="@/assets/images/badge/badge-video.svg"
+              alt="비디오"
+              class="badge-flag"
+            >
+            <img
+              src="@/assets/images/logo/logo-word-wh.svg"
+              alt="Factsheet"
+              class="logo-word-wh"
+            >
+            <h3 class="ttl">
+              팩트체크 현장
+            </h3>
+            <p class="dec">
+              영상설명 간략한 2~3줄 텍스트가 필요합니다.<br>
+              영상설명 간략한 2~3줄 텍스트가 필요합니다.<br>
+              영상설명 간략한 2~3줄 텍스트가 필요합니다.<br>
+            </p>
+          </div>
+          <!-- TODO: 비디오 삽입되는 영역 -->
+          <div
+            class="video-cont"
+            style="border: 3px solid orange"
+          />
+        </div>
+      </section>
+      <!-- END section-video -->
     </div>
     <layout-footer />
   </div>
@@ -329,11 +360,19 @@ export default {
         keyword: '',
       },
       swiperOptions: { 
+        grabCursor: true,
         loop: true,
-        autoplay: false,
-        effect: 'coverflow',
-        slidesPerView: 3,
+        slidesPerView: 'auto',
+        centeredSlides: true,
         direction: 'vertical',
+        effect: 'coverflow',
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 435,
+          depth: 180,
+          modifier: 1,
+          slideShadows: false,
+        },
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
