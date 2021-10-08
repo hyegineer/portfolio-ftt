@@ -33,7 +33,9 @@
       <div class="inquiry-history-wrap">
         <div class="wide-panel">
           <div class="board-list-grp-ttl">
-            총 <span class="bold">15</span>개의 게시글이 있습니다.
+            <p class="txt">
+              총 <span class="bold">15</span>개의 게시글이 있습니다.
+            </p>
           </div>
 
           <!-- 등록된 게시글이 있을 때 -->
@@ -59,7 +61,7 @@
                 </span>
               </td>
               <td>
-                <span class="td-date">{{ '2021.00.00' }}</span>
+                <span class="td-word-date">{{ '2021.00.00' }}</span>
               </td>
             </tr>
             <tr 
@@ -82,7 +84,7 @@
                 </span>
               </td>
               <td>
-                <span class="td-date">{{ '2021.00.00' }}</span>
+                <span class="td-word-date">{{ '2021.00.00' }}</span>
               </td>
             </tr>
           </table>

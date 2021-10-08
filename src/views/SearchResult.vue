@@ -119,46 +119,48 @@
             </div>
             <!-- // 검색어만 입력한 검색결과일 때만 보임 -->
 
-            <custom-slct
-              class="custom-slct02"
-              :selected="searchOptions"
-            >
-              <template #select>
-                {{ searchOptions || '팩트체크 요청순' }}
-              </template>
+            <div class="txt-right">
+              <custom-slct
+                class="custom-slct02"
+                :selected="searchOptions"
+              >
+                <template #select>
+                  {{ searchOptions || '팩트체크 요청순' }}
+                </template>
 
-              <template #options>
-                <custom-slct-opt 
-                  @click="searchOptions = '팩트체크 요청순'"
-                >
-                  팩트체크 요청순
-                </custom-slct-opt>
+                <template #options>
+                  <custom-slct-opt 
+                    @click="searchOptions = '팩트체크 요청순'"
+                  >
+                    팩트체크 요청순
+                  </custom-slct-opt>
             
-                <custom-slct-opt 
-                  @click="searchOptions = '업데이트순'"
-                >
-                  업데이트순
-                </custom-slct-opt>
+                  <custom-slct-opt 
+                    @click="searchOptions = '업데이트순'"
+                  >
+                    업데이트순
+                  </custom-slct-opt>
             
-                <custom-slct-opt 
-                  @click="searchOptions = '업데이트순'"
-                >
-                  투자자관심순
-                </custom-slct-opt>
+                  <custom-slct-opt 
+                    @click="searchOptions = '업데이트순'"
+                  >
+                    투자자관심순
+                  </custom-slct-opt>
             
-                <custom-slct-opt 
-                  @click="searchOptions = '업데이트순'"
-                >
-                  투자금액순
-                </custom-slct-opt>
+                  <custom-slct-opt 
+                    @click="searchOptions = '업데이트순'"
+                  >
+                    투자금액순
+                  </custom-slct-opt>
             
-                <custom-slct-opt 
-                  @click="searchOptions = '업데이트순'"
-                >
-                  투자가치순
-                </custom-slct-opt>
-              </template>
-            </custom-slct>
+                  <custom-slct-opt 
+                    @click="searchOptions = '업데이트순'"
+                  >
+                    투자가치순
+                  </custom-slct-opt>
+                </template>
+              </custom-slct>
+            </div>
           </div>
 
           <!-- 등록된 기업이 있을 때 -->

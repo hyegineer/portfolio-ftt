@@ -257,7 +257,7 @@
 
   cursor: pointer;
 
-  .icon-pen{
+  .icon{
     margin-right: 3px;
   }
 
@@ -265,6 +265,12 @@
     @include font-op($c: #171820, $w: 600){
       font-size: 15px;
     }
+  }
+}
+
+.btn-warning-txt{
+  .txt{
+    color: #FF5175;
   }
 }
 

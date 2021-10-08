@@ -1,18 +1,22 @@
 <template>
-  <div class="page">
-    <div>
-      왼쪽 네비게이션~
-    </div>
+  <div class="page mypage-page">
+    <layout-header />
 
-    <div>
-      우측 컨텐츠 내용영역~
-      
-      <keep-alive
-        :include="keepAlive"
-      >
-        <router-view />
-      </keep-alive>
-    </div>
+    <layout-mypage>
+      <layout-mypage-side-nav>
+        왼쪽 네비게이션~
+      </layout-mypage-side-nav>
+
+      <layout-mypage-container>
+        <keep-alive
+          :include="keepAlive"
+        >
+          <router-view />
+        </keep-alive>
+
+        <layout-footer />
+      </layout-mypage-container>
+    </layout-mypage>
   </div>
 </template>
 

@@ -598,17 +598,37 @@
 
 // 구성요소 - 게시판 list들
 .board-list-grp-ttl{
-  font-size: 16px;
-  color: #171820;
-  margin-bottom: 15px;
+  @include flex{
+    @include flex-op(center, flex-start);
+  }
 
-  .bold{
-    font-weight: 300;
-    -webkit-text-stroke: 1px #171820;
+  margin-bottom: 15px;
+  color: #171820;
+  gap: 10px;
+
+  .txt{
+    font-size: 16px;
+    position: relative;
+
+    .bold{
+      font-weight: 300;
+      -webkit-text-stroke: 1px #171820;
+    }
+  }
+
+  .txt-right{
+    @include flex{
+      @include flex-op(center, flex-start);
+    }
+
+    margin-left: auto;
+    margin-right: 0;
+    gap: 10px;
   }
 }
 
 .board-list-grp{
+  width: 100%;
   border-top: 1px solid #171820;
   margin-bottom: 60px;
 
@@ -639,12 +659,17 @@
   }
   
   .td-num{
+    min-width: 45px;
     text-align: left;
   }
 
   .td-word-num{
     font-size: 14px;
     color: #8E909F;
+  }
+
+  .td-cat{
+    padding-right: 26px;
   }
 
   .td-word-cat{
@@ -656,6 +681,7 @@
   .td-subject{
     flex: 1 1 auto;
     width: 100%;
+    padding-top: 2.5px;
   }
 
   .td-word-subject{
@@ -664,7 +690,12 @@
     font-size: 18px;
   }
 
-  .td-date{
+  .td-word-writer{
+    font-size: 13px;
+    color: #8e909f;
+  }
+
+  .td-word-date{
     font-size: 13px;
     color: #B0B1BC;
   }
@@ -869,9 +900,17 @@
     }
   }
 
-  .custom-slct{
+  .txt-right{
+    @include flex{
+      @include flex-op(center, flex-start);
+    }
+
     margin-left: auto;
     margin-right: 0;
+    gap: 10px;
+  }
+
+  .custom-slct{
     width: 150px;
   }
 

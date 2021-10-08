@@ -116,6 +116,16 @@
           <span class="txt">작성하기</span>
         </button>
         <!-- // 작성 버튼 -->
+        
+        <!-- 삭제 버튼 -->
+        <button
+          type="button"
+          class="btn-txt btn-warning-txt"
+        >
+          <i class="icon icon-trash" />
+          <span class="txt">삭제하기</span>
+        </button>
+        <!-- // 삭제 버튼 -->
       </div>
     </section>
     
@@ -635,6 +645,7 @@
       </h1>
 
       <div class="section-cont">
+        <h2>9-1. 회사정보</h2>
         <div class="icon-with-txt">
           <i class="icon icon-jump" />
           <a
@@ -647,6 +658,19 @@
           <i class="icon icon-loca" />
           <span class="txt">서울특별시 강남구 테헤란로 312 비전타워...</span>
         </div>
+
+        <h2>9-2. 브레드크럼</h2>
+        <ul class="breadcrumb">
+          <li class="txt">
+            홈
+          </li>
+          <li class="txt">
+            마이페이지
+          </li>
+          <li class="txt">
+            대시보드
+          </li>
+        </ul>
       </div>
     </section>
     
@@ -1390,6 +1414,53 @@
           </modal>
         </div>
         <!-- // 항목 공개 설정 모달 -->
+      </div>
+    </section>
+
+    <section class="section">
+      <h1 class="cp-ttl">
+        14. 게시판 레이아웃
+      </h1>
+
+      <div
+        class="section-cont section-modal-cont"
+      >
+        <div class="board-list-grp-ttl">
+          <p class="txt">
+            총 <span class="bold">15</span>개의 게시글이 있습니다.
+          </p>
+          
+          <div class="txt-right">
+            <button
+              type="button"
+              class="btn-txt"
+            >
+              <i class="icon icon-pen" />
+              <span class="txt">작성하기</span>
+            </button>
+          </div>
+        </div>
+
+        <table class="board-list-grp">
+          <tr
+            v-for="(item, index) in 2"
+            :key="index"
+            class="board-list"
+          >
+            <td class="td-num">
+              <span class="td-word-num">{{ index }}</span>
+            </td>
+            <td class="td-subject">
+              <span class="td-word-subject">{{ '기업정보 게시판 제목 텍스트입니다.' }}</span>
+            </td>
+            <td>
+              <span class="td-word-writer">{{ '작성자명' }}</span>
+            </td>
+            <td>
+              <span class="td-word-date">{{ '2021.00.00' }}</span>
+            </td>
+          </tr>
+        </table>
       </div>
     </section>
 
