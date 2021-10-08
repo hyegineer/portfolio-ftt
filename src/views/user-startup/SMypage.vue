@@ -37,6 +37,7 @@
             <router-link
               class="mypage-snav-btn"
               to="/startup/mypage/dashboard-main"
+              :class="{'router-link-active': $route.path.startsWith(`/startup/mypage/dashboard-`)}"
             >
               <span class="txt">대시보드</span>
               <i class="arrow" />
