@@ -164,7 +164,7 @@
 
 .modal-cont{
   @include flex-col;
-  @include flex-op(center, center);
+  @include flex-op(stretch, center);
   
   gap: 15px;
   margin: 5px 0;
@@ -173,8 +173,8 @@
     padding-top: 0;
   }
 
-  .custom-slct{
-    width: 100%;
+  .check-lbel-ment{
+    margin: 0 auto;
   }
 }
 
@@ -234,13 +234,11 @@
 /* -------------- [팩트시트 관련 모달] -------------- */
 // 기업 선택하기
 .md-choice-cont{
-  .inp-sch-grp{
-    margin-bottom: 20px;
-  }
+  // gap: 0;
   
-  .cnt-txt-grp{
-    margin: 15px 0 10px;
-  }
+  // .cnt-txt-grp{
+  //   margin: 15px 0 10px;
+  // }
 
   .box-list-grp{
     @include hide-scroll;
@@ -254,7 +252,7 @@
   }
 
   .empty-wrap{
-    padding: 40px 0 20px;
+    padding: 30px 0 20px;
   }
 }
 

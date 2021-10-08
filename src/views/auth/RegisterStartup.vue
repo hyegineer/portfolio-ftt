@@ -355,7 +355,10 @@
                   class="inp"
                   placeholder="휴대폰 번호 입력"
                 >
-                <btn-bd-dark class="btn-md">
+                <btn-bd-dark
+                  class="btn-md"
+                  @click="alert('인증문자가 발송되었습니다.')"
+                >
                   인증번호 발송
                 </btn-bd-dark>
               </div>
@@ -373,6 +376,7 @@
 
                 <btn-solid-dark
                   class="btn-md"
+                  @click="alert('인증이 완료되었습니다.')"
                 >
                   인증하기
                 </btn-solid-dark>

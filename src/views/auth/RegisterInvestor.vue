@@ -432,13 +432,16 @@
                   class="inp"
                   placeholder="휴대폰 번호 입력"
                 >
-                <btn-bd-dark class="btn-md">
+                <btn-bd-dark
+                  class="btn-md"
+                  @click="alert('인증문자가 발송되었습니다.')"
+                >
                   인증번호 발송
                 </btn-bd-dark>
               </div>
               
               <!-- [D] 인증번호 보낸 후 보이는 DOM -->
-              <!-- <div class="inp-grp inp-btn-grp">
+              <div class="inp-grp inp-btn-grp">
                 <div class="inp-grp inp-time-grp">
                   <input
                     type="text"
@@ -450,11 +453,12 @@
 
                 <btn-solid-dark
                   class="btn-md"
+                  @click="alert('인증이 완료되었습니다.')"
                 >
                   인증하기
                 </btn-solid-dark>
               </div>
-               -->
+              
               
               <p class="fvalidate-msg is-fail">
                 인증번호가 불일치합니다.
