@@ -33,7 +33,7 @@
         >
           기업정보 업데이트
         </btn-bd>
-        
+
         <btn-bd-dark
           class="btn-sm"
           @click="window.alert('설정하기 버튼을 클릭하셨습니다.')"
@@ -69,7 +69,7 @@
         </btn-bd-light>
       </div>
     </section>
-    
+
     <section class="section">
       <h1 class="cp-ttl">
         2. 기타 버튼들
@@ -87,7 +87,7 @@
           class="toggle-onoff"
         />
         <!-- // 토글 스위치 -->
-        
+
         <!-- 체크박스 -->
         <input
           id="check-box"
@@ -116,7 +116,7 @@
           <span class="txt">작성하기</span>
         </button>
         <!-- // 작성 버튼 -->
-        
+
         <!-- 삭제 버튼 -->
         <button
           type="button"
@@ -126,9 +126,19 @@
           <span class="txt">삭제하기</span>
         </button>
         <!-- // 삭제 버튼 -->
+
+        <!-- 탈퇴 버튼 -->
+        <button
+          type="button"
+          class="btn-txt btn-gray-txt"
+        >
+          <i class="icon icon-exit" />
+          <span class="txt">회원탈퇴</span>
+        </button>
+        <!-- // 탈퇴 버튼 -->
       </div>
     </section>
-    
+
     <section class="section">
       <h1 class="cp-ttl">
         3. 기타 뱃지들
@@ -140,7 +150,7 @@
           최대여덟글자입력
         </badge-rounded>
         <!-- // 기본뱃지 -->
-        
+
         <!-- 완료뱃지 -->
         <div class="badge-state">
           <i class="icon icon-check" />
@@ -149,7 +159,7 @@
           </span>
         </div>
         <!-- // 완료뱃지 -->
-        
+
         <!-- 포인트 -->
         <div class="badge-p">
           <span class="is-voice-only">포인트</span>
@@ -159,13 +169,13 @@
         <!-- 별점 -->
         <div class="hover-desc">
           <span
-            class="hover-overlay mb-show" 
+            class="hover-overlay mb-show"
             :class="{'is-show': mbMdOptions1.visible}"
             @click="mbMdClose('star')"
           />
 
           <div
-            class="star-txt" 
+            class="star-txt"
             @click="mbMdOpen('star')"
           >
             <i class="icon icon-star" />
@@ -234,7 +244,7 @@
         <!-- 도움말 -->
         <div class="hover-desc">
           <span
-            class="hover-overlay mb-show" 
+            class="hover-overlay mb-show"
             :class="{'is-show': mbMdOptions2.visible}"
             @click="mbMdClose('question')"
           />
@@ -251,7 +261,7 @@
             :class="{'is-show' : mbMdOptions2.visible}"
           >
             <span class="ttl">토글 제목</span>
-            
+
             <p class="desc">
               해당 토글 내용
             </p>
@@ -274,7 +284,7 @@
             placeholder="플레이스 홀더"
           >
         </div>
-        
+
         <div class="inp-grp">
           <input
             type="text"
@@ -282,7 +292,7 @@
             value="작성된 내용"
           >
         </div>
-        
+
         <div class="inp-grp">
           <input
             type="text"
@@ -291,7 +301,7 @@
             value="작성할 수 없는 입력영역"
           >
         </div>
-        
+
         <div class="inp-grp">
           <button
             type="button"
@@ -303,7 +313,7 @@
         </div>
         <!-- // 인풋만 -->
 
-        
+
         <h2>4-2. 인풋 + 인증번호</h2>
         <div class="inp-grp inp-btn-grp">
           <input
@@ -316,7 +326,7 @@
             인증번호 발송
           </btn-bd>
         </div>
-        
+
         <div class="inp-grp inp-btn-grp">
           <div class="inp-grp inp-time-grp">
             <input
@@ -351,7 +361,7 @@
             <span class="is-voice-only">검색어 지우기</span>
           </button>
           <button
-            type="button" 
+            type="button"
             class="inp-sch-btn"
           >
             <span class="is-voice-only">검색하기</span>
@@ -373,7 +383,7 @@
             <span class="is-voice-only">검색어 지우기</span>
           </button>
           <button
-            type="button" 
+            type="button"
             class="inp-sch-btn"
           >
             <span class="is-voice-only">검색하기</span>
@@ -404,7 +414,7 @@
           <span class="inp-unit">단위</span>
         </div>
         <!-- // 단위있는 인풋 -->
-        
+
         <h2>4-6. 셀렉트</h2>
         <select
           id="#"
@@ -422,7 +432,7 @@
 
         <h2>4-7. 커스텀 셀렉트</h2>
         <!-- 커스텀 셀렉트 1 -->
-        <custom-slct 
+        <custom-slct
           class="custom-slct01"
           :selected="testOption"
         >
@@ -431,13 +441,13 @@
           </template>
 
           <template #options>
-            <custom-slct-opt 
+            <custom-slct-opt
               @click="testOption = '선택사항1'"
             >
               선택사항 1
             </custom-slct-opt>
-            
-            <custom-slct-opt 
+
+            <custom-slct-opt
               @click="testOption = '선택사항2'"
             >
               선택사항 2
@@ -445,7 +455,7 @@
           </template>
         </custom-slct>
         <!-- // 커스텀 셀렉트 1 -->
-        
+
         <custom-slct
           class="custom-slct02"
           :selected="testOption"
@@ -455,13 +465,13 @@
           </template>
 
           <template #options>
-            <custom-slct-opt 
+            <custom-slct-opt
               @click="testOption = '선택사항1'"
             >
               선택사항 1
             </custom-slct-opt>
-            
-            <custom-slct-opt 
+
+            <custom-slct-opt
               @click="testOption = '선택사항2'"
             >
               선택사항 2
@@ -480,10 +490,10 @@
       <div class="section-cont ">
         <h2>5-1. 기업로고 아바타</h2>
         <avatar />
-        
+
         <h2>5-2. 기업구성원 아바타</h2>
         <avatar lg />
-        
+
         <h2>5-3. 썸네일</h2>
         <div
           class="card-thumb"
@@ -491,14 +501,14 @@
         >
           <thumbnail />
         </div>
-        
+
         <h2>5-4. 썸네일 큰사이즈</h2>
         <div class="card-thumb card-thumb-lg">
           <thumbnail />
         </div>
       </div>
     </section>
-    
+
     <section class="section">
       <h1 class="cp-ttl">
         6. 내용이 없을 때
@@ -557,14 +567,14 @@
             </li>
           </ul>
         </div>
-        
+
         <h2>7-2. 투자자 프로필 카드</h2>
         <div class="card">
           <div class="card-thumb">
             <thumbnail />
             <avatar />
           </div>
-          
+
           <span class="card-user-type">
             개인 투자자
           </span>
@@ -589,7 +599,7 @@
             <span class="name">
               주식회사 팩트컴퍼니
             </span>
-            
+
             <ul class="name-subtxt-grp">
               <li class="name-subtxt-list">
                 기업규모
@@ -614,7 +624,7 @@
             </span>
           </div>
         </div>
-        
+
         <h2>8-2. 아바타 + 회사정보</h2>
         <div class="avatar-with-name col-avatar-with-name">
           <avatar />
@@ -622,7 +632,7 @@
             <span class="name">
               주식회사 팩트컴퍼니
             </span>
-            
+
             <ul class="name-subtxt-grp">
               <li class="name-subtxt-list">
                 기업규모
@@ -653,7 +663,7 @@
             class="txt"
           >www.팩트컴퍼니.com</a>
         </div>
-        
+
         <div class="icon-with-txt">
           <i class="icon icon-loca" />
           <span class="txt">서울특별시 강남구 테헤란로 312 비전타워...</span>
@@ -673,7 +683,7 @@
         </breadcrumb>
       </div>
     </section>
-    
+
     <section class="section">
       <h1 class="cp-ttl">
         10. 회사정보 카드
@@ -715,7 +725,7 @@
                   <span>{{ '김철수' }}</span>
                 </dd>
               </dl>
-              
+
               <dl class="dlist">
                 <dt class="lbel">
                   사업자번호
@@ -724,7 +734,7 @@
                   <span>{{ '000-00-00***' }}</span>
                 </dd>
               </dl>
-              
+
               <dl class="dlist">
                 <dt class="lbel">
                   본사주소
@@ -733,7 +743,7 @@
                   <span>{{ '서울특별시 강남구 테헤란로 312 비전타워' }}</span>
                 </dd>
               </dl>
-              
+
               <dl class="dlist">
                 <dt class="lbel">
                   연락처
@@ -742,7 +752,7 @@
                   <span>{{ '02-1234-5678' }}</span>
                 </dd>
               </dl>
-              
+
               <dl class="dlist">
                 <dt class="lbel">
                   기업규모
@@ -751,7 +761,7 @@
                   <span>{{ '소기업' }}</span>
                 </dd>
               </dl>
-              
+
               <dl class="dlist">
                 <dt class="lbel">
                   산업분류
@@ -760,7 +770,7 @@
                   <span>-</span>
                 </dd>
               </dl>
-              
+
               <dl class="dlist">
                 <dt class="lbel">
                   산업분야
@@ -769,7 +779,7 @@
                   <span>-</span>
                 </dd>
               </dl>
-              
+
               <dl class="dlist">
                 <dt class="lbel">
                   설립일
@@ -786,19 +796,19 @@
               <badge-rounded>
                 최대여덟글자입력
               </badge-rounded>
-              
+
               <badge-rounded>
                 최대여덟글자입력
               </badge-rounded>
-            
+
               <badge-rounded>
                 최대여덟글자입력
               </badge-rounded>
-            
+
               <badge-rounded>
                 최대여덟글자입력
               </badge-rounded>
-            
+
               <badge-rounded>
                 최대여덟글자입력
               </badge-rounded>
@@ -826,42 +836,42 @@
         >
           1
         </button>
-        
+
         <button
-          type="button" 
+          type="button"
           class="num-btn"
         >
           2
         </button>
-        
+
         <button
-          type="button" 
+          type="button"
           class="num-btn"
         >
           3
         </button>
-        
+
         <button
-          type="button" 
+          type="button"
           class="num-btn"
         >
           4
         </button>
 
         <button
-          type="button" 
+          type="button"
           class="num-btn"
         >
           ···
         </button>
-        
+
         <button
-          type="button" 
+          type="button"
           class="num-btn"
         >
           10
         </button>
-        
+
         <btn-square-bd @click="window.alert('다음 버튼 누르기')">
           <i class="icon icon-page-next" />
           <span class="is-voice-only">다음</span>
@@ -908,7 +918,7 @@
         >
           custom modal
         </btn-solid-dark>
-        
+
         <btn-solid-dark
           class="btn-sm"
           style="margin-right: 10px;"
@@ -916,7 +926,7 @@
         >
           alert
         </btn-solid-dark>
-        
+
         <btn-solid-dark
           class="btn-sm"
           style="margin-right: 10px;"
@@ -950,7 +960,7 @@
                   <span class="is-voice-only">검색어 지우기</span>
                 </button>
                 <button
-                  type="button" 
+                  type="button"
                   class="inp-sch-btn"
                 >
                   <span class="is-voice-only">검색하기</span>
@@ -987,7 +997,7 @@
                     </p>
                     <span class="txt-gray">김철수 02-000-0000</span>
                   </div>
-        
+
                   <!-- 체크박스 -->
                   <input
                     :id="`enter${index}`"
@@ -1019,7 +1029,7 @@
           </modal>
         </div>
         <!-- // 기업선택하기 모달 -->
-        
+
         <div class="comp-grp-modal">
           <h3>* 구성원 추가 모달</h3>
           <modal
@@ -1032,7 +1042,7 @@
                   <legend class="ffieldset-ttl">
                     프로필 이미지
                   </legend>
-                
+
                   <div class="file-inp-grp">
                     <!-- [D] 해당 DOM 클릭시 사진 업로드 & 수정 가능 -->
                     <div class="input-img-frame input-circle-img-frame">
@@ -1056,12 +1066,12 @@
                     </p>
                   </div>
                 </fieldset>
-              
+
                 <fieldset class="ffieldset">
                   <legend class="ffieldset-ttl">
                     기본 정보
                   </legend>
-          
+
                   <!-- 이름 -->
                   <div class="lbel-inp-grp">
                     <label class="lbel">이름</label>
@@ -1073,7 +1083,7 @@
                       >
                     </div>
                   </div>
-          
+
                   <!-- 이메일 -->
                   <div class="lbel-inp-grp">
                     <label class="lbel">이메일</label>
@@ -1085,7 +1095,7 @@
                       >
                     </div>
                   </div>
-          
+
                   <!-- 키포인트 -->
                   <div class="lbel-inp-grp">
                     <label class="lbel">키포인트</label>
@@ -1097,7 +1107,7 @@
                       >
                     </div>
                   </div>
-                  
+
                   <!-- 경력사항 -->
                   <div class="lbel-inp-grp">
                     <label class="lbel">경력사항</label>
@@ -1108,7 +1118,7 @@
                         class="inp"
                       >
                     </div>
-              
+
                     <div class="add-inp-grp">
                       <div class="inp-grp inp-btn-grp">
                         <input
@@ -1141,7 +1151,7 @@
           </modal>
         </div>
         <!-- // 구성원 추가 모달 -->
-        
+
         <div class="comp-grp-modal">
           <h3>* 팩트체커 후보 등록 모달1</h3>
           <modal
@@ -1166,7 +1176,7 @@
           </modal>
         </div>
         <!-- // 팩트체커 후보 등록 모달1 -->
-        
+
         <div class="comp-grp-modal">
           <h3>* 팩트체커 후보 등록 모달2</h3>
           <modal
@@ -1178,7 +1188,7 @@
               >
                 팩트체크를 진행할 견적을 제시해주세요.
               </span>
-              
+
               <div class="inp-grp inp-unit-grp">
                 <input
                   type="text"
@@ -1191,7 +1201,7 @@
                   </div>
                 </span>
               </div>
-        
+
               <p class="modal-cont-txt">
                 투자자가 선택한 팩트체커가 팩트체크를 진행하며, <br>
                 본인이 선정되면 취소가 불가합니다. <br>
@@ -1210,8 +1220,8 @@
           </modal>
         </div>
         <!-- // 팩트체커 후보 등록 모달2 -->
-        
-        
+
+
         <div class="comp-grp-modal">
           <h3>* 팩트체크 작성완료 모달</h3>
           <modal
@@ -1222,7 +1232,7 @@
                 작성완료시, 작성된 팩트체크 내용은 수정이 불가합니다. <br>
                 계속 진행하시겠습니까?
               </p>
-              
+
               <div class="check-lbel-ment">
                 <input
                   id="agreeContents"
@@ -1252,7 +1262,7 @@
           </modal>
         </div>
         <!-- // 팩트체크 작성완료 모달 -->
-        
+
         <div class="comp-grp-modal">
           <h3>* 팩트체커 선택하기 모달</h3>
           <modal
@@ -1263,13 +1273,13 @@
                 <span class="lbel">사용되는 포인트</span>
 
                 <div class="amount-point">
-                  <strong class="amount">150</strong> 
+                  <strong class="amount">150</strong>
                   <div class="badge-p">
                     <span class="is-voice-only">포인트</span>
                   </div>
                 </div>
               </div>
-        
+
               <p class="modal-cont-txt">
                 선택완료시, 팩트체커 변경 및 요청 내용 수정이 불가합니다. <br>
                 계속 진행하시겠습니까?
@@ -1287,14 +1297,14 @@
           </modal>
         </div>
         <!-- // 팩트체커 선택하기 모달 -->
-        
+
         <div class="comp-grp-modal">
           <h3>* 항목 추가 모달</h3>
           <modal
             ttl="항목 추가"
           >
             <div class="modal-cont">
-              <custom-slct 
+              <custom-slct
                 class="custom-slct01"
                 :selected="testOption"
               >
@@ -1303,13 +1313,13 @@
                 </template>
 
                 <template #options>
-                  <custom-slct-opt 
+                  <custom-slct-opt
                     @click="testOption = '선택사항1'"
                   >
                     선택사항 1
                   </custom-slct-opt>
-            
-                  <custom-slct-opt 
+
+                  <custom-slct-opt
                     @click="testOption = '선택사항2'"
                   >
                     선택사항 2
@@ -1329,7 +1339,7 @@
           </modal>
         </div>
         <!-- // 항목 추가 모달 -->
-        
+
         <div class="comp-grp-modal">
           <h3>* 항목 공개 설정 모달</h3>
           <modal
@@ -1339,7 +1349,7 @@
               <ul class="toggle-list-grp">
                 <li class="toggle-list">
                   <span class="name">이메일</span>
-                  
+
                   <!-- 토글 스위치 -->
                   <input
                     id="openEmail"
@@ -1352,10 +1362,10 @@
                   />
                   <!-- // 토글 스위치 -->
                 </li>
-                
+
                 <li class="toggle-list">
                   <span class="name">이름</span>
-                  
+
                   <!-- 토글 스위치 -->
                   <input
                     id="openName"
@@ -1368,10 +1378,10 @@
                   />
                   <!-- // 토글 스위치 -->
                 </li>
-                
+
                 <li class="toggle-list">
                   <span class="name">키포인트</span>
-                  
+
                   <!-- 토글 스위치 -->
                   <input
                     id="openKeypoint"
@@ -1384,10 +1394,10 @@
                   />
                   <!-- // 토글 스위치 -->
                 </li>
-                
+
                 <li class="toggle-list">
                   <span class="name">이력사항</span>
-                  
+
                   <!-- 토글 스위치 -->
                   <input
                     id="openHistory"
@@ -1429,7 +1439,7 @@
           <p class="txt">
             총 <span class="bold">15</span>개의 게시글이 있습니다.
           </p>
-          
+
           <div class="txt-right">
             <button
               type="button"
@@ -1592,125 +1602,125 @@ export default {
 
 <style lang="scss">
 .components-page {
-  width: 100%;
-  max-width: 1200px;
-  margin: 50px auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
 
-  .cp-ttl {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-
-  .section {
-    border-bottom: 1px solid #ebebeb;
-
-    padding: 20px 0;
-
-    &:last-child {
-      border-bottom: 0;
-    }
-  }
-
-  .section-btns-cont {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-
-  .section-card-cont {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    align-items: flex-start;
-
-    & > * {
-      flex-shrink: 0;
-    }
-  }
-
-  .section-cards-cont {
-    .card {
-      max-width: 260px;
-    }
-  }
-
-  .section-modal-cont {
-    .modal {
-      position: relative;
-      top: 0;
-      left: 0;
-      transform: translate(0, 0);
-      opacity: 1;
-      pointer-events: visible;
-    }
-  }
-
-  .comp-grp-modal {
-    & > h3 {
-      font-size: 15px;
-      font-weight: 500;
-      margin-bottom: 10px;
+    .cp-ttl {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
     }
 
-    margin-bottom: 25px;
-  }
+    .section {
+        border-bottom: 1px solid #ebebeb;
+
+        padding: 20px 0;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    .section-btns-cont {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .section-card-cont {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        & > * {
+            flex-shrink: 0;
+        }
+    }
+
+    .section-cards-cont {
+        .card {
+            max-width: 260px;
+        }
+    }
+
+    .section-modal-cont {
+        .modal {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0, 0);
+            opacity: 1;
+            pointer-events: visible;
+        }
+    }
+
+    .comp-grp-modal {
+        & > h3 {
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        margin-bottom: 25px;
+    }
 }
 
 .section-cont {
-  & > h2 {
-    margin: 15px 0;
-    font-weight: 500;
-  }
+    & > h2 {
+        margin: 15px 0;
+        font-weight: 500;
+    }
 }
 
 // 12. 슬라이드 관련 스타일
 .main-swiper-container-frame {
-  width: 100%;
-  height: 485px;
-  overflow: hidden;
-  position: relative;
-
-  .swiper-container {
-    position: absolute;
-    top: -954.3%;
     width: 100%;
-  }
+    height: 485px;
+    overflow: hidden;
+    position: relative;
+
+    .swiper-container {
+        position: absolute;
+        top: -954.3%;
+        width: 100%;
+    }
 }
 
 .main-swiper-container {
-  .swiper-slide {
-    padding: 0 20px;
-    .info-card {
-      position: relative;
-      border: 1px solid #dddee6;
-      box-shadow: none;
-      cursor: pointer;
-      z-index: 10;
+    .swiper-slide {
+        padding: 0 20px;
+        .info-card {
+            position: relative;
+            border: 1px solid #dddee6;
+            box-shadow: none;
+            cursor: pointer;
+            z-index: 10;
 
-      @include make-before {
-        @include absolute($t: -1px, $l: -1px);
+            @include make-before {
+                @include absolute($t: -1px, $l: -1px);
 
-        width: calc(100% + 2px);
-        height: calc(100% + 2px);
-        background-color: white;
-        z-index: 10;
-        opacity: 0.4;
-        transition: all 0.3s;
-      }
+                width: calc(100% + 2px);
+                height: calc(100% + 2px);
+                background-color: white;
+                z-index: 10;
+                opacity: 0.4;
+                transition: all 0.3s;
+            }
+        }
     }
-  }
 
-  .swiper-slide-active {
-    .info-card {
-      box-shadow: 0 10px 20px rgb(23 24 32 / 8%);
-      z-index: 20;
+    .swiper-slide-active {
+        .info-card {
+            box-shadow: 0 10px 20px rgb(23 24 32 / 8%);
+            z-index: 20;
 
-      &:before {
-        display: none;
-      }
+            &:before {
+                display: none;
+            }
+        }
     }
-  }
 }
 </style>

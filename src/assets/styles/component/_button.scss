@@ -274,6 +274,12 @@
   }
 }
 
+.btn-gray-txt{
+  .txt{
+    color: #5C5E70;
+  }
+}
+
 .btn-upload{
   @include circle(30px);
   @include flex-center;
