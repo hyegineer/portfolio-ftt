@@ -1,3 +1,25 @@
+// common
+.cont-hgrp {
+  padding-bottom: 40px;
+
+  .ttl {
+    font-size: rem(25);
+    font-weight: 500;
+    color: #171820;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .ttl-sub {
+    font-size: rem(16);
+    font-weight: 400;
+    color: #5C5E70;
+    text-align: center;
+  }
+}
+
+
+// myinfo-main
 .myinfo-page {
 
   .mypage-card {
@@ -65,3 +87,19 @@
     margin-top: 25px;
   }
 }
+// END myinfo-main
+
+// myinfo-edit
+.myinfo-edit-page {
+
+  .mypage-card {
+    background-color: #fff;
+    padding: 40px 0 50px;
+  }
+
+  .btn-grp {
+    margin-top: 60px;
+  }
+
+}
+
