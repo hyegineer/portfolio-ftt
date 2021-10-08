@@ -161,9 +161,6 @@
     align-items: flex-start;
   }
 
-  .video-hgrp {
-  }
-
   .video-cont {
     width: 745px;
     height: 419px;
@@ -193,5 +190,116 @@
     color: #DDDEE6;
     white-space: pre-line;
     line-height: 1.4;
+  }
+}
+
+.section-recent-review {
+  padding: 80px 0 53.5px;
+  overflow: hidden;
+  background-color: #F9F9FB;
+
+  .wide-panel {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .recent-review-hgrp {
+    min-width: 345px;
+  }
+
+  .badge-flag {
+    width: 78px;
+    margin-bottom: 17px;
+  }
+
+  .ttl {
+    font-size: rem(25);
+    font-weight: 600;
+    color: #171820;
+    margin-bottom: 20px;
+  }
+
+  .dec {
+    font-size: rem(15);
+    font-weight: 400;
+    color: #5C5E70;
+    line-height: 1.35;
+  }
+
+  .recent-container {
+    // margin-left: 100px;
+    border: 1px solid #000;
+  }
+
+  .recent-review-wrapper {
+    width: 1200px;
+    height: 297.5px;
+  }
+
+  .recent-button-prev {
+    
+  }
+
+  .review-card {
+    position: relative;
+    padding: 20px 20px 34px 20px;
+    width: 210px !important;
+    height: 270px;
+    background-color: #fff;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: auto;
+      right: 15px;
+      top: auto;
+      bottom: -20px;
+      border-top: 28px solid transparent;
+      border-bottom:28px solid #fff;
+      border-right: 28px solid transparent;
+      border-left: 28px solid transparent;
+      transform: rotate(-45deg);
+    }
+
+    .top-info-grp {
+      padding-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1px solid #DDDEE6;
+    }
+
+    .name {
+      font-size: rem(12);
+      font-weight: 400;
+      color: #8E909F;
+      margin-bottom: 5px;
+    }
+
+    .role {
+      font-size: rem(14);
+      font-weight: 500;
+      color: #000;
+    }
+
+    .cont-grp {
+      padding-top: 15px;
+    }
+
+    .review-cont {
+      @include ellipse(6, 1.6);
+      margin-bottom: 15px;
+      font-size: rem(13);
+      font-weight: 400;
+      color: #5C5E70;
+    }
+
+    .review-date {
+      font-size: rem(13);
+      font-weight: 400;
+      color: #B0B1BC;
+    }
   }
 }
