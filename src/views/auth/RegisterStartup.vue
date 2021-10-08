@@ -361,7 +361,7 @@
               </div>
               
               <!-- [D] 인증번호 보낸 후 보이는 DOM -->
-              <!-- <div class="inp-grp inp-btn-grp">
+              <div class="inp-grp inp-btn-grp">
                 <div class="inp-grp inp-time-grp">
                   <input
                     type="text"
@@ -371,13 +371,12 @@
                   <span class="inp-time">3:00</span>
                 </div>
 
-                <button
-                  type="button"
-                  class="btn-solid-dark btn-md"
+                <btn-solid-dark
+                  class="btn-md"
                 >
                   인증하기
-                </button>
-              </div> -->
+                </btn-solid-dark>
+              </div>
               
               
               <p class="fvalidate-msg is-fail">

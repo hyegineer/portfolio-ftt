@@ -20,6 +20,13 @@
           로그인
         </btn-solid>
 
+        <btn-solid-dark
+          class="btn-md"
+          @click="window.alert('검정버튼을 클릭하셨습니다.')"
+        >
+          검정버튼
+        </btn-solid-dark>
+
         <btn-bd
           class="btn-xlg"
           @click="window.alert('기업정보 업데이트 버튼을 클릭하셨습니다.')"
@@ -40,6 +47,13 @@
         >
           인증번호 발송
         </btn-bd-dark>
+
+        <btn-bd-light
+          class="btn-fb btn-sm"
+          @click="window.alert('닫기 버튼을 클릭하셨습니다.')"
+        >
+          닫기
+        </btn-bd-light>
 
         <btn-bd-light
           class="btn-sm"
@@ -303,12 +317,11 @@
             <span class="inp-time">3:00</span>
           </div>
 
-          <button
-            type="button"
-            class="btn-solid-dark btn-md"
+          <btn-solid-dark
+            class="btn-md"
           >
             인증하기
-          </button>
+          </btn-solid-dark>
         </div>
 
         <h2>4-3. 인풋 + 검색버튼</h2>
@@ -462,7 +475,10 @@
         <avatar lg />
         
         <h2>5-3. 썸네일</h2>
-        <div class="card-thumb">
+        <div
+          class="card-thumb"
+          style="max-width: 260px;"
+        >
           <thumbnail />
         </div>
         
@@ -488,7 +504,7 @@
         7. 프로필 카드
       </h1>
 
-      <div class="section-cont">
+      <div class="section-cont section-cards-cont">
         <h2>7-1. 검색결과 프로필 카드</h2>
         <div class="card">
           <div class="card-thumb">
@@ -851,6 +867,36 @@
         </div>
       </div>
     </section>
+
+    <section class="section">
+      <h1 class="cp-ttl">
+        13. 모달
+      </h1>
+
+      <div class="section-cont">
+        <modal
+          ttl="기업 선택하기"
+          :btns="['닫기', '네']"
+          @clickYes="window.alert('예 클릭')"
+          @clickNo="window.alert('아니오 클릭')"
+        >
+          <modal-cont>
+            <div />
+
+            <div class="btn-grp">
+              <btn-bd-light>닫기</btn-bd-light>
+              <btn-bd-light>닫기</btn-bd-light>
+            </div>
+          </modal-cont>
+        </modal>
+        
+        <modal ttl="기업 선택하기">
+          <div>
+            하이~
+          </div>
+        </modal>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -997,6 +1043,12 @@ export default {
   & > h2 {
     margin: 15px 0;
     font-weight: 500;
+  }
+}
+
+.section-cards-cont {
+  .card {
+    max-width: 260px;
   }
 }
 

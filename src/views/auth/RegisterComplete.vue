@@ -56,12 +56,11 @@
               <span class="inp-time">3:00</span>
             </div>
 
-            <button
-              type="button"
-              class="btn-solid-dark btn-md"
+            <btn-solid-dark
+              class="btn-md"
             >
               재발송
-            </button>
+            </btn-solid-dark>
           </div>
 
           <btn-solid class="btn-lg btn-full">

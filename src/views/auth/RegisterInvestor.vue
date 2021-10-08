@@ -448,14 +448,13 @@
                   <span class="inp-time">3:00</span>
                 </div>
 
-                <button
-                  type="button"
-                  class="btn-solid-dark btn-md"
+                <btn-solid-dark
+                  class="btn-md"
                 >
                   인증하기
-                </button>
-              </div> -->
-              
+                </btn-solid-dark>
+              </div>
+               -->
               
               <p class="fvalidate-msg is-fail">
                 인증번호가 불일치합니다.
