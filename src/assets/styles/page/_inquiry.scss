@@ -68,7 +68,7 @@
   }
 }
 
-// 페이지 구성요소) - 1:1 문의내역
+// 페이지 구성요소) 1:1 문의내역
 .inquiry-history-wrap {
   margin: 60px 0;
 }
@@ -77,14 +77,6 @@
   width: 100%;
 
   .board-list{
-    .td-num{
-      min-width: 45px;
-    }
-
-    .td-cat{
-      padding-right: 26px;
-    }
-
     .td-subject{
       border-left: 1px solid #DDDEE6;
       padding-left: 15.5px;
@@ -92,7 +84,7 @@
   }
 }
 
-// 페이지 구성요소) - 1:1 문의상세
+// 페이지 구성요소) 1:1 문의상세
 .inquiry-detail-page{
   .company-hgrp{
     padding-bottom: 0;
