@@ -1,0 +1,108 @@
+// common
+.mgt-20 {
+  margin-top: 20px;
+}
+
+.mgt-30 {
+  margin-top: 30px;
+}
+
+.white-panel {
+  padding: 20px 40px;
+  background-color: white;
+}
+
+.flexable-container {
+  @include flex {
+    @include flex-op(streach, space-between);
+
+    .flexable-inner {
+      flex: 0 0 calc(50% - 10px);
+    }
+  }
+}
+
+// page
+.etpr-prifile-page {
+  background-color: #F9F9FB;
+
+  .page-container {
+    padding-top: 40px;
+  }
+}
+
+.etpr-info-shot {
+  padding-top: 15px;
+
+  .avatar-with-name {
+    position: relative;
+    align-items: flex-start;
+
+    .name {
+      font-size: rem(22);
+    }
+
+    .name-subtxt-grp {
+      padding: 5px 0;
+      font-size: rem(14);
+    }
+  }
+
+  .avatar {
+    @include wh(50px, 50px);
+  }
+
+  .btn-square-bd {
+    @include absolute($t: 0, $r: 0);
+  }
+
+  .card-text {
+    padding-top: 40px;
+    padding-bottom: 23px;
+
+    .desc-wrap {
+      position: relative;
+      height: 100%;
+      padding-bottom: 65px;
+    }
+
+    .info-txt {
+      padding-top: 25px;
+      line-height: 1.54;
+      font-size: rem(22);
+      font-weight: 400;
+      color: #595959;
+      -webkit-text-stroke: 0.3px;
+    }
+
+    .edit-date {
+      @include absolute($b: 80px, $l: 0);
+
+      font-size: rem(14);
+      font-weight: 400;
+      color: #8E909F;
+      -webkit-text-stroke: 0.4px;
+    }
+
+    .btn-full {
+      @include absolute($b: 0, $l: 0);
+    }
+  }
+}
+
+.etpr-dt-txt {
+  .label {
+    font-size: rem(16);
+    font-weight: 500;
+    color: #171820;
+  }
+
+  .label-txt {
+    padding-top: 16px;
+    line-height: 1.53;
+    font-size: rem(15);
+    font-weight: 400;
+    color: #5C5E70;
+    -webkit-text-stroke: 0.2px;
+  }
+}
