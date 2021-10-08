@@ -114,12 +114,11 @@
                   <span class="inp-time">3:00</span>
                 </div>
 
-                <button
-                  type="button"
-                  class="btn-solid-dark btn-md"
+                <btn-solid-dark
+                  class="btn-md"
                 >
                   인증하기
-                </button>
+                </btn-solid-dark>
               </div> -->
               
               

@@ -7,22 +7,6 @@
     <div class="modal-cont">
       <slot />
     </div>
-
-    <div class="btn-grp">
-      <btn-bd-light 
-        class="close-btn btn-md"
-        @click="clickNo"
-      >
-        {{ btns[0] }}
-      </btn-bd-light>
-      <button
-        type="button"
-        class="btn-solid-dark btn-md"
-        @click="clickYes"
-      >
-        {{ btns[1] }}
-      </button>
-    </div>
   </div>
 </template>
 
