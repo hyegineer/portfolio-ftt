@@ -234,6 +234,56 @@ const routes = [
     component: () => import('~@/views/company/Faq'),
     meta: { requiresResetScrollHeight: true },
   },
+  /* ====================== 스타트업 & 투자자 & 팩트체커 기업프로필 ====================== */
+  // 기업정보
+  {
+    path: '/etpr-profile-info',
+    name: 'EtprProfileInfo',
+    component: () => import('~@/views/user-common/EtprProfileInfo'),
+    meta: { requiresResetScrollHeight: true },
+  },
+  // 팩트체크(보고서)
+  {
+    path: '/etpr-profile-report',
+    name: 'EtprProfileReport',
+    component: () => import('~@/views/user-common/EtprProfileReport'),
+    meta: { requiresResetScrollHeight: true },
+  },
+  // 팩트체크 상세(보고서 상세)
+  {
+    path: '/etpr-profile-report-detail',
+    name: 'EtprProfileReportDetail',
+    component: () => import('~@/views/user-common/EtprProfileReportDetail'),
+    meta: { requiresResetScrollHeight: true },
+  },
+  // 게시판
+  {
+    path: '/etpr-profile-board',
+    name: 'EtprProfileBoard',
+    component: () => import('~@/views/user-common/EtprProfileBoard'),
+    meta: { requiresResetScrollHeight: true },
+  },
+  // 게시판 상세
+  {
+    path: '/etpr-profile-board-detail',
+    name: 'EtprProfileBoardDetail',
+    component: () => import('~@/views/user-common/EtprProfileBoardDetail'),
+    meta: { requiresResetScrollHeight: true },
+  },
+  // 게시판 작성
+  {
+    path: '/etpr-profile-board-create',
+    name: 'EtprProfileBoardCreate',
+    component: () => import('~@/views/user-common/EtprProfileBoardCreate'),
+    meta: { requiresResetScrollHeight: true },
+  },
+  // 팩트체크 요청
+  {
+    path: '/etpr-profile-request-ftck',
+    name: 'EtprProfileRequestFtck',
+    component: () => import('~@/views/user-common/EtprProfileRequestFtck'),
+    meta: { requiresResetScrollHeight: true },
+  },
   /* ====================== 회원형태 - 스타트업 ====================== */
   // 아래 페이지들은 모두 로그인 후 이용가능// 
   {
