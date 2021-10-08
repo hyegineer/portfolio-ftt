@@ -78,7 +78,10 @@
             class="btn-txt btn-gray-txt"
           >
             <i class="icon icon-exit" />
-            <span class="txt">회원탈퇴</span>
+            <span
+              class="txt"
+              @click="$router.push('myinfo-leave')"
+            >회원탈퇴</span>
           </button>
         </div>
       </div>
