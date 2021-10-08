@@ -153,6 +153,7 @@
               <router-link
                 class="lnb-btn"
                 to="/startup/mypage/ftck-apply-main"
+                :class="{'router-link-active': $route.path.startsWith(`/startup/mypage/ftck-apply`)}"
               >
                 팩트체커 신청
               </router-link>
@@ -160,6 +161,7 @@
               <router-link
                 class="lnb-btn"
                 to="/startup/mypage/ftck-list"
+                :class="{'router-link-active': $route.path.startsWith(`/startup/mypage/ftck-detail`)}"
               >
                 우리 회사가 받은 팩트체크
               </router-link>
@@ -171,6 +173,7 @@
             <router-link
               to="/startup/mypage/note-list"
               class="mypage-snav-btn"
+              :class="{'router-link-active': $route.path.startsWith(`/startup/mypage/note`)}"
             >
               <span class="txt">쪽지함</span>
               <i class="arrow" />
