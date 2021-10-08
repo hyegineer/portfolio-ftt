@@ -26,6 +26,8 @@
   flex-shrink: 0;
   padding: 40px 23px;
   overflow: auto;
+  z-index: 1;
+  position: relative;
 }
 
 .mypage-snav-ttl-grp{
@@ -136,6 +138,12 @@
 
   .footer{
     background-color: transparent;
+    padding-top: 0;
+  }
+
+  .footer-inner{
+    padding-top: 40px;
+    border-top: 1px solid #DFE0E5;
   }
 
   .ft-top{
@@ -155,6 +163,22 @@
 
   .pagination{
     margin-top: 70px;
+  }
+}
+
+.mypage-white-container{
+  width: 100%;
+  max-width: 100%;
+  background-color: white;
+
+  .mypage-white-panel{
+    width: 90%;
+    max-width: 1090px;
+    margin: 0 auto;
+  }
+
+  & ~ .footer-wrap .footer{
+    background-color: white;
   }
 }
 

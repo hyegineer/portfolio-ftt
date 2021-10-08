@@ -1129,3 +1129,14 @@
     margin-top: 2.5px;
   }
 }
+
+// 구성요소 - 쪽지함 페이지
+.note-list-grp{
+  border: 1px solid #DDDEE6;
+
+  .board-list{
+    &:last-child{
+      border-bottom: 0;
+    }
+  }
+}
