@@ -851,6 +851,31 @@
         </div>
       </div>
     </section>
+
+    <section class="section">
+      <h1 class="cp-ttl">
+        13. 모달
+      </h1>
+
+      <div class="section-cont">
+        <modal
+          ttl="기업 선택하기"
+          :btns="['닫기', '네']"
+          @clickYes="window.alert('예 클릭')"
+          @clickNo="window.alert('아니오 클릭')"
+        >
+          <div>
+            구성원 추가입니다.
+          </div>
+        </modal>
+        
+        <modal ttl="기업 선택하기">
+          <div>
+            하이~
+          </div>
+        </modal>
+      </div>
+    </section>
   </div>
 </template>
 
