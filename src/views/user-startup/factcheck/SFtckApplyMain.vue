@@ -1,5 +1,5 @@
 <template>
-  <!-- [D] 마이페이지 - 기업정보-그룹관리 -->
+  <!-- [D] 마이페이지 - 팩트체크-팩트체커신청 -->
   <div class="mypage-container">
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
@@ -11,22 +11,22 @@
           마이페이지
         </li>
         <li class="txt">
-          기업정보
+          팩트체크
         </li>
         <li class="txt">
-          그룹 관리
+          팩트체커 신청
         </li>
       </breadcrumb>
 
       <h2 class="ttl">
-        기업정보
+        팩트체크
       </h2>
     </div>
     <!-- // 마이페이지 페이지 제목 -->
 
     <!-- 마이페이지 컨텐츠 영역 -->
     <div class="mypage-cont-wrap">
-      그룹 관리
+      팩트체크란?
     </div>
     <!-- // 마이페이지 컨텐츠 영역 -->
   </div>
@@ -34,7 +34,7 @@
 
 <script>
 export default {
-  name: 'SEtprGroupManage',
+  name: 'SFtckApplyMain',
 };
 </script>
 

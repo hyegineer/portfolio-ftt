@@ -1,3 +1,25 @@
+// common
+.cont-hgrp {
+  padding-bottom: 40px;
+
+  .ttl {
+    font-size: rem(25);
+    font-weight: 500;
+    color: #171820;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .ttl-sub {
+    font-size: rem(16);
+    font-weight: 400;
+    color: #5C5E70;
+    text-align: center;
+  }
+}
+
+
+// myinfo-main
 .myinfo-page {
 
   .mypage-card {
@@ -65,3 +87,93 @@
     margin-top: 25px;
   }
 }
+// END myinfo-main
+
+// myinfo-edit
+.myinfo-edit-page {
+  
+  .mypage-card {
+    background-color: #fff;
+    padding: 40px 0 50px;
+  }
+
+  .btn-grp {
+    margin-top: 60px;
+  }
+}
+// END myinfo-edit
+
+.myinfo-leave-page {
+  // background-color: #fff;
+
+  .mypage-card {
+    background-color: #fff;
+    padding: 40px 40px 50px 40px;
+  }
+
+  .cont-grp {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .left-box {
+    flex-grow: 1;
+    flex-basis: 50%;
+    padding: 20px;
+    background-color: #F9F9FB;
+  }
+
+  .terms-ttl {
+    font-size: rem(18);
+    font-weight: 500;
+    color: #171820;
+    margin-bottom: 20px;
+  }
+
+  .terms-area {
+    @include custom-scroll(#00EB79, $w: 6px);
+
+    background-color: #fff;
+    padding: 20px;
+    font-size: rem(15);
+    font-weight: 400;
+    color: #171820;
+    overflow: auto;
+    height: 320px;
+  }
+
+  .right-box {
+    flex-grow: 1;
+    flex-basis: 50%;
+
+    .lbel-inp-grp {
+      
+      &:first-child {
+        margin: 0 0 17px 0;
+      }
+
+      &:last-child {
+        margin: 17px 0 0 0;
+      }
+    }
+  }
+
+  .chk-grp {
+    margin: 44px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .check-onoff {
+      margin-right: 7px;
+    }
+  }
+
+  .btn-grp {
+    width: 380px;
+    margin: 0 auto;
+  }
+}
+

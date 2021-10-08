@@ -438,23 +438,23 @@ const routes = [
           // ===================== 팩트체크 =====================
           // 팩트체크-팩트체커신청
           {
-            path: 'apply-ftck-main',
-            name: 'SApplyFtckMain',
-            component: () => import('~@/views/user-startup/factcheck/SApplyFtckMain'),
+            path: 'ftck-apply-main',
+            name: 'SFtckApplyMain',
+            component: () => import('~@/views/user-startup/factcheck/SFtckApplyMain'),
             // meta: { requiresAuth: true },
           },
           // 팩트체크-팩트체커신청-신청서작성
           {
-            path: 'apply-ftck-create',
-            name: 'SApplyFtckCreate',
-            component: () => import('~@/views/user-startup/factcheck/SApplyFtckCreate'),
+            path: 'ftck-apply-create',
+            name: 'SFtckApplyCreate',
+            component: () => import('~@/views/user-startup/factcheck/SFtckApplyCreate'),
             // meta: { requiresAuth: true },
           },
           // 팩트체크-팩트체커신청-신청서작성완료
           {
-            path: 'apply-ftck-complete',
-            name: 'SApplyFtckComplete',
-            component: () => import('~@/views/user-startup/factcheck/SApplyFtckComplete'),
+            path: 'ftck-apply-complete',
+            name: 'SFtckApplyComplete',
+            component: () => import('~@/views/user-startup/factcheck/SFtckApplyComplete'),
             // meta: { requiresAuth: true },
           },
           // 팩트체크-받은팩트체크 목록

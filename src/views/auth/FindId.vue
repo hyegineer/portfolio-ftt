@@ -13,7 +13,6 @@
             휴대폰 번호로 아이디를 찾습니다.
           </p>
         </div>
-        <!-- FIXME: 전체 감싸는 필드셋 필요 -->
         <form class="form-area auth-form-area ftck-auth-form-area">
           <fieldset class="ffieldset">
             <legend class="ffieldset-ttl is-voice-only">
@@ -35,7 +34,7 @@
                 <input
                   type="text"
                   class="inp"
-                  placeholder="검색어를 입력하세요"
+                  placeholder="휴대폰 번호를 입력하세요"
                 >
 
                 <btn-bd class="btn-md">
@@ -48,7 +47,7 @@
                   <input
                     type="text"
                     class="inp"
-                    placeholder="검색어를 입력하세요"
+                    placeholder="인증번호를 입력하세요"
                   >
                   <span class="inp-time">3:00</span>
                 </div>
