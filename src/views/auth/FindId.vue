@@ -13,7 +13,6 @@
             휴대폰 번호로 아이디를 찾습니다.
           </p>
         </div>
-        <!-- FIXME: 전체 감싸는 필드셋 필요 -->
         <form class="form-area auth-form-area ftck-auth-form-area">
           <fieldset class="ffieldset">
             <legend class="ffieldset-ttl is-voice-only">
