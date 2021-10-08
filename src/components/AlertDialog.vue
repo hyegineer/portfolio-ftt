@@ -15,7 +15,7 @@
     >
       <div class="modal-box">
         <span
-          class="modal-ttl"
+          class="modal-ttl-dec"
           v-html="$store.state.alertPopup.title"
         />
 
@@ -31,7 +31,7 @@
           <button
             ref="onClose"
             type="button"
-            class="btn btn-primary btn-lg"
+            class="btn-solid-dark btn-md btn-full"
             @click="$store.state.alertPopup.onClose"
           >
             <span>확인</span>

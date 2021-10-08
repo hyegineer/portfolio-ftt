@@ -850,7 +850,7 @@
         12. 슬라이드
       </h1>
 
-      <div class="section-cont test-section">
+      <div class="section-cont main-swiper-container-frame">
         <div
           v-swiper:infoSlide="slideOptions"
           class="swiper-container main-swiper-container"
@@ -873,30 +873,553 @@
         13. 모달
       </h1>
 
-      <div class="section-cont">
-        <modal
-          ttl="기업 선택하기"
-          :btns="['닫기', '네']"
-          @clickYes="window.alert('예 클릭')"
-          @clickNo="window.alert('아니오 클릭')"
+      <div
+        class="section-cont section-modal-cont"
+      >
+        <h2>13-1. 커스텀 & 알럿 & 컨펌 모달 (클릭해보세요)</h2>
+        <btn-solid-dark
+          class="btn-sm"
+          style="margin-right: 10px;"
+          @click="openModal('test01')"
         >
-          <modal-cont>
-            <div />
-
-            <div class="btn-grp">
-              <btn-bd-light>닫기</btn-bd-light>
-              <btn-bd-light>닫기</btn-bd-light>
-            </div>
-          </modal-cont>
-        </modal>
+          custom modal
+        </btn-solid-dark>
         
-        <modal ttl="기업 선택하기">
-          <div>
-            하이~
-          </div>
-        </modal>
+        <btn-solid-dark
+          class="btn-sm"
+          style="margin-right: 10px;"
+          @click="alert('alert 모달')"
+        >
+          alert
+        </btn-solid-dark>
+        
+        <btn-solid-dark
+          class="btn-sm"
+          style="margin-right: 10px;"
+          @click="confirm('confirm 모달')"
+        >
+          confirm
+        </btn-solid-dark>
+
+        <h2>13-2. 모달들</h2>
+        <div class="comp-grp-modal">
+          <h3>* 기업선택하기 모달</h3>
+          <modal
+            wide
+            ttl="기업 선택하기"
+          >
+            <div class="modal-cont md-choice-cont">
+              <!-- 검색어 입력영역 -->
+              <div class="inp-grp inp-sch-grp">
+                <input
+                  v-model="exInput"
+                  type="text"
+                  class="inp"
+                  placeholder="기업명 / 기업 고유 아이디를 검색하세요."
+                >
+                <button
+                  v-if="exInput"
+                  type="button"
+                  class="inp-del-btn"
+                  @click="exInput = ''"
+                >
+                  <span class="is-voice-only">검색어 지우기</span>
+                </button>
+                <button
+                  type="button" 
+                  class="inp-sch-btn"
+                >
+                  <span class="is-voice-only">검색하기</span>
+                </button>
+              </div>
+              <!-- // 검색어 입력영역 -->
+
+              <!-- 리스트 -->
+              <div class="cnt-txt-grp">
+                <!-- 검색 전 -->
+                <!-- <div class="txt">
+                  <span class="bold">전체</span>
+                </div> -->
+
+                <!-- 검색 후 갯수 표시 -->
+                <div class="txt">
+                  <span class="highlight">
+                    <u>'검색어'</u>
+                  </span>
+                  에 대한 전체 검색 결과 <span class="bold">15</span>건
+                </div>
+              </div>
+
+              <!-- 검색결과 있을 때 -->
+              <div class="box-list-grp">
+                <div
+                  v-for="(item, index) in 10"
+                  :key="index"
+                  class="box-choice-list box-list"
+                >
+                  <div class="txt-dark-gray">
+                    <p class="txt-dark">
+                      주식회사 팩트컴퍼니
+                    </p>
+                    <span class="txt-gray">김철수 02-000-0000</span>
+                  </div>
+        
+                  <!-- 체크박스 -->
+                  <input
+                    :id="`enter${index}`"
+                    type="radio"
+                    class="is-none check-switch"
+                    name="enter"
+                  >
+                  <label
+                    :for="`enter${index}`"
+                    class="check-onoff"
+                  />
+                  <!-- // 체크박스 -->
+                </div>
+              </div>
+
+              <!-- 검색결과 없을 때 -->
+              <empty-contents txt="선택할 기업이 없습니다." />
+              <!-- // 리스트 -->
+            </div>
+
+            <div class="modal-btn-wrap">
+              <btn-bd-light class="btn-fb btn-md btn-cancel">
+                닫기
+              </btn-bd-light>
+              <btn-solid-dark class="btn-md">
+                선택완료
+              </btn-solid-dark>
+            </div>
+          </modal>
+        </div>
+        <!-- // 기업선택하기 모달 -->
+        
+        <div class="comp-grp-modal">
+          <h3>* 구성원 추가 모달</h3>
+          <modal
+            wide
+            ttl="구성원 추가"
+          >
+            <div class="modal-cont">
+              <form>
+                <fieldset class="ffieldset">
+                  <legend class="ffieldset-ttl">
+                    프로필 이미지
+                  </legend>
+                
+                  <div class="file-inp-grp">
+                    <!-- [D] 해당 DOM 클릭시 사진 업로드 & 수정 가능 -->
+                    <div class="input-img-frame input-circle-img-frame">
+                      <!-- [D] 이미지 업로드 시 아래 img 태그 보임 -->
+                      <!-- <img
+                    src="@/assets/images/dft/ex.jpg"
+                    alt="input img"
+                    class="input-img"
+                  > -->
+
+                      <span
+                        class="btn btn-upload"
+                      >
+                        <i class="icon icon-cam" />
+                        <span class="is-voice-only">기업 로고 이미지 업로드</span>
+                      </span>
+                    </div>
+                    <p class="ffieldset-guide">
+                      해상도 100*100px 이상의 JPG, PNG 파일을 첨부해주세요. <br>
+                      이미지 미첨부시, 기본이미지로 설정됩니다.
+                    </p>
+                  </div>
+                </fieldset>
+              
+                <fieldset class="ffieldset">
+                  <legend class="ffieldset-ttl">
+                    기본 정보
+                  </legend>
+          
+                  <!-- 이름 -->
+                  <div class="lbel-inp-grp">
+                    <label class="lbel">이름</label>
+                    <div class="inp-grp">
+                      <input
+                        type="text"
+                        class="inp"
+                        placeholder="이름 입력"
+                      >
+                    </div>
+                  </div>
+          
+                  <!-- 이메일 -->
+                  <div class="lbel-inp-grp">
+                    <label class="lbel">이메일</label>
+                    <div class="inp-grp">
+                      <input
+                        type="email"
+                        class="inp"
+                        placeholder="이메일 입력"
+                      >
+                    </div>
+                  </div>
+          
+                  <!-- 키포인트 -->
+                  <div class="lbel-inp-grp">
+                    <label class="lbel">키포인트</label>
+                    <div class="inp-grp">
+                      <input
+                        type="text"
+                        class="inp"
+                        placeholder="ex) 10개 기업 창업"
+                      >
+                    </div>
+                  </div>
+                  
+                  <!-- 경력사항 -->
+                  <div class="lbel-inp-grp">
+                    <label class="lbel">경력사항</label>
+
+                    <div class="inp-grp">
+                      <input
+                        type="text"
+                        class="inp"
+                      >
+                    </div>
+              
+                    <div class="add-inp-grp">
+                      <div class="inp-grp inp-btn-grp">
+                        <input
+                          type="text"
+                          class="inp"
+                        >
+                        <btn-square-bd class="del-btn">
+                          <span class="is-voice-only">항목 삭제</span>
+                        </btn-square-bd>
+                      </div>
+                      <!-- 요기에 추가가 되어야합니다 -->
+                    </div>
+
+                    <btn-bd-dark class="btn-md btn-full add-inp-btn">
+                      경력사항 추가
+                    </btn-bd-dark>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+
+            <div class="modal-btn-wrap">
+              <btn-bd-light class="btn-fb btn-md btn-cancel">
+                닫기
+              </btn-bd-light>
+              <btn-solid-dark class="btn-md">
+                추가완료
+              </btn-solid-dark>
+            </div>
+          </modal>
+        </div>
+        <!-- // 구성원 추가 모달 -->
+        
+        <div class="comp-grp-modal">
+          <h3>* 팩트체커 후보 등록 모달1</h3>
+          <modal
+            ttl="팩트체커 후보 등록"
+          >
+            <div class="modal-cont">
+              <p class="modal-cont-txt">
+                투자자가 선택한 팩트체커가 팩트체크를 진행하며, <br>
+                본인이 선정되면 취소가 불가합니다. <br>
+                팩트체커 배정이 완료되면 카카오 알림톡으로 안내드립니다.
+              </p>
+            </div>
+
+            <div class="modal-btn-wrap">
+              <btn-bd-light class="btn-fb btn-md btn-cancel">
+                아니오
+              </btn-bd-light>
+              <btn-solid-dark class="btn-md">
+                등록하기
+              </btn-solid-dark>
+            </div>
+          </modal>
+        </div>
+        <!-- // 팩트체커 후보 등록 모달1 -->
+        
+        <div class="comp-grp-modal">
+          <h3>* 팩트체커 후보 등록 모달2</h3>
+          <modal
+            ttl="팩트체커 후보 등록"
+          >
+            <div class="modal-cont md-ftck-proposal">
+              <span
+                class="modal-ttl-dec"
+              >
+                팩트체크를 진행할 견적을 제시해주세요.
+              </span>
+              
+              <div class="inp-grp inp-unit-grp">
+                <input
+                  type="text"
+                  class="inp"
+                  placeholder="최소 000P"
+                >
+                <span class="inp-unit">
+                  <div class="badge-p">
+                    <span class="is-voice-only">포인트</span>
+                  </div>
+                </span>
+              </div>
+        
+              <p class="modal-cont-txt">
+                투자자가 선택한 팩트체커가 팩트체크를 진행하며, <br>
+                본인이 선정되면 취소가 불가합니다. <br>
+                팩트체커 배정이 완료되면 카카오 알림톡으로 안내드립니다.
+              </p>
+            </div>
+
+            <div class="modal-btn-wrap">
+              <btn-bd-light class="btn-fb btn-md btn-cancel">
+                아니오
+              </btn-bd-light>
+              <btn-solid-dark class="btn-md">
+                등록하기
+              </btn-solid-dark>
+            </div>
+          </modal>
+        </div>
+        <!-- // 팩트체커 후보 등록 모달2 -->
+        
+        
+        <div class="comp-grp-modal">
+          <h3>* 팩트체크 작성완료 모달</h3>
+          <modal
+            ttl="팩트체크 작성완료"
+          >
+            <div class="modal-cont">
+              <p class="modal-cont-txt">
+                작성완료시, 작성된 팩트체크 내용은 수정이 불가합니다. <br>
+                계속 진행하시겠습니까?
+              </p>
+              
+              <div class="check-lbel-ment">
+                <input
+                  id="agreeContents"
+                  type="checkbox"
+                  class="is-none check-switch"
+                >
+                <label
+                  for="agreeContents"
+                  class="check-onoff"
+                />
+
+                <label
+                  for="agreeContents"
+                  class="ment dark-ment"
+                >위 내용을 확인하였으며,작성을 완료합니다.</label>
+              </div>
+            </div>
+
+            <div class="modal-btn-wrap">
+              <btn-bd-light class="btn-fb btn-md btn-cancel">
+                닫기
+              </btn-bd-light>
+              <btn-solid-dark class="btn-md">
+                선택완료
+              </btn-solid-dark>
+            </div>
+          </modal>
+        </div>
+        <!-- // 팩트체크 작성완료 모달 -->
+        
+        <div class="comp-grp-modal">
+          <h3>* 팩트체커 선택하기 모달</h3>
+          <modal
+            ttl="팩트체커 선택하기"
+          >
+            <div class="modal-cont">
+              <div class="lbel-amount-point">
+                <span class="lbel">사용되는 포인트</span>
+
+                <div class="amount-point">
+                  <strong class="amount">150</strong> 
+                  <div class="badge-p">
+                    <span class="is-voice-only">포인트</span>
+                  </div>
+                </div>
+              </div>
+        
+              <p class="modal-cont-txt">
+                선택완료시, 팩트체커 변경 및 요청 내용 수정이 불가합니다. <br>
+                계속 진행하시겠습니까?
+              </p>
+            </div>
+
+            <div class="modal-btn-wrap">
+              <btn-bd-light class="btn-fb btn-md btn-cancel">
+                아니오
+              </btn-bd-light>
+              <btn-solid-dark class="btn-md">
+                예
+              </btn-solid-dark>
+            </div>
+          </modal>
+        </div>
+        <!-- // 팩트체커 선택하기 모달 -->
+        
+        <div class="comp-grp-modal">
+          <h3>* 항목 추가 모달</h3>
+          <modal
+            ttl="항목 추가"
+          >
+            <div class="modal-cont">
+              <custom-slct 
+                class="custom-slct01"
+                :selected="testOption"
+              >
+                <template #select>
+                  {{ testOption || '옵션을 선택해주세요ㅋㅋ' }}
+                </template>
+
+                <template #options>
+                  <custom-slct-opt 
+                    @click="testOption = '선택사항1'"
+                  >
+                    선택사항 1
+                  </custom-slct-opt>
+            
+                  <custom-slct-opt 
+                    @click="testOption = '선택사항2'"
+                  >
+                    선택사항 2
+                  </custom-slct-opt>
+                </template>
+              </custom-slct>
+            </div>
+
+            <div class="modal-btn-wrap">
+              <btn-bd-light class="btn-fb btn-md btn-cancel">
+                닫기
+              </btn-bd-light>
+              <btn-solid-dark class="btn-md">
+                완료
+              </btn-solid-dark>
+            </div>
+          </modal>
+        </div>
+        <!-- // 항목 추가 모달 -->
+        
+        <div class="comp-grp-modal">
+          <h3>* 항목 공개 설정 모달</h3>
+          <modal
+            ttl="항목 공개 설정"
+          >
+            <div class="modal-cont">
+              <ul class="toggle-list-grp">
+                <li class="toggle-list">
+                  <span class="name">이메일</span>
+                  
+                  <!-- 토글 스위치 -->
+                  <input
+                    id="openEmail"
+                    type="checkbox"
+                    class="is-none toggle-switch"
+                  >
+                  <label
+                    for="openEmail"
+                    class="toggle-onoff"
+                  />
+                  <!-- // 토글 스위치 -->
+                </li>
+                
+                <li class="toggle-list">
+                  <span class="name">이름</span>
+                  
+                  <!-- 토글 스위치 -->
+                  <input
+                    id="openName"
+                    type="checkbox"
+                    class="is-none toggle-switch"
+                  >
+                  <label
+                    for="openName"
+                    class="toggle-onoff"
+                  />
+                  <!-- // 토글 스위치 -->
+                </li>
+                
+                <li class="toggle-list">
+                  <span class="name">키포인트</span>
+                  
+                  <!-- 토글 스위치 -->
+                  <input
+                    id="openKeypoint"
+                    type="checkbox"
+                    class="is-none toggle-switch"
+                  >
+                  <label
+                    for="openKeypoint"
+                    class="toggle-onoff"
+                  />
+                  <!-- // 토글 스위치 -->
+                </li>
+                
+                <li class="toggle-list">
+                  <span class="name">이력사항</span>
+                  
+                  <!-- 토글 스위치 -->
+                  <input
+                    id="openHistory"
+                    type="checkbox"
+                    class="is-none toggle-switch"
+                  >
+                  <label
+                    for="openHistory"
+                    class="toggle-onoff"
+                  />
+                  <!-- // 토글 스위치 -->
+                </li>
+              </ul>
+            </div>
+
+            <div class="modal-btn-wrap">
+              <btn-bd-light class="btn-fb btn-md btn-cancel">
+                닫기
+              </btn-bd-light>
+              <btn-solid-dark class="btn-md">
+                저장
+              </btn-solid-dark>
+            </div>
+          </modal>
+        </div>
+        <!-- // 항목 공개 설정 모달 -->
       </div>
     </section>
+
+    <modal-dialog>
+      <modal-light-box @click="closeModal" />
+
+      <modal
+        :class="{'is-show': $store.state.modal.visible && $store.state.modal.type === 'test01'}"
+        ttl="테스트 모달 1"
+      >
+        <div class="modal-cont">
+          테스트 모달입니다.
+        </div>
+
+        <div class="modal-btn-wrap">
+          <btn-bd-light
+            class="btn-fb btn-md btn-cancel"
+            @click="closeModal"
+          >
+            닫기
+          </btn-bd-light>
+          <btn-solid-dark
+            class="btn-md"
+            @click="window.alert('선택완료 버튼을 눌렀습니다.')"
+          >
+            선택완료
+          </btn-solid-dark>
+        </div>
+      </modal>
+    </modal-dialog>
   </div>
 </template>
 
@@ -938,10 +1461,8 @@ export default {
     };
   },
   created() {
-    window.addEventListener('click', (e) => {
-      console.log(e);
-      console.log(e.target);
-    });
+    // this.alert('알럿 텍스트자리입니다 <br>알럿 텍스트자리입니다 <br>알럿 텍스트자리입니다');
+    // this.confirm('확인 텍스트자리입니다 <br>확인 텍스트자리입니다 <br>확인 텍스트자리입니다');
   },
   methods: {
     mbMdOpen(opt) {
@@ -1037,6 +1558,33 @@ export default {
       flex-shrink: 0;
     }
   }
+
+  .section-cards-cont {
+    .card {
+      max-width: 260px;
+    }
+  }
+
+  .section-modal-cont {
+    .modal {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+      opacity: 1;
+      pointer-events: visible;
+    }
+  }
+
+  .comp-grp-modal {
+    & > h3 {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    margin-bottom: 25px;
+  }
 }
 
 .section-cont {
@@ -1046,19 +1594,21 @@ export default {
   }
 }
 
-.section-cards-cont {
-  .card {
-    max-width: 260px;
+// 12. 슬라이드 관련 스타일
+.main-swiper-container-frame {
+  width: 100%;
+  height: 485px;
+  overflow: hidden;
+  position: relative;
+
+  .swiper-container {
+    position: absolute;
+    top: -954.3%;
+    width: 100%;
   }
 }
 
-// TO. 관수
-
 .main-swiper-container {
-  .swiper-wrapper {
-    // padding: 0 20px;
-  }
-
   .swiper-slide {
     padding: 0 20px;
     .info-card {
@@ -1090,19 +1640,6 @@ export default {
         display: none;
       }
     }
-  }
-}
-
-.test-section {
-  width: 100%;
-  height: 485px;
-  overflow: hidden;
-  position: relative;
-
-  .swiper-container {
-    position: absolute;
-    top: -954.3%;
-    width: 100%;
   }
 }
 </style>

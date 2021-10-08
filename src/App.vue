@@ -8,9 +8,8 @@
       <router-view />
     </keep-alive>
 
-    <!-- <tooltip-dialog /> -->
-    <!-- <confirm-dialog /> -->
-    <!-- <alert-dialog /> -->
+    <confirm-dialog />
+    <alert-dialog />
   </div>
 </template>
 

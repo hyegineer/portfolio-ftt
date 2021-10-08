@@ -323,6 +323,7 @@ textarea.inp{
   width: 100%;
   border-bottom: 1px solid #DDDEE6;
   padding: 30px 0;
+  text-align: left;
 
   &:first-child,
   &:first-of-type{
@@ -356,6 +357,7 @@ textarea.inp{
 
     -webkit-text-stroke: 1px #171820;
     margin-bottom: 10px;
+    text-align: left;
   }
 
   .ffieldset-ttl ~ .ffieldset-guide{

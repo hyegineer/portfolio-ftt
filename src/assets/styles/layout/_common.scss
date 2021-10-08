@@ -952,3 +952,137 @@
     max-width: 145px;
   }
 }
+
+// 구성요소 - 이름 & 번호
+.txt-dark-gray{
+  .txt-dark{
+    font-size: 14px;
+    color: #171820;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .txt-gray{
+    font-size: 13px;
+    color: #8E909F;
+  }
+}
+
+// 구성요소 - 박스 리스트 그룹
+.box-list-grp{
+  width: 100%;
+  border: 1px solid #DDDEE6;
+
+  .box-list{
+    width: 100%;
+    border-bottom: 1px solid #DDDEE6;
+  
+    &:last-child{
+      border-bottom: 0;
+    }
+  }
+}
+
+.box-choice-list{
+  padding: 15px;
+
+  @include flex{
+    @include flex-op(flex-start, flex-start);
+  }
+
+  .check-onoff{
+    margin-top: 7px;
+    margin-left: auto;
+  }
+}
+
+// 구성요소 - '검색어' 결과 건수 텍스트
+.cnt-txt-grp{
+  @include flex{
+    @include flex-op(center, flex-start);
+  }
+  color: #171820;
+
+  .txt{
+    font-size: 13px;
+    position: relative;
+
+    .bold{
+      font-weight: 300;
+      -webkit-text-stroke: 1px #171820;
+    }
+  }
+
+  .highlight{
+    position: relative;
+    font-weight: 300;
+    -webkit-text-stroke: 1px #171820;
+
+    @include make-before{
+      @include absolute($b: 0);
+
+      display: inline-block;
+      width: 100%;
+      height: 4px;
+      background-color: #53FF81;
+      z-index: 0;
+    }
+
+    u{
+      position: relative;
+      z-index: 1;
+      text-decoration: none;
+    }
+  }
+}
+
+// 구성요소 - 포인트 레이블 & 포인트
+.lbel-amount-point{
+  @include flex{
+    @include flex-op(center, space-between)
+  };
+
+  width: 100%;
+  background-color: #F9F9FB;
+  padding: 18px 20px;
+
+  .lbel{
+    font-size: 12px;
+    color: #5C5E70;
+    padding-right: 10px;
+  }
+
+  .amount-point{
+    @include flex-op(center, flex-start);
+
+    display: inline-flex;
+    gap: 6px;
+  }
+
+  .amount{
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+// 구성요소 - toggle list
+.toggle-list-grp{
+  width: 100%;
+}
+
+.toggle-list{
+  @include flex{
+    @include flex-op(flex-start, space-between);
+  }
+
+  width: 100%;
+  padding: 16px 20px;
+
+  .name{
+    font-size: 15px;
+  }
+
+  .toggle-onoff {
+    margin-top: 2.5px;
+  }
+}
