@@ -72,6 +72,40 @@
   @include btn-solid;
 }
 
+// solid-blue
+@mixin btn-solid-blue{
+  @extend %btn-default;
+
+  background-color: #3060FF;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s;
+
+  &:disabled{
+    background-color: #B8BAC7;
+    cursor: default;
+
+    &:hover{
+      background-color: #B8BAC7;
+    }
+  }
+
+  @include media(1200px, min){
+    &:hover{
+      background-color: darken(#3060FF, 2%);
+    }
+  }
+
+  &:active{
+    transition: all 0s;
+    background-color: darken(#3060FF, 3%);
+  }
+}
+
+.btn-solid-blue{
+  @include btn-solid-blue;
+}
+
 // solid-dark
 @mixin btn-solid-dark{
   @extend %btn-default;
@@ -174,6 +208,40 @@
   }
 }
 
+// bd-blue
+@mixin btn-bd-blue{
+  @extend %btn-default;
+
+  
+  border: 1px solid #3060FF;
+  box-shadow: 0 0 0 1px #3060FF;
+  background-color: white;
+  font-weight: 400;
+  color: #3060FF;
+  transition: all 0.2s;
+  -webkit-text-stroke: 0.5px #3060FF;
+
+  @include media(1200px, min){
+    &:hover{
+      background-color: darken(#fff, 3%);
+    }
+  }
+
+  &:active{
+    transition: all 0s;
+    background-color: darken(#fff, 5%);
+  }
+
+  &.btn-xlg{
+    font-size: 16px;
+  }
+}
+
+.btn-bd-blue{
+  @include btn-bd-blue;
+}
+
+// bd-light
 .btn-bd-light{
   @include btn-bd-light;
   
