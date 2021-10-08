@@ -22,9 +22,7 @@
     <!-- // 마이페이지 페이지 제목 -->
 
     <!-- 마이페이지 컨텐츠 영역 -->
-    <div class="mypage-cont-wrap">
-      쪽지 보내기
-    </div>
+    <div class="mypage-cont-wrap" />
     <!-- // 마이페이지 컨텐츠 영역 -->
   </div>
 </template>
