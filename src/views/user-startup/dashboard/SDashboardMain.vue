@@ -3,7 +3,7 @@
   <div class="mypage-container">
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
-      <ul class="breadcrumb">
+      <breadcrumb>
         <li class="txt">
           홈
         </li>
@@ -13,7 +13,7 @@
         <li class="txt">
           대시보드
         </li>
-      </ul>
+      </breadcrumb>
 
       <h2 class="ttl">
         대시보드

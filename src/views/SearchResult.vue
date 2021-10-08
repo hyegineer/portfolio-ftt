@@ -77,7 +77,7 @@
         <div class="search-layout-cont">
           <!-- 제목 -->
           <div class="search-cont-hgrp">
-            <ul class="breadcrumb">
+            <breadcrumb>
               <li class="txt">
                 홈
               </li>
@@ -87,7 +87,7 @@
               <li class="txt">
                 최근 팩트체크가 완료된 기업
               </li>
-            </ul>
+            </breadcrumb>
 
             <h2 class="ttl">
               최근 팩트체크가 완료된 기업

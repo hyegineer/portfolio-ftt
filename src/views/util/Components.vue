@@ -660,7 +660,7 @@
         </div>
 
         <h2>9-2. 브레드크럼</h2>
-        <ul class="breadcrumb">
+        <breadcrumb>
           <li class="txt">
             홈
           </li>
@@ -670,7 +670,7 @@
           <li class="txt">
             대시보드
           </li>
-        </ul>
+        </breadcrumb>
       </div>
     </section>
     
