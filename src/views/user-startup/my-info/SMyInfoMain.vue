@@ -30,7 +30,7 @@
           </p>
           <btn-bd-dark
             class="btn-sm btn-edit"
-            @click="window.alert('수정하기 버튼을 클릭하셨습니다.')"
+            @click="$router.push('myinfo-edit')"
           >
             수정하기
           </btn-bd-dark>
