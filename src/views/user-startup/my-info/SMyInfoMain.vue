@@ -1,7 +1,28 @@
 <template>
   <!-- [D] 마이페이지 - 내정보 -->
-  <div class="page myinfo-page">
-    <div class="wide-panel">
+  <div class="mypage-container myinfo-page">
+    <!-- 마이페이지 페이지 제목 -->
+    <div class="mypage-hgrp">
+      <breadcrumb>
+        <li class="txt">
+          홈
+        </li>
+        <li class="txt">
+          마이페이지
+        </li>
+        <li class="txt">
+          내 정보
+        </li>
+      </breadcrumb>
+
+      <h2 class="ttl">
+        내 정보
+      </h2>
+    </div>
+    <!-- // 마이페이지 페이지 제목 -->
+
+    <!-- 마이페이지 컨텐츠 영역 -->
+    <div class="mypage-cont-wrap">
       <div class="mypage-card">
         <div class="name-box">
           <p class="name">
@@ -62,6 +83,7 @@
         </div>
       </div>
     </div>
+    <!-- // 마이페이지 컨텐츠 영역 -->
   </div>
 </template>
 

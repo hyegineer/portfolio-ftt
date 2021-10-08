@@ -20,6 +20,7 @@
     </div>
     <!-- // 마이페이지 페이지 제목 -->
 
+    <!-- 마이페이지 컨텐츠 영역 -->
     <div class="mypage-cont-wrap">
       <!-- 리스트 -->
       <div class="card-grid-grp-ttl">
@@ -143,6 +144,7 @@
       </div>
       <!-- // 페이지네이션 -->
     </div>
+    <!-- // 마이페이지 컨텐츠 영역 -->
   </div>
 </template>
 
