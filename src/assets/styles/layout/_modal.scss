@@ -257,6 +257,17 @@
   }
 }
 
+// 모달 안쪽 동일 클래스 마진값 제거를 위한 styling
+.mypage-container {
+
+  .md-choice-cont {
+
+    .empty-wrap {
+      margin: 0;
+    }
+  }
+}
+
 // 후보등록 시 견적제시
 .md-ftck-proposal{
   .inp-unit-grp{

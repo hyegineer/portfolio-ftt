@@ -1,7 +1,40 @@
 <template>
   <!-- [D] 마이페이지 - 신규/기존업체 등록완료 -->
-  <div>
-    신규/기존업체 등록완료
+  <div class="mypage-container waiting-complete-container">
+    <div class="narrow-panel auth-panel">
+      <div class="waiting-complete-cont-wrap">
+        <div class="auth-hgrp">
+          <img
+            src="@/assets/images/badge/badge-startup.svg"
+            alt=""
+            class="badge-flag"
+          >
+        
+          <h3 class="ttl">
+            <span class="ttl-txt">기존 스타트업 신청</span>
+            <span class="badge-auth">직원</span>
+          <!-- <span class="badge-auth">{{ $constants.userTypeForm[$route.query.userTypeForm] }}</span> -->
+          </h3>
+        </div>
+        <div class="ment-wrap">
+          <p class="ment">
+            신청이 완료되었습니다.
+          </p>
+          <p class="ment-sub">
+            스타트업 가입신청이 완료되었습니다.<br>
+            신청 허가 완료시, 팩트시트 서비스를 이용하실 수 있습니다.
+          </p>
+        </div>
+        <div class="btn-wrap">
+          <btn-solid
+            class="btn btn-lg btn-full"
+            @click="window.alert('다음 버튼을 클릭하셨습니다.')"
+          >
+            다음
+          </btn-solid>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

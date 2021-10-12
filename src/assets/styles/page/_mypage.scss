@@ -238,3 +238,25 @@
   }
 }
 // END waiting-main
+
+// waiting-complete
+.waiting-complete-container {
+
+  .ment-wrap {
+    margin-bottom: 40px;
+
+    .ment {
+      font-size: rem(29);
+      font-weight: 400;
+      color: #171820;
+      margin-bottom: 20px;
+    }
+
+    .ment-sub {
+      font-size: rem(16);
+      font-weight: 400;
+      color: #171820;
+    }
+  }
+}
+// END waiting-complete
