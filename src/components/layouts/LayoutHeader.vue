@@ -220,6 +220,40 @@
                 닫기
               </button>
             </div>
+            <div
+              v-if="testIsUser"
+              class="btn-change-wrap"
+            >
+              <div
+                v-if="testUserType === 'startup' || testUserType === 'investor'"
+                class="btn-change-fact-checker"
+              >
+                <i class="icon icon-change" />
+                <button
+                  type="button"
+                  class="btn-change"
+                >
+                  팩트체커로 전환하기
+                </button>
+              </div>
+              <div
+                v-if="testUserType === 'fact-checker'"
+                class="btn-change-biz"
+              >
+                <i class="icon icon-change" />
+                <button
+                  type="button"
+                  class="btn-change"
+                >
+                  기업회원으로 전환하기
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            v-if="!testIsUser"
+            class="hd-side-login-top"
+          >
             <p class="dec">
               팩트시트에 <b class="bold-txt">회원가입</b> 하고<br>다양한 서비스를 이용해보세요!
             </p>
@@ -242,6 +276,103 @@
               >
                 <span class="sidemenu-txt">스타트업 찾기</span>
               </a>
+              <div
+                v-if="testIsUser"
+                class="sidemenu-grp"
+              >
+                <a
+                  href="#"
+                  class="sidemenu-link"
+                >
+                  <span class="sidemenu-txt">마이페이지</span>
+                </a>
+                <div class="sidemenu-depth2-wrap">
+                  <div
+                    v-if="testUserType === 'startup' || testUserType === 'investor'"
+                    class="sidemenu-depth2"
+                  >
+                    <a
+                      href="#"
+                      class="link"
+                    >대시보드</a>
+                  </div>
+                  <div class="sidemenu-depth2">
+                    <a
+                      href="#"
+                      class="link"
+                    >내정보</a>
+                  </div>
+                  <div
+                    v-if="testUserType === 'startup' || testUserType === 'investor'"
+                    class="sidemenu-depth2"
+                  >
+                    <a
+                      href="#"
+                      class="link"
+                    >기업정보</a>
+                  </div>
+                  <div
+                    v-if="testUserType === 'startup' || testUserType === 'investor'"
+                    class="sidemenu-depth2"
+                  >
+                    <a
+                      href="#"
+                      class="link"
+                    >관심기업</a>
+                  </div>
+                  <div
+                    v-if="testUserType === 'startup' || testUserType === 'investor'"
+                    class="sidemenu-depth2"
+                  >
+                    <a
+                      href="#"
+                      class="link"
+                    >최근조회기업</a>
+                  </div>
+                  <div class="sidemenu-depth2">
+                    <a
+                      href="#"
+                      class="link"
+                    >팩트체크</a>
+                  </div>
+                  <div
+                    v-if="testUserType === 'investor'"
+                    class="sidemenu-depth2"
+                  >
+                    <a
+                      href="#"
+                      class="link"
+                    >포인트</a>
+                  </div>
+                  <div
+                    v-if="testUserType === 'startup' || testUserType === 'investor'"
+                    class="sidemenu-depth2"
+                  >
+                    <a
+                      href="#"
+                      class="link"
+                    >쪽지함</a>
+                  </div>
+                  <div
+                    v-if="testUserType === 'fact-checker'"
+                    class="sidemenu-depth2"
+                  >
+                    <a
+                      href="#"
+                      class="link"
+                    >포인트 관리</a>
+                  </div>
+                  <div
+                    v-if="testUserType === 'fact-checker'"
+                    class="sidemenu-depth2"
+                  >
+                    <a
+                      href="#"
+                      class="link"
+                    >기업회원 등록</a>
+                  </div>
+                </div>
+              </div>
               <a
                 href="#"
                 class="sidemenu-link"
@@ -261,8 +392,22 @@
                 >
                   <span class="sidemenu-txt">1:1문의</span>
                 </a>
-                <div class="sidemenu-depth2">
-                  <a href="sidemenu-depth2-link">문의하기</a>
+                <div class="sidemenu-depth2-wrap">
+                  <div class="sidemenu-depth2">
+                    <a
+                      href="#"
+                      class="link"
+                    >문의하기</a>
+                  </div>
+                  <div
+                    v-if="testIsUser"
+                    class="sidemenu-depth2"
+                  >
+                    <a
+                      href="#"
+                      class="link"
+                    >문의내역</a>
+                  </div>
                 </div>
               </div>
               <a
@@ -272,12 +417,24 @@
                 <span class="sidemenu-txt">약관</span>
               </a>
             </div>
+            <div
+              v-if="testIsUser"
+              class="btn-logout-wrap"
+            >
+              <i class="icon icon-logout" />
+              <button
+                type="button"
+                class="btn btn-logout"
+              >
+                로그아웃
+              </button>
+            </div>
           </div>
         </div>
       </div>
-      <!-- END sidemenu-bar -->
     </header>
   </div>
+  <!-- END sidemenu-bar -->
 </template>
 
 <script>
@@ -286,10 +443,10 @@ export default {
   data() {
     return {
       testIsUser: true,
-      testUserType: 'investor', // startup, investor, fact-checker
+      testUserType: 'fact-checker', // startup, investor, fact-checker
       testMembership: false,
       viewSearchbar: false,
-      viewSidebar: false,
+      viewSidebar: true,
       hdSearchOptions: {
         depth01: null,
         depth02: null,

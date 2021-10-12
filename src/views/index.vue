@@ -187,8 +187,17 @@
           <!-- TODO: 비디오 삽입되는 영역 -->
           <div
             class="video-cont"
-            style="border: 3px solid orange"
-          />
+          >
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/MHHwOfVtiEY"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+          </div>
         </div>
       </section>
       <!-- END section-video -->

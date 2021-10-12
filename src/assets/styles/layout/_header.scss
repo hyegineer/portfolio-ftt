@@ -267,21 +267,34 @@
   z-index: 30;
   min-width: 370px;
   height: 100%;
-  padding: 26px 70px;
+  padding: 26px 30px 40px 70px;
   background-color: #fff;
-  transition: all .5s cubic-bezier(0.77,0.2,0.05,1.0);;
+  transition: all .5s cubic-bezier(0.77,0.2,0.05,1.0);
+  overflow: auto;
+  @include custom-scroll(#00EB79, $w: 6px);
 
   &.is-active {
     left: 0;
   }
 
-  .hd-side-top {
-    padding-bottom: 36px;
-    border-bottom: 1px solid #DDDEE6;
+  .hd-side-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
   }
 
-  .btn-close-wrap {
-    margin-bottom: 68px;
+  .hd-side-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26px;
+  }
+
+  .hd-side-login-top {
+    padding-top: 42px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid #DDDEE6;
   }
 
   .btn-close {
@@ -294,6 +307,22 @@
     background-position: center center;
     text-indent: -99999px;
     cursor: pointer;
+  }
+
+  .btn-change-wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+
+    .btn-change {
+      @include input-reset;
+      padding-left: 7.5px;
+      font-size: rem(14);
+      font-weight: 400;
+      color: #5C5E70;
+      cursor: pointer;
+    }
   }
 
   .dec {
@@ -342,6 +371,10 @@
 
   .hd-side-bottom {
     padding-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
   }
 
   .sidemenu-link {
@@ -378,7 +411,10 @@
       transform: scaleX(0);
       transform-origin: bottom right;
     }
-    
+  }
+
+  .sidemenu-depth2-wrap {
+    margin-bottom: 10px;
   }
 
   .sidemenu-depth2 {
@@ -387,7 +423,33 @@
     font-size: rem(16);
     font-weight: 400;
     color: #8E909F;
-    margin-bottom: 10px;
+
+    &:hover {
+      color: #171820;
+      font-weight: 400;
+    }
+
+    &.is-active {
+      color: #171820;
+      font-weight: 500;
+    }
+  }
+
+  .btn-logout-wrap {
+    padding: 4.5px 8px;
+    border: 1px solid #DDDEE6;
+    display: inline-block;
+    background-color: #F9F9FB;
+    align-self: flex-start;
+    cursor: pointer;
+
+    .btn-logout {
+      @include input-reset;
+      margin-left: 5.8px;
+      font-size: rem(14);
+      font-weight: 400;
+      color: #8E909F;
+    }
   }
 }
 
