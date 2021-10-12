@@ -41,9 +41,23 @@
       <!-- END 가입신청 대기중일 때 -->
 
       <!-- TODO: 신청거절/그룹강퇴일 때 -->
-      <div class="waint-cont-wrap">
+      <div class="waiting-cont-wrap">
         <div class="section-cont ">
           <empty-contents txt="소속된 기업이 없습니다.<br />신규 스타트업 생성 / 기존 스타트업 신청을 통하여<br />소속기업 지정을 해주세요." />
+        </div>
+        <div class="btn-wrap">
+          <btn-bd-dark
+            class="btn btn-md btn-full"
+            @click="window.alert('신규 스타트업 생성하기')"
+          >
+            신규 스타트업 생성하기
+          </btn-bd-dark>
+          <btn-bd-dark
+            class="btn btn-md btn-full"
+            @click="window.alert('기존 스타트업 신청하기')"
+          >
+            기존 스타트업 신청하기
+          </btn-bd-dark>
         </div>
       </div>
       <!-- END신청거절/그룹강퇴일 때 -->
