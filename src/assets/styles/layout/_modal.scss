@@ -178,6 +178,14 @@
   }
 }
 
+.modal-scrl-cont{
+  @include hide-scroll;
+
+  max-height: 600px;
+  overflow: auto;
+  justify-content: flex-start;
+}
+
 .modal-cont-txt{
   font-size: 13px;
   line-height: 1.5;
