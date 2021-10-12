@@ -1424,19 +1424,26 @@
 
 .member-info{
   width: 100%;
-  
-  .name{
-    color: #171820;
-    font-size: 20px;
-    font-weight: 500;
-  }
 
-  .mail{
+  .account-info{
+    @include flex{
+      @include flex-op(flex-start, flex-start);
+    }
+  
+    flex-direction: column;
     width: 100%;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 500;
-    color: #5C5E70;
+    gap: 8px;
+    margin-bottom: 25px;
+
+    .name{
+      font-size: 20px;
+    }
+
+    .mail{
+      width: 100%;
+      display: inline-block;
+      font-size: 14px;
+    }
   }
 
   .dlist{
@@ -1450,15 +1457,48 @@
   }
 }
 
-.member-info-top{
+// 구성요소 - 이름 & 메일
+.account-info{
+  .name{
+    font-weight: 500;
+    color: #171820;
+  }
+
+  .mail{
+    font-weight: 500;
+    color: #5C5E70;
+  }
+}
+
+// 구성요소 - 그룹원 list들
+.box-grpmember-list{
   @include flex{
     @include flex-op(flex-start, flex-start);
   }
 
-  flex-direction: column;
-  width: 100%;
-  gap: 8px;
-  margin-bottom: 25px;
+  margin: 5px 0;
+  padding: 17px 40px;
+
+  .account-type{
+    font-size: 13px;
+    color: #5C5E70;
+    font-weight: 500;
+  }
+
+  .account-info{
+    .name{
+      font-size: 16px;
+    }
+
+    .mail{
+      font-size: 13px;
+    }
+  }
+
+  .btn-grp{
+    margin-left: auto;
+    margin-right: 0;
+  }
 }
 
 // 구성요소 bullet style list

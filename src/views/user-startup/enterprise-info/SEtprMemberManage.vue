@@ -77,7 +77,7 @@
           >
             <avatar />
             <article class="member-info">
-              <div class="member-info-top">
+              <div class="account-info">
                 <h5 class="name">
                   {{ '김철수' }}
                 </h5>

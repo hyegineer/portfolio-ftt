@@ -221,27 +221,6 @@
   @include btn-bd;
 }
 
-// bd-light
-@mixin btn-bd-light{
-  @extend %btn-default;
-
-  box-shadow: 0 0 0 1px #DDDEE6;
-  background-color: white;
-  font-weight: 400;
-  transition: all 0.2s;
-
-  @include media(1200px, min){
-    &:hover{
-      background-color: darken(#fff, 3%);
-    }
-  }
-
-  &:active{
-    transition: all 0s;
-    background-color: darken(#fff, 5%);
-  }
-}
-
 // bd-blue
 @mixin btn-bd-blue{
   @extend %btn-default;
@@ -276,6 +255,26 @@
 }
 
 // bd-light
+@mixin btn-bd-light{
+  @extend %btn-default;
+
+  box-shadow: 0 0 0 1px #DDDEE6;
+  background-color: white;
+  font-weight: 400;
+  transition: all 0.2s;
+
+  @include media(1200px, min){
+    &:hover{
+      background-color: darken(#fff, 3%);
+    }
+  }
+
+  &:active{
+    transition: all 0s;
+    background-color: darken(#fff, 5%);
+  }
+}
+
 .btn-bd-light{
   @include btn-bd-light;
   
@@ -289,6 +288,32 @@
     font-weight: 500;
     color: #B8BAC7;
   }
+}
+
+// bd-red
+@mixin btn-bd-red{
+  @extend %btn-default;
+
+  box-shadow: 0 0 0 1px #FF5175;
+  background-color: #FFEEF1;
+  font-weight: 400;
+  transition: all 0.2s;
+  color: #FF5175;
+
+  @include media(1200px, min){
+    &:hover{
+      background-color: darken(#FFEEF1, 3%);
+    }
+  }
+
+  &:active{
+    transition: all 0s;
+    background-color: darken(#FFEEF1, 5%);
+  }
+}
+
+.btn-bd-red{
+  @include btn-bd-red;
 }
 
 /* ----------------- END 1. 컬러 ----------------- */
