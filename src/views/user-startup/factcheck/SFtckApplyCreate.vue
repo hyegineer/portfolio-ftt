@@ -305,7 +305,7 @@
           >
             <btn-bd-light
               class="btn-lg btn-prev"
-              @click="$router.push('/register-intro')"
+              @click="$router.back()"
             >
               이전
             </btn-bd-light>
@@ -313,6 +313,7 @@
             <!-- [D] 필수항목 다 기재되면 disabled 해제 -->
             <btn-solid
               class="btn-lg btn-full"
+              @click="$router.push('ftck-apply-complete')"
             >
               다음
             </btn-solid>

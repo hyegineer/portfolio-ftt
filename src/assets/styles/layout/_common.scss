@@ -1563,3 +1563,25 @@
     }
   }
 }
+
+// 구성요소 complete 시 안내박스
+.state-guide-box{
+  text-align: center;
+  color: #171820;
+
+  .state-img{
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .state-ttl{
+    font-size: 29px;
+    line-height: 1.3;
+  }
+
+  .state-desc{
+    font-size: 15px;
+    margin-top: 5px;
+    line-height: 1.4;
+  }
+}
