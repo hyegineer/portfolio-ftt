@@ -441,6 +441,10 @@
     margin-bottom: 5px;
   }
 
+  .mb-0{
+    margin-bottom: 0;
+  }
+
   .del-btn{
     @include bg-op($p: 50% 50%, $s: 14px);
     
@@ -1715,5 +1719,20 @@
       margin-bottom: 0;
       padding-bottom: 0;
     }
+  }
+}
+
+// 구성요소: label + toggle
+.toggle-item{
+  .tg-lbel{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #5c5e70;
+    margin-right: 5px;
+  }
+
+  .toggle-onoff{
+    vertical-align: middle;
   }
 }
