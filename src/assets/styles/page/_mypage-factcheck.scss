@@ -53,3 +53,15 @@
     line-height: 1.6;
   }
 }
+
+// 마이페이지 > 팩트체크 > 팩트체커 신청 > 신청서 작성
+.mypage-ftck-apply-create-page{
+  .ftck-auth-form-area{
+    max-width: 380px;
+    margin: 0 auto;
+
+    & > .btn-grp{
+      margin-top: 60px;
+    }
+  }
+}

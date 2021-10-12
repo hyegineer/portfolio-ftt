@@ -79,9 +79,10 @@
         <btn-solid
           position="single-centered"
           class="btn-lg btn-full"
+          @click="$router.push('ftck-apply-create')"
         >
-          <!-- 신청하기 -->
-          심사중입니다
+          신청하기
+          <!-- 심사중입니다 -->
         </btn-solid>
       </div>
     </div>
