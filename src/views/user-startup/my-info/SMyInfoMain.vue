@@ -92,7 +92,7 @@
 
 <script>
 export default {
-  name: 'SMyInfoMain',
+  name: 'SMyinfoMain',
 };
 </script>
 

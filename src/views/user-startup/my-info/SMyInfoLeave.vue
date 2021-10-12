@@ -132,7 +132,7 @@
 
 <script>
 export default {
-  name: 'SMyInfoLeave',
+  name: 'SMyinfoLeave',
 };
 </script>
 
