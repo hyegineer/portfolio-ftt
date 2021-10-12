@@ -1169,19 +1169,20 @@
     }
 
     width: 100%;
+    margin-bottom: 20px;
 
-    .bold{
-      @include font-op($w: 500, $c: #171820){
-        font-size: 18px;
+    .right-grp{
+      @include flex{
+        @include flex-op(center, flex-end);
       }
-    }
 
-    margin-bottom: 25px;
+      gap: 15px;
+    }
   }
 
   .mypboard-cont{
     @include font-op($c: #5C5E70){
-      font-size: 16px;
+      font-size: 15px;
     }
 
     line-height: 1.5;
@@ -1703,7 +1704,7 @@
     border-bottom: 1px solid #DDDEE6;
   }
 
-  .mypboard-cont{
+  .mypboard-cont{ // 팩트체크 상세
     width: 100%;
     border-bottom: 1px solid #DDDEE6;
     margin-bottom: 30px;

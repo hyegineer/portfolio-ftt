@@ -61,9 +61,17 @@
         <div class="mypboard-detail-cont">
           <div class="mypboard-cont">
             <div class="mypboard-cont-ttl">
-              <span class="bold">팩트시트 답변</span>
+              <span class="light-gray-txt-sm">※ 팩트체크 요청 내용입니다.</span>
 
-              <span class="board-etc-txt">2021.00.00</span>
+              <div class="right-grp">
+                <button
+                  type="button"
+                  class="btn btn-send-note"
+                >
+                  <span class="txt">쪽지 보내기</span>
+                  <i class="icon icon-msg" />
+                </button>
+              </div>
             </div>
               
             <p class="p-preline">
@@ -75,9 +83,12 @@
           
           <div class="mypboard-cont">
             <div class="mypboard-cont-ttl">
-              <span class="bold">팩트시트 답변</span>
+              <span class="light-gray-txt-sm">※ 팩트체크 요청 내용입니다.</span>
 
-              <span class="board-etc-txt">2021.00.00</span>
+              <div class="right-grp">
+                <span class="gray-txt-sm">팩트체커명</span>
+                <span class="light-gray-txt-sm">2021.00.00</span>
+              </div>
             </div>
               
             <p class="p-preline">
