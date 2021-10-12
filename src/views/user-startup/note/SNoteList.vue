@@ -1,6 +1,6 @@
 <template>
   <!-- [D] 마이페이지 - 쪽지함 목록 -->
-  <div class="mypage-container mypage-white-container">
+  <div class="mypage-container mypage-white-container mypage-note-list-page">
     <div class="mypage-white-panel">
       <!-- 마이페이지 페이지 제목 -->
       <div class="mypage-hgrp">
@@ -63,7 +63,6 @@
         <!-- // 쪽지함 - 탭 -->
 
         <!-- 쪽지함 - 리스트 -->
-        <!-- FIXME 쪽지함 리스트 재스타일링 -->
         <div>
           <!-- 쪽지 있을 때 -->
           <table class="note-list-grp board-list-grp">
@@ -71,15 +70,22 @@
               v-for="(item, index) in 2"
               :key="index"
               class="board-list"
+              @click="$router.push('note-detail')"
             >
-              <td class="td-num">
-                <span class="td-word-num">{{ index }}</span>
+              <td>
+                <!-- 회사이름 -->
+                <div class="avatar-with-name">
+                  <avatar />
+                  <div class="name-grp">
+                    <span class="name">
+                      {{ '투자자명' }}
+                    </span>
+                  </div>
+                </div>
+                <!-- // 회사이름 -->
               </td>
               <td class="td-subject">
-                <span class="td-word-subject">{{ '기업정보 게시판 제목 텍스트입니다.' }}</span>
-              </td>
-              <td>
-                <span class="td-word-writer">{{ '작성자명' }}</span>
+                <span class="td-word-subject">{{ '쪽지 텍스트 자리입니다. 텍스트가 길어지면 ...으로 잘립니다. 쪽지 텍스트 자리입니다. 텍스트가 길어지면 ...' }}</span>
               </td>
               <td>
                 <span class="td-word-date">{{ '2021.00.00' }}</span>

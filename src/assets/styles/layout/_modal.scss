@@ -178,6 +178,14 @@
   }
 }
 
+.modal-scrl-cont{
+  @include hide-scroll;
+
+  max-height: 600px;
+  overflow: auto;
+  justify-content: flex-start;
+}
+
 .modal-cont-txt{
   font-size: 13px;
   line-height: 1.5;
@@ -245,6 +253,7 @@
 
     max-height: 375px;
     overflow: auto;
+    border-bottom: 1px solid #DDDEE6;
   }
 
   .txt-dark-gray{
@@ -253,6 +262,17 @@
 
   .empty-wrap{
     padding: 30px 0 20px;
+  }
+}
+
+// 모달 안쪽 동일 클래스 마진값 제거를 위한 styling
+.mypage-container {
+
+  .md-choice-cont {
+
+    .empty-wrap {
+      margin: 0;
+    }
   }
 }
 

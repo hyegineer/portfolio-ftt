@@ -6,8 +6,13 @@
       class="empty-icon"
     >
 
-    <p class="empty-txt">
-      {{ txt }}
+    <!-- eslint-disable vue/no-v-html -->
+    <p
+      class="empty-txt"
+      v-html="txt"
+    >
+      <!-- {{ txt }} -->
+      <!-- <br>적용을 위해 v-html로 수정 -->
     </p>
   </div>
 </template>

@@ -27,6 +27,13 @@
           검정버튼
         </btn-solid-dark>
 
+        <btn-solid-grayblue
+          class="btn-sm"
+          @click="window.alert('구성원 추가버튼을 클릭하셨습니다.')"
+        >
+          구성원 추가
+        </btn-solid-grayblue>
+
         <btn-solid-blue
           class="btn-xlg btn-full"
           @click="window.alert('관심기업 등록을 하셨습니다.')"
@@ -1489,6 +1496,79 @@
             </td>
           </tr>
         </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h1 class="cp-ttl">
+        15. 구성원 레이아웃
+      </h1>
+
+      <div class="section-cont">
+        <!-- 구성원 명수 표시 -->
+        <div class="member-list-grp-ttl">
+          <p class="txt">
+            총 <span class="bold">0</span>명
+          </p>
+        </div>
+        <!-- // 구성원 명수 표시 -->
+
+        <!-- 구성원이 있을 때 -->
+        <div class="member-list-grp">
+          <div
+            v-for="(item, index) in 2"
+            :key="index"
+            class="member-list"
+          >
+            <avatar />
+            <article class="member-info">
+              <div class="account-info">
+                <h5 class="name">
+                  {{ '김철수' }}
+                </h5>
+                <span class="mail">{{ 'email@email.com' }}</span>
+                <dl class="dlist">
+                  <dt class="lbel">
+                    키포인트
+                  </dt>
+                  <dd class="txt">
+                    {{ '키포인트 텍스트' }}
+                  </dd>
+                </dl>
+              </div>
+
+              <ul class="ul-bullet">
+                <li class="list">
+                  {{ '이력사항 텍스트' }}
+                </li>
+                <li class="list">
+                  {{ '이력사항 텍스트' }}
+                </li>
+                <li class="list">
+                  {{ '이력사항 텍스트' }}
+                </li>
+              </ul>
+            </article>
+
+            <div class="member-btn-grp btn-grp">
+              <btn-bd-light
+                class="btn-rounded btn-xsm btn-edit-ctrl"
+              >
+                <i class="icon icon-pen" />
+                <span class="txt">수정</span>
+              </btn-bd-light>
+              
+
+              <btn-bd-light
+                class="btn-rounded btn-xsm btn-edit-ctrl"
+              >
+                <i class="icon icon-trash" />
+                <span class="txt">삭제</span>
+              </btn-bd-light>
+            </div>
+          </div>
+        </div>
+        <!-- // 구성원이 있을 때 -->
       </div>
     </section>
 
