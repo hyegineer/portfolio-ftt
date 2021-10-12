@@ -428,6 +428,23 @@
   }
 }
 
+.btn-send-note{
+  @include flex-center;
+
+  gap: 5px;
+
+  &:hover{
+    .txt{
+      color: darken(#B8BAC7, 15%);
+    }
+  }
+
+  .txt{
+    font-size: 13px;
+    color: #B8BAC7;
+  }
+}
+
 /* 버튼 포지션 센터일 때 */
 [position="single-centered"]{
   display: block;
@@ -451,6 +468,7 @@
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
+  margin-right: 5px;
 
   .txt{
     @include font-op($w: 600, $c: #00ce6a){

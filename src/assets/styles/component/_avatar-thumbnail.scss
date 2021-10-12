@@ -1,8 +1,11 @@
 .avatar{
   @include circle(40px);
-
   border: 1px solid #DDDEE6;
   overflow: hidden;
+
+  &.avatar-lg {
+    @include circle(50px);
+  }
   
   .avatar-img{
     width: 100%;

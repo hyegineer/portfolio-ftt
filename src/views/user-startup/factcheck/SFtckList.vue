@@ -66,7 +66,10 @@
       <!-- 팩트체크가 있을 때 -->
       <table class="ftck-list-grp board-list-grp">
         <!-- [D] 비공개면 is-secret 클래스 추가 -->
-        <tr class="board-list is-secret">
+        <tr
+          class="board-list is-secret"
+          @click="$router.push('ftck-detail')"
+        >
           <td class="td-subject">
             <div class="ftck-state-subject">
               <div class="ftck-state">
@@ -96,7 +99,10 @@
         </tr>
         
         <!-- [D] 완료 -->
-        <tr class="board-list">
+        <tr
+          class="board-list" 
+          @click="$router.push('ftck-detail')"
+        >
           <td class="td-subject">
             <div class="ftck-state-subject">
               <div class="ftck-state">

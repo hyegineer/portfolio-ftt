@@ -132,6 +132,15 @@
         </btn-square-bd>
         <!-- // 채팅 버튼 -->
 
+        <!-- 추가 버튼 -->
+        <button
+          type="button"
+          class="btn-txt"
+        >
+          <span class="txt">+ 추가하기</span>
+        </button>
+        <!-- // 추가 버튼 -->
+
         <!-- 작성 버튼 -->
         <button
           type="button"
@@ -161,6 +170,16 @@
           <span class="txt">회원탈퇴</span>
         </button>
         <!-- // 탈퇴 버튼 -->
+
+        <!-- 쪽지 보내기 -->
+        <button
+          type="button"
+          class="btn btn-send-note"
+        >
+          <span class="txt">쪽지 보내기</span>
+          <i class="icon icon-msg" />
+        </button>
+        <!-- // 쪽지 보내기 -->
       </div>
     </section>
 
@@ -633,6 +652,28 @@
             </span>
 
             <ul class="name-subtxt-grp">
+              <li class="name-subtxt-list">
+                기업규모
+              </li>
+              <li class="name-subtxt-list">
+                산업분류
+              </li>
+              <li class="name-subtxt-list">
+                산업분야
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <h2>8-1. 아바타 + 회사정보 (크게)</h2>
+        <div class="avatar-with-name">
+          <avatar class="avatar-lg" />
+          <div class="name-grp name-grp-lg">
+            <span class="name name-lg">
+              주식회사 팩트컴퍼니
+            </span>
+
+            <ul class="name-subtxt-grp name-subtxt-grp-lg">
               <li class="name-subtxt-list">
                 기업규모
               </li>

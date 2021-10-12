@@ -165,6 +165,10 @@
     }
   }
 
+  .p-preline{
+    white-space: pre-line;
+  }
+
   .bcont-ttl{
     @include flex{
       @include flex-op(center, space-between);

@@ -36,7 +36,9 @@
           <!-- 내용 -->
           <div class="board-detail-cont">
             <div class="bcont">
-              <p>문의내용 텍스트입니다.</p>
+              <p class="p-preline">
+                문의내용 텍스트입니다.
+              </p>
             </div>
 
             <div class="bcont">
@@ -46,7 +48,14 @@
                 <span class="board-etc-txt">2021.00.00</span>
               </p>
 
-              <p>답변 대기중입니다.</p>
+              <p class="p-preline">
+                답변 대기중입니다.
+                dfsdfsdfsdf
+
+                ggdgsd
+                dfsdfsdfsdf
+                sdfsdfsdfsdfsd
+              </p>
             </div>
           </div>
           <!-- // 내용 -->
