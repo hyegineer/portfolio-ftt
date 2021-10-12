@@ -176,7 +176,32 @@
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
                 <span>기업 기본정보</span>
-                컴포넌트에서 가져오기
+                
+        <div class="hover-desc">
+          <span
+            class="hover-overlay mb-show"
+            :class="{'is-show': mbMdOptions2.visible}"
+            @click="mbMdClose('question')"
+          />
+
+          <div
+            class="badge-qus"
+            @click="mbMdOpen('question')"
+          >
+            <span class="is-voice-only">도움말</span>
+          </div>
+
+          <div
+            class="hover-desc-box"
+            :class="{'is-show' : mbMdOptions2.visible}"
+          >
+            <span class="ttl">토글 제목</span>
+
+            <p class="desc">
+              해당 토글 내용
+            </p>
+          </div>
+        </div>
                     <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
                 <p class="badge green">{{'팩트체커 업데이트  2020.00.00'}}</p>
               </div>
