@@ -106,6 +106,40 @@
   @include btn-solid-blue;
 }
 
+// solid-grayblue
+@mixin btn-solid-grayblue{
+  @extend %btn-default;
+
+  background-color: #5D76C4;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s;
+
+  &:disabled{
+    background-color: #B8BAC7;
+    cursor: default;
+
+    &:hover{
+      background-color: #B8BAC7;
+    }
+  }
+
+  @include media(1200px, min){
+    &:hover{
+      background-color: darken(#5D76C4, 2%);
+    }
+  }
+
+  &:active{
+    transition: all 0s;
+    background-color: darken(#5D76C4, 3%);
+  }
+}
+
+.btn-solid-grayblue{
+  @include btn-solid-grayblue;
+}
+
 // solid-dark
 @mixin btn-solid-dark{
   @extend %btn-default;
@@ -354,6 +388,19 @@
 
   background-color: white;
   border: 1px solid #B0B1BC;
+}
+
+.btn-edit-ctrl{
+  padding: 7.5px 18px;
+
+  .icon{
+    margin-right: 3px;
+  }
+
+  .txt{
+    vertical-align: middle;
+    display: inline-block;
+  }
 }
 
 /* 뱃지 스타일 */
