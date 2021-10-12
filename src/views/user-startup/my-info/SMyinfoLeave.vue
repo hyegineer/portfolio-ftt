@@ -98,6 +98,7 @@
         <div class="chk-grp">
           <input
             id="check-box"
+            v-model="isAgree"
             type="checkbox"
             class="is-none check-switch"
           >
@@ -118,6 +119,7 @@
             이전
           </btn-bd-light>
           <btn-solid
+            :disabled="!isAgree"
             class="btn-lg btn-full"
             @click="window.alert('회원탈퇴 버튼을 클릭하셨습니다.')"
           >
@@ -133,6 +135,11 @@
 <script>
 export default {
   name: 'SMyinfoLeave',
+  data() {
+    return {
+      isAgree: false,
+    };
+  },
 };
 </script>
 

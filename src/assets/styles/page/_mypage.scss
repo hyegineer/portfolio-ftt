@@ -62,6 +62,22 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    .info {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .badge {
+      color: #8E909F;
+      border: 1px solid #8E909F;
+      border-radius: 50px;
+      padding: 4px 9.5px;
+      font-size: rem(12);
+      font-weight: 500;
+      margin-left: 8px;
+    }
   }
 
   .info-label {

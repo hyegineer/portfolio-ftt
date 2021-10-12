@@ -27,8 +27,30 @@
   background-color: #F9F9FB;
 
   .page-container {
+    position: relative;
     padding-top: 40px;
   }
+
+  .wide-panel {
+    position: relative;
+    z-index: 5;
+  }
+}
+
+.right-fixed {
+  @include fixed($t: 70px, $l: 50%);
+  
+  width: 90%;
+  max-width: 1090px;
+  z-index: 1;
+  transform: translateX(-50%);
+}
+
+.right-con-container {
+  @include absolute($t: 0, $l: 100%);
+  
+  width: 220px;
+  margin-left: 20px;
 }
 
 .etpr-info-shot {
@@ -39,12 +61,16 @@
     align-items: flex-start;
 
     .name {
+      height: 22px;
       font-size: rem(22);
+      line-height: 22px;
     }
 
     .name-subtxt-grp {
+      height: 14px;
       padding: 5px 0;
       font-size: rem(14);
+      line-height: 14px;
     }
   }
 
@@ -104,5 +130,34 @@
     font-weight: 400;
     color: #5C5E70;
     -webkit-text-stroke: 0.2px;
+  }
+}
+
+.active-ttl-container {
+  margin-bottom: 60px;
+  padding: 0;
+}
+
+.active-ttl-inner {
+  @include flex-center;
+
+  .active-ttl {
+    position: relative;
+    margin: 0 22px;
+    padding: 22px 0;
+    font-size: rem(18);
+    font-weight: 400;
+    color: #171820;
+  }
+
+  .active-ttl.active {
+    font-weight: 500;
+    
+    @include make-after {
+      @include absolute($b:0, $l: 0);
+      @include wh(100%, 3px);
+      
+      background-color: #00EB79;
+    }
   }
 }
