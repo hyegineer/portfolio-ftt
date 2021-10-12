@@ -1473,19 +1473,51 @@
 // 구성요소 - 그룹원 list들
 .box-grpmember-list{
   @include flex{
-    @include flex-op(flex-start, flex-start);
+    @include flex-op(center, flex-start);
   }
 
   margin: 5px 0;
   padding: 17px 40px;
+  position: relative;
+
+  &:hover{
+    .tooltip-apply{
+      opacity: 1;
+      top: -35px;
+    }
+  }
+
+  .tooltip-apply{
+    @include absolute($t: -30px);
+
+    z-index: 1;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(#5C5E70, 0.2);
+    color: #8E909F;
+    padding: 5.5px 8px;
+    font-size: 12px;
+    opacity: 0;
+    transition: all 0.2s;
+  }
 
   .account-type{
     font-size: 13px;
     color: #5C5E70;
     font-weight: 500;
+    padding-right: 20px;
+    border-right: 1px solid #DDDEE6;
+    margin-right: 20px;
   }
 
   .account-info{
+    // @include ellipse(1, 18px);
+    @include flex{
+      @include flex-op(center, center);
+    }
+    
+    position: relative;
+    gap: 10px;
+
     .name{
       font-size: 16px;
     }
@@ -1498,7 +1530,19 @@
   .btn-grp{
     margin-left: auto;
     margin-right: 0;
+
+    .btn-xsm{
+      padding: 7.5px 15px;
+    }
+
+    .btn-bd-light{
+      color: #8E909F;
+    }
   }
+}
+
+.box-grpmember-list.is-active{
+  border-color: #5C5E70;
 }
 
 // 구성요소 bullet style list
