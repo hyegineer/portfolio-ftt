@@ -176,14 +176,14 @@
         </badge-rounded>
         <!-- // 기본뱃지 -->
 
-        <!-- 완료뱃지 -->
+        <!-- 팩트체크 상태뱃지 -->
         <badge-state txt="대기중" />
         <badge-state txt="신청거절" />
         <badge-state txt="진행중" />
         <badge-state txt="내용 검토중" />
         <badge-state txt="보완요청" />
         <badge-state txt="완료" />
-        <!-- // 완료뱃지 -->
+        <!-- // 팩트체크 상태뱃지 -->
 
         <!-- 포인트 -->
         <div class="badge-p">
