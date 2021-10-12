@@ -22,6 +22,21 @@
   }
 }
 
+.empty-conts {
+  @include flex-center;
+
+  flex-direction: column;
+  height: 125px;
+
+  .txt {
+    margin-top: 14px;
+    font-size: rem(13);
+    font-weight: 400;
+    color: #8E909F;
+    -webkit-text-stroke: 0.4px #8e909f;
+  }
+}
+
 // page
 .etpr-prifile-page {
   background-color: #F9F9FB;
@@ -38,7 +53,7 @@
 }
 
 .right-fixed {
-  @include fixed($t: 70px, $l: 50%);
+  @include fixed($t: 110px, $l: 50%);
   
   width: 90%;
   max-width: 1090px;
@@ -46,11 +61,102 @@
   transform: translateX(-50%);
 }
 
-.right-con-container {
+.fixed-con-container {
   @include absolute($t: 0, $l: 100%);
-  
+
   width: 220px;
   margin-left: 20px;
+  background-color: white;
+}
+
+.fixed-con-ttl {
+  padding: 14px 25px 11px;
+  border: 1px solid #171820;
+  font-size: rem(13);
+  font-weight: 400;
+  color: #171820;
+  -webkit-text-stroke: 0.3px #171820;
+}
+
+.fixed-con-contents {
+  max-height: 520px;
+  overflow: auto;
+  border: 1px solid #DDDEE6;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #00EB79;
+  }
+}
+
+.fixed-con-list {
+  position: relative;
+  padding: 21px 25px 26px;
+  border-top: 1px solid #DDDEE6;
+
+  &:first-child {
+    border-top: 0;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 6px 8px;
+    border: 1px solid #5C5E70;
+    background-color: #8E909F;
+    font-size: rem(12);
+    font-weight: 400;
+    color: white;
+
+    &.yellow {
+      border-color: #FF9900;
+      background-color: #FFB300;
+    }
+
+    &.green {
+      border-color: #009A75;
+      background-color: #00BF92;
+    }
+  }
+
+  .date {
+    padding-top: 7px;
+    font-size: rem(11);
+    font-weight: 400;
+    color: #8E909F;
+  }
+
+  .info-list {
+    padding-top: 7px;
+  }
+
+  .info {
+    position: relative;
+    margin-top: 7px;
+    padding-left: 10px;
+    font-size: rem(13);
+    font-weight: 400;
+    color: #171820;
+    -webkit-text-stroke: 0.3px #171820;
+
+    @include make-before {
+      @include absolute($t: 5px, $l: 0);
+      @include circle(4px);
+
+      background-color: #5C5E70;
+    }
+  }
+
+  .view-link {
+    @include absolute($t: 26px, $r: 25px);
+
+    font-size: rem(12);
+    font-weight: 400;
+    color: #5C5E70;
+  }
 }
 
 .etpr-info-shot {
