@@ -2,6 +2,22 @@
   <div class="page etpr-prifile-page">
     <layout-header />
     <div class="page-container">
+        <div class="right-fixed">
+          <div class="right-con-container">
+            <div class="right-con-ttl">업데이트 내역 ({{'5'}})</div>
+            <div class="right-con-contents">
+              <div class="noting-conts">
+                <img src="@/assets/images/icon/icon-empty-update.svg" alt="업데이트 아이콘" />
+                <p class="txt">업데이트 내역이 없습니다.</p>
+              </div>
+              <ul class="conts-list-wrap">
+                <li class="right-con-list">
+                  <div class="badge"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       <div class="wide-panel">
         <breadcrumb>
           <li class="txt">
@@ -102,7 +118,7 @@
 
         <div class="mgt-20 white-panel active-ttl-container">
           <div class="active-ttl-inner">
-            <div class="active-ttl">
+            <div class="active-ttl active">
               기업정보
             </div>
             <div class="active-ttl">

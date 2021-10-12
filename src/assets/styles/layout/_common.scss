@@ -1014,14 +1014,19 @@
 // 구성요소 - 박스 리스트 그룹
 .box-list-grp{
   width: 100%;
-  border: 1px solid #DDDEE6;
+  border-top: 0;
+  // border: 1px solid #DDDEE6;
 
   .box-list{
     width: 100%;
-    border-bottom: 1px solid #DDDEE6;
-  
-    &:last-child{
-      border-bottom: 0;
+    border: 1px solid #DDDEE6;
+    margin-bottom: -1px;
+
+    &:hover{
+      position: relative;
+      z-index: 1;
+      border: 1px solid #00EB79;
+      background-color: #F6FFFB;
     }
   }
 }
@@ -1131,12 +1136,42 @@
 }
 
 // 구성요소 - 쪽지함 페이지
+.mypage-note-list-page{
+  .inp-sch-grp{
+    margin-bottom: 15px;
+    max-width: 360px;
+  }
+
+  .tab{
+    margin-bottom: 30px;
+  }
+}
+
+// 받은 쪽지, 보낸 쪽지
 .note-list-grp{
-  border: 1px solid #DDDEE6;
+  border-top: 0;
 
   .board-list{
-    &:last-child{
-      border-bottom: 0;
-    }
+    padding: 11.5px 40px;
+    border: 1px solid #DDDEE6;
+    margin-top: -1px;
+  }
+
+  .board-list:hover{
+    position: relative;
+    z-index: 1;
+    border: 1px solid #00EB79;
+    background-color: #F6FFFB;
+  }
+
+  .td-subject{
+    padding-top: 0;
+  }
+
+  .td-word-subject{
+    @include ellipse(1, 15px);
+
+    color: #5c5e70;
+    font-size: 13px;
   }
 }
