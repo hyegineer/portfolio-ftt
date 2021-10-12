@@ -479,8 +479,8 @@
   color: white;
 
   .txt{
-    @include font-op($w: 500, $c: inherit){
-      font-size: 13px;
+    @include font-op($w: 600, $c: inherit){
+      font-size: 12px;
     };
   }
 }
@@ -544,6 +544,16 @@
   border-radius: 50px;
   -webkit-text-stroke: 0;
   vertical-align: middle;
+}
+
+.badge-secret{
+  @include flex-center;
+  @include font-op($w: 500, $c: #B8BAC7){
+    font-size: 12px;
+  }
+
+  display: inline-flex;
+  gap: 4px;
 }
 
 /* 토글 스타일 */
