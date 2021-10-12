@@ -63,7 +63,6 @@
         <!-- // 쪽지함 - 탭 -->
 
         <!-- 쪽지함 - 리스트 -->
-        <!-- FIXME 쪽지함 리스트 재스타일링 -->
         <div>
           <!-- 쪽지 있을 때 -->
           <table class="note-list-grp board-list-grp">
@@ -71,6 +70,7 @@
               v-for="(item, index) in 2"
               :key="index"
               class="board-list"
+              @click="$router.push('note-detail')"
             >
               <td>
                 <!-- 회사이름 -->
