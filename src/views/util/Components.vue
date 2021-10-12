@@ -161,6 +161,16 @@
           <span class="txt">회원탈퇴</span>
         </button>
         <!-- // 탈퇴 버튼 -->
+
+        <!-- 쪽지 보내기 -->
+        <button
+          type="button"
+          class="btn btn-send-note"
+        >
+          <span class="txt">쪽지 보내기</span>
+          <i class="icon icon-msg" />
+        </button>
+        <!-- // 쪽지 보내기 -->
       </div>
     </section>
 

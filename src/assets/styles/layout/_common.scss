@@ -680,6 +680,10 @@
     padding: 0 10px;
     flex-shrink: 0;
   }
+
+  td:last-child{
+    padding-right: 0;
+  }
   
   .td-num{
     min-width: 45px;
@@ -1154,6 +1158,64 @@
   }
 }
 
+// 구성요소 -  마이페이지의 게시물 상세
+.mypboard-detail-hd{
+  @include flex{
+    @include flex-op(center, flex-start);
+  }
+
+  width: 100%;
+  padding: 15px 40px;
+
+  .mypboard-etc-grp{
+    @include flex-center;
+
+    gap: 15px;
+    font-size: 13px;
+    margin-left: auto;
+  }
+}
+
+.mypboard-detail-cont{
+  width: 100%;
+  margin-top: 30px;
+  padding: 0 40px 30px;
+  
+  .mypboard-cont-ttl{
+    @include flex{
+      @include flex-op(center, space-between);
+    }
+
+    width: 100%;
+    margin-bottom: 20px;
+
+    .right-grp{
+      @include flex{
+        @include flex-op(center, flex-end);
+      }
+
+      gap: 15px;
+    }
+  }
+
+  .mypboard-cont{
+    @include font-op($c: #5C5E70){
+      font-size: 15px;
+    }
+
+    line-height: 1.5;
+  }
+
+  .mypboard-btns{
+    @include flex{
+      @include flex-op(center, flex-end);
+    }
+
+    gap: 20px;
+    margin-top: 30px;
+  }
+}
+
 // 구성요소 - 쪽지함 페이지
 .mypage-note-list-page{
   .inp-sch-grp{
@@ -1198,54 +1260,9 @@
 // 쪽지함 detail 페이지: 쪽지 상세
 .nboard-detail-wrap{
   border: 1px solid #DDDEE6;
-}
 
-.nboard-detail-hd{
-  @include flex{
-    @include flex-op(center, flex-start);
-  }
-
-  width: 100%;
-  background-color: #F9F9FB;
-  padding: 15px 40px;
-
-  .nbhd-etc-grp{
-    @include flex-center;
-
-    gap: 15px;
-    font-size: 13px;
-    margin-left: auto;
-  }
-
-  .board-note-state{
-    color: #8E909F;
-  }
-
-  .board-etc-txt{
-    color: #B8BAC7;
-  }
-}
-
-.nboard-detail-cont{
-  width: 100%;
-  margin-top: 30px;
-  padding: 0 40px 30px;
-
-  .nbcont{
-    @include font-op($c: #5C5E70){
-      font-size: 16px;
-    }
-
-    line-height: 1.5;
-  }
-
-  .nbcont-btns{
-    @include flex{
-      @include flex-op(center, flex-end);
-    }
-
-    gap: 20px;
-    margin-top: 30px;
+  .mypboard-detail-hd{
+    background-color: #F9F9FB;
   }
 }
 
@@ -1266,11 +1283,6 @@
 
     line-height: 1.4;
     padding-bottom: 25px;
-  }
-  
-  .length-unit{
-    font-size: 12px;
-    color: #5C5E70;
   }
 
   .nboard-btn-grp{
@@ -1662,34 +1674,64 @@
       color: #8E909F;
     }
   }
+}
 
+.ftck-state-subject{
   .ftck-state{
     @include flex{
       @include flex-op(center, flex-start)
     };
-
+  
     gap: 10px;
     margin-bottom: 10px;
   }
-
+  
   .ftck-subject{
     @include flex{
       @include flex-op(center, flex-start)
     };
-
+  
     gap: 8px;
-
+  
     .lbel{
       color: #8E909F;
       padding-top: 3px;
       flex-shrink: 0;
     }
-
+  
     .subject{
       @include ellipse(1, 18px);
       @include font-op($c: #171820, $w: 500){
         font-size: 16px;
       }
+    }
+  }
+}
+
+.ftck-detail-wrap{
+  background-color: white;
+  padding: 0 40px;
+
+  .mypboard-detail-hd,
+  .mypboard-detail-cont{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .mypboard-detail-hd{
+    border-bottom: 1px solid #DDDEE6;
+  }
+
+  .mypboard-cont{ // 팩트체크 상세
+    width: 100%;
+    border-bottom: 1px solid #DDDEE6;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+
+    &:last-child{
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
   }
 }
