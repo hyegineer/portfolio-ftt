@@ -353,22 +353,22 @@ const routes = [
           // 내정보
           {
             path: 'myinfo-main',
-            name: 'SMyInfoMain',
-            component: () => import('~@/views/user-startup/my-info/SMyInfoMain'),
+            name: 'SMyinfoMain',
+            component: () => import('~@/views/user-startup/my-info/SMyinfoMain'),
             // meta: { requiresAuth: true },
           },
           // 내정보-내정보수정
           {
             path: 'myinfo-edit',
-            name: 'SMyInfoEdit',
-            component: () => import('~@/views/user-startup/my-info/SMyInfoEdit'),
+            name: 'SMyinfoEdit',
+            component: () => import('~@/views/user-startup/my-info/SMyinfoEdit'),
             // meta: { requiresAuth: true },
           },
           // 내정보-회원탈퇴
           {
             path: 'myinfo-leave',
-            name: 'SMyInfoLeave',
-            component: () => import('~@/views/user-startup/my-info/SMyInfoLeave'),
+            name: 'SMyinfoLeave',
+            component: () => import('~@/views/user-startup/my-info/SMyinfoLeave'),
             // meta: { requiresAuth: true },
           },
           // ===================== 기업정보 =====================

@@ -121,7 +121,7 @@
 
 <script>
 export default {
-  name: 'SMyInfoEdit',
+  name: 'SMyinfoEdit',
 };
 </script>
 
