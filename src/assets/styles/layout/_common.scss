@@ -1298,3 +1298,224 @@
     margin-bottom: 0;
   }
 }
+
+// 마이페이지 구성원 관리
+.mypage-common-card{
+  width: 100%;
+  background-color: white;
+  padding: 40px;
+}
+
+// 구성요소: 마이페이지 안내사항 멘트
+.guide-box{
+  @include flex{
+    @include flex-op(flex-start, flex-start);
+  }
+  
+  width: 100%;
+  background-color: #F9F9FB;
+  padding: 20px;
+  color: #5C5E70;
+  margin-bottom: 30px;
+
+  .guide-box-cont{
+    @include flex{
+      @include flex-op(flex-start, flex-start);
+    }
+
+    padding-top: 14px;
+  }
+
+  .lbel{
+    color: inherit;
+    font-weight: 500;
+    flex-shrink: 0;
+    padding-right: 10px;
+    padding-top: 2px;
+  }
+
+  .txt{
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+
+  .btn-grp{
+    margin-left: auto;
+    flex-shrink: 0;
+
+    .btn-sm{
+      min-width: 130px;
+    }
+  }
+} 
+
+// 구성요소 - 구성원 list들
+.member-list-grp-ttl{
+  @include flex{
+    @include flex-op(center, flex-start);
+  }
+
+  margin-bottom: 15px;
+  color: #171820;
+  gap: 10px;
+
+  .txt{
+    font-size: 14px;
+    position: relative;
+
+    .bold{
+      font-weight: 300;
+      -webkit-text-stroke: 1px #171820;
+    }
+  }
+
+  .txt-right{
+    @include flex{
+      @include flex-op(center, flex-start);
+    }
+
+    margin-left: auto;
+    margin-right: 0;
+    gap: 10px;
+  }
+}
+
+.member-list-grp{
+  width: 100%;
+
+  .empty-wrap{
+    padding: 40px 0;
+  }
+}
+
+.member-list{
+  @include flex{
+    @include flex-op(flex-start, flex-start);
+  }
+
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid #DDDEE6;
+  color: #171820;
+  padding: 30px 40px 20px;
+
+  &:first-child{
+    margin-top: 0;
+  }
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  .avatar{
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    margin-right: 25px;
+  }
+
+  .member-btn-grp{
+    margin-left: auto;
+    flex-shrink: 0;
+    gap: 8px;
+  }
+}
+
+.member-info{
+  width: 100%;
+
+  .account-info{
+    @include flex{
+      @include flex-op(flex-start, flex-start);
+    }
+  
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    margin-bottom: 25px;
+
+    .name{
+      font-size: 20px;
+    }
+
+    .mail{
+      width: 100%;
+      display: inline-block;
+      font-size: 14px;
+    }
+  }
+
+  .dlist{
+    font-size: 13px;
+
+    .lbel{
+      flex-shrink: 0;
+      width: auto;
+      max-width: none;
+    }
+  }
+}
+
+// 구성요소 - 이름 & 메일
+.account-info{
+  .name{
+    font-weight: 500;
+    color: #171820;
+  }
+
+  .mail{
+    font-weight: 500;
+    color: #5C5E70;
+  }
+}
+
+// 구성요소 - 그룹원 list들
+.box-grpmember-list{
+  @include flex{
+    @include flex-op(flex-start, flex-start);
+  }
+
+  margin: 5px 0;
+  padding: 17px 40px;
+
+  .account-type{
+    font-size: 13px;
+    color: #5C5E70;
+    font-weight: 500;
+  }
+
+  .account-info{
+    .name{
+      font-size: 16px;
+    }
+
+    .mail{
+      font-size: 13px;
+    }
+  }
+
+  .btn-grp{
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+// 구성요소 bullet style list
+.ul-bullet{
+  .list{
+    margin: 10px 0;
+    color: #171820;
+    font-size: 15px;
+    text-align: left;
+    padding-left: 13px;
+    position: relative;
+
+    @include make-before{
+      @include absolute($t: 6px);
+      @include circle(5px);
+
+      background-color: #00EB79;
+    }
+  }
+}
