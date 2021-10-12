@@ -446,7 +446,7 @@ export default {
       testUserType: 'fact-checker', // startup, investor, fact-checker
       testMembership: false,
       viewSearchbar: false,
-      viewSidebar: true,
+      viewSidebar: false,
       hdSearchOptions: {
         depth01: null,
         depth02: null,
