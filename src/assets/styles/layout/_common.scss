@@ -1585,3 +1585,41 @@
     line-height: 1.4;
   }
 }
+
+// 구성요소 팩트체크 인트로 박스
+.ftck-intro-box{
+  background-color: #171820;
+  color: white;
+  text-align: left;
+  padding: 40px;
+
+  .check-badge{
+    margin-bottom: 6px;
+    margin-top: 20px;
+  }
+
+  .ttl{
+    @include font-op($w: 600, $c: white){
+      font-size: 20px;
+    }
+
+    line-height: 1.5;
+
+    .point-color{
+      color: #00eb79;
+    }
+  }
+
+  .ttl-lg{
+    font-size: 25px;
+  }
+
+  .inp-sch-grp{
+    margin-top: 30px;
+    max-width: 505px;
+
+    .inp{
+      border-color: #00eb79;
+    }
+  }
+}

@@ -468,14 +468,35 @@
 }
 
 .badge-state{
+  cursor: default;
   background-color: #171820;
   padding: 1.5px 8px 4px;
+  color: white;
 
   .txt{
-    @include font-op($w: 500, $c: #fff){
+    @include font-op($w: 500, $c: inherit){
       font-size: 13px;
     };
   }
+}
+
+.badge-state.color-bd-gray{
+  background-color: white;
+  box-shadow: 0 0 0 1px #DDDEE6;
+  color: #8E909F;
+}
+
+.badge-state.color-solid-gray{
+  background-color:#DDDEE6;
+  color: #8E909F;
+}
+
+.badge-state.color-gradi{
+  background: linear-gradient(to left, #00CE6A, #3060FF);
+}
+
+.badge-state.color-warning{
+  background-color: #FF5175;
 }
 
 .badge-qa-state{
