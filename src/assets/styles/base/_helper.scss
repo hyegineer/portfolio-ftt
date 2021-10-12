@@ -49,8 +49,24 @@
   clear: both;
 }
 
-.length-txt{
+// 글자수 
+.length-unit{
   font-weight: 500;
   font-size: 12px;
-  color: #787878;
+  color: #5C5E70;
+}
+
+// preline 먹히는 내용들
+.p-preline{
+  white-space: pre-line;
+}
+
+.gray-txt-sm{
+  color: #8E909F;
+  font-size: 13px;
+}
+
+.light-gray-txt-sm{
+  color: #B8BAC7;
+  font-size: 13px;
 }

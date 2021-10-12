@@ -26,7 +26,7 @@
       <div class="mypage-cont-wrap">
         <div class="nboard-detail-wrap">
           <!-- 제목 -->
-          <div class="nboard-detail-hd">
+          <div class="mypboard-detail-hd">
             <!-- 회사이름 -->
             <div class="avatar-with-name">
               <avatar />
@@ -39,20 +39,22 @@
             </div>
             <!-- // 회사이름 -->
 
-            <div class="nbhd-etc-grp">
-              <span class="board-note-state">받은 쪽지</span>
-              <span class="board-etc-txt">2021.00.00</span>
+            <div class="mypboard-etc-grp">
+              <span class="gray-txt-sm">받은 쪽지</span>
+              <span class="light-gray-txt-sm">2021.00.00</span>
             </div>
           </div>
           <!-- // 제목 -->
 
           <!-- 내용 -->
-          <div class="nboard-detail-cont">
-            <div class="nbcont">
-              <p>문의내용 텍스트입니다.</p>
+          <div class="mypboard-detail-cont">
+            <div class="mypboard-cont">
+              <p class="p-preline">
+                문의내용 텍스트입니다.
+              </p>
             </div>
             
-            <div class="nbcont-btns">
+            <div class="mypboard-btns">
               <!-- 삭제 버튼 -->
               <button
                 type="button"

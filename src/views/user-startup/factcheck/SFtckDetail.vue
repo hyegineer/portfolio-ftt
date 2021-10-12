@@ -26,7 +26,96 @@
 
     <!-- 마이페이지 컨텐츠 영역 -->
     <div class="mypage-cont-wrap">
-      팩트체크 상세내용
+      <div class="ftck-detail-wrap">
+        <!-- 제목 -->
+        <div class="mypboard-detail-hd">
+          <!-- 팩트체크 진행상태 & 제목 -->
+          <div class="ftck-state-subject">
+            <div class="ftck-state">
+              <badge-state txt="진행중" />
+
+              <!-- [D] 비공개일 때만 보임 -->
+              <div class="badge-secret">
+                <i class="icon icon-secret" />
+                <span class="txt">비공개</span>
+              </div>
+            </div>
+
+            <div class="ftck-subject">
+              <span class="lbel">{{ '항목명' }}</span>
+              <p class="subject">
+                {{ '비공개 팩트체크입니다.' }}
+              </p>
+            </div>
+          </div>
+          <!-- // 팩트체크 진행상태 & 제목 -->
+
+          <div class="mypboard-etc-grp">
+            <span class="gray-txt-sm">투자자명</span>
+            <span class="light-gray-txt-sm">2021.00.00</span>
+          </div>
+        </div>
+        <!-- // 제목 -->
+
+        <!-- 내용 -->
+        <div class="mypboard-detail-cont">
+          <div class="mypboard-cont">
+            <div class="mypboard-cont-ttl">
+              <span class="bold">팩트시트 답변</span>
+
+              <span class="board-etc-txt">2021.00.00</span>
+            </div>
+              
+            <p class="p-preline">
+              좌우 패딩 40px / 상하 패딩 30px <br>
+              팩트체크 요청 내용 자리입니다. <br>
+              팩트체크 요청 내용 자리입니다. <br>
+            </p>
+          </div>
+          
+          <div class="mypboard-cont">
+            <div class="mypboard-cont-ttl">
+              <span class="bold">팩트시트 답변</span>
+
+              <span class="board-etc-txt">2021.00.00</span>
+            </div>
+              
+            <p class="p-preline">
+              좌우 패딩 40px / 상하 패딩 30px <br>
+              팩트체크 요청 내용 자리입니다. <br>
+              팩트체크 요청 내용 자리입니다. <br>
+            </p>
+          </div>
+        </div>
+        <!-- // 내용 -->
+      </div>
+
+      <!-- 이전 / 목록 / 다음 -->
+      <div class="board-detail-nav">
+        <div class="bnav-ctrl bnav-ctrl-prev">
+          <btn-square-bd @click="window.alert('이전글로 이동')">
+            <i class="icon icon-page-prev" />
+          </btn-square-bd>
+
+          <span class="txt">이전글</span>
+        </div>
+
+        <btn-bd
+          class="btn-sm bnav-ctrl-list"
+          @click="$router.push('note-list')"
+        >
+          목록으로
+        </btn-bd>
+            
+        <div class="bnav-ctrl bnav-ctrl-next">
+          <span class="txt">다음글</span>
+
+          <btn-square-bd @click="window.alert('다음글로 이동')">
+            <i class="icon icon-page-next" />
+          </btn-square-bd>
+        </div>
+      </div>
+      <!-- // 이전 / 목록 / 다음 -->
     </div>
     <!-- // 마이페이지 컨텐츠 영역 -->
   </div>
