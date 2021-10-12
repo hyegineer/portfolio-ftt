@@ -36,6 +36,13 @@
     }
 
     -webkit-text-stroke: 0.5px #171820;
+
+    &.name-lg {
+      @include ellipse(1, 20px);
+      @include font-op($w: 400, $c: #171820){
+        font-size: 20px;
+      }
+    }
   }
 
   .name-grp{
@@ -45,6 +52,10 @@
 
     flex-direction: column;
     gap: 6px;
+
+    &.name-grp-lg {
+      gap: 10px;
+    }
   }
 
   .name-user-type{
@@ -65,6 +76,13 @@
     -webkit-text-stroke: 0.5px #8e909f;
     display: inline-block;
     width: 100%;
+    
+    &.name-subtxt-grp-lg {
+      @include ellipse(1, 14px);
+      @include font-op($w: 300, $c: #8e909f){
+        font-size: 14px;
+      }
+    }
   }
 
   .name-subtxt-list{

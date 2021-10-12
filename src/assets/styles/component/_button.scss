@@ -468,6 +468,7 @@
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
+  margin-right: 5px;
 
   .txt{
     @include font-op($w: 600, $c: #00ce6a){

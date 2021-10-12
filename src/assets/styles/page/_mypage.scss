@@ -264,3 +264,80 @@
   }
 }
 // END waiting-complete
+
+// startup - EtprDefaultInfo
+.article-wrap {
+  border-bottom: 1px solid #DDDEE6;
+  padding: 30px 0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .ttl {
+    font-size: rem(16);
+    font-weight: 600;
+    color: #171820;
+    margin-bottom: 20px;
+  }
+
+  .info-grp {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #171820;
+
+    &.is-padding-change {
+      
+      .info {
+        padding: 14px 0;
+      }
+    }
+
+    .label {
+      font-size: rem(15);
+      font-weight: 600;
+      flex-basis: 170px;
+      padding: 20px 0;
+    }
+
+    .info {
+      font-size: rem(15);
+      font-weight: 400;
+      flex-grow: 1;
+      padding: 20px 0;
+      border-bottom: 1px solid #DDDEE6;
+    }
+  }
+}
+
+.profile-image-wrap {
+
+  .cont-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .sub-ttl {
+      font-size: rem(14);
+      font-weight: 400;
+      color: #171820;
+      margin-bottom: 10px;
+    }
+  }
+
+  .left-wrap {
+    width: 50%;
+
+    .biz-logo-wrap {
+      margin-bottom: 30px;
+    }
+  }
+
+  .right-wrap {
+    width: 50%;
+  }
+}
+
+// END startup - EtprDefaultInfo
+
