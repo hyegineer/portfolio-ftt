@@ -120,7 +120,7 @@
               <p class="label">
                 상세소개
               </p>
-              <p class="info">
+              <p class="info custom-info">
                 기업상세소개 1000자 텍스트입니다.<br>
                 기업상세소개 1000자 텍스트입니다.<br>
                 기업상세소개 1000자 텍스트입니다.<br>
