@@ -119,6 +119,7 @@
 }
 // END myinfo-edit
 
+// myinfo-leave
 .myinfo-leave-page {
   // background-color: #fff;
 
@@ -192,4 +193,37 @@
     margin: 0 auto;
   }
 }
+// END myinfo-leave
 
+// waiting-main
+.waiting-page {
+
+  .waiting-cont-wrap {
+    // background-color: #fff;
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .cont-ment {
+    font-size: rem(20);
+    font-weight: 500;
+    color: #171820;
+    margin-bottom: 31px;
+  }
+
+  .process-card {
+    padding: 16px 0;
+    border: 1px solid #DDDEE6;
+  }
+
+  .process-ment {
+    font-size: rem(12);
+    font-weight: 500;
+    color: #8E909F;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+// END waiting-main

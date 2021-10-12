@@ -175,6 +175,14 @@
     width: 90%;
     max-width: 1090px;
     margin: 0 auto;
+    min-height: 75vh;
+  }
+
+  .mypage-white-narrow-panel {
+    width: 90%; 
+    max-width: 420px;
+    margin: 0 auto;
+    min-height: 75vh;
   }
 
   & ~ .footer-wrap .footer{
