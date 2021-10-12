@@ -121,6 +121,24 @@ textarea.inp{
   }
 }
 
+.lbel-toggle{
+  @include flex{
+    @include flex-op(center, flex-start);
+  }
+
+  width: 100%;
+  margin-bottom: 5px;
+
+  .lbel{
+    margin-bottom: 0;
+  }
+
+  .toggle-item{
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+}
+
 .lbel{
   font-size: 13px;
   font-weight: 400;

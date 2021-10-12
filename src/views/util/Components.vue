@@ -132,6 +132,15 @@
         </btn-square-bd>
         <!-- // 채팅 버튼 -->
 
+        <!-- 추가 버튼 -->
+        <button
+          type="button"
+          class="btn-txt"
+        >
+          <span class="txt">+ 추가하기</span>
+        </button>
+        <!-- // 추가 버튼 -->
+
         <!-- 작성 버튼 -->
         <button
           type="button"

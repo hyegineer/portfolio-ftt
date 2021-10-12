@@ -26,6 +26,15 @@
       flex: 0 0 calc(33.33% - 10px);
     }
   }
+
+  &.split6 {
+    flex-wrap: wrap;
+
+    .flexable-inner {
+      flex: 0 0 calc(33.33% - 6px);
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .empty-conts {
@@ -57,20 +66,52 @@
     z-index: 5;
   }
 
+  .flexable-container {
+    padding-top: 60px;
+  }
+
   .section-ttl {
+    position: relative;
     margin-top: 60px;
     margin-bottom: 30px;
     font-size: rem(25);
     font-weight: 600;
     color: #171820;
+
+    .badge {
+      @include absolute($t: 0, $r: 0);
+    }
+
+    .ttl-dec {
+      display: flex;
+      margin-top: 12px;
+
+      .txt {
+        margin-right: 5px;
+        font-size: rem(15);
+        font-weight: 400;
+        color: #5C5E70;
+        -webkit-text-stroke: 0.2px #5C5E70;
+      }
+    }
+
+    + .flexable-container {
+        padding-top: 0;
+      }
   }
 
   .panel-ttl {
     position: relative;
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
     font-size: rem(18);
     font-weight: 500;
     color: #5C5E70;
+
+    .hover-desc {
+      margin-left: 8px;
+    }
 
     .badge {
       @include absolute($t: 0, $r: 0);
@@ -95,6 +136,42 @@
       border-color: #009A75;
       background-color: #00BF92;
     }
+  }
+
+  .top-cont-wrap {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 20px 40px;
+    border: 1px solid #5C5E70;
+    background-color: white;
+  }
+
+  .empty-wrap {
+    margin-top: 50px;
+  }
+
+  .invest-list {
+    padding-right: rem(50);
+
+    .ttl {
+      margin-bottom: 8px;
+      font-size: rem(15);
+      font-weight: 400;
+      color: #8E909F;
+      -webkit-text-stroke: 0.2px #8e909f;
+    }
+
+    .dec {
+      font-size: rem(18);
+      font-weight: 500;
+      color: #171820;
+      -webkit-text-stroke: 0.2px #171820;
+    }
+  }
+
+  .member-list {
+    background-color: white;
+    border: 0;
   }
 }
 
@@ -295,7 +372,6 @@
 }
 
 .etpr-panel-wrap {
-  padding-bottom: 60px;
   .white-panel {
     // - panel-title - bot-txt
     height: calc(100% - 40px - 27px);
@@ -313,6 +389,7 @@
 }
 
 .etpr-main-conts {
+  padding-bottom: 50px;
   border-bottom: 1px solid #DDDEE6;
 }
 

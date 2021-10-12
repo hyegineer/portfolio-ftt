@@ -70,3 +70,19 @@
   color: #B8BAC7;
   font-size: 13px;
 }
+
+.space-between{
+  @include flex{
+    @include flex-op(center, space-between);
+  }
+
+  width: 100%;
+}
+
+.space-between-item{
+  @include flex{
+    @include flex-op(center, flex-start);
+  }
+
+  gap: 10px;
+}
