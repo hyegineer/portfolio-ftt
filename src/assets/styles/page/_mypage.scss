@@ -264,3 +264,47 @@
   }
 }
 // END waiting-complete
+
+// startup - EtprDefaultInfo
+.article-wrap {
+  border: 1px solid #000;
+  padding: 30px 0;
+}
+
+.profile-image-wrap {
+
+  .ttl {
+    font-size: rem(16);
+    font-weight: 600;
+    color: #171820;
+    margin-bottom: 20px;
+  }
+
+  .cont-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .sub-ttl {
+      font-size: rem(14);
+      font-weight: 400;
+      color: #171820;
+      margin-bottom: 10px;
+    }
+  }
+
+  .left-wrap {
+    width: 50%;
+
+    .biz-logo-wrap {
+      margin-bottom: 30px;
+    }
+  }
+
+  .right-wrap {
+    width: 50%;
+  }
+}
+
+// END startup - EtprDefaultInfo
+
