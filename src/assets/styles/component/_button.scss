@@ -428,6 +428,13 @@
   }
 }
 
+/* 버튼 포지션 센터일 때 */
+[position="single-centered"]{
+  display: block;
+  margin: 0 auto;
+  max-width: 235px;
+}
+
 /* 뱃지 스타일 */
 .badge-rounded{
   background-color: #DFFFE8;
