@@ -176,32 +176,31 @@
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
                 <span>기업 기본정보</span>
-                
-        <div class="hover-desc">
-          <span
-            class="hover-overlay mb-show"
-            :class="{'is-show': mbMdOptions2.visible}"
-            @click="mbMdClose('question')"
-          />
+                <div class="hover-desc">
+                  <span
+                    class="hover-overlay mb-show"
+                    :class="{'is-show': mbMdOptions2.visible}"
+                    @click="mbMdClose('question')"
+                  />
 
-          <div
-            class="badge-qus"
-            @click="mbMdOpen('question')"
-          >
-            <span class="is-voice-only">도움말</span>
-          </div>
+                  <div
+                    class="badge-qus"
+                    @click="mbMdOpen('question')"
+                  >
+                    <span class="is-voice-only">도움말</span>
+                  </div>
 
-          <div
-            class="hover-desc-box"
-            :class="{'is-show' : mbMdOptions2.visible}"
-          >
-            <span class="ttl">토글 제목</span>
+                  <div
+                    class="hover-desc-box"
+                    :class="{'is-show' : mbMdOptions2.visible}"
+                  >
+                    <span class="ttl">토글 제목</span>
 
-            <p class="desc">
-              해당 토글 내용
-            </p>
-          </div>
-        </div>
+                    <p class="desc">
+                      해당 토글 내용
+                    </p>
+                  </div>
+                </div>
                     <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
                 <p class="badge green">{{'팩트체커 업데이트  2020.00.00'}}</p>
               </div>
@@ -257,7 +256,31 @@
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
                 <span>기업가치</span>
-                컴포넌트에서 가져오기
+                <div class="hover-desc">
+                  <span
+                    class="hover-overlay mb-show"
+                    :class="{'is-show': mbMdOptions2.visible}"
+                    @click="mbMdClose('question')"
+                  />
+
+                  <div
+                    class="badge-qus"
+                    @click="mbMdOpen('question')"
+                  >
+                    <span class="is-voice-only">도움말</span>
+                  </div>
+
+                  <div
+                    class="hover-desc-box"
+                    :class="{'is-show' : mbMdOptions2.visible}"
+                  >
+                    <span class="ttl">토글 제목</span>
+
+                    <p class="desc">
+                      해당 토글 내용
+                    </p>
+                  </div>
+                </div>
                     <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
                 <p class="badge yellow">{{'자사 업데이트  2020.00.00'}}</p>
               </div>
@@ -278,7 +301,31 @@
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
                 <span>규모</span>
-                컴포넌트에서 가져오기
+                <div class="hover-desc">
+                  <span
+                    class="hover-overlay mb-show"
+                    :class="{'is-show': mbMdOptions2.visible}"
+                    @click="mbMdClose('question')"
+                  />
+
+                  <div
+                    class="badge-qus"
+                    @click="mbMdOpen('question')"
+                  >
+                    <span class="is-voice-only">도움말</span>
+                  </div>
+
+                  <div
+                    class="hover-desc-box"
+                    :class="{'is-show' : mbMdOptions2.visible}"
+                  >
+                    <span class="ttl">토글 제목</span>
+
+                    <p class="desc">
+                      해당 토글 내용
+                    </p>
+                  </div>
+                </div>
                     <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
                 <p class="badge">{{'팩트체커 업데이트  2020.00.00'}}</p>
               </div>
@@ -321,7 +368,7 @@
                     <li class="common-info-list scale-list">
                       <h4 class="ttl">종업원 수</h4>
                       <div class="dec">
-                        <span class="comment">(기준일 : 2000.00.00)</span>
+                        <span class="comment">(기준일 : {{'2000.00.00'}})</span>
                         {{'-'}} 명
                       </div>
                     </li>
@@ -332,7 +379,31 @@
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
                 <span>주주정보</span>
-                컴포넌트에서 가져오기
+                <div class="hover-desc">
+                  <span
+                    class="hover-overlay mb-show"
+                    :class="{'is-show': mbMdOptions2.visible}"
+                    @click="mbMdClose('question')"
+                  />
+
+                  <div
+                    class="badge-qus"
+                    @click="mbMdOpen('question')"
+                  >
+                    <span class="is-voice-only">도움말</span>
+                  </div>
+
+                  <div
+                    class="hover-desc-box"
+                    :class="{'is-show' : mbMdOptions2.visible}"
+                  >
+                    <span class="ttl">토글 제목</span>
+
+                    <p class="desc">
+                      해당 토글 내용
+                    </p>
+                  </div>
+                </div>
                     <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
                 <p class="badge yellow">{{'팩트체커 업데이트  2020.00.00'}}</p>
               </div>
@@ -341,14 +412,38 @@
                   <p class="common-info-graph">주주정보 들어옵니다.</p>
                 </div>
               </div>
-              <div class="bot-txt">결산 기준일 : 2021.00.00</div>
+              <div class="bot-txt">결산 기준일 : {{'2021.00.00'}}</div>
             </div>
           </div>
           <div class="flexable-container">
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
                 <span>재무상태</span>
-                컴포넌트에서 가져오기
+                <div class="hover-desc">
+                  <span
+                    class="hover-overlay mb-show"
+                    :class="{'is-show': mbMdOptions2.visible}"
+                    @click="mbMdClose('question')"
+                  />
+
+                  <div
+                    class="badge-qus"
+                    @click="mbMdOpen('question')"
+                  >
+                    <span class="is-voice-only">도움말</span>
+                  </div>
+
+                  <div
+                    class="hover-desc-box"
+                    :class="{'is-show' : mbMdOptions2.visible}"
+                  >
+                    <span class="ttl">토글 제목</span>
+
+                    <p class="desc">
+                      해당 토글 내용
+                    </p>
+                  </div>
+                </div>
                     <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
                 <p class="badge yellow">{{'팩트체커 업데이트  2020.00.00'}}</p>
               </div>
@@ -357,12 +452,36 @@
                   <p class="common-info-graph">재무상태 들어옵니다.</p>
                 </div>
               </div>
-              <div class="bot-txt">결산 기준일 : 2021.00.00</div>
+              <div class="bot-txt">단위 : 원</div>
             </div>
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
                 <span>손익계산서</span>
-                컴포넌트에서 가져오기
+                <div class="hover-desc">
+                  <span
+                    class="hover-overlay mb-show"
+                    :class="{'is-show': mbMdOptions2.visible}"
+                    @click="mbMdClose('question')"
+                  />
+
+                  <div
+                    class="badge-qus"
+                    @click="mbMdOpen('question')"
+                  >
+                    <span class="is-voice-only">도움말</span>
+                  </div>
+
+                  <div
+                    class="hover-desc-box"
+                    :class="{'is-show' : mbMdOptions2.visible}"
+                  >
+                    <span class="ttl">토글 제목</span>
+
+                    <p class="desc">
+                      해당 토글 내용
+                    </p>
+                  </div>
+                </div>
                     <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
                 <p class="badge yellow">{{'팩트체커 업데이트  2020.00.00'}}</p>
               </div>
@@ -371,14 +490,38 @@
                   <p class="common-info-graph">손익계산서 들어옵니다.</p>
                 </div>
               </div>
-              <div class="bot-txt">결산 기준일 : 2021.00.00</div>
+              <div class="bot-txt">단위 : 원</div>
             </div>
           </div>
           <div class="flexable-container split3">
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
                 <span>매출 추이</span>
-                컴포넌트에서 가져오기
+                <div class="hover-desc">
+                  <span
+                    class="hover-overlay mb-show"
+                    :class="{'is-show': mbMdOptions2.visible}"
+                    @click="mbMdClose('question')"
+                  />
+
+                  <div
+                    class="badge-qus"
+                    @click="mbMdOpen('question')"
+                  >
+                    <span class="is-voice-only">도움말</span>
+                  </div>
+
+                  <div
+                    class="hover-desc-box"
+                    :class="{'is-show' : mbMdOptions2.visible}"
+                  >
+                    <span class="ttl">토글 제목</span>
+
+                    <p class="desc">
+                      해당 토글 내용
+                    </p>
+                  </div>
+                </div>
                     <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
                 <p class="badge yellow">{{'팩트체커 업데이트  2020.00.00'}}</p>
               </div>
@@ -387,12 +530,36 @@
                   <p class="common-info-graph">매출 추이 들어옵니다.</p>
                 </div>
               </div>
-              <div class="bot-txt">결산 기준일 : 2021.00.00</div>
+              <div class="bot-txt">단위 : 원</div>
             </div>
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
                 <span>영업이익 추이</span>
-                컴포넌트에서 가져오기
+                <div class="hover-desc">
+                  <span
+                    class="hover-overlay mb-show"
+                    :class="{'is-show': mbMdOptions2.visible}"
+                    @click="mbMdClose('question')"
+                  />
+
+                  <div
+                    class="badge-qus"
+                    @click="mbMdOpen('question')"
+                  >
+                    <span class="is-voice-only">도움말</span>
+                  </div>
+
+                  <div
+                    class="hover-desc-box"
+                    :class="{'is-show' : mbMdOptions2.visible}"
+                  >
+                    <span class="ttl">토글 제목</span>
+
+                    <p class="desc">
+                      해당 토글 내용
+                    </p>
+                  </div>
+                </div>
                     <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
                 <p class="badge yellow">{{'팩트체커 업데이트  2020.00.00'}}</p>
               </div>
@@ -401,12 +568,36 @@
                   <p class="common-info-graph">영업이익 추이 들어옵니다.</p>
                 </div>
               </div>
-              <div class="bot-txt">결산 기준일 : 2021.00.00</div>
+              <div class="bot-txt">단위 : 원</div>
             </div>
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
                 <span>당기순이익 추이</span>
-                컴포넌트에서 가져오기
+                <div class="hover-desc">
+                  <span
+                    class="hover-overlay mb-show"
+                    :class="{'is-show': mbMdOptions2.visible}"
+                    @click="mbMdClose('question')"
+                  />
+
+                  <div
+                    class="badge-qus"
+                    @click="mbMdOpen('question')"
+                  >
+                    <span class="is-voice-only">도움말</span>
+                  </div>
+
+                  <div
+                    class="hover-desc-box"
+                    :class="{'is-show' : mbMdOptions2.visible}"
+                  >
+                    <span class="ttl">토글 제목</span>
+
+                    <p class="desc">
+                      해당 토글 내용
+                    </p>
+                  </div>
+                </div>
                     <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
                 <p class="badge yellow">{{'팩트체커 업데이트  2020.00.00'}}</p>
               </div>
@@ -415,11 +606,196 @@
                   <p class="common-info-graph">당기순이익 추이 들어옵니다.</p>
                 </div>
               </div>
-              <div class="bot-txt">결산 기준일 : 2021.00.00</div>
+              <div class="bot-txt">단위 : 원</div>
             </div>
           </div>
         </div>
         <!-- END 상세정보 -->
+        <!-- 투자유치 -->
+        <div class="etpr-main-conts">
+          <h2 class="section-ttl">
+            투자유치 
+            <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
+            <p class="badge green">{{'팩트체커 업데이트  2020.00.00'}}</p>
+          </h2>
+          <div class="top-cont-wrap">
+            <div class="invest-list">
+              <div class="ttl">최종투자단계</div>
+              <div class="dec">{{'serues E (추정)'}}</div>
+            </div>
+            <div class="invest-list">
+              <div class="ttl">누적투자유치금액</div>
+              <div class="dec">{{'88.8억'}}</div>
+            </div>
+            <div class="invest-list">
+              <div class="ttl">투자유치횟수</div>
+              <div class="dec">{{'8'}}</div>
+            </div>
+          </div>
+          <div class="white-panel">
+            투자유치 들어옵니다.
+          </div>
+        </div>
+        <!-- END 투자유치 -->
+        <!-- 보유특허 -->
+        <div class="etpr-main-conts">
+          <h2 class="section-ttl">
+            보유특허 
+            <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
+            <p class="badge green">{{'팩트체커 업데이트  2020.00.00'}}</p>
+          </h2>
+          <div class="top-txt">총 <span>{{'5'}}</span>개</div>
+          <empty-contents txt="내용이 없습니다." />
+          <div class="white-panel">
+            보유특허 들어옵니다.
+          </div>
+        </div>
+        <!-- END 보유특허 -->
+        <!-- 구성원 -->
+        <div class="etpr-main-conts">
+          <h2 class="section-ttl">
+            구성원 
+            <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
+            <p class="badge green">{{'팩트체커 업데이트  2020.00.00'}}</p>
+          </h2>
+          <!-- 구성원 명수 표시 -->
+          <div class="member-list-grp-ttl">
+            <p class="txt">
+              총 <span class="bold">0</span>명
+            </p>
+          </div>
+          <!-- // 구성원 명수 표시 -->
+
+          <!-- 구성원이 없을 때 -->
+          <empty-contents txt="내용이 없습니다." />
+          <!-- // 구성원이 없을 때 -->
+          <!-- 구성원이 있을 때 -->
+          <div class="member-list-grp">
+            <div
+              v-for="(item, index) in 2"
+              :key="index"
+              class="member-list"
+            >
+              <avatar />
+              <article class="member-info">
+                <div class="account-info">
+                  <h5 class="name">
+                    {{ '김철수' }}
+                  </h5>
+                  <span class="mail">{{ 'email@email.com' }}</span>
+                  <dl class="dlist">
+                    <dt class="lbel">
+                      키포인트
+                    </dt>
+                    <dd class="txt">
+                      {{ '키포인트 텍스트' }}
+                    </dd>
+                  </dl>
+                </div>
+
+                <ul class="ul-bullet">
+                  <li class="list">
+                    {{ '이력사항 텍스트' }}
+                  </li>
+                  <li class="list">
+                    {{ '이력사항 텍스트' }}
+                  </li>
+                  <li class="list">
+                    {{ '이력사항 텍스트' }}
+                  </li>
+                </ul>
+              </article>
+
+              <div class="member-btn-grp btn-grp">
+                <btn-bd-light
+                  class="btn-rounded btn-xsm btn-edit-ctrl"
+                >
+                  <i class="icon icon-pen" />
+                  <span class="txt">수정</span>
+                </btn-bd-light>
+                
+
+                <btn-bd-light
+                  class="btn-rounded btn-xsm btn-edit-ctrl"
+                >
+                  <i class="icon icon-trash" />
+                  <span class="txt">삭제</span>
+                </btn-bd-light>
+              </div>
+            </div>
+          </div>
+          <!-- // 구성원이 있을 때 -->
+        </div>
+        <!-- END 구성원 -->
+        <!-- 관련 소식 -->
+        <div class="etpr-main-conts">
+          <h2 class="section-ttl">
+            관련 소식 
+          </h2>
+          <empty-contents txt="내용이 없습니다." />
+          <div class="flexable-container split6">
+            <div class="flexable-inner">
+              <div class="card-news">  
+                <div class="card-thumb card-thumb-lg">
+                  <thumbnail />
+                </div>
+                <a href="#" target="_blank" class="card-text">
+                  <span class="name">news</span>
+                  <div class="ttl">{{'뉴스 이미지 없을 시, 디폴트 이미지 처리합니다.'}}</div>
+                  <div class="dec">
+                    {{'뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목...'}}
+                  </div>
+                  <div class="date">{{'2021.00.00  00:00'}}</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END 관련 소식 -->
+        <!-- 투자자 리뷰 -->
+        <div class="etpr-main-conts">
+          <h2 class="section-ttl">
+            투자자 리뷰
+            <div class="ttl-dec">
+              <span class="txt">5가지 항목에 적용된 종합 점수입니다.</span>
+              <div class="hover-desc">
+                <span
+                  class="hover-overlay mb-show"
+                  :class="{'is-show': mbMdOptions2.visible}"
+                  @click="mbMdClose('question')"
+                />
+
+                <div
+                  class="badge-qus"
+                  @click="mbMdOpen('question')"
+                >
+                  <span class="is-voice-only">도움말</span>
+                </div>
+
+                <div
+                  class="hover-desc-box"
+                  :class="{'is-show' : mbMdOptions2.visible}"
+                >
+                  <span class="ttl">토글 제목</span>
+
+                  <p class="desc">
+                    해당 토글 내용
+                  </p>
+                </div>
+              </div>
+            </div>
+          </h2>
+          <div class="member-list-grp-ttl">
+            <p class="txt">
+              총 <span class="bold">0</span>개
+            </p>
+          </div>
+          <empty-contents txt="내용이 없습니다." />
+          <div class="white-panel">
+            투자자 리뷰 들어옵니다.
+          </div>
+        </div>
+        <!-- END 투자자 리뷰 -->
       </div>
       <!-- END 정보 영역 -->
       <layout-footer />
@@ -430,7 +806,7 @@
 <script>
 export default {
   name: 'EtprProfileBoard',
-  date() {
+  data() {
     return {
       mbMdOptions1: {
         visible: false,
