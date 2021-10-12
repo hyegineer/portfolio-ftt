@@ -20,7 +20,7 @@
 
 
 // myinfo-main
-.myinfo-page {
+.myinfo-page-container {
 
   .mypage-card {
     display: flex;
@@ -106,7 +106,7 @@
 // END myinfo-main
 
 // myinfo-edit
-.myinfo-edit-page {
+.myinfo-edit-page-container {
   
   .mypage-card {
     background-color: #fff;
@@ -120,8 +120,7 @@
 // END myinfo-edit
 
 // myinfo-leave
-.myinfo-leave-page {
-  // background-color: #fff;
+.myinfo-leave-page-container {
 
   .mypage-card {
     background-color: #fff;
@@ -196,12 +195,12 @@
 // END myinfo-leave
 
 // waiting-main
-.waiting-page {
+.waiting-page-container {
 
   .waiting-cont-wrap {
-    // background-color: #fff;
+    background-color: #fff;
     text-align: center;
-    padding: 40px 0;
+    padding: 40px 20px;
   }
 
   .cont-ment {
@@ -218,12 +217,24 @@
 
   .process-ment {
     font-size: rem(12);
-    font-weight: 500;
+    font-weight: 600;
     color: #8E909F;
     margin-bottom: 20px;
   }
+
+  .cont-ment-sub {
+    padding-top: 30px;
+    font-size: rem(15);
+    color: #5C5E70;
+    font-weight: 400;
+    line-height: 1.35;
+  }
+
+  .btn-wrap {
+
+    .btn {
+      margin: 5px 0;
+    }
+  }
 }
-
-
-
 // END waiting-main
