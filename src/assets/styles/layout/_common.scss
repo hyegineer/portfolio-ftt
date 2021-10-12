@@ -1563,3 +1563,115 @@
     }
   }
 }
+
+// 구성요소 complete 시 안내박스
+.state-guide-box{
+  text-align: center;
+  color: #171820;
+
+  .state-img{
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .state-ttl{
+    font-size: 29px;
+    line-height: 1.3;
+  }
+
+  .state-desc{
+    font-size: 15px;
+    margin-top: 5px;
+    line-height: 1.4;
+  }
+}
+
+// 구성요소 팩트체크 인트로 박스
+.ftck-intro-box{
+  background-color: #171820;
+  color: white;
+  text-align: left;
+  padding: 40px;
+  margin-bottom: 10px;
+
+  .check-badge{
+    margin-bottom: 6px;
+    margin-top: 20px;
+  }
+
+  .ttl{
+    @include font-op($w: 600, $c: white){
+      font-size: 20px;
+    }
+
+    line-height: 1.5;
+
+    .point-color{
+      color: #00eb79;
+    }
+  }
+
+  .ttl-lg{
+    font-size: 25px;
+  }
+
+  .inp-sch-grp{
+    margin-top: 30px;
+    max-width: 505px;
+
+    .inp{
+      border-color: #00eb79;
+    }
+  }
+}
+
+// 구성요소 팩트체크 리스트
+.ftck-list-grp{
+  border-top: 0;
+
+  .empty-wrap{
+    padding: 60px 0 50px;
+  }
+
+  .board-list{
+    margin-bottom: 10px;
+    background-color: white;
+    border: 0;
+  }
+
+  .board-list.is-secret{
+    .subject{
+      color: #8E909F;
+    }
+  }
+
+  .ftck-state{
+    @include flex{
+      @include flex-op(center, flex-start)
+    };
+
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .ftck-subject{
+    @include flex{
+      @include flex-op(center, flex-start)
+    };
+
+    gap: 8px;
+
+    .lbel{
+      color: #8E909F;
+      padding-top: 3px;
+      flex-shrink: 0;
+    }
+
+    .subject{
+      @include ellipse(1, 18px);
+      @include font-op($c: #171820, $w: 500){
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -8,6 +8,10 @@
     color: #171820;
     text-align: center;
     margin-bottom: 15px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
   }
 
   .ttl-sub {
