@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="badge-state-wrap">
     <div
       v-if="['대기중', '보완요청'].includes(txt)"
       class="badge-state color-bd-gray"

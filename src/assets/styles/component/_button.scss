@@ -467,6 +467,11 @@
   }
 }
 
+.badge-state-wrap{
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .badge-state{
   cursor: default;
   background-color: #171820;

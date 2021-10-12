@@ -64,7 +64,11 @@
       <!-- // 팩트체크 인트로박스 -->
 
       <div class="ftck-list-grp">
-        <div class="ftck-list" />
+        <div class="ftck-list">
+          <div class="subject-grp">
+            <badge-state txt="진행중" />
+          </div>
+        </div>
       </div>
     </div>
     <!-- // 마이페이지 컨텐츠 영역 -->
