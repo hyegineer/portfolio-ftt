@@ -1,0 +1,74 @@
+// 마이페이지 > 팩트체크 > 팩트체커 신청 
+.ftck-card{
+  background-color: white;
+  padding: 40px;
+
+  @at-root .mypage-cont-wrap &{
+    margin-bottom: 100px;
+  }
+}
+
+.ftck-card-cont{
+  width: 100%;
+  border-bottom: 1px solid #DDDEE6; 
+  margin-bottom: 40px;
+  text-align: left;
+  padding-bottom: 40px;
+  position: relative;
+
+  .img-checker{
+    @include absolute($b: 0, $r: 0);
+
+    z-index: 0;
+    pointer-events: none;
+  }
+}
+
+.ftck-section{
+  margin-bottom: 50px;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  .hgrp{
+    margin-bottom: 18px;
+
+    .sub-ttl{
+      display: inline-block;
+      margin-bottom: 7px;
+    }
+
+    .ttl{
+      @include font-op($w: 500){
+        font-size: 20px;
+      }
+
+      line-height: 1.4;
+    }
+  }
+
+  .ftck-section-txt{
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+// 마이페이지 > 팩트체크 > 팩트체커 신청 > 신청서 작성
+.mypage-ftck-apply-create-page{
+  .ftck-auth-form-area{
+    max-width: 380px;
+    margin: 0 auto;
+
+    & > .btn-grp{
+      margin-top: 60px;
+    }
+  }
+}
+
+// 마이페이지 > 팩트체크 > 팩트체커 신청 > 신청서 작성완료
+.mypage-ftck-apply-complete-page{
+  .state-guide-box{
+    margin-bottom: 40px;
+  }
+}
