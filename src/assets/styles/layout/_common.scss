@@ -13,6 +13,7 @@
   .empty-txt{
     @include font-op($c: #8E909F){
       font-size: 15px;
+      line-height: 1.35;
     };
   }
 }
