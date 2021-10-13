@@ -682,7 +682,7 @@
           </div>
         </div>
 
-        <h2>8-1. 아바타 + 회사정보 (크게)</h2>
+        <h2>8-1. 아바타 + 회사정보(크게)</h2>
         <div class="avatar-with-name">
           <avatar class="avatar-lg" />
           <div class="name-grp name-grp-lg">
@@ -710,6 +710,17 @@
           <div class="name-grp">
             <span class="name-user-type">개인 투자자</span>
             <span class="name">
+              주식회사 팩트컴퍼니
+            </span>
+          </div>
+        </div>
+
+        <h2>8-2. 아바타 + 투자자 타입(크게)</h2>
+        <div class="avatar-with-name">
+          <avatar class="avatar-lg" />
+          <div class="name-grp name-grp-lg">
+            <span class="name-user-type name-user-type-lg">개인 투자자</span>
+            <span class="name name-lg">
               주식회사 팩트컴퍼니
             </span>
           </div>
@@ -1760,9 +1771,11 @@
         <h2>17-1. overflow + custom-scroll</h2>
         <div class="table-all-wrap">
           <!-- 테이블 타이틀 -->
-          <p class="table-ttl">
-            주주정보
-          </p>
+          <div class="ttl-wrap">
+            <p class="table-ttl">
+              주주정보
+            </p>
+          </div>
           <!-- END 테이블 타이틀 -->
 
           <div class="table-grp">
@@ -1790,6 +1803,17 @@
             <!-- END 테이블 헤더 그룹 -->
 
             <!-- 테이블 내용 그룹 -->
+            <!-- 내용이 없을 때 -->
+            <div
+              class="table-cont-wrap empty-cont-wrap"
+            >
+              <p class="empty-ment">
+                내용이 없습니다.
+              </p>
+            </div>
+            <!-- END 내용이 없을 때 -->
+
+            <!-- 내용이 있을 때 -->
             <div
               class="table-cont-wrap custom-scroll-wrap"
             >
@@ -1818,6 +1842,8 @@
                 </li>
               </ul>
             </div>
+            <!-- END 내용이 있을 때 -->
+
             <!-- END 테이블 내용 그룹 -->
           </div>
         </div>
@@ -1827,9 +1853,11 @@
         <h2>17-2. no overflow + bold 처리(개별 클래스로 처리)</h2>
         <div class="table-all-wrap">
           <!-- 테이블 타이틀 -->
-          <p class="table-ttl">
-            재무상태
-          </p>
+          <div class="ttl-wrap">
+            <p class="table-ttl">
+              재무상태
+            </p>
+          </div>
           <!-- END 테이블 타이틀 -->
 
           <div class="table-grp">
@@ -1851,6 +1879,17 @@
             <!-- END 테이블 헤더 그룹 -->
 
             <!-- 테이블 내용 그룹 -->
+            <!-- 내용이 없을 때 -->
+            <div
+              class="table-cont-wrap empty-cont-wrap"
+            >
+              <p class="empty-ment">
+                내용이 없습니다.
+              </p>
+            </div>
+            <!-- END 내용이 없을 때 -->
+
+            <!-- 내용이 있을 때 -->
             <div
               class="table-cont-wrap"
             >
@@ -2047,6 +2086,8 @@
                 </li>
               </ul>
             </div>
+            <!-- END 내용이 있을 때 -->
+
             <!-- END 테이블 내용 그룹 -->
           </div>
         </div>

@@ -193,7 +193,7 @@
           </div>
         </div>
 
-        <div class="article-wrap">
+        <div class="article-wrap border-remove">
           <div class="info-grp">
             <p class="label">
               설립일
