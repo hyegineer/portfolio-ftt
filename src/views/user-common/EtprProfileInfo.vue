@@ -575,7 +575,7 @@
               </div>
             </div>
           </div>
-          <div class="flexable-container">
+          <div class="flexable-container pdt-60">
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
                 <span>재무상태</span>
@@ -665,7 +665,7 @@
               </div>
             </div>
           </div>
-          <div class="flexable-container split3">
+          <div class="flexable-container split3 pdt-60">
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
                 <span>매출 추이</span>
