@@ -1,3 +1,5 @@
+/* ========== 아바타 관련 스타일 ========== */
+
 .avatar{
   @include circle(40px);
   border: 1px solid #DDDEE6;
@@ -42,5 +44,116 @@
   }
 }
 
-.thumbnail.is-lg{
+.avatar-with-name{ // 구성요소: 아바타 + 이름정보
+  @include flex{
+    @include flex-op(center, flex-start);
+  }
+
+  .avatar{
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+
+  .name{
+    @include ellipse(1, 15px);
+    @include font-op($w: 400, $c: #171820){
+      font-size: 14px;
+    }
+
+    -webkit-text-stroke: 0.5px #171820;
+
+    &.name-lg {
+      @include ellipse(1, 20px);
+      @include font-op($w: 400, $c: #171820){
+        font-size: 20px;
+      }
+    }
+  }
+
+  .name-grp{
+    @include flex{
+      @include flex-op(flex-start, center);
+    }
+
+    flex-direction: column;
+    gap: 6px;
+
+    &.name-grp-lg {
+      gap: 10px;
+    }
+  }
+
+  .name-user-type{
+    @include font-op($w: 300, $c: #8e909f){
+      font-size: 12px;
+    }
+
+    -webkit-text-stroke: 0.5px #8e909f;
+    margin-bottom: 2px;
+  }
+
+  .name-subtxt-grp{
+    @include ellipse(1, 14px);
+    @include font-op($w: 300, $c: #8e909f){
+      font-size: 12px;
+    }
+
+    -webkit-text-stroke: 0.5px #8e909f;
+    display: inline-block;
+    width: 100%;
+    
+    &.name-subtxt-grp-lg {
+      @include ellipse(1, 14px);
+      @include font-op($w: 300, $c: #8e909f){
+        font-size: 14px;
+      }
+    }
+  }
+
+  .name-subtxt-list{
+    display: inline;
+    position: relative;
+    margin-right: 1.5px;
+    padding-right: 6px;
+
+    @include make-after('·'){
+      @include absolute($t: 0, $r: 0);
+      display: inline-block;
+      transform: translateX(-1px);
+    };
+
+    &:last-child{
+      margin-right: 0;
+
+      &:after{
+        content: '';
+      }
+    }
+  }
 }
+
+.col-avatar-with-name{ // 구성요소: 아바타 + 이름정보 세로버전
+  @include flex-op(flex-start, center);
+
+  flex-direction: column;
+  display: inline-flex;
+
+  .avatar{
+    margin: 0 auto 10px;
+  }
+
+  .name-grp{
+    text-align: center;
+  }
+
+  .name{
+    width: 100%;
+  }
+
+  .name-subtxt-grp{
+    margin-top: 2.5px;
+    font-size: 11px;
+  }
+}
+
+/* ========== END 아바타 관련 스타일 ========== */

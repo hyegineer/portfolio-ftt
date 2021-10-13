@@ -40,8 +40,8 @@
             <!-- // 회사이름 -->
 
             <div class="mypboard-etc-grp">
-              <span class="gray-txt-sm">받은 쪽지</span>
-              <span class="light-gray-txt-sm">2021.00.00</span>
+              <span class="fc-gray fz-13">받은 쪽지</span>
+              <span class="fc-gray-light fz-13">2021.00.00</span>
             </div>
           </div>
           <!-- // 제목 -->

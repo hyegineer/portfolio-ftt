@@ -1,0 +1,151 @@
+/* ========== 게시판 관련 스타일 ========== */
+
+.board-list-grp-ttl{ // 구성요소 - 게시판 list 갯수 알림
+  @include flex{
+    @include flex-op(center, flex-start);
+  }
+
+  margin-bottom: 15px;
+  color: #171820;
+  gap: 10px;
+
+  .txt{
+    font-size: 16px;
+    position: relative;
+
+    .bold{
+      font-weight: 300;
+      -webkit-text-stroke: 1px #171820;
+    }
+  }
+
+  .txt-right{
+    @include flex{
+      @include flex-op(center, flex-start);
+    }
+
+    margin-left: auto;
+    margin-right: 0;
+    gap: 10px;
+  }
+}
+
+.board-list-grp{ // 구성요소 - 게시판 list group
+  width: 100%;
+  border-top: 1px solid #171820;
+  margin-bottom: 60px;
+
+  .empty-wrap{
+    padding: 40px 0;
+  }
+}
+
+.board-list{ // 구성요소 - 게시판 list
+  @include flex{
+    @include flex-op(center, flex-start);
+  }
+
+  width: 100%;
+  border-bottom: 1px solid #DDDEE6;
+  color: #171820;
+  padding: 26px 40px;
+
+  &:hover{
+    // FIXME: 모바일일 때 제외해야할 수도
+    background-color: #F6FFFB;
+    cursor: pointer;
+  }
+
+  td{
+    padding: 0 10px;
+    flex-shrink: 0;
+  }
+
+  td:last-child{
+    padding-right: 0;
+  }
+  
+  .td-num{
+    min-width: 45px;
+    text-align: left;
+  }
+
+  .td-word-num{
+    font-size: 14px;
+    color: #8E909F;
+  }
+
+  .td-cat{
+    padding-right: 26px;
+  }
+
+  .td-word-cat{
+    font-size: 14px;
+    font-weight: 400;
+    -webkit-text-stroke: 0.5px #171820;
+  }
+
+  .td-subject{
+    flex: 1 1 auto;
+    width: 100%;
+    padding-top: 2.5px;
+  }
+
+  .td-word-subject{
+    @include ellipse(1, 19px);
+
+    font-size: 18px;
+  }
+
+  .td-word-writer{
+    font-size: 13px;
+    color: #8e909f;
+  }
+
+  .td-word-date{
+    font-size: 13px;
+    color: #B0B1BC;
+  }
+}
+
+.board-detail-nav{ // 구성요소: 게시판 하단 이전글 / 목록 / 다음글
+  @include flex-center;
+
+  margin-top: 40px;
+
+  .bnav-ctrl-list{
+    width: 100%;
+    max-width: 120px;
+  }
+
+  .bnav-ctrl{
+    @include flex-center;
+
+    display: inline-flex;
+    gap: 15px;
+    cursor: pointer;
+
+    .btn-square-bd{
+      width: 42px;
+      height: 40px;
+      border-color: #C3C3CE;
+    }
+
+    .txt{
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  .bnav-ctrl-prev{
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .bnav-ctrl-next{
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+/* ========== END 게시판 관련 스타일 ========== */

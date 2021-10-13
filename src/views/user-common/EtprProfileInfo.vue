@@ -2,59 +2,114 @@
   <div class="page etpr-prifile-page">
     <layout-header />
     <div class="page-container">
-        <div class="right-fixed">
-          <div class="fixed-con-container">
-            <div class="fixed-con-ttl">업데이트 내역 ({{'5'}})</div>
-            <div class="fixed-con-contents">
-              <div class="empty-conts">
-                <img src="@/assets/images/icon/icon-empty-update.svg" alt="업데이트 아이콘" />
-                <p class="txt">업데이트 내역이 없습니다.</p>
-              </div>
-              <ul class="fixed-conts-list-wrap">
-                <li class="fixed-con-list">
-                  <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
-                  <div class="badge green">{{'팩트체커'}}</div>
-                  <div class="date">{{'2021.00.00 00:00'}}</div>
-                  <ul class="info-list">
-                    <li class="info">{{'기업정보'}}</li>
-                    <li class="info">{{'재무상태'}}</li>
-                  </ul>
-                  <a href="#" target="_blank" class="view-link">+ 상세보기</a>
-                </li>
-                <li class="fixed-con-list">
-                  <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
-                  <div class="badge yellow">{{'자사'}}</div>
-                  <div class="date">{{'2021.00.00 00:00'}}</div>
-                  <ul class="info-list">
-                    <li class="info">{{'기업정보'}}</li>
-                    <li class="info">{{'재무상태'}}</li>
-                  </ul>
-                  <a href="#" target="_blank" class="view-link">+ 상세보기</a>
-                </li>
-                <li class="fixed-con-list">
-                  <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
-                  <div class="badge">{{'팩트체커'}}</div>
-                  <div class="date">{{'2021.00.00 00:00'}}</div>
-                  <ul class="info-list">
-                    <li class="info">{{'기업정보'}}</li>
-                    <li class="info">{{'재무상태'}}</li>
-                  </ul>
-                  <a href="#" target="_blank" class="view-link">+ 상세보기</a>
-                </li>
-                <li class="fixed-con-list">
-                  <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
-                  <div class="badge">{{'자사'}}</div>
-                  <div class="date">{{'2021.00.00 00:00'}}</div>
-                  <ul class="info-list">
-                    <li class="info">{{'기업정보'}}</li>
-                    <li class="info">{{'재무상태'}}</li>
-                  </ul>
-                  <a href="#" target="_blank" class="view-link">+ 상세보기</a>
-                </li>
-              </ul>
+      <div class="right-fixed">
+        <div class="fixed-con-container">
+          <div class="fixed-con-ttl">
+            업데이트 내역 ({{ '5' }})
+          </div>
+          <div class="fixed-con-contents">
+            <div class="empty-conts">
+              <img
+                src="@/assets/images/icon/icon-empty-update.svg"
+                alt="업데이트 아이콘"
+              >
+              <p class="txt">
+                업데이트 내역이 없습니다.
+              </p>
             </div>
+            <ul class="fixed-conts-list-wrap">
+              <li class="fixed-con-list">
+                <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
+                <div class="badge green">
+                  {{ '팩트체커' }}
+                </div>
+                <div class="date">
+                  {{ '2021.00.00 00:00' }}
+                </div>
+                <ul class="info-list">
+                  <li class="info">
+                    {{ '기업정보' }}
+                  </li>
+                  <li class="info">
+                    {{ '재무상태' }}
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="view-link"
+                >+ 상세보기</a>
+              </li>
+              <li class="fixed-con-list">
+                <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
+                <div class="badge yellow">
+                  {{ '자사' }}
+                </div>
+                <div class="date">
+                  {{ '2021.00.00 00:00' }}
+                </div>
+                <ul class="info-list">
+                  <li class="info">
+                    {{ '기업정보' }}
+                  </li>
+                  <li class="info">
+                    {{ '재무상태' }}
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="view-link"
+                >+ 상세보기</a>
+              </li>
+              <li class="fixed-con-list">
+                <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
+                <div class="badge">
+                  {{ '팩트체커' }}
+                </div>
+                <div class="date">
+                  {{ '2021.00.00 00:00' }}
+                </div>
+                <ul class="info-list">
+                  <li class="info">
+                    {{ '기업정보' }}
+                  </li>
+                  <li class="info">
+                    {{ '재무상태' }}
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="view-link"
+                >+ 상세보기</a>
+              </li>
+              <li class="fixed-con-list">
+                <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
+                <div class="badge">
+                  {{ '자사' }}
+                </div>
+                <div class="date">
+                  {{ '2021.00.00 00:00' }}
+                </div>
+                <ul class="info-list">
+                  <li class="info">
+                    {{ '기업정보' }}
+                  </li>
+                  <li class="info">
+                    {{ '재무상태' }}
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="view-link"
+                >+ 상세보기</a>
+              </li>
+            </ul>
           </div>
         </div>
+      </div>
       <div class="wide-panel">
         <breadcrumb>
           <li class="txt">
@@ -171,7 +226,9 @@
       <div class="wide-panel">
         <!-- 기업정보 -->
         <div class="etpr-main-conts">
-          <h2 class="section-ttl">기업정보</h2>
+          <h2 class="section-ttl">
+            기업정보
+          </h2>
           <div class="flexable-container">
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
@@ -201,52 +258,96 @@
                     </p>
                   </div>
                 </div>
-                    <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-                <p class="badge green">{{'팩트체커 업데이트  2020.00.00'}}</p>
+                <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
+                <p class="badge green">
+                  {{ '팩트체커 업데이트  2020.00.00' }}
+                </p>
               </div>
               <div class="white-panel">
                 <div class="common-info-container">
                   <ul class="common-info-list-wrap">
                     <!-- TODO: 정보가 없는 곳은 전부 - 로 표시 -->
                     <li class="common-info-list">
-                      <h4 class="ttl">대표자</h4>
-                      <div class="dec">{{'홍길동'}}</div>
+                      <h4 class="ttl">
+                        대표자
+                      </h4>
+                      <div class="dec">
+                        {{ '홍길동' }}
+                      </div>
                     </li>
                     <li class="common-info-list">
-                      <h4 class="ttl">사업자번호</h4>
-                      <div class="dec">{{'000-00-00***'}}</div>
+                      <h4 class="ttl">
+                        사업자번호
+                      </h4>
+                      <div class="dec">
+                        {{ '000-00-00***' }}
+                      </div>
                     </li>
                     <li class="common-info-list">
-                      <h4 class="ttl">본사주소</h4>
-                      <div class="dec">{{'서울특별시 강남구 테헤란로 312 13층 주소길어지면 최대 2줄 (우편번호)'}}</div>
+                      <h4 class="ttl">
+                        본사주소
+                      </h4>
+                      <div class="dec">
+                        {{ '서울특별시 강남구 테헤란로 312 13층 주소길어지면 최대 2줄 (우편번호)' }}
+                      </div>
                     </li>
                     <li class="common-info-list">
-                      <h4 class="ttl">전화번호</h4>
-                      <div class="dec">{{'02-1234-5678'}}</div>
+                      <h4 class="ttl">
+                        전화번호
+                      </h4>
+                      <div class="dec">
+                        {{ '02-1234-5678' }}
+                      </div>
                     </li>
                     <li class="common-info-list">
-                      <h4 class="ttl">기업규모</h4>
-                      <div class="dec">{{'소기업'}}</div>
+                      <h4 class="ttl">
+                        기업규모
+                      </h4>
+                      <div class="dec">
+                        {{ '소기업' }}
+                      </div>
                     </li>
                     <li class="common-info-list">
-                      <h4 class="ttl">산업분류</h4>
-                      <div class="dec">{{'ICT 서비스'}}</div>
+                      <h4 class="ttl">
+                        산업분류
+                      </h4>
+                      <div class="dec">
+                        {{ 'ICT 서비스' }}
+                      </div>
                     </li>
                     <li class="common-info-list">
-                      <h4 class="ttl">산업분야</h4>
-                      <div class="dec">{{'-'}}</div>
+                      <h4 class="ttl">
+                        산업분야
+                      </h4>
+                      <div class="dec">
+                        {{ '-' }}
+                      </div>
                     </li>
                     <li class="common-info-list">
-                      <h4 class="ttl">설립일</h4>
-                      <div class="dec">{{'2021년 03월 10일'}}</div>
+                      <h4 class="ttl">
+                        설립일
+                      </h4>
+                      <div class="dec">
+                        {{ '2021년 03월 10일' }}
+                      </div>
                     </li>
                     <li class="common-info-list tag-list">
-                      <h4 class="ttl">태그</h4>
+                      <h4 class="ttl">
+                        태그
+                      </h4>
                       <div class="dec">
-                        <div class="tag-badge">태그최대여덟글자</div>
-                        <div class="tag-badge">태그최대</div>
-                        <div class="tag-badge">여덟글자</div>
-                        <div class="tag-badge">두줄까지표시가능</div>
+                        <div class="tag-badge">
+                          태그최대여덟글자
+                        </div>
+                        <div class="tag-badge">
+                          태그최대
+                        </div>
+                        <div class="tag-badge">
+                          여덟글자
+                        </div>
+                        <div class="tag-badge">
+                          두줄까지표시가능
+                        </div>
                       </div>
                     </li>
                   </ul>
@@ -281,22 +382,30 @@
                     </p>
                   </div>
                 </div>
-                    <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-                <p class="badge yellow">{{'자사 업데이트  2020.00.00'}}</p>
+                <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
+                <p class="badge yellow">
+                  {{ '자사 업데이트  2020.00.00' }}
+                </p>
               </div>
               <div class="white-panel">
                 <div class="common-info-container">
-                  <p class="common-info-graph">그래프 들어옵니다.</p>
+                  <p class="common-info-graph">
+                    그래프 들어옵니다.
+                  </p>
                 </div>
               </div>
-              <div class="bot-txt">투자자가 작성한 리뷰 기반의 평균 지수입니다.</div>
+              <div class="bot-txt">
+                투자자가 작성한 리뷰 기반의 평균 지수입니다.
+              </div>
             </div>
           </div>
         </div>
         <!-- END 기업정보 -->
         <!-- 상세정보 -->
         <div class="etpr-main-conts">
-          <h2 class="section-ttl">상세정보</h2>
+          <h2 class="section-ttl">
+            상세정보
+          </h2>
           <div class="flexable-container">
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
@@ -326,50 +435,86 @@
                     </p>
                   </div>
                 </div>
-                    <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-                <p class="badge">{{'팩트체커 업데이트  2020.00.00'}}</p>
+                <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
+                <p class="badge">
+                  {{ '팩트체커 업데이트  2020.00.00' }}
+                </p>
               </div>
               <div class="white-panel">
                 <div class="common-info-container">
                   <ul class="common-info-list-wrap">
                     <!-- TODO: 정보가 없는 곳은 전부 - 로 표시 -->
                     <li class="common-info-list scale-list">
-                      <h4 class="ttl">발행주식 수</h4>
-                      <div class="dec">{{'-'}} 주</div>
-                    </li>
-                    <li class="common-info-list scale-list">
-                      <h4 class="ttl">액면가</h4>
-                      <div class="dec">{{'-'}} 원</div>
-                    </li>
-                    <li class="common-info-list scale-list">
-                      <h4 class="ttl">자본금</h4>
-                      <div class="dec">{{'-'}} 원</div>
-                    </li>
-                    <li class="common-info-list scale-list">
-                      <h4 class="ttl">주주수</h4>
-                      <div class="dec">{{'-'}} 명</div>
-                    </li>
-                    <li class="common-info-list scale-list">
-                      <h4 class="ttl">대표보통주식주 비율</h4>
-                      <div class="dec">{{'-'}} %</div>
-                    </li>
-                    <li class="common-info-list scale-list">
-                      <h4 class="ttl">대표주주구분</h4>
-                      <div class="dec">{{'-'}}</div>
-                    </li>
-                    <li class="common-info-list scale-list">
-                      <h4 class="ttl">대표주주명</h4>
-                      <div class="dec">{{'-'}}</div>
-                    </li>
-                    <li class="common-info-list scale-list">
-                      <h4 class="ttl">대표지분율</h4>
-                      <div class="dec">{{'-'}} %</div>
-                    </li>
-                    <li class="common-info-list scale-list">
-                      <h4 class="ttl">종업원 수</h4>
+                      <h4 class="ttl">
+                        발행주식 수
+                      </h4>
                       <div class="dec">
-                        <span class="comment">(기준일 : {{'2000.00.00'}})</span>
-                        {{'-'}} 명
+                        {{ '-' }} 주
+                      </div>
+                    </li>
+                    <li class="common-info-list scale-list">
+                      <h4 class="ttl">
+                        액면가
+                      </h4>
+                      <div class="dec">
+                        {{ '-' }} 원
+                      </div>
+                    </li>
+                    <li class="common-info-list scale-list">
+                      <h4 class="ttl">
+                        자본금
+                      </h4>
+                      <div class="dec">
+                        {{ '-' }} 원
+                      </div>
+                    </li>
+                    <li class="common-info-list scale-list">
+                      <h4 class="ttl">
+                        주주수
+                      </h4>
+                      <div class="dec">
+                        {{ '-' }} 명
+                      </div>
+                    </li>
+                    <li class="common-info-list scale-list">
+                      <h4 class="ttl">
+                        대표보통주식주 비율
+                      </h4>
+                      <div class="dec">
+                        {{ '-' }} %
+                      </div>
+                    </li>
+                    <li class="common-info-list scale-list">
+                      <h4 class="ttl">
+                        대표주주구분
+                      </h4>
+                      <div class="dec">
+                        {{ '-' }}
+                      </div>
+                    </li>
+                    <li class="common-info-list scale-list">
+                      <h4 class="ttl">
+                        대표주주명
+                      </h4>
+                      <div class="dec">
+                        {{ '-' }}
+                      </div>
+                    </li>
+                    <li class="common-info-list scale-list">
+                      <h4 class="ttl">
+                        대표지분율
+                      </h4>
+                      <div class="dec">
+                        {{ '-' }} %
+                      </div>
+                    </li>
+                    <li class="common-info-list scale-list">
+                      <h4 class="ttl">
+                        종업원 수
+                      </h4>
+                      <div class="dec">
+                        <span class="comment">(기준일 : {{ '2000.00.00' }})</span>
+                        {{ '-' }} 명
                       </div>
                     </li>
                   </ul>
@@ -404,15 +549,21 @@
                     </p>
                   </div>
                 </div>
-                    <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-                <p class="badge yellow">{{'팩트체커 업데이트  2020.00.00'}}</p>
+                <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
+                <p class="badge yellow">
+                  {{ '팩트체커 업데이트  2020.00.00' }}
+                </p>
               </div>
               <div class="white-panel">
                 <div class="common-info-container">
-                  <p class="common-info-graph">주주정보 들어옵니다.</p>
+                  <p class="common-info-graph">
+                    주주정보 들어옵니다.
+                  </p>
                 </div>
               </div>
-              <div class="bot-txt">결산 기준일 : {{'2021.00.00'}}</div>
+              <div class="bot-txt">
+                결산 기준일 : {{ '2021.00.00' }}
+              </div>
             </div>
           </div>
           <div class="flexable-container">
@@ -444,15 +595,21 @@
                     </p>
                   </div>
                 </div>
-                    <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-                <p class="badge yellow">{{'팩트체커 업데이트  2020.00.00'}}</p>
+                <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
+                <p class="badge yellow">
+                  {{ '팩트체커 업데이트  2020.00.00' }}
+                </p>
               </div>
               <div class="white-panel">
                 <div class="common-info-container">
-                  <p class="common-info-graph">재무상태 들어옵니다.</p>
+                  <p class="common-info-graph">
+                    재무상태 들어옵니다.
+                  </p>
                 </div>
               </div>
-              <div class="bot-txt">단위 : 원</div>
+              <div class="bot-txt">
+                단위 : 원
+              </div>
             </div>
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
@@ -482,15 +639,21 @@
                     </p>
                   </div>
                 </div>
-                    <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-                <p class="badge yellow">{{'팩트체커 업데이트  2020.00.00'}}</p>
+                <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
+                <p class="badge yellow">
+                  {{ '팩트체커 업데이트  2020.00.00' }}
+                </p>
               </div>
               <div class="white-panel">
                 <div class="common-info-container">
-                  <p class="common-info-graph">손익계산서 들어옵니다.</p>
+                  <p class="common-info-graph">
+                    손익계산서 들어옵니다.
+                  </p>
                 </div>
               </div>
-              <div class="bot-txt">단위 : 원</div>
+              <div class="bot-txt">
+                단위 : 원
+              </div>
             </div>
           </div>
           <div class="flexable-container split3">
@@ -522,15 +685,21 @@
                     </p>
                   </div>
                 </div>
-                    <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-                <p class="badge yellow">{{'팩트체커 업데이트  2020.00.00'}}</p>
+                <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
+                <p class="badge yellow">
+                  {{ '팩트체커 업데이트  2020.00.00' }}
+                </p>
               </div>
               <div class="white-panel">
                 <div class="common-info-container">
-                  <p class="common-info-graph">매출 추이 들어옵니다.</p>
+                  <p class="common-info-graph">
+                    매출 추이 들어옵니다.
+                  </p>
                 </div>
               </div>
-              <div class="bot-txt">단위 : 원</div>
+              <div class="bot-txt">
+                단위 : 원
+              </div>
             </div>
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
@@ -560,15 +729,21 @@
                     </p>
                   </div>
                 </div>
-                    <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-                <p class="badge yellow">{{'팩트체커 업데이트  2020.00.00'}}</p>
+                <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
+                <p class="badge yellow">
+                  {{ '팩트체커 업데이트  2020.00.00' }}
+                </p>
               </div>
               <div class="white-panel">
                 <div class="common-info-container">
-                  <p class="common-info-graph">영업이익 추이 들어옵니다.</p>
+                  <p class="common-info-graph">
+                    영업이익 추이 들어옵니다.
+                  </p>
                 </div>
               </div>
-              <div class="bot-txt">단위 : 원</div>
+              <div class="bot-txt">
+                단위 : 원
+              </div>
             </div>
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
@@ -598,15 +773,21 @@
                     </p>
                   </div>
                 </div>
-                    <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-                <p class="badge yellow">{{'팩트체커 업데이트  2020.00.00'}}</p>
+                <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
+                <p class="badge yellow">
+                  {{ '팩트체커 업데이트  2020.00.00' }}
+                </p>
               </div>
               <div class="white-panel">
                 <div class="common-info-container">
-                  <p class="common-info-graph">당기순이익 추이 들어옵니다.</p>
+                  <p class="common-info-graph">
+                    당기순이익 추이 들어옵니다.
+                  </p>
                 </div>
               </div>
-              <div class="bot-txt">단위 : 원</div>
+              <div class="bot-txt">
+                단위 : 원
+              </div>
             </div>
           </div>
         </div>
@@ -616,20 +797,34 @@
           <h2 class="section-ttl">
             투자유치 
             <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-            <p class="badge green">{{'팩트체커 업데이트  2020.00.00'}}</p>
+            <p class="badge green">
+              {{ '팩트체커 업데이트  2020.00.00' }}
+            </p>
           </h2>
           <div class="top-cont-wrap">
             <div class="invest-list">
-              <div class="ttl">최종투자단계</div>
-              <div class="dec">{{'serues E (추정)'}}</div>
+              <div class="ttl">
+                최종투자단계
+              </div>
+              <div class="dec">
+                {{ 'serues E (추정)' }}
+              </div>
             </div>
             <div class="invest-list">
-              <div class="ttl">누적투자유치금액</div>
-              <div class="dec">{{'88.8억'}}</div>
+              <div class="ttl">
+                누적투자유치금액
+              </div>
+              <div class="dec">
+                {{ '88.8억' }}
+              </div>
             </div>
             <div class="invest-list">
-              <div class="ttl">투자유치횟수</div>
-              <div class="dec">{{'8'}}</div>
+              <div class="ttl">
+                투자유치횟수
+              </div>
+              <div class="dec">
+                {{ '8' }}
+              </div>
             </div>
           </div>
           <div class="white-panel">
@@ -642,9 +837,13 @@
           <h2 class="section-ttl">
             보유특허 
             <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-            <p class="badge green">{{'팩트체커 업데이트  2020.00.00'}}</p>
+            <p class="badge green">
+              {{ '팩트체커 업데이트  2020.00.00' }}
+            </p>
           </h2>
-          <div class="top-txt">총 <span>{{'5'}}</span>개</div>
+          <div class="top-txt">
+            총 <span>{{ '5' }}</span>개
+          </div>
           <empty-contents txt="내용이 없습니다." />
           <div class="white-panel">
             보유특허 들어옵니다.
@@ -656,7 +855,9 @@
           <h2 class="section-ttl">
             구성원 
             <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-            <p class="badge green">{{'팩트체커 업데이트  2020.00.00'}}</p>
+            <p class="badge green">
+              {{ '팩트체커 업데이트  2020.00.00' }}
+            </p>
           </h2>
           <!-- 구성원 명수 표시 -->
           <div class="member-list-grp-ttl">
@@ -739,13 +940,17 @@
                 <div class="card-thumb card-thumb-lg">
                   <thumbnail />
                 </div>
-                <a href="#" target="_blank" class="card-text">
+                <a
+                  href="#"
+                  target="_blank"
+                  class="card-text"
+                >
                   <span class="name">news</span>
-                  <div class="ttl">{{'뉴스 이미지 없을 시, 디폴트 이미지 처리합니다.'}}</div>
+                  <div class="ttl">{{ '뉴스 이미지 없을 시, 디폴트 이미지 처리합니다.' }}</div>
                   <div class="dec">
-                    {{'뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목...'}}
+                    {{ '뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목...' }}
                   </div>
-                  <div class="date">{{'2021.00.00  00:00'}}</div>
+                  <div class="date">{{ '2021.00.00  00:00' }}</div>
                 </a>
               </div>
             </div>
@@ -797,9 +1002,9 @@
         </div>
         <!-- END 투자자 리뷰 -->
       </div>
-      <!-- END 정보 영역 -->
-      <layout-footer />
+    <!-- END 정보 영역 -->
     </div>
+    <layout-footer />
   </div>
 </template>
 <script>
@@ -813,7 +1018,7 @@ export default {
       mbMdOptions2: {
         visible: false,
       },
-    }
+    };
   },
   methods: {
     mbMdOpen(opt) {
@@ -840,7 +1045,7 @@ export default {
         }
       }
     },
-  }
+  },
 };
 </script>
 

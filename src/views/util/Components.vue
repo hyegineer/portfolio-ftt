@@ -742,6 +742,12 @@
           <span class="txt">서울특별시 강남구 테헤란로 312 비전타워...</span>
         </div>
 
+        <div class="icon-with-txt ai-center">
+          <i class="icon icon-i" />
+          <span class="txt">팩트체크는 3개월 동안 본인만 확인 가능 하며, 3개월 이후에는 모든 이용자들에게 공개됩니다.
+          </span>
+        </div>
+
         <h2>9-2. 브레드크럼</h2>
         <breadcrumb>
           <li class="txt">

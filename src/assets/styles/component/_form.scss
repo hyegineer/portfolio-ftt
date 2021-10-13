@@ -1,7 +1,6 @@
-// form
+/* ========== 폼 관련 스타일 ========== */
 
-// 인풋 스타일 초기화 믹스인
-@mixin inp-default{
+@mixin inp-default{ // 인풋 스타일 초기화 믹스인
   @include input-reset;
   @include font-op($w: 400, $c: #171820){
     font-size: 14px;
@@ -37,7 +36,7 @@
   }
 }
 
-.inp{
+.inp{ // 구성요소: 인풋 기본 스타일
   @include inp-default;
 }
 
@@ -45,13 +44,24 @@
   @include inp-default;
 }
 
-textarea.inp{
+textarea.inp{ // 구성요소: 텍스트에어리어 기본 스타일
   resize: none;
   line-height: 1.5;
 }
 
-/* 기본 인풋그룹 */
-.inp-grp{
+.slct{ // 구성요소: 셀렉트 기본 스타일
+  @extend %inp-default;
+  @include bg-op($p:calc(100% - 15px) 50%, $s: 12px);
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath id='다각형_2' data-name='다각형 2' d='M6,0l6,7H0Z' transform='translate(12 7) rotate(180)' fill='%23b8bac7'/%3E%3C/svg%3E%0A");
+  padding-right: 40px;
+
+  &:hover{
+    border-color: #00EB79;
+  }
+}
+
+.inp-grp{ // 구성요소: 기본 인풋그룹
   @include flex{
     @include flex-op(center, flex-start);
   }
@@ -61,8 +71,7 @@ textarea.inp{
   gap: 5px;
 }
 
-/* 인풋 + 인증번호 */
-.inp-btn-grp {
+.inp-btn-grp { // 구성요소: 인풋 + 인증번호
   .inp-grp,
   .inp {
     flex-shrink: 1;
@@ -77,8 +86,7 @@ textarea.inp{
   }
 }
 
-/* 라벨 + 인풋 */
-.lbel-inp-grp{
+.lbel-inp-grp{ // 구성요소: 레이블 + 인풋
   @include flex;
   
   flex-direction: column;
@@ -100,8 +108,7 @@ textarea.inp{
   }
 }
 
-/* 제한시간 있는 인풋 */
-.inp-time-grp{
+.inp-time-grp{ // 구성요소: 제한시간 있는 인풋
   width: 100%;
   position: relative;
 
@@ -121,8 +128,8 @@ textarea.inp{
   }
 }
 
-.lbel-toggle{
-  @include flex{
+.lbel-toggle{ // 구성요소: 레이블 + 토글스위치
+  @include flex{ 
     @include flex-op(center, flex-start);
   }
 
@@ -139,27 +146,26 @@ textarea.inp{
   }
 }
 
-.lbel{
+.lbel{ // 구성요소: 기본레이블
   font-size: 13px;
   font-weight: 400;
   color: #171820;
   display: inline-block;
 }
 
-.lbel-lg{
+.lbel-lg{ // 구성요소: 기본레이블 큰버전
   font-size: 16px;
   font-weight: 300;
   -webkit-text-stroke: 1px #171820;
 }
 
-.required{
+.required{ // 구성요소: 필수항목 * 별표 표시
   color: #FF5175;
   font-weight: 500;
   font-size: 12px;
 }
 
-/* 인풋 + 단위 */
-.inp-unit-grp{
+.inp-unit-grp{ // 구성요소: 인풋 + 단위
   width: 100%;
   position: relative;
 
@@ -179,21 +185,7 @@ textarea.inp{
   }
 }
 
-/* 셀렉트 */
-.slct{
-  @extend %inp-default;
-  @include bg-op($p:calc(100% - 15px) 50%, $s: 12px);
-
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath id='다각형_2' data-name='다각형 2' d='M6,0l6,7H0Z' transform='translate(12 7) rotate(180)' fill='%23b8bac7'/%3E%3C/svg%3E%0A");
-  padding-right: 40px;
-
-  &:hover{
-    border-color: #00EB79;
-  }
-}
-
-/* 커스텀 셀렉트 */
-.custom-slct{
+.custom-slct{ // 구성요소: 커스텀 셀렉트
   position: relative;
 
   .slct{
@@ -206,7 +198,7 @@ textarea.inp{
   }
 }
 
-.custom-slct01{
+.custom-slct01{ // 구성요소: 커스텀 셀렉트 스타일 1 (백그라운드 화이트)
   .slct.is-selected{
     color: #171820;
   }
@@ -216,7 +208,7 @@ textarea.inp{
   }
 }
 
-.custom-slct02{
+.custom-slct02{ // 구성요소: 커스텀 셀렉트 스타일 2 (백그라운드 투명)
   .slct{
     background-position: 100% 50%;
     color: #171820;
@@ -231,7 +223,7 @@ textarea.inp{
   }
 }
 
-.slct-opts-grp{
+.slct-opts-grp{ // 구성요소: 커스텀 셀렉트 옵션리스트
   @include custom-scroll(#DDDEE6);
 
   background-color: white;
@@ -273,8 +265,7 @@ textarea.inp{
   pointer-events: visible;
 }
 
-/* 인풋 + 검색버튼 */
-.inp-sch-grp{
+.inp-sch-grp{ // 구성요소: 인풋 + 검색버튼
   position: relative;
 
   .inp{
@@ -302,7 +293,7 @@ textarea.inp{
   }
 }
 
-.inp-del-btn{
+.inp-del-btn{ // 구성요소: 인풋 + 검색버튼의 지우기버튼
   @include input-reset;
   @include circle(20px);
   @include bg-op($s: 10px);
@@ -316,7 +307,7 @@ textarea.inp{
   }
 }
 
-.inp-sch-btn{
+.inp-sch-btn{ // 구성요소: 인풋 + 검색버튼의 검색 돋보기버튼
   @include input-reset;
   @include bg-op($s: 20px);
 
@@ -336,8 +327,7 @@ textarea.inp{
   }
 }
 
-/* 폼양식 */
-.ffieldset{ // form-fieldset 줄임말
+.ffieldset{ // 구성요소: 폼양식 (form-fieldset 줄임말)
   width: 100%;
   border-bottom: 1px solid #DDDEE6;
   padding: 30px 0;
@@ -392,8 +382,7 @@ textarea.inp{
   }
 }
 
-/* 파일첨부 인풋 그룹 */
-.file-inp-grp{
+.file-inp-grp{ // 구성요소: 파일첨부 인풋 그룹
   width: 100%;
   margin: 10px 0;
 
@@ -413,15 +402,17 @@ textarea.inp{
   }
 }
 
-.fvalidate-msg{
+.fvalidate-msg{ // 구성요소: input 유효성검사멘트
   font-size: 12px;
   margin: 5px 0;
 }
 
-.fvalidate-msg.is-success{
+.fvalidate-msg.is-success{ // 구성요소: input 유효성검사멘트 (성공)
   color: #3060FF;
 }
 
-.fvalidate-msg.is-fail{
+.fvalidate-msg.is-fail{ // 구성요소: input 유효성검사멘트 (실패)
   color: #FF5175;
 }
+
+/* ========== END 폼 관련 스타일 ========== */
