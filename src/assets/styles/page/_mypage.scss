@@ -72,11 +72,17 @@
     text-align: right;
   }
 
+  .ttl-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
   .table-ttl {
     font-size: rem(18);
     font-weight: 500;
     color: #5C5E70;
-    margin-bottom: 20px;
   }
 
   .table-grp {
@@ -507,6 +513,13 @@
     .lbel-inp-grp {
       width: 50%;
       margin: 10px 0;
+
+      .lbel-sub {
+        font-size: rem(12);
+        font-weight: 400;
+        color: #8E909F;
+        white-space: nowrap;
+      }
     }
 
     .inp-btn-grp {
