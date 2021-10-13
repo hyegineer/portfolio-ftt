@@ -676,6 +676,63 @@
       line-height: 1.5;
     }
   }
+  
+  .finance-add-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 20px;
+    padding: 26px 20px 20px 20px;
+    background-color: #F9F9FB;
+    margin-bottom: 10px;
+
+    .lbel-inp-grp {
+      width: 35%;
+      margin: 0;
+    }
+
+    .btn-md {
+      min-width: 100px;
+    }
+  }
+
+  .finance-list-wrap {
+    padding: 10px 20px;
+    border: 1px solid #DDDEE6;
+    @include custom-scroll($c: #00EB79);
+
+    overflow: auto;
+    height: 294px;
+
+    .finance-list {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px;
+      gap: 20px;
+
+      .resource-ttl {
+        width: 35%;
+        font-size: rem(13);
+        font-weight: 500;
+        color: #171820;
+      }
+
+      .resource-price {
+        flex-grow: 1;
+        font-size: rem(13);
+        font-weight: 400;
+        color: #171820;
+      }
+
+      .btn-resource-del {
+        @include input-reset;
+        align-self: flex-end;
+        cursor: pointer;
+        
+      }
+    }
+  }
 }
 
 
