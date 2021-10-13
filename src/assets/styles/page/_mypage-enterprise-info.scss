@@ -8,7 +8,6 @@
 }
 
 /* 마이페이지 > 기업정보 > 구성원 관리 */
-
 .member-list-grp-ttl{ // 구성요소: 구성원 list 총 몇명
   @include flex{
     @include flex-op(center, flex-start);
@@ -116,7 +115,6 @@
 }
 
 /* 마이페이지 > 기업정보 > 그룹 관리 */
-
 .box-grpmember-list{ // 구성요소: 그룹원 list들
   @include flex{
     @include flex-op(center, flex-start);

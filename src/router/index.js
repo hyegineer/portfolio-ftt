@@ -335,20 +335,6 @@ const routes = [
             component: () => import('~@/views/user-startup/dashboard/SDashboardMain'),
             // meta: { requiresAuth: true },
           },
-          // 대시보드-투자기업에관심을가진투자자
-          {
-            path: 'dashboard-investor-list',
-            name: 'SDashboardInvestorList',
-            component: () => import('~@/views/user-startup/dashboard/SDashboardInvestorList'),
-            // meta: { requiresAuth: true },
-          },
-          // 대시보드-투자기업에관심을가진투자자 상세
-          {
-            path: 'dashboard-investor-detail',
-            name: 'SDashboardInvestorDetail',
-            component: () => import('~@/views/user-startup/dashboard/SDashboardInvestorDetail'),
-            // meta: { requiresAuth: true },
-          },
           // ===================== 내 정보 =====================
           // 내정보
           {
@@ -497,80 +483,234 @@ const routes = [
       },
     ],
   },
-  // {
-  //     path: '/users',
-  //     name: 'UsersIndex',
-  //     component: () => import('~@/views/users/Index'),
-  //     meta: { requiresAuth: true, requiresResetScrollHeight: true },
-  //     children: [
-  //         // 마이페이지
-  //         {
-  //             path: 'mypage-main',
-  //             name: 'UsersMypageMain',
-  //             component: () => import('~@/views/users/MypageMain'),
-  //         },
-  //         // 마이페이지-내정보수정
-  //         {
-  //             path: 'mypage-edit',
-  //             name: 'UsersMypageEdit',
-  //             component: () => import('~@/views/users/MypageEdit'),
-  //         },
-  //         // 마이페이지-찜목록
-  //         {
-  //             path: 'mypage-fav-list',
-  //             name: 'MypageFavList',
-  //             component: () => import('~@/views/users/MypageFavList'),
-  //         },
-  //         // 마이페이지-예약내역
-  //         {
-  //             path: 'mypage-rsv-list',
-  //             name: 'UsersMypageRsvList',
-  //             component: () => import('~@/views/users/MypageRsvList'),
-  //         },
-  //         // 마이페이지-리뷰관리
-  //         {
-  //             path: 'mypage-review-list',
-  //             name: 'MypageReviewList',
-  //             component: () => import('~@/views/users/MypageReviewList'),
-  //         },
-  //         // 마이페이지-리뷰 전체보기
-  //         {
-  //             path: 'mypage-total-review/:id',
-  //             name: 'MypageTotalReview',
-  //             component: () => import('~@/views/users/MypageTotalReview'),
-  //         },
-  //         // 결제하기
-  //         {
-  //             path: 'payment',
-  //             name: 'UsersPayment',
-  //             component: () => import('~@/views/users/Payment'),
-  //         },
-  //         // 결제하기-결제완료/결제실패
-  //         {
-  //             path: 'payment-complete',
-  //             name: 'UsersPaymentComplete',
-  //             component: () => import('~@/views/users/PaymentComplete'),
-  //         },
-  //         // 결제하기-결제내역
-  //         {
-  //             path: 'payment-history',
-  //             name: 'PaymentHistory',
-  //             component: () => import('~@/views/users/PaymentHistory'),
-  //         },
-  //         // 모바일용 검색옵션
-  //         {
-  //             path: 'mobile-search-option',
-  //             name: 'MobileSearchOption',
-  //             component: () => import('~@/views/users/MobileSearchOption'),
-  //         },
-  //         // best 쇼호스트 & 대행사
-  //         {
-  //             path: 'show-hosts',
-  //             name: 'ShowHosts',
-  //             component: () => import('~@/views/users/ShowHosts'),
-  //         },
-  //     ],
-  // },
+  /* ====================== 회원형태 - 투자자 ====================== */
+  // 아래 페이지들은 모두 로그인 후 이용가능// 
+  {
+    path: '/investor',
+    name: 'InvestorIndex',
+    component: () => import('~@/views/user-investor/Index'),
+    // meta: { requiresAuth: true, requiresResetScrollHeight: true },
+    children: [
+      // 투자자 마이페이지
+      {
+        path: 'mypage',
+        name: 'IMypage',
+        component: () => import('~@/views/user-investor/IMypage'),
+        children: [
+          // ===================== 기업정보 미확정 =====================
+          // 신청대기중, 마이페이지 - 신청거절/그룹강퇴
+          {
+            path: 'wating-main',
+            name: 'IWatingMain',
+            component: () => import('~@/views/user-investor/wating/IWatingMain'),
+            // meta: { requiresAuth: true },
+          },
+          // 신규업체등록
+          {
+            path: 'wating-create',
+            name: 'IWatingCreate',
+            component: () => import('~@/views/user-investor/wating/IWatingCreate'),
+            // meta: { requiresAuth: true },
+          },
+          // 기존업체등록
+          {
+            path: 'wating-search-company',
+            name: 'IWatingSearchCompany',
+            component: () => import('~@/views/user-investor/wating/IWatingSearchCompany'),
+            // meta: { requiresAuth: true },
+          },
+          // 신규/기존업체 등록완료
+          {
+            path: 'wating-complete',
+            name: 'IWatingComplete',
+            component: () => import('~@/views/user-investor/wating/IWatingComplete'),
+            // meta: { requiresAuth: true },
+          },
+          // ===================== 대시보드 =====================
+          // 대시보드
+          {
+            path: 'dashboard-main',
+            name: 'IDashboardMain',
+            component: () => import('~@/views/user-investor/dashboard/IDashboardMain'),
+            // meta: { requiresAuth: true },
+          },
+          // ===================== 내 정보 =====================
+          // 내정보
+          {
+            path: 'myinfo-main',
+            name: 'IMyinfoMain',
+            component: () => import('~@/views/user-investor/my-info/IMyinfoMain'),
+            // meta: { requiresAuth: true },
+          },
+          // 내정보-내정보수정
+          {
+            path: 'myinfo-edit',
+            name: 'IMyinfoEdit',
+            component: () => import('~@/views/user-investor/my-info/IMyinfoEdit'),
+            // meta: { requiresAuth: true },
+          },
+          // 내정보-회원탈퇴
+          {
+            path: 'myinfo-leave',
+            name: 'IMyinfoLeave',
+            component: () => import('~@/views/user-investor/my-info/IMyinfoLeave'),
+            // meta: { requiresAuth: true },
+          },
+          // ===================== 기업정보 =====================
+          // 기업정보-기본정보 (기업/개인)
+          {
+            path: 'etpr-default-info',
+            name: 'IEtprDefaultInfo',
+            component: () => import('~@/views/user-investor/enterprise-info/IEtprDefaultInfo'),
+            // meta: { requiresAuth: true },
+          },
+          // 기업정보-기본정보 수정 (기업/개인)
+          {
+            path: 'etpr-default-info-edit',
+            name: 'IEtprDefaultInfoEdit',
+            component: () => import('~@/views/user-investor/enterprise-info/IEtprDefaultInfoEdit'),
+            // meta: { requiresAuth: true },
+          },
+          // 기업정보-포트폴리오
+          {
+            path: 'etpr-portfolio-main',
+            name: 'IEtprPortfolioMain',
+            component: () => import('~@/views/user-investor/enterprise-info/IEtprPortfolioMain'),
+            // meta: { requiresAuth: true },
+          },
+          // 기업정보-포트폴리오 추가
+          {
+            path: 'etpr-portfolio-add',
+            name: 'IEtprPortfolioAdd',
+            component: () => import('~@/views/user-investor/enterprise-info/IEtprPortfolioAdd'),
+            // meta: { requiresAuth: true },
+          },
+          // 기업정보-구성원관리
+          {
+            path: 'etpr-member-manage',
+            name: 'IEtprMemberManage',
+            component: () => import('~@/views/user-investor/enterprise-info/IEtprMemberManage'),
+            // meta: { requiresAuth: true },
+          },
+          // 기업정보-그룹관리
+          {
+            path: 'etpr-group-manage',
+            name: 'IEtprGroupManage',
+            component: () => import('~@/views/user-investor/enterprise-info/IEtprGroupManage'),
+            // meta: { requiresAuth: true },
+          },
+          // ===================== 관심기업 =====================
+          {
+            path: 'fav-list',
+            name: 'IFavlist',
+            component: () => import('~@/views/user-investor/list-enterprise/IFavlist'),
+            // meta: { requiresAuth: true },
+          },
+          // ===================== 최근 조회한 기업 =====================
+          {
+            path: 'recent-list',
+            name: 'IRecentList',
+            component: () => import('~@/views/user-investor/list-enterprise/IRecentList'),
+            // meta: { requiresAuth: true },
+          },
+          // ===================== 팩트체크 =====================
+          // 팩트체크-팩트체커신청
+          {
+            path: 'ftck-apply-main',
+            name: 'IFtckApplyMain',
+            component: () => import('~@/views/user-investor/factcheck/IFtckApplyMain'),
+            // meta: { requiresAuth: true },
+          },
+          // 팩트체크-팩트체커신청-신청서작성
+          {
+            path: 'ftck-apply-create',
+            name: 'IFtckApplyCreate',
+            component: () => import('~@/views/user-investor/factcheck/IFtckApplyCreate'),
+            // meta: { requiresAuth: true },
+          },
+          // 팩트체크-팩트체커신청-신청서작성완료
+          {
+            path: 'ftck-apply-complete',
+            name: 'IFtckApplyComplete',
+            component: () => import('~@/views/user-investor/factcheck/IFtckApplyComplete'),
+            // meta: { requiresAuth: true },
+          },
+          // 팩트체크-요청한 팩트체크
+          {
+            path: 'ftck-list',
+            name: 'IFtckList',
+            component: () => import('~@/views/user-investor/factcheck/IFtckList'),
+            // meta: { requiresAuth: true },
+          },
+          // FIXME 팩트체크-받은팩트체크 상세
+          // {
+          //   path: 'ftck-detail',
+          //   name: 'IFtckDetail',
+          //   component: () => import('~@/views/user-investor/factcheck/IFtckDetail'),
+          //   // meta: { requiresAuth: true },
+          // },
+          // ===================== 포인트 =====================
+          // 포인트 - 포인트 메인
+          {
+            path: 'point-main',
+            name: 'IPointMain',
+            component: () => import('~@/views/user-investor/point/IPointMain'),
+            // meta: { requiresAuth: true },
+          },
+          // 포인트 - 포인트 충전
+          {
+            path: 'point-charge',
+            name: 'IPointCharge',
+            component: () => import('~@/views/user-investor/point/IPointCharge'),
+            // meta: { requiresAuth: true },
+          },
+          // 포인트 - 포인트 충전 완료
+          {
+            path: 'point-charge-complete',
+            name: 'IPointChargeComplete',
+            component: () => import('~@/views/user-investor/point/IPointChargeComplete'),
+            // meta: { requiresAuth: true },
+          },
+          // 포인트 - 멤버십 구매안내
+          {
+            path: 'membership-main',
+            name: 'IMembershipMain',
+            component: () => import('~@/views/user-investor/point/IMembershipMain'),
+            // meta: { requiresAuth: true },
+          },
+          // 포인트 - 멤버십 구매 완료
+          {
+            path: 'membership-complete',
+            name: 'IMembershipComplete',
+            component: () => import('~@/views/user-investor/point/IMembershipComplete'),
+            // meta: { requiresAuth: true },
+          },
+          // ===================== 쪽지함 =====================
+          // 마이페이지 - 쪽지함 목록
+          {
+            path: 'note-list',
+            name: 'INoteList',
+            component: () => import('~@/views/user-investor/note/INoteList'),
+            // meta: { requiresAuth: true },
+          },
+          // 마이페이지 - 쪽지함 상세
+          {
+            path: 'note-detail',
+            name: 'INoteDetail',
+            component: () => import('~@/views/user-investor/note/INoteDetail'),
+            // meta: { requiresAuth: true },
+          },
+          // 마이페이지 - 쪽지 보내기
+          {
+            path: 'note-create',
+            name: 'INoteCreate',
+            component: () => import('~@/views/user-investor/note/INoteCreate'),
+            // meta: { requiresAuth: true },
+          },
+        ],
+      },
+    ],
+  },
   /* ====================== etc ====================== */
   // 이용약관
   {

@@ -11,6 +11,10 @@
           >
         
           <h3 class="ttl">
+            <!-- 스타트업 신규등록일 때 -->
+            <span class="ttl-txt">스타트업 신규등록</span>
+
+            <!-- 기존 스타트업 신청일 때 -->
             <span class="ttl-txt">기존 스타트업 신청</span>
             <span class="badge-auth">직원</span>
           <!-- <span class="badge-auth">{{ $constants.userTypeForm[$route.query.userTypeForm] }}</span> -->
@@ -28,9 +32,9 @@
         <div class="btn-wrap">
           <btn-solid
             class="btn btn-lg btn-full"
-            @click="window.alert('다음 버튼을 클릭하셨습니다.')"
+            disabled
           >
-            다음
+            심사중입니다.
           </btn-solid>
         </div>
       </div>

@@ -29,6 +29,166 @@
   gap: 14px;
 }
 
+.article-wrap .table-all-wrap {
+  padding: 0;
+}
+
+.table-all-wrap {
+  padding: 30px 0;
+
+  .flex-basis-10 {
+    flex-basis: 10%;
+  }
+
+  .flex-basis-13 {
+    flex-basis: 13%;
+  }
+
+  .flex-basis-16 {
+    flex-basis: 16%;
+  }
+
+  .flex-basis-20 {
+    flex-basis: 20%;
+  }
+
+  .flex-basis-22 {
+    flex-basis: 22%;
+  }
+  
+  .flex-basis-26 {
+    flex-basis: 26%;
+  }
+
+  .flex-basis-28 {
+    flex-basis: 28%;
+  }
+
+  .flex-basis-76 {
+    flex-basis: 76%;
+  }
+
+  .txt-left {
+    text-align: left;
+  }
+
+  .txt-center {
+    text-align: center;
+  }
+
+  .txt-right {
+    text-align: right;
+  }
+
+  .ttl-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .table-ttl {
+    font-size: rem(18);
+    font-weight: 500;
+    color: #5C5E70;
+  }
+
+  .table-ttl-sub {
+    font-size: rem(12);
+    font-weight: 400;
+    color: #8E909F;
+  }
+
+  .table-grp {
+    border-bottom: 1px solid #171820;
+  }
+
+  .table-hgrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #171820;
+
+    .table-txt {
+      color: #DDDEE6;
+      font-size: rem(13);
+      font-weight: 500;
+    }
+  }
+
+  .table-hlist {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border-right: 1px solid #707070;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .table-cont-wrap {
+    
+    &.custom-scroll-wrap {
+      @include custom-scroll(#00EB79, $w: 6px);
+    
+      background-color: #fff;
+      overflow: auto;
+      height: 460px;
+    }
+
+    &.empty-cont-wrap {
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .empty-ment {
+        font-size: rem(17);
+        font-weight: 400;
+        color: #8E909F;
+      }
+    }
+  }
+
+  .table-cont-grp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #DDDEE6;
+
+    &.f-bold {
+      border-bottom: 1px solid #8E909F;
+
+      .table-txt {
+        font-weight: 600;
+      }
+    }
+
+    &.f-600-lg {
+
+      .table-txt {
+        font-size: rem(15);
+        font-weight: 600;
+      }
+    }
+  }
+
+  .table-cont-list {
+    flex-grow: 1;
+    padding: 15px 20px;
+  }
+
+  .table-txt {
+    font-size: rem(13);
+    font-weight: 400;
+    color: #171820;
+
+    &.f-bold {
+      font-weight: 600;
+    }
+  }
+}
+
 // myinfo-main
 .myinfo-page-container {
 
@@ -276,9 +436,9 @@
   border-bottom: 1px solid #DDDEE6;
   padding: 30px 0;
 
-  &:last-child {
-    border-bottom: none;
-  }
+  // &:last-child {
+  //   border-bottom: none;
+  // }
 
   &.border-remove {
     border-bottom: none;
@@ -288,14 +448,39 @@
     font-size: rem(16);
     font-weight: 600;
     color: #171820;
-    margin-bottom: 20px;
+    margin-bottom: 20px;    
   }
+
+  .ttl-lg {
+    font-size: rem(18);
+    font-weight: 600;
+    color: #171820;
+    margin-bottom: 10px;
+  }
+
+  .ttl-sub {
+    font-size: rem(12);
+    font-weight: 400;
+    color: #8E909F;
+    line-height: 1.3;
+  }
+
 
   .info-grp {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     color: #171820;
+
+    &.auth-info-grp {
+      padding-top: 20px;
+
+      .empty-txt {
+        font-size: rem(15);
+        font-weight: 400;
+        color: #B8BAC7;
+      }
+    }
 
     &.is-padding-change {
       
@@ -321,6 +506,12 @@
       &.custom-info {
         line-height: 1.4;
         white-space: pre-line;
+      }
+
+      .info-sub {
+        font-size: rem(13);
+        font-weight: 400;
+        color: #8E909F;
       }
     }
   }
@@ -374,6 +565,13 @@
     .lbel-inp-grp {
       width: 50%;
       margin: 10px 0;
+
+      .lbel-sub {
+        font-size: rem(12);
+        font-weight: 400;
+        color: #8E909F;
+        white-space: nowrap;
+      }
     }
 
     .inp-btn-grp {
@@ -444,3 +642,98 @@
 }
 
 // END startup - EtprDefaultInfoEdit
+
+
+// investor - EtprDefaultInfo
+.article-wrap {
+
+  .flex-row-start-grp {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+
+    .img-wrap {
+      flex-basis: 260px;
+    }
+
+    .avatar-wrap {
+      flex-grow: 1;
+    }
+
+    .avatar-with-name {
+      margin-bottom: 15px;
+    }
+  }
+
+  .biz-detail-wrap {
+    padding-top: 30px;
+
+    .dec {
+      font-size: rem(15);
+      font-weight: 400;
+      color: #171820;
+      line-height: 1.5;
+    }
+  }
+  
+  .finance-add-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 20px;
+    padding: 26px 20px 20px 20px;
+    background-color: #F9F9FB;
+    margin-bottom: 10px;
+
+    .lbel-inp-grp {
+      width: 35%;
+      margin: 0;
+    }
+
+    .btn-md {
+      min-width: 100px;
+    }
+  }
+
+  .finance-list-wrap {
+    padding: 10px 20px;
+    border: 1px solid #DDDEE6;
+    @include custom-scroll($c: #00EB79);
+
+    overflow: auto;
+    height: 294px;
+
+    .finance-list {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px;
+      gap: 20px;
+
+      .resource-ttl {
+        width: 35%;
+        font-size: rem(13);
+        font-weight: 500;
+        color: #171820;
+      }
+
+      .resource-price {
+        flex-grow: 1;
+        font-size: rem(13);
+        font-weight: 400;
+        color: #171820;
+      }
+
+      .btn-resource-del {
+        @include input-reset;
+        align-self: flex-end;
+        cursor: pointer;
+        
+      }
+    }
+  }
+}
+
+
+// END investor - EtprDefaultInfo

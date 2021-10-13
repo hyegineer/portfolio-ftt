@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <div
     class="modal"
@@ -5,7 +6,10 @@
   >
     <div class="modal-box">
       <div class="modal-hd">
-        <span class="modal-ttl">{{ ttl }}</span>
+        <span
+          class="modal-ttl"
+          v-html="ttl"
+        />
       </div>
 
       <div class="modal-cont-wrap">

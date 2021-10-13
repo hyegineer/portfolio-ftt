@@ -19,6 +19,28 @@
     }
   }
 
+  .highlight{
+    position: relative;
+    font-weight: 300;
+    -webkit-text-stroke: 1px #171820;
+
+    @include make-before{
+      @include absolute($b: 0);
+
+      display: inline-block;
+      width: 100%;
+      height: 4px;
+      background-color: #53FF81;
+      z-index: 0;
+    }
+
+    u{
+      position: relative;
+      z-index: 1;
+      text-decoration: none;
+    }
+  }
+
   .txt-right{
     @include flex{
       @include flex-op(center, flex-start);

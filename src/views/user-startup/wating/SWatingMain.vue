@@ -48,13 +48,13 @@
         <div class="btn-wrap">
           <btn-bd-dark
             class="btn btn-md btn-full"
-            @click="window.alert('신규 스타트업 생성하기')"
+            @click="$router.push('wating-create')"
           >
             신규 스타트업 생성하기
           </btn-bd-dark>
           <btn-bd-dark
             class="btn btn-md btn-full"
-            @click="window.alert('기존 스타트업 신청하기')"
+            @click="$router.push('wating-search-company')"
           >
             기존 스타트업 신청하기
           </btn-bd-dark>

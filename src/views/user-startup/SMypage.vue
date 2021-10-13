@@ -9,7 +9,27 @@
             마이페이지
           </h1>
         </div>
+
+        <!-- 소속된 기업이 없을 때 -->
+        <div style="display: none;">
+          <span class="mypage-snav-ttl-sub">소속된 기업이 없습니다.</span>
+
+          <ul class="mypage-snav-grp">
+            <li class="mypage-snav-list">
+              <router-link
+                class="mypage-snav-btn"
+                to="/startup/mypage/wating-main"
+                :class="{'router-link-active': $route.path.startsWith(`/startup/mypage/wating-`)}"
+              >
+                <span class="txt">내 정보</span>
+                <i class="arrow" />
+              </router-link>
+            </li>
+          </ul>
+        </div>
+        <!-- // 소속된 기업이 없을 때 -->
         
+        <!-- 소속된 기업이 있을 때 -->
         <div class="avatar-with-name">
           <avatar />
           <div class="name-grp">
@@ -49,6 +69,7 @@
             <router-link
               class="mypage-snav-btn"
               to="/startup/mypage/myinfo-main"
+              :class="{'router-link-active': $route.path.startsWith(`/startup/mypage/myinfo-`)}"
             >
               <span class="txt">내 정보</span>
               <i class="arrow" />
@@ -180,6 +201,7 @@
             </router-link>
           </li>
         </ul>
+        <!-- // 소속된 기업이 있을 때 -->
       </layout-mypage-side-nav>
 
       <layout-mypage-container>
@@ -198,39 +220,6 @@
 <script>
 export default {
   name: 'SMypage',
-  data() {
-    return{
-      testNav: [
-        {
-          gnb: '대시보드',
-          lnb: null,
-          visible: false,
-        },
-        {
-          gnb: '내 정보',
-          lnb: null,
-          visible: false,
-        },
-        {
-          gnb: '기업정보',
-          lnb: ['기본정보', '상세정보', '제출서류 관리', '구성원 관리'],
-          visible: false,
-        },
-      ],
-    };
-  },
-  methods: {
-    // 왼쪽 사이드네비게이션 클릭시 아코디언 효과
-    clickSideNavBtn(data, index) {
-      this.testNav.forEach(x => {
-        if(!this.testNav[index].visible) {
-          x.visible = false;
-        }
-      });
-
-      data.visible = !data.visible;
-    },
-  },
 };
 </script>
 

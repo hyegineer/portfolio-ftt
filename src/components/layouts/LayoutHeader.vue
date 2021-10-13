@@ -13,8 +13,8 @@
 
           <div class="hd-logo-wrap">
             <h1 class="hd-logo">
-              <a
-                href="#"
+              <router-link
+                to="/"
                 class="hd-logo-link"
               >
                 <img
@@ -22,29 +22,46 @@
                   alt="logo"
                   class="hd-logo-img"
                 >
-              </a>
+              </router-link>
             </h1>
           </div>
 
           <div class="gnb-group">
-            <a
-              href="#"
+            <router-link
+              to="/notice"
               class="gnb-link"
-            >공지사항</a>
-            <a
-              href="#"
+            >
+              공지사항
+            </router-link>
+            <router-link
+              to="/faq"
               class="gnb-link"
-            >자주 묻는 질문</a>
-            <a
-              href="#"
+            >
+              자주 묻는 질문
+            </router-link>
+            <router-link
+              to="/inquiry"
               class="gnb-link"
-            >1:1문의</a>
+            >
+              1:1문의
+            </router-link>
             <!-- TODO: update-point 있으면 업데이트 표시 -->
-            <a
-              v-if="testIsUser && testUserType !== 'fact-checker'"
-              href="#"
+            <router-link
+              v-if="testIsUser && testUserType === 'startup'"
+              to="/startup/mypage/note-list"
               class="gnb-link update-point"
-            >쪽지함</a>
+            >
+              쪽지함
+            </router-link>
+
+            <!-- TODO: update-point 있으면 업데이트 표시 -->
+            <router-link
+              v-if="testIsUser && testUserType === 'investor'"
+              to="/investor/mypage/note-list"
+              class="gnb-link update-point"
+            >
+              쪽지함
+            </router-link>
           </div>
 
           <button
@@ -62,15 +79,19 @@
             v-if="!testIsUser"
             class="auth-wrap"
           >
-            <a
-              href="#"
+            <router-link
+              to="/login"
               class="auth-link"
-            >로그인</a>
+            >
+              로그인
+            </router-link>
 
-            <a
-              href="#"
+            <router-link
+              to="/register-intro"
               class="auth-link"
-            >회원가입</a>
+            >
+              회원가입
+            </router-link>
           </div>
           <!-- INFO: END 로그인 전 -->
 
@@ -258,165 +279,472 @@
               팩트시트에 <b class="bold-txt">회원가입</b> 하고<br>다양한 서비스를 이용해보세요!
             </p>
             <div class="auth-wrap">
-              <a
-                href="#"
+              <router-link
+                to="/login"
                 class="auth-link"
-              >로그인</a>
-              <a
-                href="#"
+              >
+                로그인
+              </router-link>
+              <router-link
+                to="/register-intro"
                 class="auth-link"
-              >회원가입</a>
+              >
+                회원가입
+              </router-link>
             </div>
           </div>
           <div class="hd-side-bottom">
-            <div class="sidemenu-wrap">
-              <a
-                href="#"
+            <!-- 로그인 전 공용 메뉴 -->
+            <div
+              v-if="!testIsUser"
+              class="sidemenu-wrap"
+            >
+              <router-link
+                to="/search-startup"
                 class="sidemenu-link"
               >
                 <span class="sidemenu-txt">스타트업 찾기</span>
-              </a>
+              </router-link>
+              <router-link
+                to="/notice"
+                class="sidemenu-link"
+              >
+                <span class="sidemenu-txt">공지사항</span>
+              </router-link>
+              <router-link
+                to="/faq"
+                class="sidemenu-link"
+              >
+                <span class="sidemenu-txt">자주 묻는 질문</span>
+              </router-link>
+              <div class="sidemenu-grp">
+                <router-link
+                  to="/inquiry"
+                  class="sidemenu-link"
+                >
+                  <span class="sidemenu-txt">1:1문의</span>
+                </router-link>
+                <div class="sidemenu-depth2-wrap">
+                  <div class="sidemenu-depth2">
+                    <router-link
+                      to="/inquiry"
+                      class="link"
+                    >
+                      문의하기
+                    </router-link>
+                  </div>
+                </div>
+              </div>
+              <router-link
+                to="/policy-guide"
+                class="sidemenu-link"
+              >
+                <span class="sidemenu-txt">약관</span>
+              </router-link>
+            </div>
+            <!-- END 로그인 전 공용 메뉴 -->
+
+            <!-- 투자자 회원일 때 -->
+            <div
+              v-if="testUserType === 'investor'"
+              class="sidemenu-wrap"
+            >
+              <router-link
+                to="/search-startup"
+                class="sidemenu-link"
+              >
+                <span class="sidemenu-txt">스타트업 찾기</span>
+              </router-link>
               <div
                 v-if="testIsUser"
                 class="sidemenu-grp"
               >
-                <a
-                  href="#"
+                <router-link
+                  to="/investor/mypage/dashboard-main"
                   class="sidemenu-link"
                 >
                   <span class="sidemenu-txt">마이페이지</span>
-                </a>
+                </router-link>
                 <div class="sidemenu-depth2-wrap">
                   <div
-                    v-if="testUserType === 'startup' || testUserType === 'investor'"
                     class="sidemenu-depth2"
                   >
-                    <a
-                      href="#"
+                    <router-link
+                      to="/investor/mypage/dashboard-main"
                       class="link"
-                    >대시보드</a>
+                    >
+                      대시보드
+                    </router-link>
                   </div>
                   <div class="sidemenu-depth2">
-                    <a
-                      href="#"
+                    <router-link
+                      to="/investor/mypage/myinfo-main"
                       class="link"
-                    >내정보</a>
+                    >
+                      내정보
+                    </router-link>
                   </div>
                   <div
-                    v-if="testUserType === 'startup' || testUserType === 'investor'"
                     class="sidemenu-depth2"
                   >
-                    <a
-                      href="#"
+                    <router-link
+                      to="/investor/mypage/etpr-default-info"
                       class="link"
-                    >기업정보</a>
+                    >
+                      기업정보
+                    </router-link>
                   </div>
                   <div
-                    v-if="testUserType === 'startup' || testUserType === 'investor'"
                     class="sidemenu-depth2"
                   >
-                    <a
-                      href="#"
+                    <router-link
+                      to="/investor/mypage/fav-list"
                       class="link"
-                    >관심기업</a>
+                    >
+                      관심기업
+                    </router-link>
                   </div>
                   <div
-                    v-if="testUserType === 'startup' || testUserType === 'investor'"
                     class="sidemenu-depth2"
                   >
-                    <a
-                      href="#"
+                    <router-link
+                      to="/investor/mypage/recent-list"
                       class="link"
-                    >최근조회기업</a>
+                    >
+                      최근조회기업
+                    </router-link>
                   </div>
                   <div class="sidemenu-depth2">
-                    <a
-                      href="#"
+                    <router-link
+                      to="/investor/mypage/ftck-apply-main"
                       class="link"
-                    >팩트체크</a>
+                    >
+                      팩트체크
+                    </router-link>
                   </div>
                   <div
-                    v-if="testUserType === 'investor'"
                     class="sidemenu-depth2"
                   >
-                    <a
-                      href="#"
+                    <router-link
+                      to="/investor/mypage/point-main"
                       class="link"
-                    >포인트</a>
+                    >
+                      포인트
+                    </router-link>
                   </div>
                   <div
-                    v-if="testUserType === 'startup' || testUserType === 'investor'"
                     class="sidemenu-depth2"
                   >
-                    <a
-                      href="#"
+                    <router-link
+                      to="/investor/mypage/note-list"
                       class="link"
-                    >쪽지함</a>
-                  </div>
-                  <div
-                    v-if="testUserType === 'fact-checker'"
-                    class="sidemenu-depth2"
-                  >
-                    <a
-                      href="#"
-                      class="link"
-                    >포인트 관리</a>
-                  </div>
-                  <div
-                    v-if="testUserType === 'fact-checker'"
-                    class="sidemenu-depth2"
-                  >
-                    <a
-                      href="#"
-                      class="link"
-                    >기업회원 등록</a>
+                    >
+                      쪽지함
+                    </router-link>
                   </div>
                 </div>
               </div>
-              <a
-                href="#"
+              <router-link
+                to="/notice"
                 class="sidemenu-link"
               >
                 <span class="sidemenu-txt">공지사항</span>
-              </a>
-              <a
-                href="#"
+              </router-link>
+              <router-link
+                to="/faq"
                 class="sidemenu-link"
               >
                 <span class="sidemenu-txt">자주 묻는 질문</span>
-              </a>
+              </router-link>
               <div class="sidemenu-grp">
-                <a
-                  href="#"
+                <router-link
+                  to="/inquiry"
                   class="sidemenu-link"
                 >
                   <span class="sidemenu-txt">1:1문의</span>
-                </a>
+                </router-link>
                 <div class="sidemenu-depth2-wrap">
                   <div class="sidemenu-depth2">
-                    <a
-                      href="#"
+                    <router-link
+                      to="/inquiry"
                       class="link"
-                    >문의하기</a>
+                    >
+                      문의하기
+                    </router-link>
                   </div>
                   <div
                     v-if="testIsUser"
                     class="sidemenu-depth2"
                   >
-                    <a
-                      href="#"
+                    <router-link
+                      to="/inquiry-history"
                       class="link"
-                    >문의내역</a>
+                    >
+                      문의내역
+                    </router-link>
                   </div>
                 </div>
               </div>
-              <a
-                href="#"
+              <router-link
+                to="/policy-guide"
                 class="sidemenu-link"
               >
                 <span class="sidemenu-txt">약관</span>
-              </a>
+              </router-link>
             </div>
+            <!-- END 투자자 회원일 때 -->
+
+            <!-- 스타트업 회원일 때 -->
+            <div
+              v-if="testUserType === 'startup'"
+              class="sidemenu-wrap"
+            >
+              <router-link
+                to="/search-startup"
+                class="sidemenu-link"
+              >
+                <span class="sidemenu-txt">스타트업 찾기</span>
+              </router-link>
+              <div
+                v-if="testIsUser"
+                class="sidemenu-grp"
+              >
+                <router-link
+                  to="/startup/mypage/dashboard-main"
+                  class="sidemenu-link"
+                >
+                  <span class="sidemenu-txt">마이페이지</span>
+                </router-link>
+                <div class="sidemenu-depth2-wrap">
+                  <div
+                    class="sidemenu-depth2"
+                  >
+                    <router-link
+                      to="/startup/mypage/dashboard-main"
+                      class="link"
+                    >
+                      대시보드
+                    </router-link>
+                  </div>
+                  <div class="sidemenu-depth2">
+                    <router-link
+                      to="/startup/mypage/myinfo-main"
+                      class="link"
+                    >
+                      내정보
+                    </router-link>
+                  </div>
+                  <div
+                    class="sidemenu-depth2"
+                  >
+                    <router-link
+                      to="/startup/mypage/etpr-default-info"
+                      class="link"
+                    >
+                      기업정보
+                    </router-link>
+                  </div>
+                  <div
+                    class="sidemenu-depth2"
+                  >
+                    <router-link
+                      to="/startup/mypage/fav-list"
+                      class="link"
+                    >
+                      관심기업
+                    </router-link>
+                  </div>
+                  <div
+                    class="sidemenu-depth2"
+                  >
+                    <router-link
+                      to="/startup/mypage/recent-list"
+                      class="link"
+                    >
+                      최근조회기업
+                    </router-link>
+                  </div>
+                  <div class="sidemenu-depth2">
+                    <router-link
+                      to="/startup/mypage/ftck-apply-main"
+                      class="link"
+                    >
+                      팩트체크
+                    </router-link>
+                  </div>
+                  <div
+                    class="sidemenu-depth2"
+                  >
+                    <router-link
+                      to="/startup/mypage/note-list"
+                      class="link"
+                    >
+                      쪽지함
+                    </router-link>
+                  </div>
+                </div>
+              </div>
+              <router-link
+                to="/notice"
+                class="sidemenu-link"
+              >
+                <span class="sidemenu-txt">공지사항</span>
+              </router-link>
+              <router-link
+                to="/faq"
+                class="sidemenu-link"
+              >
+                <span class="sidemenu-txt">자주 묻는 질문</span>
+              </router-link>
+              <div class="sidemenu-grp">
+                <router-link
+                  to="/inquiry"
+                  class="sidemenu-link"
+                >
+                  <span class="sidemenu-txt">1:1문의</span>
+                </router-link>
+                <div class="sidemenu-depth2-wrap">
+                  <div class="sidemenu-depth2">
+                    <router-link
+                      to="/inquiry"
+                      class="link"
+                    >
+                      문의하기
+                    </router-link>
+                  </div>
+                  <div
+                    v-if="testIsUser"
+                    class="sidemenu-depth2"
+                  >
+                    <router-link
+                      to="/inquiry-history"
+                      class="link"
+                    >
+                      문의내역
+                    </router-link>
+                  </div>
+                </div>
+              </div>
+              <router-link
+                to="/policy-guide"
+                class="sidemenu-link"
+              >
+                <span class="sidemenu-txt">약관</span>
+              </router-link>
+            </div>
+            <!-- END 스타트업 회원일 때 -->
+
+            <!-- 팩트체커 회원일 때 -->
+            <!-- TODO: 팩트체커 페이지 나오면 router-link 연결 필요 -->
+            <div
+              v-if="testUserType === 'fact-checker'"
+              class="sidemenu-wrap"
+            >
+              <router-link
+                to="/search-startup"
+                class="sidemenu-link"
+              >
+                <span class="sidemenu-txt">스타트업 찾기</span>
+              </router-link>
+              <div
+                v-if="testIsUser"
+                class="sidemenu-grp"
+              >
+                <router-link
+                  to=""
+                  class="sidemenu-link"
+                >
+                  <span class="sidemenu-txt">마이페이지</span>
+                </router-link>
+                <div class="sidemenu-depth2-wrap">
+                  <div class="sidemenu-depth2">
+                    <router-link
+                      to="#"
+                      class="link"
+                    >
+                      내정보
+                    </router-link>
+                  </div>
+                  <div class="sidemenu-depth2">
+                    <router-link
+                      to="#"
+                      class="link"
+                    >
+                      팩트체크
+                    </router-link>
+                  </div>
+                  <div
+                    class="sidemenu-depth2"
+                  >
+                    <router-link
+                      to="#"
+                      class="link"
+                    >
+                      포인트 관리
+                    </router-link>
+                  </div>
+                  <div
+                    class="sidemenu-depth2"
+                  >
+                    <router-link
+                      to="#"
+                      class="link"
+                    >
+                      기업회원 등록
+                    </router-link>
+                  </div>
+                </div>
+              </div>
+              <router-link
+                to="/notice"
+                class="sidemenu-link"
+              >
+                <span class="sidemenu-txt">공지사항</span>
+              </router-link>
+              <router-link
+                to="/faq"
+                class="sidemenu-link"
+              >
+                <span class="sidemenu-txt">자주 묻는 질문</span>
+              </router-link>
+              <div class="sidemenu-grp">
+                <router-link
+                  to="/inquiry"
+                  class="sidemenu-link"
+                >
+                  <span class="sidemenu-txt">1:1문의</span>
+                </router-link>
+                <div class="sidemenu-depth2-wrap">
+                  <div class="sidemenu-depth2">
+                    <router-link
+                      to="/inquiry"
+                      class="link"
+                    >
+                      문의하기
+                    </router-link>
+                  </div>
+                  <div
+                    v-if="testIsUser"
+                    class="sidemenu-depth2"
+                  >
+                    <router-link
+                      to="/inquiry-history"
+                      class="link"
+                    >
+                      문의내역
+                    </router-link>
+                  </div>
+                </div>
+              </div>
+              <router-link
+                to="/policy-guide"
+                class="sidemenu-link"
+              >
+                <span class="sidemenu-txt">약관</span>
+              </router-link>
+            </div>
+            <!-- END 팩트체커 회원일 때 -->
+
             <div
               v-if="testIsUser"
               class="btn-logout-wrap"
@@ -443,7 +771,7 @@ export default {
   data() {
     return {
       testIsUser: true,
-      testUserType: 'fact-checker', // startup, investor, fact-checker
+      testUserType: 'investor', // startup, investor, fact-checker
       testMembership: false,
       viewSearchbar: false,
       viewSidebar: false,

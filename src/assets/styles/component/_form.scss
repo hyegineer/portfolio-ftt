@@ -113,6 +113,7 @@ textarea.inp{ // 구성요소: 텍스트에어리어 기본 스타일
     width: 100%;
     font-weight: 500;
     color: #171820;
+    text-align: left;
   }
 
   .lbel-lg{
@@ -230,6 +231,7 @@ textarea.inp{ // 구성요소: 텍스트에어리어 기본 스타일
     padding: 12.5px 0;
     padding-right: 20px;
     border: 0;
+    background-color: transparent;
   }
 
   .slct-opts-grp{
