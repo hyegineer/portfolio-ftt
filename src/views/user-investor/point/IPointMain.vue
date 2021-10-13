@@ -32,8 +32,10 @@
             <b class="bold">투자 컴퍼니</b>의 <br>보유 포인트
           </p>
           <div class="ttl-sub">
-            <strong class="amount">100,000</strong>
-            <div class="badge-p" />
+            <div class="amount-item">
+              <strong class="amount">100,000</strong>
+              <div class="badge-p" />
+            </div>
           </div>
           <btn-bd-dark
             class="charge-btn btn-sm"

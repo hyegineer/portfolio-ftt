@@ -1,5 +1,6 @@
 /* ========== 마이페이지 > 포인트 ========== */
 
+/* 마이페이지 > 포인트 > 포인트 충전/내역 */
 .mypage-point-card{
   @include flex{
     @include flex-op(stretch, space-between);
@@ -80,6 +81,63 @@
 
     font-weight: 500;
     font-size: 15px;
+  }
+}
+
+/* 마이페이지 > 포인트 > 포인트 충전하기 */
+.mypage-point-charge-page{
+  .amount-item{
+    .amount, .unit{
+      font-size: 18px;
+    }
+
+    .badge-p{
+      margin-top: -1.5px;
+    }
+  }
+
+  .charge-point-inp{
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .charge-form-grp{
+    width: 100%;
+    margin: 6px 0;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  .ffieldset-ttl{
+    margin-bottom: 5px;
+  }
+
+  .charge-btn-grp{
+    margin-bottom: 20px;
+    gap: 0;
+    margin-top: 5px;
+
+    .charge-type-btn{
+      font-weight: 500;
+      width: 100%;
+      color: #8E909F;
+    }
+
+    .charge-type-btn.is-active{
+      box-shadow: 0 0 0 1px #5C5E70;
+      z-index: 1;
+      color: #171820;
+    }
+  }
+
+  .caution-box{
+    margin-top: 5px;
+  }
+
+  .form-btn-grp{
+    margin-top: 20px;
   }
 }
 

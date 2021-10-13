@@ -502,6 +502,22 @@
   }
 }
 
+.ul-dash{ // 구성요소 bullet style list
+  .list{
+    margin: 10px 0;
+    color: #171820;
+    font-size: 15px;
+    text-align: left;
+    padding-left: 13px;
+    position: relative;
+
+    @include make-before($c: '-'){
+      @include absolute($t: 0);
+      @include circle(5px);
+    }
+  }
+}
+
 .state-guide-box{ // 구성요소 complete 시 안내박스
   text-align: center;
   color: #171820;
@@ -537,11 +553,11 @@
   }
 }
 
-.simple-list-grp{
+.simple-list-grp{ // 구성요소: 심플 내역 list group
   width: 100%;
 }
 
-.simple-list{
+.simple-list{ // 구성요소: 심플 내역 list
   @include flex{
     @include flex-op(flex-start, flex-start);
   }
@@ -559,6 +575,7 @@
   td{
     padding: 0 10px;
     min-width: 120px;
+    line-height: 1.4;
   }
 
   .bold{
@@ -567,5 +584,47 @@
 
   .td-date{
     margin-left: auto;
+    flex-shrink: 0;
+  }
+}
+
+.caution-box{ // 구성요소: 주의사항 박스
+  width: 100%;
+  padding: 20px;
+  background-color: #F9F9FB;
+  text-align: left;
+
+  .cb-ttl{
+    @include font-op($w: 500){
+      font-size: 14px;
+    }
+
+    line-height: 1.4;
+    color: #5C5E70;
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .ul-dash{
+    .list{
+      margin: 6px 0;
+      font-size: 12px;
+      color: #8E909F;
+      padding-left: 10px;
+      line-height: 1.4;
+    }
+  }
+}
+
+.amount-item{ // 구성요소 point, badge, unit..
+  @include flex-center;
+
+  gap: 5px;
+  color: #171820;
+
+  .amount, 
+  .unit{
+    font-weight: 600;
   }
 }
