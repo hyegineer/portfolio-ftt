@@ -9,7 +9,27 @@
             마이페이지
           </h1>
         </div>
+
+        <!-- 소속된 기업이 없을 때 -->
+        <div style="display: none;">
+          <span class="mypage-snav-ttl-sub">소속된 기업이 없습니다.</span>
+
+          <ul class="mypage-snav-grp">
+            <li class="mypage-snav-list">
+              <router-link
+                class="mypage-snav-btn"
+                to="/investor/mypage/wating-main"
+                :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/wating-`)}"
+              >
+                <span class="txt">내 정보</span>
+                <i class="arrow" />
+              </router-link>
+            </li>
+          </ul>
+        </div>
+        <!-- // 소속된 기업이 없을 때 -->
         
+        <!-- 소속된 기업이 있을 때 -->
         <div class="avatar-with-name">
           <avatar />
           <div class="name-grp">
@@ -116,6 +136,41 @@
             </router-link>
           </li>
           
+          <!-- 팩트체크 -->
+          <li
+            class="mypage-snav-list"
+            :class="{'is-active': $route.path.startsWith(`/investor/mypage/ftck-`)}"
+          >
+            <router-link
+              to="/investor/mypage/ftck-list"
+              class="mypage-snav-btn"
+              :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/ftck-`)}"
+            >
+              <span class="txt">팩트체크</span>
+              <i class="arrow" />
+            </router-link>
+
+            <div
+              class="mypage-snav-lnb-grp"
+            >
+              <router-link
+                class="lnb-btn"
+                to="/investor/mypage/ftck-list"
+                :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/ftck-detail`)}"
+              >
+                요청한 팩트체크
+              </router-link>
+
+              <router-link
+                class="lnb-btn"
+                to="/investor/mypage/ftck-apply-main"
+                :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/ftck-apply`)}"
+              >
+                팩트체커 신청
+              </router-link>
+            </div>
+          </li>
+          
           <!-- 포인트 -->
           <li
             class="mypage-snav-list"
@@ -153,41 +208,6 @@
             </div>
           </li>
           
-          <!-- 팩트체크 -->
-          <li
-            class="mypage-snav-list"
-            :class="{'is-active': $route.path.startsWith(`/investor/mypage/ftck-`)}"
-          >
-            <router-link
-              to="/investor/mypage/ftck-list"
-              class="mypage-snav-btn"
-              :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/ftck-`)}"
-            >
-              <span class="txt">팩트체크</span>
-              <i class="arrow" />
-            </router-link>
-
-            <div
-              class="mypage-snav-lnb-grp"
-            >
-              <router-link
-                class="lnb-btn"
-                to="/investor/mypage/ftck-list"
-                :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/ftck-detail`)}"
-              >
-                요청한 팩트체크
-              </router-link>
-
-              <router-link
-                class="lnb-btn"
-                to="/investor/mypage/ftck-apply-main"
-                :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/ftck-apply`)}"
-              >
-                팩트체커 신청
-              </router-link>
-            </div>
-          </li>
-          
           <!-- 쪽지함 -->
           <li class="mypage-snav-list">
             <router-link
@@ -200,6 +220,7 @@
             </router-link>
           </li>
         </ul>
+        <!-- // 소속된 기업이 있을 때 -->
       </layout-mypage-side-nav>
 
       <layout-mypage-container>

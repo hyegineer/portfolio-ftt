@@ -15,7 +15,7 @@
             <avatar />
             <div class="name-grp">
               <span class="name">
-                주식회사 팩트컴퍼니
+                주식회사 투자 컴퍼니
               </span>
 
               <ul class="name-subtxt-grp">
@@ -43,20 +43,20 @@
       <!-- TODO: 신청거절/그룹강퇴일 때 -->
       <div class="waiting-cont-wrap">
         <div class="section-cont ">
-          <empty-contents txt="소속된 기업이 없습니다.<br />신규 스타트업 생성 / 기존 스타트업 신청을 통하여<br />소속기업 지정을 해주세요." />
+          <empty-contents txt="소속된 기업이 없습니다.<br />신규 투자자 생성 / 기존 투자자 신청을 통하여<br />소속기업 지정을 해주세요." />
         </div>
         <div class="btn-wrap">
           <btn-bd-dark
             class="btn btn-md btn-full"
-            @click="window.alert('신규 스타트업 생성하기')"
+            @click="$router.push('wating-create')"
           >
-            신규 스타트업 생성하기
+            신규 투자자 생성하기
           </btn-bd-dark>
           <btn-bd-dark
             class="btn btn-md btn-full"
-            @click="window.alert('기존 스타트업 신청하기')"
+            @click="$router.push('wating-search-company')"
           >
-            기존 스타트업 신청하기
+            기존 투자자 신청하기
           </btn-bd-dark>
         </div>
       </div>
