@@ -92,6 +92,10 @@
 
 /* 마이페이지 > 포인트 > 포인트 충전하기 */
 .mypage-point-charge-page{
+  .ffieldset-ttl{
+    margin-bottom: 5px;
+  }
+
   .amount-item{
     .amount, .unit{
       font-size: 18px;
@@ -114,10 +118,6 @@
     &:last-child{
       margin-bottom: 0;
     }
-  }
-
-  .ffieldset-ttl{
-    margin-bottom: 5px;
   }
 
   .charge-btn-grp{
