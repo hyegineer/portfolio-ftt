@@ -51,8 +51,8 @@
           <!-- // 팩트체크 진행상태 & 제목 -->
 
           <div class="mypboard-etc-grp">
-            <span class="gray-txt-sm">투자자명</span>
-            <span class="light-gray-txt-sm">2021.00.00</span>
+            <span class="fc-gray fz-13">투자자명</span>
+            <span class="fc-gray-light fz-13">2021.00.00</span>
           </div>
         </div>
         <!-- // 제목 -->
@@ -61,7 +61,7 @@
         <div class="mypboard-detail-cont">
           <div class="mypboard-cont">
             <div class="mypboard-cont-ttl">
-              <span class="light-gray-txt-sm">※ 팩트체크 요청 내용입니다.</span>
+              <span class="fc-gray-light fz-13">※ 팩트체크 요청 내용입니다.</span>
 
               <div class="right-grp">
                 <button
@@ -83,11 +83,11 @@
           
           <div class="mypboard-cont">
             <div class="mypboard-cont-ttl">
-              <span class="light-gray-txt-sm">※ 팩트체크 요청 내용입니다.</span>
+              <span class="fc-gray-light fz-13">※ 팩트체크 요청 내용입니다.</span>
 
               <div class="right-grp">
-                <span class="gray-txt-sm">팩트체커명</span>
-                <span class="light-gray-txt-sm">2021.00.00</span>
+                <span class="fc-gray fz-13">팩트체커명</span>
+                <span class="fc-gray-light fz-13">2021.00.00</span>
               </div>
             </div>
               
@@ -113,7 +113,7 @@
 
         <btn-bd
           class="btn-sm bnav-ctrl-list"
-          @click="$router.push('note-list')"
+          @click="$router.push('ftck-list')"
         >
           목록으로
         </btn-bd>

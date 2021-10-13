@@ -1,60 +1,115 @@
 <template>
-  <div class="page etpr-prifile-page">
+  <div class="page etpr-prifile-page etpr-profile-board-page">
     <layout-header />
     <div class="page-container">
-        <div class="right-fixed">
-          <div class="fixed-con-container">
-            <div class="fixed-con-ttl">업데이트 내역 ({{'5'}})</div>
-            <div class="fixed-con-contents">
-              <div class="empty-conts">
-                <img src="@/assets/images/icon/icon-empty-update.svg" alt="업데이트 아이콘" />
-                <p class="txt">업데이트 내역이 없습니다.</p>
-              </div>
-              <ul class="fixed-conts-list-wrap">
-                <li class="fixed-con-list">
-                  <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
-                  <div class="badge green">{{'팩트체커'}}</div>
-                  <div class="date">{{'2021.00.00 00:00'}}</div>
-                  <ul class="info-list">
-                    <li class="info">{{'기업정보'}}</li>
-                    <li class="info">{{'재무상태'}}</li>
-                  </ul>
-                  <a href="#" target="_blank" class="view-link">+ 상세보기</a>
-                </li>
-                <li class="fixed-con-list">
-                  <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
-                  <div class="badge yellow">{{'자사'}}</div>
-                  <div class="date">{{'2021.00.00 00:00'}}</div>
-                  <ul class="info-list">
-                    <li class="info">{{'기업정보'}}</li>
-                    <li class="info">{{'재무상태'}}</li>
-                  </ul>
-                  <a href="#" target="_blank" class="view-link">+ 상세보기</a>
-                </li>
-                <li class="fixed-con-list">
-                  <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
-                  <div class="badge">{{'팩트체커'}}</div>
-                  <div class="date">{{'2021.00.00 00:00'}}</div>
-                  <ul class="info-list">
-                    <li class="info">{{'기업정보'}}</li>
-                    <li class="info">{{'재무상태'}}</li>
-                  </ul>
-                  <a href="#" target="_blank" class="view-link">+ 상세보기</a>
-                </li>
-                <li class="fixed-con-list">
-                  <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
-                  <div class="badge">{{'자사'}}</div>
-                  <div class="date">{{'2021.00.00 00:00'}}</div>
-                  <ul class="info-list">
-                    <li class="info">{{'기업정보'}}</li>
-                    <li class="info">{{'재무상태'}}</li>
-                  </ul>
-                  <a href="#" target="_blank" class="view-link">+ 상세보기</a>
-                </li>
-              </ul>
+      <div class="right-fixed">
+        <div class="fixed-con-container">
+          <div class="fixed-con-ttl">
+            업데이트 내역 ({{ '5' }})
+          </div>
+          <div class="fixed-con-contents">
+            <div class="empty-conts">
+              <img
+                src="@/assets/images/icon/icon-empty-update.svg"
+                alt="업데이트 아이콘"
+              >
+              <p class="txt">
+                업데이트 내역이 없습니다.
+              </p>
             </div>
+            <ul class="fixed-conts-list-wrap">
+              <li class="fixed-con-list">
+                <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
+                <div class="badge green">
+                  {{ '팩트체커' }}
+                </div>
+                <div class="date">
+                  {{ '2021.00.00 00:00' }}
+                </div>
+                <ul class="info-list">
+                  <li class="info">
+                    {{ '기업정보' }}
+                  </li>
+                  <li class="info">
+                    {{ '재무상태' }}
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="view-link"
+                >+ 상세보기</a>
+              </li>
+              <li class="fixed-con-list">
+                <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
+                <div class="badge yellow">
+                  {{ '자사' }}
+                </div>
+                <div class="date">
+                  {{ '2021.00.00 00:00' }}
+                </div>
+                <ul class="info-list">
+                  <li class="info">
+                    {{ '기업정보' }}
+                  </li>
+                  <li class="info">
+                    {{ '재무상태' }}
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="view-link"
+                >+ 상세보기</a>
+              </li>
+              <li class="fixed-con-list">
+                <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
+                <div class="badge">
+                  {{ '팩트체커' }}
+                </div>
+                <div class="date">
+                  {{ '2021.00.00 00:00' }}
+                </div>
+                <ul class="info-list">
+                  <li class="info">
+                    {{ '기업정보' }}
+                  </li>
+                  <li class="info">
+                    {{ '재무상태' }}
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="view-link"
+                >+ 상세보기</a>
+              </li>
+              <li class="fixed-con-list">
+                <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
+                <div class="badge">
+                  {{ '자사' }}
+                </div>
+                <div class="date">
+                  {{ '2021.00.00 00:00' }}
+                </div>
+                <ul class="info-list">
+                  <li class="info">
+                    {{ '기업정보' }}
+                  </li>
+                  <li class="info">
+                    {{ '재무상태' }}
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="view-link"
+                >+ 상세보기</a>
+              </li>
+            </ul>
           </div>
         </div>
+      </div>
       <div class="wide-panel">
         <breadcrumb>
           <li class="txt">
@@ -155,20 +210,133 @@
 
         <div class="mgt-20 white-panel active-ttl-container">
           <div class="active-ttl-inner">
-            <div class="active-ttl active">
+            <div
+              class="active-ttl" 
+              @click="$router.push('/etpr-profile-info')"
+            >
               기업정보
             </div>
-            <div class="active-ttl">
+            <div
+              class="active-ttl" 
+              @click="$router.push('/etpr-profile-report')"
+            >
               팩트체크
             </div>
-            <div class="active-ttl">
+            <div
+              class="active-ttl active" 
+              @click="$router.push('/etpr-profile-board')"
+            >
               게시판
             </div>
           </div>
         </div>
       </div>
-      <layout-footer />
+      <div class="wide-panel etpr-tab-container">
+        <div class="board-list-grp-ttl">
+          <p class="txt">
+            총 <span class="bold">15</span>개의 게시글이 있습니다.
+          </p>
+
+          <div class="txt-right">
+            <button
+              type="button"
+              class="btn-txt"
+              @click="$router.push('/etpr-profile-board-create')"
+            >
+              <i class="icon icon-pen" />
+              <span class="txt">작성하기</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 게시물이 있을 때 -->
+        <table class="board-list-grp">
+          <tr
+            v-for="(item, index) in 2"
+            :key="index"
+            class="board-list"
+            @click="$router.push('/etpr-profile-board-detail')"
+          >
+            <td class="td-num">
+              <span class="td-word-num">{{ index }}</span>
+            </td>
+            <td class="td-subject">
+              <span class="td-word-subject">{{ '기업정보 게시판 제목 텍스트입니다.' }}</span>
+            </td>
+            <td>
+              <span class="td-word-writer">{{ '작성자명' }}</span>
+            </td>
+            <td>
+              <span class="td-word-date">{{ '2021.00.00' }}</span>
+            </td>
+          </tr>
+        </table>
+        <!-- // 게시물이 있을 때 -->
+
+        <!-- 게시물이 없을 때 -->
+        <div class="board-list-grp">
+          <empty-contents txt="등록된 게시물이 없습니다." />
+        </div>
+        <!-- // 게시물이 없을 때 -->
+
+        <!-- 페이지네이션 -->
+        <div class="pagination">
+          <btn-square-bd @click="window.alert('이전 버튼 누르기')">
+            <i class="icon icon-page-prev" />
+            <span class="is-voice-only">이전</span>
+          </btn-square-bd>
+
+          <button
+            type="button"
+            class="num-btn is-active"
+          >
+            1
+          </button>
+        
+          <button
+            type="button" 
+            class="num-btn"
+          >
+            2
+          </button>
+        
+          <button
+            type="button" 
+            class="num-btn"
+          >
+            3
+          </button>
+        
+          <button
+            type="button" 
+            class="num-btn"
+          >
+            4
+          </button>
+
+          <button
+            type="button" 
+            class="num-btn"
+          >
+            ···
+          </button>
+        
+          <button
+            type="button" 
+            class="num-btn"
+          >
+            10
+          </button>
+        
+          <btn-square-bd @click="window.alert('다음 버튼 누르기')">
+            <i class="icon icon-page-next" />
+            <span class="is-voice-only">다음</span>
+          </btn-square-bd>
+        </div>
+        <!-- // 페이지네이션 -->
+      </div>
     </div>
+    <layout-footer />
   </div>
 </template>
 
@@ -179,4 +347,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.etpr-profile-board-page {
+  .etpr-tab-container {
+    padding-bottom: 100px;
+  }
+
+  .board-list-grp {
+    background-color: white;
+
+    .empty-wrap {
+      padding: 40px 0 100px;
+    }
+  }
+}
 </style>

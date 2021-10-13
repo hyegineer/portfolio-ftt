@@ -1,4 +1,5 @@
 /* ========== 1:1 문의 ========== */
+
 .inquiry-page{
   .page-container{
     padding-bottom: 200px;
@@ -28,8 +29,7 @@
   }
 }
 
-// 페이지 구성요소) 1:1문의 - 필드셋
-.inquiry-ffieldset{
+.inquiry-ffieldset{ // 페이지 구성요소: 1:1문의 - 필드셋
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
@@ -44,12 +44,11 @@
   }
 }
 
-.inquiry-ffieldset-grid{
+.inquiry-ffieldset-grid{ // 페이지 구성요소: 1:1문의 - 필드셋 내 그리드
   flex: 1 1 auto;
 }
 
-// 페이지 구성요소) 1:1문의 - 수신여부 선택
-.txtsm-center-grp{
+.txtsm-center-grp{ // 페이지 구성요소: 1:1문의 - 수신여부 선택
   @include flex-col;
   @include flex-op(center, center);
 
@@ -68,12 +67,11 @@
   }
 }
 
-// 페이지 구성요소) 1:1 문의내역
-.inquiry-history-wrap {
+.inquiry-history-wrap { // 페이지 구성요소: 1:1 문의내역 영역 마진
   margin: 60px 0;
 }
 
-.inquiry-list-grp{
+.inquiry-list-grp{ // 페이지 구성요소: 1:1 문의 게시판 list group
   width: 100%;
 
   .board-list{
@@ -84,8 +82,7 @@
   }
 }
 
-// 페이지 구성요소) 1:1 문의상세
-.inquiry-detail-page{
+.inquiry-detail-page{ // 페이지 구성요소: 1:1 문의상세 페이지
   .company-hgrp{
     padding-bottom: 0;
 
@@ -104,7 +101,7 @@
   padding-bottom: 116px;
 }
 
-.board-detail-hd{
+.board-detail-hd{ // 페이지 구성요소: 1:1 문의 게시판 detail 헤더
   width: 100%;
   border-bottom: 1px solid #171820;
   padding: 20px 0;
@@ -147,7 +144,7 @@
   }
 }
 
-.board-detail-cont{
+.board-detail-cont{ // 페이지 구성요소: 1:1 문의 게시판 detail 컨텐츠영역
   border-bottom: 1px solid #DDDEE6;
 
   .bcont{
@@ -186,42 +183,4 @@
   }
 }
 
-.board-detail-nav{
-  @include flex-center;
-
-  margin-top: 40px;
-
-  .bnav-ctrl-list{
-    width: 100%;
-    max-width: 120px;
-  }
-
-  .bnav-ctrl{
-    @include flex-center;
-
-    display: inline-flex;
-    gap: 15px;
-    cursor: pointer;
-
-    .btn-square-bd{
-      width: 42px;
-      height: 40px;
-      border-color: #C3C3CE;
-    }
-
-    .txt{
-      font-size: 14px;
-      font-weight: 500;
-    }
-  }
-
-  .bnav-ctrl-prev{
-    margin-left: 0;
-    margin-right: auto;
-  }
-
-  .bnav-ctrl-next{
-    margin-right: 0;
-    margin-left: auto;
-  }
-}
+/* ========== END 1:1 문의 ========== */

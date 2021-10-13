@@ -6,6 +6,23 @@
       </h1>
 
       <div class="section-cont section-btns-cont">
+        <div
+          position="double-centered"
+          class="btn-grp"
+        >
+          <btn-bd-light
+            class="btn-lg btn-prev"
+          >
+            이전
+          </btn-bd-light>
+
+          <btn-solid
+            class="btn-lg btn-full"
+          >
+            다음
+          </btn-solid>
+        </div>
+
         <btn-solid
           class="btn-lg btn-full"
           @click="window.alert('다음 버튼을 클릭하셨습니다.')"
@@ -740,6 +757,12 @@
         <div class="icon-with-txt">
           <i class="icon icon-loca" />
           <span class="txt">서울특별시 강남구 테헤란로 312 비전타워...</span>
+        </div>
+
+        <div class="icon-with-txt ai-center">
+          <i class="icon icon-i" />
+          <span class="txt">팩트체크는 3개월 동안 본인만 확인 가능 하며, 3개월 이후에는 모든 이용자들에게 공개됩니다.
+          </span>
         </div>
 
         <h2>9-2. 브레드크럼</h2>

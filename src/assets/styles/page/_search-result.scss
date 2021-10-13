@@ -1,0 +1,195 @@
+/* ========== 스타트업찾기, 검색결과 페이지 ========== */
+
+.search-layout{
+  @include flex{
+    @include flex-op(flex-start, flex-start);
+  }
+
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 40px 0 150px;
+  gap: 40px;
+
+  .search-layout-nav{
+    width: 100%;
+    max-width: 220px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 110px;
+  }
+  
+  .search-layout-cont{
+    width: 100%;
+    padding-top: 45px;
+  }
+
+  .pagination{
+    margin-top: 50px;
+  }
+}
+
+.search-cont-hgrp{ // 구성요소 - 결과페이지 레이아웃 제목
+  margin-bottom: 19px;
+
+  .breadcrumb{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .ttl{
+    @include font-op($c: #171820, $w: 500){
+      font-size: 28px;
+    }
+    line-height: 1.4;
+  }
+}
+
+.nothing-result-box{ // 구성요소 - 결과페이지 결과 없을 때
+  @include flex-center;
+  @include flex-col;
+
+  background-color: #F9F9FB;
+  padding: 70px 20px;
+  text-align: center;
+
+  .empty-txt{
+    font-weight: 500;
+    font-size: 20px;
+    color: #171820;
+  }
+
+  .desc{
+    @include font-op($c: #171820){
+      font-size: 18px;
+    }
+
+    line-height: 1.4;
+    margin: 15px 0 20px;
+  }
+
+  .btn-bd{
+    width: 100%;
+    max-width: 145px;
+  }
+}
+
+/* ----------------- 검색결과 사이드네비게이션 ----------------- */
+
+.side-nav{
+}
+
+.side-nav-ttl-grp{ // 사이드네비 제목
+  width: 100%;
+  border-bottom: 2px solid #00EB79;
+  padding-bottom: 18px;
+  margin-bottom: 3px;
+
+  .ttl{
+    @include font-op($w: 500, $c: #171820){
+      font-size: 20px;
+    };
+
+    line-height: 1.4;
+  }
+}
+
+.side-nav-grp{ // 사이드네비 네비게이션 그룹
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid #DDDEE6;
+
+  &:last-child{
+    border-bottom: 0;
+  }
+}
+
+.side-nav-top-grp{
+  .side-nav-btn{
+    padding: 8px 0;
+
+    .txt{
+      font-size: 14px;
+    }
+
+    .arrow{
+      margin-top: 4.5px;
+    }
+  }
+}
+
+.side-nav-list.is-active{ // 사이드네비 하위메뉴있는 대메뉴일 시, 클릭하면 하위메뉴 보이게 + 화살표 돌리기
+  .side-nav-lnb-grp{
+    display: block;
+  }
+
+  .side-nav-btn {
+    .txt{
+      font-weight: 500;
+    }
+
+    .arrow{
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.side-nav-btn{ // 사이드네비 대메뉴버튼
+  @include flex{
+    @include flex-op(flex-start, flex-start);
+  }
+  @include input-reset;
+
+  width: 100%;
+  text-align: left;
+  padding: 11px 0;
+  cursor: pointer;
+
+  .txt{
+    display: block;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .arrow{
+    @include bg-op($p: center, $s: contain);
+
+    display: block;
+    width: 15px;
+    height: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5.592' height='9.061' viewBox='0 0 5.592 9.061'%3E%3Cpath id='패스_1' data-name='패스 1' d='M-19274.736-7922.715l4,4-4,4' transform='translate(19275.268 7923.245)' fill='none' stroke='%23171820' stroke-width='1.5'/%3E%3C/svg%3E%0A");
+    margin-left: auto;
+    margin-right: 0;
+    transition: all 0.2s;
+    transform: rotate(0);
+    margin-top: 6px;
+  }
+}
+
+.side-nav-lnb-grp{ // 사이드네비 하위메뉴 그룹
+  width: 100%;
+  padding: 5px 0 10px;
+  padding-left: 20px;
+  display: none;
+
+  .lnb-btn{
+    @include input-reset;
+
+    display: inline-block;
+    width: 100%;
+    font-size: 15px;
+    color: #8E909F;
+    text-align: left;
+    margin: 6px 0;
+    cursor: pointer;
+  }
+
+  .lnb-btn.router-link-active{
+    color: #171820;
+    -webkit-text-stroke: 0.5px #171820;
+  }
+}
+
+/* ----------------- END 검색결과 사이드네비게이션 ----------------- */
+
+/* ========== END 스타트업찾기, 검색결과 페이지 ========== */

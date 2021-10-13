@@ -1,3 +1,5 @@
+/* ========== 카드 관련 스타일 ========== */
+
 .card{ // 프로필 카드
   width: 100%;
   
@@ -168,3 +170,82 @@
     flex-shrink: 0;
   }
 }
+
+/* ----------------- 카드 그리드 그룹 ----------------- */
+
+.card-grid-grp{
+  width: 100%;
+  max-width: 1090px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 50px;
+  column-gap: 17px;
+
+  .card{
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+.card-grid-grp-ttl{ // 카드 총 갯수 알림
+  @include flex{
+    @include flex-op(center, flex-start);
+  }
+
+  margin-bottom: 15px;
+  color: #171820;
+  gap: 10px;
+
+  .txt{
+    font-size: 16px;
+    position: relative;
+
+    .bold{
+      font-weight: 300;
+      -webkit-text-stroke: 1px #171820;
+    }
+  }
+
+  .highlight{
+    position: relative;
+    font-weight: 500;
+
+    @include make-before{
+      @include absolute($b: 0);
+
+      display: inline-block;
+      width: 100%;
+      height: 4px;
+      background-color: #53FF81;
+      z-index: 0;
+    }
+
+    u{
+      position: relative;
+      z-index: 1;
+      text-decoration: none;
+    }
+  }
+
+  .txt-right{
+    @include flex{
+      @include flex-op(center, flex-start);
+    }
+
+    margin-left: auto;
+    margin-right: 0;
+    gap: 10px;
+  }
+
+  .custom-slct{
+    width: 150px;
+  }
+
+  .img-advice{
+    @include absolute($b: 0, $r: -73px);
+  }
+}
+
+/* ----------------- END 카드 그리드 그룹 ----------------- */
+
+/* ========== END 카드 관련 스타일 ========== */

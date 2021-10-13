@@ -8,6 +8,7 @@
 @import "base/base";
 @import "base/font";
 @import "base/helper";
+@import "base/helper-font";
 
 // 3. vendor
 
@@ -17,9 +18,9 @@
 @import "component/icon";
 @import "component/button";
 @import "component/form";
+@import "component/board";
 
 // 5. layout
-@import "layout/layout";
 @import "layout/header";
 @import "layout/footer";
 @import "layout/modal";
@@ -33,7 +34,9 @@
 @import "page/company";
 @import "page/inquiry";
 @import "page/main";
-@import "page/mypage";
+@import "page/search-result";
+@import "page/etpr-profile"; // 기업 프로필
+@import "page/mypage"; // cgs 마이페이지
 @import "page/mypage-enterprise-info"; // 기업 정보
 @import "page/mypage-factcheck"; // 팩트체크
-@import "page/etpr-profile";
+@import "page/mypage-note"; // 쪽지함

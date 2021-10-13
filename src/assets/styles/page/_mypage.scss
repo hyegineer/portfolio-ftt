@@ -22,6 +22,13 @@
   }
 }
 
+.center-btn-grp { 
+  width: 390px;
+  margin: 0 auto;
+  padding-top: 22px;
+  gap: 14px;
+}
+
 // myinfo-main
 .myinfo-page-container {
 
@@ -273,6 +280,10 @@
     border-bottom: none;
   }
 
+  &.border-remove {
+    border-bottom: none;
+  }
+
   .ttl {
     font-size: rem(16);
     font-weight: 600;
@@ -365,12 +376,37 @@
       margin: 10px 0;
     }
 
+    .inp-btn-grp {
+      width: 50%;
+      margin: 10px 0;
+    }
+
     .link-inp {
       padding-left: 45px;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20.001' viewBox='0 0 20 20.001'%3E%3Cg id='icon-link' transform='translate(0.993 1)'%3E%3Cg id='그룹_6444' data-name='그룹 6444' transform='translate(-0.993 -1)'%3E%3Cg id='그룹_6443' data-name='그룹 6443' transform='translate(0 0)'%3E%3Cpath id='패스_6884' data-name='패스 6884' d='M7.3,185.278l-2.357,2.357A2.5,2.5,0,1,1,1.405,184.1l4.714-4.714a2.5,2.5,0,0,1,3.535,0,.833.833,0,0,0,1.179-1.179,4.166,4.166,0,0,0-5.892,0L.227,182.921a4.167,4.167,0,0,0,5.893,5.892l2.357-2.357A.833.833,0,1,0,7.3,185.278Z' transform='translate(0.993 -170.034)' fill='%23b8bac7'/%3E%3Cpath id='패스_6885' data-name='패스 6885' d='M201.257.22a4.167,4.167,0,0,0-5.893,0l-2.828,2.828a.833.833,0,0,0,1.179,1.179L196.543,1.4a2.5,2.5,0,1,1,3.536,3.535l-5.185,5.185a2.5,2.5,0,0,1-3.535,0A.833.833,0,0,0,190.18,11.3a4.166,4.166,0,0,0,5.892,0l5.185-5.185A4.166,4.166,0,0,0,201.257.22Z' transform='translate(-182.477 1)' fill='%23b8bac7'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
       background-position: 15px center;
       background-repeat: no-repeat;
       background-size: auto;
+    }
+  }
+
+  .inp-half-grp {
+
+    .inp-btn-grp {
+      width: 50%;
+    }
+
+    .info-guide {
+      font-size: rem(12);
+      font-weight: 400;
+      color: #8E909F;
+      margin-bottom: 12px;
+    }
+
+    .badge-wrap {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
     }
   }
 }
@@ -408,5 +444,3 @@
 }
 
 // END startup - EtprDefaultInfoEdit
-
-

@@ -1,4 +1,5 @@
-/* ========== 관련 애니메이션 ========== */
+/* ========== company 관련 애니메이션 ========== */
+
 @keyframes slideup {
   from {
     transform: translateY(100%);
@@ -10,10 +11,11 @@
     opacity: 1;
   }
 }
-/* ========== END 관련 애니메이션 ========== */
 
+/* ========== END company 관련 애니메이션 ========== */
 
 /* ========== 공지사항 ========== */
+
 .wide-panel {
   width: 90%;
   max-width: 1090px;
@@ -163,9 +165,11 @@
     line-height: 1.5;
   }
 }
+
 /* ========== END 공지사항 ========== */
 
 /* ========== 자주묻는질문 ========== */
+
 .icon-box {
   display: flex;
   justify-content: center;
@@ -181,3 +185,5 @@
   margin-right: 15px;
   margin-top: 2px;
 }
+
+/* ========== END 자주묻는질문 ========== */
