@@ -13,21 +13,10 @@
         <div class="avatar-with-name">
           <avatar />
           <div class="name-grp">
+            <span class="name-user-type">개인 투자자</span>
             <span class="name">
-              주식회사 팩트컴퍼니
+              투자 컴퍼니
             </span>
-            
-            <ul class="name-subtxt-grp">
-              <li class="name-subtxt-list">
-                기업규모
-              </li>
-              <li class="name-subtxt-list">
-                산업분류
-              </li>
-              <li class="name-subtxt-list">
-                산업분야
-              </li>
-            </ul>
           </div>
         </div>
         
@@ -36,8 +25,8 @@
           <li class="mypage-snav-list">
             <router-link
               class="mypage-snav-btn"
-              to="/startup/mypage/dashboard-main"
-              :class="{'router-link-active': $route.path.startsWith(`/startup/mypage/dashboard-`)}"
+              to="/investor/mypage/dashboard-main"
+              :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/dashboard-`)}"
             >
               <span class="txt">대시보드</span>
               <i class="arrow" />
@@ -48,8 +37,8 @@
           <li class="mypage-snav-list">
             <router-link
               class="mypage-snav-btn"
-              to="/startup/mypage/myinfo-main"
-              :class="{'router-link-active': $route.path.startsWith(`/startup/mypage/myinfo-`)}"
+              to="/investor/mypage/myinfo-main"
+              :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/myinfo-`)}"
             >
               <span class="txt">내 정보</span>
               <i class="arrow" />
@@ -59,12 +48,12 @@
           <!-- 기업정보 -->
           <li
             class="mypage-snav-list" 
-            :class="{'is-active': $route.path.startsWith(`/startup/mypage/etpr-`)}"
+            :class="{'is-active': $route.path.startsWith(`/investor/mypage/etpr-`)}"
           >
             <router-link
-              to="/startup/mypage/etpr-default-info"
+              to="/investor/mypage/etpr-default-info"
               class="mypage-snav-btn"
-              :class="{'router-link-active': $route.path.startsWith(`/startup/mypage/etpr-`)}"
+              :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/etpr-`)}"
             >
               <span class="txt">기업정보</span>
               <i class="arrow" />
@@ -75,37 +64,30 @@
             >
               <router-link
                 class="lnb-btn"
-                to="/startup/mypage/etpr-default-info"
-                :class="{'router-link-active': $route.path.startsWith(`/startup/mypage/etpr-default-info`)}"
+                to="/investor/mypage/etpr-default-info"
+                :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/etpr-default-info`)}"
               >
                 기본정보
               </router-link>
-              
+
               <router-link
                 class="lnb-btn"
-                to="/startup/mypage/etpr-detail-info"
-                :class="{'router-link-active': $route.path.startsWith(`/startup/mypage/etpr-detail-info`)}"
+                to="/investor/mypage/etpr-portfolio-main"
+                :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/etpr-portfolio-`)}"
               >
-                상세정보
+                포트폴리오
               </router-link>
               
               <router-link
                 class="lnb-btn"
-                to="/startup/mypage/etpr-document-manage"
-              >
-                제출서류 관리
-              </router-link>
-              
-              <router-link
-                class="lnb-btn"
-                to="/startup/mypage/etpr-member-manage"
+                to="/investor/mypage/etpr-member-manage"
               >
                 구성원 관리
               </router-link>
               
               <router-link
                 class="lnb-btn"
-                to="/startup/mypage/etpr-group-manage"
+                to="/investor/mypage/etpr-group-manage"
               >
                 그룹 관리
               </router-link>
@@ -115,7 +97,7 @@
           <!-- 관심기업 -->
           <li class="mypage-snav-list">
             <router-link
-              to="/startup/mypage/fav-list"
+              to="/investor/mypage/fav-list"
               class="mypage-snav-btn"
             >
               <span class="txt">관심기업</span>
@@ -126,7 +108,7 @@
           <!-- 최근 조회한 기업 -->
           <li class="mypage-snav-list">
             <router-link
-              to="/startup/mypage/recent-list"
+              to="/investor/mypage/recent-list"
               class="mypage-snav-btn"
             >
               <span class="txt">최근 조회한 기업</span>
@@ -134,15 +116,52 @@
             </router-link>
           </li>
           
+          <!-- 포인트 -->
+          <li
+            class="mypage-snav-list"
+            :class="{'is-active': $route.path.startsWith(`/investor/mypage/point-`) 
+              || $route.path.startsWith(`/investor/mypage/membership-`)}"
+          >
+            <router-link
+              to="/investor/mypage/point-main"
+              class="mypage-snav-btn"
+              :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/point-`)
+                || $route.path.startsWith(`/investor/mypage/membership-`)}"
+            >
+              <span class="txt">포인트</span>
+              <i class="arrow" />
+            </router-link>
+
+            <div
+              class="mypage-snav-lnb-grp"
+            >
+              <router-link
+                class="lnb-btn"
+                to="/investor/mypage/point-main"
+                :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/point-`)}"
+              >
+                포인트 충전/내역
+              </router-link>
+
+              <router-link
+                class="lnb-btn"
+                to="/investor/mypage/membership-main"
+                :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/membership-`)}"
+              >
+                멤버십 구매
+              </router-link>
+            </div>
+          </li>
+          
           <!-- 팩트체크 -->
           <li
             class="mypage-snav-list"
-            :class="{'is-active': $route.path.startsWith(`/startup/mypage/ftck-`)}"
+            :class="{'is-active': $route.path.startsWith(`/investor/mypage/ftck-`)}"
           >
             <router-link
-              to="/startup/mypage/ftck-apply-main"
+              to="/investor/mypage/ftck-list"
               class="mypage-snav-btn"
-              :class="{'router-link-active': $route.path.startsWith(`/startup/mypage/ftck-`)}"
+              :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/ftck-`)}"
             >
               <span class="txt">팩트체크</span>
               <i class="arrow" />
@@ -153,18 +172,18 @@
             >
               <router-link
                 class="lnb-btn"
-                to="/startup/mypage/ftck-apply-main"
-                :class="{'router-link-active': $route.path.startsWith(`/startup/mypage/ftck-apply`)}"
+                to="/investor/mypage/ftck-list"
+                :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/ftck-detail`)}"
               >
-                팩트체커 신청
+                요청한 팩트체크
               </router-link>
-              
+
               <router-link
                 class="lnb-btn"
-                to="/startup/mypage/ftck-list"
-                :class="{'router-link-active': $route.path.startsWith(`/startup/mypage/ftck-detail`)}"
+                to="/investor/mypage/ftck-apply-main"
+                :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/ftck-apply`)}"
               >
-                우리 회사가 받은 팩트체크
+                팩트체커 신청
               </router-link>
             </div>
           </li>
@@ -172,9 +191,9 @@
           <!-- 쪽지함 -->
           <li class="mypage-snav-list">
             <router-link
-              to="/startup/mypage/note-list"
+              to="/investor/mypage/note-list"
               class="mypage-snav-btn"
-              :class="{'router-link-active': $route.path.startsWith(`/startup/mypage/note`)}"
+              :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/note`)}"
             >
               <span class="txt">쪽지함</span>
               <i class="arrow" />
@@ -198,7 +217,7 @@
 
 <script>
 export default {
-  name: 'SMypage',
+  name: 'IMypage',
 };
 </script>
 
