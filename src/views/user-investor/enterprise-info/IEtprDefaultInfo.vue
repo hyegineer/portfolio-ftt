@@ -245,7 +245,6 @@
                   <li class="table-cont-list flex-basis-22 txt-right">
                     <span class="table-txt">0,000,000,000</span>
                   </li>
-                  </li>
                 </ul>
               </div>
             <!-- END 내용이 있을 때 -->
