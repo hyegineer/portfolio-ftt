@@ -1,5 +1,7 @@
 <template>
-  <div />
+  <div>
+    포트폴리오 추가
+  </div>
 </template>
 
 <script>
