@@ -137,9 +137,11 @@
         <!-- 주주정보  -->
         <div class="table-all-wrap">
           <!-- 테이블 타이틀 -->
-          <p class="table-ttl">
-            주주정보
-          </p>
+          <div class="ttl-wrap">
+            <p class="table-ttl">
+              주주정보
+            </p>
+          </div>
           <!-- END 테이블 타이틀 -->
 
           <div class="table-grp">
@@ -203,9 +205,11 @@
         <!-- 재무상태 -->
         <div class="table-all-wrap">
           <!-- 테이블 타이틀 -->
-          <p class="table-ttl">
-            재무상태
-          </p>
+          <div class="ttl-wrap">
+            <p class="table-ttl">
+              재무상태
+            </p>
+          </div>
           <!-- END 테이블 타이틀 -->
 
           <div class="table-grp">
@@ -431,9 +435,11 @@
         <!-- 손익계산서 -->
         <div class="table-all-wrap">
           <!-- 테이블 타이틀 -->
-          <p class="table-ttl">
-            손익계산서
-          </p>
+          <div class="ttl-wrap">
+            <p class="table-ttl">
+              손익계산서
+            </p>
+          </div>
           <!-- END 테이블 타이틀 -->
 
           <div class="table-grp">
