@@ -9,7 +9,27 @@
             마이페이지
           </h1>
         </div>
+
+        <!-- 소속된 기업이 없을 때 -->
+        <div style="display: none;">
+          <span class="mypage-snav-ttl-sub">소속된 기업이 없습니다.</span>
+
+          <ul class="mypage-snav-grp">
+            <li class="mypage-snav-list">
+              <router-link
+                class="mypage-snav-btn"
+                to="/investor/mypage/wating-main"
+                :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/wating-`)}"
+              >
+                <span class="txt">내 정보</span>
+                <i class="arrow" />
+              </router-link>
+            </li>
+          </ul>
+        </div>
+        <!-- // 소속된 기업이 없을 때 -->
         
+        <!-- 소속된 기업이 있을 때 -->
         <div class="avatar-with-name">
           <avatar />
           <div class="name-grp">
@@ -200,6 +220,7 @@
             </router-link>
           </li>
         </ul>
+        <!-- // 소속된 기업이 있을 때 -->
       </layout-mypage-side-nav>
 
       <layout-mypage-container>
