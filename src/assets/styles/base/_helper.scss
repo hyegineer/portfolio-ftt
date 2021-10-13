@@ -1,4 +1,5 @@
-/* =================== helper =================== */
+/* ========== helper ========== */
+
 // 노출되지 않을 영역
 .is-none {
   display: none !important;
@@ -61,17 +62,7 @@
   white-space: pre-line;
 }
 
-.gray-txt-sm{
-  color: #8E909F;
-  font-size: 13px;
-}
-
-.light-gray-txt-sm{
-  color: #B8BAC7;
-  font-size: 13px;
-}
-
-.space-between{
+.space-between{ // 쓰일까 말까.. 추후 보고 지우기
   @include flex{
     @include flex-op(center, space-between);
   }
@@ -86,3 +77,5 @@
 
   gap: 10px;
 }
+
+/* ========== END helper ========== */

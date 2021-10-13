@@ -1,4 +1,5 @@
-/* -------------- [layout] modal -------------- */
+/* ========== layout modal 스타일 ========== */
+
 .modal-wrapper {
   @include flex-col {
     @include flex-center;
@@ -280,3 +281,5 @@
     margin: 5px 0;
   }
 }
+
+/* ========== END layout modal 스타일 ========== */

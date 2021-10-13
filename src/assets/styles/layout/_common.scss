@@ -1,25 +1,21 @@
-
-
-// 구성요소 - empty-wrap
-.empty-wrap{
+.empty-wrap{ // 구성요소: 컨텐츠 없을 때 스타일
   text-align: center;
 
   .empty-icon{
     width: 100%;
-    max-width: 188px;
-    margin: 0 auto 18px;
+    max-width: em(188);
+    margin: 0 auto em(18);
   }
 
   .empty-txt{
     @include font-op($c: #8E909F){
-      font-size: 15px;
+      font-size: em(15);
       line-height: 1.35;
     };
   }
 }
 
-// 구성요소 - avatar-with-name
-.avatar-with-name{
+.avatar-with-name{ // 구성요소: 아바타 + 이름정보
   @include flex{
     @include flex-op(center, flex-start);
   }
@@ -107,7 +103,7 @@
   }
 }
 
-.col-avatar-with-name{
+.col-avatar-with-name{ // 구성요소: 아바타 + 이름정보 세로버전
   @include flex-op(flex-start, center);
 
   flex-direction: column;
@@ -131,8 +127,7 @@
   }
 }
 
-// 구성요소 - icon-with-txt
-.icon-with-txt{
+.icon-with-txt{ // 구성요소: 아이콘 + 텍스트
   @include flex{
     @include flex-op(flex-start, flex-start);
   }
@@ -156,20 +151,23 @@
   }
 }
 
-.icon-with-txt.line-one{
+.icon-with-txt.ai-center{ // 구성요소: 아이콘 + 텍스트 중앙정렬
+  align-items: center;
+}
+
+.icon-with-txt.line-one{ // 구성요소: 아이콘 + 텍스트 한줄일 때 말줄임표
   .txt{
     @include ellipse(1, 19.5px);
   }
 }
 
-.icon-with-txt.line-two{
+.icon-with-txt.line-two{ // 구성요소: 아이콘 + 텍스트 두줄일 때 말줄임표
   .txt{
     @include ellipse(2, 19.5px);
   }
 }
 
-// 구성요소 - pagination
-.pagination{
+.pagination{ // 구성요소: 페이지네이션
   @include flex-center;
 
   gap: 10px;
@@ -204,8 +202,7 @@
   }
 }
 
-// 구성요소 - detail list grp
-.dlist-grp{ // detail list grp
+.dlist-grp{ // 구성요소: detail list grp (2열)
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -213,7 +210,7 @@
   row-gap: 18px;
 }
 
-.dlist{
+.dlist{ // 구성요소: detail list
   @include flex{
     @include flex-op(flex-start, flex-start);
   }
@@ -242,7 +239,7 @@
   }
 }
 
-.dlist-col1-grp{
+.dlist-col1-grp{ // 구성요소: detail list grp (1열)
   grid-template-columns: repeat(1, 1fr);
   row-gap: 7px;
 
@@ -259,167 +256,7 @@
   }
 }
 
-// 구성요소 - auth 관련 title group
-.auth-hgrp{
-  width: 100%;
-  text-align: left;
-  margin-bottom: 50px;
-
-  .badge-flag{
-    margin-bottom: 5px;
-  }
-
-  .ttl{
-    @include font-op($w: 400, $c: #171820){
-      font-size: 25px;
-    }
-
-    -webkit-text-stroke: 1px #171820;
-    margin-bottom: 12px;
-
-    .ttl-txt{
-      vertical-align: middle;
-    }
-
-    .badge-auth{
-      margin-left: 6px;
-    }
-  }
-
-  .ttl-sub{
-    @include font-op($c: #171820){
-      font-size: 16px;
-    }
-
-    line-height: 1.5;
-  }
-
-  .ttl-sub-btn{
-    margin-top: 20px;
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-}
-
-.auth-hgrp ~ .auth-form-area{
-  margin-top: -10px;
-}
-
-.auth-hgrp ~ .ftck-auth-form-area{
-  margin-top: -25px;
-}
-
-.symbol-fs{
-  max-width: 30px;
-  margin-bottom: 24px;
-}
-
-// 구성요소 - auth 관련 type 선택
-.type-slct-grp{
-  @at-root .auth-panel &{
-    margin-top: -20px;
-    margin-bottom: 60px;
-  }
-}
-
-.type-slct-list{
-  @include font-op($w: 500, $c: #171820){
-    font-size: 20px;
-  }
-
-  width: 100%;
-  border-bottom: 1px solid #DDDEE6;
-  padding: 10px 0;
-  cursor: pointer;
-
-  @include media(1200px, min){
-    &:hover{
-      .type-name{
-        font-weight: 600;
-      }
-
-      .type-name:before{
-        width: 20px;
-        margin-right: 10px;
-        opacity: 1;
-      }
-    }
-  }
-
-  .type-grp{
-    @include flex{
-      @include flex-op(center, space-between);
-    };
-
-    padding: 21px 0;
-    position: relative;
-  }
-
-  .type-name{
-    @include flex{
-      @include flex-op(center, flex-start);
-    }
-    
-    position: relative;
-
-    @include make-before{
-      opacity: 0;
-      width: 0;
-      height: 1px;
-      background-color: #171820;
-      margin-right: 0;
-      display: inline-block;
-      transition: all 0.3s;
-    }
-  }
-
-  .icon-check{
-    width: 23px;
-    height: 13px;
-    opacity: 0;
-    transition: all 0.2s;
-  }
-}
-
-.type-slct-list.is-active{
-  .type-name{
-    font-weight: 600;
-  }
-
-  .type-name:before{
-    width: 20px;
-    margin-right: 10px;
-    opacity: 1;
-  }
-
-  .icon-check{
-    opacity: 1;
-  }
-}
-
-// 구성요소 - auth 관련 건너뛰기 멘트
-.auth-skip-ment{
-  @include flex-col;
-  @include flex-op(center, center);
-
-  gap: 12px;
-  padding: 50px 0 20px;
-
-  .skip-ment{
-    @include font-op($w: 500, $c: #8E909F){
-      font-size: 12px;
-    }
-  }
-
-  .btn-txt{
-    &:hover{
-      text-decoration: underline;
-    }
-  }
-}
-
-// 구성요소 - auth 관련 이미지 업로드 틀
-.input-img-frame{
+.input-img-frame{ // 구성요소 - 이미지 업로드 틀
   border: 1px solid #DDDEE6;
   background-color: #EBECF5;
   overflow: hidden;
@@ -441,18 +278,17 @@
   }
 }
 
-.input-circle-img-frame{
+.input-circle-img-frame{ // 구성요소 - 이미지 업로드 틀 (원형)
   @include circle(100px);
 }
 
-.input-square-img-frame{
+.input-square-img-frame{ // 구성요소 - 이미지 업로드 틀 (사각형)
   width: 260px;
   height: 180px;
   border-color: #ebecf5;
 }
 
-// 구성요소 - auth 관련 경력사항 항목 추가 input list
-.add-inp-grp{
+.add-inp-grp{ // 구성요소 - 항목 추가 input list
   width: 100%;
 
   .inp-grp{
@@ -487,8 +323,7 @@
   }
 }
 
-// 구성요소 - auth 관련 관심키워드 항목 badge group
-.add-badge-grp{
+.add-badge-grp{ // 구성요소 - 관심키워드 항목 badge group
   @include flex{
     @include flex-op(flex-start, flex-start);
 
@@ -503,38 +338,7 @@
   }
 }
 
-// 구성요소 - auth 관련 회원가입 완료 박스
-.auth-complete-cont{
-  margin-top: -15px;
-  color: #171820;
-
-  .ttl-grp{
-    margin-bottom: 30px;
-  }
-
-  .ttl{
-    font-size: 29px;
-    letter-spacing: -0.5px;
-    margin-bottom: 20px;
-  }
-
-  .ttl-sub{
-    font-size: 16px;
-    line-height: 1.5;
-
-    .bold{
-      font-weight: 300;
-      -webkit-text-stroke: 1px #171820;
-    }
-  }
-
-  .inp-btn-grp{
-    margin-bottom: 50px;
-  }
-}
-
-// 구성요소 - 탭
-.tab{
+.tab{ // 구성요소 - 탭
   width: 100%;
   border-bottom: 1px solid #DDDEE6;
 
@@ -564,8 +368,7 @@
   }
 }
 
-// 구성요소 - 체크박스 + 멘트
-.check-lbel-ment{
+.check-lbel-ment{ // 구성요소 - 체크박스 + 멘트
   @include flex-op(flex-start, flex-start);
   display: inline-flex;
 
@@ -591,8 +394,7 @@
   }
 }
 
-// 구성요소 - 개인정보 동의관련 박스
-.agree-cont-box{
+.agree-cont-box{ // 구성요소 - 개인정보 동의관련 박스
   background-color: #F9F9FB;
   padding: 44px 40px;
 
@@ -611,7 +413,7 @@
   }
 } 
 
-.agree-cont{
+.agree-cont{ // 구성요소 - 개인정보 동의관련 박스 내용영역
   @include custom-scroll(#dddee6);
 
   width: 100%;
@@ -623,8 +425,7 @@
   line-height: 1.5;
 }
 
-// 구성요소 - 게시판 list들
-.board-list-grp-ttl{
+.board-list-grp-ttl{ // 구성요소 - 게시판 list 갯수 알림
   @include flex{
     @include flex-op(center, flex-start);
   }
@@ -654,7 +455,7 @@
   }
 }
 
-.board-list-grp{
+.board-list-grp{ // 구성요소 - 게시판 list group
   width: 100%;
   border-top: 1px solid #171820;
   margin-bottom: 60px;
@@ -664,7 +465,7 @@
   }
 }
 
-.board-list{
+.board-list{ // 구성요소 - 게시판 list
   @include flex{
     @include flex-op(center, flex-start);
   }

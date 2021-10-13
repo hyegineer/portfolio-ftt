@@ -274,21 +274,9 @@
 @mixin fixed-center {
   left: 0;
   right: 0;
-  max-width: $max-width;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-}
-
-@mixin dark-box {
-  background-color: $g-box-dark-color;
-  border-radius: $g-box-radius;
-  color: white;
-}
-
-// 음수마진 땡기기!
-@mixin mb-x-pd-full {
-  width: auto;
-  margin: 0 -#{$g-mb-x-pd};
 }
 
 // header global style
@@ -298,7 +286,6 @@
   }
 
   position: relative;
-  padding: 0 $g-mb-x-pd;
 }
 
 @mixin mb-header-title {
@@ -310,7 +297,6 @@
   }
 
   z-index: 0;
-  padding: 0 $g-mb-x-pd;
   line-height: 1;
 }
 
