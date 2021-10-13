@@ -296,6 +296,7 @@
           <div class="hd-side-bottom">
             <!-- 로그인 전 공용 메뉴 -->
             <div
+              v-if="!testIsUser"
               class="sidemenu-wrap"
             >
               <router-link
@@ -769,11 +770,11 @@ export default {
   name: 'LayoutHeader',
   data() {
     return {
-      testIsUser: false,
-      testUserType: '', // startup, investor, fact-checker
+      testIsUser: true,
+      testUserType: 'investor', // startup, investor, fact-checker
       testMembership: false,
       viewSearchbar: false,
-      viewSidebar: true,
+      viewSidebar: false,
       hdSearchOptions: {
         depth01: null,
         depth02: null,
