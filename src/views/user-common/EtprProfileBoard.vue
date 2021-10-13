@@ -255,6 +255,7 @@
             v-for="(item, index) in 2"
             :key="index"
             class="board-list"
+            @click="$router.push('/etpr-profile-board-detail')"
           >
             <td class="td-num">
               <span class="td-word-num">{{ index }}</span>

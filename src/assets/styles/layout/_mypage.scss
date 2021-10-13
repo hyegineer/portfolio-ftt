@@ -281,6 +281,22 @@
 
 /* ----------------- 마이페이지 게시판 레이아웃 ----------------- */
 
+.mypboard-detail-wrap{
+  background-color: white;
+  padding: 0 40px;
+
+  .mypboard-detail-hd{
+    padding: 25px 0;
+    border-bottom: 1px solid #DDDEE6;
+  }
+
+  .mypboard-detail-cont{
+    width: 100%;
+    margin-top: 40px;
+    padding: 0 0 30px;
+  }
+}
+
 .mypboard-detail-hd{
   @include flex{
     @include flex-op(center, flex-start);
@@ -288,6 +304,23 @@
 
   width: 100%;
   padding: 15px 40px;
+
+  .mypboard-subject-grp{
+    @include flex-col;
+    @include flex-op(stretch, flex-start);
+
+    gap: 12px;
+
+    .mypboard-etc-grp{
+      margin-left: 0;
+      justify-content: flex-start;
+    }
+  }
+
+  .mypboard-subject{
+    font-size: 18px;
+    line-height: 1.4;
+  }
 
   .mypboard-etc-grp{
     @include flex-center;
