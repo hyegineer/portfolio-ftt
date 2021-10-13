@@ -1,5 +1,5 @@
 <template>
-  <div class="page etpr-prifile-page">
+  <div class="page etpr-prifile-page etpr-profile-report-page">
     <layout-header />
     <div class="page-container">
       <div class="right-fixed">
@@ -210,23 +210,35 @@
 
         <div class="mgt-20 white-panel active-ttl-container">
           <div class="active-ttl-inner">
-            <div class="active-ttl">
+            <div
+              class="active-ttl" 
+              @click="$router.push('/etpr-profile-info')"
+            >
               기업정보
             </div>
-            <div class="active-ttl">
+            <div
+              class="active-ttl active"
+              @click="$router.push('/etpr-profile-report')"
+            >
               팩트체크
             </div>
-            <div class="active-ttl">
+            <div
+              class="active-ttl" 
+              @click="$router.push('/etpr-profile-board')"
+            >
               게시판
             </div>
           </div>
         </div>
       </div>
-      <div class="wide-panel">
-        <div class="icon-with-txt ai-center">
-          <i class="icon icon-i" />
-          <span class="txt">팩트체크는 3개월 동안 본인만 확인 가능 하며, 3개월 이후에는 모든 이용자들에게 공개됩니다.</span>
+      <div class="wide-panel etpr-tab-container">
+        <div class="information-txt">
+          <div class="icon-with-txt ai-center">
+            <i class="icon icon-i" />
+            <span class="txt">팩트체크는 3개월 동안 본인만 확인 가능 하며, 3개월 이후에는 모든 이용자들에게 공개됩니다.</span>
+          </div>
         </div>
+
         <!-- 팩트체크 인트로박스 -->
         <div class="ftck-intro-box">
           <img
@@ -408,4 +420,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.etpr-profile-report-page {
+  .etpr-tab-container {
+    padding-bottom: 100px;
+  }
+
+  .information-txt {
+    @include flex-center;
+
+    margin-bottom: 40px;
+  }
+
+  .empty-wrap {
+    padding: 40px 0 100px;
+  }
+}
 </style>

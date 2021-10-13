@@ -207,7 +207,7 @@
             <span class="is-voice-only">다음</span>
           </btn-square-bd>
         </div>
-      <!-- // 페이지네이션 -->
+        <!-- // 페이지네이션 -->
       </div>
     </div>
     <!-- // 마이페이지 컨텐츠 영역 -->
