@@ -335,20 +335,6 @@ const routes = [
             component: () => import('~@/views/user-startup/dashboard/SDashboardMain'),
             // meta: { requiresAuth: true },
           },
-          // 대시보드-투자기업에관심을가진투자자
-          {
-            path: 'dashboard-investor-list',
-            name: 'SDashboardInvestorList',
-            component: () => import('~@/views/user-startup/dashboard/SDashboardInvestorList'),
-            // meta: { requiresAuth: true },
-          },
-          // 대시보드-투자기업에관심을가진투자자 상세
-          {
-            path: 'dashboard-investor-detail',
-            name: 'SDashboardInvestorDetail',
-            component: () => import('~@/views/user-startup/dashboard/SDashboardInvestorDetail'),
-            // meta: { requiresAuth: true },
-          },
           // ===================== 내 정보 =====================
           // 내정보
           {

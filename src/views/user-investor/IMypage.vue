@@ -116,6 +116,41 @@
             </router-link>
           </li>
           
+          <!-- 팩트체크 -->
+          <li
+            class="mypage-snav-list"
+            :class="{'is-active': $route.path.startsWith(`/investor/mypage/ftck-`)}"
+          >
+            <router-link
+              to="/investor/mypage/ftck-list"
+              class="mypage-snav-btn"
+              :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/ftck-`)}"
+            >
+              <span class="txt">팩트체크</span>
+              <i class="arrow" />
+            </router-link>
+
+            <div
+              class="mypage-snav-lnb-grp"
+            >
+              <router-link
+                class="lnb-btn"
+                to="/investor/mypage/ftck-list"
+                :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/ftck-detail`)}"
+              >
+                요청한 팩트체크
+              </router-link>
+
+              <router-link
+                class="lnb-btn"
+                to="/investor/mypage/ftck-apply-main"
+                :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/ftck-apply`)}"
+              >
+                팩트체커 신청
+              </router-link>
+            </div>
+          </li>
+          
           <!-- 포인트 -->
           <li
             class="mypage-snav-list"
@@ -149,41 +184,6 @@
                 :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/membership-`)}"
               >
                 멤버십 구매
-              </router-link>
-            </div>
-          </li>
-          
-          <!-- 팩트체크 -->
-          <li
-            class="mypage-snav-list"
-            :class="{'is-active': $route.path.startsWith(`/investor/mypage/ftck-`)}"
-          >
-            <router-link
-              to="/investor/mypage/ftck-list"
-              class="mypage-snav-btn"
-              :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/ftck-`)}"
-            >
-              <span class="txt">팩트체크</span>
-              <i class="arrow" />
-            </router-link>
-
-            <div
-              class="mypage-snav-lnb-grp"
-            >
-              <router-link
-                class="lnb-btn"
-                to="/investor/mypage/ftck-list"
-                :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/ftck-detail`)}"
-              >
-                요청한 팩트체크
-              </router-link>
-
-              <router-link
-                class="lnb-btn"
-                to="/investor/mypage/ftck-apply-main"
-                :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/ftck-apply`)}"
-              >
-                팩트체커 신청
               </router-link>
             </div>
           </li>
