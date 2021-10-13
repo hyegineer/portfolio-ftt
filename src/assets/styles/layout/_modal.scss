@@ -282,4 +282,33 @@
   }
 }
 
+// 멤버십 구매하기
+.md-buy-membership{
+  .lbel-amount-point-grp{
+    padding: 20px 0;
+    background-color: #F9F9FB;
+
+    .lbel-amount-point{
+      padding: 0 20px;
+      margin: 15px 0;
+
+      &:first-child{
+        margin-top: 0;
+      }
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .lbel-inp-grp{
+    margin-top: 0;
+
+    .lbel{
+      margin-bottom: 10px;
+    }
+  }
+}
+
 /* ========== END layout modal 스타일 ========== */

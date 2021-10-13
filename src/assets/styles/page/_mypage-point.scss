@@ -1,0 +1,328 @@
+/* ========== 마이페이지 > 포인트 ========== */
+
+/* 마이페이지 > 포인트 > 포인트 충전/내역 */
+.mypage-point-card{
+  @include flex{
+    @include flex-op(stretch, space-between);
+  };
+
+  background-color: white;
+  padding: 50px 40px;
+}
+
+.mypage-point-hgrp{
+  color: #171820;
+  text-align: left;
+
+  .ttl{
+    font-size: 24px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+
+    .bold{
+      -webkit-text-stroke: 1px #171820;
+    }
+  }
+
+  .ttl-sub{
+    @include flex{
+      @include flex-op(flex-start, flex-start);
+    }
+    flex-direction: column;
+
+    gap: 6px;
+
+    .lbel{
+      font-size: 12px;
+      color: #5C5E70;
+    }
+
+    .amount{
+      @include font-op($w: 600){
+        font-size: 26px;
+      }
+
+      display: inline-block;
+      padding-top: 2px;
+    }
+
+    .badge-p{
+      @include circle(24px);
+      @include bg-op($s: contain);
+
+      flex-shrink: 0;
+    }
+  }
+
+  .charge-btn{
+    width: 100%;
+    max-width: 120px;
+    margin-top: 25px;
+  }
+}
+
+.mypage-point-history-wrap{
+  width: 100%;
+  max-width: 640px;
+
+  .ttl{
+    @include font-op($w: 500, $c: #171820){
+      font-size: 16px;
+    }
+
+    margin-bottom: 15px;
+  }
+
+  .cont{
+    @include custom-scroll($c: #00EB79);
+
+    overflow: auto;
+    height: 400px;
+    padding: 10px 0;
+    border: 1px solid #DDDEE6;
+  }
+
+  .nothing-cont{
+    @include flex-center;
+
+    font-weight: 500;
+    font-size: 15px;
+  }
+}
+
+/* 마이페이지 > 포인트 > 포인트 충전하기 */
+.mypage-point-charge-page{
+  .amount-item{
+    .amount, .unit{
+      font-size: 18px;
+    }
+
+    .badge-p{
+      margin-top: -1.5px;
+    }
+  }
+
+  .charge-point-inp{
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .charge-form-grp{
+    width: 100%;
+    margin: 6px 0;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  .ffieldset-ttl{
+    margin-bottom: 5px;
+  }
+
+  .charge-btn-grp{
+    margin-bottom: 20px;
+    gap: 0;
+    margin-top: 5px;
+
+    .charge-type-btn{
+      font-weight: 500;
+      width: 100%;
+      color: #8E909F;
+    }
+
+    .charge-type-btn.is-active{
+      box-shadow: 0 0 0 1px #5C5E70;
+      z-index: 1;
+      color: #171820;
+    }
+  }
+
+  .caution-box{
+    margin-top: 5px;
+  }
+
+  .form-btn-grp{
+    margin-top: 20px;
+  }
+}
+
+/* 마이페이지 > 포인트 > 포인트 충전완료 페이지 */
+.mypage-point-charge-complete-page{
+  .state-guide-box{
+    margin-bottom: 40px;
+
+    .state-desc{
+      color: #8E909F;
+    }
+  }
+
+  .charge-form-grp{
+    justify-content: center;
+    margin-top: 20px;
+
+    .lbel{
+      padding-top: 2px;
+      margin-right: 27px;
+    }
+  }
+}
+
+/* 마이페이지 > 포인트 > 멤버십 구매 페이지 */
+.mypage-membership-main-page{
+  .keyword-card{
+    margin-bottom: 10px;
+  }
+}
+
+.nothing-membership{
+  font-size: 18px;
+  color: #B8BAC7;
+  font-weight: 500;
+  display: inline-block;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+.membership-list-grp{
+  @include flex{
+    @include flex-op(stretch, flex-start);
+  }
+
+  gap: 10px;
+}
+
+.membership-list{
+  @include flex-col;
+  @include flex-op(stretch, space-between);
+
+  background-color: #F9F9FB;
+  overflow: hidden;
+  position: relative;
+  padding: 40px 20px;
+  color: #171820;
+  flex: 1 1 33.33%;
+  min-width: 200px;
+  min-height: 384px;
+
+  @include make-before{
+    width: 69px;
+    height: 69px;
+    border: 1px solid #dddee6;
+    background-color: white;
+    transform: rotate(45deg);
+
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  @include make-after{
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border: 1px solid #DDDEE6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .buy-btn {
+    margin-top: 5px;
+  }
+}
+
+.membership-list:hover,
+.membership-list.is-active{
+  background-color: white;
+  
+  &:before,
+  &:after{
+    border-color: #171820;
+  }
+
+  .btn-solid-dark{
+    background-color: #3060FF;
+
+    &:disabled{
+      opacity: 0.7;
+    }
+
+    &:hover{
+      background-color: darken(#3060FF, 3%);
+    }
+    
+    &:active{
+      background-color: darken(#3060FF, 8%);
+    }
+  }
+}
+
+.mbs-hgrp{
+  margin-bottom: 15px;
+  .sub-name{
+    font-size: 12px;
+    color: #5C5E70;
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+
+  .name{
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+.mbs-benefit-list-grp{
+  border-top: 1px dashed #B8BAC7;
+  border-bottom: 1px dashed #B8BAC7;
+  padding: 5px 0;
+  margin: 16px 0;
+}
+
+.mbs-benefit-list{
+  font-size: 13px;
+  line-height: 1.4;
+  color: #5C5E70;
+  margin: 15px 0;
+}
+
+.mbs-point-grp{
+  @include flex{
+    @include flex-op(center, space-between);
+  }
+
+  margin-bottom: 10px;
+
+  .lbel{
+    color: #5C5E70;
+    font-size: 12px;
+  }
+}
+
+/* 마이페이지 > 포인트 > 멤버십 구매완료 페이지 */
+.mypage-membership-complete-page{
+  .state-guide-box{
+    margin-bottom: 40px;
+
+    .state-desc{
+      color: #8E909F;
+    }
+  }
+
+  .charge-form-grp{
+    justify-content: center;
+    margin-top: 20px;
+
+    .lbel{
+      padding-top: 2px;
+      margin-right: 27px;
+    }
+  }
+}
+
+
+/* ========== END 마이페이지 > 포인트 ========== */
