@@ -1751,6 +1751,307 @@
       <!-- // 받은 팩트체크가 있을 때 -->
       </div>
     </section>
+    
+    <section class="section">
+      <h1 class="cp-ttl">
+        17. 테이블 양식
+      </h1>
+      <div class="section-cont">
+        <h2>17-1. overflow + custom-scroll</h2>
+        <div class="table-all-wrap">
+          <!-- 테이블 타이틀 -->
+          <p class="table-ttl">
+            주주정보
+          </p>
+          <!-- END 테이블 타이틀 -->
+
+          <div class="table-grp">
+            <!-- 테이블 헤더 그룹 -->
+            <ul class="table-hgrp">
+              <li class="table-hlist flex-basis-10 txt-center">
+                <span class="table-txt">주주구분</span>
+              </li>
+              <li class="table-hlist flex-basis-13 txt-left">
+                <span class="table-txt">주주명</span>
+              </li>
+              <li class="table-hlist flex-basis-10 txt-left">
+                <span class="table-txt">주종</span>
+              </li>
+              <li class="table-hlist flex-basis-16 txt-right">
+                <span class="table-txt">지분율(%0)</span>
+              </li>
+              <li class="table-hlist flex-basis-22 txt-right">
+                <span class="table-txt">보유주식수(주)</span>
+              </li>
+              <li class="table-hlist flex-basis-28 txt-right">
+                <span class="table-txt">보유주식 금액(원)</span>
+              </li>
+            </ul>
+            <!-- END 테이블 헤더 그룹 -->
+
+            <!-- 테이블 내용 그룹 -->
+            <div
+              class="table-cont-wrap custom-scroll-wrap"
+            >
+              <ul
+                v-for="(item, idx) in 20" 
+                :key="idx"
+                class="table-cont-grp"
+              >
+                <li class="table-cont-list flex-basis-10 txt-center">
+                  <span class="table-txt">중앙정렬</span>
+                </li>
+                <li class="table-cont-list flex-basis-13 txt-left">
+                  <span class="table-txt">좌측정렬</span>
+                </li>
+                <li class="table-cont-list flex-basis-10 txt-left">
+                  <span class="table-txt">좌측정렬</span>
+                </li>
+                <li class="table-cont-list flex-basis-16 txt-right">
+                  <span class="table-txt">우측정렬</span>
+                </li>
+                <li class="table-cont-list flex-basis-22 txt-right">
+                  <span class="table-txt">우측정렬</span>
+                </li>
+                <li class="table-cont-list flex-basis-28 txt-right">
+                  <span class="table-txt">우측정렬</span>
+                </li>
+              </ul>
+            </div>
+            <!-- END 테이블 내용 그룹 -->
+          </div>
+        </div>
+      </div>
+      
+      <div class="section-cont">
+        <h2>17-2. no overflow + bold 처리(개별 클래스로 처리)</h2>
+        <div class="table-all-wrap">
+          <!-- 테이블 타이틀 -->
+          <p class="table-ttl">
+            재무상태
+          </p>
+          <!-- END 테이블 타이틀 -->
+
+          <div class="table-grp">
+            <!-- 테이블 헤더 그룹 -->
+            <ul class="table-hgrp">
+              <li class="table-hlist flex-basis-20 txt-left">
+                <span class="table-txt">항목</span>
+              </li>
+              <li class="table-hlist flex-basis-26 txt-right">
+                <span class="table-txt">2019</span>
+              </li>
+              <li class="table-hlist flex-basis-26 txt-right">
+                <span class="table-txt">2020</span>
+              </li>
+              <li class="table-hlist flex-basis-26 txt-right">
+                <span class="table-txt">2021</span>
+              </li>
+            </ul>
+            <!-- END 테이블 헤더 그룹 -->
+
+            <!-- 테이블 내용 그룹 -->
+            <div
+              class="table-cont-wrap"
+            >
+              <ul
+                class="table-cont-grp"
+              >
+                <li class="table-cont-list flex-basis-20 txt-left">
+                  <span class="table-txt f-bold">현금성자산</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+              </ul>
+              <ul
+                class="table-cont-grp"
+              >
+                <li class="table-cont-list flex-basis-20 txt-left">
+                  <span class="table-txt f-bold">매출채권</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+              </ul>
+              <ul
+                class="table-cont-grp"
+              >
+                <li class="table-cont-list flex-basis-20 txt-left">
+                  <span class="table-txt f-bold">재고자산</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+              </ul>
+              <ul
+                class="table-cont-grp"
+              >
+                <li class="table-cont-list flex-basis-20 txt-left">
+                  <span class="table-txt f-bold">무형자산</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+              </ul>
+              <ul
+                class="table-cont-grp"
+              >
+                <li class="table-cont-list flex-basis-20 txt-left">
+                  <span class="table-txt f-bold">투자자산</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+              </ul>
+              <ul
+                class="table-cont-grp"
+              >
+                <li class="table-cont-list flex-basis-20 txt-left">
+                  <span class="table-txt f-bold">기타자산</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+              </ul>
+              <ul
+                class="table-cont-grp f-bold"
+              >
+                <li class="table-cont-list flex-basis-20 txt-left">
+                  <span class="table-txt f-bold">자산총계</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+              </ul>
+              <ul
+                class="table-cont-grp"
+              >
+                <li class="table-cont-list flex-basis-20 txt-left">
+                  <span class="table-txt f-bold">유통부재</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+              </ul>
+              <ul
+                class="table-cont-grp"
+              >
+                <li class="table-cont-list flex-basis-20 txt-left">
+                  <span class="table-txt f-bold">장기부채</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+              </ul>
+              <ul
+                class="table-cont-grp f-bold"
+              >
+                <li class="table-cont-list flex-basis-20 txt-left">
+                  <span class="table-txt f-bold">부채총계</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+              </ul>
+              <ul
+                class="table-cont-grp"
+              >
+                <li class="table-cont-list flex-basis-20 txt-left">
+                  <span class="table-txt f-bold">자본금</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+              </ul>
+              <ul
+                class="table-cont-grp f-600-lg"
+              >
+                <li class="table-cont-list flex-basis-20 txt-left">
+                  <span class="table-txt f-bold">자본총계</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+                <li class="table-cont-list flex-basis-26 txt-right">
+                  <span class="table-txt">0,000,000,000</span>
+                </li>
+              </ul>
+            </div>
+            <!-- END 테이블 내용 그룹 -->
+          </div>
+        </div>
+      </div>
+    </section>
 
     <modal-dialog>
       <modal-light-box @click="closeModal" />
