@@ -132,7 +132,7 @@
 
             <btn-solid
               class="btn-lg btn-full"
-              @click="window.alert('충전하기 버튼을 클릭하셨습니다.')"
+              @click="$router.push('point-charge-complete')"
             >
               충전하기
             </btn-solid>
