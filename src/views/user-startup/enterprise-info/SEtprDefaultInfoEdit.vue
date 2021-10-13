@@ -177,7 +177,7 @@
                 </div>
                 <div class="flex-row-grp">
                   <div class="lbel-inp-grp">
-                    <label class="lbel">기업 고유 아이디 <span class="required">*</span></label>
+                    <label class="lbel">기업 고유 아이디</label>
                     <div class="inp-grp">
                       <input
                         type="text"
@@ -192,9 +192,8 @@
               </div>
             </fieldset>
           </div>
-          </fieldset class="ffieldset">
-          <fieldset>
-            <div class="article-wrap">
+          <div class="article-wrap">
+            <fieldset class="ffieldset">
               <div class="cont-wrap">
                 <div class="lbel-inp-grp">
                   <div class="lbel-wrap">
@@ -228,17 +227,209 @@
                     />
                   </div>
                 </div>
+                <div class="flex-row-grp">
+                  <div class="lbel-inp-grp">
+                    <div class="lbel-toggle">
+                      <label class="lbel">기업규모 <span class="required">*</span></label>
+                    </div>
+              
+                    <select
+                      id="#"
+                      name="#"
+                      class="slct"
+                    >
+                      <option value="옵션1">
+                        옵션1
+                      </option>
+                      <option value="옵션2">
+                        옵션2
+                      </option>
+                    </select>
+                  </div>
+                  <div class="lbel-inp-grp">
+                    <div class="lbel-toggle">
+                      <label class="lbel">산업분류</label>
+
+                      <!-- 토글 스위치 -->
+                      <div class="toggle-item">
+                        <label
+                          class="tg-lbel"
+                          for="open01"
+                        >공개여부</label>
+                        <input
+                          id="open01"
+                          type="checkbox"
+                          class="is-none toggle-switch"
+                        >
+                        <label
+                          for="open01"
+                          class="toggle-onoff"
+                        />
+                      </div>
+                      <!-- // 토글 스위치 -->
+                    </div>
+              
+                    <select
+                      id="#"
+                      name="#"
+                      class="slct"
+                    >
+                      <option value="옵션1">
+                        옵션1
+                      </option>
+                      <option value="옵션2">
+                        옵션2
+                      </option>
+                    </select>
+                  </div>
+                  <div class="lbel-inp-grp">
+                    <div class="lbel-toggle">
+                      <label class="lbel">산업분야</label>
+
+                      <!-- 토글 스위치 -->
+                      <div class="toggle-item">
+                        <label
+                          class="tg-lbel"
+                          for="open01"
+                        >공개여부</label>
+                        <input
+                          id="open01"
+                          type="checkbox"
+                          class="is-none toggle-switch"
+                        >
+                        <label
+                          for="open01"
+                          class="toggle-onoff"
+                        />
+                      </div>
+                      <!-- // 토글 스위치 -->
+                    </div>
+              
+                    <select
+                      id="#"
+                      name="#"
+                      class="slct"
+                    >
+                      <option value="옵션1">
+                        옵션1
+                      </option>
+                      <option value="옵션2">
+                        옵션2
+                      </option>
+                    </select>
+                  </div>
+                </div>
               </div>
-            </div>
-          </fieldset class="ffieldset">
-          <div class="btn-wrap">
-            버튼모음
+            </fieldset>
+          </div>
+        
+          <div class="article-wrap border-remove">
+            <fieldset class="ffieldset">
+              <div class="flex-row-grp">
+                <div class="lbel-inp-grp">
+                  <div class="lbel-toggle">
+                    <label class="lbel">설립일</label>
+
+                    <!-- 토글 스위치 -->
+                    <div class="toggle-item">
+                      <label
+                        class="tg-lbel"
+                        for="open01"
+                      >공개여부</label>
+                      <input
+                        id="open01"
+                        type="checkbox"
+                        class="is-none toggle-switch"
+                      >
+                      <label
+                        for="open01"
+                        class="toggle-onoff"
+                      />
+                    </div>
+                    <!-- // 토글 스위치 -->
+                  </div>
+                  <div class="inp-grp">
+                    <button
+                      type="button"
+                      class="inp"
+                    >
+                      <i class="icon icon-cal" />
+                      <span>2021.10.05</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-row-grp">
+                <div class="inp-grp inp-btn-grp lbel-inp-grp">
+                  <label class="lbel">본사 주소</label>
+                  <div class="inp-grp">
+                    <input
+                      type="text"
+                      class="inp"
+                      placeholder="기본주소"
+                    >
+
+                    <btn-bd class="btn-md">
+                      주소찾기
+                    </btn-bd>
+                  </div>
+                </div>
+              </div>
+              <div class="inp-grp">
+                <input
+                  type="text"
+                  class="inp"
+                  placeholder="상세주소"
+                >
+              </div>
+              <div class="inp-half-grp">
+                <div class="inp-grp inp-btn-grp lbel-inp-grp">
+                  <label class="lbel">태그</label>
+                  <div class="inp-grp">
+                    <input
+                      type="text"
+                      class="inp"
+                      placeholder="최대 8글자"
+                    >
+
+                    <btn-bd class="btn-md">
+                      태그 추가
+                    </btn-bd>
+                  </div>
+                  <p class="info-guide">
+                    5개까지 등록이 가능합니다.
+                  </p>
+                </div>
+                <div class="badge-wrap">
+                  <badge-rounded
+                    v-for="(item, idx) in 5"
+                    :key="idx"
+                  >
+                    최대여덟글자입력
+                  </badge-rounded>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="btn-grp center-btn-grp">
+            <btn-bd-light
+              class="btn-lg btn-full color-gray btn-prev"
+              @click="window.alert('이전 버튼을 클릭하셨습니다.')"
+            >
+              이전
+            </btn-bd-light>
+            <btn-solid
+              class="btn-lg btn-full"
+              @click="window.alert('수정완료 버튼을 클릭하셨습니다.')"
+            >
+              수정완료
+            </btn-solid>
           </div>
         </div>
       </div>
     </div>
-    <!-- // 마이페이지 컨텐츠 영역 -->
   </div>
+  <!-- // 마이페이지 컨텐츠 영역 -->
 </template>
 
 <script>
