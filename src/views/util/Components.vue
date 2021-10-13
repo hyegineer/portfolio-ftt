@@ -6,6 +6,23 @@
       </h1>
 
       <div class="section-cont section-btns-cont">
+        <div
+          position="double-centered"
+          class="btn-grp"
+        >
+          <btn-bd-light
+            class="btn-lg btn-prev"
+          >
+            이전
+          </btn-bd-light>
+
+          <btn-solid
+            class="btn-lg btn-full"
+          >
+            다음
+          </btn-solid>
+        </div>
+
         <btn-solid
           class="btn-lg btn-full"
           @click="window.alert('다음 버튼을 클릭하셨습니다.')"
