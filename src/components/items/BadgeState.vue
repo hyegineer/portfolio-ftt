@@ -1,7 +1,7 @@
 <template>
   <div class="badge-state-wrap">
     <div
-      v-if="['대기중', '보완요청'].includes(txt)"
+      v-if="['대기중', '보완요청', '이의신청'].includes(txt)"
       class="badge-state color-bd-gray"
     >
       <span class="txt">

@@ -1,6 +1,6 @@
 <template>
   <!-- [D] 마이페이지 - 팩트체크-받은팩트체크 목록 -->
-  <div class="mypage-container">
+  <div class="mypage-container mypage-i-ftck-list-page">
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>
@@ -26,12 +26,119 @@
 
     <!-- 마이페이지 컨텐츠 영역 -->
     <div class="mypage-cont-wrap">
+      <!-- 요청한 팩트체크 - 주의사항 설명박스 -->
+      <div class="ftck-caution-box">
+        <img
+          src="@/assets/images/img/img-checker.svg"
+          alt=""
+          class="img-checker"
+        >
+
+        <div class="ftck-cb-ttl">
+          <i class="icon icon-i-green" />
+          <span class="cb-ttl">주의사항</span>
+        </div>
+
+        <ul class="ul-dash">
+          <li class="list">
+            팩트체커가 답변을 등록한 후 24시간 이내에 검토여부를 결정하지 않을경우, 자동으로 완료처리가 됩니다.
+          </li>
+          <li class="list">
+            내용이 마음에 들지 않거나, 정확하지 않은 정보로 판단될 경우 '보완요청' 버튼을 눌러주세요.
+          </li>
+          <li class="list">
+            팩트체크 완료가 3개월이 지났을 경우 비공개에서 공개로 전환됩니다.
+          </li>
+        </ul>
+      </div>
+      <!-- // 요청한 팩트체크 - 주의사항 설명박스 -->
+
+      <!-- 요청한 팩트체크 - 검색 -->
+      <div class="inp-grp inp-sch-grp page-inp-grp">
+        <input
+          type="text"
+          class="inp"
+          placeholder="제목, 내용을 검색하세요."
+        >
+        <!-- [D] 클릭시 검색어 지워짐 -->
+        <button
+          type="button"
+          class="inp-del-btn"
+        >
+          <span class="is-voice-only">검색어 지우기</span>
+        </button>
+        <button
+          type="button" 
+          class="inp-sch-btn"
+        >
+          <span class="is-voice-only">검색하기</span>
+        </button>
+      </div>
+      <!-- // 요청한 팩트체크 - 검색 -->
+        
       <!-- 팩트체크가 있을 때 -->
+      <div class="board-list-grp-ttl">
+        <p class="txt">
+          총 <span class="bold">15</span>개
+        </p>
+        
+        <!-- 검색어만 입력한 검색결과일 때만 보임 -->
+        <div class="txt">
+          <span class="highlight">
+            <u>'검색어'</u>
+          </span>
+          에 대한 검색결과 <span class="bold">15</span>개
+        </div>
+        <!-- // 검색어만 입력한 검색결과일 때만 보임 -->
+
+        <div class="txt-right">
+          <custom-slct
+            class="page-custom-slct custom-slct02"
+            :selected="searchOptions"
+          >
+            <template #select>
+              {{ searchOptions || '전체' }}
+            </template>
+
+            <template #options>
+              <custom-slct-opt 
+                @click="searchOptions = '대기중'"
+              >
+                대기중
+              </custom-slct-opt>
+            
+              <custom-slct-opt 
+                @click="searchOptions = '진행중'"
+              >
+                진행중
+              </custom-slct-opt>
+            
+              <custom-slct-opt 
+                @click="searchOptions = '내용 검토중'"
+              >
+                내용 검토중
+              </custom-slct-opt>
+            
+              <custom-slct-opt 
+                @click="searchOptions = '완료'"
+              >
+                완료
+              </custom-slct-opt>
+            
+              <custom-slct-opt 
+                @click="searchOptions = '이의신청'"
+              >
+                이의신청
+              </custom-slct-opt>
+            </template>
+          </custom-slct>
+        </div>
+      </div>
+        
       <table class="ftck-list-grp board-list-grp">
         <!-- [D] 비공개면 is-secret 클래스 추가 -->
         <tr
           class="board-list is-secret"
-          @click="$router.push('ftck-detail')"
         >
           <td class="td-subject">
             <div class="ftck-state-subject">
@@ -54,6 +161,12 @@
             </div>
           </td>
           <td>
+            <span class="amount-item">
+              <div class="badge-p badge-p-sm" />
+              <span class="fz-13">150</span>
+            </span>
+          </td>
+          <td>
             <span class="td-word-writer">{{ '작성자명' }}</span>
           </td>
           <td>
@@ -61,15 +174,17 @@
           </td>
         </tr>
         
-        <!-- [D] 완료 -->
         <tr
           class="board-list" 
-          @click="$router.push('ftck-detail')"
         >
           <td class="td-subject">
             <div class="ftck-state-subject">
               <div class="ftck-state">
+                <badge-state txt="대기중" />
+                <badge-state txt="내용 검토중" />
+                <badge-state txt="진행중" />
                 <badge-state txt="완료" />
+                <badge-state txt="이의신청" />
 
                 <!-- [D] 비공개일 때만 보임 -->
                 <!-- <div class="badge-secret">
@@ -87,6 +202,12 @@
             </div>
           </td>
           <td>
+            <span class="amount-item">
+              <div class="badge-p badge-p-sm" />
+              <span class="fz-13">150</span>
+            </span>
+          </td>
+          <td>
             <span class="td-word-writer">{{ '작성자명' }}</span>
           </td>
           <td>
@@ -98,7 +219,7 @@
 
       <!-- 팩트체크가 없을 때 -->
       <div class="ftck-list-grp">
-        <empty-contents txt="받은 팩트체크가 없습니다." />
+        <empty-contents txt="요청한 팩트체크가 없습니다." />
       </div>
       <!-- // 받은 팩트체크가 없을 때 -->
 
@@ -168,6 +289,7 @@ export default {
   data() {
     return{
       keyword: null,
+      searchOptions: '전체',
     };
   },
 };

@@ -20,7 +20,6 @@
 }
 
 /* 마이페이지 > 팩트체크 > 팩트체크 리스트 */
-
 .ftck-intro-box{ // 구성요소: 팩트체크 인트로 박스
   background-color: #171820;
   color: white;
@@ -70,6 +69,7 @@
     margin-bottom: 10px;
     background-color: white;
     border: 0;
+    padding: 18px 40px;
   }
 
   .board-list.is-secret{
@@ -85,7 +85,7 @@
       @include flex-op(center, flex-start)
     };
   
-    gap: 10px;
+    gap: 5px;
     margin-bottom: 10px;
   }
   
@@ -135,6 +135,63 @@
       border-bottom: 0;
       margin-bottom: 0;
       padding-bottom: 0;
+    }
+  }
+}
+
+/* 투자자: 마이페이지 > 팩트체크 > 요청한 팩트체크 */
+.mypage-i-ftck-list-page{
+  .page-inp-grp{
+    max-width: 360px;
+    margin-bottom: 25px;
+  }
+
+  .page-custom-slct{
+    width: 125px;
+  }
+}
+
+.ftck-caution-box{
+  background-color: white;
+  padding: 30px 40px;
+  position: relative;
+  margin-bottom: 30px;
+
+  .img-checker{
+    @include absolute($b: 0, $r: 0);
+
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .ftck-cb-ttl{
+    @include flex{
+      @include flex-op(center, flex-start);
+    }
+
+    gap: 5px;
+    margin-bottom: 15px;
+
+    .cb-ttl{
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+  .ul-dash{
+    .list{
+      font-size: 12px;
+      color: #8E909F;
+      padding-left: 10px;
+      margin: 3px 0;
+
+      &:first-child{
+        margin-top: 0;
+      }
+
+      &:last-child{
+        margin-bottom: 0;
+      }
     }
   }
 }
