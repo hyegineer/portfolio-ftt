@@ -113,7 +113,7 @@
 
         <btn-bd
           class="btn-sm bnav-ctrl-list"
-          @click="$router.push('note-list')"
+          @click="$router.push('ftck-list')"
         >
           목록으로
         </btn-bd>
