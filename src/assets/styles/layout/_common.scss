@@ -638,3 +638,58 @@
     font-weight: 600;
   }
 }
+
+.keyword-card{ // 구성요소 설명박스
+  background-color: white;
+  padding: 40px;
+
+  @at-root .mypage-cont-wrap &{
+    margin-bottom: 100px;
+  }
+}
+
+.keyword-card-cont{ // 구성요소 설명박스 보더 + 배경 있을때
+  width: 100%;
+  border-bottom: 1px solid #DDDEE6; 
+  margin-bottom: 40px;
+  text-align: left;
+  padding-bottom: 40px;
+  position: relative;
+
+  .img-checker{
+    @include absolute($b: 0, $r: 0);
+
+    z-index: 0;
+    pointer-events: none;
+  }
+}
+
+.keyword-card-section{ // 구성요소 설명박스 섹션
+  margin-bottom: 50px;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  .hgrp{
+    margin-bottom: 18px;
+
+    .sub-ttl{
+      display: inline-block;
+      margin-bottom: 7px;
+    }
+
+    .ttl{
+      @include font-op($w: 500){
+        font-size: 20px;
+      }
+
+      line-height: 1.4;
+    }
+  }
+
+  .keyword-card-desc{
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}

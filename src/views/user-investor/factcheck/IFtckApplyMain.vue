@@ -26,15 +26,15 @@
 
     <!-- 마이페이지 컨텐츠 영역 -->
     <div class="mypage-cont-wrap">
-      <div class="ftck-card">
-        <div class="ftck-card-cont">
+      <div class="keyword-card">
+        <div class="keyword-card-cont">
           <img
             src="@/assets/images/img/img-checker.svg"
             alt=""
             class="img-checker"
           >
 
-          <section class="ftck-section">
+          <section class="keyword-card-section">
             <div class="hgrp">
               <span class="sub-ttl">
                 <img
@@ -47,14 +47,14 @@
               </h3>
             </div>
 
-            <p class="ftck-section-txt">
+            <p class="keyword-card-desc">
               투자할 기업에 대하여 믿을 수 있는 정보인지, 가치 있는 정보인지 등을 증빙하는 과정을 뜻하며 <br>
               팩트체크를 진행 한 정보는 3개월간 독점권이 주어집니다. <br>
               경쟁 투자 업체보다 빠른 정보 선점을 통하여 성공적인 투자를 해 보세요 
             </p>
           </section>
         
-          <section class="ftck-section">
+          <section class="keyword-card-section">
             <div class="hgrp">
               <span class="sub-ttl">
                 <img
@@ -66,7 +66,7 @@
               </h3>
             </div>
 
-            <p class="ftck-section-txt">
+            <p class="keyword-card-desc">
               요청받은 팩트체크의 항목을 직접 조사하여 투자자들에게 정보를 제공합니다. <br>
               투자자를 도와, 투자 기업들의 정보를 직접 확인하고 관리합니다. <br>
               투자 전후 기업들의 정보를 엄밀하게 점검하고 수익을 창출할 수 있습니다. <br>

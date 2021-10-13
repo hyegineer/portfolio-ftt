@@ -2052,6 +2052,74 @@
         </div>
       </div>
     </section>
+    
+    <section class="section">
+      <h1 class="cp-ttl">
+        18. 용어 설명 박스
+      </h1>
+      <div class="section-cont">
+        <h2>18-1. 용어 설명 박스 보더 + 배경 있을 때</h2>
+        <div class="keyword-card">
+          <div class="keyword-card-cont">
+            <img
+              src="@/assets/images/img/img-checker.svg"
+              alt=""
+              class="img-checker"
+            >
+
+            <section class="keyword-card-section">
+              <div class="hgrp">
+                <span class="sub-ttl">
+                  <img
+                    src="@/assets/images/img/img-txt-check.svg"
+                    alt="fact check"
+                  >
+                </span>
+                <h3 class="ttl">
+                  용어란?
+                </h3>
+              </div>
+
+              <p class="keyword-card-desc">
+                용어에 대한 정의를 설명할 때 여기에서 작성합니다.<br>
+                두줄 일 때 이렇게 나옵니다.
+              </p>
+            </section>
+          </div>
+
+          <!-- [D] 심사중일시 disabled -->
+          <btn-solid
+            position="single-centered"
+            class="btn-lg btn-full"
+          >
+            버튼이 필요할 때..
+          <!-- 심사중입니다 -->
+          </btn-solid>
+        </div>
+        
+        <h2>18-2. 용어 설명 박스만 있을 때</h2>
+        <div class="keyword-card">
+          <section class="keyword-card-section">
+            <div class="hgrp">
+              <span class="sub-ttl">
+                <img
+                  src="@/assets/images/img/img-txt-check.svg"
+                  alt="fact check"
+                >
+              </span>
+              <h3 class="ttl">
+                용어란?
+              </h3>
+            </div>
+
+            <p class="keyword-card-desc">
+              용어에 대한 정의를 설명할 때 여기에서 작성합니다.<br>
+              두줄 일 때 이렇게 나옵니다.
+            </p>
+          </section>
+        </div>
+      </div>
+    </section>
 
     <modal-dialog>
       <modal-light-box @click="closeModal" />
