@@ -25,7 +25,7 @@
       <!-- 마이페이지 컨텐츠 영역 -->
       <div class="mypage-cont-wrap">
         <!-- 쪽지함 - 검색 -->
-        <div class="inp-grp inp-sch-grp">
+        <div class="inp-grp inp-sch-grp page-inp-grp">
           <input
             type="text"
             class="inp"
@@ -48,7 +48,7 @@
         <!-- // 쪽지함 - 검색 -->
           
         <!-- 쪽지함 - 탭 -->
-        <div class="tab">
+        <div class="tab page-tab">
           <button
             class="tab-btn is-active"
           >
@@ -64,6 +64,17 @@
 
         <!-- 쪽지함 - 리스트 -->
         <div>
+          <!-- 검색어만 입력한 검색결과일 때만 보임 -->
+          <div class="board-list-grp-ttl">
+            <div class="txt">
+              <span class="highlight">
+                <u>'검색어'</u>
+              </span>
+              에 대한 검색결과 <span class="bold">15</span>개
+            </div>
+          </div>
+          <!-- // 검색어만 입력한 검색결과일 때만 보임 -->
+
           <!-- 쪽지 있을 때 -->
           <table class="note-list-grp board-list-grp">
             <tr
