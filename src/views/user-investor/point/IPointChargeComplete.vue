@@ -47,7 +47,7 @@
           </p>
           
           <div class="space-between charge-form-grp">
-            <label class="lbel">충전 후 포인트</label>
+            <label class="lbel">현재 보유 포인트</label>
 
             <div class="space-between-item">
               <div class="amount-item">
