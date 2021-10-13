@@ -536,3 +536,36 @@
     vertical-align: middle;
   }
 }
+
+.simple-list-grp{
+  width: 100%;
+}
+
+.simple-list{
+  @include flex{
+    @include flex-op(flex-start, flex-start);
+  }
+
+  width: 100%;
+  font-size: 14px;
+  padding: 14px 10px;
+  cursor: default;
+  color: #171820;
+
+  &:hover{
+    background-color: #F6FFFB;
+  }
+
+  td{
+    padding: 0 10px;
+    min-width: 120px;
+  }
+
+  .bold{
+    font-weight: 600;
+  }
+
+  .td-date{
+    margin-left: auto;
+  }
+}
