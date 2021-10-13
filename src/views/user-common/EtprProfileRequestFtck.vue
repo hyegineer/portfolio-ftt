@@ -155,13 +155,22 @@
 
         <div class="mgt-20 white-panel active-ttl-container">
           <div class="active-ttl-inner">
-            <div class="active-ttl">
+            <div
+              class="active-ttl" 
+              @click="$router.push('/etpr-profile-info')"
+            >
               기업정보
             </div>
-            <div class="active-ttl">
+            <div
+              class="active-ttl active"
+              @click="$router.push('/etpr-profile-report')"
+            >
               팩트체크
             </div>
-            <div class="active-ttl">
+            <div
+              class="active-ttl" 
+              @click="$router.push('/etpr-profile-board')"
+            >
               게시판
             </div>
           </div>

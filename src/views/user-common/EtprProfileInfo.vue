@@ -210,13 +210,22 @@
 
         <div class="mgt-20 white-panel active-ttl-container">
           <div class="active-ttl-inner">
-            <div class="active-ttl active">
+            <div
+              class="active-ttl active" 
+              @click="$router.push('/etpr-profile-info')"
+            >
               기업정보
             </div>
-            <div class="active-ttl">
+            <div
+              class="active-ttl"
+              @click="$router.push('/etpr-profile-report')"
+            >
               팩트체크
             </div>
-            <div class="active-ttl">
+            <div
+              class="active-ttl" 
+              @click="$router.push('/etpr-profile-board')"
+            >
               게시판
             </div>
           </div>
@@ -566,7 +575,7 @@
               </div>
             </div>
           </div>
-          <div class="flexable-container">
+          <div class="flexable-container pdt-60">
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
                 <span>재무상태</span>
@@ -656,7 +665,7 @@
               </div>
             </div>
           </div>
-          <div class="flexable-container split3">
+          <div class="flexable-container split3 pdt-60">
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
                 <span>매출 추이</span>
@@ -929,31 +938,93 @@
         </div>
         <!-- END 구성원 -->
         <!-- 관련 소식 -->
-        <div class="etpr-main-conts">
+        <div class="etpr-main-conts news-conts">
           <h2 class="section-ttl">
             관련 소식 
           </h2>
           <empty-contents txt="내용이 없습니다." />
           <div class="flexable-container split6">
+            <!-- card -->
             <div class="flexable-inner">
-              <div class="card-news">  
+              <a href="#" target="_blank" class="card-news">  
                 <div class="card-thumb card-thumb-lg">
                   <thumbnail />
                 </div>
-                <a
-                  href="#"
-                  target="_blank"
-                  class="card-text"
-                >
+                <div class="card-text">
                   <span class="name">news</span>
                   <div class="ttl">{{ '뉴스 이미지 없을 시, 디폴트 이미지 처리합니다.' }}</div>
                   <div class="dec">
                     {{ '뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목...' }}
                   </div>
                   <div class="date">{{ '2021.00.00  00:00' }}</div>
-                </a>
-              </div>
+                </div>
+              </a>
             </div>
+
+            <div class="flexable-inner">
+              <a href="#" target="_blank" class="card-news">  
+                <div class="card-thumb card-thumb-lg">
+                  <thumbnail />
+                </div>
+                <div class="card-text">
+                  <span class="name">news</span>
+                  <div class="ttl">{{'뉴스 이미지 없을 시, 디폴트 이미지 처리합니다.'}}</div>
+                  <div class="dec">
+                    {{'뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목...'}}
+                  </div>
+                  <div class="date">{{'2021.00.00  00:00'}}</div>
+                </div>
+              </a>
+            </div>
+
+            <div class="flexable-inner">
+              <a href="#" target="_blank" class="card-news">  
+                <div class="card-thumb card-thumb-lg">
+                  <thumbnail />
+                </div>
+                <div class="card-text">
+                  <span class="name">news</span>
+                  <div class="ttl">{{'뉴스 이미지 없을 시, 디폴트 이미지 처리합니다.'}}</div>
+                  <div class="dec">
+                    {{'뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목...'}}
+                  </div>
+                  <div class="date">{{'2021.00.00  00:00'}}</div>
+                </div>
+              </a>
+            </div>
+
+            <div class="flexable-inner">
+              <a href="#" target="_blank" class="card-news">  
+                <div class="card-thumb card-thumb-lg">
+                  <thumbnail />
+                </div>
+                <div class="card-text">
+                  <span class="name">news</span>
+                  <div class="ttl">{{'뉴스 이미지 없을 시, 디폴트 이미지 처리합니다.'}}</div>
+                  <div class="dec">
+                    {{'뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목...'}}
+                  </div>
+                  <div class="date">{{'2021.00.00  00:00'}}</div>
+                </div>
+              </a>
+            </div>
+
+            <div class="flexable-inner">
+              <a href="#" target="_blank" class="card-news">  
+                <div class="card-thumb card-thumb-lg">
+                  <thumbnail />
+                </div>
+                <div class="card-text">
+                  <span class="name">news</span>
+                  <div class="ttl">{{'뉴스 이미지 없을 시, 디폴트 이미지 처리합니다.'}}</div>
+                  <div class="dec">
+                    {{'뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목...'}}
+                  </div>
+                  <div class="date">{{'2021.00.00  00:00'}}</div>
+                </div>
+              </a>
+            </div>
+
           </div>
         </div>
         <!-- END 관련 소식 -->
@@ -996,9 +1067,318 @@
             </p>
           </div>
           <empty-contents txt="내용이 없습니다." />
-          <div class="white-panel">
-            투자자 리뷰 들어옵니다.
+          <div class="review-container">
+            <!-- card -->
+            <div class="white-panel review-card">
+              <div class="review-inner">
+                <div class="left-conts">
+                  <div class="name">{{'익명'}}</div>
+                  <div class="type">{{'개인 투자자'}}</div>
+                  <div class="hover-desc">
+                    <span
+                      class="hover-overlay mb-show"
+                      :class="{'is-show': mbMdOptions1.visible}"
+                      @click="mbMdClose('star')"
+                    />
+  
+                    <div
+                      class="star-txt"
+                      @click="mbMdOpen('star')"
+                    >
+                      <i class="icon icon-star" />
+                      <span class="txt">4.3</span>
+                    </div>
+  
+                    <div
+                      class="hover-desc-box"
+                      :class="{'is-show' : mbMdOptions1.visible}"
+                    >
+                      <span class="ttl">종합 점수</span>
+  
+                      <dl class="star-desc-list">
+                        <dt class="desc-ttl">
+                          기술성
+                        </dt>
+                        <dd class="desc-dt">
+                          <i class="icon icon-star" />
+                          <span class="txt">5</span>
+                        </dd>
+                      </dl>
+  
+                      <dl class="star-desc-list">
+                        <dt class="desc-ttl">
+                          시장성
+                        </dt>
+                        <dd class="desc-dt">
+                          <i class="icon icon-star" />
+                          <span class="txt">5</span>
+                        </dd>
+                      </dl>
+  
+                      <dl class="star-desc-list">
+                        <dt class="desc-ttl">
+                          팀역량
+                        </dt>
+                        <dd class="desc-dt">
+                          <i class="icon icon-star" />
+                          <span class="txt">5</span>
+                        </dd>
+                      </dl>
+  
+                      <dl class="star-desc-list">
+                        <dt class="desc-ttl">
+                          실행역량
+                        </dt>
+                        <dd class="desc-dt">
+                          <i class="icon icon-star" />
+                          <span class="txt">5</span>
+                        </dd>
+                      </dl>
+  
+                      <dl class="star-desc-list">
+                        <dt class="desc-ttl">
+                          아이템 우수성
+                        </dt>
+                        <dd class="desc-dt">
+                          <i class="icon icon-star" />
+                          <span class="txt">5</span>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+                <div class="middle-conts">
+                  {{'투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.'}}
+                </div>
+                <div class="right-conts">{{'2021.00.00  00:00'}}</div>
+              </div>
+            </div>
+            <!-- // card -->
+            <div class="white-panel review-card">
+              <div class="review-inner">
+                <div class="left-conts">
+                  <div class="name">{{'익명'}}</div>
+                  <div class="type">{{'개인 투자자'}}</div>
+                  <div class="hover-desc">
+                    <span
+                      class="hover-overlay mb-show"
+                      :class="{'is-show': mbMdOptions1.visible}"
+                      @click="mbMdClose('star')"
+                    />
+  
+                    <div
+                      class="star-txt"
+                      @click="mbMdOpen('star')"
+                    >
+                      <i class="icon icon-star" />
+                      <span class="txt">4.3</span>
+                    </div>
+  
+                    <div
+                      class="hover-desc-box"
+                      :class="{'is-show' : mbMdOptions1.visible}"
+                    >
+                      <span class="ttl">종합 점수</span>
+  
+                      <dl class="star-desc-list">
+                        <dt class="desc-ttl">
+                          기술성
+                        </dt>
+                        <dd class="desc-dt">
+                          <i class="icon icon-star" />
+                          <span class="txt">5</span>
+                        </dd>
+                      </dl>
+  
+                      <dl class="star-desc-list">
+                        <dt class="desc-ttl">
+                          시장성
+                        </dt>
+                        <dd class="desc-dt">
+                          <i class="icon icon-star" />
+                          <span class="txt">5</span>
+                        </dd>
+                      </dl>
+  
+                      <dl class="star-desc-list">
+                        <dt class="desc-ttl">
+                          팀역량
+                        </dt>
+                        <dd class="desc-dt">
+                          <i class="icon icon-star" />
+                          <span class="txt">5</span>
+                        </dd>
+                      </dl>
+  
+                      <dl class="star-desc-list">
+                        <dt class="desc-ttl">
+                          실행역량
+                        </dt>
+                        <dd class="desc-dt">
+                          <i class="icon icon-star" />
+                          <span class="txt">5</span>
+                        </dd>
+                      </dl>
+  
+                      <dl class="star-desc-list">
+                        <dt class="desc-ttl">
+                          아이템 우수성
+                        </dt>
+                        <dd class="desc-dt">
+                          <i class="icon icon-star" />
+                          <span class="txt">5</span>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+                <div class="middle-conts">
+                  {{'투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.'}}
+                </div>
+                <div class="right-conts">{{'2021.00.00  00:00'}}</div>
+              </div>
+            </div>
+  
+            <div class="white-panel review-card">
+              <div class="review-inner">
+                <div class="left-conts">
+                  <div class="name">{{'익명'}}</div>
+                  <div class="type">{{'개인 투자자'}}</div>
+                  <div class="hover-desc">
+                    <span
+                      class="hover-overlay mb-show"
+                      :class="{'is-show': mbMdOptions1.visible}"
+                      @click="mbMdClose('star')"
+                    />
+  
+                    <div
+                      class="star-txt"
+                      @click="mbMdOpen('star')"
+                    >
+                      <i class="icon icon-star" />
+                      <span class="txt">4.3</span>
+                    </div>
+  
+                    <div
+                      class="hover-desc-box"
+                      :class="{'is-show' : mbMdOptions1.visible}"
+                    >
+                      <span class="ttl">종합 점수</span>
+  
+                      <dl class="star-desc-list">
+                        <dt class="desc-ttl">
+                          기술성
+                        </dt>
+                        <dd class="desc-dt">
+                          <i class="icon icon-star" />
+                          <span class="txt">5</span>
+                        </dd>
+                      </dl>
+  
+                      <dl class="star-desc-list">
+                        <dt class="desc-ttl">
+                          시장성
+                        </dt>
+                        <dd class="desc-dt">
+                          <i class="icon icon-star" />
+                          <span class="txt">5</span>
+                        </dd>
+                      </dl>
+  
+                      <dl class="star-desc-list">
+                        <dt class="desc-ttl">
+                          팀역량
+                        </dt>
+                        <dd class="desc-dt">
+                          <i class="icon icon-star" />
+                          <span class="txt">5</span>
+                        </dd>
+                      </dl>
+  
+                      <dl class="star-desc-list">
+                        <dt class="desc-ttl">
+                          실행역량
+                        </dt>
+                        <dd class="desc-dt">
+                          <i class="icon icon-star" />
+                          <span class="txt">5</span>
+                        </dd>
+                      </dl>
+  
+                      <dl class="star-desc-list">
+                        <dt class="desc-ttl">
+                          아이템 우수성
+                        </dt>
+                        <dd class="desc-dt">
+                          <i class="icon icon-star" />
+                          <span class="txt">5</span>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+                <div class="middle-conts">
+                  {{'투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.'}}
+                </div>
+                <div class="right-conts">{{'2021.00.00  00:00'}}</div>
+              </div>
+            </div>
+            
+            <div class="pagination">
+              <btn-square-bd @click="window.alert('이전 버튼 누르기')">
+                <i class="icon icon-page-prev" />
+                <span class="is-voice-only">이전</span>
+              </btn-square-bd>
+
+              <button
+                type="button"
+                class="num-btn is-active"
+              >
+                1
+              </button>
+
+              <button
+                type="button"
+                class="num-btn"
+              >
+                2
+              </button>
+
+              <button
+                type="button"
+                class="num-btn"
+              >
+                3
+              </button>
+
+              <button
+                type="button"
+                class="num-btn"
+              >
+                4
+              </button>
+
+              <button
+                type="button"
+                class="num-btn"
+              >
+                ···
+              </button>
+
+              <button
+                type="button"
+                class="num-btn"
+              >
+                10
+              </button>
+
+              <btn-square-bd @click="window.alert('다음 버튼 누르기')">
+                <i class="icon icon-page-next" />
+                <span class="is-voice-only">다음</span>
+              </btn-square-bd>
+            </div>
           </div>
+
         </div>
         <!-- END 투자자 리뷰 -->
       </div>

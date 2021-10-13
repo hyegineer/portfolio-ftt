@@ -29,6 +29,133 @@
   gap: 14px;
 }
 
+.table-all-wrap {
+  padding: 30px 0;
+
+  .flex-basis-10 {
+    flex-basis: 10%;
+  }
+
+  .flex-basis-13 {
+    flex-basis: 13%;
+  }
+
+  .flex-basis-16 {
+    flex-basis: 16%;
+  }
+
+  .flex-basis-20 {
+    flex-basis: 20%;
+  }
+
+  .flex-basis-22 {
+    flex-basis: 22%;
+  }
+  
+  .flex-basis-26 {
+    flex-basis: 26%;
+  }
+
+  .flex-basis-28 {
+    flex-basis: 28%;
+  }
+
+  .txt-left {
+    text-align: left;
+  }
+
+  .txt-center {
+    text-align: center;
+  }
+
+  .txt-right {
+    text-align: right;
+  }
+
+  .table-ttl {
+    font-size: rem(18);
+    font-weight: 500;
+    color: #5C5E70;
+    margin-bottom: 20px;
+  }
+
+  .table-grp {
+    border-bottom: 1px solid #171820;
+  }
+
+  .table-hgrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #171820;
+
+    .table-txt {
+      color: #DDDEE6;
+      font-size: rem(13);
+      font-weight: 500;
+    }
+  }
+
+  .table-hlist {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border-right: 1px solid #707070;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .table-cont-wrap {
+    
+    &.custom-scroll-wrap {
+      @include custom-scroll(#00EB79, $w: 6px);
+    
+      background-color: #fff;
+      overflow: auto;
+      height: 460px;
+    }
+  }
+
+  .table-cont-grp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #DDDEE6;
+
+    &.f-bold {
+      border-bottom: 1px solid #8E909F;
+
+      .table-txt {
+        font-weight: 600;
+      }
+    }
+
+    &.f-600-lg {
+
+      .table-txt {
+        font-size: rem(15);
+        font-weight: 600;
+      }
+    }
+  }
+
+  .table-cont-list {
+    flex-grow: 1;
+    padding: 15px 20px;
+  }
+
+  .table-txt {
+    font-size: rem(13);
+    font-weight: 400;
+    color: #171820;
+
+    &.f-bold {
+      font-weight: 600;
+    }
+  }
+}
+
 // myinfo-main
 .myinfo-page-container {
 
@@ -322,6 +449,12 @@
         line-height: 1.4;
         white-space: pre-line;
       }
+
+      .info-sub {
+        font-size: rem(13);
+        font-weight: 400;
+        color: #8E909F;
+      }
     }
   }
 }
@@ -444,3 +577,4 @@
 }
 
 // END startup - EtprDefaultInfoEdit
+
