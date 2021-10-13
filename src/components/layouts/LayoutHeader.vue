@@ -13,8 +13,8 @@
 
           <div class="hd-logo-wrap">
             <h1 class="hd-logo">
-              <a
-                href="#"
+              <router-link
+                to="/"
                 class="hd-logo-link"
               >
                 <img
@@ -22,29 +22,46 @@
                   alt="logo"
                   class="hd-logo-img"
                 >
-              </a>
+              </router-link>
             </h1>
           </div>
 
           <div class="gnb-group">
-            <a
-              href="#"
+            <router-link
+              to="/notice"
               class="gnb-link"
-            >공지사항</a>
-            <a
-              href="#"
+            >
+              공지사항
+            </router-link>
+            <router-link
+              to="/faq"
               class="gnb-link"
-            >자주 묻는 질문</a>
-            <a
-              href="#"
+            >
+              자주 묻는 질문
+            </router-link>
+            <router-link
+              to="/inquiry"
               class="gnb-link"
-            >1:1문의</a>
+            >
+              1:1문의
+            </router-link>
             <!-- TODO: update-point 있으면 업데이트 표시 -->
-            <a
-              v-if="testIsUser && testUserType !== 'fact-checker'"
-              href="#"
+            <router-link
+              v-if="testIsUser && testUserType === 'startup'"
+              to="/startup/mypage/note-list"
               class="gnb-link update-point"
-            >쪽지함</a>
+            >
+              쪽지함
+            </router-link>
+
+            <!-- TODO: update-point 있으면 업데이트 표시 -->
+            <router-link
+              v-if="testIsUser && testUserType === 'investor'"
+              to="/investor/mypage/note-list"
+              class="gnb-link update-point"
+            >
+              쪽지함
+            </router-link>
           </div>
 
           <button
@@ -62,15 +79,19 @@
             v-if="!testIsUser"
             class="auth-wrap"
           >
-            <a
-              href="#"
+            <router-link
+              to="/login"
               class="auth-link"
-            >로그인</a>
+            >
+              로그인
+            </router-link>
 
-            <a
-              href="#"
+            <router-link
+              to="/register-intro"
               class="auth-link"
-            >회원가입</a>
+            >
+              회원가입
+            </router-link>
           </div>
           <!-- INFO: END 로그인 전 -->
 
@@ -258,14 +279,18 @@
               팩트시트에 <b class="bold-txt">회원가입</b> 하고<br>다양한 서비스를 이용해보세요!
             </p>
             <div class="auth-wrap">
-              <a
-                href="#"
+              <router-link
+                to="/login"
                 class="auth-link"
-              >로그인</a>
-              <a
-                href="#"
+              >
+                로그인
+              </router-link>
+              <router-link
+                to="/register-intro"
                 class="auth-link"
-              >회원가입</a>
+              >
+                회원가입
+              </router-link>
             </div>
           </div>
           <div class="hd-side-bottom">
@@ -417,6 +442,7 @@
                 <span class="sidemenu-txt">약관</span>
               </a>
             </div>
+
             <div
               v-if="testIsUser"
               class="btn-logout-wrap"
