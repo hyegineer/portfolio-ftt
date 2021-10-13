@@ -29,6 +29,10 @@
   gap: 14px;
 }
 
+.article-wrap .table-all-wrap {
+  padding: 0;
+}
+
 .table-all-wrap {
   padding: 30px 0;
 
@@ -60,6 +64,10 @@
     flex-basis: 28%;
   }
 
+  .flex-basis-76 {
+    flex-basis: 76%;
+  }
+
   .txt-left {
     text-align: left;
   }
@@ -83,6 +91,12 @@
     font-size: rem(18);
     font-weight: 500;
     color: #5C5E70;
+  }
+
+  .table-ttl-sub {
+    font-size: rem(12);
+    font-weight: 400;
+    color: #8E909F;
   }
 
   .table-grp {
@@ -120,6 +134,19 @@
       background-color: #fff;
       overflow: auto;
       height: 460px;
+    }
+
+    &.empty-cont-wrap {
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .empty-ment {
+        font-size: rem(17);
+        font-weight: 400;
+        color: #8E909F;
+      }
     }
   }
 
@@ -409,9 +436,9 @@
   border-bottom: 1px solid #DDDEE6;
   padding: 30px 0;
 
-  &:last-child {
-    border-bottom: none;
-  }
+  // &:last-child {
+  //   border-bottom: none;
+  // }
 
   &.border-remove {
     border-bottom: none;
@@ -421,14 +448,39 @@
     font-size: rem(16);
     font-weight: 600;
     color: #171820;
-    margin-bottom: 20px;
+    margin-bottom: 20px;    
   }
+
+  .ttl-lg {
+    font-size: rem(18);
+    font-weight: 600;
+    color: #171820;
+    margin-bottom: 10px;
+  }
+
+  .ttl-sub {
+    font-size: rem(12);
+    font-weight: 400;
+    color: #8E909F;
+    line-height: 1.3;
+  }
+
 
   .info-grp {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     color: #171820;
+
+    &.auth-info-grp {
+      padding-top: 20px;
+
+      .empty-txt {
+        font-size: rem(15);
+        font-weight: 400;
+        color: #B8BAC7;
+      }
+    }
 
     &.is-padding-change {
       
@@ -591,3 +643,40 @@
 
 // END startup - EtprDefaultInfoEdit
 
+
+// investor - EtprDefaultInfo
+.article-wrap {
+
+  .flex-row-start-grp {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+
+    .img-wrap {
+      flex-basis: 260px;
+    }
+
+    .avatar-wrap {
+      flex-grow: 1;
+    }
+
+    .avatar-with-name {
+      margin-bottom: 15px;
+    }
+  }
+
+  .biz-detail-wrap {
+    padding-top: 30px;
+
+    .dec {
+      font-size: rem(15);
+      font-weight: 400;
+      color: #171820;
+      line-height: 1.5;
+    }
+  }
+}
+
+
+// END investor - EtprDefaultInfo

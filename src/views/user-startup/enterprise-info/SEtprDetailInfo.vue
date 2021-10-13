@@ -169,6 +169,18 @@
             <!-- END 테이블 헤더 그룹 -->
 
             <!-- 테이블 내용 그룹 -->
+            <!-- 내용이 없을 때 -->
+            <div
+              class="table-cont-wrap empty-cont-wrap"
+              style="display: none;"
+            >
+              <p class="empty-ment">
+                내용이 없습니다.
+              </p>
+            </div>
+            <!-- END 내용이 없을 때 -->
+            
+            <!-- 내용이 있을 때 -->
             <div
               class="table-cont-wrap custom-scroll-wrap"
             >
@@ -197,6 +209,8 @@
                 </li>
               </ul>
             </div>
+            <!-- END 내용이 있을 때 -->
+
             <!-- END 테이블 내용 그룹 -->
           </div>
         </div>
@@ -231,6 +245,18 @@
             <!-- END 테이블 헤더 그룹 -->
 
             <!-- 테이블 내용 그룹 -->
+            <!-- 내용이 없을 때 -->
+            <div
+              class="table-cont-wrap empty-cont-wrap"
+              style="display: none;"
+            >
+              <p class="empty-ment">
+                내용이 없습니다.
+              </p>
+            </div>
+            <!-- END 내용이 없을 때 -->
+
+            <!-- 내용이 있을 때 -->
             <div
               class="table-cont-wrap"
             >
@@ -427,6 +453,7 @@
                 </li>
               </ul>
             </div>
+            <!-- END 내용이 있을 때 -->
             <!-- END 테이블 내용 그룹 -->
           </div>
         </div>
@@ -461,6 +488,18 @@
             <!-- END 테이블 헤더 그룹 -->
 
             <!-- 테이블 내용 그룹 -->
+            <!-- 내용이 없을 때 -->
+            <div
+              class="table-cont-wrap empty-cont-wrap"
+              style="display: none;"
+            >
+              <p class="empty-ment">
+                내용이 없습니다.
+              </p>
+            </div>
+            <!-- END 내용이 없을 때 -->
+
+            <!-- 내용이 있을 때 -->
             <div
               class="table-cont-wrap"
             >
@@ -657,6 +696,8 @@
                 </li>
               </ul>
             </div>
+            <!-- END 내용이 있을 때 -->
+
             <!-- END 테이블 내용 그룹 -->
           </div>
         </div>
