@@ -14,7 +14,7 @@
           팩트체크
         </li>
         <li class="txt">
-          우리 회사가 받은 팩트체크
+          요청한 팩트체크
         </li>
       </breadcrumb>
 
@@ -26,43 +26,6 @@
 
     <!-- 마이페이지 컨텐츠 영역 -->
     <div class="mypage-cont-wrap">
-      <!-- 팩트체크 인트로박스 -->
-      <div class="ftck-intro-box">
-        <img
-          src="@/assets/images/badge/badge-check.svg"
-          alt="check!"
-          class="check-badge"
-        >
-        <h3 class="ttl">
-          <span class="ttl-lg point-color">{{ '주식회사 팩트컴퍼니' }}</span> 기업은 <br>
-          총 <span class="point-color">10건</span>의 팩트체크 요청을 받았습니다.
-        </h3>
-        
-        <div class="inp-grp inp-sch-grp">
-          <input
-            v-model="keyword"
-            type="text"
-            class="inp inp-strong"
-            placeholder="제목/내용을 검색하세요."
-          >
-          <button
-            v-if="keyword"
-            type="button"
-            class="inp-del-btn"
-            @click="keyword = ''"
-          >
-            <span class="is-voice-only">검색어 지우기</span>
-          </button>
-          <button
-            type="button"
-            class="inp-sch-btn"
-          >
-            <span class="is-voice-only">검색하기</span>
-          </button>
-        </div>
-      </div>
-      <!-- // 팩트체크 인트로박스 -->
-
       <!-- 팩트체크가 있을 때 -->
       <table class="ftck-list-grp board-list-grp">
         <!-- [D] 비공개면 is-secret 클래스 추가 -->

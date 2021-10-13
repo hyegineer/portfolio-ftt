@@ -39,14 +39,14 @@
           <div class="info-grp">
             <span class="info-label">회원형태</span>
             <span class="info">
-              스타트업
+              기업 투자자
               <span class="badge">대표</span>
             </span>
           </div>
           <div class="info-grp">
             <span class="info-label">기업명</span>
             <span class="info">
-              주식회사 팩트컴퍼니
+              투자 컴퍼니
             </span>
           </div>
           <div class="info-grp">

@@ -31,9 +31,6 @@
           <p class="ttl">
             구성원 관리
           </p>
-          <p class="ttl-sub">
-            기업의 구성원을 관리합니다.
-          </p>
         </div>
 
         <article class="guide-box">
