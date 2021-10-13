@@ -353,19 +353,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.etpr-profile-report-page {
-  .etpr-tab-container {
-    padding-bottom: 100px;
-  }
-
-  .information-txt {
-    @include flex-center;
-
-    margin-bottom: 40px;
-  }
-
-  .empty-wrap {
-    padding: 40px 0 100px;
-  }
-}
 </style>

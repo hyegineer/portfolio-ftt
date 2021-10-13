@@ -347,17 +347,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.etpr-profile-board-page {
-  .etpr-tab-container {
-    padding-bottom: 100px;
-  }
-
-  .board-list-grp {
-    background-color: white;
-
-    .empty-wrap {
-      padding: 40px 0 100px;
-    }
-  }
-}
 </style>
