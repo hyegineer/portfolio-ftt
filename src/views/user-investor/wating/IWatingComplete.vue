@@ -5,13 +5,17 @@
       <div class="waiting-complete-cont-wrap">
         <div class="auth-hgrp">
           <img
-            src="@/assets/images/badge/badge-startup.svg"
+            src="@/assets/images/badge/badge-investror.svg"
             alt=""
             class="badge-flag"
           >
         
           <h3 class="ttl">
-            <span class="ttl-txt">기존 스타트업 신청</span>
+            <!-- 투자자 신규등록일 때 -->
+            <!-- <span class="ttl-txt">투자자 신규등록</span> -->
+            
+            <!-- 기존 투자자 신청일 때 -->
+            <span class="ttl-txt">기존 투자자 신청</span>
             <span class="badge-auth">직원</span>
           <!-- <span class="badge-auth">{{ $constants.userTypeForm[$route.query.userTypeForm] }}</span> -->
           </h3>
@@ -21,16 +25,16 @@
             신청이 완료되었습니다.
           </p>
           <p class="ment-sub">
-            스타트업 가입신청이 완료되었습니다.<br>
+            투자자 가입신청이 완료되었습니다. <br>
             신청 허가 완료시, 팩트시트 서비스를 이용하실 수 있습니다.
           </p>
         </div>
         <div class="btn-wrap">
           <btn-solid
             class="btn btn-lg btn-full"
-            @click="window.alert('다음 버튼을 클릭하셨습니다.')"
+            disabled
           >
-            다음
+            심사중입니다.
           </btn-solid>
         </div>
       </div>

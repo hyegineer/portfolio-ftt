@@ -4,13 +4,13 @@
     <div class="narrow-panel auth-panel">
       <div class="auth-hgrp">
         <img
-          src="@/assets/images/badge/badge-startup.svg"
+          src="@/assets/images/badge/badge-investror.svg"
           alt=""
           class="badge-flag"
         >
         
         <h3 class="ttl">
-          <span class="ttl-txt">기존 스타트업 신청</span>
+          <span class="ttl-txt">기존 투자자 신청</span>
           <span class="badge-auth">직원</span>
           <!-- <span class="badge-auth">{{ $constants.userTypeForm[$route.query.userTypeForm] }}</span> -->
         </h3>
