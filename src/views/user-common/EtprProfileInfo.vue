@@ -205,6 +205,68 @@
               {{ '내용이 없습니다.' }}
             </p>
           </div>
+
+          <!-- TODO: 투자자가 들어오면 보이는 영역 -->
+          <div class="mgt-30 fc-request-container">
+            <!-- TODO: ttl에 active가 되면 conts가 보임 -->
+            <div class="fc-request-ttl active">
+              팩트체크 추가 요청
+            </div>
+            <div class="fc-requesr-conts">
+              <div class="point-wrap">
+                <div class="my-point point">
+                  <span class="ttl">보유 포인트</span>
+                  <b class="bold">{{'100,000'}}</b>
+                  <div class="badge-p">
+                    <span class="is-voice-only">포인트</span>
+                  </div>
+                </div>
+                <div class="use-point point">
+                  <span class="ttl">사용 포인트</span>
+                  <b class="bold">{{'1,000'}}</b>
+                  <div class="badge-p">
+                    <span class="is-voice-only">포인트</span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-wrap">
+                <div class="input-ttl">요청 내용</div>
+                <div class="inp-grp">
+                  <input
+                    type="text"
+                    class="inp"
+                    placeholder="팩트체크 요청 제목을 입력하세요. (n자 입력)"
+                  >
+                </div>
+                <div class="inp-grp">
+                  <textarea name="#" id="#" class="inp inp-textarea" 
+                  placeholder="팩트체크를 요청할 내용을 자세히 입력해주세요.
+요청 내용이 자세할 수록 정확한 펙트체크가 작성됩니다!
+
+ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기입되어있나요?
+                  ">
+                  </textarea>
+                </div>
+              </div>
+              <div class="btn-wrap">
+                <div class="icon-with-txt ai-center">
+                  <i class="icon icon-i" />
+                  <span class="txt">
+                    선택 가능한 항목에 없는 팩트체크 내용을 추가로 요청합니다.
+                  </span>
+                </div>
+                <btn-solid-dark
+                  class="btn-md"
+                  @click="window.alert('검정버튼을 클릭하셨습니다.')"
+                >
+                <img src="@/assets/images/icon/icon-check-gn.svg" alt="check" class="icon">
+                팩트체크 추가 요청하기
+                </btn-solid-dark>
+              </div>
+            </div>
+          </div>
+          <!-- END 투자자가 들어오면 보이는 영역 -->
+
         </div>
         <!-- END 기업 간략 소개 -->
 
@@ -231,6 +293,111 @@
           </div>
         </div>
       </div>
+
+      <!-- TODO: 투자자가 들어오면 보이는 영역 -->
+      <div class="bottom-fixed-title">
+        <div class="wide-panel check-fc-container">
+          <div class="check-fc-ttl">
+            <div class="txt-wrap">
+              <div class="text">
+                <span class="ttl">선택된 항목</span>
+                <b class="bold">{{'3'}}개</b>
+              </div>
+              <div class="use-point text">
+                <span class="ttl">사용예정 포인트</span>
+                <b class="bold">{{'1,000'}}</b>
+                <div class="badge-p">
+                  <span class="is-voice-only">포인트</span>
+                </div>
+              </div>
+            </div>
+            <div class="btn-wrap">
+                <btn-solid-dark
+                  class="btn-md"
+                  @click="window.alert('검정버튼을 클릭하셨습니다.')"
+                >
+                <img src="@/assets/images/icon/icon-check-gn.svg" alt="check" class="icon">
+                팩트체크 요청하기
+                </btn-solid-dark>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-fixed-conts">
+        <!-- TODO: toggle을 누르면 active가 toggle됨 -->
+        <div class="wide-panel check-fc-container active">
+            <div class="check-fc-conts-toggle">
+              <div class="conts-wrap">
+                <img class="close" src="@/assets/images/btn/btn-spread.svg" alt="닫기" />
+                <img class="open" src="@/assets/images/btn/btn-fold.svg" alt="열기" />
+              </div>
+            </div>
+          <div class="check-fc-conts">
+            <ul class="check-fc-list-wrap">
+              <!-- 항목 -->
+              <li class="check-fc-list">
+                <p class="text">{{'항목 1~3개까진 높이에 맞춰 표시'}}</p>
+                <div class="list-right-conts">
+                  <div class="use-point text">
+                    <b class="bold">{{'1,000'}}</b>
+                    <div class="badge-p">
+                      <span class="is-voice-only">포인트</span>
+                    </div>
+                  </div>
+                  <button type="button" class="check-out-btn">
+                    <img src="@/assets/images/btn/btn-cancle-sch.svg" alt="빼기" />
+                  </button>
+                </div>
+              </li>
+              <!-- // 항목 -->
+              <li class="check-fc-list">
+                <p class="text">{{'기업 가치'}}</p>
+                <div class="list-right-conts">
+                  <div class="use-point text">
+                    <b class="bold">{{'1,000'}}</b>
+                    <div class="badge-p">
+                      <span class="is-voice-only">포인트</span>
+                    </div>
+                  </div>
+                  <button type="button" class="check-out-btn">
+                    <img src="@/assets/images/btn/btn-cancle-sch.svg" alt="빼기" />
+                  </button>
+                </div>
+              </li>
+              <li class="check-fc-list">
+                <p class="text">{{'기업 가치'}}</p>
+                <div class="list-right-conts">
+                  <div class="use-point text">
+                    <b class="bold">{{'1,000'}}</b>
+                    <div class="badge-p">
+                      <span class="is-voice-only">포인트</span>
+                    </div>
+                  </div>
+                  <button type="button" class="check-out-btn">
+                    <img src="@/assets/images/btn/btn-cancle-sch.svg" alt="빼기" />
+                  </button>
+                </div>
+              </li>
+              <li class="check-fc-list">
+                <p class="text">{{'기업 기본정보'}}</p>
+                <div class="list-right-conts">
+                  <div class="use-point text">
+                    <b class="bold">{{'1,000'}}</b>
+                    <div class="badge-p">
+                      <span class="is-voice-only">포인트</span>
+                    </div>
+                  </div>
+                  <button type="button" class="check-out-btn">
+                    <img src="@/assets/images/btn/btn-cancle-sch.svg" alt="빼기" />
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- END 투자자가 들어오면 보이는 영역 -->
+
       <!-- 정보 영역 -->
       <div class="wide-panel">
         <!-- 기업정보 -->
@@ -241,6 +408,19 @@
           <div class="flexable-container">
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
+                <!-- TODO: 투자자가 들어오면 보이는 영역 -->
+                <div class="check-wrap">
+                  <input
+                    id="check-box"
+                    type="checkbox"
+                    class="is-none check-switch"
+                  >
+                  <label
+                    for="check-box"
+                    class="check-onoff"
+                  />
+                </div>
+                <!-- END 투자자가 들어오면 보이는 영역 -->
                 <span>기업 기본정보</span>
                 <div class="hover-desc">
                   <span
@@ -365,6 +545,19 @@
             </div>
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
+                <!-- TODO: 투자자가 들어오면 보이는 영역 -->
+                <div class="check-wrap">
+                  <input
+                    id="check-box"
+                    type="checkbox"
+                    class="is-none check-switch"
+                  >
+                  <label
+                    for="check-box"
+                    class="check-onoff"
+                  />
+                </div>
+                <!-- END 투자자가 들어오면 보이는 영역 -->
                 <span>기업가치</span>
                 <div class="hover-desc">
                   <span
@@ -418,6 +611,19 @@
           <div class="flexable-container">
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
+                <!-- TODO: 투자자가 들어오면 보이는 영역 -->
+                <div class="check-wrap">
+                  <input
+                    id="check-box"
+                    type="checkbox"
+                    class="is-none check-switch"
+                  >
+                  <label
+                    for="check-box"
+                    class="check-onoff"
+                  />
+                </div>
+                <!-- END 투자자가 들어오면 보이는 영역 -->
                 <span>규모</span>
                 <div class="hover-desc">
                   <span
@@ -532,6 +738,19 @@
             </div>
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
+                <!-- TODO: 투자자가 들어오면 보이는 영역 -->
+                <div class="check-wrap">
+                  <input
+                    id="check-box"
+                    type="checkbox"
+                    class="is-none check-switch"
+                  >
+                  <label
+                    for="check-box"
+                    class="check-onoff"
+                  />
+                </div>
+                <!-- END 투자자가 들어오면 보이는 영역 -->
                 <span>주주정보</span>
                 <div class="hover-desc">
                   <span
@@ -578,6 +797,19 @@
           <div class="flexable-container pdt-60">
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
+                <!-- TODO: 투자자가 들어오면 보이는 영역 -->
+                <div class="check-wrap">
+                  <input
+                    id="check-box"
+                    type="checkbox"
+                    class="is-none check-switch"
+                  >
+                  <label
+                    for="check-box"
+                    class="check-onoff"
+                  />
+                </div>
+                <!-- END 투자자가 들어오면 보이는 영역 -->
                 <span>재무상태</span>
                 <div class="hover-desc">
                   <span
@@ -622,6 +854,19 @@
             </div>
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
+                <!-- TODO: 투자자가 들어오면 보이는 영역 -->
+                <div class="check-wrap">
+                  <input
+                    id="check-box"
+                    type="checkbox"
+                    class="is-none check-switch"
+                  >
+                  <label
+                    for="check-box"
+                    class="check-onoff"
+                  />
+                </div>
+                <!-- END 투자자가 들어오면 보이는 영역 -->
                 <span>손익계산서</span>
                 <div class="hover-desc">
                   <span
@@ -668,6 +913,19 @@
           <div class="flexable-container split3 pdt-60">
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
+                <!-- TODO: 투자자가 들어오면 보이는 영역 -->
+                <div class="check-wrap">
+                  <input
+                    id="check-box"
+                    type="checkbox"
+                    class="is-none check-switch"
+                  >
+                  <label
+                    for="check-box"
+                    class="check-onoff"
+                  />
+                </div>
+                <!-- END 투자자가 들어오면 보이는 영역 -->
                 <span>매출 추이</span>
                 <div class="hover-desc">
                   <span
@@ -712,6 +970,19 @@
             </div>
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
+                <!-- TODO: 투자자가 들어오면 보이는 영역 -->
+                <div class="check-wrap">
+                  <input
+                    id="check-box"
+                    type="checkbox"
+                    class="is-none check-switch"
+                  >
+                  <label
+                    for="check-box"
+                    class="check-onoff"
+                  />
+                </div>
+                <!-- END 투자자가 들어오면 보이는 영역 -->
                 <span>영업이익 추이</span>
                 <div class="hover-desc">
                   <span
@@ -756,6 +1027,19 @@
             </div>
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
+                <!-- TODO: 투자자가 들어오면 보이는 영역 -->
+                <div class="check-wrap">
+                  <input
+                    id="check-box"
+                    type="checkbox"
+                    class="is-none check-switch"
+                  >
+                  <label
+                    for="check-box"
+                    class="check-onoff"
+                  />
+                </div>
+                <!-- END 투자자가 들어오면 보이는 영역 -->
                 <span>당기순이익 추이</span>
                 <div class="hover-desc">
                   <span
@@ -804,6 +1088,19 @@
         <!-- 투자유치 -->
         <div class="etpr-main-conts">
           <h2 class="section-ttl">
+            <!-- TODO: 투자자가 들어오면 보이는 영역 -->
+            <div class="check-wrap">
+              <input
+                id="check-box"
+                type="checkbox"
+                class="is-none check-switch"
+              >
+              <label
+                for="check-box"
+                class="check-onoff"
+              />
+            </div>
+            <!-- END 투자자가 들어오면 보이는 영역 -->
             투자유치 
             <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
             <p class="badge green">
@@ -844,6 +1141,19 @@
         <!-- 보유특허 -->
         <div class="etpr-main-conts">
           <h2 class="section-ttl">
+            <!-- TODO: 투자자가 들어오면 보이는 영역 -->
+            <div class="check-wrap">
+              <input
+                id="check-box"
+                type="checkbox"
+                class="is-none check-switch"
+              >
+              <label
+                for="check-box"
+                class="check-onoff"
+              />
+            </div>
+            <!-- END 투자자가 들어오면 보이는 영역 -->
             보유특허 
             <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
             <p class="badge green">
@@ -862,6 +1172,19 @@
         <!-- 구성원 -->
         <div class="etpr-main-conts">
           <h2 class="section-ttl">
+            <!-- TODO: 투자자가 들어오면 보이는 영역 -->
+            <div class="check-wrap">
+              <input
+                id="check-box"
+                type="checkbox"
+                class="is-none check-switch"
+              >
+              <label
+                for="check-box"
+                class="check-onoff"
+              />
+            </div>
+            <!-- END 투자자가 들어오면 보이는 영역 -->
             구성원 
             <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
             <p class="badge green">

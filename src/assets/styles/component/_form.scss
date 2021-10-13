@@ -40,6 +40,20 @@
   @include inp-default;
 }
 
+.inp-textarea {
+  height: 200px;
+  
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #00EB79;
+  }
+}
+
 %inp-default{
   @include inp-default;
 }
