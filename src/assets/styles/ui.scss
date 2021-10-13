@@ -18,6 +18,7 @@
 @import "component/icon";
 @import "component/button";
 @import "component/form";
+@import "component/board";
 
 // 5. layout
 @import "layout/header";
@@ -33,7 +34,9 @@
 @import "page/company";
 @import "page/inquiry";
 @import "page/main";
+@import "page/search-result";
 @import "page/mypage";
 @import "page/mypage-enterprise-info"; // 기업 정보
 @import "page/mypage-factcheck"; // 팩트체크
+@import "page/mypage-note"; // 쪽지함
 @import "page/etpr-profile";
