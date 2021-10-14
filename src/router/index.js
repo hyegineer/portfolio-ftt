@@ -286,6 +286,7 @@ const routes = [
   },
   /* ====================== 회원형태 - 스타트업 ====================== */
   // 아래 페이지들은 모두 로그인 후 이용가능// 
+  // FIXME: mypage 뒤에 없으면 자동으로 '대시보드' redirect 시켜주세요
   {
     path: '/startup',
     name: 'StartupIndex',
@@ -499,6 +500,7 @@ const routes = [
   },
   /* ====================== 회원형태 - 투자자 ====================== */
   // 아래 페이지들은 모두 로그인 후 이용가능// 
+  // FIXME: mypage 뒤에 없으면 자동으로 '대시보드' redirect 시켜주세요
   {
     path: '/investor',
     name: 'InvestorIndex',
@@ -719,6 +721,105 @@ const routes = [
             path: 'note-create',
             name: 'INoteCreate',
             component: () => import('~@/views/user-investor/note/INoteCreate'),
+            // meta: { requiresAuth: true },
+          },
+        ],
+      },
+    ],
+  },
+  /* ====================== 회원형태 - 팩트체커 ====================== */
+  // 아래 페이지들은 모두 로그인 후 이용가능// 
+  // FIXME: mypage 뒤에 없으면 자동으로 '내 정보' redirect 시켜주세요
+  {
+    path: '/fact-checker',
+    name: 'FactCheckerIndex',
+    component: () => import('~@/views/user-fact-checker/Index'),
+    // meta: { requiresAuth: true, requiresResetScrollHeight: true },
+    children: [
+      // 팩트체커 메인
+      {
+        path: 'main',
+        name: 'FcMain',
+        component: () => import('~@/views/user-fact-checker/FcMain'),
+      },
+      // 팩트체커 마이페이지
+      {
+        path: 'mypage',
+        name: 'FcMypage',
+        component: () => import('~@/views/user-fact-checker/FcMypage'),
+        children: [
+          // ===================== 내 정보 =====================
+          // 내정보
+          {
+            path: 'myinfo-main',
+            name: 'FcMyinfoMain',
+            component: () => import('~@/views/user-fact-checker/my-info/FcMyinfoMain'),
+            // meta: { requiresAuth: true },
+          },
+          // 내정보-내정보수정
+          {
+            path: 'myinfo-edit',
+            name: 'FcMyinfoEdit',
+            component: () => import('~@/views/user-fact-checker/my-info/FcMyinfoEdit'),
+            // meta: { requiresAuth: true },
+          },
+          // 내정보-회원탈퇴
+          {
+            path: 'myinfo-leave',
+            name: 'FcMyinfoLeave',
+            component: () => import('~@/views/user-fact-checker/my-info/FcMyinfoLeave'),
+            // meta: { requiresAuth: true },
+          },
+          // ===================== 팩트체크 =====================
+          // 팩트체크-나의 팩트체크
+          {
+            path: 'ftck-my-list',
+            name: 'FcFtckMyList',
+            component: () => import('~@/views/user-fact-checker/factcheck/FcFtckMyList'),
+            // meta: { requiresAuth: true },
+          },
+          // 팩트체크-전체 팩트체크
+          {
+            path: 'ftck-total-list',
+            name: 'FcFtckTotalList',
+            component: () => import('~@/views/user-fact-checker/factcheck/FcFtckTotalList'),
+            // meta: { requiresAuth: true },
+          },
+          // FIXME 팩트체크-받은팩트체크 상세
+          // {
+          //   path: 'ftck-detail',
+          //   name: 'IFtckDetail',
+          //   component: () => import('~@/views/user-investor/factcheck/IFtckDetail'),
+          //   // meta: { requiresAuth: true },
+          // },
+          // ===================== 포인트 =====================
+          // 포인트 - 포인트 관리
+          {
+            path: 'point-main',
+            name: 'FcPointMain',
+            component: () => import('~@/views/user-fact-checker/point/FcPointMain'),
+            // meta: { requiresAuth: true },
+          },
+          // ===================== 기업회원 등록 =====================
+          // 기업회원 등록
+          {
+            path: 'enroll-list',
+            name: 'FcEnrollList',
+            component: () => import('~@/views/user-fact-checker/enroll-enterprise/FcEnrollList'),
+            // meta: { requiresAuth: true },
+          },
+          // 기업회원 등록 상세
+          {
+            path: 'enroll-detail',
+            name: 'FcEnrollDetail',
+            component: () => import('~@/views/user-fact-checker/enroll-enterprise/FcEnrollDetail'),
+            // meta: { requiresAuth: true },
+          },
+          // 기업회원 등록 완료
+          {
+            path: 'enroll-complete',
+            name: 'FcEnrollComplete',
+            component: () => import('~@/views/user-fact-checker/enroll-enterprise/FcEnrollComplete'),
             // meta: { requiresAuth: true },
           },
         ],

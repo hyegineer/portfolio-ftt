@@ -71,6 +71,11 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      flex-wrap: wrap;
+
+      .badge-rounded{
+        margin-bottom: 5px;
+      }
     }
 
     .badge {
@@ -82,6 +87,24 @@
       font-weight: 500;
       margin-left: 8px;
     }
+
+    .info-badges{
+      @include flex{
+        @include flex-op(flex-start, flex-start);
+
+        gap: 5px;
+        flex-wrap: wrap;
+
+        .badge-rounded{
+          margin: 0;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+
+  .info-grp-ai-start{ // align-items 가 flex-start여야할 때
+    align-items: flex-start;
   }
 
   .info-label {

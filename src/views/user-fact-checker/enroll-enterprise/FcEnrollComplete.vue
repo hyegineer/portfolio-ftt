@@ -1,6 +1,6 @@
 <template>
-  <!-- [D] 마이페이지 - 포인트-포인트 충전 완료 -->
-  <div class="mypage-container mypage-point-charge-complete-page">
+  <!-- [D] 마이페이지 - 기업회원 등록 완료 -->
+  <div class="mypage-container">
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>
@@ -11,52 +11,44 @@
           마이페이지
         </li>
         <li class="txt">
-          포인트
+          내 정보
         </li>
         <li class="txt">
-          포인트 충전완료
+          기업회원 등록 완료
         </li>
       </breadcrumb>
 
       <h2 class="ttl">
-        포인트
+        기업회원 등록
       </h2>
     </div>
     <!-- // 마이페이지 페이지 제목 -->
+    
 
     <!-- 마이페이지 컨텐츠 영역 -->
     <div class="mypage-cont-wrap">
       <div class="mypage-common-card">
         <div class="state-guide-box">
           <img
-            src="@/assets/images/icon/icon-comp-point.svg"
+            src="@/assets/images/img/img-complete-lights.svg"
             alt=""
             class="state-img"
           >
           <h3 class="state-ttl">
-            포인트 충전이 완료되었습니다.
+            기업회원 신청이 완료되었습니다.
           </h3>
-          <p class="state-desc fc-gray">
-            마이페이지 > 포인트 > 포인트 충전/내역에서 확인하실 수 있습니다.
+          <p class="state-period">
+            승인 완료시 기업회원 전환이 가능합니다.
           </p>
-          
-          <div class="space-between charge-form-grp">
-            <label class="lbel">현재 보유 포인트</label>
-
-            <div class="space-between-item">
-              <div class="amount-item">
-                <strong class="amount">0</strong>
-                <div class="badge-p" />
-              </div>
-            </div>
-          </div>
+          <p class="state-desc fc-gray">
+            승인 결과는, 검토 후 가입하신 이메일로 안내드리겠습니다
+          </p>
 
           <btn-solid
             position="single-centered"
             class="btn-lg"
-            @click="$router.push('point-main')"
           >
-            포인트 충전/내역으로
+            확인
           </btn-solid>
         </div>
       </div>
@@ -67,7 +59,7 @@
 
 <script>
 export default {
-  name: 'IPointChargeComplete',
+  name: 'FcEnrollComplete',
 };
 </script>
 
