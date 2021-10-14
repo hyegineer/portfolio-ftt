@@ -239,6 +239,30 @@
   }
 }
 
+.panel-ttl {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: rem(18);
+  font-weight: 500;
+  color: #5C5E70;
+  
+  .flex-ttl {
+    display: flex;
+    align-items: center;
+  }
+
+  .check-wrap {
+    margin-right: 8px;
+  }
+
+  .hover-desc {
+    margin-left: 8px;
+  }
+}
+
 .etpr-main-conts {
   padding-bottom: 50px;
   border-bottom: 1px solid #DDDEE6;
@@ -436,6 +460,7 @@
 
   .common-info-container {
     filter: blur(10px);
+    user-select: none;
   }
 }
 
@@ -490,28 +515,6 @@
     + .flexable-container {
         padding-top: 0;
       }
-  }
-
-  .panel-ttl {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    font-size: rem(18);
-    font-weight: 500;
-    color: #5C5E70;
-
-    .check-wrap {
-      margin-right: 8px;
-    }
-
-    .hover-desc {
-      margin-left: 8px;
-    }
-
-    .badge {
-      @include absolute($t: 0, $r: 0);
-    }
   }
 
   .badge {
