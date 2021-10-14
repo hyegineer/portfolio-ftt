@@ -697,3 +697,48 @@
     line-height: 1.6;
   }
 }
+
+.white-panel { // 흰색배경 박스영역
+  padding: 20px 40px;
+  background-color: white;
+}
+
+.flexable-container { // 기업프로필 판넬 정렬
+  @include flex {
+    @include flex-op(streach, space-between);
+
+    .flexable-inner {
+      flex: 0 0 calc(50% - 10px);
+    }
+  }
+
+  &.split3 {
+    .flexable-inner {
+      flex: 0 0 calc(33.33% - 10px);
+    }
+  }
+
+  &.split6 {
+    flex-wrap: wrap;
+
+    .flexable-inner {
+      flex: 0 0 32%;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.empty-conts { // 기업프로필 업데이트내역이 없습니다.
+  @include flex-center;
+
+  flex-direction: column;
+  height: 125px;
+
+  .txt {
+    margin-top: 14px;
+    font-size: rem(13);
+    font-weight: 400;
+    color: #8E909F;
+    -webkit-text-stroke: 0.4px #8e909f;
+  }
+}
