@@ -1,0 +1,273 @@
+/* ========== 마이페이지 > 내 정보 ========== */
+
+// 구성요소: 마이페이지 제목 그룹
+.cont-hgrp { 
+  padding-bottom: 40px;
+
+  .ttl {
+    font-size: rem(25);
+    font-weight: 500;
+    color: #171820;
+    text-align: center;
+    margin-bottom: 15px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  .ttl-sub {
+    font-size: rem(16);
+    font-weight: 400;
+    color: #5C5E70;
+    text-align: center;
+  }
+}
+
+.center-btn-grp { 
+  width: 390px;
+  margin: 0 auto;
+  padding-top: 22px;
+  gap: 14px;
+}
+
+
+// 마이페이지 > 내 정보(스타트업)
+.myinfo-page-container {
+
+  .mypage-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30px 40px;
+    background-color: #fff;
+  }
+
+  .name-box {
+    min-width: 370px;
+    padding-top: 21px;
+
+    .name {
+      font-size: rem(24);
+      font-weight: 400;
+      color: #171820;
+      line-height: 1.3;
+      margin-bottom: 30px;
+
+      .bold-txt {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .btn-edit {
+    padding: 12px 35.5px;
+  }
+
+  .info-box {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-grp {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .info {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .badge {
+      color: #8E909F;
+      border: 1px solid #8E909F;
+      border-radius: 50px;
+      padding: 4px 9.5px;
+      font-size: rem(12);
+      font-weight: 500;
+      margin-left: 8px;
+    }
+  }
+
+  .info-label {
+    padding: 19.5px 0;
+    font-size: rem(15);
+    font-weight: 600;
+    color: #171820;
+    min-width: 170px;
+    display: inline-block;
+  }
+
+  .info {
+    flex-grow: 1;
+    padding: 19.5px 0;
+    font-size: rem(15);
+    font-weight: 400;
+    color: #171820;
+    border-bottom: 1px solid rgba(#DDDEE6, 0.6);
+  }
+
+  .btn-gray-txt {
+    align-self: flex-end;
+    margin-top: 25px;
+  }
+}
+
+
+// 마이페이지 > 내 정보 > 내 정보 수정(스타트업)
+.myinfo-edit-page-container {
+  
+  .mypage-card {
+    background-color: #fff;
+    padding: 40px 0 50px;
+  }
+
+  .btn-grp {
+    margin-top: 60px;
+  }
+}
+
+
+// // 마이페이지 > 내 정보 > 회원탈퇴(스타트업)
+.myinfo-leave-page-container {
+
+  .mypage-card {
+    background-color: #fff;
+    padding: 40px 40px 50px 40px;
+  }
+
+  .cont-grp {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .left-box {
+    flex-grow: 1;
+    flex-basis: 50%;
+    padding: 20px;
+    background-color: #F9F9FB;
+  }
+
+  .terms-ttl {
+    font-size: rem(18);
+    font-weight: 500;
+    color: #171820;
+    margin-bottom: 20px;
+  }
+
+  .terms-area {
+    @include custom-scroll(#00EB79, $w: 6px);
+
+    background-color: #fff;
+    padding: 20px;
+    font-size: rem(15);
+    font-weight: 400;
+    color: #171820;
+    overflow: auto;
+    height: 320px;
+  }
+
+  .right-box {
+    flex-grow: 1;
+    flex-basis: 50%;
+
+    .lbel-inp-grp {
+      
+      &:first-child {
+        margin: 0 0 17px 0;
+      }
+
+      &:last-child {
+        margin: 17px 0 0 0;
+      }
+    }
+  }
+
+  .chk-grp {
+    margin: 44px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .check-onoff {
+      margin-right: 7px;
+    }
+  }
+
+  .btn-grp {
+    width: 380px;
+    margin: 0 auto;
+  }
+}
+
+
+// 마이페이지 - 대기중(그룹 강퇴 당하거나 승인 전)
+.waiting-page-container {
+
+  .waiting-cont-wrap {
+    background-color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .cont-ment {
+    font-size: rem(20);
+    font-weight: 500;
+    color: #171820;
+    margin-bottom: 31px;
+  }
+
+  .process-card {
+    padding: 16px 0;
+    border: 1px solid #DDDEE6;
+  }
+
+  .process-ment {
+    font-size: rem(12);
+    font-weight: 600;
+    color: #8E909F;
+    margin-bottom: 20px;
+  }
+
+  .cont-ment-sub {
+    padding-top: 30px;
+    font-size: rem(15);
+    color: #5C5E70;
+    font-weight: 400;
+    line-height: 1.35;
+  }
+
+  .btn-wrap {
+
+    .btn {
+      margin: 5px 0;
+    }
+  }
+}
+
+
+// // 마이페이지 - 신청 대기중 - 완료(그룹 강퇴 당하거나 승인 전)
+.waiting-complete-container {
+
+  .ment-wrap {
+    margin-bottom: 40px;
+
+    .ment {
+      font-size: rem(29);
+      font-weight: 400;
+      color: #171820;
+      margin-bottom: 20px;
+    }
+
+    .ment-sub {
+      font-size: rem(16);
+      font-weight: 400;
+      color: #171820;
+    }
+  }
+}
