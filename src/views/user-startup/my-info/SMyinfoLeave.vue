@@ -111,7 +111,10 @@
             class="check-box-lb"
           >위 내용을 확인하였으며, 회원탈퇴를 진행하겠습니다.</label>
         </div>
-        <div class="btn-grp">
+        <div
+          position="double-centered"
+          class="btn-grp"
+        >
           <btn-bd-light
             class="btn-lg btn-full color-gray btn-prev"
             @click="window.alert('이전 버튼을 클릭하셨습니다.')"
