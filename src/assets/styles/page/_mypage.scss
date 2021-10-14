@@ -1,4 +1,5 @@
-.cont-hgrp { // 구성요소: 마이페이지 제목 그룹
+// 구성요소: 마이페이지 제목 그룹
+.cont-hgrp { 
   padding-bottom: 40px;
 
   .ttl {
@@ -28,6 +29,7 @@
   gap: 14px;
 }
 
+// 기업정보 > 상세정보 페이지 테이블 관련
 .article-wrap .table-all-wrap {
   padding: 0;
 }
@@ -188,7 +190,7 @@
   }
 }
 
-// myinfo-main
+// 마이페이지 > 내 정보(스타트업)
 .myinfo-page-container {
 
   .mypage-card {
@@ -227,7 +229,6 @@
   }
 
   .info-grp {
-    // padding: 19.5px 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -272,9 +273,9 @@
     margin-top: 25px;
   }
 }
-// END myinfo-main
 
-// myinfo-edit
+
+// 마이페이지 > 내 정보 > 내 정보 수정(스타트업)
 .myinfo-edit-page-container {
   
   .mypage-card {
@@ -286,9 +287,9 @@
     margin-top: 60px;
   }
 }
-// END myinfo-edit
 
-// myinfo-leave
+
+// // 마이페이지 > 내 정보 > 회원탈퇴(스타트업)
 .myinfo-leave-page-container {
 
   .mypage-card {
@@ -361,9 +362,8 @@
     margin: 0 auto;
   }
 }
-// END myinfo-leave
 
-// waiting-main
+// 마이페이지 - 대기중(그룹 강퇴 당하거나 승인 전)
 .waiting-page-container {
 
   .waiting-cont-wrap {
@@ -406,9 +406,8 @@
     }
   }
 }
-// END waiting-main
 
-// waiting-complete
+// // 마이페이지 - 신청 대기중 - 완료(그룹 강퇴 당하거나 승인 전)
 .waiting-complete-container {
 
   .ment-wrap {
@@ -428,9 +427,8 @@
     }
   }
 }
-// END waiting-complete
 
-// startup - EtprDefaultInfo
+// 마이 페이지 > 기본정보(스타트업)
 .article-wrap {
   border-bottom: 1px solid #DDDEE6;
   padding: 30px 0;
@@ -543,9 +541,9 @@
     width: 50%;
   }
 }
-// END startup - EtprDefaultInfo
 
 // startup - EtprDefaultInfoEdit
+// 마이 페이지 > 기본정보 > 기본정보 수정(스타트업)
 .article-wrap {
 
   .ffieldset-guide {
@@ -640,10 +638,8 @@
   }
 }
 
-// END startup - EtprDefaultInfoEdit
 
-
-// investor - EtprDefaultInfo
+// 마이 페이지 > 기본정보(투자자)
 .article-wrap {
 
   .flex-row-start-grp {
@@ -733,6 +729,3 @@
     }
   }
 }
-
-
-// END investor - EtprDefaultInfo
