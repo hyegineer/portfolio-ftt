@@ -635,7 +635,6 @@
             <!-- END 스타트업 회원일 때 -->
 
             <!-- 팩트체커 회원일 때 -->
-            <!-- TODO: 팩트체커 페이지 나오면 router-link 연결 필요 -->
             <div
               v-if="testUserType === 'fact-checker'"
               class="sidemenu-wrap"
@@ -651,7 +650,7 @@
                 class="sidemenu-grp"
               >
                 <router-link
-                  to=""
+                  to="/fact-checker/mypage/myinfo-main"
                   class="sidemenu-link"
                 >
                   <span class="sidemenu-txt">마이페이지</span>
@@ -659,7 +658,7 @@
                 <div class="sidemenu-depth2-wrap">
                   <div class="sidemenu-depth2">
                     <router-link
-                      to="#"
+                      to="/fact-checker/mypage/myinfo-main"
                       class="link"
                     >
                       내정보
@@ -667,7 +666,7 @@
                   </div>
                   <div class="sidemenu-depth2">
                     <router-link
-                      to="#"
+                      to="/fact-checker/mypage/ftck-my-list"
                       class="link"
                     >
                       팩트체크
@@ -677,7 +676,7 @@
                     class="sidemenu-depth2"
                   >
                     <router-link
-                      to="#"
+                      to="/fact-checker/mypage/point-main"
                       class="link"
                     >
                       포인트 관리
@@ -687,7 +686,7 @@
                     class="sidemenu-depth2"
                   >
                     <router-link
-                      to="#"
+                      to="/fact-checker/mypage/enroll-list"
                       class="link"
                     >
                       기업회원 등록
@@ -771,7 +770,7 @@ export default {
   data() {
     return {
       testIsUser: true,
-      testUserType: 'investor', // startup, investor, fact-checker
+      testUserType: 'fact-checker', // startup, investor, fact-checker
       testMembership: false,
       viewSearchbar: false,
       viewSidebar: false,
