@@ -1337,7 +1337,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
               </div>
             </div>
           </div>
-          <div class="white-panel">
+          <div class="white-panel pd-0">
             투자유치 들어옵니다.
           </div>
         </div>
