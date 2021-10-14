@@ -1,61 +1,3 @@
-// common
-.mgt-20 {
-  margin-top: 20px;
-}
-
-.mgt-30 {
-  margin-top: 30px;
-}
-
-.pdt-60 {
-  margin-top: 60px;
-}
-
-.white-panel {
-  padding: 20px 40px;
-  background-color: white;
-}
-
-.flexable-container {
-  @include flex {
-    @include flex-op(streach, space-between);
-
-    .flexable-inner {
-      flex: 0 0 calc(50% - 10px);
-    }
-  }
-
-  &.split3 {
-    .flexable-inner {
-      flex: 0 0 calc(33.33% - 10px);
-    }
-  }
-
-  &.split6 {
-    flex-wrap: wrap;
-
-    .flexable-inner {
-      flex: 0 0 32%;
-      margin-bottom: 10px;
-    }
-  }
-}
-
-.empty-conts {
-  @include flex-center;
-
-  flex-direction: column;
-  height: 125px;
-
-  .txt {
-    margin-top: 14px;
-    font-size: rem(13);
-    font-weight: 400;
-    color: #8E909F;
-    -webkit-text-stroke: 0.4px #8e909f;
-  }
-}
-
 // layout
 .right-fixed {
   @include fixed($t: 110px, $l: 50%);
@@ -313,8 +255,7 @@
     }
 
     .ttl {
-      flex: 0 0 119px;
-      width: 119px;
+      flex: 0 0 9em;
       font-size: rem(15);
       font-weight: 400;
       color: #8E909F;
@@ -653,6 +594,7 @@
   }
 }
 
+// only investor
 // factsheet request in top
 .fc-request-container {
   padding: 0 40px;

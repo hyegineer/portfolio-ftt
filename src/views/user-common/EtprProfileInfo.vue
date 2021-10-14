@@ -658,7 +658,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '자사 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <div class="white-panel">
+              <div class="white-panel pd-0">
                 <div class="common-info-container">
                   <p class="common-info-graph">
                     그래프 들어옵니다.
@@ -851,7 +851,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <div class="white-panel">
+              <div class="white-panel pd-0">
                 <div class="common-info-container">
                   <p class="common-info-graph">
                     주주정보 들어옵니다.
@@ -910,7 +910,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <div class="white-panel">
+              <div class="white-panel pd-0">
                 <div class="common-info-container">
                   <p class="common-info-graph">
                     재무상태 들어옵니다.
@@ -967,7 +967,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <div class="white-panel">
+              <div class="white-panel pd-0">
                 <div class="common-info-container">
                   <p class="common-info-graph">
                     손익계산서 들어옵니다.
@@ -1026,7 +1026,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <div class="white-panel">
+              <div class="white-panel pd-0">
                 <div class="common-info-container">
                   <p class="common-info-graph">
                     매출 추이 들어옵니다.
@@ -1083,7 +1083,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <div class="white-panel">
+              <div class="white-panel pd-0">
                 <div class="common-info-container">
                   <p class="common-info-graph">
                     영업이익 추이 들어옵니다.
@@ -1140,7 +1140,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <div class="white-panel">
+              <div class="white-panel pd-0">
                 <div class="common-info-container">
                   <p class="common-info-graph">
                     당기순이익 추이 들어옵니다.
