@@ -1,6 +1,6 @@
 <template>
   <!-- [D] 마이페이지 - 대시보드 -->
-  <div class="mypage-container mypage-dashboard-container etpr-prifile-page">
+  <div class="mypage-container mypage-dashboard-container">
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>
@@ -24,9 +24,9 @@
     <!-- 마이페이지 컨텐츠 영역 -->
     <div class="mypage-cont-wrap">
       <div class="big-ttl-grp">
-        <p class="cont-big-ttl">
+        <h3 class="cont-big-ttl">
           <span class="underline">[주식회사 팩트컴퍼니]</span>의 기본정보
-        </p>
+        </h3>
       </div>
       <!-- 기업정보 -->
       <div class="etpr-main-conts">
@@ -348,6 +348,7 @@
             <button
               type="button"
               class="btn-all-view"
+              @click="$router.push('dashboard-investor-list')"
             >
               + 전체보기
             </button>
@@ -414,6 +415,7 @@
             <button
               type="button"
               class="btn-all-view"
+              @click="$router.push('ftck-list')"
             >
               + 전체보기
             </button>

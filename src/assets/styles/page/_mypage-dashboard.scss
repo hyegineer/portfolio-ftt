@@ -35,6 +35,10 @@
   .big-ttl-grp {
     margin-bottom: 30px;
 
+    &.mb-add {
+      margin-bottom: 65px;
+    }
+
     .cont-big-ttl {
       font-size: rem(25);
       font-weight: 500;

@@ -1,6 +1,6 @@
 <template>
   <!-- [D] 대시보드-투자기업에관심을가진투자자 -->
-  <div class="mypage-container">
+  <div class="mypage-container mypage-dashboard-container">
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>
@@ -26,8 +26,11 @@
 
     <!-- 마이페이지 컨텐츠 영역 -->
     <div class="mypage-cont-wrap">
-      <!-- FIXME 제목 스타일링 해야함 -->
-      <h3>우리 기업에 관심을 가진 투자자</h3>
+      <div class="big-ttl-grp mb-add">
+        <h3 class="cont-big-ttl">
+          우리 기업에 관심을 가진 투자자
+        </h3>
+      </div>
 
       <!-- 리스트 -->
       <div class="card-grid-grp-ttl">
@@ -39,7 +42,7 @@
       <!-- 기업이 있을 때 -->
       <div class="card-grid-grp">
         <div
-          v-for="(item, index) in 1"
+          v-for="(item, index) in 10"
           :key="index"
           class="card-grid"
         >
