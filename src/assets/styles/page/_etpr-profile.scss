@@ -176,7 +176,7 @@
 
     .name-subtxt-grp {
       height: 14px;
-      padding: 5px 0;
+      margin: 5px 0;
       font-size: rem(14);
       line-height: 14px;
     }
@@ -197,7 +197,13 @@
     .desc-wrap {
       position: relative;
       height: 100%;
-      padding-bottom: 65px;
+    }
+
+    .text-wrap {
+      @include flex-col;
+      
+      justify-content: space-between;
+      height: calc(100% - 78px);
     }
 
     .info-txt {
@@ -210,16 +216,15 @@
     }
 
     .edit-date {
-      @include absolute($b: 80px, $l: 0);
-
+      margin: 20px 0 14px;
       font-size: rem(14);
       font-weight: 400;
       color: #8E909F;
       -webkit-text-stroke: 0.4px;
     }
 
-    .btn-full {
-      @include absolute($b: 0, $l: 0);
+    .btn-bd-blue {
+      box-shadow: none;
     }
   }
 }
@@ -937,4 +942,5 @@
   @include input-reset;
 
   transform: translateY(2px);
+  cursor: pointer;
 }

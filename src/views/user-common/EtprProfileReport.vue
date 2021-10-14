@@ -170,28 +170,45 @@
                     {{ '내용이 없습니다.기업 한줄 소개 텍스트 자리입니다. 기업 한줄 소개 텍스트 자리입니다.' }}
                   </p>
     
-                  <div class="edit-date">
-                    {{ '2021.10.11 12:13' }} 기업정보가 업데이트 되었습니다.
+                  <div class="bottom-data">
+                    <div class="edit-date">
+                      {{ '2021.10.11 12:13' }} 기업정보가 업데이트 되었습니다.
+                    </div>
+
+                    <btn-solid-blue
+                      class="btn-xlg btn-full"
+                      @click="window.alert('관심기업 등록을 하셨습니다.')"
+                    >
+                      + 관심기업 등록
+                    </btn-solid-blue>
+
+                    <btn-bd-blue
+                      class="btn-xlg btn-full"
+                      @click="window.alert('관심기업 등록을 취소하셨습니다.')"
+                    >
+                      <img
+                        src="@/assets/images/icon/icon-check-bl.svg"
+                        alt="체크"
+                        class="check-icon"
+                      > 관심기업 등록 완료
+                    </btn-bd-blue>
+
+                    <div class="btn-grp">
+                      <btn-bd
+                        class="btn-xlg btn-full"
+                        @click="window.alert('우리 기업 투자자 정보 버튼을 클릭하셨습니다.')"
+                      >
+                        우리 기업 투자자 정보
+                      </btn-bd>
+                      <btn-bd
+                        class="btn-xlg btn-full"
+                        @click="window.alert('기업정보 업데이트 버튼을 클릭하셨습니다.')"
+                      >
+                        기업정보 업데이트
+                      </btn-bd>
+                    </div>
                   </div>
                 </div>
-  
-                <btn-solid-blue
-                  class="btn-xlg btn-full"
-                  @click="window.alert('관심기업 등록을 하셨습니다.')"
-                >
-                  + 관심기업 등록
-                </btn-solid-blue>
-  
-                <btn-bd-blue
-                  class="btn-xlg btn-full"
-                  @click="window.alert('관심기업 등록을 취소하셨습니다.')"
-                >
-                  <img
-                    src="@/assets/images/icon/icon-check-bl.svg"
-                    alt="체크"
-                    class="check-icon"
-                  > 관심기업 등록 완료
-                </btn-bd-blue>
               </div>
             </div>
           </div>
