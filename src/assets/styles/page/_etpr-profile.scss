@@ -630,6 +630,39 @@
   }
 }
 
+//board ctreate page
+.etpr-prifile-board-create-page {
+  .page-container {
+    padding-bottom: 150px;
+  }
+
+  .section-ttl {
+    margin-top: 13px;
+    margin-bottom: 35px;
+    font-size: rem(20);
+  }
+
+  .white-panel {
+    margin-top: 10px;
+  }
+
+  .editor-container {
+    padding: 30px 40px 40px;
+  }
+
+  .panel-ttl {
+    font-size: rem(16);
+    font-weight: 600;
+    color: #171820;
+  }
+
+  .editor-wrap {
+    min-height: 500px;
+    margin: 10px 0 40px;
+    border: 1px solid #DDDEE6;
+  }
+}
+
 // only investor
 // factsheet request in top
 .fc-request-container {
