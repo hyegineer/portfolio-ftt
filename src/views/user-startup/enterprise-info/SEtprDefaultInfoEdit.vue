@@ -290,15 +290,15 @@
                       <div class="toggle-item">
                         <label
                           class="tg-lbel"
-                          for="open01"
+                          for="open02"
                         >공개여부</label>
                         <input
-                          id="open01"
+                          id="open02"
                           type="checkbox"
                           class="is-none toggle-switch"
                         >
                         <label
-                          for="open01"
+                          for="open02"
                           class="toggle-onoff"
                         />
                       </div>
@@ -334,15 +334,15 @@
                     <div class="toggle-item">
                       <label
                         class="tg-lbel"
-                        for="open01"
+                        for="open03"
                       >공개여부</label>
                       <input
-                        id="open01"
+                        id="open03"
                         type="checkbox"
                         class="is-none toggle-switch"
                       >
                       <label
-                        for="open01"
+                        for="open03"
                         class="toggle-onoff"
                       />
                     </div>
