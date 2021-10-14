@@ -212,8 +212,8 @@ export default {
   name: 'Inquiry',
   data() {
     return{
-      categorys: ['카테고리1'],
-      payload: {
+      categorys: ['카테고리1'], // custom-select 동작을 구현하기위한 더미데이터
+      payload: { // custom-select 동작을 구현하기위한 더미데이터
         cat: null,
       },
     };

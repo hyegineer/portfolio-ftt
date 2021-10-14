@@ -824,7 +824,11 @@
           </div>
         </div>
         <!-- END 손익계산서 -->
-        <div class="btn-grp center-btn-grp">
+        <div
+          position="double-centered"
+          margin-top
+          class="btn-grp"
+        >
           <btn-bd-light
             class="btn-lg btn-full color-gray btn-prev"
             @click="window.alert('이전 버튼을 클릭하셨습니다.')"

@@ -24,14 +24,6 @@
   }
 }
 
-.center-btn-grp { 
-  width: 390px;
-  margin: 0 auto;
-  padding-top: 22px;
-  gap: 14px;
-}
-
-
 // 마이페이지 > 내 정보(스타트업)
 .myinfo-page-container {
 
@@ -199,8 +191,7 @@
     }
   }
 
-  .btn-grp {
-    width: 380px;
+  .btn-grp[position="double-centered"] {
     margin: 0 auto;
   }
 }

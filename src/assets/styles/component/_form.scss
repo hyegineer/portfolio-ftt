@@ -166,6 +166,16 @@ textarea.inp{ // 구성요소: 텍스트에어리어 기본 스타일
   font-weight: 400;
   color: #171820;
   display: inline-block;
+
+  .length-unit{
+    margin-left: auto;
+  }
+}
+
+.lbel-unit{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .lbel-lg{ // 구성요소: 기본레이블 큰버전
@@ -224,6 +234,8 @@ textarea.inp{ // 구성요소: 텍스트에어리어 기본 스타일
 }
 
 .custom-slct02{ // 구성요소: 커스텀 셀렉트 스타일 2 (백그라운드 투명)
+  min-width: 120px;
+  
   .slct{
     background-position: 100% 50%;
     color: #171820;
@@ -232,6 +244,10 @@ textarea.inp{ // 구성요소: 텍스트에어리어 기본 스타일
     padding-right: 20px;
     border: 0;
     background-color: transparent;
+  }
+
+  .slct.is-focus{
+    box-shadow: none;
   }
 
   .slct-opts-grp{
@@ -380,7 +396,7 @@ textarea.inp{ // 구성요소: 텍스트에어리어 기본 스타일
     }
 
     -webkit-text-stroke: 1px #171820;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     text-align: left;
   }
 

@@ -288,8 +288,7 @@ export default {
   name: 'IFtckList',
   data() {
     return{
-      keyword: null,
-      searchOptions: '전체',
+      searchOptions: '전체', // custom-select 동작을 구현하기위한 더미데이터
     };
   },
 };

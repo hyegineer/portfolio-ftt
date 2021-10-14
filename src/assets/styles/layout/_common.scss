@@ -568,6 +568,25 @@
   }
 }
 
+.simple-list-grp-box{ // 구성요소: 심플 내역 보더 박스
+  @include custom-scroll(#00EB79);
+
+  width: 100%;
+  border: 1px solid #DDDEE6;
+  overflow: auto;
+  position: relative;
+  padding: 10px 20px;
+}
+
+.simple-list-nothing{
+  @include flex-center;
+
+  font-size: 15px;
+  color: #8E909F;
+  width: 100%;
+  height: 100%;
+}
+
 .simple-list-grp{ // 구성요소: 심플 내역 list group
   width: 100%;
 }
@@ -588,6 +607,7 @@
   }
 
   td{
+    flex: 0 1 auto;
     padding: 0 10px;
     min-width: 120px;
     line-height: 1.4;
@@ -597,9 +617,11 @@
     font-weight: 600;
   }
 
-  .td-date{
+  .td-right{
     margin-left: auto;
-    flex-shrink: 0;
+    flex: 0 0 auto;
+    min-width: auto;
+    padding-right: 0;
   }
 }
 
@@ -699,6 +721,7 @@
 }
 
 .white-panel { // 흰색배경 박스영역
+  position: relative;
   padding: 20px 40px;
   background-color: white;
 }

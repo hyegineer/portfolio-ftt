@@ -151,10 +151,15 @@
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20' height='20' viewBox='0 0 20 20'%3E%3Cdefs%3E%3ClinearGradient id='linear-gradient' x1='0.5' x2='0.5' y2='1' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%2300eb79'/%3E%3Cstop offset='1' stop-color='%2300bb60'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg id='icon-noti' transform='translate(-433.041 -560.041)'%3E%3Ccircle id='타원_341' data-name='타원 341' cx='10' cy='10' r='10' transform='translate(433.041 560.041)' fill='url(%23linear-gradient)'/%3E%3Cpath id='About' d='M1.03-14H4.139L3.621-6.363H1.548ZM2.584-2.168A1.585,1.585,0,0,1,1.44-2.611,1.441,1.441,0,0,1,.98-3.689,1.4,1.4,0,0,1,1.431-4.75a1.612,1.612,0,0,1,1.153-.426,1.612,1.612,0,0,1,1.153.426,1.4,1.4,0,0,1,.451,1.061,1.441,1.441,0,0,1-.46,1.078A1.585,1.585,0,0,1,2.584-2.168Z' transform='translate(440.393 578.195)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 
+.icon-i-white{
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg id='btn-ttip-i' xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cg id='타원_364' data-name='타원 364' fill='%23fff' stroke='%238e909f' stroke-width='1'%3E%3Ccircle cx='10' cy='10' r='10' stroke='none'/%3E%3Ccircle cx='10' cy='10' r='9.5' fill='none'/%3E%3C/g%3E%3Cpath id='About' d='M1.394-11.361H4.138V-1.9H1.394ZM2.766-12.68a1.74,1.74,0,0,1-1.231-.44,1.426,1.426,0,0,1-.475-1.09,1.426,1.426,0,0,1,.475-1.09,1.74,1.74,0,0,1,1.231-.44A1.784,1.784,0,0,1,4-15.318a1.353,1.353,0,0,1,.475,1.055A1.493,1.493,0,0,1,4-13.128,1.72,1.72,0,0,1,2.766-12.68Z' transform='translate(7.234 18.64)' fill='%23b8bac7'/%3E%3C/svg%3E%0A");
+}
+
 .icon-del {
   width: 14px;
   height: 14px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cg id='icon-del-input' transform='translate(-888 -1059)'%3E%3Crect id='사각형_2114' data-name='사각형 2114' width='14' height='14' transform='translate(888 1059)' fill='rgba(255,255,255,0)'/%3E%3Cg id='그룹_5805' data-name='그룹 5805' transform='translate(-14.5 0.5)'%3E%3Cline id='선_889' data-name='선 889' x2='10' y2='10' transform='translate(904.5 1060.5)' fill='none' stroke='%238e909f' stroke-width='2'/%3E%3Cline id='선_890' data-name='선 890' x1='10' y2='10' transform='translate(904.5 1060.5)' fill='none' stroke='%238e909f' stroke-width='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
 }
-
 /* ========== END icon 관련 스타일 ========== */

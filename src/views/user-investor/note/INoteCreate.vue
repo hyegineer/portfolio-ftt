@@ -71,7 +71,10 @@
           </div>
           <!-- // 받는 이 -->
           
-          <div class="nboard-btn-grp btn-grp">
+          <div
+            position="double-centered"
+            class="btn-grp"
+          >
             <btn-bd-light
               class="btn-lg btn-full color-gray btn-prev"
               @click="$router.back();"

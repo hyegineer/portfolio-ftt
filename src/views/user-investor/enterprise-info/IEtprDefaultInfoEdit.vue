@@ -497,13 +497,18 @@
             </div>
             <!-- END 투자자 자격 인증서가 첨부되어 있는 경우(파일명 노출) -->
           </div>
-          <div class="btn-grp center-btn-grp">
+          <div
+            position="double-centered"
+            margin-top
+            class="btn-grp"
+          >
             <btn-bd-light
               class="btn-lg btn-full color-gray btn-prev"
               @click="window.alert('이전 버튼을 클릭하셨습니다.')"
             >
               이전
             </btn-bd-light>
+
             <btn-solid
               class="btn-lg btn-full"
               @click="window.alert('수정완료 버튼을 클릭하셨습니다.')"

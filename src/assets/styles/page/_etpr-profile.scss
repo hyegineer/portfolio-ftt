@@ -239,6 +239,30 @@
   }
 }
 
+.panel-ttl {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: rem(18);
+  font-weight: 500;
+  color: #5C5E70;
+  
+  .flex-ttl {
+    display: flex;
+    align-items: center;
+  }
+
+  .check-wrap {
+    margin-right: 8px;
+  }
+
+  .hover-desc {
+    margin-left: 8px;
+  }
+}
+
 .etpr-main-conts {
   padding-bottom: 50px;
   border-bottom: 1px solid #DDDEE6;
@@ -406,6 +430,40 @@
   }
 }
 
+//blur contents
+.cover-blur-container {
+  @include absolute($t: 50%, $l: 50%);
+
+  display: none;
+  z-index: 3;
+  width: 80%;
+  max-width: 305px;
+  padding: 32px 20px 35px;
+  border: 2px solid #00EB79;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  .text {
+    margin-top: 8px;
+    font-size: rem(18);
+    font-weight: 500;
+    color: #5C5E70;
+    line-height: 1.66;
+  }
+}
+
+.cover-blur {
+  .cover-blur-container {
+    display: block;
+  }
+
+  .common-info-container {
+    filter: blur(10px);
+    user-select: none;
+  }
+}
+
 // page
 // info page
 .etpr-prifile-page {
@@ -457,28 +515,6 @@
     + .flexable-container {
         padding-top: 0;
       }
-  }
-
-  .panel-ttl {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    font-size: rem(18);
-    font-weight: 500;
-    color: #5C5E70;
-
-    .check-wrap {
-      margin-right: 8px;
-    }
-
-    .hover-desc {
-      margin-left: 8px;
-    }
-
-    .badge {
-      @include absolute($t: 0, $r: 0);
-    }
   }
 
   .badge {
@@ -591,6 +627,39 @@
 .etpr-profile-board-page {
   .etpr-tab-container {
     padding-bottom: 100px;
+  }
+}
+
+//board ctreate page
+.etpr-prifile-board-create-page {
+  .page-container {
+    padding-bottom: 150px;
+  }
+
+  .section-ttl {
+    margin-top: 13px;
+    margin-bottom: 35px;
+    font-size: rem(20);
+  }
+
+  .white-panel {
+    margin-top: 10px;
+  }
+
+  .editor-container {
+    padding: 30px 40px 40px;
+  }
+
+  .panel-ttl {
+    font-size: rem(16);
+    font-weight: 600;
+    color: #171820;
+  }
+
+  .editor-wrap {
+    min-height: 500px;
+    margin: 10px 0 40px;
+    border: 1px solid #DDDEE6;
   }
 }
 
