@@ -1,6 +1,6 @@
 <template>
   <!-- [D] 마이페이지 - 팩트체크-요청한 팩트체크 검토중 & 진행완료 -->
-  <div class="mypage-container">
+  <div class="mypage-container mypage-ftck-checking-detail-page">
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>
@@ -32,7 +32,8 @@
           <!-- 팩트체크 진행상태 & 제목 -->
           <div class="ftck-state-subject">
             <div class="ftck-state">
-              <badge-state txt="진행중" />
+              <badge-state txt="내용 검토중" />
+              <badge-state txt="완료" />
 
               <!-- [D] 비공개일 때만 보임 -->
               <div class="badge-secret">
@@ -51,8 +52,13 @@
           <!-- // 팩트체크 진행상태 & 제목 -->
 
           <div class="mypboard-etc-grp">
-            <span class="fc-gray fz-13">투자자명</span>
-            <span class="fc-gray-light fz-13">2021.00.00</span>
+            <span class="amount-item">
+              <div class="badge-p badge-p-sm" />
+              <span class="fz-13">150</span>
+            </span>
+
+            <span class="fc-gray fz-13">{{ '요청 스타트업명' }}</span>
+            <span class="fc-gray-light fz-13">{{ '2021.00.00' }}</span>
           </div>
         </div>
         <!-- // 제목 -->
@@ -62,16 +68,6 @@
           <div class="mypboard-cont">
             <div class="mypboard-cont-ttl">
               <span class="fc-gray-light fz-13">※ 팩트체크 요청 내용입니다.</span>
-
-              <div class="right-grp">
-                <button
-                  type="button"
-                  class="btn btn-send-note"
-                >
-                  <span class="txt">쪽지 보내기</span>
-                  <i class="icon icon-msg" />
-                </button>
-              </div>
             </div>
               
             <p class="p-preline">
@@ -90,13 +86,45 @@
                 <span class="fc-gray-light fz-13">2021.00.00</span>
               </div>
             </div>
-              
+
+            <div>
+              <!-- FIXME img 박스영역들 -->
+            </div>
+
             <p class="p-preline">
               좌우 패딩 40px / 상하 패딩 30px <br>
               팩트체크 요청 내용 자리입니다. <br>
               팩트체크 요청 내용 자리입니다. <br>
             </p>
           </div>
+            
+          <!-- [D] 팩트체크의 진행상태가 검토중일 때만 보이는 영역 -->
+          <article class="guide-box guide-verti-box">
+            <div class="guide-box-cont">
+              <h6 class="lbel">
+                검토여부 선택
+              </h6>
+              <p class="txt">
+                팩트체커가 답변을 등록한 후 24시간 이내에 검토여부를 결정하지 않을경우, 자동으로 완료처리가 됩니다. <br>
+                내용이 마음에 들지 않거나, 정확하지 않은 정보로 판단될 경우 '보완요청' 버튼을 눌러주세요.
+              </p>
+            </div>
+
+            <div class="btn-grp">
+              <btn-solid-grayblue
+                class="btn-sm"
+                @click="$router.push('ftck-checking-edit')"
+              >
+                보완요청
+              </btn-solid-grayblue>
+              <btn-solid-dark
+                class="btn-sm"
+                @click="confirm('검토완료 처리를 하시겠습니까?')"
+              >
+                검토완료
+              </btn-solid-dark>
+            </div>
+          </article>
         </div>
         <!-- // 내용 -->
       </div>

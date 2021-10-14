@@ -769,3 +769,56 @@
     -webkit-text-stroke: 0.4px #8e909f;
   }
 }
+
+.accordion-list{ // 구성요소 아코디언 목록
+  width: 100%;
+}
+
+.accordion-list.is-show{
+  .acdn-top-icon{
+    transform: rotate(180deg);
+  }
+
+  .accordion-down{
+    display: block;
+  }
+}
+
+.accordion-top{ // 구성요소 아코디언 위
+  width: 100%;
+  background-color: white;
+  position: relative;
+  padding: 15px 40px;
+  padding-right: 70px;
+  cursor: pointer;
+
+  &:hover{
+    background-color: #F6FFFB;
+  }
+
+  .acdn-top-icon{
+    @include absolute($t: 27px, $r: 40px);
+
+    transform: rotate(0);
+    z-index: 1;
+    transition: all 0.2s;
+  }
+}
+
+.accordion-down{ // 구성요소 아코디언 아래
+  width: 100%;
+  background-color: white;
+  padding: 10px 40px;
+  display: none;
+}
+
+.article-hgrp{ // 구성요소 제목 그룹
+  width: 100%;
+  margin-bottom: 20px;
+
+  .ttl{
+    font-size: 18px;
+    font-weight: 500;
+    color: #171820;
+  }
+}

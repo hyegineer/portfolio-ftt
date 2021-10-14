@@ -206,6 +206,15 @@
   height: $line-height * $line-cnt; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
 }
 
+@mixin remove-ellipse{
+  overflow: visible;
+  text-overflow: unset;
+  height: auto;
+  line-height: 1.4;
+  -webkit-line-clamp: unset; // $line-cnt : 라인 수
+  -webkit-box-orient: unset;
+}
+
 // 아이폰 노치
 @mixin iPhoneXs {
   /* iPhone XS : 2436x1125px at 458ppi */
