@@ -523,20 +523,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <!-- TODO: 업데이트가 늦으면 cover-blur -->
-              <div class="white-panel cover-blur">
-                <div class="cover-blur-container">
-                  <div class="cover-blur-inner">
-                    <img
-                      class="img"
-                      src="@/assets/images/icon/icon-noti.svg"
-                      alt="!"
-                    >
-                    <p class="text">
-                      최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
-                    </p>
-                  </div>
-                </div>
+              <div class="white-panel">
                 <div class="common-info-container">
                   <ul class="common-info-list-wrap">
                     <!-- TODO: 정보가 없는 곳은 전부 - 로 표시 -->
@@ -675,20 +662,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '자사 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <!-- TODO: 업데이트가 늦으면 cover-blur -->
               <div class="white-panel pd-0">
-                <div class="cover-blur-container">
-                  <div class="cover-blur-inner">
-                    <img
-                      class="img"
-                      src="@/assets/images/icon/icon-noti.svg"
-                      alt="!"
-                    >
-                    <p class="text">
-                      최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
-                    </p>
-                  </div>
-                </div>
                 <div class="common-info-container">
                   <p class="common-info-graph">
                     그래프 들어옵니다.
@@ -756,8 +730,94 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <!-- TODO: 업데이트가 늦으면 cover-blur -->
-              <div class="white-panel">
+              <div
+                class="white-panel"
+                style="display: none;"
+              >
+                <div class="common-info-container">
+                  <ul class="common-info-list-wrap">
+                    <!-- TODO: 정보가 없는 곳은 전부 - 로 표시 -->
+                    <li class="common-info-list scale-list">
+                      <h4 class="ttl">
+                        발행주식 수
+                      </h4>
+                      <div class="dec">
+                        {{ '-' }} 주
+                      </div>
+                    </li>
+                    <li class="common-info-list scale-list">
+                      <h4 class="ttl">
+                        액면가
+                      </h4>
+                      <div class="dec">
+                        {{ '-' }} 원
+                      </div>
+                    </li>
+                    <li class="common-info-list scale-list">
+                      <h4 class="ttl">
+                        자본금
+                      </h4>
+                      <div class="dec">
+                        {{ '-' }} 원
+                      </div>
+                    </li>
+                    <li class="common-info-list scale-list">
+                      <h4 class="ttl">
+                        주주수
+                      </h4>
+                      <div class="dec">
+                        {{ '-' }} 명
+                      </div>
+                    </li>
+                    <li class="common-info-list scale-list">
+                      <h4 class="ttl">
+                        대표보통주식주 비율
+                      </h4>
+                      <div class="dec">
+                        {{ '-' }} %
+                      </div>
+                    </li>
+                    <li class="common-info-list scale-list">
+                      <h4 class="ttl">
+                        대표주주구분
+                      </h4>
+                      <div class="dec">
+                        {{ '-' }}
+                      </div>
+                    </li>
+                    <li class="common-info-list scale-list">
+                      <h4 class="ttl">
+                        대표주주명
+                      </h4>
+                      <div class="dec">
+                        {{ '-' }}
+                      </div>
+                    </li>
+                    <li class="common-info-list scale-list">
+                      <h4 class="ttl">
+                        대표지분율
+                      </h4>
+                      <div class="dec">
+                        {{ '-' }} %
+                      </div>
+                    </li>
+                    <li class="common-info-list scale-list">
+                      <h4 class="ttl">
+                        종업원 수
+                      </h4>
+                      <div class="dec">
+                        <span class="comment">(기준일 : {{ '2000.00.00' }})</span>
+                        {{ '-' }} 명
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- TODO: 필터처리된 데이터 - 목업데이터가 들어간 white-panel에 cover-blur추가 -->
+              <div
+                class="white-panel cover-blur"
+              >
+                <!-- 필터처리된 데이터 가운데 뜨는 영역 -->
                 <div class="cover-blur-container">
                   <div class="cover-blur-inner">
                     <img
@@ -770,6 +830,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                     </p>
                   </div>
                 </div>
+                <!-- END 필터처리된 데이터 가운데 뜨는 영역 -->
                 <div class="common-info-container">
                   <ul class="common-info-list-wrap">
                     <!-- TODO: 정보가 없는 곳은 전부 - 로 표시 -->
@@ -898,20 +959,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <!-- TODO: 업데이트가 늦으면 cover-blur -->
               <div class="white-panel pd-0">
-                <div class="cover-blur-container">
-                  <div class="cover-blur-inner">
-                    <img
-                      class="img"
-                      src="@/assets/images/icon/icon-noti.svg"
-                      alt="!"
-                    >
-                    <p class="text">
-                      최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
-                    </p>
-                  </div>
-                </div>
                 <div class="common-info-container">
                   <p class="common-info-graph">
                     주주정보 들어옵니다.
@@ -972,20 +1020,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <!-- TODO: 업데이트가 늦으면 cover-blur -->
-              <div class="white-panel pd-0 cover-blur">
-                <div class="cover-blur-container">
-                  <div class="cover-blur-inner">
-                    <img
-                      class="img"
-                      src="@/assets/images/icon/icon-noti.svg"
-                      alt="!"
-                    >
-                    <p class="text">
-                      최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
-                    </p>
-                  </div>
-                </div>
+              <div class="white-panel pd-0">
                 <div class="common-info-container">
                   <p class="common-info-graph">
                     재무상태 들어옵니다.
@@ -1044,20 +1079,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <!-- TODO: 업데이트가 늦으면 cover-blur -->
               <div class="white-panel pd-0">
-                <div class="cover-blur-container">
-                  <div class="cover-blur-inner">
-                    <img
-                      class="img"
-                      src="@/assets/images/icon/icon-noti.svg"
-                      alt="!"
-                    >
-                    <p class="text">
-                      최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
-                    </p>
-                  </div>
-                </div>
                 <div class="common-info-container">
                   <p class="common-info-graph">
                     손익계산서 들어옵니다.
@@ -1118,20 +1140,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <!-- TODO: 업데이트가 늦으면 cover-blur -->
-              <div class="white-panel pd-0 cover-blur">
-                <div class="cover-blur-container">
-                  <div class="cover-blur-inner">
-                    <img
-                      class="img"
-                      src="@/assets/images/icon/icon-noti.svg"
-                      alt="!"
-                    >
-                    <p class="text">
-                      최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
-                    </p>
-                  </div>
-                </div>
+              <div class="white-panel pd-0">
                 <div class="common-info-container">
                   <p class="common-info-graph">
                     매출 추이 들어옵니다.
@@ -1190,20 +1199,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <!-- TODO: 업데이트가 늦으면 cover-blur -->
               <div class="white-panel pd-0">
-                <div class="cover-blur-container">
-                  <div class="cover-blur-inner">
-                    <img
-                      class="img"
-                      src="@/assets/images/icon/icon-noti.svg"
-                      alt="!"
-                    >
-                    <p class="text">
-                      최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
-                    </p>
-                  </div>
-                </div>
                 <div class="common-info-container">
                   <p class="common-info-graph">
                     영업이익 추이 들어옵니다.
@@ -1262,20 +1258,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <!-- TODO: 업데이트가 늦으면 cover-blur -->
               <div class="white-panel pd-0">
-                <div class="cover-blur-container">
-                  <div class="cover-blur-inner">
-                    <img
-                      class="img"
-                      src="@/assets/images/icon/icon-noti.svg"
-                      alt="!"
-                    >
-                    <p class="text">
-                      최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
-                    </p>
-                  </div>
-                </div>
                 <div class="common-info-container">
                   <p class="common-info-graph">
                     당기순이익 추이 들어옵니다.
