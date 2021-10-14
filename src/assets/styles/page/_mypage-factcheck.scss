@@ -120,6 +120,20 @@
 
   .mypboard-detail-hd{
     border-bottom: 1px solid #DDDEE6;
+
+    .ftck-state-subject{
+      .ftck-subject{
+        align-items: flex-start;
+
+        .lbel{
+          padding-top: 5px;
+        }
+      }
+
+      .subject{
+        @include remove-ellipse;
+      }
+    }
   }
 
   .mypboard-cont{ // 팩트체크 상세
@@ -192,5 +206,65 @@
     }
   }
 }
+
+/* 투자자: 마이페이지 > 팩트체크 > 요청한 팩트체크 상세 */
+.ftck-ing-wrap{ // 구성요소: 진행중일 때 보이는 영역
+  margin-top: 30px;
+  
+  .accordion-top{
+    padding-top: 17px;
+  }
+
+  .accordion-down{
+    padding-bottom: 20px;
+  }
+}
+
+.ftck-ing-box{
+  @include flex-center;
+  @include flex-col;
+
+  background-color: white;
+  padding: 15px 0 18px;
+  text-align: center;
+  margin: 10px 0;
+
+  .loader{
+    margin: 0px auto 25px;
+    transform: translateZ(0) scale(0.55);
+  }
+
+  .ttl{
+    display: inline-block;
+    width: 100%;
+    font-size: 15px;
+    -webkit-text-stroke: 0.5px #171820;
+    line-height: 1.4;
+  }
+
+  .fc-gray{
+    font-size: 12px;
+    line-height: 1.4;
+    margin-top: 5px;
+  }
+}
+
+.ftck-name-grp{
+  @include flex-col;
+  @include flex-op(flex-start, flex-start);
+
+  gap: 5px;
+
+  .name{
+    font-weight: 400;
+    font-size: 15px;
+    -webkit-text-stroke: 0.5px #171820;
+  }
+
+  .amount{
+    font-size: 14px;
+  }
+}
+
 
 /* ========== END 마이페이지 > 팩트체크 ========== */
