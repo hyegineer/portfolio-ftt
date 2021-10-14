@@ -128,6 +128,7 @@
 
     &:last-child{
       margin-right: 0;
+      padding-right: 0;
 
       &:after{
         content: '';
@@ -143,7 +144,9 @@
   display: inline-flex;
 
   .avatar{
-    margin: 0 auto 10px;
+    @include circle(70px);
+
+    margin: 0 auto 16px;
   }
 
   .name-grp{
@@ -151,12 +154,21 @@
   }
 
   .name{
+    @include ellipse(1, 18px);
+    @include font-op($w: 400, $c: #171820){
+      font-size: 16px;
+    }
+    
     width: 100%;
   }
 
   .name-subtxt-grp{
     margin-top: 2.5px;
     font-size: 11px;
+  }
+
+  .name-subtxt-list{
+    font-size: 12px;
   }
 }
 

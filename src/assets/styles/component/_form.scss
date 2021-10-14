@@ -224,6 +224,8 @@ textarea.inp{ // 구성요소: 텍스트에어리어 기본 스타일
 }
 
 .custom-slct02{ // 구성요소: 커스텀 셀렉트 스타일 2 (백그라운드 투명)
+  min-width: 120px;
+  
   .slct{
     background-position: 100% 50%;
     color: #171820;
@@ -232,6 +234,10 @@ textarea.inp{ // 구성요소: 텍스트에어리어 기본 스타일
     padding-right: 20px;
     border: 0;
     background-color: transparent;
+  }
+
+  .slct.is-focus{
+    box-shadow: none;
   }
 
   .slct-opts-grp{

@@ -1,6 +1,117 @@
 <template>
   <!-- [D] 마이페이지 - 기업정보-포트폴리오 메인 -->
-  <div class="mypage-container">
+  <div class="mypage-container mypage-etpr-portfolio-main-page">
+    <!-- 포트폴리오 메인 - 업데이트 내역 -->
+    <div class="right-fixed">
+      <div class="fixed-con-container">
+        <div class="fixed-con-ttl">
+          업데이트 내역 ({{ '5' }})
+        </div>
+        <div class="fixed-con-contents">
+          <div class="empty-conts">
+            <img
+              src="@/assets/images/icon/icon-empty-update.svg"
+              alt="업데이트 아이콘"
+            >
+            <p class="txt">
+              업데이트 내역이 없습니다.
+            </p>
+          </div>
+          <ul class="fixed-conts-list-wrap">
+            <li class="fixed-con-list">
+              <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
+              <div class="badge green">
+                {{ '팩트체커' }}
+              </div>
+              <div class="date">
+                {{ '2021.00.00 00:00' }}
+              </div>
+              <ul class="info-list">
+                <li class="info">
+                  {{ '기업정보' }}
+                </li>
+                <li class="info">
+                  {{ '재무상태' }}
+                </li>
+              </ul>
+              <a
+                href="#"
+                target="_blank"
+                class="view-link"
+              >+ 상세보기</a>
+            </li>
+            <li class="fixed-con-list">
+              <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
+              <div class="badge yellow">
+                {{ '자사' }}
+              </div>
+              <div class="date">
+                {{ '2021.00.00 00:00' }}
+              </div>
+              <ul class="info-list">
+                <li class="info">
+                  {{ '기업정보' }}
+                </li>
+                <li class="info">
+                  {{ '재무상태' }}
+                </li>
+              </ul>
+              <a
+                href="#"
+                target="_blank"
+                class="view-link"
+              >+ 상세보기</a>
+            </li>
+            <li class="fixed-con-list">
+              <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
+              <div class="badge">
+                {{ '팩트체커' }}
+              </div>
+              <div class="date">
+                {{ '2021.00.00 00:00' }}
+              </div>
+              <ul class="info-list">
+                <li class="info">
+                  {{ '기업정보' }}
+                </li>
+                <li class="info">
+                  {{ '재무상태' }}
+                </li>
+              </ul>
+              <a
+                href="#"
+                target="_blank"
+                class="view-link"
+              >+ 상세보기</a>
+            </li>
+            <li class="fixed-con-list">
+              <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
+              <div class="badge">
+                {{ '자사' }}
+              </div>
+              <div class="date">
+                {{ '2021.00.00 00:00' }}
+              </div>
+              <ul class="info-list">
+                <li class="info">
+                  {{ '기업정보' }}
+                </li>
+                <li class="info">
+                  {{ '재무상태' }}
+                </li>
+              </ul>
+              <a
+                href="#"
+                target="_blank"
+                class="view-link"
+              >+ 상세보기</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 포트폴리오 메인 - 업데이트 내역 -->
+      
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>
@@ -46,6 +157,7 @@
           <div class="btn-grp">
             <btn-solid-grayblue
               class="btn-sm"
+              @click="openModal('addEnterprise')"
             >
               투자기업 추가
             </btn-solid-grayblue>
@@ -84,33 +196,115 @@
         </div>
 
         <!-- 포트폴리오가 있을 때 -->
-        <div class="pflio-grid-grp">
+        <div
+          class="pflio-grid-grp"
+        >
           <div
-            v-for="(item, index) in 10"
+            v-for="(item, index) in 5"
             :key="index"
             class="pflio-grid"
           >
-            <div class="pflio">
-              <div class="avatar-with-name col-avatar-with-name">
-                <avatar />
-                <div class="name-grp">
-                  <span class="name">
-                    주식회사 팩트컴퍼니
-                  </span>
+            <div class="pflio-wrap">
+              <div class="pflio">
+                <i
+                  class="icon icon-i-white pflio-desc-icon"
+                  @click="clickIicon(index)"
+                />
+                <div class="avatar-with-name col-avatar-with-name">
+                  <avatar />
+                  <div class="name-grp">
+                    <span class="name">
+                      주식회사 팩트컴퍼니
+                    </span>
 
-                  <ul class="name-subtxt-grp">
-                    <li class="name-subtxt-list">
-                      기업규모
-                    </li>
-                    <li class="name-subtxt-list">
-                      산업분류
-                    </li>
-                    <li class="name-subtxt-list">
-                      산업분야
-                    </li>
-                  </ul>
+                    <ul class="name-subtxt-grp">
+                      <li class="name-subtxt-list">
+                        기업규모
+                      </li>
+                      <li class="name-subtxt-list">
+                        산업분류
+                      </li>
+                      <li class="name-subtxt-list">
+                        산업분야
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="pflio-toggle-item">
+                  <div class="toggle-item">
+                    <label
+                      class="tg-lbel"
+                      for="open01"
+                    >공개여부</label>
+                    <input
+                      id="open01"
+                      type="checkbox"
+                      class="is-none toggle-switch"
+                    >
+                    <label
+                      for="open01"
+                      class="toggle-onoff"
+                    />
+                  </div>
+                </div>
+                <div class="pflio-ctrl-btns">
+                  <btn-bd-light
+                    class="btn-rounded btn-xsm btn-edit-ctrl"
+                  >
+                    <i class="icon icon-pen" />
+                    <span class="txt">수정</span>
+                  </btn-bd-light>
+              
+
+                  <btn-bd-light
+                    class="btn-rounded btn-xsm btn-edit-ctrl"
+                  >
+                    <i class="icon icon-trash" />
+                    <span class="txt">삭제</span>
+                  </btn-bd-light>
                 </div>
               </div>
+
+              <!-- i 아이콘 누르면 나오는 박스 -->
+              <div
+                v-if="selectedIndex === index"
+                v-on-clickaway="awayPflioDescBox"
+                class="pflio-desc-box"
+              >
+                <span class="ttl">투자정보 (3)</span>
+                <div class="desc">
+                  <dl class="pflio-dlist">
+                    <dt class="dttl">
+                      재원명
+                    </dt>
+                    <dd class="ddt">
+                      <strong class="amount">0,000,000,000,000</strong>
+                      <span class="unit">원</span>
+                    </dd>
+                  </dl>
+                  
+                  <dl class="pflio-dlist">
+                    <dt class="dttl">
+                      재원명이 길어질 때 2줄 이상 넘어갑니다. 재원명이 길어질 때 2줄 이상 넘어갑니다.
+                    </dt>
+                    <dd class="ddt">
+                      <strong class="amount">0,000,000,000,000</strong>
+                      <span class="unit">원</span>
+                    </dd>
+                  </dl>
+                  
+                  <dl class="pflio-dlist">
+                    <dt class="dttl">
+                      재원명이 길어질 때 2줄 이상 넘어갑니다. 재원명이 길어질 때 2줄 이상 넘어갑니다.
+                    </dt>
+                    <dd class="ddt">
+                      <strong class="amount">0,000,000,000,000</strong>
+                      <span class="unit">원</span>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <!-- // i 아이콘 누르면 나오는 박스 -->
             </div>
           </div>
         </div>
@@ -180,6 +374,103 @@
       </div>
     </div>
     <!-- // 마이페이지 컨텐츠 영역 -->
+
+    <modal-dialog>
+      <modal-light-box @click="closeModal" />
+
+      <!-- [modal] 기업 선택하기 -->
+      <modal
+        :class="{'is-show': $store.state.modal.visible && $store.state.modal.type === 'addEnterprise'}"
+        wide
+        ttl="투자기업 추가하기"
+      >
+        <div class="modal-cont md-choice-cont">
+          <!-- 검색어 입력영역 -->
+          <div class="inp-grp inp-sch-grp">
+            <input
+              type="text"
+              class="inp"
+              placeholder="기업명 / 기업 고유 아이디를 검색하세요."
+            >
+            <button
+              type="button"
+              class="inp-del-btn"
+            >
+              <span class="is-voice-only">검색어 지우기</span>
+            </button>
+            <button
+              type="button" 
+              class="inp-sch-btn"
+            >
+              <span class="is-voice-only">검색하기</span>
+            </button>
+          </div>
+          <!-- // 검색어 입력영역 -->
+
+          <!-- 리스트 -->
+          <div class="cnt-txt-grp">
+            <!-- 검색 전 -->
+            <!-- <div class="txt">
+                  <span class="bold">전체</span>
+                </div> -->
+
+            <!-- 검색 후 갯수 표시 -->
+            <div class="txt">
+              <span class="highlight">
+                <u>'검색어'</u>
+              </span>
+              에 대한 전체 검색 결과 <span class="bold">15</span>건
+            </div>
+          </div>
+
+          <!-- 검색결과 있을 때 -->
+          <div class="box-list-grp">
+            <div
+              v-for="(item, index) in 10"
+              :key="index"
+              class="box-choice-list box-list"
+            >
+              <div class="txt-dark-gray">
+                <p class="txt-dark">
+                  주식회사 팩트컴퍼니
+                </p>
+                <span class="txt-gray">김철수 02-000-0000</span>
+              </div>
+        
+              <!-- 체크박스 -->
+              <input
+                :id="`enter${index}`"
+                type="radio"
+                class="is-none check-switch"
+                name="enter"
+              >
+              <label
+                :for="`enter${index}`"
+                class="check-onoff"
+              />
+              <!-- // 체크박스 -->
+            </div>
+          </div>
+
+          <!-- 검색결과 없을 때 -->
+          <empty-contents txt="추가할 기업이 없습니다." />
+          <!-- // 리스트 -->
+        </div>
+
+        <div class="modal-btn-wrap">
+          <btn-bd-light
+            class="btn-fb btn-md btn-cancel"
+            @click="closeModal"
+          >
+            닫기
+          </btn-bd-light>
+          <btn-solid-dark class="btn-md">
+            선택완료
+          </btn-solid-dark>
+        </div>
+      </modal>
+      <!-- // [modal] 기업 선택하기 -->
+    </modal-dialog>
   </div>
 </template>
 
@@ -187,7 +478,18 @@
 export default {
   name: 'IEtprPortfolioMain',
   data() {
-    return{ searchOptions: '이름 순' };
+    return{ 
+      searchOptions: '이름 순',
+      selectedIndex: null,
+    };
+  },
+  methods: {
+    clickIicon(data) {
+      this.selectedIndex = data;
+    },
+    awayPflioDescBox() {
+      this.selectedIndex = null;
+    },
   },
 };
 </script>

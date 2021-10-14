@@ -1,6 +1,16 @@
-/* ========== 마이페이지 > 포트폴리오 ========== */
+/* ========== 마이페이지 > 기업정보 ========== */
 
-/* 마이페이지 > 기업정보 > 포트폴리오 */
+/* 투자자: 마이페이지 > 기업정보 > 포트폴리오 */
+.mypage-etpr-portfolio-main-page{
+  .mypage-cont-wrap{
+    max-width: 947px;
+  }  
+
+  .pagination{
+    margin-bottom: 0;
+  }
+}
+
 .pflio-grid-grp{
   width: 100%;
   display: grid;
@@ -9,6 +19,99 @@
   // column-gap: 17px;
 
   .pflio-grid{
-    border: 1px solid red;
+    
+  }
+}
+
+.pflio-wrap{
+  position: relative;
+
+  .pflio-desc-box{
+    @include custom-scroll(#00EB79);
+    @include absolute($t: -150px);
+
+    width: 100%;
+    height: 155px;
+    overflow: auto;
+    z-index: 2;
+  }
+}
+
+.pflio{
+  @include flex-center;
+  @include flex-col;
+
+  padding: 23px 0;
+  gap: 15px;
+  position: relative;
+
+  &:hover{
+    background-color: #F9F9FB;
+  }
+
+  .pflio-desc-icon{
+    @include absolute($t: 23px, $r: 15px);
+
+    cursor: pointer;
+    z-index: 1;
+
+    &:active{
+      opacity: 0.7;
+    }
+  }
+
+  .pflio-ctrl-btns{
+    @include flex-center;
+    
+    margin-top: 5px;
+    gap: 6px;
+  }
+}
+
+.pflio-desc-box{
+  background-color: white;
+  font-size: 12px;
+  color: #171820;
+  box-shadow: 0 5px 6px rgba(#5C5E70, 0.2);
+
+  .ttl{
+    display: inline-block;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 500;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 15px;
+    padding-bottom: 10px;
+  }
+
+  .desc{
+    padding: 0 15px;
+  }
+}
+
+.pflio-dlist{
+  margin-bottom: 13px;
+
+  .dttl{
+    color: #8E909F;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    display: inline-block;
+    text-align: left;
+  }
+
+  .ddt{
+    text-align: right;
+
+    .amount{
+      font-weight: 500;
+      margin-right: 3px;
+    }
+
+    .unit{
+      font-weight: 400;
+    }
   }
 }
