@@ -1,0 +1,14 @@
+/* ========== 마이페이지 > 포트폴리오 ========== */
+
+/* 마이페이지 > 기업정보 > 포트폴리오 */
+.pflio-grid-grp{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  // row-gap: 50px;
+  // column-gap: 17px;
+
+  .pflio-grid{
+    border: 1px solid red;
+  }
+}

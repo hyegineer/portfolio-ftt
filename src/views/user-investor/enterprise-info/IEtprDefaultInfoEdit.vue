@@ -105,7 +105,11 @@
               <p class="ffieldset-guide">
                 비활성화된 정보 수정은 1:1문의에 요청하세요.
               </p>
-              <div class="cont-wrap">
+              <!-- 개인투자자인 경우 -->
+              <div
+                v-if="testInvestorType === 'idv'"
+                class="cont-wrap"
+              >
                 <div class="flex-row-grp">
                   <div class="lbel-inp-grp">
                     <label class="lbel">기업명</label>
@@ -149,6 +153,114 @@
                 </div>
                 <div class="flex-row-grp">
                   <div class="lbel-inp-grp">
+                    <label class="lbel">기업 고유 아이디</label>
+                    <div class="inp-grp">
+                      <input
+                        type="text"
+                        class="inp"
+                        value="abcd123"
+                        disabled
+                      >
+                    </div>
+                  </div>
+                  <div class="lbel-inp-grp">
+                    <div class="lbel-toggle">
+                      <label class="lbel">운영규모</label>
+                      <div class="toggle-item">
+                        <label
+                          class="tg-lbel"
+                          for="open02"
+                        >공개여부</label>
+                        <input
+                          id="open02"
+                          type="checkbox"
+                          class="is-none toggle-switch"
+                        >
+                        <label
+                          for="open02"
+                          class="toggle-onoff"
+                        />
+                      </div>
+                    </div>
+                    <div class="inp-grp inp-unit-grp">
+                      <input
+                        type="text"
+                        class="inp"
+                        value="0"
+                      >
+                      <span class="inp-unit">원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="lbel-inp-grp">
+                  <div class="lbel-wrap">
+                    <label class="lbel">기업 상세소개</label>
+                    <small class="length-txt">(0/1000)</small>
+                  </div>
+                  <div class="inp-grp">
+                    <textarea
+                      id=""
+                      class="inp"
+                      name=""
+                      cols="30"
+                      rows="10"
+                      placeholder="기업 상세소개를 입력해주세요. 기업 프로필에 노출됩니다."
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- END 개인투자자인 경우 -->
+
+              <!-- 기업투자자인 경우 -->
+              <div
+                v-if="testInvestorType === 'company'"
+                class="cont-wrap"
+              >
+                <div class="flex-row-grp">
+                  <div class="lbel-inp-grp">
+                    <label class="lbel">기업명</label>
+                    <div class="inp-grp">
+                      <input
+                        type="text"
+                        class="inp"
+                        value="주식회사 팩트컴퍼니"
+                        disabled
+                      >
+                    </div>
+                  </div>
+                  <div class="lbel-inp-grp">
+                    <div class="lbel-toggle">
+                      <label class="lbel">대표자명</label>
+                      <div class="toggle-item">
+                        <label
+                          class="tg-lbel"
+                          for="open01"
+                        >공개여부</label>
+                        <input
+                          id="open01"
+                          type="checkbox"
+                          class="is-none toggle-switch"
+                        >
+                        <label
+                          for="open01"
+                          class="toggle-onoff"
+                        />
+                      </div>
+                    </div>
+                    <div class="inp-grp">
+                      <input
+                        type="text"
+                        class="inp"
+                        disabled
+                        value="김철수"
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-row-grp">
+                  <div
+                    class="lbel-inp-grp"
+                  >
                     <label class="lbel">사업자번호</label>
                     <div class="inp-grp">
                       <input
@@ -159,7 +271,9 @@
                       >
                     </div>
                   </div>
-                  <div class="lbel-inp-grp">
+                  <div
+                    class="lbel-inp-grp"
+                  >
                     <label class="lbel">법인번호</label>
                     <div class="inp-grp">
                       <input
@@ -171,7 +285,9 @@
                   </div>
                 </div>
                 <div class="flex-row-grp">
-                  <div class="lbel-inp-grp">
+                  <div
+                    class="lbel-inp-grp"
+                  >
                     <label class="lbel">홈페이지 주소</label>
                     <div class="inp-grp">
                       <input
@@ -194,7 +310,9 @@
                   </div>
                 </div>
                 <div class="flex-row-grp">
-                  <div class="lbel-inp-grp">
+                  <div
+                    class="lbel-inp-grp"
+                  >
                     <label class="lbel">전화번호</label>
                     <div class="inp-grp">
                       <input
@@ -234,7 +352,9 @@
                   </div>
                 </div>
                 <div class="flex-row-grp">
-                  <div class="lbel-inp-grp">
+                  <div
+                    class="lbel-inp-grp"
+                  >
                     <div class="lbel-toggle">
                       <label class="lbel">설립일</label>
                     </div>
@@ -289,6 +409,7 @@
                   </div>
                 </div>
               </div>
+              <!-- END 기업투자자인 경우 -->
             </fieldset>
           </div>
           <div class="article-wrap">
@@ -346,6 +467,25 @@
               팩트시트 관리자 확인용이며, 회원들에게는 공개되지 않습니다.<br>
               인증서는 최초 1회만 등록되며, 등록된 파일 변경은 1:1문의를 통해 가능합니다.
             </p>
+            <!-- 투자자 자격 인증서가 없는 경우 -->
+            <div class="lbel-inp-grp">
+              <label class="lbel">투자자 자격 인증서</label>
+
+              <div class="inp-grp inp-btn-grp">
+                <input
+                  type="text"
+                  class="inp"
+                  placeholder="최초 1회 등록"
+                >
+
+                <btn-bd class="btn-md">
+                  파일첨부
+                </btn-bd>
+              </div>
+            </div>
+            <!-- END 투자자 자격 인증서가 없는 경우 -->
+
+            <!-- 투자자 자격 인증서가 첨부되어 있는 경우(파일명 노출) -->
             <div class="info-grp auth-info-grp">
               <p class="label">
                 투자자 자격 인증서
@@ -355,6 +495,7 @@
                 <span class="empty-txt">등록된 인증서가 없습니다.</span>
               </p>
             </div>
+            <!-- END 투자자 자격 인증서가 첨부되어 있는 경우(파일명 노출) -->
           </div>
           <div class="btn-grp center-btn-grp">
             <btn-bd-light
@@ -380,6 +521,11 @@
 <script>
 export default {
   name: 'IEtprDefaultInfoEdit',
+  data() {
+    return {
+      testInvestorType: 'company', // idv(개인투자자), company(기업투자자)
+    };
+  },
 };
 </script>
 

@@ -124,7 +124,6 @@
     <!-- // 마이페이지 컨텐츠 영역 -->
   </div>
 </template>
-</template>
 
 <script>
 export default {
