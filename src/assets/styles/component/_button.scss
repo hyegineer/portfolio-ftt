@@ -424,6 +424,7 @@
   .txt{
     vertical-align: middle;
     display: inline-block;
+    font-size: 13px;
   }
 }
 
@@ -522,6 +523,12 @@
   background-color: white;
   box-shadow: 0 0 0 1px #DDDEE6;
   color: #8E909F;
+}
+
+.badge-state.color-bd-blue{
+  background-color: white;
+  box-shadow: 0 0 0 1px #3060FF;
+  color: #3060FF;
 }
 
 .badge-state.color-solid-gray{

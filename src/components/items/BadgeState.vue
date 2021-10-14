@@ -56,6 +56,19 @@
         {{ txt }}
       </span>
     </div>
+    
+    <div
+      v-if="txt === '배정완료'"
+      class="badge-state color-bd-blue"
+    >
+      <i
+        class="icon icon-check-blue"
+      />
+
+      <span class="txt">
+        {{ txt }}
+      </span>
+    </div>
   </div>
 </template>
 

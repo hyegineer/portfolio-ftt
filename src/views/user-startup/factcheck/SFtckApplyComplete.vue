@@ -27,12 +27,6 @@
     <!-- 마이페이지 컨텐츠 영역 -->
     <div class="mypage-cont-wrap">
       <div class="mypage-common-card">
-        <div class="cont-hgrp">
-          <p class="ttl">
-            팩트체커 신청
-          </p>
-        </div>
-
         <div class="state-guide-box">
           <img
             src="@/assets/images/img/img-complete-lights.svg"
@@ -45,14 +39,14 @@
           <p class="state-desc">
             승인 결과는, 검토 후 가입하신 이메일로 안내드리겠습니다
           </p>
-        </div>
 
-        <btn-solid
-          position="single-centered"
-          class="btn-lg"
-        >
-          확인
-        </btn-solid>
+          <btn-solid
+            position="single-centered"
+            class="btn-lg"
+          >
+            확인
+          </btn-solid>
+        </div>
       </div>
     </div>
     <!-- // 마이페이지 컨텐츠 영역 -->

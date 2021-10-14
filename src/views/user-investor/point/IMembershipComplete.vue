@@ -41,7 +41,7 @@
           <p class="state-period">
             멤버십 혜택은 <b>2020.00.00까지</b> 이용 가능합니다.
           </p>
-          <p class="state-desc">
+          <p class="state-desc fc-gray">
             마이페이지 > 포인트 > 포인트 충전/내역에서 확인하실 수 있습니다.
           </p>
           
@@ -55,15 +55,15 @@
               </div>
             </div>
           </div>
-        </div>
 
-        <btn-solid
-          position="single-centered"
-          class="btn-lg"
-          @click="$router.push('point-main')"
-        >
-          포인트 충전/내역으로
-        </btn-solid>
+          <btn-solid
+            position="single-centered"
+            class="btn-lg"
+            @click="$router.push('point-main')"
+          >
+            포인트 충전/내역으로
+          </btn-solid>
+        </div>
       </div>
     </div>
     <!-- // 마이페이지 컨텐츠 영역 -->
