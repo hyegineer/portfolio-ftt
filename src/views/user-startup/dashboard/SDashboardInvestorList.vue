@@ -45,6 +45,7 @@
           v-for="(item, index) in 10"
           :key="index"
           class="card-grid"
+          @click="$router.push('dashboard-investor-detail')"
         >
           <!-- FIXME: 채팅아이콘, 최근조회일 추가해야함 -->
           <div class="card">
