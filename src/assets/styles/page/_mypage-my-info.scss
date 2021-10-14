@@ -199,8 +199,7 @@
     }
   }
 
-  .btn-grp {
-    width: 380px;
+  .btn-grp[position="double-centered"] {
     margin: 0 auto;
   }
 }

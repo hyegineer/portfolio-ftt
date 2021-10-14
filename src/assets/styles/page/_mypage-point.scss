@@ -73,29 +73,14 @@
     margin-bottom: 15px;
   }
 
-  .cont{
-    @include custom-scroll($c: #00EB79);
-
-    overflow: auto;
+  .simple-list-grp-box{
     height: 400px;
     padding: 10px 0;
-    border: 1px solid #DDDEE6;
-  }
-
-  .nothing-cont{
-    @include flex-center;
-
-    font-weight: 500;
-    font-size: 15px;
   }
 }
 
 /* 마이페이지 > 포인트 > 포인트 충전하기 */
 .mypage-point-charge-page{
-  .ffieldset-ttl{
-    margin-bottom: 5px;
-  }
-
   .amount-item{
     .amount, .unit{
       font-size: 18px;
@@ -142,7 +127,8 @@
     margin-top: 5px;
   }
 
-  .form-btn-grp{
+  .btn-grp[position="double-centered"]{
+    max-width: 100%;
     margin-top: 20px;
   }
 }

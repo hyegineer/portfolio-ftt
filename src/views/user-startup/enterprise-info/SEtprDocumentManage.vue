@@ -383,7 +383,7 @@
       >
         <div class="modal-cont md-choice-cont">
           <custom-slct 
-            class="custom-slct01 slct-depth01"
+            class="custom-slct01"
             :selected="addFormOptions.selected"
           >
             <template #select>
@@ -454,7 +454,7 @@ export default {
   name: 'SEtprDocumentManage',
   data() {
     return{
-      addFormOptions: {
+      addFormOptions: { // custom-select 동작을 구현하기위한 더미데이터
         list: ['사업자등록증', '등기부등본', '사업계획서', 'IR 자료', '지식재산 관련 등록증', '특허 정보'],
         selected: '', 
       },

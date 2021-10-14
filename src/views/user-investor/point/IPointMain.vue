@@ -50,9 +50,11 @@
             포인트 내역
           </div>
 
-          <!-- 내용이 있을 때 -->
-          <div class="cont">
-            <table class="simple-list-grp">
+          <div class="simple-list-grp-box">
+            <!-- 내용이 있을 때 -->
+            <table
+              class="simple-list-grp" 
+            >
               <tr
                 v-for="(item, index) in 15"
                 :key="index"
@@ -70,22 +72,21 @@
                   <span>이투자</span>
                 </td>
                 
-                <td class="td-date">
+                <td class="td-right">
                   <span class="fc-gray-light">2020.00.00 00:00</span>
                 </td>
               </tr>
             </table>
-          </div>
-          <!-- // 내용이 있을 때 -->
+            <!-- // 내용이 있을 때 -->
 
-          <!-- 내용이 없을 때 -->
-          <div
-            class="cont"
-            style="display: none;"
-          >
-            <span class="fc-gray">내용이 없습니다.</span>
-          </div>
+            <!-- 내용이 없을 때 -->
+            <div
+              class="simple-list-nothing"
+            >
+              <span class="fc-gray">내용이 없습니다.</span>
+            </div>
           <!-- // 내용이 없을 때 -->
+          </div>
         </div>
       </div>
     </div>

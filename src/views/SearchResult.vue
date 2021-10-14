@@ -299,7 +299,7 @@ export default {
   name: 'SearchResult',
   data() {
     return{
-      searchOptions: '팩트체크 요청순',
+      searchOptions: '팩트체크 요청순', // custom-select 동작을 구현하기위한 더미데이터
       testNav: [
         {
           gnb: 'ICT 서비스',
