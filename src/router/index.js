@@ -658,13 +658,34 @@ const routes = [
             component: () => import('~@/views/user-investor/factcheck/IFtckList'),
             // meta: { requiresAuth: true },
           },
-          // FIXME 팩트체크-받은팩트체크 상세
-          // {
-          //   path: 'ftck-detail',
-          //   name: 'IFtckDetail',
-          //   component: () => import('~@/views/user-investor/factcheck/IFtckDetail'),
-          //   // meta: { requiresAuth: true },
-          // },
+          // 팩트체크-요청한 팩트체크 대기중 & 진행중 
+          {
+            path: 'ftck-detail',
+            name: 'IFtckDetail',
+            component: () => import('~@/views/user-investor/factcheck/IFtckDetail'),
+            // meta: { requiresAuth: true },
+          },
+          // 팩트체크-요청한 팩트체크 수정
+          {
+            path: 'ftck-edit',
+            name: 'IFtckEdit',
+            component: () => import('~@/views/user-investor/factcheck/IFtckEdit'),
+            // meta: { requiresAuth: true },
+          },
+          // 팩트체크-요청한 팩트체크 검토중 & 완료
+          {
+            path: 'ftck-checking-detail',
+            name: 'IFtckCheckingDetail',
+            component: () => import('~@/views/user-investor/factcheck/IFtckCheckingDetail'),
+            // meta: { requiresAuth: true },
+          },
+          // 팩트체크-요청한 팩트체크 보완요청
+          {
+            path: 'ftck-checking-edit',
+            name: 'IFtckCheckingEdit',
+            component: () => import('~@/views/user-investor/factcheck/IFtckCheckingEdit'),
+            // meta: { requiresAuth: true },
+          },
           // ===================== 포인트 =====================
           // 포인트 - 포인트 메인
           {
