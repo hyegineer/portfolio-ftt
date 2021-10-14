@@ -352,7 +352,7 @@
           
         <div
           position="double-centered"
-          class="form-btn-grp btn-grp"
+          class="btn-grp"
         >
           <btn-bd-light
             class="btn-lg btn-full color-gray btn-prev"

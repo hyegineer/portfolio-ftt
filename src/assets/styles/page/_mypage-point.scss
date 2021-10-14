@@ -127,7 +127,8 @@
     margin-top: 5px;
   }
 
-  .form-btn-grp{
+  .btn-grp[position="double-centered"]{
+    max-width: 100%;
     margin-top: 20px;
   }
 }
