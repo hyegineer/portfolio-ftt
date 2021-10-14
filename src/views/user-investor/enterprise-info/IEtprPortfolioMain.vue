@@ -1,7 +1,7 @@
 <template>
   <!-- [D] 마이페이지 - 기업정보-포트폴리오 메인 -->
   <div class="mypage-container mypage-etpr-portfolio-main-page">
-    <!-- 포트폴리오 메인 - 업데이트 내역 -->
+    <!-- 마이페이지 - 포트폴리오 - 업데이트 내역 -->
     <div class="right-fixed">
       <div class="fixed-con-container">
         <div class="fixed-con-ttl">
@@ -110,7 +110,7 @@
         </div>
       </div>
     </div>
-    <!-- 포트폴리오 메인 - 업데이트 내역 -->
+    <!-- 마이페이지 - 포트폴리오 - 업데이트 내역 -->
       
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
@@ -464,7 +464,10 @@
           >
             닫기
           </btn-bd-light>
-          <btn-solid-dark class="btn-md">
+          <btn-solid-dark
+            class="btn-md"
+            @click="$router.push('etpr-portfolio-add')"
+          >
             선택완료
           </btn-solid-dark>
         </div>
@@ -479,8 +482,8 @@ export default {
   name: 'IEtprPortfolioMain',
   data() {
     return{ 
-      searchOptions: '이름 순',
-      selectedIndex: null,
+      searchOptions: '이름 순', // custom-select 동작을 구현하기위한 더미데이터
+      selectedIndex: null, // i 아이콘을 눌렀을 시 재원 정보 보이게 처리하는 데이터
     };
   },
   methods: {

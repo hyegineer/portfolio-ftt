@@ -457,6 +457,19 @@
   max-width: 380px;
 }
 
+.btn-x{
+  border-radius: 5px;
+  padding: 2.5px 5px;
+
+  &:hover{
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+
+  &:active{
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+}
+
 /* 뱃지 스타일 */
 .badge-rounded{
   background-color: #DFFFE8;

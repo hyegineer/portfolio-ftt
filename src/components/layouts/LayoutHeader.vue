@@ -775,7 +775,7 @@ export default {
       testMembership: false,
       viewSearchbar: false,
       viewSidebar: false,
-      hdSearchOptions: {
+      hdSearchOptions: { // 상단 검색바에 custom-select 동작을 구현하기위한 더미데이터
         depth01: null,
         depth02: null,
         keyword: '',

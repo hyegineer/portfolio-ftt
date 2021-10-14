@@ -2355,7 +2355,7 @@ export default {
           slideShadows: false,
         },
       },
-      searchOptions: null,
+      searchOptions: null, // custom-select 동작을 구현하기위한 더미데이터
     };
   },
   created() {

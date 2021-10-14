@@ -115,3 +115,162 @@
     }
   }
 }
+
+/* 투자자: 마이페이지 > 기업정보 > 포트폴리오 추가 */
+.mypage-etpr-portfolio-add-page{
+  .mypage-cont-wrap{
+    max-width: 947px;
+  }
+
+  .invest-amount-item{
+    @include flex{
+      @include flex-op(center, flex-end);
+    }
+
+    line-height: 1.6;
+    
+    .lbel{
+      font-size: 11px;
+      color: #B8BAC7;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+  
+    .amount{
+      min-width: 120px;
+      text-align: right;
+    }
+  }
+
+  .form-btn-grp{
+    margin-top: 50px
+  }
+}
+
+.pflio-hd-info-box{
+  @include flex{
+    @include flex-op(center, flex-start);
+  }
+
+  border: 1px solid #5C5E70;
+  padding: 22px 17px;
+  color: #171820;
+  margin-bottom: 30px;
+
+  .ttl{
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .cont{
+    @include flex-center;
+
+    gap: 14px;
+    margin-left: auto;
+  }
+
+  .pflio-hd-cont-name{
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
+
+.pflio-add-form-grp{
+  @include flex{
+    @include flex-op(flex-end, stretch);
+  };
+  
+  gap: 10px;
+  background-color: #F9F9FB;
+  padding: 26px 20px 20px;
+  margin: 10px 0;
+
+  & > .lbel-inp-grp{
+    flex: 1 1 auto;
+    margin: 0;
+
+    & > .lbel ~ *{
+      margin-top: 2.5px;
+    }
+  }
+
+  .inp-grp{
+    margin-bottom: 0;
+  }
+
+  .inp-grp-sm{
+    max-width: 133px;
+  }
+
+  .inp-grp-md{
+    max-width: 170px;
+  }
+
+  .inp-unit-grp .inp{
+    text-align: left;
+  }
+
+  .inp-icon{
+    padding: 14px 15px;
+  }
+
+  .add-btn{
+    flex: 1 1 auto;
+    max-width: 100px;
+  }
+
+  .custom-slct{
+    width: 100%;
+  }
+}
+
+.pflio-add-list-grp-box{
+  height: 294px;
+  
+  .simple-list{
+    font-size: 13px;
+    padding: 9px 10px;
+
+    .td-date{
+      max-width: 100px;
+      min-width: 100px;
+    }
+  
+    .td-cite{
+      max-width: 140px;
+  
+      span{
+        @include ellipse(1, 16px);
+      }
+    }
+  
+    .td-invest-amount-item{
+      flex: 1 0 auto;
+    }
+
+    .btn-x{
+      margin-top: -20px;
+    }
+  }
+}
+
+.pflio-add-total-price{
+  width: 100%;
+  margin: 25px 0;
+  font-size: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .invest-amount-item{
+    .lbel{
+      font-size: 13px;
+      color: #8E909F;
+    }
+  
+    .amount{
+      font-weight: 500;
+    }
+  }
+}
