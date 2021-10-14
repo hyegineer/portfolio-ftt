@@ -145,6 +145,7 @@
         </div>
       </div>
         
+      <!-- 받은 팩트체크가 있을 때 -->
       <table class="ftck-list-grp board-list-grp">
         <!-- [D] 비공개면 is-secret 클래스 추가 -->
         <tr

@@ -428,3 +428,117 @@
 }
 
 /* ========== END section-subscribe ========== */
+
+
+/* ========== section-ftck-visual ========== */
+.section-ftck-visual{
+  @include flex-center;
+  @include flex-col;
+
+  width: 100%;
+  padding: 45px 20px;
+  background-color: #191F36;
+  color: white;
+
+  .name-grp{
+    @include flex-center;
+    @include flex-col;
+
+    position: relative;
+    gap: 7px;
+    padding-top: 35px;
+    text-align: center;
+    line-height: 1.4;
+    max-width: 200px;
+
+    .img-word{
+      @include translate($l: 50%);
+
+      top: 0;
+    }
+
+    .sub-name{
+      @include font-op($w: 400){
+        font-size: em(18);
+      }
+    }
+
+    .name{
+      @include font-op($w: 600){
+        font-size: em(26);
+      }
+    }
+
+    .point{
+      color: #53FF81;
+    }
+  }
+}
+
+.ftck-cnt-list-grp{
+  margin-top: 30px;
+  padding-bottom: 15px;
+}
+
+.ftck-cnt-list{
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 23px;
+
+  .lbel{
+    @include font-op($w: 400, $c: #b8bac7){
+      font-size: 15px;
+    }
+
+    margin-bottom: 10px;
+  }
+
+  .amount-item{
+    color: white;
+    font-size: 15px;
+
+    .amount{
+      @include font-op($w: 500){
+        font-size: 20px;
+      }
+    }
+
+    .unit{
+      @include font-op($w: 400);
+    }
+  }
+}
+/* ========== END section-ftck-visual ========== */
+
+/* ========== section-ftck-list ========== */
+.section-ftck-list{
+  width: 100%;
+  padding: 85px 0;
+  background-color: #F9F9FB;
+}
+
+.ftck-main-article{
+  .article-cont-hgrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+
+    .ttl {
+      font-size: em(22);
+      font-weight: 500;
+      color: #171820;
+      text-align: left;
+    }
+
+    .btn-all-view {
+      @include input-reset;
+      cursor: pointer;
+      font-size: em(15);
+      font-weight: 500;
+      color: #171820;
+    }
+  }
+}
+/* ========== END section-ftck-list ========== */

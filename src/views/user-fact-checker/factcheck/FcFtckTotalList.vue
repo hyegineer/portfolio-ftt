@@ -115,6 +115,7 @@
         </div>
       </div>
         
+      <!-- 전체 팩트체크가 있을 때 -->
       <table class="ftck-list-grp board-list-grp">
         <!-- [D] 비공개면 is-secret 클래스 추가 -->
         <tr
@@ -192,13 +193,13 @@
           </td>
         </tr>
       </table>
-      <!-- // 받은 팩트체크가 있을 때 -->
+      <!-- // 전체 팩트체크가 있을 때 -->
 
       <!-- 팩트체크가 없을 때 -->
       <div class="ftck-list-grp">
         <empty-contents txt="전체 팩트체크가 없습니다." />
       </div>
-      <!-- // 받은 팩트체크가 없을 때 -->
+      <!-- // 팩트체크가 없을 때 -->
 
       <!-- 페이지네이션 -->
       <div class="pagination">
