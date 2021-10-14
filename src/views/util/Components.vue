@@ -2159,6 +2159,134 @@
             </p>
           </section>
         </div>
+
+        <h2>18-3. 안내사항 박스</h2>
+        <article class="guide-box">
+          <div class="guide-box-cont">
+            <h6 class="lbel">
+              안내사항
+            </h6>
+            <p class="txt">
+              우측에 버튼이 하나 있을 경우
+            </p>
+          </div>
+
+          <div class="btn-grp">
+            <btn-solid-grayblue
+              class="btn-sm"
+            >
+              버튼 하나
+            </btn-solid-grayblue>
+          </div>
+        </article>
+        <article class="guide-box">
+          <div class="guide-box-cont">
+            <h6 class="lbel">
+              안내사항
+            </h6>
+            <p class="txt">
+              우측에 버튼이 하나 있을 경우
+            </p>
+          </div>
+
+          <div class="btn-grp">
+            <btn-bd-light
+              class="btn-sm"
+            >
+              하얀버튼
+            </btn-bd-light>
+          </div>
+        </article>
+        <article class="guide-box">
+          <div class="guide-box-cont">
+            <h6 class="lbel">
+              안내사항
+            </h6>
+            <p class="txt">
+              우측에 버튼이 두개 있을 경우
+            </p>
+          </div>
+
+          <div class="btn-grp">
+            <btn-solid-grayblue
+              class="btn-sm"
+            >
+              남색버튼
+            </btn-solid-grayblue>
+            <btn-bd-light
+              class="btn-sm"
+            >
+              하얀버튼
+            </btn-bd-light>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h1 class="cp-ttl">
+        19. 갯수 & 우측 셀렉트
+      </h1>
+
+      <div class="section-cont">
+        <div class="board-list-grp-ttl">
+          <p class="txt">
+            총 <span class="bold">15</span>개
+          </p>
+        
+          <!-- 검색어만 입력한 검색결과일 때만 보임 -->
+          <div class="txt">
+            <span class="highlight">
+              <u>'검색어'</u>
+            </span>
+            에 대한 검색결과 <span class="bold">15</span>개
+          </div>
+          <!-- // 검색어만 입력한 검색결과일 때만 보임 -->
+
+          <div class="txt-right">
+            <custom-slct
+              class="custom-slct02"
+              :selected="searchOptions"
+            >
+              <!-- 클래스명 부가설명: page-custom-slct <- 페이지별로 넓이조정 필요할 때 요거 활용하면 좋을 듯.. -->
+              <template #select>
+                {{ searchOptions || '전체' }}
+              </template>
+
+              <template #options>
+                <custom-slct-opt 
+                  @click="searchOptions = '대기중'"
+                >
+                  대기중
+                </custom-slct-opt>
+            
+                <custom-slct-opt 
+                  @click="searchOptions = '진행중'"
+                >
+                  진행중
+                </custom-slct-opt>
+            
+                <custom-slct-opt 
+                  @click="searchOptions = '내용 검토중'"
+                >
+                  내용 검토중
+                </custom-slct-opt>
+            
+                <custom-slct-opt 
+                  @click="searchOptions = '완료'"
+                >
+                  완료
+                </custom-slct-opt>
+            
+                <custom-slct-opt 
+                  @click="searchOptions = '이의신청'"
+                >
+                  이의신청
+                </custom-slct-opt>
+              </template>
+            </custom-slct>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -2227,6 +2355,7 @@ export default {
           slideShadows: false,
         },
       },
+      searchOptions: null,
     };
   },
   created() {
