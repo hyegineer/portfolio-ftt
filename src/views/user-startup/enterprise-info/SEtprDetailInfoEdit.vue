@@ -109,15 +109,15 @@
                     <div class="toggle-item">
                       <label
                         class="tg-lbel"
-                        for="open01"
+                        for="open02"
                       >공개여부</label>
                       <input
-                        id="open01"
+                        id="open02"
                         type="checkbox"
                         class="is-none toggle-switch"
                       >
                       <label
-                        for="open01"
+                        for="open02"
                         class="toggle-onoff"
                       />
                     </div>
@@ -142,15 +142,15 @@
                     <div class="toggle-item">
                       <label
                         class="tg-lbel"
-                        for="open01"
+                        for="open03"
                       >공개여부</label>
                       <input
-                        id="open01"
+                        id="open03"
                         type="checkbox"
                         class="is-none toggle-switch"
                       >
                       <label
-                        for="open01"
+                        for="open03"
                         class="toggle-onoff"
                       />
                     </div>
@@ -262,15 +262,15 @@
             <div class="toggle-item">
               <label
                 class="tg-lbel"
-                for="open01"
+                for="open04"
               >공개여부</label>
               <input
-                id="open01"
+                id="open04"
                 type="checkbox"
                 class="is-none toggle-switch"
               >
               <label
-                for="open01"
+                for="open04"
                 class="toggle-onoff"
               />
             </div>
@@ -345,15 +345,15 @@
             <div class="toggle-item">
               <label
                 class="tg-lbel"
-                for="open01"
+                for="open05"
               >공개여부</label>
               <input
-                id="open01"
+                id="open05"
                 type="checkbox"
                 class="is-none toggle-switch"
               >
               <label
-                for="open01"
+                for="open05"
                 class="toggle-onoff"
               />
             </div>
@@ -590,15 +590,15 @@
             <div class="toggle-item">
               <label
                 class="tg-lbel"
-                for="open01"
+                for="open06"
               >공개여부</label>
               <input
-                id="open01"
+                id="open06"
                 type="checkbox"
                 class="is-none toggle-switch"
               >
               <label
-                for="open01"
+                for="open06"
                 class="toggle-onoff"
               />
             </div>
