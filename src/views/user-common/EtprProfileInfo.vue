@@ -478,42 +478,44 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
                 <!-- TODO: 투자자가 들어오면 보이는 영역 -->
-                <div class="check-wrap">
-                  <input
-                    id="check-box"
-                    type="checkbox"
-                    class="is-none check-switch"
-                  >
-                  <label
-                    for="check-box"
-                    class="check-onoff"
-                  />
-                </div>
-                <!-- END 투자자가 들어오면 보이는 영역 -->
-                <span>기업 기본정보</span>
-                <div class="hover-desc">
-                  <span
-                    class="hover-overlay mb-show"
-                    :class="{'is-show': mbMdOptions2.visible}"
-                    @click="mbMdClose('question')"
-                  />
-
-                  <div
-                    class="badge-qus"
-                    @click="mbMdOpen('question')"
-                  >
-                    <span class="is-voice-only">도움말</span>
+                <div class="flex-ttl">
+                  <div class="check-wrap">
+                    <input
+                      id="check-box"
+                      type="checkbox"
+                      class="is-none check-switch"
+                    >
+                    <label
+                      for="check-box"
+                      class="check-onoff"
+                    />
                   </div>
-
-                  <div
-                    class="hover-desc-box"
-                    :class="{'is-show' : mbMdOptions2.visible}"
-                  >
-                    <span class="ttl">토글 제목</span>
-
-                    <p class="desc">
-                      해당 토글 내용
-                    </p>
+                  <!-- END 투자자가 들어오면 보이는 영역 -->
+                  <span>기업 기본정보</span>
+                  <div class="hover-desc">
+                    <span
+                      class="hover-overlay mb-show"
+                      :class="{'is-show': mbMdOptions2.visible}"
+                      @click="mbMdClose('question')"
+                    />
+  
+                    <div
+                      class="badge-qus"
+                      @click="mbMdOpen('question')"
+                    >
+                      <span class="is-voice-only">도움말</span>
+                    </div>
+  
+                    <div
+                      class="hover-desc-box"
+                      :class="{'is-show' : mbMdOptions2.visible}"
+                    >
+                      <span class="ttl">토글 제목</span>
+  
+                      <p class="desc">
+                        해당 토글 내용
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
@@ -628,42 +630,44 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
                 <!-- TODO: 투자자가 들어오면 보이는 영역 -->
-                <div class="check-wrap">
-                  <input
-                    id="check-box"
-                    type="checkbox"
-                    class="is-none check-switch"
-                  >
-                  <label
-                    for="check-box"
-                    class="check-onoff"
-                  />
-                </div>
-                <!-- END 투자자가 들어오면 보이는 영역 -->
-                <span>기업가치</span>
-                <div class="hover-desc">
-                  <span
-                    class="hover-overlay mb-show"
-                    :class="{'is-show': mbMdOptions2.visible}"
-                    @click="mbMdClose('question')"
-                  />
-
-                  <div
-                    class="badge-qus"
-                    @click="mbMdOpen('question')"
-                  >
-                    <span class="is-voice-only">도움말</span>
+                <div class="flex-ttl">
+                  <div class="check-wrap">
+                    <input
+                      id="check-box"
+                      type="checkbox"
+                      class="is-none check-switch"
+                    >
+                    <label
+                      for="check-box"
+                      class="check-onoff"
+                    />
                   </div>
-
-                  <div
-                    class="hover-desc-box"
-                    :class="{'is-show' : mbMdOptions2.visible}"
-                  >
-                    <span class="ttl">토글 제목</span>
-
-                    <p class="desc">
-                      해당 토글 내용
-                    </p>
+                  <!-- END 투자자가 들어오면 보이는 영역 -->
+                  <span>기업가치</span>
+                  <div class="hover-desc">
+                    <span
+                      class="hover-overlay mb-show"
+                      :class="{'is-show': mbMdOptions2.visible}"
+                      @click="mbMdClose('question')"
+                    />
+  
+                    <div
+                      class="badge-qus"
+                      @click="mbMdOpen('question')"
+                    >
+                      <span class="is-voice-only">도움말</span>
+                    </div>
+  
+                    <div
+                      class="hover-desc-box"
+                      :class="{'is-show' : mbMdOptions2.visible}"
+                    >
+                      <span class="ttl">토글 제목</span>
+  
+                      <p class="desc">
+                        해당 토글 내용
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
@@ -707,42 +711,44 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
                 <!-- TODO: 투자자가 들어오면 보이는 영역 -->
-                <div class="check-wrap">
-                  <input
-                    id="check-box"
-                    type="checkbox"
-                    class="is-none check-switch"
-                  >
-                  <label
-                    for="check-box"
-                    class="check-onoff"
-                  />
-                </div>
-                <!-- END 투자자가 들어오면 보이는 영역 -->
-                <span>규모</span>
-                <div class="hover-desc">
-                  <span
-                    class="hover-overlay mb-show"
-                    :class="{'is-show': mbMdOptions2.visible}"
-                    @click="mbMdClose('question')"
-                  />
-
-                  <div
-                    class="badge-qus"
-                    @click="mbMdOpen('question')"
-                  >
-                    <span class="is-voice-only">도움말</span>
+                <div class="flex-ttl">
+                  <div class="check-wrap">
+                    <input
+                      id="check-box"
+                      type="checkbox"
+                      class="is-none check-switch"
+                    >
+                    <label
+                      for="check-box"
+                      class="check-onoff"
+                    />
                   </div>
-
-                  <div
-                    class="hover-desc-box"
-                    :class="{'is-show' : mbMdOptions2.visible}"
-                  >
-                    <span class="ttl">토글 제목</span>
-
-                    <p class="desc">
-                      해당 토글 내용
-                    </p>
+                  <!-- END 투자자가 들어오면 보이는 영역 -->
+                  <span>규모</span>
+                  <div class="hover-desc">
+                    <span
+                      class="hover-overlay mb-show"
+                      :class="{'is-show': mbMdOptions2.visible}"
+                      @click="mbMdClose('question')"
+                    />
+  
+                    <div
+                      class="badge-qus"
+                      @click="mbMdOpen('question')"
+                    >
+                      <span class="is-voice-only">도움말</span>
+                    </div>
+  
+                    <div
+                      class="hover-desc-box"
+                      :class="{'is-show' : mbMdOptions2.visible}"
+                    >
+                      <span class="ttl">토글 제목</span>
+  
+                      <p class="desc">
+                        해당 토글 내용
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
@@ -847,42 +853,44 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
                 <!-- TODO: 투자자가 들어오면 보이는 영역 -->
-                <div class="check-wrap">
-                  <input
-                    id="check-box"
-                    type="checkbox"
-                    class="is-none check-switch"
-                  >
-                  <label
-                    for="check-box"
-                    class="check-onoff"
-                  />
-                </div>
-                <!-- END 투자자가 들어오면 보이는 영역 -->
-                <span>주주정보</span>
-                <div class="hover-desc">
-                  <span
-                    class="hover-overlay mb-show"
-                    :class="{'is-show': mbMdOptions2.visible}"
-                    @click="mbMdClose('question')"
-                  />
-
-                  <div
-                    class="badge-qus"
-                    @click="mbMdOpen('question')"
-                  >
-                    <span class="is-voice-only">도움말</span>
+                <div class="flex-ttl">
+                  <div class="check-wrap">
+                    <input
+                      id="check-box"
+                      type="checkbox"
+                      class="is-none check-switch"
+                    >
+                    <label
+                      for="check-box"
+                      class="check-onoff"
+                    />
                   </div>
-
-                  <div
-                    class="hover-desc-box"
-                    :class="{'is-show' : mbMdOptions2.visible}"
-                  >
-                    <span class="ttl">토글 제목</span>
-
-                    <p class="desc">
-                      해당 토글 내용
-                    </p>
+                  <!-- END 투자자가 들어오면 보이는 영역 -->
+                  <span>주주정보</span>
+                  <div class="hover-desc">
+                    <span
+                      class="hover-overlay mb-show"
+                      :class="{'is-show': mbMdOptions2.visible}"
+                      @click="mbMdClose('question')"
+                    />
+  
+                    <div
+                      class="badge-qus"
+                      @click="mbMdOpen('question')"
+                    >
+                      <span class="is-voice-only">도움말</span>
+                    </div>
+  
+                    <div
+                      class="hover-desc-box"
+                      :class="{'is-show' : mbMdOptions2.visible}"
+                    >
+                      <span class="ttl">토글 제목</span>
+  
+                      <p class="desc">
+                        해당 토글 내용
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
@@ -918,43 +926,45 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
           <div class="flexable-container pdt-60">
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
-                <!-- TODO: 투자자가 들어오면 보이는 영역 -->
-                <div class="check-wrap">
-                  <input
-                    id="check-box"
-                    type="checkbox"
-                    class="is-none check-switch"
-                  >
-                  <label
-                    for="check-box"
-                    class="check-onoff"
-                  />
-                </div>
-                <!-- END 투자자가 들어오면 보이는 영역 -->
-                <span>재무상태</span>
-                <div class="hover-desc">
-                  <span
-                    class="hover-overlay mb-show"
-                    :class="{'is-show': mbMdOptions2.visible}"
-                    @click="mbMdClose('question')"
-                  />
-
-                  <div
-                    class="badge-qus"
-                    @click="mbMdOpen('question')"
-                  >
-                    <span class="is-voice-only">도움말</span>
+                <div class="flex-ttl">
+                  <!-- TODO: 투자자가 들어오면 보이는 영역 -->
+                  <div class="check-wrap">
+                    <input
+                      id="check-box"
+                      type="checkbox"
+                      class="is-none check-switch"
+                    >
+                    <label
+                      for="check-box"
+                      class="check-onoff"
+                    />
                   </div>
-
-                  <div
-                    class="hover-desc-box"
-                    :class="{'is-show' : mbMdOptions2.visible}"
-                  >
-                    <span class="ttl">토글 제목</span>
-
-                    <p class="desc">
-                      해당 토글 내용
-                    </p>
+                  <!-- END 투자자가 들어오면 보이는 영역 -->
+                  <span>재무상태</span>
+                  <div class="hover-desc">
+                    <span
+                      class="hover-overlay mb-show"
+                      :class="{'is-show': mbMdOptions2.visible}"
+                      @click="mbMdClose('question')"
+                    />
+  
+                    <div
+                      class="badge-qus"
+                      @click="mbMdOpen('question')"
+                    >
+                      <span class="is-voice-only">도움말</span>
+                    </div>
+  
+                    <div
+                      class="hover-desc-box"
+                      :class="{'is-show' : mbMdOptions2.visible}"
+                    >
+                      <span class="ttl">토글 제목</span>
+  
+                      <p class="desc">
+                        해당 토글 내용
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
@@ -988,43 +998,45 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
             </div>
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
-                <!-- TODO: 투자자가 들어오면 보이는 영역 -->
-                <div class="check-wrap">
-                  <input
-                    id="check-box"
-                    type="checkbox"
-                    class="is-none check-switch"
-                  >
-                  <label
-                    for="check-box"
-                    class="check-onoff"
-                  />
-                </div>
-                <!-- END 투자자가 들어오면 보이는 영역 -->
-                <span>손익계산서</span>
-                <div class="hover-desc">
-                  <span
-                    class="hover-overlay mb-show"
-                    :class="{'is-show': mbMdOptions2.visible}"
-                    @click="mbMdClose('question')"
-                  />
-
-                  <div
-                    class="badge-qus"
-                    @click="mbMdOpen('question')"
-                  >
-                    <span class="is-voice-only">도움말</span>
+                <div class="flex-ttl">
+                  <!-- TODO: 투자자가 들어오면 보이는 영역 -->
+                  <div class="check-wrap">
+                    <input
+                      id="check-box"
+                      type="checkbox"
+                      class="is-none check-switch"
+                    >
+                    <label
+                      for="check-box"
+                      class="check-onoff"
+                    />
                   </div>
-
-                  <div
-                    class="hover-desc-box"
-                    :class="{'is-show' : mbMdOptions2.visible}"
-                  >
-                    <span class="ttl">토글 제목</span>
-
-                    <p class="desc">
-                      해당 토글 내용
-                    </p>
+                  <!-- END 투자자가 들어오면 보이는 영역 -->
+                  <span>손익계산서</span>
+                  <div class="hover-desc">
+                    <span
+                      class="hover-overlay mb-show"
+                      :class="{'is-show': mbMdOptions2.visible}"
+                      @click="mbMdClose('question')"
+                    />
+  
+                    <div
+                      class="badge-qus"
+                      @click="mbMdOpen('question')"
+                    >
+                      <span class="is-voice-only">도움말</span>
+                    </div>
+  
+                    <div
+                      class="hover-desc-box"
+                      :class="{'is-show' : mbMdOptions2.visible}"
+                    >
+                      <span class="ttl">토글 제목</span>
+  
+                      <p class="desc">
+                        해당 토글 내용
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
@@ -1061,42 +1073,44 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
                 <!-- TODO: 투자자가 들어오면 보이는 영역 -->
-                <div class="check-wrap">
-                  <input
-                    id="check-box"
-                    type="checkbox"
-                    class="is-none check-switch"
-                  >
-                  <label
-                    for="check-box"
-                    class="check-onoff"
-                  />
-                </div>
-                <!-- END 투자자가 들어오면 보이는 영역 -->
-                <span>매출 추이</span>
-                <div class="hover-desc">
-                  <span
-                    class="hover-overlay mb-show"
-                    :class="{'is-show': mbMdOptions2.visible}"
-                    @click="mbMdClose('question')"
-                  />
-
-                  <div
-                    class="badge-qus"
-                    @click="mbMdOpen('question')"
-                  >
-                    <span class="is-voice-only">도움말</span>
+                <div class="flex-ttl">
+                  <div class="check-wrap">
+                    <input
+                      id="check-box"
+                      type="checkbox"
+                      class="is-none check-switch"
+                    >
+                    <label
+                      for="check-box"
+                      class="check-onoff"
+                    />
                   </div>
-
-                  <div
-                    class="hover-desc-box"
-                    :class="{'is-show' : mbMdOptions2.visible}"
-                  >
-                    <span class="ttl">토글 제목</span>
-
-                    <p class="desc">
-                      해당 토글 내용
-                    </p>
+                  <!-- END 투자자가 들어오면 보이는 영역 -->
+                  <span>매출 추이</span>
+                  <div class="hover-desc">
+                    <span
+                      class="hover-overlay mb-show"
+                      :class="{'is-show': mbMdOptions2.visible}"
+                      @click="mbMdClose('question')"
+                    />
+  
+                    <div
+                      class="badge-qus"
+                      @click="mbMdOpen('question')"
+                    >
+                      <span class="is-voice-only">도움말</span>
+                    </div>
+  
+                    <div
+                      class="hover-desc-box"
+                      :class="{'is-show' : mbMdOptions2.visible}"
+                    >
+                      <span class="ttl">토글 제목</span>
+  
+                      <p class="desc">
+                        해당 토글 내용
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
@@ -1130,43 +1144,45 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
             </div>
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
-                <!-- TODO: 투자자가 들어오면 보이는 영역 -->
-                <div class="check-wrap">
-                  <input
-                    id="check-box"
-                    type="checkbox"
-                    class="is-none check-switch"
-                  >
-                  <label
-                    for="check-box"
-                    class="check-onoff"
-                  />
-                </div>
-                <!-- END 투자자가 들어오면 보이는 영역 -->
-                <span>영업이익 추이</span>
-                <div class="hover-desc">
-                  <span
-                    class="hover-overlay mb-show"
-                    :class="{'is-show': mbMdOptions2.visible}"
-                    @click="mbMdClose('question')"
-                  />
-
-                  <div
-                    class="badge-qus"
-                    @click="mbMdOpen('question')"
-                  >
-                    <span class="is-voice-only">도움말</span>
+                <div class="flex-ttl">
+                  <!-- TODO: 투자자가 들어오면 보이는 영역 -->
+                  <div class="check-wrap">
+                    <input
+                      id="check-box"
+                      type="checkbox"
+                      class="is-none check-switch"
+                    >
+                    <label
+                      for="check-box"
+                      class="check-onoff"
+                    />
                   </div>
-
-                  <div
-                    class="hover-desc-box"
-                    :class="{'is-show' : mbMdOptions2.visible}"
-                  >
-                    <span class="ttl">토글 제목</span>
-
-                    <p class="desc">
-                      해당 토글 내용
-                    </p>
+                  <!-- END 투자자가 들어오면 보이는 영역 -->
+                  <span>영업이익 추이</span>
+                  <div class="hover-desc">
+                    <span
+                      class="hover-overlay mb-show"
+                      :class="{'is-show': mbMdOptions2.visible}"
+                      @click="mbMdClose('question')"
+                    />
+  
+                    <div
+                      class="badge-qus"
+                      @click="mbMdOpen('question')"
+                    >
+                      <span class="is-voice-only">도움말</span>
+                    </div>
+  
+                    <div
+                      class="hover-desc-box"
+                      :class="{'is-show' : mbMdOptions2.visible}"
+                    >
+                      <span class="ttl">토글 제목</span>
+  
+                      <p class="desc">
+                        해당 토글 내용
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
@@ -1200,43 +1216,45 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
             </div>
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
-                <!-- TODO: 투자자가 들어오면 보이는 영역 -->
-                <div class="check-wrap">
-                  <input
-                    id="check-box"
-                    type="checkbox"
-                    class="is-none check-switch"
-                  >
-                  <label
-                    for="check-box"
-                    class="check-onoff"
-                  />
-                </div>
-                <!-- END 투자자가 들어오면 보이는 영역 -->
-                <span>당기순이익 추이</span>
-                <div class="hover-desc">
-                  <span
-                    class="hover-overlay mb-show"
-                    :class="{'is-show': mbMdOptions2.visible}"
-                    @click="mbMdClose('question')"
-                  />
-
-                  <div
-                    class="badge-qus"
-                    @click="mbMdOpen('question')"
-                  >
-                    <span class="is-voice-only">도움말</span>
+                <div class="flex-ttl">
+                  <!-- TODO: 투자자가 들어오면 보이는 영역 -->
+                  <div class="check-wrap">
+                    <input
+                      id="check-box"
+                      type="checkbox"
+                      class="is-none check-switch"
+                    >
+                    <label
+                      for="check-box"
+                      class="check-onoff"
+                    />
                   </div>
-
-                  <div
-                    class="hover-desc-box"
-                    :class="{'is-show' : mbMdOptions2.visible}"
-                  >
-                    <span class="ttl">토글 제목</span>
-
-                    <p class="desc">
-                      해당 토글 내용
-                    </p>
+                  <!-- END 투자자가 들어오면 보이는 영역 -->
+                  <span>당기순이익 추이</span>
+                  <div class="hover-desc">
+                    <span
+                      class="hover-overlay mb-show"
+                      :class="{'is-show': mbMdOptions2.visible}"
+                      @click="mbMdClose('question')"
+                    />
+  
+                    <div
+                      class="badge-qus"
+                      @click="mbMdOpen('question')"
+                    >
+                      <span class="is-voice-only">도움말</span>
+                    </div>
+  
+                    <div
+                      class="hover-desc-box"
+                      :class="{'is-show' : mbMdOptions2.visible}"
+                    >
+                      <span class="ttl">토글 제목</span>
+  
+                      <p class="desc">
+                        해당 토글 내용
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
