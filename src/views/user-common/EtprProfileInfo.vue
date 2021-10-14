@@ -170,28 +170,45 @@
                     {{ '내용이 없습니다.기업 한줄 소개 텍스트 자리입니다. 기업 한줄 소개 텍스트 자리입니다.' }}
                   </p>
     
-                  <div class="edit-date">
-                    {{ '2021.10.11 12:13' }} 기업정보가 업데이트 되었습니다.
+                  <div class="bottom-data">
+                    <div class="edit-date">
+                      {{ '2021.10.11 12:13' }} 기업정보가 업데이트 되었습니다.
+                    </div>
+
+                    <btn-solid-blue
+                      class="btn-xlg btn-full"
+                      @click="window.alert('관심기업 등록을 하셨습니다.')"
+                    >
+                      + 관심기업 등록
+                    </btn-solid-blue>
+
+                    <btn-bd-blue
+                      class="btn-xlg btn-full"
+                      @click="window.alert('관심기업 등록을 취소하셨습니다.')"
+                    >
+                      <img
+                        src="@/assets/images/icon/icon-check-bl.svg"
+                        alt="체크"
+                        class="check-icon"
+                      > 관심기업 등록 완료
+                    </btn-bd-blue>
+
+                    <div class="btn-grp">
+                      <btn-bd
+                        class="btn-xlg btn-full"
+                        @click="window.alert('우리 기업 투자자 정보 버튼을 클릭하셨습니다.')"
+                      >
+                        우리 기업 투자자 정보
+                      </btn-bd>
+                      <btn-bd
+                        class="btn-xlg btn-full"
+                        @click="window.alert('기업정보 업데이트 버튼을 클릭하셨습니다.')"
+                      >
+                        기업정보 업데이트
+                      </btn-bd>
+                    </div>
                   </div>
                 </div>
-  
-                <btn-solid-blue
-                  class="btn-xlg btn-full"
-                  @click="window.alert('관심기업 등록을 하셨습니다.')"
-                >
-                  + 관심기업 등록
-                </btn-solid-blue>
-  
-                <btn-bd-blue
-                  class="btn-xlg btn-full"
-                  @click="window.alert('관심기업 등록을 취소하셨습니다.')"
-                >
-                  <img
-                    src="@/assets/images/icon/icon-check-bl.svg"
-                    alt="체크"
-                    class="check-icon"
-                  > 관심기업 등록 완료
-                </btn-bd-blue>
               </div>
             </div>
           </div>
@@ -216,21 +233,23 @@
               <div class="point-wrap">
                 <div class="my-point point">
                   <span class="ttl">보유 포인트</span>
-                  <b class="bold">{{'100,000'}}</b>
+                  <b class="bold">{{ '100,000' }}</b>
                   <div class="badge-p">
                     <span class="is-voice-only">포인트</span>
                   </div>
                 </div>
                 <div class="use-point point">
                   <span class="ttl">사용 포인트</span>
-                  <b class="bold">{{'1,000'}}</b>
+                  <b class="bold">{{ '1,000' }}</b>
                   <div class="badge-p">
                     <span class="is-voice-only">포인트</span>
                   </div>
                 </div>
               </div>
               <div class="input-wrap">
-                <div class="input-ttl">요청 내용</div>
+                <div class="input-ttl">
+                  요청 내용
+                </div>
                 <div class="inp-grp">
                   <input
                     type="text"
@@ -239,13 +258,16 @@
                   >
                 </div>
                 <div class="inp-grp">
-                  <textarea name="#" id="#" class="inp inp-textarea" 
-                  placeholder="팩트체크를 요청할 내용을 자세히 입력해주세요.
+                  <textarea
+                    id="#"
+                    name="#"
+                    class="inp inp-textarea" 
+                    placeholder="팩트체크를 요청할 내용을 자세히 입력해주세요.
 요청 내용이 자세할 수록 정확한 펙트체크가 작성됩니다!
 
 ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기입되어있나요?
-                  ">
-                  </textarea>
+                  "
+                  />
                 </div>
               </div>
               <div class="btn-wrap">
@@ -259,14 +281,17 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   class="btn-md"
                   @click="window.alert('검정버튼을 클릭하셨습니다.')"
                 >
-                <img src="@/assets/images/icon/icon-check-gn.svg" alt="check" class="icon">
-                팩트체크 추가 요청하기
+                  <img
+                    src="@/assets/images/icon/icon-check-gn.svg"
+                    alt="check"
+                    class="icon"
+                  >
+                  팩트체크 추가 요청하기
                 </btn-solid-dark>
               </div>
             </div>
           </div>
           <!-- END 투자자가 들어오면 보이는 영역 -->
-
         </div>
         <!-- END 기업 간략 소개 -->
 
@@ -301,24 +326,28 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
             <div class="txt-wrap">
               <div class="text">
                 <span class="ttl">선택된 항목</span>
-                <b class="bold">{{'3'}}개</b>
+                <b class="bold">{{ '3' }}개</b>
               </div>
               <div class="use-point text">
                 <span class="ttl">사용예정 포인트</span>
-                <b class="bold">{{'1,000'}}</b>
+                <b class="bold">{{ '1,000' }}</b>
                 <div class="badge-p">
                   <span class="is-voice-only">포인트</span>
                 </div>
               </div>
             </div>
             <div class="btn-wrap">
-                <btn-solid-dark
-                  class="btn-md"
-                  @click="window.alert('검정버튼을 클릭하셨습니다.')"
+              <btn-solid-dark
+                class="btn-md"
+                @click="window.alert('검정버튼을 클릭하셨습니다.')"
+              >
+                <img
+                  src="@/assets/images/icon/icon-check-gn.svg"
+                  alt="check"
+                  class="icon"
                 >
-                <img src="@/assets/images/icon/icon-check-gn.svg" alt="check" class="icon">
                 팩트체크 요청하기
-                </btn-solid-dark>
+              </btn-solid-dark>
             </div>
           </div>
         </div>
@@ -326,69 +355,109 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
       <div class="bottom-fixed-conts">
         <!-- TODO: toggle을 누르면 active가 toggle됨 -->
         <div class="wide-panel check-fc-container active">
-            <div class="check-fc-conts-toggle">
-              <div class="conts-wrap">
-                <img class="close" src="@/assets/images/btn/btn-spread.svg" alt="닫기" />
-                <img class="open" src="@/assets/images/btn/btn-fold.svg" alt="열기" />
-              </div>
+          <div class="check-fc-conts-toggle">
+            <div class="conts-wrap">
+              <img
+                class="close"
+                src="@/assets/images/btn/btn-spread.svg"
+                alt="닫기"
+              >
+              <img
+                class="open"
+                src="@/assets/images/btn/btn-fold.svg"
+                alt="열기"
+              >
             </div>
+          </div>
           <div class="check-fc-conts">
             <ul class="check-fc-list-wrap">
               <!-- 항목 -->
               <li class="check-fc-list">
-                <p class="text">{{'항목 1~3개까진 높이에 맞춰 표시'}}</p>
+                <p class="text">
+                  {{ '항목 1~3개까진 높이에 맞춰 표시' }}
+                </p>
                 <div class="list-right-conts">
                   <div class="use-point text">
-                    <b class="bold">{{'1,000'}}</b>
+                    <b class="bold">{{ '1,000' }}</b>
                     <div class="badge-p">
                       <span class="is-voice-only">포인트</span>
                     </div>
                   </div>
-                  <button type="button" class="check-out-btn">
-                    <img src="@/assets/images/btn/btn-cancle-sch.svg" alt="빼기" />
+                  <button
+                    type="button"
+                    class="check-out-btn"
+                  >
+                    <img
+                      src="@/assets/images/btn/btn-cancle-sch.svg"
+                      alt="빼기"
+                    >
                   </button>
                 </div>
               </li>
               <!-- // 항목 -->
               <li class="check-fc-list">
-                <p class="text">{{'기업 가치'}}</p>
+                <p class="text">
+                  {{ '기업 가치' }}
+                </p>
                 <div class="list-right-conts">
                   <div class="use-point text">
-                    <b class="bold">{{'1,000'}}</b>
+                    <b class="bold">{{ '1,000' }}</b>
                     <div class="badge-p">
                       <span class="is-voice-only">포인트</span>
                     </div>
                   </div>
-                  <button type="button" class="check-out-btn">
-                    <img src="@/assets/images/btn/btn-cancle-sch.svg" alt="빼기" />
+                  <button
+                    type="button"
+                    class="check-out-btn"
+                  >
+                    <img
+                      src="@/assets/images/btn/btn-cancle-sch.svg"
+                      alt="빼기"
+                    >
                   </button>
                 </div>
               </li>
               <li class="check-fc-list">
-                <p class="text">{{'기업 가치'}}</p>
+                <p class="text">
+                  {{ '기업 가치' }}
+                </p>
                 <div class="list-right-conts">
                   <div class="use-point text">
-                    <b class="bold">{{'1,000'}}</b>
+                    <b class="bold">{{ '1,000' }}</b>
                     <div class="badge-p">
                       <span class="is-voice-only">포인트</span>
                     </div>
                   </div>
-                  <button type="button" class="check-out-btn">
-                    <img src="@/assets/images/btn/btn-cancle-sch.svg" alt="빼기" />
+                  <button
+                    type="button"
+                    class="check-out-btn"
+                  >
+                    <img
+                      src="@/assets/images/btn/btn-cancle-sch.svg"
+                      alt="빼기"
+                    >
                   </button>
                 </div>
               </li>
               <li class="check-fc-list">
-                <p class="text">{{'기업 기본정보'}}</p>
+                <p class="text">
+                  {{ '기업 기본정보' }}
+                </p>
                 <div class="list-right-conts">
                   <div class="use-point text">
-                    <b class="bold">{{'1,000'}}</b>
+                    <b class="bold">{{ '1,000' }}</b>
                     <div class="badge-p">
                       <span class="is-voice-only">포인트</span>
                     </div>
                   </div>
-                  <button type="button" class="check-out-btn">
-                    <img src="@/assets/images/btn/btn-cancle-sch.svg" alt="빼기" />
+                  <button
+                    type="button"
+                    class="check-out-btn"
+                  >
+                    <img
+                      src="@/assets/images/btn/btn-cancle-sch.svg"
+                      alt="빼기"
+                    >
                   </button>
                 </div>
               </li>
@@ -1269,7 +1338,11 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
           <div class="flexable-container split6">
             <!-- card -->
             <div class="flexable-inner">
-              <a href="#" target="_blank" class="card-news">  
+              <a
+                href="#"
+                target="_blank"
+                class="card-news"
+              >  
                 <div class="card-thumb card-thumb-lg">
                   <thumbnail />
                 </div>
@@ -1285,69 +1358,84 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
             </div>
 
             <div class="flexable-inner">
-              <a href="#" target="_blank" class="card-news">  
+              <a
+                href="#"
+                target="_blank"
+                class="card-news"
+              >  
                 <div class="card-thumb card-thumb-lg">
                   <thumbnail />
                 </div>
                 <div class="card-text">
                   <span class="name">news</span>
-                  <div class="ttl">{{'뉴스 이미지 없을 시, 디폴트 이미지 처리합니다.'}}</div>
+                  <div class="ttl">{{ '뉴스 이미지 없을 시, 디폴트 이미지 처리합니다.' }}</div>
                   <div class="dec">
-                    {{'뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목...'}}
+                    {{ '뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목...' }}
                   </div>
-                  <div class="date">{{'2021.00.00  00:00'}}</div>
+                  <div class="date">{{ '2021.00.00  00:00' }}</div>
                 </div>
               </a>
             </div>
 
             <div class="flexable-inner">
-              <a href="#" target="_blank" class="card-news">  
+              <a
+                href="#"
+                target="_blank"
+                class="card-news"
+              >  
                 <div class="card-thumb card-thumb-lg">
                   <thumbnail />
                 </div>
                 <div class="card-text">
                   <span class="name">news</span>
-                  <div class="ttl">{{'뉴스 이미지 없을 시, 디폴트 이미지 처리합니다.'}}</div>
+                  <div class="ttl">{{ '뉴스 이미지 없을 시, 디폴트 이미지 처리합니다.' }}</div>
                   <div class="dec">
-                    {{'뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목...'}}
+                    {{ '뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목...' }}
                   </div>
-                  <div class="date">{{'2021.00.00  00:00'}}</div>
+                  <div class="date">{{ '2021.00.00  00:00' }}</div>
                 </div>
               </a>
             </div>
 
             <div class="flexable-inner">
-              <a href="#" target="_blank" class="card-news">  
+              <a
+                href="#"
+                target="_blank"
+                class="card-news"
+              >  
                 <div class="card-thumb card-thumb-lg">
                   <thumbnail />
                 </div>
                 <div class="card-text">
                   <span class="name">news</span>
-                  <div class="ttl">{{'뉴스 이미지 없을 시, 디폴트 이미지 처리합니다.'}}</div>
+                  <div class="ttl">{{ '뉴스 이미지 없을 시, 디폴트 이미지 처리합니다.' }}</div>
                   <div class="dec">
-                    {{'뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목...'}}
+                    {{ '뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목...' }}
                   </div>
-                  <div class="date">{{'2021.00.00  00:00'}}</div>
+                  <div class="date">{{ '2021.00.00  00:00' }}</div>
                 </div>
               </a>
             </div>
 
             <div class="flexable-inner">
-              <a href="#" target="_blank" class="card-news">  
+              <a
+                href="#"
+                target="_blank"
+                class="card-news"
+              >  
                 <div class="card-thumb card-thumb-lg">
                   <thumbnail />
                 </div>
                 <div class="card-text">
                   <span class="name">news</span>
-                  <div class="ttl">{{'뉴스 이미지 없을 시, 디폴트 이미지 처리합니다.'}}</div>
+                  <div class="ttl">{{ '뉴스 이미지 없을 시, 디폴트 이미지 처리합니다.' }}</div>
                   <div class="dec">
-                    {{'뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목...'}}
+                    {{ '뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목 텍스트 최대 3줄 입니다. 그 이후로는 말줄임표로 생략합니다. 뉴스 제목...' }}
                   </div>
-                  <div class="date">{{'2021.00.00  00:00'}}</div>
+                  <div class="date">{{ '2021.00.00  00:00' }}</div>
                 </div>
               </a>
             </div>
-
           </div>
         </div>
         <!-- END 관련 소식 -->
@@ -1395,8 +1483,12 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
             <div class="white-panel review-card">
               <div class="review-inner">
                 <div class="left-conts">
-                  <div class="name">{{'익명'}}</div>
-                  <div class="type">{{'개인 투자자'}}</div>
+                  <div class="name">
+                    {{ '익명' }}
+                  </div>
+                  <div class="type">
+                    {{ '개인 투자자' }}
+                  </div>
                   <div class="hover-desc">
                     <span
                       class="hover-overlay mb-show"
@@ -1471,17 +1563,23 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   </div>
                 </div>
                 <div class="middle-conts">
-                  {{'투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.'}}
+                  {{ '투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.' }}
                 </div>
-                <div class="right-conts">{{'2021.00.00  00:00'}}</div>
+                <div class="right-conts">
+                  {{ '2021.00.00  00:00' }}
+                </div>
               </div>
             </div>
             <!-- // card -->
             <div class="white-panel review-card">
               <div class="review-inner">
                 <div class="left-conts">
-                  <div class="name">{{'익명'}}</div>
-                  <div class="type">{{'개인 투자자'}}</div>
+                  <div class="name">
+                    {{ '익명' }}
+                  </div>
+                  <div class="type">
+                    {{ '개인 투자자' }}
+                  </div>
                   <div class="hover-desc">
                     <span
                       class="hover-overlay mb-show"
@@ -1558,15 +1656,21 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                 <div class="middle-conts">
                   {{'투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.'}}
                 </div>
-                <div class="right-conts">{{'2021.00.00  00:00'}}</div>
+                <div class="right-conts">
+                  {{ '2021.00.00  00:00' }}
+                </div>
               </div>
             </div>
   
             <div class="white-panel review-card">
               <div class="review-inner">
                 <div class="left-conts">
-                  <div class="name">{{'익명'}}</div>
-                  <div class="type">{{'개인 투자자'}}</div>
+                  <div class="name">
+                    {{ '익명' }}
+                  </div>
+                  <div class="type">
+                    {{ '개인 투자자' }}
+                  </div>
                   <div class="hover-desc">
                     <span
                       class="hover-overlay mb-show"
@@ -1643,7 +1747,9 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                 <div class="middle-conts">
                   {{'투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.'}}
                 </div>
-                <div class="right-conts">{{'2021.00.00  00:00'}}</div>
+                <div class="right-conts">
+                  {{ '2021.00.00  00:00' }}
+                </div>
               </div>
             </div>
             
@@ -1701,7 +1807,6 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
               </btn-square-bd>
             </div>
           </div>
-
         </div>
         <!-- END 투자자 리뷰 -->
       </div>
