@@ -1,5 +1,5 @@
 <template>
-  <!-- [D] 마이페이지 - 팩트체크-요청한 팩트체크 대기중 & 진행중 -->
+  <!-- [D] 마이페이지 - 팩트체크-요청한 팩트체크 수정 -->
   <div class="mypage-container">
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
@@ -14,7 +14,7 @@
           팩트체크
         </li>
         <li class="txt">
-          요청한 팩트체크
+          요청한 팩트체크 수정
         </li>
       </breadcrumb>
 
@@ -134,7 +134,7 @@
 
 <script>
 export default {
-  name: 'IFtckDetail',
+  name: 'IFtckEdit',
 };
 </script>
 

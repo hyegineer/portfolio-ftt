@@ -1,5 +1,5 @@
 <template>
-  <!-- [D] 마이페이지 - 팩트체크-받은팩트체크 목록 -->
+  <!-- [D] 마이페이지 - 팩트체크-요청한 팩트체크 -->
   <div class="mypage-container mypage-i-ftck-list-page">
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
@@ -137,8 +137,10 @@
         
       <table class="ftck-list-grp board-list-grp">
         <!-- [D] 비공개면 is-secret 클래스 추가 -->
+        <!-- [D] 대기중이거나 진행중인건 ftck-detail로 감. -->
         <tr
           class="board-list is-secret"
+          @click="$router.push('ftck-detail')"
         >
           <td class="td-subject">
             <div class="ftck-state-subject">
@@ -174,8 +176,10 @@
           </td>
         </tr>
         
+        <!-- [D] 검토중이거나 완료인건 ftck-checking-detail로 감. -->
         <tr
           class="board-list" 
+          @click="$router.push('ftck-checking-detail')"
         >
           <td class="td-subject">
             <div class="ftck-state-subject">
