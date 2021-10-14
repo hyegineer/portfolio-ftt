@@ -41,7 +41,6 @@
     font-weight: 500;
     flex-shrink: 0;
     padding-right: 10px;
-    padding-top: 2px;
   }
 
   .txt{
@@ -58,7 +57,23 @@
       min-width: 130px;
     }
   }
-} 
+}
+
+.guide-verti-box{
+  align-items: flex-end;
+  
+  .guide-box-cont{
+    justify-content: flex-start;
+    padding-top: 0;
+    flex-direction: column;
+  }
+
+  .txt{
+    margin-top: 10px;
+    padding: 0;
+    line-height: 1.5;
+  }
+}
 
 .mypage-common-card{ // 구성요소: 마이페이지 하얀색 배경
   width: 100%;
