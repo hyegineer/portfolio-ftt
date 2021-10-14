@@ -367,6 +367,7 @@
                   v-for="(item, idx) in 10"
                   :key="idx"
                   class="swiper-slide"
+                  @click="$router.push('dashboard-investor-detail')"
                 >
                   <div class="card">
                     <div class="card-thumb">
