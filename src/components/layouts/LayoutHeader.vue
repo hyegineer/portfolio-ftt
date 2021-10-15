@@ -770,7 +770,7 @@ export default {
   data() {
     return {
       testIsUser: true,
-      testUserType: 'startup', // startup, investor, fact-checker
+      testUserType: 'investor', // startup, investor, fact-checker
       testMembership: false,
       viewSearchbar: false,
       viewSidebar: false,
