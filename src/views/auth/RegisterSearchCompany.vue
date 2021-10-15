@@ -74,13 +74,27 @@
 
         <div class="auth-skip-ment">
           <span class="skip-ment">등록된 기업이 없으신가요?</span>
-          <button
+          <!-- <button
             type="button"
             class="btn btn-txt"
             @click="window.alert('건너뛰기를 선택하셨습니다.')"
           >
             <span class="txt">건너뛰기</span>
-          </button>
+          </button> -->
+          
+          <router-link
+            to="/register-startup?selectedCompany&userTypeForm=enterprise"
+            class="btn btn-txt"
+          >
+            <span class="sidemenu-txt">건너뛰기(스타트업일 때 연결되는 링크)</span>
+          </router-link>
+          
+          <router-link
+            to="/register-investor?selectedCompany&userTypeForm=enterprise"
+            class="btn btn-txt"
+          >
+            <span class="sidemenu-txt">건너뛰기(투자자일 때 연결되는 링크)</span>
+          </router-link>
         </div>
       </div>
     </div>
