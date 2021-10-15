@@ -40,7 +40,7 @@
             <!-- FIXME: 채팅아이콘, 최근조회일 추가해야함 -->
             <div
               class="card"
-              @click="window.alert('이동~')"
+              @click="$router.push('/etpr-profile-info')"
             >
               <div class="card-thumb">
                 <thumbnail />
@@ -102,42 +102,42 @@
           >
             1
           </button>
-        
+
           <button
-            type="button" 
+            type="button"
             class="num-btn"
           >
             2
           </button>
-        
+
           <button
-            type="button" 
+            type="button"
             class="num-btn"
           >
             3
           </button>
-        
+
           <button
-            type="button" 
+            type="button"
             class="num-btn"
           >
             4
           </button>
 
           <button
-            type="button" 
+            type="button"
             class="num-btn"
           >
             ···
           </button>
-        
+
           <button
-            type="button" 
+            type="button"
             class="num-btn"
           >
             10
           </button>
-        
+
           <btn-square-bd @click="window.alert('다음 버튼 누르기')">
             <i class="icon icon-page-next" />
             <span class="is-voice-only">다음</span>

@@ -1,7 +1,7 @@
 <template>
-  <div class="page"> 
+  <div class="page">
     <layout-header />
-    
+
     <div class="page-container">
       <div class="search-layout">
         <div class="search-layout-nav">
@@ -21,7 +21,7 @@
                 <span class="txt">팩트시트가 주목하는 기업</span>
                 <i class="arrow" />
               </button>
-              
+
               <button
                 type="button"
                 class="side-nav-btn"
@@ -29,7 +29,7 @@
                 <span class="txt">최근 팩트시트가 완료된 기업</span>
                 <i class="arrow" />
               </button>
-              
+
               <button
                 type="button"
                 class="side-nav-btn"
@@ -129,31 +129,31 @@
                 </template>
 
                 <template #options>
-                  <custom-slct-opt 
+                  <custom-slct-opt
                     @click="searchOptions = '팩트체크 요청순'"
                   >
                     팩트체크 요청순
                   </custom-slct-opt>
-            
-                  <custom-slct-opt 
+
+                  <custom-slct-opt
                     @click="searchOptions = '업데이트순'"
                   >
                     업데이트순
                   </custom-slct-opt>
-            
-                  <custom-slct-opt 
+
+                  <custom-slct-opt
                     @click="searchOptions = '업데이트순'"
                   >
                     투자자관심순
                   </custom-slct-opt>
-            
-                  <custom-slct-opt 
+
+                  <custom-slct-opt
                     @click="searchOptions = '업데이트순'"
                   >
                     투자금액순
                   </custom-slct-opt>
-            
-                  <custom-slct-opt 
+
+                  <custom-slct-opt
                     @click="searchOptions = '업데이트순'"
                   >
                     투자가치순
@@ -172,7 +172,7 @@
             >
               <div
                 class="card"
-                @click="window.alert('이동~')"
+                @click="$router.push('/etpr-profile-info')"
               >
                 <div class="card-thumb">
                   <thumbnail />
@@ -243,42 +243,42 @@
             >
               1
             </button>
-        
+
             <button
-              type="button" 
+              type="button"
               class="num-btn"
             >
               2
             </button>
-        
+
             <button
-              type="button" 
+              type="button"
               class="num-btn"
             >
               3
             </button>
-        
+
             <button
-              type="button" 
+              type="button"
               class="num-btn"
             >
               4
             </button>
 
             <button
-              type="button" 
+              type="button"
               class="num-btn"
             >
               ···
             </button>
-        
+
             <button
-              type="button" 
+              type="button"
               class="num-btn"
             >
               10
             </button>
-        
+
             <btn-square-bd @click="window.alert('다음 버튼 누르기')">
               <i class="icon icon-page-next" />
               <span class="is-voice-only">다음</span>

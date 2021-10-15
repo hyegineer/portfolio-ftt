@@ -770,7 +770,7 @@ export default {
   name: 'LayoutHeader',
   data() {
     return {
-      testIsUser: false,
+      testIsUser: true,
       testUserType: 'investor', // startup, investor, fact-checker
       testMembership: false,
       viewSearchbar: false,
