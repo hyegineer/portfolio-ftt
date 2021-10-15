@@ -203,6 +203,7 @@
             <button
               type="button"
               class="inp-sch-btn"
+              @click="$router.push('/search-result/1')"
             >
               <span class="is-voice-only">검색하기</span>
             </button>
