@@ -115,7 +115,7 @@
               >
                 멤버십 2021.12.31 까지
               </span>
-              
+
               <span
                 v-if="testUserType === 'investor' && !testMembership"
                 class="greeting-ment"
@@ -135,7 +135,7 @@
         :class="{'is-active': viewSearchbar}"
       >
         <div class="hd-search-grp">
-          <custom-slct 
+          <custom-slct
             class="custom-slct01 slct-depth01"
             :selected="hdSearchOptions.depth01"
           >
@@ -146,21 +146,21 @@
             </template>
 
             <template #options>
-              <custom-slct-opt 
+              <custom-slct-opt
                 @click="hdSearchOptions.depth01 = '산업분류 1'"
               >
                 산업분류 1
               </custom-slct-opt>
-            
-              <custom-slct-opt 
+
+              <custom-slct-opt
                 @click="hdSearchOptions.depth01 = '산업분류 2'"
               >
                 산업분류 2
               </custom-slct-opt>
             </template>
           </custom-slct>
-          
-          <custom-slct 
+
+          <custom-slct
             class="custom-slct01 slct-depth02"
             :selected="hdSearchOptions.depth02"
           >
@@ -171,20 +171,20 @@
             </template>
 
             <template #options>
-              <custom-slct-opt 
+              <custom-slct-opt
                 @click="hdSearchOptions.depth02 = '산업분야 1'"
               >
                 산업분야 1
               </custom-slct-opt>
-            
-              <custom-slct-opt 
+
+              <custom-slct-opt
                 @click="hdSearchOptions.depth02 = '산업분야 2'"
               >
                 산업분야 2
               </custom-slct-opt>
             </template>
           </custom-slct>
-          
+
           <div class="inp-grp inp-sch-grp">
             <input
               v-model="hdSearchOptions.keyword"
@@ -201,7 +201,7 @@
               <span class="is-voice-only">검색어 지우기</span>
             </button>
             <button
-              type="button" 
+              type="button"
               class="inp-sch-btn"
             >
               <span class="is-voice-only">검색하기</span>
@@ -770,7 +770,7 @@ export default {
   data() {
     return {
       testIsUser: true,
-      testUserType: 'fact-checker', // startup, investor, fact-checker
+      testUserType: 'investor', // startup, investor, fact-checker
       testMembership: false,
       viewSearchbar: false,
       viewSidebar: false,

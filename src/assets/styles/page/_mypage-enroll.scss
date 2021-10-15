@@ -1,0 +1,126 @@
+/* ========== 마이페이지 > 기업회원 등록 ========== */
+
+.mypage-enroll-container {
+
+  .select-guide-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 40px;
+    background-color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .txt-grp {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .txt-ttl {
+    font-size: rem(20);
+    font-weight: 500;
+    color: #171820;
+  }
+
+  .txt-dec {
+    font-size: rem(15);
+    font-weight: 400;
+    color: #171820;
+  }
+
+  .btn-grp {
+    flex-shrink: 1;
+
+    .btn-prev {
+      min-width: 140px;
+    }
+
+    .btn-md {
+      min-width: 235px;
+      height: 55px;
+    }
+  }
+
+  .enroll-cont-wrap {
+
+    .tab-grp {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 45px;
+      background-color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .tab-list {
+      padding: 22.5px 0;
+      position: relative;
+      cursor: pointer;
+
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+        height: 3px;
+        background-color: #00EB79;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto;
+        bottom: 0;
+        width: 0%;
+        transition: all .3s;
+      }
+
+      &.is-active {
+
+        &::after {
+          width: 100%;
+        }
+
+        .tab-txt {
+          color: #171820;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .tab-txt {
+      font-size: rem(18);
+      font-weight: 400;
+      color: #171820;
+    }
+
+    .search-grp {
+      padding: 40px;
+      background-color: #fff;
+    }
+
+    .search-hgrp {
+
+      .ttl {
+        font-size: rem(16);
+        font-weight: 600;
+        color: #171820;
+        margin-bottom: 20px;
+      }
+    }
+
+    .search-inp-grp {
+      margin-bottom: 40px;
+      width: 360px;
+    }
+
+    .search-list-grp {
+
+      .cnt-txt-grp {
+        margin-bottom: 15px;
+      }
+
+      .box-list {
+        cursor: pointer;
+      }
+    }
+  }
+}
