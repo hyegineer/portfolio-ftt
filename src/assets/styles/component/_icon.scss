@@ -168,4 +168,20 @@
   height: 14px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cg id='icon-del-input' transform='translate(-888 -1059)'%3E%3Crect id='사각형_2114' data-name='사각형 2114' width='14' height='14' transform='translate(888 1059)' fill='rgba(255,255,255,0)'/%3E%3Cg id='그룹_5805' data-name='그룹 5805' transform='translate(-14.5 0.5)'%3E%3Cline id='선_889' data-name='선 889' x2='10' y2='10' transform='translate(904.5 1060.5)' fill='none' stroke='%238e909f' stroke-width='2'/%3E%3Cline id='선_890' data-name='선 890' x1='10' y2='10' transform='translate(904.5 1060.5)' fill='none' stroke='%238e909f' stroke-width='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
 }
+
+.icon-up {
+  width: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath id='다각형_21' data-name='다각형 21' d='M5,0l5,6H0Z' fill='%23ff5175'/%3E%3C/svg%3E%0A");
+}
+
+.icon-down {
+  width: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath id='다각형_21' data-name='다각형 21' d='M5,0l5,6H0Z' transform='translate(10 6) rotate(180)' fill='%233060ff'/%3E%3C/svg%3E%0A");
+}
+
+.icon-hold {
+  width: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='2' viewBox='0 0 10 2'%3E%3Cline id='선_1064' data-name='선 1064' x2='10' transform='translate(0 1)' fill='none' stroke='%23707070' stroke-width='2'/%3E%3C/svg%3E%0A");
+}
+
 /* ========== END icon 관련 스타일 ========== */

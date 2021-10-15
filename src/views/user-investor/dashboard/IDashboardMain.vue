@@ -24,7 +24,7 @@
     <!-- 마이페이지 컨텐츠 영역 -->
     <div class="mypage-cont-wrap">
       <!-- 투자기업 리포트 -->
-      <div class="ection-dashboard">
+      <div class="section-dashboard section-dashboard-report pt-remove">
         <div class="dashboard-cont-hgrp">
           <div class="txt-grp">
             <p class="ttl">
@@ -39,9 +39,353 @@
           </btn-solid-dark>
         </div>
         <div class="cont-wrap">
+          <!-- 가로 스크롤 선택 구간 -->
           <div class="horizontal-scr-wrap">
-            가로 스크롤
+            <div class="select-ttl-grp">
+              <p class="select-ttl">
+                재원 선택
+              </p>
+            </div>
+            <div class="select-cont-wrap">
+              <ul class="select-cont-grp">
+                <!-- 전체 출력 -->
+                <!-- 클릭 시 is-active -->
+                <li class="select-cont-list is-active">
+                  <span class="select-txt">전체(10)</span>
+                </li>
+                <!-- END 전체 출력 -->
+
+                <!-- 리스트 출력(반복문 시작점) -->
+                <!-- 클릭 시 is-active -->
+                <li
+                  v-for="(item, idx) in 10"
+                  :key="idx"
+                  class="select-cont-list"
+                >
+                  <span class="select-txt">등록된 재원명1</span>
+                </li>
+              </ul>
+            </div>
           </div>
+          <!-- END 가로 스크롤 선택 구간 -->
+
+          <!-- 리포트 내용 구간 -->
+          <div class="report-cont-wrap">
+            <div class="report-list-wrap">
+              <div class="report-top-info-grp">
+                <div class="info-grp">
+                  <span class="label">총 투자금액</span>
+                  <span class="info info-lg">0,000,000,000 원</span>
+                </div>
+                <div class="info-grp">
+                  <span class="label">현재금액</span>
+                  <span class="info">0,000,000,000 원</span>
+                </div>
+              </div>
+              <div class="report-grp">
+                <div class="report-list-hgrp">
+                  <p class="ttl">
+                    투자기업
+                  </p>
+                  <p class="count">
+                    총 <span class="bold-txt">10</span>개
+                  </p>
+                </div>
+                <!-- 내용이 있을 때 -->
+                <div
+                  class="report-list-grp"
+                >
+                  <!-- report-list-box + is-up: 상승 / is-hold: 변동없음 / is-down: 하락 -->
+                  <!-- report-list-box + is-active 활성화 -->
+                  <div
+                    class="report-list-box is-up"
+                  >
+                    <div class="left-box">
+                      <p class="name">
+                        투자기업명
+                      </p>
+                      <p class="date">
+                        업데이트 2021.00.00
+                      </p>
+                    </div>
+                    <div class="right-box">
+                      <span class="sub-label">수익률</span>
+                      <span class="sub-info">1,500%</span>
+                      <!-- icon-up: 상승 / icon-hold: 변동없음 / icon-down: 하락 -->
+                      <i class="icon icon-up" />
+                    </div>
+                  </div>
+                  <!-- report-list-box + is-up: 상승 / is-hold: 변동없음 / is-down: 하락 -->
+                  <!-- report-list-box + is-active 활성화 -->
+                  <div
+                    class="report-list-box is-down is-active"
+                  >
+                    <div class="left-box">
+                      <p class="name">
+                        투자기업명
+                      </p>
+                      <p class="date">
+                        업데이트 2021.00.00
+                      </p>
+                    </div>
+                    <div class="right-box">
+                      <span class="sub-label">수익률</span>
+                      <span class="sub-info">1,500%</span>
+                      <!-- icon-up: 상승 / icon-hold: 변동없음 / icon-down: 하락 -->
+                      <i class="icon icon-down" />
+                    </div>
+                  </div>
+                  <!-- report-list-box + is-up: 상승 / is-hold: 변동없음 / is-down: 하락 -->
+                  <!-- report-list-box + is-active 활성화 -->
+                  <div
+                    v-for="(item, idx) in 10"
+                    :key="idx"
+                    class="report-list-box is-hold"
+                  >
+                    <div class="left-box">
+                      <p class="name">
+                        투자기업명
+                      </p>
+                      <p class="date">
+                        업데이트 2021.00.00
+                      </p>
+                    </div>
+                    <div class="right-box">
+                      <span class="sub-label">수익률</span>
+                      <span class="sub-info">1,500%</span>
+                      <!-- icon-up: 상승 / icon-hold: 변동없음 / icon-down: 하락 -->
+                      <i class="icon icon-hold" />
+                    </div>
+                  </div>
+                </div>
+                <!-- END 내용이 있을 때 -->
+
+                <!-- 내용이 없을 때 -->
+                <div
+                  class="report-list-grp"
+                  style="display: none;"
+                >
+                  <p class="empty-txt">
+                    투자기업이 없습니다.
+                  </p>
+                </div>
+                <!-- END 내용이 없을 때 -->
+              </div>
+            </div>
+            <div class="report-graph-wrap">
+              <div
+                class="report-graph-cont-grp"
+                style="height: 630px;"
+              >
+                <div class="graph-box-grp">
+                  <div class="panel-ttl">
+                    <div class="flex-ttl">
+                      <span>투자금</span>
+                      <div class="hover-desc">
+                        <span
+                          class="hover-overlay mb-show"
+                        />
+
+                        <div
+                          class="badge-qus"
+                        >
+                          <span class="is-voice-only">도움말</span>
+                        </div>
+
+                        <div
+                          class="hover-desc-box"
+                        >
+                          <span class="ttl">토글 제목</span>
+
+                          <p class="desc">
+                            해당 토글 내용
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="flex-ttl-sub">단위 : 원</span>
+                  </div>
+                  <!-- 내용이 있을 때 -->
+                  <div
+                    class="graph-box"
+                  >
+                    그래프 들어가는 부분
+                  </div>
+                  <!-- END 내용이 있을 때 -->
+
+                  <!-- 내용이 없을 때 -->
+                  <div
+                    class="graph-box"
+                    style="display: none;"
+                  >
+                    <p class="empty-txt">
+                      내용이 없습니다.
+                    </p>
+                  </div>
+                  <!-- END 내용이 없을 때 -->
+                </div>
+                <div class="graph-box-grp">
+                  <div class="panel-ttl">
+                    <div class="flex-ttl">
+                      <span>기업가치</span>
+                      <div class="hover-desc">
+                        <span
+                          class="hover-overlay mb-show"
+                        />
+
+                        <div
+                          class="badge-qus"
+                        >
+                          <span class="is-voice-only">도움말</span>
+                        </div>
+
+                        <div
+                          class="hover-desc-box"
+                        >
+                          <span class="ttl">토글 제목</span>
+
+                          <p class="desc">
+                            해당 토글 내용
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="flex-ttl-sub">단위 : 원</span>
+                  </div>
+                  <!-- 내용이 있을 때 -->
+                  <div
+                    class="graph-box"
+                  >
+                    그래프 들어가는 부분
+                  </div>
+                  <!-- END 내용이 있을 때 -->
+
+                  <!-- 내용이 없을 때 -->
+                  <div
+                    class="graph-box"
+                    style="display: none;"
+                  >
+                    <p class="empty-txt">
+                      내용이 없습니다.
+                    </p>
+                  </div>
+                  <!-- END 내용이 없을 때 -->
+                </div>
+                <div class="graph-box-grp">
+                  <div class="panel-ttl">
+                    <div class="flex-ttl">
+                      <span>매출</span>
+                      <div class="hover-desc">
+                        <span
+                          class="hover-overlay mb-show"
+                        />
+
+                        <div
+                          class="badge-qus"
+                        >
+                          <span class="is-voice-only">도움말</span>
+                        </div>
+
+                        <div
+                          class="hover-desc-box"
+                        >
+                          <span class="ttl">토글 제목</span>
+
+                          <p class="desc">
+                            해당 토글 내용
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="flex-ttl-sub">단위 : 원</span>
+                  </div>
+                  <!-- 내용이 있을 때 -->
+                  <div
+                    class="graph-box"
+                  >
+                    그래프 들어가는 부분
+                  </div>
+                  <!-- END 내용이 있을 때 -->
+
+                  <!-- 내용이 없을 때 -->
+                  <div
+                    class="graph-box"
+                    style="display: none;"
+                  >
+                    <p class="empty-txt">
+                      내용이 없습니다.
+                    </p>
+                  </div>
+                  <!-- END 내용이 없을 때 -->
+                </div>
+                <div class="graph-box-grp">
+                  <div class="panel-ttl">
+                    <div class="flex-ttl">
+                      <span>영업이익</span>
+                      <div class="hover-desc">
+                        <span
+                          class="hover-overlay mb-show"
+                        />
+
+                        <div
+                          class="badge-qus"
+                        >
+                          <span class="is-voice-only">도움말</span>
+                        </div>
+
+                        <div
+                          class="hover-desc-box"
+                        >
+                          <span class="ttl">토글 제목</span>
+
+                          <p class="desc">
+                            해당 토글 내용
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="flex-ttl-sub">단위 : 원</span>
+                  </div>
+                  <!-- 내용이 있을 때 -->
+                  <div
+                    class="graph-box"
+                  >
+                    그래프 들어가는 부분
+                  </div>
+                  <!-- END 내용이 있을 때 -->
+
+                  <!-- 내용이 없을 때 -->
+                  <div
+                    class="graph-box"
+                    style="display: none;"
+                  >
+                    <p class="empty-txt">
+                      내용이 없습니다.
+                    </p>
+                  </div>
+                  <!-- END 내용이 없을 때 -->
+                </div>
+              </div>
+              <!-- 내용이 있을 때 -->
+              <div class="btn-grp">
+                <btn-bd-dark
+                  class="btn-md"
+                  @click="window.alert('기업 프로필로 이동')"
+                >
+                  기업 프로필로 이동
+                </btn-bd-dark>
+              </div>
+              <!-- END 내용이 있을 때 -->
+
+              <!-- 내용이 없을 때 -->
+              <div class="empty-info-grp">
+                <i class="icon icon-i" />
+                <span class="ment">마이페이지 > 기업정보 > 포트폴리오 에 투자기업을 등록하세요.</span>
+              </div>
+              <!-- END 내용이 없을 때 -->
+            </div>
+          </div>
+          <!-- END 리포트 내용 구간 -->
         </div>
       </div>
       <!-- END 투자기업 리포트 -->
@@ -70,34 +414,16 @@
               </template>
 
               <template #options>
-                <custom-slct-opt 
-                  @click="searchOptions = '대기중'"
+                <custom-slct-opt
+                  @click="searchOptions = '이름 순'"
                 >
-                  대기중
+                  이름 순
                 </custom-slct-opt>
-            
-                <custom-slct-opt 
-                  @click="searchOptions = '진행중'"
+
+                <custom-slct-opt
+                  @click="searchOptions = '업데이트일 순'"
                 >
-                  진행중
-                </custom-slct-opt>
-            
-                <custom-slct-opt 
-                  @click="searchOptions = '내용 검토중'"
-                >
-                  내용 검토중
-                </custom-slct-opt>
-            
-                <custom-slct-opt 
-                  @click="searchOptions = '완료'"
-                >
-                  완료
-                </custom-slct-opt>
-            
-                <custom-slct-opt 
-                  @click="searchOptions = '이의신청'"
-                >
-                  이의신청
+                  업데이트일 순
                 </custom-slct-opt>
               </template>
             </custom-slct>
@@ -113,7 +439,7 @@
                 class="table-cont-wrap custom-scroll-wrap"
               >
                 <ul
-                  v-for="(item, idx) in 20" 
+                  v-for="(item, idx) in 20"
                   :key="idx"
                   class="table-cont-grp"
                 >
@@ -199,7 +525,7 @@
                 <span class="td-word-date">{{ '2021.00.00' }}</span>
               </td>
             </tr>
-        
+
             <!-- [D] 완료 -->
             <tr
               class="board-list"
@@ -251,6 +577,11 @@
 <script>
 export default {
   name: 'IDashboardMain',
+  data() {
+    return {
+      searchOptions: null, // custom-select 동작을 구현하기위한 더미데이터
+    };
+  },
 };
 </script>
 
