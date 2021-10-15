@@ -12,21 +12,21 @@
             alt=""
             class="badge-flag"
           >
-          
+
           <img
             v-if="$route.query.userType === 'investor'"
             src="@/assets/images/badge/badge-investror.svg"
             alt=""
             class="badge-flag"
           >
-          
+
           <img
             v-if="$route.query.userType === 'fact-checker'"
             src="@/assets/images/badge/badge-factchecker.svg"
             alt=""
             class="badge-flag"
           >
-        
+
           <h3 class="ttl">
             <span class="ttl-txt">{{ `${$constants.userType[$route.query.userType]} 회원가입` }}</span>
             <span
@@ -63,7 +63,10 @@
             </btn-solid-dark>
           </div>
 
-          <btn-solid class="btn-lg btn-full">
+          <btn-solid
+            class="btn-lg btn-full"
+            @click="$router.push('/')"
+          >
             이메일 인증 완료
           </btn-solid>
         </div>

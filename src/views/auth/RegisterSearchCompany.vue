@@ -11,7 +11,7 @@
             alt=""
             class="symbol-fs"
           >
-        
+
           <h3 class="ttl">
             <span class="ttl-txt">{{ `${$constants.userType[$route.query.userType]} 회원가입` }}</span>
             <span class="badge-auth">{{ $constants.userTypeForm[$route.query.userTypeForm] }}</span>
@@ -54,7 +54,7 @@
             >
           </div>
         </fieldset>
-        
+
         <div class="btn-grp">
           <btn-bd-light
             class="btn-lg btn-prev"
@@ -66,7 +66,6 @@
           <!-- 기업이 선택되지 않았을 때 넘길 수 없음 -->
           <btn-solid
             class="btn-lg btn-full"
-            disabled
             @click="clickNext"
           >
             다음
@@ -113,7 +112,7 @@
               <span class="is-voice-only">검색어 지우기</span>
             </button>
             <button
-              type="button" 
+              type="button"
               class="inp-sch-btn"
             >
               <span class="is-voice-only">검색하기</span>
@@ -150,7 +149,7 @@
                 </p>
                 <span class="txt-gray">김철수 02-000-0000</span>
               </div>
-        
+
               <!-- 체크박스 -->
               <input
                 :id="`enter${index}`"

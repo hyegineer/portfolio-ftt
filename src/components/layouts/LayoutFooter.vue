@@ -47,14 +47,18 @@
         </div>
         <div class="ft-bottom">
           <div class="ft-gnb">
-            <a
-              href="#"
+            <router-link
+              to="/policy-privacy"
               class="ft-gnb-link"
-            >개인정보 처리방침</a>
-            <a
-              href="#"
+            >
+              개인정보 처리방침
+            </router-link>
+            <router-link
+              to="/policy-guide"
               class="ft-gnb-link"
-            >서비스 이용약관</a>
+            >
+              서비스 이용약관
+            </router-link>
           </div>
           <p class="copyright">
             Copyright Factsheet. All rights reserved.

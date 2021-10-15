@@ -64,18 +64,25 @@
             계정을 잊으셨나요?
           </p>
           <div class="btn-wrap">
-            <a
-              href="#"
+            <router-link
+              to="/find-id"
               class="find-link"
-            >아이디 찾기</a>
-            <a
-              href="#"
+            >
+              아이디 찾기
+            </router-link>
+            <router-link
+              to="/find-pw"
               class="find-link"
-            >비밀번호 찾기</a>
+            >
+              비밀번호 찾기
+            </router-link>
           </div>
         </div>
         <div class="btn-join-wrap">
-          <btn-bd-dark class="btn-md btn-full">
+          <btn-bd-dark
+            class="btn-md btn-full"
+            @click="$router.push('/register-intro')"
+          >
             팩트시트 가입하기
           </btn-bd-dark>
         </div>

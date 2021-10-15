@@ -8,7 +8,7 @@
           alt=""
           class="badge-flag"
         >
-        
+
         <h3 class="ttl">
           <span class="ttl-txt">기존 투자자 신청</span>
           <span class="badge-auth">직원</span>
@@ -52,7 +52,7 @@
           >
         </div>
       </fieldset>
-        
+
       <div class="btn-grp">
         <btn-bd-light
           class="btn-lg btn-prev"
@@ -63,7 +63,6 @@
 
         <btn-solid
           class="btn-lg btn-full"
-          disabled
           @click="clickNext"
         >
           다음
@@ -97,7 +96,7 @@
               <span class="is-voice-only">검색어 지우기</span>
             </button>
             <button
-              type="button" 
+              type="button"
               class="inp-sch-btn"
             >
               <span class="is-voice-only">검색하기</span>
@@ -134,7 +133,7 @@
                 </p>
                 <span class="txt-gray">김철수 02-000-0000</span>
               </div>
-        
+
               <!-- 체크박스 -->
               <input
                 :id="`enter${index}`"

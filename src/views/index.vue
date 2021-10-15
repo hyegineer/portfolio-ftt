@@ -90,6 +90,7 @@
               <button
                 type="button"
                 class="inp-sch-btn"
+                @click="$router.push('/search-result/1')"
               >
                 <span class="is-voice-only">검색하기</span>
               </button>
@@ -100,7 +101,9 @@
       <!-- END section-visual -->
 
       <!-- section-join -->
-      <section class="section-join">
+      <section
+        class="section-join"
+      >
         <div class="wide-panel">
           <div class="join-grp">
             <div class="join-list list-startup">
@@ -116,10 +119,12 @@
                 우리 기업의 정보를 관리하고 자동 보고합니다.<br>
                 누구나 신뢰할 수 있게 팩트시트를 채워주세요.
               </p>
-              <a
-                href="#"
+              <router-link
+                to="/register-intro-startup"
                 class="role-link"
-              >회원가입</a>
+              >
+                회원가입
+              </router-link>
             </div>
             <div class="join-list list-investor">
               <p class="role-ttl">
@@ -134,10 +139,12 @@
                 팩트시트에게 관리를 맡기세요.<br>
                 엄밀하게 검수한 정보만 투자자에게 보여드립니다.
               </p>
-              <a
-                href="#"
+              <router-link
+                to="/register-intro-investor"
                 class="role-link"
-              >회원가입</a>
+              >
+                회원가입
+              </router-link>
             </div>
             <div class="join-list list-fact-checker">
               <p class="role-ttl">
@@ -152,10 +159,12 @@
                 투자자를 도와, 투자 기업들의 정보를 직접 확인하고<br>
                 관리합니다.
               </p>
-              <a
-                href="#"
+              <router-link
+                to="/register-fact-checker"
                 class="role-link"
-              >회원가입</a>
+              >
+                회원가입
+              </router-link>
             </div>
           </div>
         </div>
