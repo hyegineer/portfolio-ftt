@@ -26,10 +26,12 @@
             비밀번호를 잊으셨나요?
           </p>
           <div class="btn-wrap">
-            <a
-              href="#"
+            <router-link
+              to="/find-pw"
               class="find-link"
-            >비밀번호 찾기</a>
+            >
+              비밀번호 찾기
+            </router-link>
           </div>
         </div>
         <btn-solid

@@ -74,7 +74,7 @@
           </btn-bd-light>
           <btn-solid
             class="btn-lg btn-full"
-            @click="window.alert('완료 버튼을 클릭하셨습니다.')"
+            @click="$router.push('/find-id-complete')"
           >
             완료
           </btn-solid>
