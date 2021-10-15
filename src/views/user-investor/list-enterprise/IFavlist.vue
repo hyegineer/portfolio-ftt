@@ -40,7 +40,7 @@
             <!-- FIXME: 채팅아이콘, 최근조회일 추가해야함 -->
             <div
               class="card"
-              @click="window.alert('이동~')"
+              @click="$router.push('/etpr-profile-info')"
             >
               <div class="card-thumb">
                 <thumbnail />

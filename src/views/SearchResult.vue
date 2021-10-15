@@ -172,7 +172,7 @@
             >
               <div
                 class="card"
-                @click="window.alert('이동~')"
+                @click="$router.push('/etpr-profile-info')"
               >
                 <div class="card-thumb">
                   <thumbnail />
