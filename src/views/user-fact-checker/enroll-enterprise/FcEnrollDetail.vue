@@ -30,10 +30,10 @@
       <article class="select-guide-box">
         <div class="txt-grp">
           <h6 class="txt-ttl">
-            소속된 기업이 있으신가요?
+            선택한 기업정보를 확인해주세요.
           </h6>
           <p class="txt-dec">
-            기업등록시 스타트업/투자자 회원으로 전환이 가능합니다.
+            스타트업 기업을 선택하였습니다.
           </p>
         </div>
         <div class="btn-grp">
