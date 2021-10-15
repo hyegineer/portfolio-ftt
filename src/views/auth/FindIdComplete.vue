@@ -36,7 +36,7 @@
         </div>
         <btn-solid
           class="btn-lg btn-full"
-          @click="window.alert('로그인하기 버튼을 클릭하셨습니다.')"
+          @click="$router.push('/login')"
         >
           로그인하기
         </btn-solid>
