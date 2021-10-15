@@ -296,7 +296,7 @@
           <div class="hd-side-bottom">
             <!-- 로그인 전 공용 메뉴 -->
             <div
-              v-if="!testIsUser"
+              v-if="testIsUser === false"
               class="sidemenu-wrap"
             >
               <router-link
@@ -346,7 +346,7 @@
 
             <!-- 투자자 회원일 때 -->
             <div
-              v-if="testUserType === 'investor'"
+              v-if="testIsUser && testUserType === 'investor'"
               class="sidemenu-wrap"
             >
               <router-link
@@ -496,7 +496,7 @@
 
             <!-- 스타트업 회원일 때 -->
             <div
-              v-if="testUserType === 'startup'"
+              v-if="testIsUser && testUserType === 'startup'"
               class="sidemenu-wrap"
             >
               <router-link
@@ -636,7 +636,7 @@
 
             <!-- 팩트체커 회원일 때 -->
             <div
-              v-if="testUserType === 'fact-checker'"
+              v-if="testIsUser && testUserType === 'fact-checker'"
               class="sidemenu-wrap"
             >
               <router-link
