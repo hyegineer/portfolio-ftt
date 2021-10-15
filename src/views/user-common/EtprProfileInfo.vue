@@ -354,7 +354,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
       </div>
       <div class="bottom-fixed-conts">
         <!-- TODO: toggle을 누르면 active가 toggle됨 -->
-        <div class="wide-panel check-fc-container active">
+        <div class="wide-panel check-fc-container">
           <div class="check-fc-conts-toggle">
             <div class="conts-wrap">
               <img
