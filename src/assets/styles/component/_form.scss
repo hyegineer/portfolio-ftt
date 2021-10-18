@@ -304,7 +304,7 @@ textarea.inp{ // 구성요소: 텍스트에어리어 기본 스타일
     cursor: pointer;
 
     &:hover{
-      // FIXME: 모바일에선 hover효과 막기
+      // FIXME: 모바일일 때 hover효과 막아야할 수도 있음
       background-color: #F9F9FB;
     }
 
