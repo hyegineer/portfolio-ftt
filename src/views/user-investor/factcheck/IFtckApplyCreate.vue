@@ -1,6 +1,9 @@
 <template>
   <!-- [D] 마이페이지 - 팩트체크-팩트체커신청-신청서작성 -->
-  <div class="mypage-container mypage-ftck-apply-create-page">
+  <div
+    mypage="ftck-apply-create-page"
+    class="mypage-container"
+  >
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>

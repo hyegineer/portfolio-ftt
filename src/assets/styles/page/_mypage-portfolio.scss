@@ -103,7 +103,7 @@
 }
 
 /* 투자자: 마이페이지 > 기업정보 > 포트폴리오 추가 */
-.mypage-etpr-portfolio-add-page{
+[mypage="etpr-portfolio-add-page"]{
   .invest-amount-item{
     @include flex{
       @include flex-op(center, flex-end);

@@ -80,7 +80,7 @@
 }
 
 /* 마이페이지 > 포인트 > 포인트 충전하기 */
-.mypage-point-charge-page{
+[mypage="point-charge-page"]{
   .amount-item{
     .amount, .unit{
       font-size: 18px;
@@ -134,7 +134,7 @@
 }
 
 /* 마이페이지 > 포인트 > 포인트 충전완료 페이지 */
-.mypage-point-charge-complete-page{
+[mypage="point-charge-complete-page"]{
   .charge-form-grp{
     justify-content: center;
     margin-top: 20px;
@@ -147,7 +147,7 @@
 }
 
 /* 마이페이지 > 포인트 > 멤버십 구매 페이지 */
-.mypage-membership-main-page{
+[mypage="membership-main-page"]{
   .keyword-card{
     margin-bottom: 10px;
   }
@@ -282,7 +282,7 @@
 }
 
 /* 마이페이지 > 포인트 > 멤버십 구매완료 페이지 */
-.mypage-membership-complete-page{
+[mypage="membership-complete-page"]{
   .charge-form-grp{
     justify-content: center;
     margin-top: 20px;

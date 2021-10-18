@@ -1,6 +1,6 @@
 <template>
   <!-- [D] 마이페이지 - 기존업체등록 -->
-  <div class="mypage-container waiting-search-company-container">
+  <div class="mypage-container">
     <div class="narrow-panel auth-panel">
       <div class="auth-hgrp">
         <img

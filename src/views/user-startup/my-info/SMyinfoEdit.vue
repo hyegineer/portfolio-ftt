@@ -1,6 +1,9 @@
 <template>
   <!-- [D] 마이페이지 - 내정보-내정보수정 -->
-  <div class="mypage-container myinfo-edit-page-container">
+  <div 
+    mypage="myinfo-edit-page"
+    class="mypage-container"
+  >
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>

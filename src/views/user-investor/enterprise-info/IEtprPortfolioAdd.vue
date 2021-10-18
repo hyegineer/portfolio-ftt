@@ -1,6 +1,9 @@
 <template>
   <!-- [D] 마이페이지 - 기업정보-포트폴리오 추가 -->
-  <div class="mypage-container mypage-rfixed-container mypage-etpr-portfolio-add-page">
+  <div
+    mypage="etpr-portfolio-add-page"
+    class="mypage-container mypage-rfixed-container"
+  >
     <!-- 업데이트 내역 -->
     <layout-right-fixed />
     <!-- // 업데이트 내역 -->

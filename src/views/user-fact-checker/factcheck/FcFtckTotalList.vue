@@ -1,6 +1,9 @@
 <template>
   <!-- [D] 마이페이지 - 팩트체크-전체 팩트체크 -->
-  <div class="mypage-container mypage-i-ftck-list-page">
+  <div
+    mypage="ftck-list-page"
+    class="mypage-container"
+  >
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>

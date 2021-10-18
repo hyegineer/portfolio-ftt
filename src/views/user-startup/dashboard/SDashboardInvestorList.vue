@@ -1,6 +1,9 @@
 <template>
   <!-- [D] 대시보드-투자기업에관심을가진투자자 -->
-  <div class="mypage-container mypage-dashboard-container">
+  <div 
+    mypage="dashboard"
+    class="mypage-container"
+  >
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>
