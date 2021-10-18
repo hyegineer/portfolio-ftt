@@ -656,12 +656,15 @@
       </h1>
 
       <div class="section-cont section-cards-cont">
-        <h2>7-1. 검색결과 프로필 카드</h2>
+        <h2>7-1. 검색결과 프로필 카드 (최근 조회일)</h2>
         <div class="card">
           <div class="card-thumb">
             <thumbnail />
             <span class="ribbon">정보 업데이트</span>
-            <avatar />
+            <div class="card-thumb-avatar">
+              <i class="icon icon-msg-white" />
+              <avatar />
+            </div>
           </div>
 
           <ul class="card-subtxt-grp">
@@ -697,13 +700,72 @@
               #태그텍스트여덟자
             </li>
           </ul>
-        </div>
 
-        <h2>7-2. 투자자 프로필 카드</h2>
+          <span class="fc-gray-light fz-12">최근 조회일: 2020.00.00</span>
+        </div>
+        
+        <h2>7-2. 검색결과 프로필 카드 (팩트체크 요청)</h2>
         <div class="card">
           <div class="card-thumb">
             <thumbnail />
-            <avatar />
+            <span class="ribbon">정보 업데이트</span>
+            <div class="card-thumb-avatar">
+              <i class="icon icon-msg-white" />
+              <avatar />
+            </div>
+          </div>
+
+          <ul class="card-subtxt-grp">
+            <li class="card-subtxt-list">
+              기업규모
+            </li>
+            <li class="card-subtxt-list">
+              산업분류
+            </li>
+            <li class="card-subtxt-list">
+              산업분야
+            </li>
+          </ul>
+
+          <h6 class="card-name">
+            주식회사 팩트컴퍼니z
+          </h6>
+
+          <ul class="card-tag-grp">
+            <li class="card-tag-list">
+              #태그텍스트여덟자
+            </li>
+            <li class="card-tag-list">
+              #태그텍스트여덟자
+            </li>
+            <li class="card-tag-list">
+              #태그텍스트여덟자
+            </li>
+            <li class="card-tag-list">
+              #태그텍스트여덟자
+            </li>
+            <li class="card-tag-list">
+              #태그텍스트여덟자
+            </li>
+          </ul>
+
+          <div class="space-between">
+            <span class="fz-12 fc-gray-light">팩트체크 요청</span>
+            <div class="amount-item">
+              <strong class="amount">100</strong>
+              <span class="unit">건</span>
+            </div>
+          </div>
+        </div>
+
+        <h2>7-3. 투자자 프로필 카드</h2>
+        <div class="card">
+          <div class="card-thumb">
+            <thumbnail />
+            <div class="card-thumb-avatar">
+              <i class="icon icon-msg-white" />
+              <avatar />
+            </div>
           </div>
 
           <span class="card-user-type">

@@ -37,7 +37,6 @@
             :key="index"
             class="card-grid"
           >
-            <!-- FIXME: 채팅아이콘, 최근조회일 추가해야함 -->
             <div
               class="card"
               @click="$router.push('/etpr-profile-info')"
@@ -45,7 +44,13 @@
               <div class="card-thumb">
                 <thumbnail />
                 <span class="ribbon">정보 업데이트</span>
-                <avatar />
+                <div 
+                  class="card-thumb-avatar"
+                  @click.stop="alert('해당 회사에게 쪽지 보내기 창이 열림 (확인 필요)')"
+                >
+                  <i class="icon icon-msg-white" />
+                  <avatar />
+                </div>
               </div>
 
               <ul class="card-subtxt-grp">
@@ -81,6 +86,8 @@
                   #태그텍스트여덟자
                 </li>
               </ul>
+
+              <span class="fc-gray-light fz-12">최근 조회일: 2020.00.00</span>
             </div>
           </div>
         </div>
