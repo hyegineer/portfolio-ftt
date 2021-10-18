@@ -113,18 +113,11 @@
                       태그
                     </h4>
                     <div class="dec">
-                      <div class="tag-badge">
-                        태그최대여덟글자
-                      </div>
-                      <div class="tag-badge">
-                        태그최대
-                      </div>
-                      <div class="tag-badge">
-                        여덟글자
-                      </div>
-                      <div class="tag-badge">
-                        두줄까지표시가능
-                      </div>
+                      <badge-rounded>태그최대여덟글자</badge-rounded>
+                      <badge-rounded>태그최대여덟글자</badge-rounded>
+                      <badge-rounded>태그최대여덟글자</badge-rounded>
+                      <badge-rounded>태그최대여덟글자</badge-rounded>
+                      <badge-rounded>태그최대여덟글자</badge-rounded>
                     </div>
                   </li>
                 </ul>

@@ -300,16 +300,10 @@
       color: #8E909F;
     }
 
-    .tag-badge {
-      display: inline-block;
+    .badge-rounded {
       margin-bottom: 5px;
       margin-right: 5px;
-      padding: 10px 15px;
-      border-radius: 50px;
-      background-color: #DFFFE8;
-      font-size: rem(13);
-      font-weight: 500;
-      color: #00CE6A;
+      -webkit-text-stroke: 0;
     }
   }
 
