@@ -1,6 +1,114 @@
 <template>
   <!-- [D] 마이페이지 - 기업정보-기본정보 -->
-  <div class="mypage-container">
+  <div class="mypage-container mypage-default-info-container">
+    <div class="right-fixed">
+      <div class="fixed-con-container">
+        <div class="fixed-con-ttl">
+          업데이트 내역 ({{ '5' }})
+        </div>
+        <div class="fixed-con-contents">
+          <div class="empty-conts">
+            <img
+              src="@/assets/images/icon/icon-empty-update.svg"
+              alt="업데이트 아이콘"
+            >
+            <p class="txt">
+              업데이트 내역이 없습니다.
+            </p>
+          </div>
+          <ul class="fixed-conts-list-wrap">
+            <li class="fixed-con-list">
+              <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
+              <div class="badge green">
+                {{ '팩트체커' }}
+              </div>
+              <div class="date">
+                {{ '2021.00.00 00:00' }}
+              </div>
+              <ul class="info-list">
+                <li class="info">
+                  {{ '기업정보' }}
+                </li>
+                <li class="info">
+                  {{ '재무상태' }}
+                </li>
+              </ul>
+              <a
+                href="#"
+                target="_blank"
+                class="view-link"
+              >+ 상세보기</a>
+            </li>
+            <li class="fixed-con-list">
+              <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
+              <div class="badge yellow">
+                {{ '자사' }}
+              </div>
+              <div class="date">
+                {{ '2021.00.00 00:00' }}
+              </div>
+              <ul class="info-list">
+                <li class="info">
+                  {{ '기업정보' }}
+                </li>
+                <li class="info">
+                  {{ '재무상태' }}
+                </li>
+              </ul>
+              <a
+                href="#"
+                target="_blank"
+                class="view-link"
+              >+ 상세보기</a>
+            </li>
+            <li class="fixed-con-list">
+              <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
+              <div class="badge">
+                {{ '팩트체커' }}
+              </div>
+              <div class="date">
+                {{ '2021.00.00 00:00' }}
+              </div>
+              <ul class="info-list">
+                <li class="info">
+                  {{ '기업정보' }}
+                </li>
+                <li class="info">
+                  {{ '재무상태' }}
+                </li>
+              </ul>
+              <a
+                href="#"
+                target="_blank"
+                class="view-link"
+              >+ 상세보기</a>
+            </li>
+            <li class="fixed-con-list">
+              <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
+              <div class="badge">
+                {{ '자사' }}
+              </div>
+              <div class="date">
+                {{ '2021.00.00 00:00' }}
+              </div>
+              <ul class="info-list">
+                <li class="info">
+                  {{ '기업정보' }}
+                </li>
+                <li class="info">
+                  {{ '재무상태' }}
+                </li>
+              </ul>
+              <a
+                href="#"
+                target="_blank"
+                class="view-link"
+              >+ 상세보기</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>
@@ -42,7 +150,7 @@
               안내사항
             </h6>
             <p class="txt">
-              원활한 투자를 위해 모든 작성란을 채워주세요. 
+              원활한 투자를 위해 모든 작성란을 채워주세요.
             </p>
           </div>
 
