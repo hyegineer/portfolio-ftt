@@ -657,6 +657,7 @@
 
 .hover-desc{ // 구성요소: 호버 툴팁
   position: relative;
+  font-size: 16px;
 
   @include media(1200px, min){
     &:hover{
@@ -733,12 +734,15 @@
     font-size: 13px;
     font-weight: 600;
     color: #171820;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
+    line-height: 1.5;
   }
 
   .desc{
     font-size: 12px;
+    line-height: 1.5;
     color: #5C5E70;
+    font-weight: 400;
   }
 
   .star-desc-list{
