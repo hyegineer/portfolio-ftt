@@ -183,7 +183,7 @@
 .add-inp-grp{ // 구성요소 - 항목 추가 input list
   width: 100%;
 
-  .inp-grp{
+  & > .inp-grp{
     margin-bottom: 5px;
   }
 
@@ -880,12 +880,53 @@
   }
 }
 
-.gradi-ment-box{
+.gradi-ment-box{ // 구성요소 컬러멘트박스 (그라데이션 버전)
   background: linear-gradient(to right, #3060FF, #00CE6A);
 
   .ment-box{
     .ttl{
       font-size: 22px;
+    }
+  }
+}
+
+.big-ttl-avatar-hd{
+  width: 100%;
+  border-bottom: 1px solid #DDDEE6;
+  padding-bottom: 30px;
+
+  .big-ttl-grp{
+    margin-bottom: 22px;
+  }
+}
+
+.big-ttl-grp { // 구성요소 형광펜 그어진 25px 타이틀박스
+  &.mb-add {
+    margin-bottom: 65px;
+  }
+
+  .cont-big-ttl {
+    font-size: rem(25);
+    font-weight: 500;
+    color: #171820;
+    line-height: 1.4;
+  }
+
+  .underline {
+    position: relative;
+    z-index: 1;
+    
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: auto;
+      bottom: 0;
+      width: 100%;
+      height: 6px;
+      background-color: #53FF81;
+      z-index: -1;
     }
   }
 }

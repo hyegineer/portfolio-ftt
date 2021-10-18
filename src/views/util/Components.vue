@@ -373,11 +373,20 @@
         <div class="inp-grp">
           <button
             type="button"
-            class="inp"
+            class="inp inp-icon"
           >
             <i class="icon icon-cal" />
             <span>2021.10.05</span>
           </button>
+        </div>
+
+        <div class="inp-grp inp-icon-grp">
+          <i class="icon icon-link" />
+          <input
+            type="text"
+            class="inp"
+            placeholder="아이콘있는 인풋"
+          >
         </div>
         <!-- // 인풋만 -->
 
@@ -547,6 +556,55 @@
           </template>
         </custom-slct>
         <!-- // 커스텀 셀렉트 2 -->
+
+        <h2>4-8. 항목 추가</h2>
+        
+        <div class="add-inp-grp">
+          <div class="inp-grp inp-btn-grp">
+            <input
+              type="text"
+              class="inp"
+            >
+            <btn-square-bd class="del-btn">
+              <span class="is-voice-only">항목 삭제</span>
+            </btn-square-bd>
+          </div>
+          <div class="inp-grp inp-btn-grp">
+            <div class="inp-grp inp-btn-grp mb-0">
+              <input
+                readonly
+                type="text"
+                class="inp"
+                placeholder="IR 자료"
+              >
+
+              <btn-bd-dark
+                class="btn-md"
+              >
+                파일첨부
+              </btn-bd-dark>
+            </div>
+              
+            <btn-square-bd class="del-btn">
+              <span class="is-voice-only">항목 삭제</span>
+            </btn-square-bd>
+          </div>
+          <div class="inp-grp inp-btn-grp">
+            <div class="inp-grp inp-icon-grp">
+              <i class="icon icon-link" />
+              <input
+                readonly
+                type="text"
+                class="inp"
+                placeholder="영상 링크 삽입"
+              >
+            </div>
+              
+            <btn-square-bd class="del-btn">
+              <span class="is-voice-only">항목 삭제</span>
+            </btn-square-bd>
+          </div>
+        </div>
       </div>
     </section>
 

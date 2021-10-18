@@ -147,11 +147,11 @@
     <modal-dialog>
       <modal-light-box @click="closeModal" />
 
-      <!-- [modal] 팩트체커 신청하기 -->
+      <!-- [modal] 팩트체크 신청하기 -->
       <modal
         :class="{'is-show': $store.state.modal.visible && $store.state.modal.type === 'applyFtck'}"
         wide
-        ttl="팩트체커 신청하기"
+        ttl="팩트체크 신청하기"
       >
         <div class="modal-cont">
           <p class="modal-cont-txt">
@@ -172,7 +172,7 @@
           </btn-solid-dark>
         </div>
       </modal>
-      <!-- // [modal] 팩트체커 신청하기 -->
+      <!-- // [modal] 팩트체크 신청하기 -->
     </modal-dialog>
   </div>
 </template>

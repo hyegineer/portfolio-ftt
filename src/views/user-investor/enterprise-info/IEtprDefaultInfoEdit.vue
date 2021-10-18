@@ -289,10 +289,11 @@
                     class="lbel-inp-grp"
                   >
                     <label class="lbel">홈페이지 주소</label>
-                    <div class="inp-grp">
+                    <div class="inp-grp inp-icon-grp">
+                      <i class="icon icon-link" />
                       <input
                         type="text"
-                        class="inp link-inp"
+                        class="inp"
                         value="https://www.팩트컴퍼니.com"
                       >
                     </div>
@@ -314,10 +315,11 @@
                     class="lbel-inp-grp"
                   >
                     <label class="lbel">전화번호</label>
-                    <div class="inp-grp">
+                    <div class="inp-grp inp-icon-grp">
+                      <i class="icon icon-link" />
                       <input
                         type="text"
-                        class="inp link-inp"
+                        class="inp"
                         value="000-123-5676"
                       >
                     </div>
@@ -361,7 +363,7 @@
                     <div class="inp-grp">
                       <button
                         type="button"
-                        class="inp"
+                        class="inp inp-icon"
                       >
                         <i class="icon icon-cal" />
                         <span>2021.10.05</span>

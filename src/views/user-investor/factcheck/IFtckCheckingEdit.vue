@@ -26,7 +26,7 @@
 
     <!-- 마이페이지 컨텐츠 영역 -->
     <div class="mypage-cont-wrap">
-      <!-- 나의 팩트체크 - 주의사항 설명박스 -->
+      <!-- 요청한 팩트체크 보완요청 - 주의사항 설명박스 -->
       <div class="ftck-caution-box">
         <div class="ftck-cb-ttl">
           <i class="icon icon-i-green" />
@@ -45,7 +45,7 @@
           </li>
         </ul>
       </div>
-      <!-- // 나의 팩트체크 - 주의사항 설명박스 -->
+      <!-- // 요청한 팩트체크 보완요청 - 주의사항 설명박스 -->
 
       <div class="ftck-detail-wrap">
         <!-- 제목 -->
@@ -84,69 +84,73 @@
 
         <!-- 내용 -->
         <div class="mypboard-detail-cont">
-          <h3 class="form-ttl">
-            보완요청 내용
-          </h3>
+          <form>
+            <fieldset>
+              <h3 class="form-ttl">
+                보완요청 내용
+              </h3>
 
-          <div class="form-item">
-            <custom-slct
-              class="custom-slct01 slct-depth01"
-              :selected="reason"
+              <div class="form-item">
+                <custom-slct
+                  class="custom-slct01 slct-depth01"
+                  :selected="reason"
+                >
+                  <template #select>
+                    <span class="word">
+                      {{ reason || '사유 선택' }}
+                    </span>
+                  </template>
+
+                  <template #options>
+                    <custom-slct-opt
+                      @click="reason = '원하는 내용이 아님'"
+                    >
+                      원하는 내용이 아님
+                    </custom-slct-opt>
+
+                    <custom-slct-opt
+                      @click="reason = '부적절한 데이터가 포함되어 있음'"
+                    >
+                      부적절한 데이터가 포함되어 있음
+                    </custom-slct-opt>
+
+                    <custom-slct-opt
+                      @click="reason = '팩트가 아닌 정보'"
+                    >
+                      팩트가 아닌 정보
+                    </custom-slct-opt>
+                  </template>
+                </custom-slct>
+              </div>
+
+              <div class="form-item">
+                <textarea
+                  class="inp"
+                  cols="30"
+                  rows="20"
+                  placeholder="내용 입력"
+                />
+              </div>
+            </fieldset>
+          </form>
+        
+          <div
+            position="double-centered"
+            class="btn-grp"
+          >
+            <btn-bd-light
+              class="btn-lg btn-full color-gray btn-prev"
             >
-              <template #select>
-                <span class="word">
-                  {{ reason || '사유 선택' }}
-                </span>
-              </template>
-
-              <template #options>
-                <custom-slct-opt
-                  @click="reason = '원하는 내용이 아님'"
-                >
-                  원하는 내용이 아님
-                </custom-slct-opt>
-
-                <custom-slct-opt
-                  @click="reason = '부적절한 데이터가 포함되어 있음'"
-                >
-                  부적절한 데이터가 포함되어 있음
-                </custom-slct-opt>
-
-                <custom-slct-opt
-                  @click="reason = '팩트가 아닌 정보'"
-                >
-                  팩트가 아닌 정보
-                </custom-slct-opt>
-              </template>
-            </custom-slct>
-          </div>
-
-          <div class="form-item">
-            <textarea
-              class="inp"
-              cols="30"
-              rows="20"
-              placeholder="내용 입력"
-            />
+              이전
+            </btn-bd-light>
+            <btn-solid
+              class="btn-lg btn-full"
+            >
+              보완요청 완료
+            </btn-solid>
           </div>
         </div>
         <!-- // 내용 -->
-        
-        <div
-          position="double-centered"
-          class="btn-grp"
-        >
-          <btn-bd-light
-            class="btn-lg btn-full color-gray btn-prev"
-          >
-            이전
-          </btn-bd-light>
-          <btn-solid
-            class="btn-lg btn-full"
-          >
-            보완요청 완료
-          </btn-solid>
-        </div>
       </div>
     </div>
     <!-- // 마이페이지 컨텐츠 영역 -->

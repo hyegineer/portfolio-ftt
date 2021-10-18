@@ -96,6 +96,7 @@
               <button
                 type="button"
                 class="btn-txt"
+                @click="$router.push('ftck-create')"
               >
                 <span class="txt">팩트체크 작성하기</span>
                 <i class="icon icon-gt-white" />

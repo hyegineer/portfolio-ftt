@@ -166,10 +166,11 @@
                   </div>
                   <div class="lbel-inp-grp">
                     <label class="lbel">홈페이지 주소</label>
-                    <div class="inp-grp">
+                    <div class="inp-grp inp-icon-grp">
+                      <i class="icon icon-link" />
                       <input
                         type="text"
-                        class="inp link-inp"
+                        class="inp"
                         placeholder="홈페이지 주소를 입력해주세요"
                       >
                     </div>
@@ -351,7 +352,7 @@
                   <div class="inp-grp">
                     <button
                       type="button"
-                      class="inp"
+                      class="inp inp-icon"
                     >
                       <i class="icon icon-cal" />
                       <span>2021.10.05</span>

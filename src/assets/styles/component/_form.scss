@@ -40,6 +40,10 @@
   @include inp-default;
 }
 
+.inp-icon{
+  padding: 14px 15px;
+}
+
 .inp-textarea {
   height: 200px;
   
@@ -61,6 +65,7 @@
 textarea.inp{ // 구성요소: 텍스트에어리어 기본 스타일
   resize: none;
   line-height: 1.5;
+  vertical-align: bottom;
 }
 
 .slct{ // 구성요소: 셀렉트 기본 스타일
@@ -140,6 +145,23 @@ textarea.inp{ // 구성요소: 텍스트에어리어 기본 스타일
     font-weight: 500;
     text-decoration: underline;
     color: #171820;
+  }
+}
+
+.inp-icon-grp{ // 구성요소: 아이콘 + 인풋
+  position: relative;
+
+  .icon{
+    @include absolute($t: 50%, $l: 16.5px);
+
+    z-index: 1;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+  }
+
+  .inp{
+    padding-left: 44px;
   }
 }
 
@@ -445,6 +467,22 @@ textarea.inp{ // 구성요소: 텍스트에어리어 기본 스타일
 
 .fvalidate-msg.is-fail{ // 구성요소: input 유효성검사멘트 (실패)
   color: #FF5175;
+}
+
+.form-ttl{
+  @include font-op($w: 600, $c: #171820){
+    font-size: 16px;
+  }
+
+  margin-bottom: 20px;
+}
+
+.form-item{
+  margin: 10px 0;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
 }
 
 /* ========== END 폼 관련 스타일 ========== */
