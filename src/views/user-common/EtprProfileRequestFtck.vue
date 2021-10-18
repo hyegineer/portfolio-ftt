@@ -206,6 +206,8 @@
       </div>
       <!-- // 마이페이지 컨텐츠 영역 -->
     </div>
+
+    <layout-footer />
   </div>
 </template>
 

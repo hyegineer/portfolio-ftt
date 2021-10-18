@@ -1,6 +1,9 @@
 <template>
   <!-- [D] 마이페이지 - 내정보-회원탈퇴 -->
-  <div class="mypage-container myinfo-leave-page-container">
+  <div
+    mypage="myinfo-leave-page"
+    class="mypage-container"
+  >
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>

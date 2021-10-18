@@ -1,6 +1,9 @@
 <template>
   <!-- [D] 마이페이지 - 팩트체크-요청한 팩트체크 검토중 & 진행완료 -->
-  <div class="mypage-container mypage-ftck-checking-detail-page">
+  <div
+    mypage="ftck-checking-detail-page"
+    class="mypage-container"
+  >
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>
@@ -87,8 +90,45 @@
               </div>
             </div>
 
-            <div>
-              <!-- FIXME img 박스영역들 -->
+            <div class="img-box-grp">
+              <div class="img-box">
+                <figure class="img-box-figure">
+                  <!-- [D] 이미지 있을 때 아래 img 태그 보임 -->
+                  <img
+                    src="@/assets/images/dft/exvertical.png"
+                    alt=""
+                    class="img-input"
+                  >
+
+                  <!-- [D] 이미지 없을 때 아래 span 태그 보임 -->
+                  <!-- <span class="img-box-txt">img</span> -->
+                </figure>
+
+                <!-- [D] 확대할 수 있는 이미지일 경우 아래 아이콘 보임 -->
+                <i
+                  class="icon icon-zoom" 
+                  @click="openModal('detailImg')"
+                />
+              </div>
+              <div class="img-box">
+                <figure class="img-box-figure">
+                  <!-- [D] 이미지 있을 때 아래 img 태그 보임 -->
+                  <!-- <img
+                    src="@/assets/images/dft/ex.jpg"
+                    alt=""
+                    class="img-input"
+                  > -->
+
+                  <!-- [D] 이미지 없을 때 아래 span 태그 보임 -->
+                  <span class="img-box-txt">img</span>
+                </figure>
+
+                <!-- [D] 확대할 수 있는 이미지일 경우 아래 아이콘 보임 -->
+                <!-- <i
+                  class="icon icon-zoom" 
+                  @click="openModal('detailImg')"
+                /> -->
+              </div>
             </div>
 
             <p class="p-preline">
@@ -157,6 +197,39 @@
       <!-- // 이전 / 목록 / 다음 -->
     </div>
     <!-- // 마이페이지 컨텐츠 영역 -->
+    
+    <modal-dialog>
+      <modal-light-box @click="closeModal" />
+
+      <!-- [modal] 이미지 자세히보기 모달 -->
+      <div
+        class="modal modal-detail-img"
+        :class="{'is-show': $store.state.modal.visible && $store.state.modal.type === 'detailImg'}"
+      >
+        <button
+          type="button"
+          class="btn close-btn"
+          @click="closeModal"
+        >
+          <i class="icon icon-close-shadow" />
+          <span class="is-voice-only">닫기</span>
+        </button>
+        <div class="img-box">
+          <figure class="img-box-figure">
+            <!-- [D] 이미지 있을 때 아래 img 태그 보임 -->
+            <img
+              src="@/assets/images/dft/exvertical.png"
+              alt=""
+              class="img-input"
+            >
+
+            <!-- [D] 이미지 없을 때 아래 span 태그 보임 -->
+            <!-- <span class="img-box-txt">img</span> -->
+          </figure>
+        </div>
+      </div>
+      <!-- // [modal] 이미지 자세히보기 모달 -->
+    </modal-dialog>
   </div>
 </template>
 

@@ -1,6 +1,9 @@
 <template>
   <!-- [D] 마이페이지 - 쪽지함 목록 -->
-  <div class="mypage-container mypage-white-container mypage-note-list-page">
+  <div
+    mypage="note-list-page"
+    class="mypage-container mypage-white-container"
+  >
     <div class="mypage-white-panel">
       <!-- 마이페이지 페이지 제목 -->
       <div class="mypage-hgrp">

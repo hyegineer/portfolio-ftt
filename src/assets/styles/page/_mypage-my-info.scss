@@ -25,7 +25,7 @@
 }
 
 // 마이페이지 > 내 정보(스타트업)
-.myinfo-page-container {
+[mypage="myinfo-page"] {
 
   .mypage-card {
     display: flex;
@@ -133,7 +133,7 @@
 
 
 // 마이페이지 > 내 정보 > 내 정보 수정(스타트업)
-.myinfo-edit-page-container {
+[mypage="myinfo-edit-page"] {
   
   .mypage-card {
     background-color: #fff;
@@ -147,7 +147,7 @@
 
 
 // // 마이페이지 > 내 정보 > 회원탈퇴(스타트업)
-.myinfo-leave-page-container {
+[mypage="myinfo-leave-page"] {
 
   .mypage-card {
     background-color: #fff;
@@ -221,7 +221,7 @@
 
 
 // 마이페이지 - 대기중(그룹 강퇴 당하거나 승인 전)
-.waiting-page-container {
+[mypage="wating-page"] {
 
   .waiting-cont-wrap {
     background-color: #fff;
@@ -266,7 +266,7 @@
 
 
 // // 마이페이지 - 신청 대기중 - 완료(그룹 강퇴 당하거나 승인 전)
-.waiting-complete-container {
+[mypage="waiting-complete-page"] {
 
   .ment-wrap {
     margin-bottom: 40px;

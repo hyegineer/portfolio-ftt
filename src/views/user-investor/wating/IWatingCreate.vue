@@ -1,6 +1,6 @@
 <template>
   <!-- [D] 마이페이지 - 신규업체등록 -->
-  <div class="mypage-container waiting-create-container">
+  <div class="mypage-container">
     <div class="waiting-create-cont-wrap">
       <div class="narrow-panel auth-panel">
         <div class="auth-hgrp">

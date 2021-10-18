@@ -300,16 +300,10 @@
       color: #8E909F;
     }
 
-    .tag-badge {
-      display: inline-block;
+    .badge-rounded {
       margin-bottom: 5px;
       margin-right: 5px;
-      padding: 10px 15px;
-      border-radius: 50px;
-      background-color: #DFFFE8;
-      font-size: rem(13);
-      font-weight: 500;
-      color: #00CE6A;
+      -webkit-text-stroke: 0;
     }
   }
 
@@ -469,6 +463,10 @@
 .etpr-prifile-page {
   background-color: #F9F9FB;
 
+  .hover-desc-box{
+    min-width: 180px;
+  }
+
   .page-container {
     position: relative;
     padding-top: 40px;
@@ -476,7 +474,7 @@
 
   .wide-panel {
     position: relative;
-    z-index: 5;
+    // z-index: 5;
   }
 
   .section-ttl {
@@ -487,7 +485,7 @@
     position: relative;
     margin-top: 60px;
     margin-bottom: 30px;
-    font-size: rem(25);
+    font-size: 25px;
     font-weight: 600;
     color: #171820;
 
@@ -516,25 +514,10 @@
         padding-top: 0;
       }
   }
-
-  .badge {
-    display: inline-block;
-    padding: 6px 8px;
-    border: 1px solid #5C5E70;
-    background-color: #8E909F;
-    font-size: rem(12);
-    font-weight: 400;
-    color: white;
-
-    &.yellow {
-      border-color: #FF9900;
-      background-color: #FFB300;
-    }
-
-    &.green {
-      border-color: #009A75;
-      background-color: #00BF92;
-    }
+  
+  .section-ttl.section-ttl-verti{
+    @include flex-col;
+    @include flex-op(flex-start, flex-start);
   }
 
   .top-cont-wrap {
@@ -712,6 +695,7 @@
       font-size: rem(12);
       font-weight: 400;
       color: #5C5E70;
+      flex-shrink: 0;
     }
 
     .bold {
@@ -720,6 +704,10 @@
       font-weight: 600;
       color: #171820;
       -webkit-text-stroke: 0.2px #171820;
+    }
+
+    .inp-grp{
+      margin-top: 0;
     }
   }
 

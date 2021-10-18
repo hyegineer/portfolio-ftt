@@ -1,115 +1,12 @@
 <template>
   <div class="page etpr-prifile-page">
-    <layout-header />
+    <layout-header id="header" />
+
     <div class="page-container">
-      <div class="right-fixed">
-        <div class="fixed-con-container">
-          <div class="fixed-con-ttl">
-            업데이트 내역 ({{ '5' }})
-          </div>
-          <div class="fixed-con-contents">
-            <div class="empty-conts">
-              <img
-                src="@/assets/images/icon/icon-empty-update.svg"
-                alt="업데이트 아이콘"
-              >
-              <p class="txt">
-                업데이트 내역이 없습니다.
-              </p>
-            </div>
-            <ul class="fixed-conts-list-wrap">
-              <li class="fixed-con-list">
-                <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
-                <div class="badge green">
-                  {{ '팩트체커' }}
-                </div>
-                <div class="date">
-                  {{ '2021.00.00 00:00' }}
-                </div>
-                <ul class="info-list">
-                  <li class="info">
-                    {{ '기업정보' }}
-                  </li>
-                  <li class="info">
-                    {{ '재무상태' }}
-                  </li>
-                </ul>
-                <a
-                  href="#"
-                  target="_blank"
-                  class="view-link"
-                >+ 상세보기</a>
-              </li>
-              <li class="fixed-con-list">
-                <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
-                <div class="badge yellow">
-                  {{ '자사' }}
-                </div>
-                <div class="date">
-                  {{ '2021.00.00 00:00' }}
-                </div>
-                <ul class="info-list">
-                  <li class="info">
-                    {{ '기업정보' }}
-                  </li>
-                  <li class="info">
-                    {{ '재무상태' }}
-                  </li>
-                </ul>
-                <a
-                  href="#"
-                  target="_blank"
-                  class="view-link"
-                >+ 상세보기</a>
-              </li>
-              <li class="fixed-con-list">
-                <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
-                <div class="badge">
-                  {{ '팩트체커' }}
-                </div>
-                <div class="date">
-                  {{ '2021.00.00 00:00' }}
-                </div>
-                <ul class="info-list">
-                  <li class="info">
-                    {{ '기업정보' }}
-                  </li>
-                  <li class="info">
-                    {{ '재무상태' }}
-                  </li>
-                </ul>
-                <a
-                  href="#"
-                  target="_blank"
-                  class="view-link"
-                >+ 상세보기</a>
-              </li>
-              <li class="fixed-con-list">
-                <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
-                <div class="badge">
-                  {{ '자사' }}
-                </div>
-                <div class="date">
-                  {{ '2021.00.00 00:00' }}
-                </div>
-                <ul class="info-list">
-                  <li class="info">
-                    {{ '기업정보' }}
-                  </li>
-                  <li class="info">
-                    {{ '재무상태' }}
-                  </li>
-                </ul>
-                <a
-                  href="#"
-                  target="_blank"
-                  class="view-link"
-                >+ 상세보기</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <!-- 업데이트 내역 -->
+      <layout-right-fixed />
+      <!-- // 업데이트 내역 -->
+
       <div class="wide-panel">
         <breadcrumb>
           <li class="txt">
@@ -240,9 +137,18 @@
                 </div>
                 <div class="use-point point">
                   <span class="ttl">사용 포인트</span>
-                  <b class="bold">{{ '1,000' }}</b>
-                  <div class="badge-p">
-                    <span class="is-voice-only">포인트</span>
+                  
+                  <div class="inp-grp inp-unit-grp">
+                    <input
+                      type="text"
+                      placeholder="사용 포인트 입력"
+                      class="inp"
+                    >
+                    <div class="inp-unit">
+                      <div class="badge-p">
+                        <span class="is-voice-only">포인트</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -352,6 +258,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
           </div>
         </div>
       </div>
+
       <div class="bottom-fixed-conts">
         <!-- TODO: toggle을 누르면 active가 toggle됨 -->
         <div class="wide-panel check-fc-container">
@@ -495,25 +402,25 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   <div class="hover-desc">
                     <span
                       class="hover-overlay mb-show"
-                      :class="{'is-show': mbMdOptions2.visible}"
-                      @click="mbMdClose('question')"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-dft-info' && mbMdOptions.visible}"
+                      @click="mbMdControl(null, 'close')"
                     />
   
                     <div
                       class="badge-qus"
-                      @click="mbMdOpen('question')"
+                      @click="mbMdControl('ttip-dft-info', 'open')"
                     >
-                      <span class="is-voice-only">도움말</span>
+                      <span class="is-voice-only">기업 기본정보 툴팁 내용</span>
                     </div>
   
                     <div
                       class="hover-desc-box"
-                      :class="{'is-show' : mbMdOptions2.visible}"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-dft-info' && mbMdOptions.visible}"
                     >
-                      <span class="ttl">토글 제목</span>
+                      <span class="ttl">기업 기본정보</span>
   
                       <p class="desc">
-                        해당 토글 내용
+                        기업 기본정보에 대한 내용입니다.
                       </p>
                     </div>
                   </div>
@@ -596,18 +503,11 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                         태그
                       </h4>
                       <div class="dec">
-                        <div class="tag-badge">
-                          태그최대여덟글자
-                        </div>
-                        <div class="tag-badge">
-                          태그최대
-                        </div>
-                        <div class="tag-badge">
-                          여덟글자
-                        </div>
-                        <div class="tag-badge">
-                          두줄까지표시가능
-                        </div>
+                        <badge-rounded>태그최대여덟글자</badge-rounded>
+                        <badge-rounded>태그최대여덟글자</badge-rounded>
+                        <badge-rounded>태그최대여덟글자</badge-rounded>
+                        <badge-rounded>태그최대여덟글자</badge-rounded>
+                        <badge-rounded>태그최대여덟글자</badge-rounded>
                       </div>
                     </li>
                   </ul>
@@ -634,25 +534,25 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   <div class="hover-desc">
                     <span
                       class="hover-overlay mb-show"
-                      :class="{'is-show': mbMdOptions2.visible}"
-                      @click="mbMdClose('question')"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-help' && mbMdOptions.visible}"
+                      @click="mbMdControl(null, 'close')"
                     />
   
                     <div
                       class="badge-qus"
-                      @click="mbMdOpen('question')"
+                      @click="mbMdControl('ttip-help', 'open')"
                     >
-                      <span class="is-voice-only">도움말</span>
+                      <span class="is-voice-only">기업가치 툴팁 내용</span>
                     </div>
   
                     <div
                       class="hover-desc-box"
-                      :class="{'is-show' : mbMdOptions2.visible}"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-help' && mbMdOptions.visible}"
                     >
-                      <span class="ttl">토글 제목</span>
+                      <span class="ttl">기업가치</span>
   
                       <p class="desc">
-                        해당 토글 내용
+                        기업가치에 대한 툴팁 내용입니다.
                       </p>
                     </div>
                   </div>
@@ -702,25 +602,25 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   <div class="hover-desc">
                     <span
                       class="hover-overlay mb-show"
-                      :class="{'is-show': mbMdOptions2.visible}"
-                      @click="mbMdClose('question')"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-scale' && mbMdOptions.visible}"
+                      @click="mbMdControl(null, 'close')"
                     />
   
                     <div
                       class="badge-qus"
-                      @click="mbMdOpen('question')"
+                      @click="mbMdControl('ttip-scale', 'open')"
                     >
-                      <span class="is-voice-only">도움말</span>
+                      <span class="is-voice-only">규모 툴팁 내용</span>
                     </div>
   
                     <div
                       class="hover-desc-box"
-                      :class="{'is-show' : mbMdOptions2.visible}"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-scale' && mbMdOptions.visible}"
                     >
-                      <span class="ttl">토글 제목</span>
+                      <span class="ttl">규모</span>
   
                       <p class="desc">
-                        해당 토글 내용
+                        규모에 대한 툴팁 내용입니다.
                       </p>
                     </div>
                   </div>
@@ -931,25 +831,25 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   <div class="hover-desc">
                     <span
                       class="hover-overlay mb-show"
-                      :class="{'is-show': mbMdOptions2.visible}"
-                      @click="mbMdClose('question')"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-holder-info' && mbMdOptions.visible}"
+                      @click="mbMdControl(null, 'close')"
                     />
   
                     <div
                       class="badge-qus"
-                      @click="mbMdOpen('question')"
+                      @click="mbMdControl('ttip-holder-info', 'open')"
                     >
-                      <span class="is-voice-only">도움말</span>
+                      <span class="is-voice-only">주주정보 툴팁 내용</span>
                     </div>
   
                     <div
                       class="hover-desc-box"
-                      :class="{'is-show' : mbMdOptions2.visible}"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-holder-info' && mbMdOptions.visible}"
                     >
-                      <span class="ttl">토글 제목</span>
+                      <span class="ttl">주주정보</span>
   
                       <p class="desc">
-                        해당 토글 내용
+                        주주정보에 대한 툴팁 내용입니다.
                       </p>
                     </div>
                   </div>
@@ -992,25 +892,25 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   <div class="hover-desc">
                     <span
                       class="hover-overlay mb-show"
-                      :class="{'is-show': mbMdOptions2.visible}"
-                      @click="mbMdClose('question')"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-finance' && mbMdOptions.visible}"
+                      @click="mbMdControl(null, 'close')"
                     />
   
                     <div
                       class="badge-qus"
-                      @click="mbMdOpen('question')"
+                      @click="mbMdControl('ttip-finance', 'open')"
                     >
-                      <span class="is-voice-only">도움말</span>
+                      <span class="is-voice-only">재무상태 툴팁 내용</span>
                     </div>
   
                     <div
                       class="hover-desc-box"
-                      :class="{'is-show' : mbMdOptions2.visible}"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-finance' && mbMdOptions.visible}"
                     >
-                      <span class="ttl">토글 제목</span>
+                      <span class="ttl">재무상태</span>
   
                       <p class="desc">
-                        해당 토글 내용
+                        재무상태에 대한 툴팁 내용입니다.
                       </p>
                     </div>
                   </div>
@@ -1051,25 +951,25 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   <div class="hover-desc">
                     <span
                       class="hover-overlay mb-show"
-                      :class="{'is-show': mbMdOptions2.visible}"
-                      @click="mbMdClose('question')"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-calc' && mbMdOptions.visible}"
+                      @click="mbMdControl(null, 'close')"
                     />
   
                     <div
                       class="badge-qus"
-                      @click="mbMdOpen('question')"
+                      @click="mbMdControl('ttip-calc', 'open')"
                     >
-                      <span class="is-voice-only">도움말</span>
+                      <span class="is-voice-only">손익계산서 툴팁 내용</span>
                     </div>
   
                     <div
                       class="hover-desc-box"
-                      :class="{'is-show' : mbMdOptions2.visible}"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-calc' && mbMdOptions.visible}"
                     >
-                      <span class="ttl">토글 제목</span>
+                      <span class="ttl">손익계산서</span>
   
                       <p class="desc">
-                        해당 토글 내용
+                        손익계산서에 대한 툴팁 내용입니다.
                       </p>
                     </div>
                   </div>
@@ -1112,25 +1012,25 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   <div class="hover-desc">
                     <span
                       class="hover-overlay mb-show"
-                      :class="{'is-show': mbMdOptions2.visible}"
-                      @click="mbMdClose('question')"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-sales' && mbMdOptions.visible}"
+                      @click="mbMdControl(null, 'close')"
                     />
   
                     <div
                       class="badge-qus"
-                      @click="mbMdOpen('question')"
+                      @click="mbMdControl('ttip-sales', 'open')"
                     >
-                      <span class="is-voice-only">도움말</span>
+                      <span class="is-voice-only">매출 추이 툴팁 내용</span>
                     </div>
   
                     <div
                       class="hover-desc-box"
-                      :class="{'is-show' : mbMdOptions2.visible}"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-sales' && mbMdOptions.visible}"
                     >
-                      <span class="ttl">토글 제목</span>
+                      <span class="ttl">매출 추이</span>
   
                       <p class="desc">
-                        해당 토글 내용
+                        매출 추이에 대한 툴팁 내용입니다.
                       </p>
                     </div>
                   </div>
@@ -1171,25 +1071,25 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   <div class="hover-desc">
                     <span
                       class="hover-overlay mb-show"
-                      :class="{'is-show': mbMdOptions2.visible}"
-                      @click="mbMdClose('question')"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-sales-benefits' && mbMdOptions.visible}"
+                      @click="mbMdControl(null, 'close')"
                     />
   
                     <div
                       class="badge-qus"
-                      @click="mbMdOpen('question')"
+                      @click="mbMdControl('ttip-sales-benefits', 'open')"
                     >
-                      <span class="is-voice-only">도움말</span>
+                      <span class="is-voice-only">영업이익 추이 툴팁 내용</span>
                     </div>
   
                     <div
                       class="hover-desc-box"
-                      :class="{'is-show' : mbMdOptions2.visible}"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-sales-benefits' && mbMdOptions.visible}"
                     >
-                      <span class="ttl">토글 제목</span>
+                      <span class="ttl">영업이익 추이</span>
   
                       <p class="desc">
-                        해당 토글 내용
+                        영업이익에 대한 툴팁 내용입니다.
                       </p>
                     </div>
                   </div>
@@ -1230,25 +1130,25 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   <div class="hover-desc">
                     <span
                       class="hover-overlay mb-show"
-                      :class="{'is-show': mbMdOptions2.visible}"
-                      @click="mbMdClose('question')"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-net-incomes' && mbMdOptions.visible}"
+                      @click="mbMdControl(null, 'close')"
                     />
   
                     <div
                       class="badge-qus"
-                      @click="mbMdOpen('question')"
+                      @click="mbMdControl('ttip-net-incomes', 'open')"
                     >
-                      <span class="is-voice-only">도움말</span>
+                      <span class="is-voice-only">당기순이익 추이 툴팁 내용</span>
                     </div>
   
                     <div
                       class="hover-desc-box"
-                      :class="{'is-show' : mbMdOptions2.visible}"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-net-incomes' && mbMdOptions.visible}"
                     >
-                      <span class="ttl">토글 제목</span>
+                      <span class="ttl">당기순이익 추이</span>
   
                       <p class="desc">
-                        해당 토글 내용
+                        당기순이익 추이에 대한 툴팁 내용입니다.
                       </p>
                     </div>
                   </div>
@@ -1559,32 +1459,32 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
         <!-- END 관련 소식 -->
         <!-- 투자자 리뷰 -->
         <div class="etpr-main-conts">
-          <h2 class="section-ttl">
+          <h2 class="section-ttl section-ttl-verti">
             투자자 리뷰
             <div class="ttl-dec">
               <span class="txt">5가지 항목에 적용된 종합 점수입니다.</span>
               <div class="hover-desc">
                 <span
                   class="hover-overlay mb-show"
-                  :class="{'is-show': mbMdOptions2.visible}"
-                  @click="mbMdClose('question')"
+                  :class="{'is-show': mbMdOptions.type === 'ttip-review' && mbMdOptions.visible}"
+                  @click="mbMdControl(null, 'close')"
                 />
 
                 <div
                   class="badge-qus"
-                  @click="mbMdOpen('question')"
+                  @click="mbMdControl('ttip-review', 'open')"
                 >
-                  <span class="is-voice-only">도움말</span>
+                  <span class="is-voice-only">투자자 리뷰 툴팁 내용</span>
                 </div>
 
                 <div
                   class="hover-desc-box"
-                  :class="{'is-show' : mbMdOptions2.visible}"
+                  :class="{'is-show': mbMdOptions.type === 'ttip-review' && mbMdOptions.visible}"
                 >
-                  <span class="ttl">토글 제목</span>
+                  <span class="ttl">투자자 리뷰</span>
 
                   <p class="desc">
-                    해당 토글 내용
+                    투자자 리뷰에 대한 툴팁 내용입니다.
                   </p>
                 </div>
               </div>
@@ -1610,13 +1510,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   <div class="hover-desc">
                     <span
                       class="hover-overlay mb-show"
-                      :class="{'is-show': mbMdOptions1.visible}"
-                      @click="mbMdClose('star')"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-star' && mbMdOptions.visible}"
+                      @click="mbMdControl(null, 'close')"
                     />
   
                     <div
                       class="star-txt"
-                      @click="mbMdOpen('star')"
+                      @click="mbMdControl('ttip-star', 'open')"
                     >
                       <i class="icon icon-star" />
                       <span class="txt">4.3</span>
@@ -1624,7 +1524,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
   
                     <div
                       class="hover-desc-box"
-                      :class="{'is-show' : mbMdOptions1.visible}"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-star' && mbMdOptions.visible}"
                     >
                       <span class="ttl">종합 점수</span>
   
@@ -1701,13 +1601,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   <div class="hover-desc">
                     <span
                       class="hover-overlay mb-show"
-                      :class="{'is-show': mbMdOptions1.visible}"
-                      @click="mbMdClose('star')"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-star-other' && mbMdOptions.visible}"
+                      @click="mbMdControl(null, 'close')"
                     />
   
                     <div
                       class="star-txt"
-                      @click="mbMdOpen('star')"
+                      @click="mbMdControl('ttip-star-other', 'open')"
                     >
                       <i class="icon icon-star" />
                       <span class="txt">4.3</span>
@@ -1715,7 +1615,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
   
                     <div
                       class="hover-desc-box"
-                      :class="{'is-show' : mbMdOptions1.visible}"
+                      :class="{'is-show': mbMdOptions.type === 'ttip-star-other' && mbMdOptions.visible}"
                     >
                       <span class="ttl">종합 점수</span>
   
@@ -1773,97 +1673,6 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                 </div>
                 <div class="middle-conts">
                   {{'투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.'}}
-                </div>
-                <div class="right-conts">
-                  {{ '2021.00.00  00:00' }}
-                </div>
-              </div>
-            </div>
-  
-            <div class="white-panel review-card">
-              <div class="review-inner">
-                <div class="left-conts">
-                  <div class="name">
-                    {{ '익명' }}
-                  </div>
-                  <div class="type">
-                    {{ '개인 투자자' }}
-                  </div>
-                  <div class="hover-desc">
-                    <span
-                      class="hover-overlay mb-show"
-                      :class="{'is-show': mbMdOptions1.visible}"
-                      @click="mbMdClose('star')"
-                    />
-  
-                    <div
-                      class="star-txt"
-                      @click="mbMdOpen('star')"
-                    >
-                      <i class="icon icon-star" />
-                      <span class="txt">4.3</span>
-                    </div>
-  
-                    <div
-                      class="hover-desc-box"
-                      :class="{'is-show' : mbMdOptions1.visible}"
-                    >
-                      <span class="ttl">종합 점수</span>
-  
-                      <dl class="star-desc-list">
-                        <dt class="desc-ttl">
-                          기술성
-                        </dt>
-                        <dd class="desc-dt">
-                          <i class="icon icon-star" />
-                          <span class="txt">5</span>
-                        </dd>
-                      </dl>
-  
-                      <dl class="star-desc-list">
-                        <dt class="desc-ttl">
-                          시장성
-                        </dt>
-                        <dd class="desc-dt">
-                          <i class="icon icon-star" />
-                          <span class="txt">5</span>
-                        </dd>
-                      </dl>
-  
-                      <dl class="star-desc-list">
-                        <dt class="desc-ttl">
-                          팀역량
-                        </dt>
-                        <dd class="desc-dt">
-                          <i class="icon icon-star" />
-                          <span class="txt">5</span>
-                        </dd>
-                      </dl>
-  
-                      <dl class="star-desc-list">
-                        <dt class="desc-ttl">
-                          실행역량
-                        </dt>
-                        <dd class="desc-dt">
-                          <i class="icon icon-star" />
-                          <span class="txt">5</span>
-                        </dd>
-                      </dl>
-  
-                      <dl class="star-desc-list">
-                        <dt class="desc-ttl">
-                          아이템 우수성
-                        </dt>
-                        <dd class="desc-dt">
-                          <i class="icon icon-star" />
-                          <span class="txt">5</span>
-                        </dd>
-                      </dl>
-                    </div>
-                  </div>
-                </div>
-                <div class="middle-conts">
-                  {{'투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.'}}
                 </div>
                 <div class="right-conts">
                   {{ '2021.00.00  00:00' }}
@@ -1928,8 +1737,9 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
         </div>
         <!-- END 투자자 리뷰 -->
       </div>
-    <!-- END 정보 영역 -->
+      <!-- END 정보 영역 -->
     </div>
+    
     <layout-footer />
   </div>
 </template>
@@ -1938,36 +1748,29 @@ export default {
   name: 'EtprProfileInfo',
   data() {
     return {
-      mbMdOptions1: {
-        visible: false,
-      },
-      mbMdOptions2: {
-        visible: false,
+      mbMdOptions: {
+        type: null, // 모바일일 때는 툴팁 팝업으로 할 때 타입 데이터
+        visible: false, // 모바일일 때는 툴팁 팝업으로 할 때 보이게하는 속성
       },
     };
   },
   methods: {
-    mbMdOpen(opt) {
+    mbMdControl(opt, toggle) { // 모바일일 때만 작동
       if(window.innerWidth <= 600) {
-        switch (opt) {
-        case 'star':
-          this.mbMdOptions1.visible = true;
-          break;
-        case 'question':
-          this.mbMdOptions2.visible = true;
-          break;
+        this.mbMdOptions.type = opt;
+          
+        if(toggle === 'open') {
+          this.mbMdOptions.visible = true;
+
+          // 일부 dom z-index 조절해야할 때 아래 로직 사용
+          // document.querySelector('#header').style.zIndex = 5; 
         }
-      }
-    },
-    mbMdClose(opt) {
-      if(window.innerWidth <= 600) {
-        switch (opt) {
-        case 'star':
-          this.mbMdOptions1.visible = false;
-          break;
-        case 'question':
-          this.mbMdOptions2.visible = false;
-          break;
+
+        if(toggle === 'close') {
+          this.mbMdOptions.visible = false;
+          
+          // 일부 dom 조절한 z-index 원복해야할 때 아래 로직 사용
+          // document.querySelector('#header').style.zIndex = 100;
         }
       }
     },

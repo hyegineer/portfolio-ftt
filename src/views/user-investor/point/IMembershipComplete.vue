@@ -1,6 +1,9 @@
 <template>
   <!-- [D] 마이페이지 - 포인트-멤버십 구매 완료 -->
-  <div class="mypage-container mypage-membership-complete-page">
+  <div
+    mypage="membership-complete-page"
+    class="mypage-container"
+  >
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>

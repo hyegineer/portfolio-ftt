@@ -3,6 +3,10 @@ body{
   margin: 0 auto;
   position: relative;
   min-width: 1250px;
+
+  @include media(980px){
+    min-width: auto;
+  }
 }
 
 .empty-wrap{ // 구성요소: 컨텐츠 없을 때 스타일
@@ -935,5 +939,55 @@ body{
       background-color: #53FF81;
       z-index: -1;
     }
+  }
+}
+
+.img-box-grp{
+  @include flex{
+    @include flex-op(stretch, flex-start);
+  };
+
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.img-box{
+  width: 100%;
+  max-width: 339px;
+  background-color: #F9F9FB;
+  border: 1px solid #DDDEE6;
+  position: relative;
+
+  .img-box-figure{
+    width: 100%;
+    padding-top: 59.35%;
+    position: relative;
+  }
+
+  .img-input{
+    @include absolute;
+
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    vertical-align: bottom;
+  }
+
+  .img-box-txt{
+    @include translate($t: 50%, $l: 50%);
+    @include font-op($w: 500, $c: #DDDEE6){
+      font-size: 42px;
+    }
+
+    text-transform: uppercase;
+  }
+
+  .icon-zoom{
+    @include absolute($b: 0, $r: 0);
+
+    z-index: 2;
+    cursor: pointer;
   }
 }

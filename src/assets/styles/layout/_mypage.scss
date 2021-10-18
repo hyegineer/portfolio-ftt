@@ -81,6 +81,8 @@
   padding: 40px;
 }
 
+
+
 /* ----------------- END 레이아웃 ----------------- */
 
 /* ----------------- 사이드네비게이션 ----------------- */
@@ -254,6 +256,12 @@
 
   .mypage-common-card .pagination{
     margin-bottom: 0;
+  }
+}
+
+.mypage-rfixed-container{
+  .mypage-cont-wrap{
+    max-width: 947px;
   }
 }
 

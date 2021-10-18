@@ -1,6 +1,9 @@
 <template>
   <!-- [D] 마이페이지 - 대시보드 -->
-  <div class="mypage-container mypage-dashboard-container">
+  <div
+    mypage="dashboard"
+    class="mypage-container"
+  >
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>
@@ -113,18 +116,11 @@
                       태그
                     </h4>
                     <div class="dec">
-                      <div class="tag-badge">
-                        태그최대여덟글자
-                      </div>
-                      <div class="tag-badge">
-                        태그최대
-                      </div>
-                      <div class="tag-badge">
-                        여덟글자
-                      </div>
-                      <div class="tag-badge">
-                        두줄까지표시가능
-                      </div>
+                      <badge-rounded>태그최대여덟글자</badge-rounded>
+                      <badge-rounded>태그최대여덟글자</badge-rounded>
+                      <badge-rounded>태그최대여덟글자</badge-rounded>
+                      <badge-rounded>태그최대여덟글자</badge-rounded>
+                      <badge-rounded>태그최대여덟글자</badge-rounded>
                     </div>
                   </li>
                 </ul>

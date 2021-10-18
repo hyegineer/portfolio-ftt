@@ -50,6 +50,34 @@
   &.modal-wide{
     max-width: 390px;
   }
+
+  &.modal-detail-img{
+    @include custom-scroll($c: #00eb79);
+
+    max-width: 70%;
+    max-height: 90vh;
+    margin: 0 auto;
+    overflow: auto;
+
+    .close-btn{
+      @include absolute($t: 15px, $r: 15px);
+      
+      z-index: 5;
+    }
+
+    .img-box{
+      max-width: 100%;
+    }
+
+    .img-box-figure{
+      padding-top: 0;
+    }
+
+    .img-input{
+      position: relative;
+      height: auto;
+    }
+  }
 }
 
 .modal-wrapper.is-show {

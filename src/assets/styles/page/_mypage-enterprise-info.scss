@@ -1,19 +1,6 @@
 /* ========== 마이페이지 > 기업정보 ========== */
 
 // 마이 페이지 > 기본정보(스타트업)
-.mypage-default-info-container {
-  
-  .mypage-cont-wrap {
-    max-width: 947px;
-  }
-}
-
-.mypage-detail-info-container {
-  .mypage-cont-wrap {
-    max-width: 947px;
-  }
-}
-
 .article-wrap {
   border-bottom: 1px solid #DDDEE6;
   padding: 30px 0;
@@ -479,11 +466,263 @@
   }
 }
 
-
 /* 마이페이지 > 기업정보 > 제출서류 관리 */
 .mypage-etpr-document-manage-form{
   .add-btn{
     margin: 20px 0 10px;
+  }
+}
+
+/* 투자자: 마이페이지 > 기업정보 > 포트폴리오 */
+.pflio-grid-grp{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  // row-gap: 50px;
+  // column-gap: 17px;
+}
+
+.pflio-wrap{
+  position: relative;
+
+  .pflio-desc-box{
+    @include custom-scroll(#00EB79);
+    @include absolute($t: -150px);
+
+    width: 100%;
+    height: 155px;
+    overflow: auto;
+    z-index: 2;
+  }
+}
+
+.pflio{
+  @include flex-center;
+  @include flex-col;
+
+  padding: 23px 0;
+  gap: 15px;
+  position: relative;
+
+  &:hover{
+    background-color: #F9F9FB;
+  }
+
+  .pflio-desc-icon{
+    @include absolute($t: 23px, $r: 15px);
+
+    cursor: pointer;
+    z-index: 1;
+
+    &:active{
+      opacity: 0.7;
+    }
+  }
+
+  .pflio-ctrl-btns{
+    @include flex-center;
+    
+    margin-top: 5px;
+    gap: 6px;
+  }
+}
+
+.pflio-desc-box{
+  background-color: white;
+  font-size: 12px;
+  color: #171820;
+  box-shadow: 0 5px 6px rgba(#5C5E70, 0.2);
+
+  .ttl{
+    display: inline-block;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 500;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 15px;
+    padding-bottom: 10px;
+  }
+
+  .desc{
+    padding: 0 15px;
+  }
+}
+
+.pflio-dlist{
+  margin-bottom: 13px;
+
+  .dttl{
+    color: #8E909F;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    display: inline-block;
+    text-align: left;
+  }
+
+  .ddt{
+    text-align: right;
+
+    .amount{
+      font-weight: 500;
+      margin-right: 3px;
+    }
+
+    .unit{
+      font-weight: 400;
+    }
+  }
+}
+
+/* 투자자: 마이페이지 > 기업정보 > 포트폴리오 추가 */
+[mypage="etpr-portfolio-add-page"]{
+  .invest-amount-item{
+    @include flex{
+      @include flex-op(center, flex-end);
+    }
+
+    line-height: 1.6;
+    
+    .lbel{
+      font-size: 11px;
+      color: #B8BAC7;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+  
+    .amount{
+      min-width: 120px;
+      text-align: right;
+    }
+  }
+
+  .btn-grp[position="double-centered"]{
+    margin-top: 50px
+  }
+}
+
+.pflio-hd-info-box{
+  @include flex{
+    @include flex-op(center, flex-start);
+  }
+
+  border: 1px solid #5C5E70;
+  padding: 22px 17px;
+  color: #171820;
+  margin-bottom: 30px;
+
+  .ttl{
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .cont{
+    @include flex-center;
+
+    gap: 14px;
+    margin-left: auto;
+  }
+
+  .pflio-hd-cont-name{
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
+
+.pflio-add-form-grp{
+  @include flex{
+    @include flex-op(flex-end, stretch);
+  };
+  
+  gap: 10px;
+  background-color: #F9F9FB;
+  padding: 26px 20px 20px;
+  margin: 10px 0;
+
+  & > .lbel-inp-grp{
+    flex: 1 1 auto;
+    margin: 0;
+
+    & > .lbel ~ *{
+      margin-top: 2.5px;
+    }
+  }
+
+  .inp-grp{
+    margin-bottom: 0;
+  }
+
+  .inp-grp-sm{
+    max-width: 133px;
+  }
+
+  .inp-grp-md{
+    max-width: 170px;
+  }
+
+  .inp-unit-grp .inp{
+    text-align: left;
+  }
+
+  .add-btn{
+    flex: 1 1 auto;
+    max-width: 100px;
+  }
+
+  .custom-slct{
+    width: 100%;
+  }
+}
+
+.pflio-add-list-grp-box{
+  height: 294px;
+  
+  .simple-list{
+    font-size: 13px;
+    padding: 9px 10px;
+
+    .td-date{
+      max-width: 100px;
+      min-width: 100px;
+    }
+  
+    .td-cite{
+      max-width: 140px;
+  
+      span{
+        @include ellipse(1, 16px);
+      }
+    }
+  
+    .td-invest-amount-item{
+      flex: 1 0 auto;
+    }
+
+    .btn-x{
+      margin-top: -20px;
+    }
+  }
+}
+
+.pflio-add-total-price{
+  width: 100%;
+  margin: 25px 0;
+  font-size: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .invest-amount-item{
+    .lbel{
+      font-size: 13px;
+      color: #8E909F;
+    }
+  
+    .amount{
+      font-weight: 500;
+    }
   }
 }
 

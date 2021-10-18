@@ -1,6 +1,9 @@
 <template>
   <!-- [D] 마이페이지 - 신청대기중, 마이페이지 - 신청거절/그룹강퇴 -->
-  <div class="mypage-container waiting-page-container">
+  <div
+    mypage="wating-page"
+    class="mypage-container"
+  >
     <div class="narrow-panel">
       <!-- TODO: 가입신청 대기중일 때 -->
       <div class="waiting-cont-wrap">

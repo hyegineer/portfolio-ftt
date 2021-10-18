@@ -601,6 +601,26 @@
   padding: 0 5px;
 }
 
+.badge-sm-square{
+  display: inline-block;
+  padding: 6px 8px;
+  border: 1px solid #5C5E70;
+  background-color: #8E909F;
+  font-size: rem(12);
+  font-weight: 400;
+  color: white;
+
+  &.yellow {
+    border-color: #FF9900;
+    background-color: #FFB300;
+  }
+
+  &.green {
+    border-color: #009A75;
+    background-color: #00BF92;
+  }
+}
+
 .toggle-onoff{ // 구성요소: 토글 스타일
   background-color: #8E909F;
   display: inline-block;
@@ -657,6 +677,7 @@
 
 .hover-desc{ // 구성요소: 호버 툴팁
   position: relative;
+  font-size: 16px;
 
   @include media(1200px, min){
     &:hover{
@@ -733,12 +754,15 @@
     font-size: 13px;
     font-weight: 600;
     color: #171820;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
+    line-height: 1.5;
   }
 
   .desc{
     font-size: 12px;
+    line-height: 1.5;
     color: #5C5E70;
+    font-weight: 400;
   }
 
   .star-desc-list{

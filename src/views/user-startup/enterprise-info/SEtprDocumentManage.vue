@@ -1,6 +1,12 @@
 <template>
   <!-- [D] 마이페이지 - 제출서류관리 -->
-  <div class="mypage-container">
+  <div
+    class="mypage-container mypage-rfixed-container"
+  >
+    <!-- 업데이트 내역 -->
+    <layout-right-fixed />
+    <!-- // 업데이트 내역 -->
+
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>
@@ -372,7 +378,6 @@
     </div>
     <!-- // 마이페이지 컨텐츠 영역 -->
     
-
     <modal-dialog>
       <modal-light-box @click="closeModal" />
 

@@ -1,6 +1,9 @@
 <template>
   <!-- [D] 마이페이지 - 신규/기존업체 등록완료 -->
-  <div class="mypage-container waiting-complete-container">
+  <div
+    mypage="waiting-complete-page"
+    class="mypage-container"
+  >
     <div class="narrow-panel auth-panel">
       <div class="waiting-complete-cont-wrap">
         <div class="auth-hgrp">
