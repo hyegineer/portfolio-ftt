@@ -150,6 +150,7 @@
         <!-- [D] 비공개면 is-secret 클래스 추가 -->
         <tr
           class="board-list is-secret"
+          @click="$router.push('ftck-my-detail')"
         >
           <td class="td-subject">
             <div class="ftck-state-subject">
@@ -190,7 +191,8 @@
         </tr>
         
         <tr
-          class="board-list" 
+          class="board-list"
+          @click="$router.push('ftck-my-checking-detail')"
         >
           <td class="td-subject">
             <div class="ftck-state-subject">

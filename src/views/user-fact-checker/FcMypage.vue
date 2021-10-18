@@ -97,6 +97,7 @@
               <router-link
                 class="lnb-btn"
                 to="/fact-checker/mypage/ftck-my-list"
+                :class="{'router-link-active': $route.path.startsWith(`/fact-checker/mypage/ftck-my`)}"
               >
                 나의 팩트체크
               </router-link>

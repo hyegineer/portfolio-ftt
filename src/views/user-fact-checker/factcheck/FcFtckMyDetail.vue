@@ -1,6 +1,6 @@
 <template>
   <!-- [D] 마이페이지 - 팩트체크-나의 팩트체크 상세 (진행중) -->
-  <div class="mypage-container">
+  <div class="mypage-container mypage-ftck-my-detail-page">
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>
@@ -51,8 +51,17 @@
           <!-- // 팩트체크 진행상태 & 제목 -->
 
           <div class="mypboard-etc-grp">
-            <span class="fc-gray fz-13">투자자명</span>
-            <span class="fc-gray-light fz-13">2021.00.00</span>
+            <span class="amount-item">
+              <div class="badge-p badge-p-sm" />
+              <span class="fz-13">150</span>
+            </span>
+
+            <span class="fc-gray fz-13">
+              {{ '투자기업명' }}
+              <i class="icon icon-gt" />
+              {{ '요청 스타트업명' }}
+            </span>
+            <span class="fc-gray-light fz-13">{{ '2021.00.00' }}</span>
           </div>
         </div>
         <!-- // 제목 -->
@@ -62,16 +71,6 @@
           <div class="mypboard-cont">
             <div class="mypboard-cont-ttl">
               <span class="fc-gray-light fz-13">※ 팩트체크 요청 내용입니다.</span>
-
-              <div class="right-grp">
-                <button
-                  type="button"
-                  class="btn btn-send-note"
-                >
-                  <span class="txt">쪽지 보내기</span>
-                  <i class="icon icon-msg" />
-                </button>
-              </div>
             </div>
               
             <p class="p-preline">
@@ -81,22 +80,28 @@
             </p>
           </div>
           
-          <div class="mypboard-cont">
-            <div class="mypboard-cont-ttl">
-              <span class="fc-gray-light fz-13">※ 팩트체크 요청 내용입니다.</span>
-
-              <div class="right-grp">
-                <span class="fc-gray fz-13">팩트체커명</span>
-                <span class="fc-gray-light fz-13">2021.00.00</span>
+          <article class="colored-ment-box gradi-ment-box">
+            <div class="left-cont">
+              <div class="ment-box">
+                <h4 class="ttl">
+                  현재 진행중인 팩트체크 입니다.
+                </h4>
+                <p class="desc">
+                  진행 시작 일자로 부터 15일 이내로 작성완료 해주세요. (진행 시작 일자 : 2020.00.00)
+                </p>
               </div>
             </div>
-              
-            <p class="p-preline">
-              좌우 패딩 40px / 상하 패딩 30px <br>
-              팩트체크 요청 내용 자리입니다. <br>
-              팩트체크 요청 내용 자리입니다. <br>
-            </p>
-          </div>
+
+            <div class="right-cont">
+              <button
+                type="button"
+                class="btn-txt"
+              >
+                <span class="txt">팩트체크 작성하기</span>
+                <i class="icon icon-gt-white" />
+              </button>
+            </div>
+          </article>
         </div>
         <!-- // 내용 -->
       </div>
@@ -113,7 +118,7 @@
 
         <btn-bd
           class="btn-sm bnav-ctrl-list"
-          @click="$router.push('ftck-list')"
+          @click="$router.push('ftck-my-list')"
         >
           목록으로
         </btn-bd>

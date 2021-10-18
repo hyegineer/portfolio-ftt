@@ -280,6 +280,7 @@
 }
 
 /* 투자자: 마이페이지 > 팩트체크 > 요청한 팩트체크 보완요청 */
+/* 팩트체커: 마이페이지 > 팩트체크 > 나의 팩트체크 상세 (검토중&완료) */
 .mypage-ftck-checking-edit-page{
   .ftck-caution-box{
     margin-bottom: 10px;
@@ -307,6 +308,15 @@
 
   .ftck-detail-wrap{
     padding-bottom: 40px;
+  }
+}
+
+/* 팩트체커: 마이페이지 > 팩트체크 > 나의 팩트체크 상세 (진행중) */
+.mypage-ftck-my-detail-page{
+  .mypboard-cont{
+    &:last-of-type{
+      border-bottom: 0;
+    }
   }
 }
 

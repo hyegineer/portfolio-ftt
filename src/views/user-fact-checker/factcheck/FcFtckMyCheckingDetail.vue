@@ -1,6 +1,6 @@
 <template>
   <!-- [D] 마이페이지 - 팩트체크-나의 팩트체크 상세 (검토중&완료) -->
-  <div class="mypage-container">
+  <div class="mypage-container mypage-ftck-checking-detail-page">
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>
@@ -32,7 +32,8 @@
           <!-- 팩트체크 진행상태 & 제목 -->
           <div class="ftck-state-subject">
             <div class="ftck-state">
-              <badge-state txt="진행중" />
+              <badge-state txt="내용 검토중" />
+              <badge-state txt="완료" />
 
               <!-- [D] 비공개일 때만 보임 -->
               <div class="badge-secret">
@@ -51,8 +52,17 @@
           <!-- // 팩트체크 진행상태 & 제목 -->
 
           <div class="mypboard-etc-grp">
-            <span class="fc-gray fz-13">투자자명</span>
-            <span class="fc-gray-light fz-13">2021.00.00</span>
+            <span class="amount-item">
+              <div class="badge-p badge-p-sm" />
+              <span class="fz-13">150</span>
+            </span>
+
+            <span class="fc-gray fz-13">
+              {{ '투자기업명' }}
+              <i class="icon icon-gt" />
+              {{ '요청 스타트업명' }}
+            </span>
+            <span class="fc-gray-light fz-13">{{ '2021.00.00' }}</span>
           </div>
         </div>
         <!-- // 제목 -->
@@ -62,16 +72,6 @@
           <div class="mypboard-cont">
             <div class="mypboard-cont-ttl">
               <span class="fc-gray-light fz-13">※ 팩트체크 요청 내용입니다.</span>
-
-              <div class="right-grp">
-                <button
-                  type="button"
-                  class="btn btn-send-note"
-                >
-                  <span class="txt">쪽지 보내기</span>
-                  <i class="icon icon-msg" />
-                </button>
-              </div>
             </div>
               
             <p class="p-preline">
@@ -90,7 +90,11 @@
                 <span class="fc-gray-light fz-13">2021.00.00</span>
               </div>
             </div>
-              
+
+            <div>
+              <!-- FIXME img 박스영역들 -->
+            </div>
+
             <p class="p-preline">
               좌우 패딩 40px / 상하 패딩 30px <br>
               팩트체크 요청 내용 자리입니다. <br>
@@ -113,7 +117,7 @@
 
         <btn-bd
           class="btn-sm bnav-ctrl-list"
-          @click="$router.push('ftck-list')"
+          @click="$router.push('ftck-my-list')"
         >
           목록으로
         </btn-bd>
