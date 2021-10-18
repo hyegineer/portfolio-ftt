@@ -799,6 +799,27 @@ const routes = [
             component: () => import('~@/views/user-fact-checker/factcheck/FcFtckMyList'),
             // meta: { requiresAuth: true },
           },
+          // 팩트체크-나의 팩트체크 상세 (진행중)
+          {
+            path: 'ftck-my-detail',
+            name: 'FcFtckMyDetail',
+            component: () => import('~@/views/user-fact-checker/factcheck/FcFtckMyDetail'),
+            // meta: { requiresAuth: true },
+          },
+          // 팩트체크-나의 팩트체크 상세 (검토중&완료)
+          {
+            path: 'ftck-my-checking-detail',
+            name: 'FcFtckMyCheckingDetail',
+            component: () => import('~@/views/user-fact-checker/factcheck/FcFtckMyCheckingDetail'),
+            // meta: { requiresAuth: true },
+          },
+          // 팩트체크-팩트체크 작성
+          {
+            path: 'ftck-create',
+            name: 'FcFtckCreate',
+            component: () => import('~@/views/user-fact-checker/factcheck/FcFtckCreate'),
+            // meta: { requiresAuth: true },
+          },
           // 팩트체크-전체 팩트체크
           {
             path: 'ftck-total-list',
@@ -806,13 +827,13 @@ const routes = [
             component: () => import('~@/views/user-fact-checker/factcheck/FcFtckTotalList'),
             // meta: { requiresAuth: true },
           },
-          // FIXME 팩트체크-받은팩트체크 상세
-          // {
-          //   path: 'ftck-detail',
-          //   name: 'IFtckDetail',
-          //   component: () => import('~@/views/user-investor/factcheck/IFtckDetail'),
-          //   // meta: { requiresAuth: true },
-          // },
+          // 팩트체크-전체 팩트체크 상세
+          {
+            path: 'ftck-total-detail',
+            name: 'FcFtckTotalDetail',
+            component: () => import('~@/views/user-fact-checker/factcheck/FcFtckTotalDetail'),
+            // meta: { requiresAuth: true },
+          },
           // ===================== 포인트 =====================
           // 포인트 - 포인트 관리
           {

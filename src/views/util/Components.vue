@@ -2290,6 +2290,73 @@
       </div>
     </section>
 
+    <section class="section">
+      <h1 class="cp-ttl">
+        20. 컬러 멘트 박스
+      </h1>
+
+      <div
+        class="section-cont"
+        style="padding-top: 50px;"
+      >
+        <div style="margin: 20px 0">
+          <div class="colored-ment-box">
+            <img
+              src="@/assets/images/img/img-checker-man.svg"
+              alt="img-checker-man"
+              class="img-checker-man"
+            >
+
+            <div class="left-cont">
+              <div class="ment-box">
+                <h4 class="ttl">
+                  투자자의 요청을 팩트체크 해주세요!
+                </h4>
+                <p class="desc">
+                  투자자들이 당신의 팩트체크를 기다리고 있습니다.
+                </p>
+              </div>
+            </div>
+
+            <div class="right-cont">
+              <button
+                type="button"
+                class="btn-txt"
+              >
+                <span class="txt">팩트체크 신청하기</span>
+                <i class="icon icon-gt-white" />
+              </button>
+            </div>
+          </div>
+        </div>
+          
+        <div style="margin: 20px 0;">
+          <div class="colored-ment-box gradi-ment-box">
+            <div class="left-cont">
+              <div class="ment-box">
+                <h4 class="ttl">
+                  현재 진행중인 팩트체크 입니다.
+                </h4>
+                <p class="desc">
+                  진행 시작 일자로 부터 15일 이내로 작성완료 해주세요. (진행 시작 일자 : 2020.00.00)
+                </p>
+              </div>
+            </div>
+
+            <div class="right-cont">
+              <button
+                type="button"
+                class="btn-txt"
+              >
+                <span class="txt">팩트체크 작성하기</span>
+                <i class="icon icon-gt-white" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <modal-dialog>
       <modal-light-box @click="closeModal" />
 

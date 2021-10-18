@@ -120,11 +120,12 @@
         <!-- [D] 비공개면 is-secret 클래스 추가 -->
         <tr
           class="board-list is-secret"
+          @click="$router.push('ftck-total-detail')"
         >
           <td class="td-subject">
             <div class="ftck-state-subject">
               <div class="ftck-state">
-                <badge-state txt="진행중" />
+                <badge-state txt="대기중" />
 
                 <!-- [D] 비공개일 때만 보임 -->
                 <div class="badge-secret">
@@ -148,7 +149,11 @@
             </span>
           </td>
           <td>
-            <span class="td-word-writer">{{ '투자기업명 > 요청 스타트업명' }}</span>
+            <span class="td-word-writer">
+              {{ '투자기업명' }}
+              <i class="icon icon-gt" />
+              {{ '요청 스타트업명' }}
+            </span>
           </td>
           <td>
             <span class="td-word-date">{{ '2021.00.00' }}</span>
@@ -157,11 +162,11 @@
         
         <tr
           class="board-list" 
+          @click="$router.push('ftck-total-detail')"
         >
           <td class="td-subject">
             <div class="ftck-state-subject">
               <div class="ftck-state">
-                <badge-state txt="대기중" />
                 <badge-state txt="배정완료" />
 
                 <!-- [D] 비공개일 때만 보임 -->
@@ -186,7 +191,11 @@
             </span>
           </td>
           <td>
-            <span class="td-word-writer">{{ '투자기업명 > 요청 스타트업명' }}</span>
+            <span class="td-word-writer">
+              {{ '투자기업명' }}
+              <i class="icon icon-gt" />
+              {{ '요청 스타트업명' }}
+            </span>
           </td>
           <td>
             <span class="td-word-date">{{ '2021.00.00' }}</span>

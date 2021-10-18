@@ -822,3 +822,70 @@
     color: #171820;
   }
 }
+
+.colored-ment-box{ // 구성요소 컬러멘트박스
+  @include flex{
+    @include flex-op(center, space-between);
+  }
+
+  position: relative;
+  width: 100%;
+  background-color: #212D55;
+  color: white;
+  height: 100px;
+
+  .btn-txt{
+    .txt{
+      color: white;
+    }
+  }
+
+  .img-checker-man{
+    @include absolute($l: -22px, $b: 0);
+    
+    z-index: 1;
+  }
+
+  .img-checker-man ~ .left-cont{
+    padding-left: 170px;
+  }
+
+  .left-cont{
+    position: relative;
+  }
+
+  .ment-box{
+    line-height: 1.4;
+    padding: 0 20px;
+
+    .ttl{
+      @include font-op($c: inherit, $w: 600){
+        font-size: 18px;
+      }
+
+      margin-bottom: 9px;
+    }
+
+    .desc{
+      @include font-op($c: inherit, $w: 500){
+        font-size: 13px;
+      }
+
+      opacity: 0.8;
+    }
+  }
+
+  .right-cont{
+    padding: 0 20px;
+  }
+}
+
+.gradi-ment-box{
+  background: linear-gradient(to right, #3060FF, #00CE6A);
+
+  .ment-box{
+    .ttl{
+      font-size: 22px;
+    }
+  }
+}
