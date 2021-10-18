@@ -1860,12 +1860,16 @@ export default {
           
         if(toggle === 'open') {
           this.mbMdOptions.visible = true;
-          document.querySelector('#header').style.zIndex = 5; // header z-index 조절, 조절하지 않으면 header만 눈에 띄게됨
+
+          // 일부 dom z-index 조절해야할 때 아래 로직 사용
+          // document.querySelector('#header').style.zIndex = 5; 
         }
 
         if(toggle === 'close') {
           this.mbMdOptions.visible = false;
-          document.querySelector('#header').style.zIndex = 100; // header z-index 원상태 복귀
+          
+          // 일부 dom 조절한 z-index 원복해야할 때 아래 로직 사용
+          // document.querySelector('#header').style.zIndex = 100;
         }
       }
     },
