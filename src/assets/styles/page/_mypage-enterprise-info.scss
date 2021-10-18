@@ -11,9 +11,10 @@
 
   .ttl {
     font-size: rem(16);
-    font-weight: 600;
+    font-weight: 500;
     color: #171820;
     margin-bottom: 20px;    
+    -webkit-text-stroke: 0.5px #171820;
   }
 
   .ttl-lg {
@@ -55,10 +56,11 @@
     }
 
     .label {
-      font-size: rem(15);
-      font-weight: 600;
+      font-size: 15px;
+      font-weight: 400;
       flex-basis: 170px;
       padding: 20px 0;
+      -webkit-text-stroke: 0.5px #171820;
     }
 
     .info {
@@ -66,7 +68,7 @@
       font-weight: 400;
       flex-grow: 1;
       padding: 20px 0;
-      border-bottom: 1px solid #DDDEE6;
+      border-bottom: 1px solid rgba(#DDDEE6, 0.6);
 
       &.custom-info {
         line-height: 1.4;
