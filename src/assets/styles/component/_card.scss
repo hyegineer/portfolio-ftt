@@ -64,6 +64,10 @@
   max-width: 410px;
 }
 
+.card-thumb-max{
+  max-width: 535px;
+}
+
 .card-subtxt-grp{
   @include font-op($c: #5c5e70){
     font-size: 12px;

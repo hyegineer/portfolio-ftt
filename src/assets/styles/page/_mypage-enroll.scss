@@ -1,5 +1,6 @@
 /* ========== 마이페이지 > 기업회원 등록 ========== */
 
+// 기업회원 등록
 .mypage-enroll-container {
 
   .select-guide-box {
@@ -43,6 +44,7 @@
   }
 
   .enroll-cont-wrap {
+    padding-bottom: 110px;
 
     .tab-grp {
       display: flex;
@@ -120,6 +122,107 @@
 
       .box-list {
         cursor: pointer;
+      }
+    }
+  }
+  // END 기업회원 등록
+
+  // 팩트체커) 기업회원 등록 > 기업회원 상세
+
+  .top-info-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+    .txt-wrap {
+      flex-grow: 1;
+      padding: 40px;
+      background-color: #fff;
+      height: 370px;
+    }
+    
+    .txt-top-grp {
+      padding-bottom: 16px;
+
+      .icon-with-txt {
+        padding-top: 12px;
+        padding-left: 60px;
+      }
+    }
+
+    .txt-bottom-grp {
+      padding-top: 15.5px;
+      border-top: 1px solid #DDDEE6;
+
+      .info-grp {
+        padding: 5px 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .label {
+          font-size: rem(14);
+          font-weight: 400;
+          color: #8E909F;
+          min-width: 120px;
+        }
+
+        .info {
+          font-size: rem(14);
+          font-weight: 400;
+          color: #171820;
+          line-height: 1.3;
+        }
+      }
+
+      .introduce-txt {
+        font-size: rem(22);
+        font-weight: 400;
+        color: #595959;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  .bottom-info-wrap {
+    
+    .info-grp {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 26px;
+      
+      .label {
+        min-width: 120px;
+        font-size: rem(15);
+        font-weight: 400;
+        color: #8E909F;
+      }
+
+      .info {
+        font-size: rem(15);
+        font-weight: 400;
+        color: #171820;
+        flex-grow: 1;
+      }
+    }
+  }
+
+  .bottom-info-wrap {
+    margin-top: 20px;
+    padding: 40px;
+    background-color: #fff;
+
+    .bottom-info-grp {
+      border-bottom: 1px solid #DDDEE6;
+    }
+
+    .bottom-tag-wrap {
+      padding-top: 24.5px;
+
+      .info-grp {
+        margin-bottom: 0;
       }
     }
   }
