@@ -256,10 +256,11 @@
   color: white;
 }
 
-@mixin custom-scroll($c: null, $sub-c: #fafafa, $r: 0, $w: 4px) {
+@mixin custom-scroll($c: null, $sub-c: #fff, $r: 0, $w: 4px) {
   &::-webkit-scrollbar {
     width: $w;
     height: 4px;
+    background-color: $sub-c;
   }
 
   &::-webkit-scrollbar-thumb {
