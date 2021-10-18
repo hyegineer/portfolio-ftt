@@ -1,0 +1,87 @@
+/* ========== 마이페이지 > 팩트체크 ========== */
+
+// 마이페이지 > 요청한 팩트체크 > 팩트체크 상세 > 수정하기
+.ftck-edit-container {
+  
+  .big-ttl {
+    font-size: rem(18);
+    font-weight: 500;
+    color: #171820;
+    margin-bottom: 20px;
+  }
+}
+
+.ftck-edit-wrap {
+  padding: 0 40px 40px 40px;
+  background-color: #fff;
+
+  .req-hgrp {
+    margin-bottom: 20px;
+  }
+
+  .ttl {
+    font-size: rem(16);
+    font-weight: 600;
+    color: #171820;
+  }
+
+  .avatar-wrap {
+    padding: 40px 0 30px;
+    border-bottom: 1px solid #DDDEE6;
+  }
+
+  .req-select-grp {
+    padding-top: 30px;
+
+    .select-all-grp {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20px;
+
+      .select-grp {
+        width: 155px;
+      }
+
+      .point-grp {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .label {
+          margin-right: 10px;
+          font-size: rem(12);
+          font-weight: 400;
+          color: #5C5E70;
+        }
+
+        .point {
+          margin-right: 6px;
+          font-size: rem(18);
+          font-weight: 600;
+          color: #171820;
+        }
+      }
+    }
+  }
+
+  .req-cont-grp {
+    padding-top: 30px;
+
+    .editor-inp-grp {
+      border: 3px solid #171820;
+      margin-bottom: 20px;
+
+      .editor-inp {
+        padding: 26px 15px;
+        font-size: rem(16);
+        font-weight: 400;
+        color: #171820;
+      }
+    }
+
+    .editor-cont-grp {
+      height: 505px;
+    }
+  }
+}
