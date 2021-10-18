@@ -1,116 +1,8 @@
 <template>
-  <div class="page etpr-prifile-page">
-    <layout-header />
-    <div class="page-container">
-      <div class="right-fixed">
-        <div class="fixed-con-container">
-          <div class="fixed-con-ttl">
-            업데이트 내역 ({{ '5' }})
-          </div>
-          <div class="fixed-con-contents">
-            <div class="empty-conts">
-              <img
-                src="@/assets/images/icon/icon-empty-update.svg"
-                alt="업데이트 아이콘"
-              >
-              <p class="txt">
-                업데이트 내역이 없습니다.
-              </p>
-            </div>
-            <ul class="fixed-conts-list-wrap">
-              <li class="fixed-con-list">
-                <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
-                <div class="badge green">
-                  {{ '팩트체커' }}
-                </div>
-                <div class="date">
-                  {{ '2021.00.00 00:00' }}
-                </div>
-                <ul class="info-list">
-                  <li class="info">
-                    {{ '기업정보' }}
-                  </li>
-                  <li class="info">
-                    {{ '재무상태' }}
-                  </li>
-                </ul>
-                <a
-                  href="#"
-                  target="_blank"
-                  class="view-link"
-                >+ 상세보기</a>
-              </li>
-              <li class="fixed-con-list">
-                <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
-                <div class="badge yellow">
-                  {{ '자사' }}
-                </div>
-                <div class="date">
-                  {{ '2021.00.00 00:00' }}
-                </div>
-                <ul class="info-list">
-                  <li class="info">
-                    {{ '기업정보' }}
-                  </li>
-                  <li class="info">
-                    {{ '재무상태' }}
-                  </li>
-                </ul>
-                <a
-                  href="#"
-                  target="_blank"
-                  class="view-link"
-                >+ 상세보기</a>
-              </li>
-              <li class="fixed-con-list">
-                <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
-                <div class="badge">
-                  {{ '팩트체커' }}
-                </div>
-                <div class="date">
-                  {{ '2021.00.00 00:00' }}
-                </div>
-                <ul class="info-list">
-                  <li class="info">
-                    {{ '기업정보' }}
-                  </li>
-                  <li class="info">
-                    {{ '재무상태' }}
-                  </li>
-                </ul>
-                <a
-                  href="#"
-                  target="_blank"
-                  class="view-link"
-                >+ 상세보기</a>
-              </li>
-              <li class="fixed-con-list">
-                <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
-                <div class="badge">
-                  {{ '자사' }}
-                </div>
-                <div class="date">
-                  {{ '2021.00.00 00:00' }}
-                </div>
-                <ul class="info-list">
-                  <li class="info">
-                    {{ '기업정보' }}
-                  </li>
-                  <li class="info">
-                    {{ '재무상태' }}
-                  </li>
-                </ul>
-                <a
-                  href="#"
-                  target="_blank"
-                  class="view-link"
-                >+ 상세보기</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="wide-panel">
+  <div class="mypage-etpr-profile-request-ftck-page">
+    <div class="mypage-container">
+      <!-- 마이페이지 페이지 제목 -->
+      <div class="mypage-hgrp">
         <breadcrumb>
           <li class="txt">
             홈
@@ -122,24 +14,60 @@
             4차 산업기술
           </li>
           <li class="txt">
-            가상·증강현실
+            가상ㆍ증강현실
           </li>
         </breadcrumb>
-        <!-- 기업 간략 소개 -->
-        <div class="etpr-info-shot">
-          <div class="flexable-container">
-            <div class="flexable-inner card-thumb">
-              <thumbnail lg />
+
+        <h2 class="ttl">
+          팩트체크 요청하기
+        </h2>
+      </div>
+      <!-- // 마이페이지 페이지 제목 -->
+
+      <!-- 마이페이지 컨텐츠 영역 -->
+      <div class="mypage-cont-wrap">
+        <!-- 나의 팩트체크 수정 - 주의사항 설명박스 -->
+        <div class="ftck-caution-box">
+          <div class="ftck-cb-ttl">
+            <i class="icon icon-i-green" />
+            <span class="cb-ttl">주의사항</span>
+          </div>
+
+          <ul class="ul-dash">
+            <li class="list">
+              작성 중인 페이지를 나가면 내용이 저장되지 않습니다.
+            </li>
+            <li class="list">
+              삭제된 요청 항목은 다시 추가할 수 없습니다.
+            </li>
+            <li class="list">
+              요청 항목별로 소모되는 포인트가 상이합니다.
+            </li>
+            <li class="list">
+              팩트체커 선택 완료 시, 포인트가 차감되며 요청 내용 수정이 불가합니다.
+            </li>
+          </ul>
+        </div>
+        <!-- // 나의 팩트체크 수정 - 주의사항 설명박스 -->
+        <div class="ftck-edit-wrap">
+          <!-- 나의 팩트체크 수정 - 내용  -->
+          <div class="ftck-request-wrap">
+            <div class="big-ttl-grp">
+              <h3 class="cont-big-ttl">
+                선택한 기업에 <span class="underline">팩트체크를 요청</span>합니다.<br>
+                팩트체크를 원하는 항목과 내용을 작성하세요.
+              </h3>
             </div>
-            <div class="flexable-inner card-text white-panel">
-              <div class="desc-wrap">
+            <div class="avatar-wrap">
+              <!-- 아바타 -->
+              <div class="avatar-grp">
                 <div class="avatar-with-name">
                   <avatar />
                   <div class="name-grp">
                     <span class="name">
                       주식회사 팩트컴퍼니
                     </span>
-    
+
                     <ul class="name-subtxt-grp">
                       <li class="name-subtxt-list">
                         기업규모
@@ -151,104 +79,132 @@
                         산업분야
                       </li>
                     </ul>
-                    <div class="icon-with-txt">
-                      <i class="icon icon-jump" />
-                      <a
-                        href="#"
-                        class="txt"
-                      >www.팩트컴퍼니.com</a>
-                    </div>
-                  </div>
-                  <btn-square-bd @click="window.alert('메세지 버튼 누르기')">
-                    <i class="icon icon-msg" />
-                    <span class="is-voice-only">메세지</span>
-                  </btn-square-bd>
-                </div>
-  
-                <div class="text-wrap">
-                  <p class="info-txt">
-                    {{ '내용이 없습니다.기업 한줄 소개 텍스트 자리입니다. 기업 한줄 소개 텍스트 자리입니다.' }}
-                  </p>
-    
-                  <div class="bottom-data">
-                    <div class="edit-date">
-                      {{ '2021.10.11 12:13' }} 기업정보가 업데이트 되었습니다.
-                    </div>
-
-                    <btn-solid-blue
-                      class="btn-xlg btn-full"
-                      @click="window.alert('관심기업 등록을 하셨습니다.')"
-                    >
-                      + 관심기업 등록
-                    </btn-solid-blue>
-
-                    <btn-bd-blue
-                      class="btn-xlg btn-full"
-                      @click="window.alert('관심기업 등록을 취소하셨습니다.')"
-                    >
-                      <img
-                        src="@/assets/images/icon/icon-check-bl.svg"
-                        alt="체크"
-                        class="check-icon"
-                      > 관심기업 등록 완료
-                    </btn-bd-blue>
-
-                    <div class="btn-grp">
-                      <btn-bd
-                        class="btn-xlg btn-full"
-                        @click="window.alert('우리 기업 투자자 정보 버튼을 클릭하셨습니다.')"
-                      >
-                        우리 기업 투자자 정보
-                      </btn-bd>
-                      <btn-bd
-                        class="btn-xlg btn-full"
-                        @click="window.alert('기업정보 업데이트 버튼을 클릭하셨습니다.')"
-                      >
-                        기업정보 업데이트
-                      </btn-bd>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+            <!-- END 아바타 -->
+            <div class="req-info-cont-wrap">
+              <!-- 왼쪽 탭 메뉴 -->
+              <div class="left-floating-menu-wrap">
+                <div class="floating-hgrp">
+                  <span class="selected-cats-ttl">
+                    선택된 요청 항목
+                    <span class="selected-cats-connt">4</span>
+                  </span>
+                </div>
+                <div class="point-grp">
+                  <span class="label">총 사용 예정 포인트</span>
+                  <div class="inner-flex">
+                    <span class="point">100,000</span>
+                    <i class="icon icon-point" />
+                  </div>
+                </div>
+                <div class="tab-list-grp">
+                  <!-- btn-tab에 is-active -->
+                  <btn-bd-dark
+                    class="btn-sm btn-tab"
+                    :class="{'is-active': tabActive === 1}"
+                    @click="tabActive = 1"
+                  >
+                    기본정보
+                  </btn-bd-dark>
+                  <btn-bd-dark
+                    class="btn-sm btn-tab"
+                    :class="{'is-active': tabActive === 2}"
+                    @click="tabActive = 2"
+                  >
+                    손익계산서
+                  </btn-bd-dark>
+                  <btn-bd-dark
+                    class="btn-sm btn-tab"
+                    :class="{'is-active': tabActive === 3}"
+                    @click="tabActive = 3"
+                  >
+                    그룹원
+                  </btn-bd-dark>
+                  <btn-bd-dark
+                    class="btn-sm btn-tab"
+                    :class="{'is-active': tabActive === 4}"
+                    @click="tabActive = 4"
+                  >
+                    추가 요청
+                  </btn-bd-dark>
+                </div>
+              </div>
+              <!-- END 왼쪽 탭 메뉴 -->
 
-          <div class="mgt-30 white-panel etpr-dt-txt">
-            <div class="label">
-              상세소개
-            </div>
-            <p class="label-txt">
-              {{ '내용이 없습니다.' }}<br>
-              {{ '내용이 없습니다.' }}
-            </p>
-          </div>
-        </div>
-        <!-- END 기업 간략 소개 -->
+              <!-- 항목 정보 -->
+              <div
+                class="req-info-grp"
+                style="height: 790px;"
+              >
+                항목정보 들어갈 부분
+              </div>
+              <!-- END 항목 정보 -->
 
-        <div class="mgt-20 white-panel active-ttl-container">
-          <div class="active-ttl-inner">
-            <div
-              class="active-ttl" 
-              @click="$router.push('/etpr-profile-info')"
-            >
-              기업정보
-            </div>
-            <div
-              class="active-ttl active"
-              @click="$router.push('/etpr-profile-report')"
-            >
-              팩트체크
-            </div>
-            <div
-              class="active-ttl" 
-              @click="$router.push('/etpr-profile-board')"
-            >
-              게시판
+              <!-- 작성내용 -->
+              <div class="req-cont-grp">
+                <div class="req-hgrp">
+                  <p class="ttl">
+                    요청 내용
+                  </p>
+                </div>
+                <div class="req-cats-point-grp">
+                  <div class="req-cats-grp">
+                    <span class="label">작성중인 항목</span>
+                    <span class="info">기업가치</span>
+                    <btn-bd-light
+                      class="btn-rounded btn-xsm"
+                    >
+                      <i class="icon icon-trash" />항목 삭제하기
+                    </btn-bd-light>
+                  </div>
+                  <div class="point-grp">
+                    <span class="label">사용 포인트</span>
+                    <span class="point">5,000</span>
+                    <i class="icon icon-point" />
+                  </div>
+                </div>
+                <div class="inp-grp editor-inp-grp">
+                  <input
+                    type="text"
+                    class="inp editor-inp"
+                    placeholder="팩트체크 요청 제목을 입력하세요, (n자 입력)"
+                  >
+                </div>
+                <div
+                  class="editor-cont-grp"
+                  style="border: 1px solid #DDDEE6"
+                >
+                  EDITOR 들어가는 부분
+                </div>
+                <div class="btn-all-grp">
+                  <div class="ment-grp">
+                    <i class="icon icon-i" />
+                    <span class="ment">요청한 팩트체크는 마이페이지 > 팩트체크 > 요청한 팩트체크에서 확인 가능합니다.</span>
+                  </div>
+                  <div class="btn-grp">
+                    <btn-solid-dark
+                      class="btn-md"
+                      @click="window.alert('검정버튼을 클릭하셨습니다.')"
+                    >
+                      <img
+                        src="@/assets/images/icon/icon-check-gn.svg"
+                        alt="체크"
+                        class="check-icon"
+                      > 팩트체크 요청완료
+                    </btn-solid-dark>
+                  </div>
+                </div>
+              </div>
+              <!-- END 작성내용 -->
             </div>
           </div>
+          <!-- // 나의 팩트체크 수정 - 내용  -->
         </div>
       </div>
-      <layout-footer />
+      <!-- // 마이페이지 컨텐츠 영역 -->
     </div>
   </div>
 </template>
@@ -256,6 +212,11 @@
 <script>
 export default {
   name: 'EtprProfileRequestFtck',
+  data() {
+    return {
+      tabActive: 1, // 1~4
+    };
+  },
 };
 </script>
 
