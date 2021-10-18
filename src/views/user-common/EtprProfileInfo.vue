@@ -240,9 +240,18 @@
                 </div>
                 <div class="use-point point">
                   <span class="ttl">사용 포인트</span>
-                  <b class="bold">{{ '1,000' }}</b>
-                  <div class="badge-p">
-                    <span class="is-voice-only">포인트</span>
+                  
+                  <div class="inp-grp inp-unit-grp">
+                    <input
+                      type="text"
+                      placeholder="사용 포인트 입력"
+                      class="inp"
+                    >
+                    <div class="inp-unit">
+                      <div class="badge-p">
+                        <span class="is-voice-only">포인트</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
