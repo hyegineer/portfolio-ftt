@@ -105,6 +105,7 @@
             <div class="member-btn-grp btn-grp">
               <btn-bd-light
                 class="btn-rounded btn-xsm btn-edit-ctrl"
+                @click="openModal('editMember')"
               >
                 <i class="icon icon-pen" />
                 <span class="txt">수정</span>
@@ -113,6 +114,7 @@
 
               <btn-bd-light
                 class="btn-rounded btn-xsm btn-edit-ctrl"
+                @click="confirm('구성원을 삭제하시겠습니까?')"
               >
                 <i class="icon icon-trash" />
                 <span class="txt">삭제</span>
@@ -264,7 +266,7 @@
 
               <!-- 이름 -->
               <div class="lbel-inp-grp">
-                <label class="lbel">이름</label>
+                <label class="lbel">김철수</label>
                 <div class="inp-grp">
                   <input
                     type="text"
@@ -339,6 +341,133 @@
           </btn-bd-light>
           <btn-solid-dark class="btn-md">
             추가완료
+          </btn-solid-dark>
+        </div>
+      </modal>
+      
+      <!-- [modal] 구성원 수정 -->
+      <modal
+        :class="{'is-show': $store.state.modal.visible && $store.state.modal.type === 'editMember'}"        
+        wide
+        ttl="구성원 수정"
+      >
+        <div class="modal-cont modal-scrl-cont">
+          <form>
+            <fieldset class="ffieldset">
+              <legend class="ffieldset-ttl">
+                프로필 이미지
+              </legend>
+
+              <div class="file-inp-grp">
+                <!-- [D] 해당 DOM 클릭시 사진 업로드 & 수정 가능 -->
+                <div class="input-img-frame input-circle-img-frame">
+                  <!-- [D] 이미지 업로드 시 아래 img 태그 보임 -->
+                  <!-- <img
+                    src="@/assets/images/dft/ex.jpg"
+                    alt="input img"
+                    class="input-img"
+                  > -->
+
+                  <span
+                    class="btn btn-upload"
+                  >
+                    <i class="icon icon-cam" />
+                    <span class="is-voice-only">기업 로고 이미지 업로드</span>
+                  </span>
+                </div>
+                <p class="ffieldset-guide">
+                  해상도 100*100px 이상의 JPG, PNG 파일을 첨부해주세요. <br>
+                  이미지 미첨부시, 기본이미지로 설정됩니다.
+                </p>
+              </div>
+            </fieldset>
+
+            <fieldset class="ffieldset">
+              <legend class="ffieldset-ttl">
+                기본 정보
+              </legend>
+
+              <!-- 이름 -->
+              <div class="lbel-inp-grp">
+                <label class="lbel">이름</label>
+                <div class="inp-grp">
+                  <input
+                    type="text"
+                    class="inp"
+                    placeholder="이름 입력"
+                    value="김철수"
+                  >
+                </div>
+              </div>
+
+              <!-- 이메일 -->
+              <div class="lbel-inp-grp">
+                <label class="lbel">이메일</label>
+                <div class="inp-grp">
+                  <input
+                    type="email"
+                    class="inp"
+                    placeholder="이메일 입력"
+                    value="gooseongwon@naver.com"
+                  >
+                </div>
+              </div>
+
+              <!-- 키포인트 -->
+              <div class="lbel-inp-grp">
+                <label class="lbel">키포인트</label>
+                <div class="inp-grp">
+                  <input
+                    type="text"
+                    class="inp"
+                    placeholder="ex) 10개 기업 창업"
+                    value="좋은 개발자"
+                  >
+                </div>
+              </div>
+
+              <!-- 경력사항 -->
+              <div class="lbel-inp-grp">
+                <label class="lbel">경력사항</label>
+
+                <div class="inp-grp">
+                  <input
+                    type="text"
+                    class="inp"
+                    value="네이버 근무"
+                  >
+                </div>
+
+                <div class="add-inp-grp">
+                  <div class="inp-grp inp-btn-grp">
+                    <input
+                      type="text"
+                      class="inp"
+                    >
+                    <btn-square-bd class="del-btn">
+                      <span class="is-voice-only">항목 삭제</span>
+                    </btn-square-bd>
+                  </div>
+                  <!-- 요기에 추가가 되어야합니다 -->
+                </div>
+
+                <btn-bd-dark class="btn-md btn-full add-inp-btn">
+                  경력사항 추가
+                </btn-bd-dark>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="modal-btn-wrap">
+          <btn-bd-light
+            class="btn-fb btn-md btn-cancel"
+            @click="closeModal"
+          >
+            닫기
+          </btn-bd-light>
+          <btn-solid-dark class="btn-md">
+            수정완료
           </btn-solid-dark>
         </div>
       </modal>
