@@ -1,6 +1,6 @@
 <template>
   <!-- [D] 마이페이지 - 팩트체크-요청한 팩트체크 수정 -->
-  <div class="mypage-container">
+  <div class="mypage-container ftck-edit-container">
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>
@@ -26,107 +26,150 @@
 
     <!-- 마이페이지 컨텐츠 영역 -->
     <div class="mypage-cont-wrap">
-      <div class="ftck-detail-wrap">
-        <!-- 제목 -->
-        <div class="mypboard-detail-hd">
-          <!-- 팩트체크 진행상태 & 제목 -->
-          <div class="ftck-state-subject">
-            <div class="ftck-state">
-              <badge-state txt="진행중" />
+      <p class="big-ttl">
+        요청내용 수정하기
+      </p>
+      <!-- 나의 팩트체크 수정 - 주의사항 설명박스 -->
+      <div class="ftck-caution-box">
+        <div class="ftck-cb-ttl">
+          <i class="icon icon-i-green" />
+          <span class="cb-ttl">주의사항</span>
+        </div>
 
-              <!-- [D] 비공개일 때만 보임 -->
-              <div class="badge-secret">
-                <i class="icon icon-secret" />
-                <span class="txt">비공개</span>
+        <ul class="ul-dash">
+          <li class="list">
+            요청 항목별로 소모되는 포인트가 상이합니다.
+          </li>
+          <li class="list">
+            팩트체커 선택 완료 시, 포인트가 차감됩니다.
+          </li>
+          <li class="list">
+            팩트체커 선택이 완료되면 요청 내용 수정이 불가합니다.
+          </li>
+        </ul>
+      </div>
+      <!-- // 나의 팩트체크 수정 - 주의사항 설명박스 -->
+
+      <!-- 나의 팩트체크 수정 - 내용  -->
+      <div class="ftck-edit-wrap">
+        <div class="avatar-wrap">
+          <div class="req-hgrp">
+            <h6 class="ttl">
+              요청 기업
+            </h6>
+          </div>
+          <!-- 아바타 -->
+          <div class="avatar-grp">
+            <div class="avatar-with-name">
+              <avatar />
+              <div class="name-grp">
+                <span class="name">
+                  주식회사 팩트컴퍼니
+                </span>
+
+                <ul class="name-subtxt-grp">
+                  <li class="name-subtxt-list">
+                    기업규모
+                  </li>
+                  <li class="name-subtxt-list">
+                    산업분류
+                  </li>
+                  <li class="name-subtxt-list">
+                    산업분야
+                  </li>
+                </ul>
               </div>
             </div>
+          </div>
+        </div>
+        <!-- END 아바타 -->
 
-            <div class="ftck-subject">
-              <span class="lbel">{{ '항목명' }}</span>
-              <p class="subject">
-                {{ '비공개 팩트체크입니다.' }}
+        <!-- 셀렉트 -->
+        <div class="req-select-grp">
+          <div class="req-inp-grp">
+            <div class="req-hgrp">
+              <p class="ttl">
+                요청 내용
               </p>
             </div>
-          </div>
-          <!-- // 팩트체크 진행상태 & 제목 -->
-
-          <div class="mypboard-etc-grp">
-            <span class="fc-gray fz-13">투자자명</span>
-            <span class="fc-gray-light fz-13">2021.00.00</span>
-          </div>
-        </div>
-        <!-- // 제목 -->
-
-        <!-- 내용 -->
-        <div class="mypboard-detail-cont">
-          <div class="mypboard-cont">
-            <div class="mypboard-cont-ttl">
-              <span class="fc-gray-light fz-13">※ 팩트체크 요청 내용입니다.</span>
-
-              <div class="right-grp">
-                <button
-                  type="button"
-                  class="btn btn-send-note"
+            <div class="select-all-grp">
+              <div class="select-grp">
+                <custom-slct
+                  class="custom-slct01"
+                  :selected="testOption"
                 >
-                  <span class="txt">쪽지 보내기</span>
-                  <i class="icon icon-msg" />
-                </button>
-              </div>
-            </div>
-              
-            <p class="p-preline">
-              좌우 패딩 40px / 상하 패딩 30px <br>
-              팩트체크 요청 내용 자리입니다. <br>
-              팩트체크 요청 내용 자리입니다. <br>
-            </p>
-          </div>
-          
-          <div class="mypboard-cont">
-            <div class="mypboard-cont-ttl">
-              <span class="fc-gray-light fz-13">※ 팩트체크 요청 내용입니다.</span>
+                  <template #select>
+                    {{ testOption || '선택해주세요' }}
+                  </template>
 
-              <div class="right-grp">
-                <span class="fc-gray fz-13">팩트체커명</span>
-                <span class="fc-gray-light fz-13">2021.00.00</span>
+                  <template #options>
+                    <custom-slct-opt
+                      @click="testOption = '손익계산'"
+                    >
+                      손익계산
+                    </custom-slct-opt>
+
+                    <custom-slct-opt
+                      @click="testOption = '선택사항2'"
+                    >
+                      선택사항 2
+                    </custom-slct-opt>
+                  </template>
+                </custom-slct>
+              </div>
+              <div class="point-grp">
+                <p class="label">
+                  사용 포인트
+                </p>
+                <p class="point">
+                  100,000
+                </p>
+                <i class="icon icon-point" />
               </div>
             </div>
-              
-            <p class="p-preline">
-              좌우 패딩 40px / 상하 패딩 30px <br>
-              팩트체크 요청 내용 자리입니다. <br>
-              팩트체크 요청 내용 자리입니다. <br>
-            </p>
           </div>
         </div>
-        <!-- // 내용 -->
+        <!-- END 셀렉트 -->
+
+        <!-- 작성내용 -->
+        <div class="req-cont-grp">
+          <div class="req-hgrp">
+            <p class="ttl">
+              요청 내용
+            </p>
+          </div>
+          <div class="inp-grp editor-inp-grp">
+            <input
+              type="text"
+              class="inp editor-inp"
+              value="작성된 제목의 내용"
+            >
+          </div>
+          <div
+            class="editor-cont-grp"
+            style="border: 3px solid yellow"
+          >
+            EDITOR 들어가는 부분
+          </div>
+        </div>
+        <!-- END 작성내용 -->
       </div>
-
-      <!-- 이전 / 목록 / 다음 -->
-      <div class="board-detail-nav">
-        <div class="bnav-ctrl bnav-ctrl-prev">
-          <btn-square-bd @click="window.alert('이전글로 이동')">
-            <i class="icon icon-page-prev" />
-          </btn-square-bd>
-
-          <span class="txt">이전글</span>
-        </div>
-
-        <btn-bd
-          class="btn-sm bnav-ctrl-list"
-          @click="$router.push('ftck-list')"
+      <!-- // 나의 팩트체크 수정 - 내용  -->
+      <div
+        position="double-centered"
+        class="btn-grp"
+      >
+        <btn-bd-light
+          class="btn-lg btn-full color-gray btn-prev"
         >
-          목록으로
-        </btn-bd>
-            
-        <div class="bnav-ctrl bnav-ctrl-next">
-          <span class="txt">다음글</span>
-
-          <btn-square-bd @click="window.alert('다음글로 이동')">
-            <i class="icon icon-page-next" />
-          </btn-square-bd>
-        </div>
+          이전
+        </btn-bd-light>
+        <btn-solid
+          class="btn-lg btn-full"
+        >
+          작성완료
+        </btn-solid>
       </div>
-      <!-- // 이전 / 목록 / 다음 -->
     </div>
     <!-- // 마이페이지 컨텐츠 영역 -->
   </div>
