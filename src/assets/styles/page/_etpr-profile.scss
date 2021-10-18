@@ -520,26 +520,6 @@
     @include flex-op(flex-start, flex-start);
   }
 
-  .badge {
-    display: inline-block;
-    padding: 6px 8px;
-    border: 1px solid #5C5E70;
-    background-color: #8E909F;
-    font-size: rem(12);
-    font-weight: 400;
-    color: white;
-
-    &.yellow {
-      border-color: #FF9900;
-      background-color: #FFB300;
-    }
-
-    &.green {
-      border-color: #009A75;
-      background-color: #00BF92;
-    }
-  }
-
   .top-cont-wrap {
     display: flex;
     margin-bottom: 20px;

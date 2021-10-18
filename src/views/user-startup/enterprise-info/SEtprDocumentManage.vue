@@ -1,114 +1,11 @@
 <template>
   <!-- [D] 마이페이지 - 제출서류관리 -->
-  <div class="mypage-container mypage-etpr-document-manage-page">
-    <div class="right-fixed">
-      <div class="fixed-con-container">
-        <div class="fixed-con-ttl">
-          업데이트 내역 ({{ '5' }})
-        </div>
-        <div class="fixed-con-contents">
-          <div class="empty-conts">
-            <img
-              src="@/assets/images/icon/icon-empty-update.svg"
-              alt="업데이트 아이콘"
-            >
-            <p class="txt">
-              업데이트 내역이 없습니다.
-            </p>
-          </div>
-          <ul class="fixed-conts-list-wrap">
-            <li class="fixed-con-list">
-              <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
-              <div class="badge green">
-                {{ '팩트체커' }}
-              </div>
-              <div class="date">
-                {{ '2021.00.00 00:00' }}
-              </div>
-              <ul class="info-list">
-                <li class="info">
-                  {{ '기업정보' }}
-                </li>
-                <li class="info">
-                  {{ '재무상태' }}
-                </li>
-              </ul>
-              <a
-                href="#"
-                target="_blank"
-                class="view-link"
-              >+ 상세보기</a>
-            </li>
-            <li class="fixed-con-list">
-              <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
-              <div class="badge yellow">
-                {{ '자사' }}
-              </div>
-              <div class="date">
-                {{ '2021.00.00 00:00' }}
-              </div>
-              <ul class="info-list">
-                <li class="info">
-                  {{ '기업정보' }}
-                </li>
-                <li class="info">
-                  {{ '재무상태' }}
-                </li>
-              </ul>
-              <a
-                href="#"
-                target="_blank"
-                class="view-link"
-              >+ 상세보기</a>
-            </li>
-            <li class="fixed-con-list">
-              <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
-              <div class="badge">
-                {{ '팩트체커' }}
-              </div>
-              <div class="date">
-                {{ '2021.00.00 00:00' }}
-              </div>
-              <ul class="info-list">
-                <li class="info">
-                  {{ '기업정보' }}
-                </li>
-                <li class="info">
-                  {{ '재무상태' }}
-                </li>
-              </ul>
-              <a
-                href="#"
-                target="_blank"
-                class="view-link"
-              >+ 상세보기</a>
-            </li>
-            <li class="fixed-con-list">
-              <!-- TODO: 자사 yellow, 팩트체커 green, 오래된 항목은 badge만 -->
-              <div class="badge">
-                {{ '자사' }}
-              </div>
-              <div class="date">
-                {{ '2021.00.00 00:00' }}
-              </div>
-              <ul class="info-list">
-                <li class="info">
-                  {{ '기업정보' }}
-                </li>
-                <li class="info">
-                  {{ '재무상태' }}
-                </li>
-              </ul>
-              <a
-                href="#"
-                target="_blank"
-                class="view-link"
-              >+ 상세보기</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+  <div
+    class="mypage-container mypage-rfixed-container"
+  >
+    <!-- 업데이트 내역 -->
+    <layout-right-fixed />
+    <!-- // 업데이트 내역 -->
 
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
@@ -481,7 +378,6 @@
     </div>
     <!-- // 마이페이지 컨텐츠 영역 -->
     
-
     <modal-dialog>
       <modal-light-box @click="closeModal" />
 

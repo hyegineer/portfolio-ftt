@@ -1,19 +1,6 @@
 /* ========== 마이페이지 > 기업정보 ========== */
 
 // 마이 페이지 > 기본정보(스타트업)
-.mypage-default-info-container {
-  
-  .mypage-cont-wrap {
-    max-width: 947px;
-  }
-}
-
-.mypage-detail-info-container {
-  .mypage-cont-wrap {
-    max-width: 947px;
-  }
-}
-
 .article-wrap {
   border-bottom: 1px solid #DDDEE6;
   padding: 30px 0;
@@ -481,12 +468,6 @@
 
 
 /* 마이페이지 > 기업정보 > 제출서류 관리 */
-.mypage-etpr-document-manage-page{
-  .mypage-cont-wrap{
-    max-width: 947px;
-  }
-}
-
 .mypage-etpr-document-manage-form{
   .add-btn{
     margin: 20px 0 10px;

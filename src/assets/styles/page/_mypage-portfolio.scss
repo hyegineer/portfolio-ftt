@@ -1,22 +1,12 @@
 /* ========== 마이페이지 > 기업정보 ========== */
 
 /* 투자자: 마이페이지 > 기업정보 > 포트폴리오 */
-.mypage-etpr-portfolio-main-page{
-  .mypage-cont-wrap{
-    max-width: 947px;
-  }
-}
-
 .pflio-grid-grp{
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   // row-gap: 50px;
   // column-gap: 17px;
-
-  .pflio-grid{
-    
-  }
 }
 
 .pflio-wrap{
@@ -114,10 +104,6 @@
 
 /* 투자자: 마이페이지 > 기업정보 > 포트폴리오 추가 */
 .mypage-etpr-portfolio-add-page{
-  .mypage-cont-wrap{
-    max-width: 947px;
-  }
-
   .invest-amount-item{
     @include flex{
       @include flex-op(center, flex-end);
