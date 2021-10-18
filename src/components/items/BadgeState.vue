@@ -69,6 +69,15 @@
         {{ txt }}
       </span>
     </div>
+    
+    <div
+      v-else-if="!states.includes(txt)"
+      class="badge-state color-bd-gray"
+    >
+      <span class="txt">
+        {{ txt }}
+      </span>
+    </div>
   </div>
 </template>
 
@@ -79,6 +88,11 @@ export default {
       type: String,
       default: '',
     },
+  },
+  data() {
+    return{
+      states: ['대기중', '보완요청', '배정완료', '이의신청', '신청거절', '진행중', '내용 검토중', '완료', '배정완료'],
+    };
   },
 };
 </script>

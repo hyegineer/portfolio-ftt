@@ -20,6 +20,7 @@
   padding: 68px 0 181.5px;
   @include bg-url('img', 'img-main-visual.png');
   background-size: cover;
+  overflow: hidden;
 
   .icon-factsheet {
     margin-bottom: 21.5px;

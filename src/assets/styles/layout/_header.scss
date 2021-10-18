@@ -232,7 +232,7 @@
     padding: 15px;
 
     &:hover{
-      // FIXME 모바일에선 고쳐야할 수도
+      // FIXME: 모바일일 때 hover효과 막아야할 수도 있음
       background-color: rgb(255 255 255 / 10%);
       border-radius: 5px;
     }

@@ -1,3 +1,10 @@
+body{
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  min-width: 1250px;
+}
+
 .empty-wrap{ // 구성요소: 컨텐츠 없을 때 스타일
   text-align: center;
 
@@ -80,7 +87,7 @@
     color: #8E909F;
 
     &:hover{
-      // FIXME 모바일에선 수정해야할 수도
+      // FIXME: 모바일일 때 hover효과 막아야할 수도 있음
       background-color: #ebebed;
     }
 
@@ -183,7 +190,7 @@
 .add-inp-grp{ // 구성요소 - 항목 추가 input list
   width: 100%;
 
-  .inp-grp{
+  & > .inp-grp{
     margin-bottom: 5px;
   }
 
@@ -820,5 +827,113 @@
     font-size: 18px;
     font-weight: 500;
     color: #171820;
+  }
+}
+
+.colored-ment-box{ // 구성요소 컬러멘트박스
+  @include flex{
+    @include flex-op(center, space-between);
+  }
+
+  position: relative;
+  width: 100%;
+  background-color: #212D55;
+  color: white;
+  height: 100px;
+
+  .btn-txt{
+    .txt{
+      color: white;
+    }
+  }
+
+  .img-checker-man{
+    @include absolute($l: -22px, $b: 0);
+    
+    z-index: 1;
+  }
+
+  .img-checker-man ~ .left-cont{
+    padding-left: 170px;
+  }
+
+  .left-cont{
+    position: relative;
+  }
+
+  .ment-box{
+    line-height: 1.4;
+    padding: 0 20px;
+
+    .ttl{
+      @include font-op($c: inherit, $w: 600){
+        font-size: 18px;
+      }
+
+      margin-bottom: 9px;
+    }
+
+    .desc{
+      @include font-op($c: inherit, $w: 500){
+        font-size: 13px;
+      }
+
+      opacity: 0.8;
+    }
+  }
+
+  .right-cont{
+    padding: 0 20px;
+  }
+}
+
+.gradi-ment-box{ // 구성요소 컬러멘트박스 (그라데이션 버전)
+  background: linear-gradient(to right, #3060FF, #00CE6A);
+
+  .ment-box{
+    .ttl{
+      font-size: 22px;
+    }
+  }
+}
+
+.big-ttl-avatar-hd{
+  width: 100%;
+  border-bottom: 1px solid #DDDEE6;
+  padding-bottom: 30px;
+
+  .big-ttl-grp{
+    margin-bottom: 22px;
+  }
+}
+
+.big-ttl-grp { // 구성요소 형광펜 그어진 25px 타이틀박스
+  &.mb-add {
+    margin-bottom: 65px;
+  }
+
+  .cont-big-ttl {
+    font-size: rem(25);
+    font-weight: 500;
+    color: #171820;
+    line-height: 1.4;
+  }
+
+  .underline {
+    position: relative;
+    z-index: 1;
+    
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: auto;
+      bottom: 0;
+      width: 100%;
+      height: 6px;
+      background-color: #53FF81;
+      z-index: -1;
+    }
   }
 }

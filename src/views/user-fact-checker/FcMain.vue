@@ -99,7 +99,11 @@
                   </span>
                 </td>
                 <td>
-                  <span class="td-word-writer">{{ '투자기업명 > 요청 스타트업명' }}</span>
+                  <span class="td-word-writer">
+                    {{ '투자기업명' }}
+                    <i class="icon icon-gt" />
+                    {{ '요청 스타트업명' }}
+                  </span>
                 </td>
                 <td>
                   <span class="td-word-date">{{ '2021.00.00' }}</span>
@@ -137,7 +141,11 @@
                   </span>
                 </td>
                 <td>
-                  <span class="td-word-writer">{{ '투자기업명 > 요청 스타트업명' }}</span>
+                  <span class="td-word-writer">
+                    {{ '투자기업명' }}
+                    <i class="icon icon-gt" />
+                    {{ '요청 스타트업명' }}
+                  </span>
                 </td>
                 <td>
                   <span class="td-word-date">{{ '2021.00.00' }}</span>
@@ -204,7 +212,11 @@
                   </span>
                 </td>
                 <td>
-                  <span class="td-word-writer">{{ '투자기업명 > 요청 스타트업명' }}</span>
+                  <span class="td-word-writer">
+                    {{ '투자기업명' }}
+                    <i class="icon icon-gt" />
+                    {{ '요청 스타트업명' }}
+                  </span>
                 </td>
                 <td>
                   <span class="td-word-date">{{ '2021.00.00' }}</span>
@@ -246,7 +258,11 @@
                   </span>
                 </td>
                 <td>
-                  <span class="td-word-writer">{{ '투자기업명 > 요청 스타트업명' }}</span>
+                  <span class="td-word-writer">
+                    {{ '투자기업명' }}
+                    <i class="icon icon-gt" />
+                    {{ '요청 스타트업명' }}
+                  </span>
                 </td>
                 <td>
                   <span class="td-word-date">{{ '2021.00.00' }}</span>

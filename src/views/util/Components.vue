@@ -373,11 +373,20 @@
         <div class="inp-grp">
           <button
             type="button"
-            class="inp"
+            class="inp inp-icon"
           >
             <i class="icon icon-cal" />
             <span>2021.10.05</span>
           </button>
+        </div>
+
+        <div class="inp-grp inp-icon-grp">
+          <i class="icon icon-link" />
+          <input
+            type="text"
+            class="inp"
+            placeholder="아이콘있는 인풋"
+          >
         </div>
         <!-- // 인풋만 -->
 
@@ -547,6 +556,55 @@
           </template>
         </custom-slct>
         <!-- // 커스텀 셀렉트 2 -->
+
+        <h2>4-8. 항목 추가</h2>
+        
+        <div class="add-inp-grp">
+          <div class="inp-grp inp-btn-grp">
+            <input
+              type="text"
+              class="inp"
+            >
+            <btn-square-bd class="del-btn">
+              <span class="is-voice-only">항목 삭제</span>
+            </btn-square-bd>
+          </div>
+          <div class="inp-grp inp-btn-grp">
+            <div class="inp-grp inp-btn-grp mb-0">
+              <input
+                readonly
+                type="text"
+                class="inp"
+                placeholder="IR 자료"
+              >
+
+              <btn-bd-dark
+                class="btn-md"
+              >
+                파일첨부
+              </btn-bd-dark>
+            </div>
+              
+            <btn-square-bd class="del-btn">
+              <span class="is-voice-only">항목 삭제</span>
+            </btn-square-bd>
+          </div>
+          <div class="inp-grp inp-btn-grp">
+            <div class="inp-grp inp-icon-grp">
+              <i class="icon icon-link" />
+              <input
+                readonly
+                type="text"
+                class="inp"
+                placeholder="영상 링크 삽입"
+              >
+            </div>
+              
+            <btn-square-bd class="del-btn">
+              <span class="is-voice-only">항목 삭제</span>
+            </btn-square-bd>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -2295,6 +2353,73 @@
       </div>
     </section>
 
+    <section class="section">
+      <h1 class="cp-ttl">
+        20. 컬러 멘트 박스
+      </h1>
+
+      <div
+        class="section-cont"
+        style="padding-top: 50px;"
+      >
+        <div style="margin: 20px 0">
+          <article class="colored-ment-box">
+            <img
+              src="@/assets/images/img/img-checker-man.svg"
+              alt="img-checker-man"
+              class="img-checker-man"
+            >
+
+            <div class="left-cont">
+              <div class="ment-box">
+                <h4 class="ttl">
+                  투자자의 요청을 팩트체크 해주세요!
+                </h4>
+                <p class="desc">
+                  투자자들이 당신의 팩트체크를 기다리고 있습니다.
+                </p>
+              </div>
+            </div>
+
+            <div class="right-cont">
+              <button
+                type="button"
+                class="btn-txt"
+              >
+                <span class="txt">팩트체크 신청하기</span>
+                <i class="icon icon-gt-white" />
+              </button>
+            </div>
+          </article>
+        </div>
+          
+        <div style="margin: 20px 0;">
+          <article class="colored-ment-box gradi-ment-box">
+            <div class="left-cont">
+              <div class="ment-box">
+                <h4 class="ttl">
+                  현재 진행중인 팩트체크 입니다.
+                </h4>
+                <p class="desc">
+                  진행 시작 일자로 부터 15일 이내로 작성완료 해주세요. (진행 시작 일자 : 2020.00.00)
+                </p>
+              </div>
+            </div>
+
+            <div class="right-cont">
+              <button
+                type="button"
+                class="btn-txt"
+              >
+                <span class="txt">팩트체크 작성하기</span>
+                <i class="icon icon-gt-white" />
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <modal-dialog>
       <modal-light-box @click="closeModal" />
 
@@ -2424,125 +2549,125 @@ export default {
 
 <style lang="scss">
 .components-page {
-    width: 100%;
-    max-width: 1200px;
-    margin: 50px auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
 
-    .cp-ttl {
-        font-size: 20px;
-        font-weight: 700;
-        margin-bottom: 20px;
+  .cp-ttl {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .section {
+    border-bottom: 1px solid #ebebeb;
+
+    padding: 20px 0;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .section-btns-cont {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .section-card-cont {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    & > * {
+      flex-shrink: 0;
+    }
+  }
+
+  .section-cards-cont {
+    .card {
+      max-width: 260px;
+    }
+  }
+
+  .section-modal-cont {
+    .modal {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+      opacity: 1;
+      pointer-events: visible;
+    }
+  }
+
+  .comp-grp-modal {
+    & > h3 {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 10px;
     }
 
-    .section {
-        border-bottom: 1px solid #ebebeb;
-
-        padding: 20px 0;
-
-        &:last-child {
-            border-bottom: 0;
-        }
-    }
-
-    .section-btns-cont {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        align-items: flex-start;
-    }
-
-    .section-card-cont {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        align-items: flex-start;
-
-        & > * {
-            flex-shrink: 0;
-        }
-    }
-
-    .section-cards-cont {
-        .card {
-            max-width: 260px;
-        }
-    }
-
-    .section-modal-cont {
-        .modal {
-            position: relative;
-            top: 0;
-            left: 0;
-            transform: translate(0, 0);
-            opacity: 1;
-            pointer-events: visible;
-        }
-    }
-
-    .comp-grp-modal {
-        & > h3 {
-            font-size: 15px;
-            font-weight: 500;
-            margin-bottom: 10px;
-        }
-
-        margin-bottom: 25px;
-    }
+    margin-bottom: 25px;
+  }
 }
 
 .section-cont {
-    & > h2 {
-        margin: 15px 0;
-        font-weight: 500;
-    }
+  & > h2 {
+    margin: 15px 0;
+    font-weight: 500;
+  }
 }
 
 // 12. 슬라이드 관련 스타일
 .main-swiper-container-frame {
-    width: 100%;
-    height: 485px;
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  height: 485px;
+  overflow: hidden;
+  position: relative;
 
-    .swiper-container {
-        position: absolute;
-        top: -954.3%;
-        width: 100%;
-    }
+  .swiper-container {
+    position: absolute;
+    top: -954.3%;
+    width: 100%;
+  }
 }
 
 .main-swiper-container {
-    .swiper-slide {
-        padding: 0 20px;
-        .info-card {
-            position: relative;
-            border: 1px solid #dddee6;
-            box-shadow: none;
-            cursor: pointer;
-            z-index: 10;
+  .swiper-slide {
+    padding: 0 20px;
+    .info-card {
+      position: relative;
+      border: 1px solid #dddee6;
+      box-shadow: none;
+      cursor: pointer;
+      z-index: 10;
 
-            @include make-before {
-                @include absolute($t: -1px, $l: -1px);
+      @include make-before {
+        @include absolute($t: -1px, $l: -1px);
 
-                width: calc(100% + 2px);
-                height: calc(100% + 2px);
-                background-color: white;
-                z-index: 10;
-                opacity: 0.4;
-                transition: all 0.3s;
-            }
-        }
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        background-color: white;
+        z-index: 10;
+        opacity: 0.4;
+        transition: all 0.3s;
+      }
     }
+  }
 
-    .swiper-slide-active {
-        .info-card {
-            box-shadow: 0 10px 20px rgb(23 24 32 / 8%);
-            z-index: 20;
+  .swiper-slide-active {
+    .info-card {
+      box-shadow: 0 10px 20px rgb(23 24 32 / 8%);
+      z-index: 20;
 
-            &:before {
-                display: none;
-            }
-        }
+      &:before {
+        display: none;
+      }
     }
+  }
 }
 </style>

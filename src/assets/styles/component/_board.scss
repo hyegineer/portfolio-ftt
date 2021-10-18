@@ -73,7 +73,7 @@
   padding: 26px 40px;
 
   &:hover{
-    // FIXME: 모바일일 때 제외해야할 수도
+    // FIXME: 모바일일 때 hover효과 막아야할 수도 있음
     background-color: #F6FFFB;
     cursor: pointer;
   }
@@ -122,6 +122,10 @@
   .td-word-writer{
     font-size: 13px;
     color: #8e909f;
+
+    .icon-gt {
+      margin: -2px 2px 0;
+    }
   }
 
   .td-word-date{
