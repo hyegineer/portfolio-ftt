@@ -1,18 +1,22 @@
 /* ========== 카드 관련 스타일 ========== */
 
 .card{ // 프로필 카드
+  @include flex-col;
+  @include flex-op(flex-start, flex-start);
+
+  gap: 9px;
   width: 100%;
   
   .card-thumb{
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
-  .card-name{
-    margin-top: 10px;
-  }
-
-  .card-tag-grp{
-    margin-top: 11px;
+  .amount-item{
+    font-size: 15px;
+    
+    .unit{
+      font-weight: 400;
+    }
   }
 }
 
@@ -53,10 +57,17 @@
     }
   }
 
-  .avatar{
+  .card-thumb-avatar{
     @include absolute($b: -8px, $r: 8px);
     
     z-index: 1;
+
+    .icon-msg-white{
+      display: block;
+      margin: 0 auto;
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 
@@ -106,6 +117,8 @@
   @include font-op($w: 600, $c: #171820){
     font-size: 19px;
   }
+
+  line-height: 1.4;
 }
 
 .card-tag-grp{

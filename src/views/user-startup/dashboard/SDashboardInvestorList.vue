@@ -47,11 +47,12 @@
           class="card-grid"
           @click="$router.push('dashboard-investor-detail')"
         >
-          <!-- FIXME: 채팅아이콘, 최근조회일 추가해야함 -->
           <div class="card">
             <div class="card-thumb">
               <thumbnail />
-              <avatar />
+              <div class="card-thumb-avatar">
+                <avatar />
+              </div>
             </div>
 
             <span class="card-user-type">
