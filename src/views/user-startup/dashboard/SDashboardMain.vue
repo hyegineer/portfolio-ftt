@@ -183,7 +183,10 @@
                     <div class="card-thumb">
                       <thumbnail />
                       <span class="ribbon">정보 업데이트</span>
-                      <avatar />
+                      <div class="card-thumb-avatar">
+                        <i class="icon icon-msg-white" />
+                        <avatar />
+                      </div>
                     </div>
 
                     <ul class="card-subtxt-grp">
@@ -219,6 +222,14 @@
                         #태그텍스트여덟자
                       </li>
                     </ul>
+
+                    <div class="space-between">
+                      <span class="fz-12 fc-gray-light">팩트체크 요청</span>
+                      <div class="amount-item">
+                        <strong class="amount">100</strong>
+                        <span class="unit">건</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -372,7 +383,9 @@
                   <div class="card">
                     <div class="card-thumb">
                       <thumbnail />
-                      <avatar />
+                      <div class="card-thumb-avatar">
+                        <avatar />
+                      </div>
                     </div>
 
                     <span class="card-user-type">

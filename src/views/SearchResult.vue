@@ -177,7 +177,9 @@
                 <div class="card-thumb">
                   <thumbnail />
                   <span class="ribbon">정보 업데이트</span>
-                  <avatar />
+                  <div class="card-thumb-avatar">
+                    <avatar />
+                  </div>
                 </div>
 
                 <ul class="card-subtxt-grp">
