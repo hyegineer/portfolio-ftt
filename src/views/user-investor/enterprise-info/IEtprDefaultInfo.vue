@@ -82,10 +82,6 @@
                 class="icon-with-txt"
               >
                 <i class="icon icon-jump" />
-                <!-- 홈페이지 주소 없을 때 -->
-                <span class="empty-txt">홈페이지 주소가 없습니다.</span>
-
-                <!-- 홈페이지 주소 있을 때 -->
                 <a
                   href="#"
                   class="txt"
@@ -235,7 +231,7 @@
                 class="table-cont-wrap custom-scroll-wrap"
               >
                 <ul
-                  v-for="(item, idx) in 20" 
+                  v-for="(item, idx) in 20"
                   :key="idx"
                   class="table-cont-grp"
                 >
