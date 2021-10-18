@@ -97,6 +97,10 @@
   overflow: auto;
   z-index: 1;
   position: relative;
+
+  @include media(1370px){
+    max-width: 230px;
+  }
 }
 
 .mypage-snav-ttl-grp{ // 사이드네비 제목
