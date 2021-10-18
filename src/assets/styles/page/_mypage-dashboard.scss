@@ -53,6 +53,10 @@
     padding: 60px 0 80px;
     border-bottom: 1px solid #DDDEE6;
 
+    &:last-child{
+      border-bottom: 0;
+    }
+
     &.pt-remove {
       padding-top: 0;
     }
@@ -357,6 +361,10 @@
         align-items: center;
         padding: 12px 20px;
         border-bottom: 1px solid #DDDEE6;
+
+        &:last-child{
+          border-bottom: 0;
+        }
 
         &:hover {
           background-color: #F9F9FB;

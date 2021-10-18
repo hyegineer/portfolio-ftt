@@ -427,6 +427,10 @@
     align-items: center;
     border-bottom: 1px solid #DDDEE6;
 
+    &:last-child{
+      border-bottom: 0;
+    }
+
     &.f-bold {
       border-bottom: 1px solid #8E909F;
 
