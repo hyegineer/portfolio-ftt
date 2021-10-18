@@ -156,7 +156,8 @@
               <router-link
                 class="lnb-btn"
                 to="/investor/mypage/ftck-list"
-                :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/ftck-detail`)}"
+                :class="{'router-link-active': $route.path.startsWith(`/investor/mypage/ftck-detail`)
+                  || $route.path.startsWith(`/investor/mypage/ftck-checking`)}"
               >
                 요청한 팩트체크
               </router-link>

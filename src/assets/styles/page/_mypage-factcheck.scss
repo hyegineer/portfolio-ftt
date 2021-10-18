@@ -273,9 +273,40 @@
       border-bottom: 0;
     }
   }
-
+  
   .guide-box{
     margin: 0;
+  }
+}
+
+/* 투자자: 마이페이지 > 팩트체크 > 요청한 팩트체크 보완요청 */
+.mypage-ftck-checking-edit-page{
+  .ftck-caution-box{
+    margin-bottom: 10px;
+  }
+
+  .form-ttl{
+    @include font-op($w: 600, $c: #171820){
+      font-size: 16px;
+    }
+
+    margin-bottom: 20px;
+  }
+
+  .form-item{
+    margin: 10px 0;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  .custom-slct{
+    max-width: 305px;
+  }
+
+  .ftck-detail-wrap{
+    padding-bottom: 40px;
   }
 }
 
