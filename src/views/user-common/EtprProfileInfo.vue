@@ -922,9 +922,240 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
               </div>
               <div class="white-panel pd-0">
                 <div class="common-info-container">
-                  <p class="common-info-graph">
-                    재무상태 들어옵니다.
-                  </p>
+                  <div class="common-info-graph">
+                    <div class="table-all-wrap">
+                      <div class="table-grp">
+                        <!-- 테이블 헤더 그룹 -->
+                        <ul class="table-hgrp">
+                          <li class="table-hlist flex-basis-20 txt-left">
+                            <span class="table-txt">항목</span>
+                          </li>
+                          <li class="table-hlist flex-basis-25 txt-right">
+                            <span class="table-txt">2019</span>
+                          </li>
+                          <li class="table-hlist flex-basis-25 txt-right">
+                            <span class="table-txt">2020</span>
+                          </li>
+                          <li class="table-hlist flex-basis-25 txt-right">
+                            <span class="table-txt">2021</span>
+                          </li>
+                        </ul>
+                        <!-- END 테이블 헤더 그룹 -->
+
+                        <!-- 테이블 내용 그룹 -->
+                        <!-- 내용이 없을 때 -->
+                        <div
+                          class="table-cont-wrap empty-cont-wrap"
+                        >
+                          <p class="empty-ment">
+                            내용이 없습니다.
+                          </p>
+                        </div>
+                        <!-- END 내용이 없을 때 -->
+
+                        <!-- 내용이 있을 때 -->
+                        <div
+                          class="table-cont-wrap"
+                        >
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">현금성자산</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">매출채권</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">재고자산</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">무형자산</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">투자자산</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">기타자산</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp f-bold"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">자산총계</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">유통부재</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">장기부채</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp f-bold"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">부채총계</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">자본금</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp f-600-lg"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">자본총계</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right padding-change">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right padding-change">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right padding-change">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- END 내용이 있을 때 -->
+
+                        <!-- END 테이블 내용 그룹 -->
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="bot-txt">
@@ -981,9 +1212,240 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
               </div>
               <div class="white-panel pd-0">
                 <div class="common-info-container">
-                  <p class="common-info-graph">
-                    손익계산서 들어옵니다.
-                  </p>
+                  <div class="common-info-graph">
+                    <div class="table-all-wrap">
+                      <div class="table-grp">
+                        <!-- 테이블 헤더 그룹 -->
+                        <ul class="table-hgrp">
+                          <li class="table-hlist flex-basis-20 txt-left">
+                            <span class="table-txt">항목</span>
+                          </li>
+                          <li class="table-hlist flex-basis-26 txt-right">
+                            <span class="table-txt">2019</span>
+                          </li>
+                          <li class="table-hlist flex-basis-26 txt-right">
+                            <span class="table-txt">2020</span>
+                          </li>
+                          <li class="table-hlist flex-basis-26 txt-right">
+                            <span class="table-txt">2021</span>
+                          </li>
+                        </ul>
+                        <!-- END 테이블 헤더 그룹 -->
+
+                        <!-- 테이블 내용 그룹 -->
+                        <!-- 내용이 없을 때 -->
+                        <div
+                          class="table-cont-wrap empty-cont-wrap"
+                        >
+                          <p class="empty-ment">
+                            내용이 없습니다.
+                          </p>
+                        </div>
+                        <!-- END 내용이 없을 때 -->
+
+                        <!-- 내용이 있을 때 -->
+                        <div
+                          class="table-cont-wrap"
+                        >
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">매출액</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">매출원가</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp f-bold"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">매출총이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">일반관리비</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">영업이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">영업외수익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">영업외비용</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">경상이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">특별이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">세전순이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">법인세</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp f-bold"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">당기순이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- END 내용이 있을 때 -->
+
+                        <!-- END 테이블 내용 그룹 -->
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="bot-txt">
@@ -1221,7 +1683,66 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
             </div>
           </div>
           <div class="white-panel pd-0">
-            투자유치 들어옵니다.
+            <div class="common-info-graph">
+              <div class="table-all-wrap">
+                <div class="table-grp">
+                  <!-- 테이블 헤더 그룹 -->
+                  <ul class="table-hgrp">
+                    <li class="table-hlist flex-basis-10 txt-left">
+                      <span class="table-txt">날짜</span>
+                    </li>
+                    <li class="table-hlist flex-basis-13 txt-center">
+                      <span class="table-txt">투자단계</span>
+                    </li>
+                    <li class="table-hlist flex-basis-13 txt-right">
+                      <span class="table-txt">투자유치 금액</span>
+                    </li>
+                    <li class="table-hlist flex-basis-61 txt-center">
+                      <span class="table-txt">투자자</span>
+                    </li>
+                  </ul>
+                  <!-- END 테이블 헤더 그룹 -->
+
+                  <!-- 테이블 내용 그룹 -->
+                  <!-- 내용이 없을 때 -->
+                  <div
+                    class="table-cont-wrap empty-cont-wrap"
+                  >
+                    <p class="empty-ment">
+                      내용이 없습니다.
+                    </p>
+                  </div>
+                  <!-- END 내용이 없을 때 -->
+
+                  <!-- 내용이 있을 때 -->
+                  <div
+                    class="table-cont-wrap custom-scroll-wrap"
+                  >
+                    <ul
+                      v-for="(item, idx) in 20"
+                      :key="idx"
+                      class="table-cont-grp"
+                    >
+                      <li class="table-cont-list flex-basis-10 txt-left">
+                        <span class="table-txt">2021.00</span>
+                      </li>
+                      <li class="table-cont-list flex-basis-13 txt-center">
+                        <span class="table-txt">M&A</span>
+                      </li>
+                      <li class="table-cont-list flex-basis-13 txt-right">
+                        <span class="table-txt">0,000,000,000</span>
+                      </li>
+                      <li class="table-cont-list flex-basis-61 txt-left">
+                        <span class="table-txt">투자자명, 투자자명, 투자자명, 투자자명, 투자자명, 투자자명</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- END 내용이 있을 때 -->
+
+                  <!-- END 테이블 내용 그룹 -->
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- END 투자유치 -->

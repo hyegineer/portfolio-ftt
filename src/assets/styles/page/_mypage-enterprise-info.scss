@@ -453,6 +453,10 @@
   .table-cont-list {
     flex-grow: 1;
     padding: 15px 20px;
+
+    &.padding-change {
+      padding: 15px 20px 15px 0;
+    }
   }
 
   .table-txt {
