@@ -869,7 +869,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                           <li class="table-hlist flex-basis-16 txt-left pl-20">
                             <span class="table-txt">주주구분</span>
                           </li>
-                          <li class="table-hlist flex-basis-16 txt-left pl-18">
+                          <li class="table-hlist flex-basis-17 txt-left pl-18">
                             <span class="table-txt">주주명</span>
                           </li>
                           <li class="table-hlist flex-basis-10 txt-center">
@@ -910,7 +910,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                             <li class="table-cont-list flex-basis-16 txt-center pl-20">
                               <span class="table-txt">주요주주</span>
                             </li>
-                            <li class="table-cont-list flex-basis-16 txt-left pl-18">
+                            <li class="table-cont-list flex-basis-17 txt-left pl-18">
                               <span class="table-txt">이름여섯글자</span>
                             </li>
                             <li class="table-cont-list flex-basis-10 txt-center">
