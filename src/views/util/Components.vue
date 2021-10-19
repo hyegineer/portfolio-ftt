@@ -2484,6 +2484,16 @@
           </div>
         </div>
       </section>
+
+      <section class="section">
+        <h1 class="cp-ttl">
+          21. 레이더 차트
+        </h1>
+
+        <div class="section-cont">
+          <rader-chart />
+        </div>
+      </section>
     </div>
 
     <modal-dialog>
@@ -2615,125 +2625,125 @@ export default {
 
 <style lang="scss">
 .components-page {
-    width: 90%;
-    max-width: 1200px;
-    margin: 50px auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
 
-    .cp-ttl {
-        font-size: 20px;
-        font-weight: 700;
-        margin-bottom: 20px;
+  .cp-ttl {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .section {
+    border-bottom: 1px solid #ebebeb;
+
+    padding: 20px 0;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .section-btns-cont {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .section-card-cont {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    & > * {
+      flex-shrink: 0;
+    }
+  }
+
+  .section-cards-cont {
+    .card {
+      max-width: 260px;
+    }
+  }
+
+  .section-modal-cont {
+    .modal {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+      opacity: 1;
+      pointer-events: visible;
+    }
+  }
+
+  .comp-grp-modal {
+    & > h3 {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 10px;
     }
 
-    .section {
-        border-bottom: 1px solid #ebebeb;
-
-        padding: 20px 0;
-
-        &:last-child {
-            border-bottom: 0;
-        }
-    }
-
-    .section-btns-cont {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        align-items: flex-start;
-    }
-
-    .section-card-cont {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        align-items: flex-start;
-
-        & > * {
-            flex-shrink: 0;
-        }
-    }
-
-    .section-cards-cont {
-        .card {
-            max-width: 260px;
-        }
-    }
-
-    .section-modal-cont {
-        .modal {
-            position: relative;
-            top: 0;
-            left: 0;
-            transform: translate(0, 0);
-            opacity: 1;
-            pointer-events: visible;
-        }
-    }
-
-    .comp-grp-modal {
-        & > h3 {
-            font-size: 15px;
-            font-weight: 500;
-            margin-bottom: 10px;
-        }
-
-        margin-bottom: 25px;
-    }
+    margin-bottom: 25px;
+  }
 }
 
 .section-cont {
-    & > h2 {
-        margin: 15px 0;
-        font-weight: 500;
-    }
+  & > h2 {
+    margin: 15px 0;
+    font-weight: 500;
+  }
 }
 
 // 12. 슬라이드 관련 스타일
 .main-swiper-container-frame {
-    width: 100%;
-    height: 485px;
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  height: 485px;
+  overflow: hidden;
+  position: relative;
 
-    .swiper-container {
-        position: absolute;
-        top: -954.3%;
-        width: 100%;
-    }
+  .swiper-container {
+    position: absolute;
+    top: -954.3%;
+    width: 100%;
+  }
 }
 
 .main-swiper-container {
-    .swiper-slide {
-        padding: 0 20px;
-        .info-card {
-            position: relative;
-            border: 1px solid #dddee6;
-            box-shadow: none;
-            cursor: pointer;
-            z-index: 10;
+  .swiper-slide {
+    padding: 0 20px;
+    .info-card {
+      position: relative;
+      border: 1px solid #dddee6;
+      box-shadow: none;
+      cursor: pointer;
+      z-index: 10;
 
-            @include make-before {
-                @include absolute($t: -1px, $l: -1px);
+      @include make-before {
+        @include absolute($t: -1px, $l: -1px);
 
-                width: calc(100% + 2px);
-                height: calc(100% + 2px);
-                background-color: white;
-                z-index: 10;
-                opacity: 0.4;
-                transition: all 0.3s;
-            }
-        }
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        background-color: white;
+        z-index: 10;
+        opacity: 0.4;
+        transition: all 0.3s;
+      }
     }
+  }
 
-    .swiper-slide-active {
-        .info-card {
-            box-shadow: 0 10px 20px rgb(23 24 32 / 8%);
-            z-index: 20;
+  .swiper-slide-active {
+    .info-card {
+      box-shadow: 0 10px 20px rgb(23 24 32 / 8%);
+      z-index: 20;
 
-            &:before {
-                display: none;
-            }
-        }
+      &:before {
+        display: none;
+      }
     }
+  }
 }
 </style>
