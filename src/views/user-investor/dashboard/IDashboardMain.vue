@@ -212,7 +212,47 @@
                   <div
                     class="graph-box"
                   >
-                    <div class="custom-colchart-wrap" />
+                    <div class="custom-colchart-wrap">
+                      <div class="custom-colchart">
+                        <ul class="axis-grp yaxis">
+                          <li class="axis-list">
+                            <div
+                              class="grph-column"
+                              style="height: 50%; background-color: #DDDEE6;"
+                            >
+                              <div class="data-labels">
+                                <!-- [D] 이전해에는 percent 말풍선이 안보이는 듯 -->
+                                <!-- <span class="txt-percent">150%</span> -->
+                                <span class="txt-data">0,000,000,000</span>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="axis-list">
+                            <div
+                              class="grph-column"
+                              style="height: 100%; background-color: #00EB79;"
+                            >
+                              <div class="data-labels">
+                                <!-- [D] 올랐을 때 color-red 클래스 -->
+                                <!-- <span class="txt-percent color-red">30%</span> -->
+                                <!-- [D] 올랐을 때 color-blue 클래스 -->
+                                <span class="txt-percent color-red">150%</span>
+                                <span class="txt-data">0,000,000,000</span>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+
+                        <ul class="axis-grp xaxis">
+                          <li class="axis-list">
+                            2020.00.00
+                          </li>
+                          <li class="axis-list">
+                            2020.00.00
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                   <!-- END 내용이 있을 때 -->
 
@@ -259,7 +299,47 @@
                   <div
                     class="graph-box"
                   >
-                    그래프 들어가는 부분
+                    <div class="custom-colchart-wrap">
+                      <div class="custom-colchart">
+                        <ul class="axis-grp yaxis">
+                          <li class="axis-list">
+                            <div
+                              class="grph-column"
+                              style="height: 100%; background-color: #DDDEE6;"
+                            >
+                              <div class="data-labels">
+                                <!-- [D] 이전해에는 percent 말풍선이 안보이는 듯 -->
+                                <!-- <span class="txt-percent">100%</span> -->
+                                <span class="txt-data">0,000,000,000</span>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="axis-list">
+                            <div
+                              class="grph-column"
+                              style="height: 30%; background-color: #00EB79;"
+                            >
+                              <div class="data-labels">
+                                <!-- [D] 올랐을 때 color-red 클래스 -->
+                                <!-- <span class="txt-percent color-red">30%</span> -->
+                                <!-- [D] 올랐을 때 color-blue 클래스 -->
+                                <span class="txt-percent color-blue">30%</span>
+                                <span class="txt-data">0,000,000,000</span>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+
+                        <ul class="axis-grp xaxis">
+                          <li class="axis-list">
+                            2020.00.00
+                          </li>
+                          <li class="axis-list">
+                            2020.00.00
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                   <!-- END 내용이 있을 때 -->
 
@@ -306,7 +386,47 @@
                   <div
                     class="graph-box"
                   >
-                    그래프 들어가는 부분
+                    <div class="custom-colchart-wrap">
+                      <div class="custom-colchart">
+                        <ul class="axis-grp yaxis">
+                          <li class="axis-list">
+                            <div
+                              class="grph-column"
+                              style="height: 50%; background-color: #DDDEE6;"
+                            >
+                              <div class="data-labels">
+                                <!-- [D] 이전해에는 percent 말풍선이 안보이는 듯 -->
+                                <!-- <span class="txt-percent">150%</span> -->
+                                <span class="txt-data">0,000,000,000</span>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="axis-list">
+                            <div
+                              class="grph-column"
+                              style="height: 100%; background-color: #00EB79;"
+                            >
+                              <div class="data-labels">
+                                <!-- [D] 올랐을 때 color-red 클래스 -->
+                                <!-- <span class="txt-percent color-red">30%</span> -->
+                                <!-- [D] 올랐을 때 color-blue 클래스 -->
+                                <span class="txt-percent color-red">150%</span>
+                                <span class="txt-data">0,000,000,000</span>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+
+                        <ul class="axis-grp xaxis">
+                          <li class="axis-list">
+                            2020.00.00
+                          </li>
+                          <li class="axis-list">
+                            2020.00.00
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                   <!-- END 내용이 있을 때 -->
 
@@ -353,7 +473,47 @@
                   <div
                     class="graph-box"
                   >
-                    그래프 들어가는 부분
+                    <div class="custom-colchart-wrap">
+                      <div class="custom-colchart">
+                        <ul class="axis-grp yaxis">
+                          <li class="axis-list">
+                            <div
+                              class="grph-column"
+                              style="height: 50%; background-color: #DDDEE6;"
+                            >
+                              <div class="data-labels">
+                                <!-- [D] 이전해에는 percent 말풍선이 안보이는 듯 -->
+                                <!-- <span class="txt-percent">150%</span> -->
+                                <span class="txt-data">0,000,000,000</span>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="axis-list">
+                            <div
+                              class="grph-column"
+                              style="height: 100%; background-color: #00EB79;"
+                            >
+                              <div class="data-labels">
+                                <!-- [D] 올랐을 때 color-red 클래스 -->
+                                <!-- <span class="txt-percent color-red">30%</span> -->
+                                <!-- [D] 올랐을 때 color-blue 클래스 -->
+                                <span class="txt-percent color-red">150%</span>
+                                <span class="txt-data">0,000,000,000</span>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+
+                        <ul class="axis-grp xaxis">
+                          <li class="axis-list">
+                            2020.00.00
+                          </li>
+                          <li class="axis-list">
+                            2020.00.00
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                   <!-- END 내용이 있을 때 -->
 
