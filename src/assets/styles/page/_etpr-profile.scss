@@ -168,6 +168,15 @@
     .btn-bd-blue {
       box-shadow: none;
     }
+    
+    .fav-btn{
+      font-size: 16px;
+
+      .icon{
+        margin-right: 6px;
+        margin-top: -1px;
+      }
+    }
   }
 }
 

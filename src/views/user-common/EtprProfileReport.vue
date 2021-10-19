@@ -73,21 +73,17 @@
                     </div>
 
                     <btn-solid-blue
-                      class="btn-xlg btn-full"
+                      class="fav-btn btn-xlg btn-full"
                       @click="window.alert('관심기업 등록을 하셨습니다.')"
                     >
-                      + 관심기업 등록
+                      <span class="txt">+ 관심기업 등록</span>
                     </btn-solid-blue>
 
                     <btn-bd-blue
-                      class="btn-xlg btn-full"
+                      class="fav-btn btn-xlg btn-full"
                       @click="window.alert('관심기업 등록을 취소하셨습니다.')"
                     >
-                      <img
-                        src="@/assets/images/icon/icon-check-bl.svg"
-                        alt="체크"
-                        class="check-icon"
-                      > 관심기업 등록 완료
+                      <i class="icon icon-check-blue" /><span class="txt">관심기업 등록 완료</span>
                     </btn-bd-blue>
 
                     <div class="btn-grp">
@@ -122,7 +118,7 @@
         </div>
         <!-- END 기업 간략 소개 -->
 
-        <div class="mgt-20 white-panel active-ttl-container">
+        <div class="mgt-10 white-panel active-ttl-container">
           <div class="active-ttl-inner">
             <div
               class="active-ttl" 
