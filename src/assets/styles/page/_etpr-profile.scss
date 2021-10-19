@@ -952,3 +952,50 @@
     padding: 0;
   }
 }
+
+.stock-holder-container {
+
+  .table-all-wrap {
+
+    .table-hlist {
+      padding: 16px 0;
+
+      &.pl-20 {
+        padding-left: 20px;
+      }
+
+      &.pl-18 {
+        padding-left: 18px;
+      }
+
+      &.pr-5 {
+        padding-right: 5px;
+      }
+
+      &.pr-15 {
+        padding-right: 15px;
+      }
+    }
+  
+    .table-cont-list {
+      padding: 16px 0;
+
+      &.pl-20 {
+        padding-left: 20px;
+      }
+
+      &.pl-18 {
+        padding-left: 18px;
+      }
+
+      &.pr-5 {
+        padding-right: 5px;
+      }
+
+      &.pr-15 {
+        padding-right: 15px;
+      }
+    }
+  }
+  
+}
