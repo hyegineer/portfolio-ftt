@@ -2484,6 +2484,16 @@
           </div>
         </div>
       </section>
+
+      <section class="section">
+        <h1 class="cp-ttl">
+          21. 레이더 차트
+        </h1>
+
+        <div class="section-cont">
+          <rader-chart />
+        </div>
+      </section>
     </div>
 
     <modal-dialog>

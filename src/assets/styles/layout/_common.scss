@@ -743,7 +743,7 @@ body{
 
 .flexable-container { // 기업프로필 판넬 정렬
   @include flex {
-    @include flex-op(streach, space-between);
+    @include flex-op(stretch, space-between);
 
     .flexable-inner {
       flex: 0 0 calc(50% - 10px);
@@ -1044,6 +1044,10 @@ body{
   .xaxis-list{
     flex: 1 1 20%;
     border-right: 1px solid #005D31;
+
+    &:last-child{
+      border-right: 0;
+    }
   }
 
   .xaxis-item{

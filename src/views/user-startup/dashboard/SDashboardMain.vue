@@ -137,7 +137,7 @@
             <div class="white-panel pd-0">
               <div class="common-info-container">
                 <p class="common-info-graph">
-                  그래프 들어옵니다.
+                  <rader-chart />
                 </p>
               </div>
             </div>
