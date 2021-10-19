@@ -1848,8 +1848,29 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
             총 <span>{{ '5' }}</span>개
           </div>
           <empty-contents txt="내용이 없습니다." />
-          <div class="white-panel">
-            보유특허 들어옵니다.
+          <div>
+            <div class="table-all-wrap border-bottom-remove">
+              <div class="table-grp">
+                <!-- 테이블 내용 그룹 -->
+                <div
+                  class="table-cont-wrap custom-scroll-wrap padding-add"
+                >
+                  <ul
+                    v-for="(item, idx) in 20"
+                    :key="idx"
+                    class="table-cont-grp"
+                  >
+                    <li class="table-cont-list flex-basis-84 txt-left f-14">
+                      <span class="table-txt">반응형 오브젝트 제공방법 및 그 시스템(Responsive object providing method and providing system thereof)</span>
+                    </li>
+                    <li class="table-cont-list flex-basis-13 txt-right f-gray">
+                      <span class="table-txt">출원일 2021.00.00</span>
+                    </li>
+                  </ul>
+                </div>
+                <!-- END 테이블 내용 그룹 -->
+              </div>
+            </div>
           </div>
         </div>
         <!-- END 보유특허 -->

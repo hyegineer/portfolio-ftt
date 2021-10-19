@@ -301,6 +301,13 @@
 .table-all-wrap {
   padding: 30px 0;
 
+  &.border-bottom-remove {
+    
+    .table-grp {
+      border-bottom: none;
+    }
+  }
+
   .flex-basis-10 {
     flex-basis: 10%;
   }
@@ -343,6 +350,10 @@
 
   .flex-basis-76 {
     flex-basis: 76%;
+  }
+
+  .flex-basis-84 {
+    flex-basis: 84%;
   }
 
   .txt-left {
@@ -413,6 +424,10 @@
       height: 460px;
     }
 
+    &.padding-add {
+      padding: 0 20px;
+    }
+
     &.empty-cont-wrap {
       height: 180px;
       display: flex;
@@ -460,6 +475,23 @@
 
     &.padding-change {
       padding: 15px 20px 15px 0;
+    }
+
+    &.f-14 {
+      
+      .table-txt {
+        font-size: rem(14);
+        font-weight: 400;
+      }
+    }
+
+    &.f-gray {
+      
+      .table-txt {
+        font-size: rem(13);
+        font-weight: 400;
+        color: #B8BAC7;
+      }
     }
   }
 
