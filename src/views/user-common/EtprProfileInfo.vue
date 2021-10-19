@@ -565,7 +565,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
               <div class="white-panel pd-0">
                 <div class="common-info-container">
                   <p class="common-info-graph">
-                    그래프 들어옵니다.
+                    <rader-chart />
                   </p>
                 </div>
               </div>
@@ -860,10 +860,79 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                 </p>
               </div>
               <div class="white-panel pd-0">
-                <div class="common-info-container">
-                  <p class="common-info-graph">
-                    주주정보 들어옵니다.
-                  </p>
+                <div class="common-info-container stock-holder-container">
+                  <div class="common-info-graph">
+                    <div class="table-all-wrap">
+                      <div class="table-grp">
+                        <!-- 테이블 헤더 그룹 -->
+                        <ul class="table-hgrp">
+                          <li class="table-hlist flex-basis-16 txt-left pl-20">
+                            <span class="table-txt">주주구분</span>
+                          </li>
+                          <li class="table-hlist flex-basis-16 txt-left pl-18">
+                            <span class="table-txt">주주명</span>
+                          </li>
+                          <li class="table-hlist flex-basis-10 txt-center">
+                            <span class="table-txt">주종</span>
+                          </li>
+                          <li class="table-hlist flex-basis-13 txt-right pr-5">
+                            <span class="table-txt">지분율(%)</span>
+                          </li>
+                          <li class="table-hlist flex-basis-20 txt-right pr-15">
+                            <span class="table-txt">보유주식수(주)</span>
+                          </li>
+                          <li class="table-hlist flex-basis-26 txt-right pr-15">
+                            <span class="table-txt">보유주식 금액(원)</span>
+                          </li>
+                        </ul>
+                        <!-- END 테이블 헤더 그룹 -->
+
+                        <!-- 테이블 내용 그룹 -->
+                        <!-- 내용이 없을 때 -->
+                        <div
+                          class="table-cont-wrap empty-cont-wrap"
+                        >
+                          <p class="empty-ment">
+                            내용이 없습니다.
+                          </p>
+                        </div>
+                        <!-- END 내용이 없을 때 -->
+
+                        <!-- 내용이 있을 때 -->
+                        <div
+                          class="table-cont-wrap custom-scroll-wrap"
+                        >
+                          <ul
+                            v-for="(item, idx) in 20"
+                            :key="idx"
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-16 txt-center pl-20">
+                              <span class="table-txt">주요주주</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-16 txt-left pl-18">
+                              <span class="table-txt">이름여섯글자</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-10 txt-center">
+                              <span class="table-txt">보통주</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-13 txt-right pr-5">
+                              <span class="table-txt">100</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-20 txt-right pr-15">
+                              <span class="table-txt">000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right pr-15">
+                              <span class="table-txt">000,000,000,000</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- END 내용이 있을 때 -->
+
+                        <!-- END 테이블 내용 그룹 -->
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="bot-txt">
