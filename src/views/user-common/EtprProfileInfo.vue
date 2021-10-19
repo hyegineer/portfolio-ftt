@@ -565,7 +565,11 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
               <div class="white-panel pd-0">
                 <div class="common-info-container">
                   <p class="common-info-graph">
-                    <rader-chart />
+                    <!-- [D] 별점 없을 때 -->
+                    <rader-chart :data="null" />
+
+                    <!-- [D] 별점 있을 때 -->
+                    <rader-chart :data="{'가능성': 5, '시장성': 3, '아이템 우수성': 1, '실행역량': 0, '팀역량': 5}" />
                   </p>
                 </div>
               </div>
@@ -1561,7 +1565,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                       <span class="ttl">매출 추이</span>
   
                       <p class="desc">
-                        매출 추이에 대한 툴팁 내용입니다.
+                        매출 추이 툴팁 내용입니다.
                       </p>
                     </div>
                   </div>
@@ -1574,7 +1578,8 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
               <div class="white-panel pd-0">
                 <div class="common-info-container">
                   <p class="common-info-graph">
-                    매출 추이 들어옵니다.
+                    <span class="nothing-ment">매출 추이가 없습니다.</span>
+                    <column-chart :data="[0, 500, 10000]" />
                   </p>
                 </div>
               </div>
@@ -1633,7 +1638,8 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
               <div class="white-panel pd-0">
                 <div class="common-info-container">
                   <p class="common-info-graph">
-                    영업이익 추이 들어옵니다.
+                    <span class="nothing-ment">영업이익 추이가 없습니다.</span>
+                    <column-chart :data="[0, 500000, 10000000]" />
                   </p>
                 </div>
               </div>
@@ -1692,7 +1698,8 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
               <div class="white-panel pd-0">
                 <div class="common-info-container">
                   <p class="common-info-graph">
-                    당기순이익 추이 들어옵니다.
+                    <span class="nothing-ment">당기순이익 추이가 없습니다.</span>
+                    <column-chart :data="[0, 5000000, 10000000]" />
                   </p>
                 </div>
               </div>

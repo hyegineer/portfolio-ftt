@@ -98,13 +98,14 @@ export default {
           labels: {
             show: true,
             style: {
-              colors: ['#00eb79', '#00eb79', '#00eb79', '#00eb79', '#00eb79'],
+              colors: this.colorsArr(),
               fontFamily: 'NexonLv2Gothic, sans-serif',
               fontSize: '15px',
             },
           },
         },
       },
+      chartDataLength: null,
     };
   },
   computed: {
@@ -115,6 +116,18 @@ export default {
       starArr.forEach(x => { sum += x; });
 
       return (sum / starArr.length).toFixed(1);
+    },
+  },
+  methods: {
+    colorsArr() {
+      const colorsArr = [];
+      const colorsArrLength = Object.keys(this.data).length;
+
+      for(let i = 0; i < colorsArrLength; i++) {
+        colorsArr.push('#00eb79');
+      }
+
+      return colorsArr;
     },
   },
 };

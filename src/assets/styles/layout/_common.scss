@@ -1034,8 +1034,11 @@ body{
   }
 
   .xaxis-list-grp{
-    @include flex-center;
-
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 15px;
+    column-gap: 0;
     background-color: rgba(#00EB79, 0.11);
     border: 1px solid rgba(#00EB79, 0.5);
     padding: 13.5px 0;
@@ -1058,7 +1061,7 @@ body{
 
     .lbel{
       @include font-op($w: 500, $c: #00EB79){
-        font-size: 13px;
+        font-size: 12px;
       }
     }
     
