@@ -430,8 +430,26 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <div class="white-panel">
-                <div class="common-info-container">
+              <!-- TODO: 최상위 요소에 is-blur 주면 blur 처리되고 해당 데이터 더미 처리(-) -->
+              <div
+                class="white-panel"
+                :class="{'is-blur': noUpdate}"
+              >
+                <!-- 필터처리된 데이터 가운데 뜨는 영역 -->
+                <div class="cover-blur-container">
+                  <div class="cover-blur-inner">
+                    <img
+                      class="img"
+                      src="@/assets/images/icon/icon-noti.svg"
+                      alt="!"
+                    >
+                    <p class="text">
+                      최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
+                    </p>
+                  </div>
+                </div>
+                <!-- END 필터처리된 데이터 가운데 뜨는 영역 -->
+                <div class="common-info-container blur-filter-container">
                   <ul class="common-info-list-wrap">
                     <!-- TODO: 정보가 없는 곳은 전부 - 로 표시 -->
                     <li class="common-info-list">
@@ -439,7 +457,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                         대표자
                       </h4>
                       <div class="dec">
-                        {{ '홍길동' }}
+                        {{ noUpdate ? '-' : '홍길동' }}
                       </div>
                     </li>
                     <li class="common-info-list">
@@ -447,7 +465,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                         사업자번호
                       </h4>
                       <div class="dec">
-                        {{ '000-00-00***' }}
+                        {{ noUpdate ? '-' : '000-00-00***' }}
                       </div>
                     </li>
                     <li class="common-info-list">
@@ -455,7 +473,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                         본사주소
                       </h4>
                       <div class="dec">
-                        {{ '서울특별시 강남구 테헤란로 312 13층 주소길어지면 최대 2줄 (우편번호)' }}
+                        {{ noUpdate ? '-' : '서울특별시 강남구 테헤란로 312 13층 주소길어지면 최대 2줄 (우편번호)' }}
                       </div>
                     </li>
                     <li class="common-info-list">
@@ -463,7 +481,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                         전화번호
                       </h4>
                       <div class="dec">
-                        {{ '02-1234-5678' }}
+                        {{ noUpdate ? '-' : '02-1234-5678' }}
                       </div>
                     </li>
                     <li class="common-info-list">
@@ -471,7 +489,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                         기업규모
                       </h4>
                       <div class="dec">
-                        {{ '소기업' }}
+                        {{ noUpdate ? '-' : '소기업' }}
                       </div>
                     </li>
                     <li class="common-info-list">
@@ -479,7 +497,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                         산업분류
                       </h4>
                       <div class="dec">
-                        {{ 'ICT 서비스' }}
+                        {{ noUpdate ? '-' : 'ICT 서비스' }}
                       </div>
                     </li>
                     <li class="common-info-list">
@@ -487,7 +505,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                         산업분야
                       </h4>
                       <div class="dec">
-                        {{ '-' }}
+                        {{ noUpdate ? '-' : '물류업' }}
                       </div>
                     </li>
                     <li class="common-info-list">
@@ -495,19 +513,28 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                         설립일
                       </h4>
                       <div class="dec">
-                        {{ '2021년 03월 10일' }}
+                        {{ noUpdate ? '-' : '2021년 03월 10일' }}
                       </div>
                     </li>
                     <li class="common-info-list tag-list">
                       <h4 class="ttl">
                         태그
                       </h4>
-                      <div class="dec">
+                      <div
+                        v-if="noUpdate === false"
+                        class="dec"
+                      >
                         <badge-rounded>태그최대여덟글자</badge-rounded>
                         <badge-rounded>태그최대여덟글자</badge-rounded>
                         <badge-rounded>태그최대여덟글자</badge-rounded>
                         <badge-rounded>태그최대여덟글자</badge-rounded>
                         <badge-rounded>태그최대여덟글자</badge-rounded>
+                      </div>
+                      <div
+                        v-else
+                        class="dec"
+                      >
+                        <badge-rounded>-</badge-rounded>
                       </div>
                     </li>
                   </ul>
@@ -562,14 +589,49 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '자사 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <div class="white-panel pd-0">
-                <div class="common-info-container">
-                  <p class="common-info-graph">
+              <!-- TODO: 최상위 요소에 is-blur 주면 blur 처리되고 해당 데이터 더미 처리(-) -->
+              <div
+                class="white-panel pd-0"
+                :class="{'is-blur': noUpdate}"
+              >
+                <!-- 필터처리된 데이터 가운데 뜨는 영역 -->
+                <div class="cover-blur-container">
+                  <div class="cover-blur-inner">
+                    <img
+                      class="img"
+                      src="@/assets/images/icon/icon-noti.svg"
+                      alt="!"
+                    >
+                    <p class="text">
+                      최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
+                    </p>
+                  </div>
+                </div>
+                <!-- END 필터처리된 데이터 가운데 뜨는 영역 -->
+                <div class="common-info-container blur-filter-container">
+                  <!-- blur 처리용 더미 데이터 -->
+                  <p
+                    v-if="noUpdate"
+                    class="common-info-graph"
+                  >
+                    <rader-chart
+                      :data="{'가능성': 0, '시장성': 0, '아이템 우수성': 0, '실행역량': 0, '팀역량': 0}"
+                    />
+                  </p>
+                  <!-- 일반 데이터 -->
+                  <p
+                    v-else
+                    class="common-info-graph"
+                  >
                     <!-- [D] 별점 없을 때 -->
-                    <rader-chart :data="null" />
+                    <rader-chart
+                      :data="null"
+                    />
 
                     <!-- [D] 별점 있을 때 -->
-                    <rader-chart :data="{'가능성': 5, '시장성': 3, '아이템 우수성': 1, '실행역량': 0, '팀역량': 5}" />
+                    <rader-chart
+                      :data="{'가능성': 5, '시장성': 3, '아이템 우수성': 1, '실행역량': 0, '팀역량': 5}"
+                    />
                   </p>
                 </div>
               </div>
@@ -634,92 +696,10 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
+              <!-- TODO: 최상위 요소에 is-blur 주면 blur 처리되고 해당 데이터 더미 처리(-) -->
               <div
                 class="white-panel"
-                style="display: none;"
-              >
-                <div class="common-info-container">
-                  <ul class="common-info-list-wrap">
-                    <!-- TODO: 정보가 없는 곳은 전부 - 로 표시 -->
-                    <li class="common-info-list scale-list">
-                      <h4 class="ttl">
-                        발행주식 수
-                      </h4>
-                      <div class="dec">
-                        {{ '-' }} 주
-                      </div>
-                    </li>
-                    <li class="common-info-list scale-list">
-                      <h4 class="ttl">
-                        액면가
-                      </h4>
-                      <div class="dec">
-                        {{ '-' }} 원
-                      </div>
-                    </li>
-                    <li class="common-info-list scale-list">
-                      <h4 class="ttl">
-                        자본금
-                      </h4>
-                      <div class="dec">
-                        {{ '-' }} 원
-                      </div>
-                    </li>
-                    <li class="common-info-list scale-list">
-                      <h4 class="ttl">
-                        주주수
-                      </h4>
-                      <div class="dec">
-                        {{ '-' }} 명
-                      </div>
-                    </li>
-                    <li class="common-info-list scale-list">
-                      <h4 class="ttl">
-                        대표보통주식주 비율
-                      </h4>
-                      <div class="dec">
-                        {{ '-' }} %
-                      </div>
-                    </li>
-                    <li class="common-info-list scale-list">
-                      <h4 class="ttl">
-                        대표주주구분
-                      </h4>
-                      <div class="dec">
-                        {{ '-' }}
-                      </div>
-                    </li>
-                    <li class="common-info-list scale-list">
-                      <h4 class="ttl">
-                        대표주주명
-                      </h4>
-                      <div class="dec">
-                        {{ '-' }}
-                      </div>
-                    </li>
-                    <li class="common-info-list scale-list">
-                      <h4 class="ttl">
-                        대표지분율
-                      </h4>
-                      <div class="dec">
-                        {{ '-' }} %
-                      </div>
-                    </li>
-                    <li class="common-info-list scale-list">
-                      <h4 class="ttl">
-                        종업원 수
-                      </h4>
-                      <div class="dec">
-                        <span class="comment">(기준일 : {{ '2000.00.00' }})</span>
-                        {{ '-' }} 명
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- TODO: 필터처리된 데이터 - 목업데이터가 들어간 white-panel에 cover-blur추가 -->
-              <div
-                class="white-panel cover-blur"
+                :class="{'is-blur': noUpdate}"
               >
                 <!-- 필터처리된 데이터 가운데 뜨는 영역 -->
                 <div class="cover-blur-container">
@@ -735,7 +715,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   </div>
                 </div>
                 <!-- END 필터처리된 데이터 가운데 뜨는 영역 -->
-                <div class="common-info-container">
+                <div class="common-info-container blur-filter-container">
                   <ul class="common-info-list-wrap">
                     <!-- TODO: 정보가 없는 곳은 전부 - 로 표시 -->
                     <li class="common-info-list scale-list">
@@ -743,7 +723,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                         발행주식 수
                       </h4>
                       <div class="dec">
-                        {{ '-' }} 주
+                        {{ noUpdate ? '-' : '12' }} 주
                       </div>
                     </li>
                     <li class="common-info-list scale-list">
@@ -751,7 +731,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                         액면가
                       </h4>
                       <div class="dec">
-                        {{ '-' }} 원
+                        {{ noUpdate ? '-' : '500,000' }} 원
                       </div>
                     </li>
                     <li class="common-info-list scale-list">
@@ -759,7 +739,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                         자본금
                       </h4>
                       <div class="dec">
-                        {{ '-' }} 원
+                        {{ noUpdate ? '-' : '500,000' }} 원
                       </div>
                     </li>
                     <li class="common-info-list scale-list">
@@ -767,7 +747,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                         주주수
                       </h4>
                       <div class="dec">
-                        {{ '-' }} 명
+                        {{ noUpdate ? '-' : '12' }} 명
                       </div>
                     </li>
                     <li class="common-info-list scale-list">
@@ -775,7 +755,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                         대표보통주식주 비율
                       </h4>
                       <div class="dec">
-                        {{ '-' }} %
+                        {{ noUpdate ? '-' : '12' }} %
                       </div>
                     </li>
                     <li class="common-info-list scale-list">
@@ -783,7 +763,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                         대표주주구분
                       </h4>
                       <div class="dec">
-                        {{ '-' }}
+                        {{ noUpdate ? '-' : '임원' }}
                       </div>
                     </li>
                     <li class="common-info-list scale-list">
@@ -791,7 +771,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                         대표주주명
                       </h4>
                       <div class="dec">
-                        {{ '-' }}
+                        {{ noUpdate ? '-' : '김철수' }}
                       </div>
                     </li>
                     <li class="common-info-list scale-list">
@@ -799,7 +779,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                         대표지분율
                       </h4>
                       <div class="dec">
-                        {{ '-' }} %
+                        {{ noUpdate ? '-' : '000' }} %
                       </div>
                     </li>
                     <li class="common-info-list scale-list">
@@ -808,7 +788,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                       </h4>
                       <div class="dec">
                         <span class="comment">(기준일 : {{ '2000.00.00' }})</span>
-                        {{ '-' }} 명
+                        {{ noUpdate ? '-' : '00' }} 명
                       </div>
                     </li>
                   </ul>
@@ -863,8 +843,26 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <div class="white-panel pd-0">
-                <div class="common-info-container stock-holder-container">
+              <!-- TODO: 최상위 요소에 is-blur 주면 blur 처리되고 해당 데이터 더미 처리(-) -->
+              <div
+                class="white-panel pd-0"
+                :class="{'is-blur': noUpdate}"
+              >
+                <!-- 필터처리된 데이터 가운데 뜨는 영역 -->
+                <div class="cover-blur-container">
+                  <div class="cover-blur-inner">
+                    <img
+                      class="img"
+                      src="@/assets/images/icon/icon-noti.svg"
+                      alt="!"
+                    >
+                    <p class="text">
+                      최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
+                    </p>
+                  </div>
+                </div>
+                <!-- END 필터처리된 데이터 가운데 뜨는 영역 -->
+                <div class="common-info-container stock-holder-container blur-filter-container">
                   <div class="common-info-graph">
                     <div class="table-all-wrap">
                       <div class="table-grp">
@@ -912,22 +910,22 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                             class="table-cont-grp"
                           >
                             <li class="table-cont-list flex-basis-16 txt-center pl-20">
-                              <span class="table-txt">주요주주</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '주요주주' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-17 txt-left pl-18">
-                              <span class="table-txt">이름여섯글자</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '이름여섯글자' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-10 txt-center">
-                              <span class="table-txt">보통주</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '보통주' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-13 txt-right pr-5">
-                              <span class="table-txt">100</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '100' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-20 txt-right pr-15">
-                              <span class="table-txt">000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right pr-15">
-                              <span class="table-txt">000,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '000,000,000,000' }}</span>
                             </li>
                           </ul>
                         </div>
@@ -993,8 +991,26 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <div class="white-panel pd-0">
-                <div class="common-info-container">
+              <!-- TODO: 최상위 요소에 is-blur 주면 blur 처리되고 해당 데이터 더미 처리(-) -->
+              <div
+                class="white-panel pd-0"
+                :class="{'is-blur': noUpdate}"
+              >
+                <!-- 필터처리된 데이터 가운데 뜨는 영역 -->
+                <div class="cover-blur-container">
+                  <div class="cover-blur-inner">
+                    <img
+                      class="img"
+                      src="@/assets/images/icon/icon-noti.svg"
+                      alt="!"
+                    >
+                    <p class="text">
+                      최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
+                    </p>
+                  </div>
+                </div>
+                <!-- END 필터처리된 데이터 가운데 뜨는 영역 -->
+                <div class="common-info-container blur-filter-container">
                   <div class="common-info-graph">
                     <div class="table-all-wrap">
                       <div class="table-grp">
@@ -1037,13 +1053,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">현금성자산</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1053,13 +1069,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">매출채권</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1069,13 +1085,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">재고자산</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1085,13 +1101,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">무형자산</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1101,13 +1117,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">투자자산</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1117,13 +1133,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">기타자산</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1133,13 +1149,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">자산총계</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1149,13 +1165,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">유통부재</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1165,13 +1181,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">장기부채</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1181,13 +1197,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">부채총계</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1197,13 +1213,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">자본금</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1213,13 +1229,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">자본총계</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right padding-change">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right padding-change">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right padding-change">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                         </div>
@@ -1283,8 +1299,26 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <div class="white-panel pd-0">
-                <div class="common-info-container">
+              <!-- TODO: 최상위 요소에 is-blur 주면 blur 처리되고 해당 데이터 더미 처리(-) -->
+              <div
+                class="white-panel pd-0"
+                :class="{'is-blur': noUpdate}"
+              >
+                <!-- 필터처리된 데이터 가운데 뜨는 영역 -->
+                <div class="cover-blur-container">
+                  <div class="cover-blur-inner">
+                    <img
+                      class="img"
+                      src="@/assets/images/icon/icon-noti.svg"
+                      alt="!"
+                    >
+                    <p class="text">
+                      최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
+                    </p>
+                  </div>
+                </div>
+                <!-- END 필터처리된 데이터 가운데 뜨는 영역 -->
+                <div class="common-info-container blur-filter-container">
                   <div class="common-info-graph">
                     <div class="table-all-wrap">
                       <div class="table-grp">
@@ -1327,13 +1361,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">매출액</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1343,13 +1377,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">매출원가</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1359,13 +1393,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">매출총이익</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1375,13 +1409,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">일반관리비</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1391,13 +1425,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">영업이익</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1407,13 +1441,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">영업외수익</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1423,13 +1457,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">영업외비용</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1439,13 +1473,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">경상이익</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1455,13 +1489,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">특별이익</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1471,13 +1505,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">세전순이익</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1487,13 +1521,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">법인세</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                           <ul
@@ -1503,13 +1537,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                               <span class="table-txt f-bold">당기순이익</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                             <li class="table-cont-list flex-basis-26 txt-right">
-                              <span class="table-txt">0,000,000,000</span>
+                              <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
                             </li>
                           </ul>
                         </div>
@@ -1575,11 +1609,46 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <div class="white-panel pd-0">
-                <div class="common-info-container">
-                  <p class="common-info-graph">
-                    <span class="nothing-ment">매출 추이가 없습니다.</span>
-                    <column-chart :data="[0, 500, 10000]" />
+              <!-- TODO: 최상위 요소에 is-blur 주면 blur 처리되고 해당 데이터 더미 처리(-) -->
+              <div
+                class="white-panel pd-0"
+                :class="{'is-blur': noUpdate}"
+              >
+                <!-- 필터처리된 데이터 가운데 뜨는 영역 -->
+                <div class="cover-blur-container">
+                  <div class="cover-blur-inner">
+                    <img
+                      class="img"
+                      src="@/assets/images/icon/icon-noti.svg"
+                      alt="!"
+                    >
+                    <p class="text">
+                      최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
+                    </p>
+                  </div>
+                </div>
+                <!-- END 필터처리된 데이터 가운데 뜨는 영역 -->
+                <div class="common-info-container blur-filter-container">
+                  <!-- blur 처리용 더미 데이터 -->
+                  <p
+                    v-if="noUpdate"
+                    class="common-info-graph"
+                  >
+                    <column-chart
+                      :data="[0, 5000, 10000]"
+                    />
+                  </p>
+                  <!-- 일반 데이터 -->
+                  <p
+                    v-else
+                    class="common-info-graph"
+                  >
+                    <span
+                      class="nothing-ment"
+                    >매출 추이가 없습니다.</span>
+                    <column-chart
+                      :data="[0, 500, 10000]"
+                    />
                   </p>
                 </div>
               </div>
@@ -1635,9 +1704,36 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <div class="white-panel pd-0">
-                <div class="common-info-container">
-                  <p class="common-info-graph">
+              <!-- TODO: 최상위 요소에 is-blur 주면 blur 처리되고 해당 데이터 더미 처리(-) -->
+              <div
+                class="white-panel pd-0"
+                :class="{'is-blur': noUpdate}"
+              >
+                <!-- 필터처리된 데이터 가운데 뜨는 영역 -->
+                <div class="cover-blur-container">
+                  <div class="cover-blur-inner">
+                    <img
+                      class="img"
+                      src="@/assets/images/icon/icon-noti.svg"
+                      alt="!"
+                    >
+                    <p class="text">
+                      최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
+                    </p>
+                  </div>
+                </div>
+                <!-- END 필터처리된 데이터 가운데 뜨는 영역 -->
+                <div class="common-info-container blur-filter-container">
+                  <p
+                    v-if="noUpdate"
+                    class="common-info-graph"
+                  >
+                    <column-chart :data="[0, 500000, 1000000]" />
+                  </p>
+                  <p
+                    v-else
+                    class="common-info-graph"
+                  >
                     <span class="nothing-ment">영업이익 추이가 없습니다.</span>
                     <column-chart :data="[0, 500000, 10000000]" />
                   </p>
@@ -1695,9 +1791,36 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
-              <div class="white-panel pd-0">
-                <div class="common-info-container">
-                  <p class="common-info-graph">
+              <!-- TODO: 최상위 요소에 is-blur 주면 blur 처리되고 해당 데이터 더미 처리(-) -->
+              <div
+                class="white-panel pd-0"
+                :class="{'is-blur': noUpdate}"
+              >
+                <!-- 필터처리된 데이터 가운데 뜨는 영역 -->
+                <div class="cover-blur-container">
+                  <div class="cover-blur-inner">
+                    <img
+                      class="img"
+                      src="@/assets/images/icon/icon-noti.svg"
+                      alt="!"
+                    >
+                    <p class="text">
+                      최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
+                    </p>
+                  </div>
+                </div>
+                <!-- END 필터처리된 데이터 가운데 뜨는 영역 -->
+                <div class="common-info-container blur-filter-container">
+                  <p
+                    v-if="noUpdate"
+                    class="common-info-graph"
+                  >
+                    <column-chart :data="[0, 5000000, 10000000]" />
+                  </p>
+                  <p
+                    v-else
+                    class="common-info-graph"
+                  >
                     <span class="nothing-ment">당기순이익 추이가 없습니다.</span>
                     <column-chart :data="[0, 5000000, 10000000]" />
                   </p>
@@ -1732,90 +1855,111 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
               {{ '팩트체커 업데이트  2020.00.00' }}
             </p>
           </h2>
-          <div class="top-cont-wrap">
-            <div class="invest-list">
-              <div class="ttl">
-                최종투자단계
-              </div>
-              <div class="dec">
-                {{ 'serues E (추정)' }}
-              </div>
-            </div>
-            <div class="invest-list">
-              <div class="ttl">
-                누적투자유치금액
-              </div>
-              <div class="dec">
-                {{ '88.8억' }}
-              </div>
-            </div>
-            <div class="invest-list">
-              <div class="ttl">
-                투자유치횟수
-              </div>
-              <div class="dec">
-                {{ '8' }}
+          <!-- TODO: 최상위 요소에 is-blur 주면 blur 처리되고 해당 데이터 더미 처리(-) -->
+          <div
+            :class="{'is-blur': noUpdate}"
+          >
+            <!-- 필터처리된 데이터 가운데 뜨는 영역 -->
+            <div class="cover-blur-container">
+              <div class="cover-blur-inner">
+                <img
+                  class="img"
+                  src="@/assets/images/icon/icon-noti.svg"
+                  alt="!"
+                >
+                <p class="text">
+                  최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
+                </p>
               </div>
             </div>
-          </div>
-          <div class="white-panel pd-0">
-            <div class="common-info-graph">
-              <div class="table-all-wrap">
-                <div class="table-grp">
-                  <!-- 테이블 헤더 그룹 -->
-                  <ul class="table-hgrp">
-                    <li class="table-hlist flex-basis-10 txt-left">
-                      <span class="table-txt">날짜</span>
-                    </li>
-                    <li class="table-hlist flex-basis-13 txt-center">
-                      <span class="table-txt">투자단계</span>
-                    </li>
-                    <li class="table-hlist flex-basis-13 txt-right">
-                      <span class="table-txt">투자유치 금액</span>
-                    </li>
-                    <li class="table-hlist flex-basis-61 txt-center">
-                      <span class="table-txt">투자자</span>
-                    </li>
-                  </ul>
-                  <!-- END 테이블 헤더 그룹 -->
-
-                  <!-- 테이블 내용 그룹 -->
-                  <!-- 내용이 없을 때 -->
-                  <div
-                    class="table-cont-wrap empty-cont-wrap"
-                  >
-                    <p class="empty-ment">
-                      내용이 없습니다.
-                    </p>
+            <!-- END 필터처리된 데이터 가운데 뜨는 영역 -->
+            <div class="blur-filter-container">
+              <div class="top-cont-wrap">
+                <div class="invest-list">
+                  <div class="ttl">
+                    최종투자단계
                   </div>
-                  <!-- END 내용이 없을 때 -->
-
-                  <!-- 내용이 있을 때 -->
-                  <div
-                    class="table-cont-wrap custom-scroll-wrap"
-                  >
-                    <ul
-                      v-for="(item, idx) in 20"
-                      :key="idx"
-                      class="table-cont-grp"
-                    >
-                      <li class="table-cont-list flex-basis-10 txt-left">
-                        <span class="table-txt">2021.00</span>
-                      </li>
-                      <li class="table-cont-list flex-basis-13 txt-center">
-                        <span class="table-txt">M&A</span>
-                      </li>
-                      <li class="table-cont-list flex-basis-13 txt-right">
-                        <span class="table-txt">0,000,000,000</span>
-                      </li>
-                      <li class="table-cont-list flex-basis-61 txt-left">
-                        <span class="table-txt">투자자명, 투자자명, 투자자명, 투자자명, 투자자명, 투자자명</span>
-                      </li>
-                    </ul>
+                  <div class="dec">
+                    {{ noUpdate ? '-' : 'serues E (추정)' }}
                   </div>
-                  <!-- END 내용이 있을 때 -->
+                </div>
+                <div class="invest-list">
+                  <div class="ttl">
+                    누적투자유치금액
+                  </div>
+                  <div class="dec">
+                    {{ noUpdate ? '-' : '88.8억' }}
+                  </div>
+                </div>
+                <div class="invest-list">
+                  <div class="ttl">
+                    투자유치횟수
+                  </div>
+                  <div class="dec">
+                    {{ noUpdate ? '-' : '8' }}
+                  </div>
+                </div>
+              </div>
+              <div class="white-panel pd-0">
+                <div class="common-info-graph">
+                  <div class="table-all-wrap">
+                    <div class="table-grp">
+                      <!-- 테이블 헤더 그룹 -->
+                      <ul class="table-hgrp">
+                        <li class="table-hlist flex-basis-10 txt-left">
+                          <span class="table-txt">날짜</span>
+                        </li>
+                        <li class="table-hlist flex-basis-13 txt-center">
+                          <span class="table-txt">투자단계</span>
+                        </li>
+                        <li class="table-hlist flex-basis-13 txt-right">
+                          <span class="table-txt">투자유치 금액</span>
+                        </li>
+                        <li class="table-hlist flex-basis-61 txt-center">
+                          <span class="table-txt">투자자</span>
+                        </li>
+                      </ul>
+                      <!-- END 테이블 헤더 그룹 -->
 
-                  <!-- END 테이블 내용 그룹 -->
+                      <!-- 테이블 내용 그룹 -->
+                      <!-- 내용이 없을 때 -->
+                      <div
+                        class="table-cont-wrap empty-cont-wrap"
+                      >
+                        <p class="empty-ment">
+                          내용이 없습니다.
+                        </p>
+                      </div>
+                      <!-- END 내용이 없을 때 -->
+
+                      <!-- 내용이 있을 때 -->
+                      <div
+                        class="table-cont-wrap custom-scroll-wrap"
+                      >
+                        <ul
+                          v-for="(item, idx) in 20"
+                          :key="idx"
+                          class="table-cont-grp"
+                        >
+                          <li class="table-cont-list flex-basis-10 txt-left">
+                            <span class="table-txt">{{ noUpdate ? '-' : '2021.00' }}</span>
+                          </li>
+                          <li class="table-cont-list flex-basis-13 txt-center">
+                            <span class="table-txt">{{ noUpdate ? '-' : 'M&A' }}</span>
+                          </li>
+                          <li class="table-cont-list flex-basis-13 txt-right">
+                            <span class="table-txt">{{ noUpdate ? '-' : '0,000,000,000' }}</span>
+                          </li>
+                          <li class="table-cont-list flex-basis-61 txt-left">
+                            <span class="table-txt">{{ noUpdate ? '-' : '투자자명, 투자자명, 투자자명, 투자자명, 투자자명, 투자자명' }}</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- END 내용이 있을 때 -->
+
+                      <!-- END 테이블 내용 그룹 -->
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1844,31 +1988,52 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
               {{ '팩트체커 업데이트  2020.00.00' }}
             </p>
           </h2>
-          <div class="top-txt">
-            총 <span>{{ '5' }}</span>개
-          </div>
-          <empty-contents txt="내용이 없습니다." />
-          <div>
-            <div class="table-all-wrap border-bottom-remove">
-              <div class="table-grp">
-                <!-- 테이블 내용 그룹 -->
-                <div
-                  class="table-cont-wrap custom-scroll-wrap padding-add"
+          <!-- TODO: 최상위 요소에 is-blur 주면 blur 처리되고 해당 데이터 더미 처리(-) -->
+          <div
+            :class="{'is-blur': noUpdate}"
+          >
+            <!-- 필터처리된 데이터 가운데 뜨는 영역 -->
+            <div class="cover-blur-container">
+              <div class="cover-blur-inner">
+                <img
+                  class="img"
+                  src="@/assets/images/icon/icon-noti.svg"
+                  alt="!"
                 >
-                  <ul
-                    v-for="(item, idx) in 20"
-                    :key="idx"
-                    class="table-cont-grp"
-                  >
-                    <li class="table-cont-list flex-basis-84 txt-left f-14">
-                      <span class="table-txt">반응형 오브젝트 제공방법 및 그 시스템(Responsive object providing method and providing system thereof)</span>
-                    </li>
-                    <li class="table-cont-list flex-basis-13 txt-right f-gray">
-                      <span class="table-txt">출원일 2021.00.00</span>
-                    </li>
-                  </ul>
+                <p class="text">
+                  최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
+                </p>
+              </div>
+            </div>
+            <!-- END 필터처리된 데이터 가운데 뜨는 영역 -->
+            <div class="blur-filter-container">
+              <div class="top-txt">
+                총 <span>{{ noUpdate ? '-' : '5' }}</span>개
+              </div>
+              <empty-contents txt="내용이 없습니다." />
+              <div>
+                <div class="table-all-wrap border-bottom-remove">
+                  <div class="table-grp">
+                    <!-- 테이블 내용 그룹 -->
+                    <div
+                      class="table-cont-wrap custom-scroll-wrap padding-add"
+                    >
+                      <ul
+                        v-for="(item, idx) in 20"
+                        :key="idx"
+                        class="table-cont-grp"
+                      >
+                        <li class="table-cont-list flex-basis-84 txt-left f-14">
+                          <span class="table-txt">{{ noUpdate ? '-' : '반응형 오브젝트 제공방법 및 그 시스템(Responsive object providing method and providing system thereof)' }}</span>
+                        </li>
+                        <li class="table-cont-list flex-basis-13 txt-right f-gray">
+                          <span class="table-txt">출원일 {{ noUpdate ? '-' : '2021.00.00' }}</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- END 테이블 내용 그룹 -->
+                  </div>
                 </div>
-                <!-- END 테이블 내용 그룹 -->
               </div>
             </div>
           </div>
@@ -1896,73 +2061,94 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
               {{ '팩트체커 업데이트  2020.00.00' }}
             </p>
           </h2>
-          <!-- 구성원 명수 표시 -->
-          <div class="member-list-grp-ttl">
-            <p class="txt">
-              총 <span class="bold">0</span>명
-            </p>
-          </div>
-          <!-- // 구성원 명수 표시 -->
-
-          <!-- 구성원이 없을 때 -->
-          <empty-contents txt="내용이 없습니다." />
-          <!-- // 구성원이 없을 때 -->
-          <!-- 구성원이 있을 때 -->
-          <div class="member-list-grp">
-            <div
-              v-for="(item, index) in 2"
-              :key="index"
-              class="member-list"
-            >
-              <avatar />
-              <article class="member-info">
-                <div class="account-info">
-                  <h5 class="name">
-                    {{ '김철수' }}
-                  </h5>
-                  <span class="mail">{{ 'email@email.com' }}</span>
-                  <dl class="dlist">
-                    <dt class="lbel">
-                      키포인트
-                    </dt>
-                    <dd class="txt">
-                      {{ '키포인트 텍스트' }}
-                    </dd>
-                  </dl>
-                </div>
-
-                <ul class="ul-bullet">
-                  <li class="list">
-                    {{ '이력사항 텍스트' }}
-                  </li>
-                  <li class="list">
-                    {{ '이력사항 텍스트' }}
-                  </li>
-                  <li class="list">
-                    {{ '이력사항 텍스트' }}
-                  </li>
-                </ul>
-              </article>
-
-              <div class="member-btn-grp btn-grp">
-                <btn-bd-light
-                  class="btn-rounded btn-xsm btn-edit-ctrl"
+          <!-- TODO: 최상위 요소에 is-blur 주면 blur 처리되고 해당 데이터 더미 처리(-) -->
+          <div
+            :class="{'is-blur': noUpdate}"
+          >
+            <!-- 필터처리된 데이터 가운데 뜨는 영역 -->
+            <div class="cover-blur-container">
+              <div class="cover-blur-inner">
+                <img
+                  class="img"
+                  src="@/assets/images/icon/icon-noti.svg"
+                  alt="!"
                 >
-                  <i class="icon icon-pen" />
-                  <span class="txt">수정</span>
-                </btn-bd-light>
-                
-
-                <btn-bd-light
-                  class="btn-rounded btn-xsm btn-edit-ctrl"
-                >
-                  <i class="icon icon-trash" />
-                  <span class="txt">삭제</span>
-                </btn-bd-light>
+                <p class="text">
+                  최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
+                </p>
               </div>
             </div>
+            <!-- END 필터처리된 데이터 가운데 뜨는 영역 -->
+            <div class="blur-filter-container">
+              <!-- 구성원 명수 표시 -->
+              <div class="member-list-grp-ttl">
+                <p class="txt">
+                  총 <span class="bold">{{ noUpdate ? '-' : '0' }}</span>명
+                </p>
+              </div>
+              <!-- // 구성원 명수 표시 -->
+
+              <!-- 구성원이 없을 때 -->
+              <empty-contents txt="내용이 없습니다." />
+              <!-- // 구성원이 없을 때 -->
+              <!-- 구성원이 있을 때 -->
+              <div class="member-list-grp">
+                <div
+                  v-for="(item, index) in 2"
+                  :key="index"
+                  class="member-list"
+                >
+                  <avatar />
+                  <article class="member-info">
+                    <div class="account-info">
+                      <h5 class="name">
+                        {{ noUpdate ? '-' : '김철수' }}
+                      </h5>
+                      <span class="mail">{{ noUpdate ? '-' : 'email@email.com' }}</span>
+                      <dl class="dlist">
+                        <dt class="lbel">
+                          키포인트
+                        </dt>
+                        <dd class="txt">
+                          {{ noUpdate ? '-' : '키포인트 텍스트' }}
+                        </dd>
+                      </dl>
+                    </div>
+
+                    <ul class="ul-bullet">
+                      <li class="list">
+                        {{ noUpdate ? '-' : '이력사항 텍스트' }}
+                      </li>
+                      <li class="list">
+                        {{ noUpdate ? '-' : '이력사항 텍스트' }}
+                      </li>
+                      <li class="list">
+                        {{ noUpdate ? '-' : '이력사항 텍스트' }}
+                      </li>
+                    </ul>
+                  </article>
+
+                  <div class="member-btn-grp btn-grp">
+                    <btn-bd-light
+                      class="btn-rounded btn-xsm btn-edit-ctrl"
+                    >
+                      <i class="icon icon-pen" />
+                      <span class="txt">수정</span>
+                    </btn-bd-light>
+                    
+
+                    <btn-bd-light
+                      class="btn-rounded btn-xsm btn-edit-ctrl"
+                    >
+                      <i class="icon icon-trash" />
+                      <span class="txt">삭제</span>
+                    </btn-bd-light>
+                  </div>
+                </div>
+              </div>
+              <!-- // 구성원이 있을 때 -->
+            </div>
           </div>
-          <!-- // 구성원이 있을 때 -->
         </div>
         <!-- END 구성원 -->
         <!-- 관련 소식 -->
@@ -2370,6 +2556,7 @@ export default {
         type: null, // 모바일일 때는 툴팁 팝업으로 할 때 타입 데이터
         visible: false, // 모바일일 때는 툴팁 팝업으로 할 때 보이게하는 속성
       },
+      noUpdate: true, // 3개월 동안 업데이트 없으면 blur 처리
     };
   },
   methods: {

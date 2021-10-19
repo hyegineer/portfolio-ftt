@@ -456,12 +456,25 @@
   }
 }
 
-.cover-blur {
+// .cover-blur {
+//   .cover-blur-container {
+//     display: block;
+//   }
+
+//   .common-info-container {
+//     filter: blur(10px);
+//     user-select: none;
+//   }
+// }
+
+.is-blur {
+  position: relative;
+
   .cover-blur-container {
     display: block;
   }
 
-  .common-info-container {
+  .blur-filter-container {
     filter: blur(10px);
     user-select: none;
   }
