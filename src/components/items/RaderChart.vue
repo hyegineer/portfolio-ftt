@@ -1,35 +1,44 @@
 <template>
   <article class="value-chart-wrap">
-    <div class="wrap-hgrp">
-      <h4 class="wrap-ttl">
-        기업가치 평균 지수
-      </h4>
-      <span class="wrap-average-star">
-        <i class="icon icon-star" />
-        <strong class="rating">4.2</strong>
-      </span>
+    <div v-if="data">
+      <div class="wrap-hgrp">
+        <h4 class="wrap-ttl">
+          기업가치 평균 지수
+        </h4>
+        <span class="wrap-average-star">
+          <i class="icon icon-star" />
+          <strong class="rating">{{ dataAverage }}</strong>
+        </span>
+      </div>
+
+      <apexchart
+        id="valueChart"
+        type="radar"
+        height="300"
+        :options="chartOptions"
+        :series="series"
+      />
+
+      <ul class="xaxis-list-grp">
+        <li
+          v-for="(item, index) in chartOptions.xaxis.categories"
+          :key="index"
+          class="xaxis-list"
+        >
+          <div class="xaxis-item">
+            <span class="lbel">{{ item }}</span>
+            <strong class="cont">{{ series[0].data[index].toFixed(1) }}</strong>
+          </div>
+        </li>
+      </ul>
     </div>
 
-    <apexchart
-      id="valueChart"
-      type="radar"
-      height="300"
-      :options="chartOptions"
-      :series="series"
-    />
-
-    <ul class="xaxis-list-grp">
-      <li
-        v-for="(item, index) in chartOptions.xaxis.categories"
-        :key="index"
-        class="xaxis-list"
-      >
-        <div class="xaxis-item">
-          <span class="lbel">{{ item }}</span>
-          <strong class="cont">{{ series[0].data[index].toFixed(1) }}</strong>
-        </div>
-      </li>
-    </ul>
+    <div
+      v-else
+      class="nothing-cont"
+    >
+      <empty-contents txt="별점이 아직 없습니다." />
+    </div>
   </article>
 </template>
 
@@ -38,11 +47,17 @@
 
 export default {
   name: 'Charts',
+  props: {
+    data: {
+      type: Object,
+      default: null,
+    },
+  },
   data() {
     return{
       series: [{
         name: '기업가치 평균지수',
-        data: [3.5, 1, 5, 2, 5],
+        data: Object.values(this.data),
       }],
       chartOptions: {
         chart: { // 차트 타입 및 백그라운드 스타일
@@ -79,7 +94,7 @@ export default {
         },
         xaxis: {
           type: 'category',
-          categories: ['기술성', '시장성', '아이템 우수성', '실행역량', '팀역량'],
+          categories: Object.keys(this.data),
           labels: {
             show: true,
             style: {
@@ -91,6 +106,16 @@ export default {
         },
       },
     };
+  },
+  computed: {
+    dataAverage() {
+      let sum = null;
+      const starArr = this.series[0].data;
+      
+      starArr.forEach(x => { sum += x; });
+
+      return (sum / starArr.length).toFixed(1);
+    },
   },
 };
 </script>

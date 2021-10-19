@@ -1068,6 +1068,20 @@ body{
       }
     }  
   }
+
+  .nothing-cont{
+    @include flex-center;
+
+    justify-content: stretch;
+    min-height: 500px;
+
+    .empty-wrap{
+      width: 100%;
+      background-color: rgb(255 255 255 / 5%);
+      border-radius: 10px;
+      padding: 40px 60px;
+    }
+  }
 }
 
 #valueChart { // 구성요소: 기업가치 그래프 x-axis 폰트사이즈
@@ -1080,5 +1094,23 @@ body{
 
   .apexcharts-xaxis text{
     font-size: 14px;
+  }
+}
+
+.column-chart-wrap{
+  max-width: 350px;
+}
+
+#columnChart{
+  .apexcharts-xaxis-texts-g text{
+    font-size: 12px;
+    font-weight: 500;
+    // font-family: "NexonLv2Gothic", sans-serif;
+    color: #5C5E70;
+  }
+
+  .apexcharts-data-labels text{
+    font-size: 12px;
+    font-weight: 500;
   }
 }
