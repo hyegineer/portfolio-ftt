@@ -2504,6 +2504,575 @@
           <column-chart :data="[0, 500000000, 200000000]" />
         </div>
       </section>
+      
+      <section class="section">
+        <h1 class="cp-ttl">
+          23. 리뷰
+        </h1>
+        <div class="section-cont">
+          <h2>23-1. 리뷰 쓰기</h2>
+          <div class="white-panel">
+            <div class="review-write-container">
+              <div class="write-ttl">종합 점수</div>
+              <div class="review-write-inner-star">
+                <div class="star-grp">
+                  <div class="ttl">기술성</div>
+                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                </div>
+                <div class="star-grp">
+                  <div class="ttl">시장성</div>
+                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                </div>
+                <div class="star-grp">
+                  <div class="ttl">팀역량</div>
+                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                </div>
+                <div class="star-grp">
+                  <div class="ttl">실행역량</div>
+                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                </div>
+                <div class="star-grp">
+                  <div class="ttl">아이템 우수성</div>
+                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                </div>
+              </div>
+              <div class="review-write-inner-inp">
+                <div class="inp-grp">
+                  <div class="input-ttl">
+                    <span class="ttl">내용</span>
+                    <span class="check-text">({{'0'}} / 1000)</span>
+                  </div>
+                  <textarea
+                    id="#"
+                    name="#"
+                    class="inp inp-textarea" 
+                    placeholder="해당 스타트업에 대한 리뷰를 작성해주세요."
+                  />
+                </div>
+                
+                <div class="review-write-btn-wrap">
+                  <div class="information-txt">
+                    <div class="icon-with-txt ai-center">
+                      <i class="icon icon-i" />
+                      <span class="txt">리뷰는 익명으로 작성됩니다.</span>
+                    </div>
+                  </div>
+          
+                  <btn-bd-dark
+                    class="btn-md"
+                    @click="window.alert('리뷰 등록하기 버튼을 클릭하셨습니다.')"
+                  >
+                    리뷰 등록하기
+                  </btn-bd-dark>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-cont">
+          <h2>23-2. 리뷰 카드</h2>
+          <!-- TODO: 내가 쓴 리뷰일 때 my-review 붙고, 수정하기를 누르면 editing이 추가됨 -->
+          <div class="white-panel review-card">
+            <div class="review-inner">
+              <div class="left-conts">
+                <div class="name">
+                  {{ '익명' }}
+                </div>
+                <div class="type">
+                  {{ '개인 투자자' }}
+                </div>
+                <div class="hover-desc">
+                  <span
+                    class="hover-overlay mb-show"
+                    :class="{'is-show': mbMdOptions1.visible}"
+                    @click="mbMdClose('star')"
+                  />
+  
+                  <div
+                    class="star-txt"
+                    @click="mbMdOpen('star')"
+                  >
+                    <i class="icon icon-star" />
+                    <span class="txt">4.3</span>
+                  </div>
+  
+                  <div
+                    class="hover-desc-box"
+                    :class="{'is-show' : mbMdOptions1.visible}"
+                  >
+                    <span class="ttl">종합 점수</span>
+  
+                    <dl class="star-desc-list">
+                      <dt class="desc-ttl">
+                        기술성
+                      </dt>
+                      <dd class="desc-dt">
+                        <i class="icon icon-star" />
+                        <span class="txt">5</span>
+                      </dd>
+                    </dl>
+  
+                    <dl class="star-desc-list">
+                      <dt class="desc-ttl">
+                        시장성
+                      </dt>
+                      <dd class="desc-dt">
+                        <i class="icon icon-star" />
+                        <span class="txt">5</span>
+                      </dd>
+                    </dl>
+  
+                    <dl class="star-desc-list">
+                      <dt class="desc-ttl">
+                        팀역량
+                      </dt>
+                      <dd class="desc-dt">
+                        <i class="icon icon-star" />
+                        <span class="txt">5</span>
+                      </dd>
+                    </dl>
+  
+                    <dl class="star-desc-list">
+                      <dt class="desc-ttl">
+                        실행역량
+                      </dt>
+                      <dd class="desc-dt">
+                        <i class="icon icon-star" />
+                        <span class="txt">5</span>
+                      </dd>
+                    </dl>
+  
+                    <dl class="star-desc-list">
+                      <dt class="desc-ttl">
+                        아이템 우수성
+                      </dt>
+                      <dd class="desc-dt">
+                        <i class="icon icon-star" />
+                        <span class="txt">5</span>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+              <div class="middle-conts">
+                <!-- TODO: 내가 쓴 리뷰에만 보임 -->
+                <div class="btns-wrap">
+                  <button
+                    type="button"
+                    class="btn-txt"
+                  >
+                    <i class="icon icon-pen" />
+                    <span class="txt">수정하기</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn-txt btn-warning-txt"
+                  >
+                    <i class="icon icon-trash" />
+                    <span class="txt">삭제하기</span>
+                  </button>
+                </div>
+                <p class="description">{{ '투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.' }}</p>
+              </div>
+              <div class="right-conts">
+                {{ '2021.00.00  00:00' }}
+              </div>
+            </div>
+            <!-- TODO: 리뷰카드 안에서는 is-active가 되어야 보임 -->
+            <div class="review-write-container">
+              <div class="write-ttl">종합 점수</div>
+              <div class="review-write-inner-star">
+                <div class="star-grp">
+                  <div class="ttl">기술성</div>
+                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                </div>
+                <div class="star-grp">
+                  <div class="ttl">시장성</div>
+                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                </div>
+                <div class="star-grp">
+                  <div class="ttl">팀역량</div>
+                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                </div>
+                <div class="star-grp">
+                  <div class="ttl">실행역량</div>
+                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                </div>
+                <div class="star-grp">
+                  <div class="ttl">아이템 우수성</div>
+                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                </div>
+              </div>
+              <div class="review-write-inner-inp">
+                <div class="inp-grp">
+                  <div class="input-ttl">
+                    <span class="ttl">내용</span>
+                    <span class="check-text">({{'0'}} / 1000)</span>
+                  </div>
+                  <textarea
+                    id="#"
+                    name="#"
+                    class="inp inp-textarea" 
+                    placeholder="해당 스타트업에 대한 리뷰를 작성해주세요."
+                  />
+                </div>
+                
+                <div class="review-write-btn-wrap">
+                  <div class="information-txt">
+                    <div class="icon-with-txt ai-center">
+                      <i class="icon icon-i" />
+                      <span class="txt">리뷰는 익명으로 작성됩니다.</span>
+                    </div>
+                  </div>
+          
+                  <btn-bd-dark
+                    class="btn-md"
+                    @click="window.alert('수정완료 버튼을 클릭하셨습니다.')"
+                  >
+                    수정완료
+                  </btn-bd-dark>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-cont">
+          <h2>23-3. 리뷰 카드 내가 쓴 카드</h2>
+          <!-- TODO: 내가 쓴 리뷰일 때 my-review 붙고, 수정하기를 누르면 editing이 추가됨 -->
+          <div class="white-panel review-card my-review">
+            <div class="review-inner">
+              <div class="left-conts">
+                <div class="name">
+                  {{ '익명' }}
+                </div>
+                <div class="type">
+                  {{ '개인 투자자' }}
+                </div>
+                <div class="hover-desc">
+                  <span
+                    class="hover-overlay mb-show"
+                    :class="{'is-show': mbMdOptions1.visible}"
+                    @click="mbMdClose('star')"
+                  />
+  
+                  <div
+                    class="star-txt"
+                    @click="mbMdOpen('star')"
+                  >
+                    <i class="icon icon-star" />
+                    <span class="txt">4.3</span>
+                  </div>
+  
+                  <div
+                    class="hover-desc-box"
+                    :class="{'is-show' : mbMdOptions1.visible}"
+                  >
+                    <span class="ttl">종합 점수</span>
+  
+                    <dl class="star-desc-list">
+                      <dt class="desc-ttl">
+                        기술성
+                      </dt>
+                      <dd class="desc-dt">
+                        <i class="icon icon-star" />
+                        <span class="txt">5</span>
+                      </dd>
+                    </dl>
+  
+                    <dl class="star-desc-list">
+                      <dt class="desc-ttl">
+                        시장성
+                      </dt>
+                      <dd class="desc-dt">
+                        <i class="icon icon-star" />
+                        <span class="txt">5</span>
+                      </dd>
+                    </dl>
+  
+                    <dl class="star-desc-list">
+                      <dt class="desc-ttl">
+                        팀역량
+                      </dt>
+                      <dd class="desc-dt">
+                        <i class="icon icon-star" />
+                        <span class="txt">5</span>
+                      </dd>
+                    </dl>
+  
+                    <dl class="star-desc-list">
+                      <dt class="desc-ttl">
+                        실행역량
+                      </dt>
+                      <dd class="desc-dt">
+                        <i class="icon icon-star" />
+                        <span class="txt">5</span>
+                      </dd>
+                    </dl>
+  
+                    <dl class="star-desc-list">
+                      <dt class="desc-ttl">
+                        아이템 우수성
+                      </dt>
+                      <dd class="desc-dt">
+                        <i class="icon icon-star" />
+                        <span class="txt">5</span>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+              <div class="middle-conts">
+                <!-- TODO: 내가 쓴 리뷰에만 보임 -->
+                <div class="btns-wrap">
+                  <button
+                    type="button"
+                    class="btn-txt"
+                  >
+                    <i class="icon icon-pen" />
+                    <span class="txt">수정하기</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn-txt btn-warning-txt"
+                  >
+                    <i class="icon icon-trash" />
+                    <span class="txt">삭제하기</span>
+                  </button>
+                </div>
+                <p class="description">{{ '투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.' }}</p>
+              </div>
+              <div class="right-conts">
+                {{ '2021.00.00  00:00' }}
+              </div>
+            </div>
+            <!-- TODO: 리뷰카드 안에서는 is-active가 되어야 보임 -->
+            <div class="review-write-container">
+              <div class="write-ttl">종합 점수</div>
+              <div class="review-write-inner-star">
+                <div class="star-grp">
+                  <div class="ttl">기술성</div>
+                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                </div>
+                <div class="star-grp">
+                  <div class="ttl">시장성</div>
+                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                </div>
+                <div class="star-grp">
+                  <div class="ttl">팀역량</div>
+                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                </div>
+                <div class="star-grp">
+                  <div class="ttl">실행역량</div>
+                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                </div>
+                <div class="star-grp">
+                  <div class="ttl">아이템 우수성</div>
+                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                </div>
+              </div>
+              <div class="review-write-inner-inp">
+                <div class="inp-grp">
+                  <div class="input-ttl">
+                    <span class="ttl">내용</span>
+                    <span class="check-text">({{'0'}} / 1000)</span>
+                  </div>
+                  <textarea
+                    id="#"
+                    name="#"
+                    class="inp inp-textarea" 
+                    placeholder="해당 스타트업에 대한 리뷰를 작성해주세요."
+                  />
+                </div>
+                
+                <div class="review-write-btn-wrap">
+                  <div class="information-txt">
+                    <div class="icon-with-txt ai-center">
+                      <i class="icon icon-i" />
+                      <span class="txt">리뷰는 익명으로 작성됩니다.</span>
+                    </div>
+                  </div>
+          
+                  <btn-bd-dark
+                    class="btn-md"
+                    @click="window.alert('수정완료 버튼을 클릭하셨습니다.')"
+                  >
+                    수정완료
+                  </btn-bd-dark>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-cont">
+          <h2>23-4. 리뷰 수정</h2>
+          <!-- TODO: 내가 쓴 리뷰일 때 my-review 붙고, 수정하기를 누르면 editing이 추가됨 -->
+          <div class="white-panel review-card my-review editing">
+            <div class="review-inner">
+              <div class="left-conts">
+                <div class="name">
+                  {{ '익명' }}
+                </div>
+                <div class="type">
+                  {{ '개인 투자자' }}
+                </div>
+                <div class="hover-desc">
+                  <span
+                    class="hover-overlay mb-show"
+                    :class="{'is-show': mbMdOptions1.visible}"
+                    @click="mbMdClose('star')"
+                  />
+  
+                  <div
+                    class="star-txt"
+                    @click="mbMdOpen('star')"
+                  >
+                    <i class="icon icon-star" />
+                    <span class="txt">4.3</span>
+                  </div>
+  
+                  <div
+                    class="hover-desc-box"
+                    :class="{'is-show' : mbMdOptions1.visible}"
+                  >
+                    <span class="ttl">종합 점수</span>
+  
+                    <dl class="star-desc-list">
+                      <dt class="desc-ttl">
+                        기술성
+                      </dt>
+                      <dd class="desc-dt">
+                        <i class="icon icon-star" />
+                        <span class="txt">5</span>
+                      </dd>
+                    </dl>
+  
+                    <dl class="star-desc-list">
+                      <dt class="desc-ttl">
+                        시장성
+                      </dt>
+                      <dd class="desc-dt">
+                        <i class="icon icon-star" />
+                        <span class="txt">5</span>
+                      </dd>
+                    </dl>
+  
+                    <dl class="star-desc-list">
+                      <dt class="desc-ttl">
+                        팀역량
+                      </dt>
+                      <dd class="desc-dt">
+                        <i class="icon icon-star" />
+                        <span class="txt">5</span>
+                      </dd>
+                    </dl>
+  
+                    <dl class="star-desc-list">
+                      <dt class="desc-ttl">
+                        실행역량
+                      </dt>
+                      <dd class="desc-dt">
+                        <i class="icon icon-star" />
+                        <span class="txt">5</span>
+                      </dd>
+                    </dl>
+  
+                    <dl class="star-desc-list">
+                      <dt class="desc-ttl">
+                        아이템 우수성
+                      </dt>
+                      <dd class="desc-dt">
+                        <i class="icon icon-star" />
+                        <span class="txt">5</span>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="middle-conts">
+                <!-- TODO: 내가 쓴 리뷰에만 보임 -->
+                <div class="btns-wrap">
+                  <button
+                    type="button"
+                    class="btn-txt"
+                  >
+                    <i class="icon icon-pen" />
+                    <span class="txt">수정하기</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn-txt btn-warning-txt"
+                  >
+                    <i class="icon icon-trash" />
+                    <span class="txt">삭제하기</span>
+                  </button>
+                </div>
+                <p class="description">{{ '투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.' }}</p>
+              </div>
+              <div class="right-conts">
+                {{ '2021.00.00  00:00' }}
+              </div>
+            </div>
+            <!-- TODO: 리뷰카드 안에서는 is-active가 되어야 보임 -->
+            <div class="review-write-container is-active">
+              <div class="write-ttl">종합 점수</div>
+              <div class="review-write-inner-star">
+                <div class="star-grp">
+                  <div class="ttl">기술성</div>
+                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                </div>
+                <div class="star-grp">
+                  <div class="ttl">시장성</div>
+                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                </div>
+                <div class="star-grp">
+                  <div class="ttl">팀역량</div>
+                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                </div>
+                <div class="star-grp">
+                  <div class="ttl">실행역량</div>
+                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                </div>
+                <div class="star-grp">
+                  <div class="ttl">아이템 우수성</div>
+                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                </div>
+              </div>
+              <div class="review-write-inner-inp">
+                <div class="inp-grp">
+                  <div class="input-ttl">
+                    <span class="ttl">내용</span>
+                    <span class="check-text">({{'0'}} / 1000)</span>
+                  </div>
+                  <textarea
+                    id="#"
+                    name="#"
+                    class="inp inp-textarea" 
+                    placeholder="해당 스타트업에 대한 리뷰를 작성해주세요."
+                  />
+                </div>
+                
+                <div class="review-write-btn-wrap">
+                  <div class="information-txt">
+                    <div class="icon-with-txt ai-center">
+                      <i class="icon icon-i" />
+                      <span class="txt">리뷰는 익명으로 작성됩니다.</span>
+                    </div>
+                  </div>
+          
+                  <btn-bd-dark
+                    class="btn-md"
+                    @click="window.alert('수정완료 버튼을 클릭하셨습니다.')"
+                  >
+                    수정완료
+                  </btn-bd-dark>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
     </div>
 
     <modal-dialog>
@@ -2712,6 +3281,10 @@ export default {
     margin: 15px 0;
     font-weight: 500;
   }
+}
+
+.white-panel {
+  outline: 1px solid;
 }
 
 // 12. 슬라이드 관련 스타일

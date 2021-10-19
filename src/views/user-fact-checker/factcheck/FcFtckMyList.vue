@@ -84,12 +84,12 @@
         
       <!-- 팩트체크가 있을 때 -->
       <div class="board-list-grp-ttl">
-        <p class="txt">
+        <p class="ttl-txt">
           총 <span class="bold">15</span>개
         </p>
         
         <!-- 검색어만 입력한 검색결과일 때만 보임 -->
-        <div class="txt">
+        <div class="ttl-txt">
           <span class="highlight">
             <u>'검색어'</u>
           </span>

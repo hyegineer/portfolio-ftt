@@ -123,9 +123,11 @@
         <div
           class="accordion-list"
           :class="{'is-show': accordion}"
-          @click="accordion = !accordion"
         >
-          <div class="accordion-top">
+          <div
+            class="accordion-top" 
+            @click="accordion = !accordion"
+          >
             <div class="space-between">
               <div class="ftck-name-grp">
                 <span class="name">팩트체커명</span>

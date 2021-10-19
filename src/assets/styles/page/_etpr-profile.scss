@@ -392,6 +392,18 @@
   }
 }
 
+.review-card {
+
+  .review-write-container  {
+    display: none;
+    padding: 30px 0 10px;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
 .review-inner {
   @include flex;
 
@@ -421,6 +433,31 @@
     font-weight: 400;
     color: #5C5E70;
     -webkit-text-stroke: 0.3px #5C5E70;
+
+    @at-root .editing & {
+
+      .description {
+        font-size: 0;
+        user-select: none;
+      }
+    }
+
+    .btns-wrap {
+      display: none;
+      margin-bottom: 17px;
+
+      @at-root .my-review & {
+        display: block;
+      }
+
+      @at-root .editing & {
+        display: none;
+      }
+
+      .btn-txt {
+        margin-right: 16px;
+      }
+    }
   }
 
   .right-conts {
@@ -430,6 +467,92 @@
     color: #B8BAC7;
     text-align: right;
     -webkit-text-stroke: 0.2px #B8BAC7;
+  }
+}
+
+.review-write-container {
+  padding: 20px 0;
+
+  .write-ttl {
+    font-size: rem(16);
+    font-weight: 500;
+    color: #171820;
+  }
+}
+
+.review-write-inner-star {
+  @include flex {
+    @include flex-op(center, flex-start);
+  }
+
+  margin-top: 18px;
+
+  .star-grp {
+    @include flex {
+      @include flex-op(center, flex-start);
+    }
+
+    padding-left: 20px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    .ttl {
+      padding-right: 12px;
+      font-size: rem(14);
+      font-weight: 400;
+      color: #5C5E70;
+    }
+  }
+
+  .vue-star-rating-pointer {
+    margin-right: 4px !important;
+  }
+
+  .vue-star-rating-rating-text {
+    display: none;
+  }
+}
+
+.review-write-inner-inp {
+  padding-top: 24px;
+
+  .inp-grp {
+    display: block;
+  }
+
+  .input-ttl {
+    @include flex{
+      @include flex-op(center, space-between);
+    }
+
+    font-size: rem(13);
+    font-weight: 400;
+    color: #171820;
+  }
+
+  .check-text {
+    font-size: rem(12);
+    font-weight: 400;
+    color: #5C5E70;
+  }
+
+  .inp-textarea {
+    height: 108px;
+    margin-top: 9px;
+  }
+}
+
+.review-write-btn-wrap {
+  @include flex{
+    @include flex-op(flex-start, space-between);
+  }
+
+  padding-top: 15px;
+
+  .btn-bd-dark {
+    width: 205px;
   }
 }
 
