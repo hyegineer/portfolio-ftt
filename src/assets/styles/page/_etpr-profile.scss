@@ -951,6 +951,18 @@
   .table-all-wrap {
     padding: 0;
   }
+
+  .nothing-ment{
+    @include flex-center;
+    
+    width: 100%;
+    min-height: 215px;
+    text-align-last: center;
+    padding: 30px 0;
+    font-size: 0.9375em;
+    line-height: 1.35;
+    color: #8E909F;
+  }
 }
 
 .stock-holder-container {

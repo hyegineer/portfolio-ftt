@@ -2491,7 +2491,7 @@
         </h1>
 
         <div class="section-cont section-rdchart-cont">
-          <rader-chart :data="{'기술성': 2, '시장성': 4, '아이템 우수성': 5, '실행역량': 2, '팀역량': 5}" />
+          <rader-chart :data="{'기술성': 0, '시장성': 0, '아이템 우수성': 0, '실행역량': 0, '팀역량': 0}" />
           <rader-chart :data="{'기술성': 5, '시장성': 3, '아이템 우수성': 1, '실행역량': 0, '팀역량': 5}" />
           <rader-chart />
         </div>
