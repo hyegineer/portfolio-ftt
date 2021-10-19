@@ -98,11 +98,11 @@
 // 좌측 플로팅 메뉴
 .left-floating-menu-wrap {
   padding-top: 40px;
-  position: absolute;
-  left: 0;
+  position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 10;
   width: 175px;
+  background-color: #fff;
 
   .floating-hgrp {
     margin-bottom: 23px;
@@ -158,7 +158,6 @@
     }
   }
 }
-
 // END 좌측 플로팅 메뉴
 
 
@@ -178,8 +177,16 @@
   }
 
   .req-info-cont-wrap {
-    position: relative;
-    padding-left: 225px;
+    // position: relative;
+    // padding-left: 225px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .etpr-profile-request-ftck-cont-wrap {
+    flex-grow: 1;
   }
 
   .req-info-grp {
