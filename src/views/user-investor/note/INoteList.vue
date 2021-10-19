@@ -69,7 +69,7 @@
         <div>
           <!-- 검색어만 입력한 검색결과일 때만 보임 -->
           <div class="board-list-grp-ttl">
-            <div class="txt">
+            <div class="ttl-txt">
               <span class="highlight">
                 <u>'검색어'</u>
               </span>
