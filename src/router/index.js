@@ -900,6 +900,11 @@ const routes = [
     name: 'Components',
     component: () => import('~@/views/util/Components.vue'),
   },
+  {
+    path: '/charts',
+    name: 'Charts',
+    component: () => import('~@/views/util/RaderChart.vue'),
+  },
 ];
 
 const router = new VueRouter({

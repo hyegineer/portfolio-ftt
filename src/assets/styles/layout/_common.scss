@@ -942,7 +942,7 @@ body{
   }
 }
 
-.img-box-grp{
+.img-box-grp{ // 구성요소: 팩트체크 확대되는 첨부이미지 박스 그룹
   @include flex{
     @include flex-op(stretch, flex-start);
   };
@@ -952,7 +952,7 @@ body{
   margin-bottom: 30px;
 }
 
-.img-box{
+.img-box{ // 구성요소: 팩트체크 확대되는 첨부이미지 박스
   width: 100%;
   max-width: 339px;
   background-color: #F9F9FB;
@@ -989,5 +989,92 @@ body{
 
     z-index: 2;
     cursor: pointer;
+  }
+}
+
+.value-chart-wrap{
+  background-color: #171820;
+  color: white;
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+
+  .wrap-hgrp{
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .wrap-ttl{
+    @include font-op($c: #8e909f, $w: 400){
+      font-size: 15px;
+    }
+
+    -webkit-text-stroke: 0.5px #8e909f;
+    line-height: 1.5;
+    margin-bottom: 7px;
+  }
+
+  .wrap-average-star{
+    font-size: 25px;
+
+    .icon-star{
+      width: 24px;
+      height: 24px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='23.5' height='23' viewBox='0 0 23.5 23'%3E%3Cdefs%3E%3ClinearGradient id='linear-gradient' x1='-0.069' y1='-0.044' x2='0.782' y2='0.938' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%2353ff81'/%3E%3Cstop offset='1' stop-color='%23ffd500'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath id='icon-star-gra' d='M10.891,1.438a1,1,0,0,1,1.717,0l3.04,5.093a1,1,0,0,0,.618.458L21.956,8.4a1,1,0,0,1,.529,1.608l-3.824,4.618a1,1,0,0,0-.227.713l.454,6.021a1,1,0,0,1-1.388,1L12.141,20.08a1,1,0,0,0-.782,0L6,22.358a1,1,0,0,1-1.388-1l.454-6.021a1,1,0,0,0-.227-.713L1.014,10.01A1,1,0,0,1,1.544,8.4l5.69-1.413a1,1,0,0,0,.618-.458Z' fill='url(%23linear-gradient)'/%3E%3C/svg%3E%0A");
+      margin-right: 5px;
+    }
+
+    .rating{
+      line-height: 1;
+      font-weight: 600;
+      display: inline-block;
+      vertical-align: middle;
+      padding-top: 5px;
+    }
+  }
+
+  .xaxis-list-grp{
+    @include flex-center;
+
+    background-color: rgba(#00EB79, 0.11);
+    border: 1px solid rgba(#00EB79, 0.5);
+    padding: 13.5px 0;
+  }
+
+  .xaxis-list{
+    flex: 1 1 20%;
+    border-right: 1px solid #005D31;
+  }
+
+  .xaxis-item{
+    @include flex-col;
+    @include flex-op(center, center);
+
+    gap: 8px;
+
+    .lbel{
+      @include font-op($w: 500, $c: #00EB79){
+        font-size: 13px;
+      }
+    }
+    
+    .cont{
+      @include font-op($w: 600, $c: white){
+        font-size: 16px;
+      }
+    }  
+  }
+}
+
+#valueChart { // 구성요소: 기업가치 그래프 x-axis 폰트사이즈
+  width: 100%;
+  
+  .apexcharts-inner {
+    position: relative;
+    // transform: translate(40px, 30px) !important;
+  }
+
+  .apexcharts-xaxis text{
+    font-size: 14px;
   }
 }
