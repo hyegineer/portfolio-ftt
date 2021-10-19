@@ -107,28 +107,91 @@
                     :class="{'is-active': tabActive === 1}"
                     @click="tabActive = 1"
                   >
-                    {{ '기본정보' }}
+                    기본정보
+                  </btn-bd-dark>
+                  <btn-bd-dark
+                    class="btn-sm btn-tab"
+                    :class="{'is-active': tabActive === 5}"
+                    @click="tabActive = 5"
+                  >
+                    기업가치
+                  </btn-bd-dark>
+                  <btn-bd-dark
+                    class="btn-sm btn-tab"
+                    :class="{'is-active': tabActive === 6}"
+                    @click="tabActive = 6"
+                  >
+                    규모
+                  </btn-bd-dark>
+                  <btn-bd-dark
+                    class="btn-sm btn-tab"
+                    :class="{'is-active': tabActive === 7}"
+                    @click="tabActive = 7"
+                  >
+                    주주 정보
+                  </btn-bd-dark>
+                  <btn-bd-dark
+                    class="btn-sm btn-tab"
+                    :class="{'is-active': tabActive === 8}"
+                    @click="tabActive = 8"
+                  >
+                    재무상태
                   </btn-bd-dark>
                   <btn-bd-dark
                     class="btn-sm btn-tab"
                     :class="{'is-active': tabActive === 2}"
                     @click="tabActive = 2"
                   >
-                    {{ '손익계산서' }}
+                    손익계산서
+                  </btn-bd-dark>
+                  <btn-bd-dark
+                    class="btn-sm btn-tab"
+                    :class="{'is-active': tabActive === 9}"
+                    @click="tabActive = 9"
+                  >
+                    매출 추이
+                  </btn-bd-dark>
+                  <btn-bd-dark
+                    class="btn-sm btn-tab"
+                    :class="{'is-active': tabActive === 10}"
+                    @click="tabActive = 10"
+                  >
+                    영업이익 추이
+                  </btn-bd-dark>
+                  <btn-bd-dark
+                    class="btn-sm btn-tab"
+                    :class="{'is-active': tabActive === 11}"
+                    @click="tabActive = 11"
+                  >
+                    당기순이익 추이
+                  </btn-bd-dark>
+                  <btn-bd-dark
+                    class="btn-sm btn-tab"
+                    :class="{'is-active': tabActive === 12}"
+                    @click="tabActive = 12"
+                  >
+                    투자유치
+                  </btn-bd-dark>
+                  <btn-bd-dark
+                    class="btn-sm btn-tab"
+                    :class="{'is-active': tabActive === 13}"
+                    @click="tabActive = 13"
+                  >
+                    보유특허
                   </btn-bd-dark>
                   <btn-bd-dark
                     class="btn-sm btn-tab"
                     :class="{'is-active': tabActive === 3}"
                     @click="tabActive = 3"
                   >
-                    {{ '구성원' }}
+                    구성원
                   </btn-bd-dark>
                   <btn-bd-dark
                     class="btn-sm btn-tab"
                     :class="{'is-active': tabActive === 4}"
                     @click="tabActive = 4"
                   >
-                    {{ '추가 요청' }}
+                    추가 요청
                   </btn-bd-dark>
                 </div>
               </div>
@@ -145,7 +208,7 @@
                 >
                   <div class="req-hgrp">
                     <p class="ttl">
-                      {{ '기본정보' }}
+                      항목 정보
                     </p>
                   </div>
                   <div class="etpr-panel-wrap flexable-inner">
@@ -246,7 +309,7 @@
                   <div class="req-cats-point-grp">
                     <div class="req-cats-grp">
                       <span class="label">작성중인 항목</span>
-                      <span class="info">{{ '기본정보' }}</span>
+                      <span class="info">기본정보</span>
                       <btn-bd-light
                         class="btn-rounded btn-xsm"
                       >
@@ -294,6 +357,650 @@
                 <!-- END 작성내용 -->
               </div>
               <!-- TODO: tab: END 기본정보 -->
+              
+              <!-- TODO: tab: 기업가치 -->
+              <div
+                v-show="tabActive === 5"
+                class="etpr-profile-request-ftck-cont-wrap"
+              >
+                <!-- 항목 정보 -->
+                <div
+                  class="req-info-grp"
+                >
+                  <div class="req-hgrp">
+                    <p class="ttl">
+                      항목 정보
+                    </p>
+                  </div>
+                  <div class="etpr-panel-wrap flexable-inner">
+                    <div class="white-panel">
+                      <div class="common-info-container">
+                        <ul class="common-info-list-wrap">
+                          <!-- TODO: 정보가 없는 곳은 전부 - 로 표시 -->
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              대표자
+                            </h4>
+                            <div class="dec">
+                              {{ '홍길동' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              사업자번호
+                            </h4>
+                            <div class="dec">
+                              {{ '000-00-00***' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              본사주소
+                            </h4>
+                            <div class="dec">
+                              {{ '서울특별시 강남구 테헤란로 312 13층 주소길어지면 최대 2줄 (우편번호)' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              전화번호
+                            </h4>
+                            <div class="dec">
+                              {{ '02-1234-5678' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              기업규모
+                            </h4>
+                            <div class="dec">
+                              {{ '소기업' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              산업분류
+                            </h4>
+                            <div class="dec">
+                              {{ 'ICT 서비스' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              산업분야
+                            </h4>
+                            <div class="dec">
+                              {{ '-' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              설립일
+                            </h4>
+                            <div class="dec">
+                              {{ '2021년 03월 10일' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list tag-list">
+                            <h4 class="ttl">
+                              태그
+                            </h4>
+                            <div class="dec">
+                              <badge-rounded>태그최대여덟글자</badge-rounded>
+                              <badge-rounded>태그최대여덟글자</badge-rounded>
+                              <badge-rounded>태그최대여덟글자</badge-rounded>
+                              <badge-rounded>태그최대여덟글자</badge-rounded>
+                              <badge-rounded>태그최대여덟글자</badge-rounded>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 항목 정보 -->
+
+                <!-- 작성내용 -->
+                <div class="req-cont-grp">
+                  <div class="req-hgrp">
+                    <p class="ttl">
+                      요청 내용
+                    </p>
+                  </div>
+                  <div class="req-cats-point-grp">
+                    <div class="req-cats-grp">
+                      <span class="label">작성중인 항목</span>
+                      <span class="info">기업가치</span>
+                      <btn-bd-light
+                        class="btn-rounded btn-xsm"
+                      >
+                        <i class="icon icon-trash" />항목 삭제하기
+                      </btn-bd-light>
+                    </div>
+                    <div class="point-grp">
+                      <span class="label">사용 포인트</span>
+                      <span class="point">5,000</span>
+                      <i class="icon icon-point" />
+                    </div>
+                  </div>
+                  <div class="inp-grp editor-inp-grp">
+                    <input
+                      type="text"
+                      class="inp editor-inp"
+                      placeholder="팩트체크 요청 제목을 입력하세요, (n자 입력)"
+                    >
+                  </div>
+                  <div
+                    class="editor-cont-grp"
+                    style="border: 1px solid #DDDEE6"
+                  >
+                    EDITOR 들어가는 부분
+                  </div>
+                  <div class="btn-all-grp">
+                    <div class="ment-grp">
+                      <i class="icon icon-i" />
+                      <span class="ment">요청한 팩트체크는 마이페이지 > 팩트체크 > 요청한 팩트체크에서 확인 가능합니다.</span>
+                    </div>
+                    <div class="btn-grp">
+                      <btn-solid-dark
+                        class="btn-md"
+                        @click="window.alert('검정버튼을 클릭하셨습니다.')"
+                      >
+                        <img
+                          src="@/assets/images/icon/icon-check-gn.svg"
+                          alt="체크"
+                          class="check-icon"
+                        > 팩트체크 요청완료
+                      </btn-solid-dark>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 작성내용 -->
+              </div>
+              <!-- TODO: tab: END 기업가치 -->
+              
+              <!-- TODO: tab: 규모 -->
+              <div
+                v-show="tabActive === 6"
+                class="etpr-profile-request-ftck-cont-wrap"
+              >
+                <!-- 항목 정보 -->
+                <div
+                  class="req-info-grp"
+                >
+                  <div class="req-hgrp">
+                    <p class="ttl">
+                      항목 정보
+                    </p>
+                  </div>
+                  <div class="etpr-panel-wrap flexable-inner">
+                    <div class="white-panel">
+                      <div class="common-info-container">
+                        <ul class="common-info-list-wrap">
+                          <!-- TODO: 정보가 없는 곳은 전부 - 로 표시 -->
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              대표자
+                            </h4>
+                            <div class="dec">
+                              {{ '홍길동' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              사업자번호
+                            </h4>
+                            <div class="dec">
+                              {{ '000-00-00***' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              본사주소
+                            </h4>
+                            <div class="dec">
+                              {{ '서울특별시 강남구 테헤란로 312 13층 주소길어지면 최대 2줄 (우편번호)' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              전화번호
+                            </h4>
+                            <div class="dec">
+                              {{ '02-1234-5678' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              기업규모
+                            </h4>
+                            <div class="dec">
+                              {{ '소기업' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              산업분류
+                            </h4>
+                            <div class="dec">
+                              {{ 'ICT 서비스' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              산업분야
+                            </h4>
+                            <div class="dec">
+                              {{ '-' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              설립일
+                            </h4>
+                            <div class="dec">
+                              {{ '2021년 03월 10일' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list tag-list">
+                            <h4 class="ttl">
+                              태그
+                            </h4>
+                            <div class="dec">
+                              <badge-rounded>태그최대여덟글자</badge-rounded>
+                              <badge-rounded>태그최대여덟글자</badge-rounded>
+                              <badge-rounded>태그최대여덟글자</badge-rounded>
+                              <badge-rounded>태그최대여덟글자</badge-rounded>
+                              <badge-rounded>태그최대여덟글자</badge-rounded>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 항목 정보 -->
+
+                <!-- 작성내용 -->
+                <div class="req-cont-grp">
+                  <div class="req-hgrp">
+                    <p class="ttl">
+                      요청 내용
+                    </p>
+                  </div>
+                  <div class="req-cats-point-grp">
+                    <div class="req-cats-grp">
+                      <span class="label">작성중인 항목</span>
+                      <span class="info">규모</span>
+                      <btn-bd-light
+                        class="btn-rounded btn-xsm"
+                      >
+                        <i class="icon icon-trash" />항목 삭제하기
+                      </btn-bd-light>
+                    </div>
+                    <div class="point-grp">
+                      <span class="label">사용 포인트</span>
+                      <span class="point">5,000</span>
+                      <i class="icon icon-point" />
+                    </div>
+                  </div>
+                  <div class="inp-grp editor-inp-grp">
+                    <input
+                      type="text"
+                      class="inp editor-inp"
+                      placeholder="팩트체크 요청 제목을 입력하세요, (n자 입력)"
+                    >
+                  </div>
+                  <div
+                    class="editor-cont-grp"
+                    style="border: 1px solid #DDDEE6"
+                  >
+                    EDITOR 들어가는 부분
+                  </div>
+                  <div class="btn-all-grp">
+                    <div class="ment-grp">
+                      <i class="icon icon-i" />
+                      <span class="ment">요청한 팩트체크는 마이페이지 > 팩트체크 > 요청한 팩트체크에서 확인 가능합니다.</span>
+                    </div>
+                    <div class="btn-grp">
+                      <btn-solid-dark
+                        class="btn-md"
+                        @click="window.alert('검정버튼을 클릭하셨습니다.')"
+                      >
+                        <img
+                          src="@/assets/images/icon/icon-check-gn.svg"
+                          alt="체크"
+                          class="check-icon"
+                        > 팩트체크 요청완료
+                      </btn-solid-dark>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 작성내용 -->
+              </div>
+              <!-- TODO: tab: END 규모 -->
+              
+              <!-- TODO: tab: 주주 정보 -->
+              <div
+                v-show="tabActive === 7"
+                class="etpr-profile-request-ftck-cont-wrap"
+              >
+                <!-- 항목 정보 -->
+                <div
+                  class="req-info-grp"
+                >
+                  <div class="req-hgrp">
+                    <p class="ttl">
+                      항목 정보
+                    </p>
+                  </div>
+                  <div class="etpr-panel-wrap flexable-inner">
+                    <div class="white-panel">
+                      <div class="common-info-container">
+                        <ul class="common-info-list-wrap">
+                          <!-- TODO: 정보가 없는 곳은 전부 - 로 표시 -->
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              대표자
+                            </h4>
+                            <div class="dec">
+                              {{ '홍길동' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              사업자번호
+                            </h4>
+                            <div class="dec">
+                              {{ '000-00-00***' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              본사주소
+                            </h4>
+                            <div class="dec">
+                              {{ '서울특별시 강남구 테헤란로 312 13층 주소길어지면 최대 2줄 (우편번호)' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              전화번호
+                            </h4>
+                            <div class="dec">
+                              {{ '02-1234-5678' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              기업규모
+                            </h4>
+                            <div class="dec">
+                              {{ '소기업' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              산업분류
+                            </h4>
+                            <div class="dec">
+                              {{ 'ICT 서비스' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              산업분야
+                            </h4>
+                            <div class="dec">
+                              {{ '-' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              설립일
+                            </h4>
+                            <div class="dec">
+                              {{ '2021년 03월 10일' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list tag-list">
+                            <h4 class="ttl">
+                              태그
+                            </h4>
+                            <div class="dec">
+                              <badge-rounded>태그최대여덟글자</badge-rounded>
+                              <badge-rounded>태그최대여덟글자</badge-rounded>
+                              <badge-rounded>태그최대여덟글자</badge-rounded>
+                              <badge-rounded>태그최대여덟글자</badge-rounded>
+                              <badge-rounded>태그최대여덟글자</badge-rounded>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 항목 정보 -->
+
+                <!-- 작성내용 -->
+                <div class="req-cont-grp">
+                  <div class="req-hgrp">
+                    <p class="ttl">
+                      요청 내용
+                    </p>
+                  </div>
+                  <div class="req-cats-point-grp">
+                    <div class="req-cats-grp">
+                      <span class="label">작성중인 항목</span>
+                      <span class="info">주주 정보</span>
+                      <btn-bd-light
+                        class="btn-rounded btn-xsm"
+                      >
+                        <i class="icon icon-trash" />항목 삭제하기
+                      </btn-bd-light>
+                    </div>
+                    <div class="point-grp">
+                      <span class="label">사용 포인트</span>
+                      <span class="point">5,000</span>
+                      <i class="icon icon-point" />
+                    </div>
+                  </div>
+                  <div class="inp-grp editor-inp-grp">
+                    <input
+                      type="text"
+                      class="inp editor-inp"
+                      placeholder="팩트체크 요청 제목을 입력하세요, (n자 입력)"
+                    >
+                  </div>
+                  <div
+                    class="editor-cont-grp"
+                    style="border: 1px solid #DDDEE6"
+                  >
+                    EDITOR 들어가는 부분
+                  </div>
+                  <div class="btn-all-grp">
+                    <div class="ment-grp">
+                      <i class="icon icon-i" />
+                      <span class="ment">요청한 팩트체크는 마이페이지 > 팩트체크 > 요청한 팩트체크에서 확인 가능합니다.</span>
+                    </div>
+                    <div class="btn-grp">
+                      <btn-solid-dark
+                        class="btn-md"
+                        @click="window.alert('검정버튼을 클릭하셨습니다.')"
+                      >
+                        <img
+                          src="@/assets/images/icon/icon-check-gn.svg"
+                          alt="체크"
+                          class="check-icon"
+                        > 팩트체크 요청완료
+                      </btn-solid-dark>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 작성내용 -->
+              </div>
+              <!-- TODO: tab: END 주주 정보 -->
+              
+              <!-- TODO: tab: 재무상태 -->
+              <div
+                v-show="tabActive === 8"
+                class="etpr-profile-request-ftck-cont-wrap"
+              >
+                <!-- 항목 정보 -->
+                <div
+                  class="req-info-grp"
+                >
+                  <div class="req-hgrp">
+                    <p class="ttl">
+                      항목 정보
+                    </p>
+                  </div>
+                  <div class="etpr-panel-wrap flexable-inner">
+                    <div class="white-panel">
+                      <div class="common-info-container">
+                        <ul class="common-info-list-wrap">
+                          <!-- TODO: 정보가 없는 곳은 전부 - 로 표시 -->
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              대표자
+                            </h4>
+                            <div class="dec">
+                              {{ '홍길동' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              사업자번호
+                            </h4>
+                            <div class="dec">
+                              {{ '000-00-00***' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              본사주소
+                            </h4>
+                            <div class="dec">
+                              {{ '서울특별시 강남구 테헤란로 312 13층 주소길어지면 최대 2줄 (우편번호)' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              전화번호
+                            </h4>
+                            <div class="dec">
+                              {{ '02-1234-5678' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              기업규모
+                            </h4>
+                            <div class="dec">
+                              {{ '소기업' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              산업분류
+                            </h4>
+                            <div class="dec">
+                              {{ 'ICT 서비스' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              산업분야
+                            </h4>
+                            <div class="dec">
+                              {{ '-' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list">
+                            <h4 class="ttl">
+                              설립일
+                            </h4>
+                            <div class="dec">
+                              {{ '2021년 03월 10일' }}
+                            </div>
+                          </li>
+                          <li class="common-info-list tag-list">
+                            <h4 class="ttl">
+                              태그
+                            </h4>
+                            <div class="dec">
+                              <badge-rounded>태그최대여덟글자</badge-rounded>
+                              <badge-rounded>태그최대여덟글자</badge-rounded>
+                              <badge-rounded>태그최대여덟글자</badge-rounded>
+                              <badge-rounded>태그최대여덟글자</badge-rounded>
+                              <badge-rounded>태그최대여덟글자</badge-rounded>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 항목 정보 -->
+
+                <!-- 작성내용 -->
+                <div class="req-cont-grp">
+                  <div class="req-hgrp">
+                    <p class="ttl">
+                      요청 내용
+                    </p>
+                  </div>
+                  <div class="req-cats-point-grp">
+                    <div class="req-cats-grp">
+                      <span class="label">작성중인 항목</span>
+                      <span class="info">재무상태</span>
+                      <btn-bd-light
+                        class="btn-rounded btn-xsm"
+                      >
+                        <i class="icon icon-trash" />항목 삭제하기
+                      </btn-bd-light>
+                    </div>
+                    <div class="point-grp">
+                      <span class="label">사용 포인트</span>
+                      <span class="point">5,000</span>
+                      <i class="icon icon-point" />
+                    </div>
+                  </div>
+                  <div class="inp-grp editor-inp-grp">
+                    <input
+                      type="text"
+                      class="inp editor-inp"
+                      placeholder="팩트체크 요청 제목을 입력하세요, (n자 입력)"
+                    >
+                  </div>
+                  <div
+                    class="editor-cont-grp"
+                    style="border: 1px solid #DDDEE6"
+                  >
+                    EDITOR 들어가는 부분
+                  </div>
+                  <div class="btn-all-grp">
+                    <div class="ment-grp">
+                      <i class="icon icon-i" />
+                      <span class="ment">요청한 팩트체크는 마이페이지 > 팩트체크 > 요청한 팩트체크에서 확인 가능합니다.</span>
+                    </div>
+                    <div class="btn-grp">
+                      <btn-solid-dark
+                        class="btn-md"
+                        @click="window.alert('검정버튼을 클릭하셨습니다.')"
+                      >
+                        <img
+                          src="@/assets/images/icon/icon-check-gn.svg"
+                          alt="체크"
+                          class="check-icon"
+                        > 팩트체크 요청완료
+                      </btn-solid-dark>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 작성내용 -->
+              </div>
+              <!-- TODO: tab: END 재무상태 -->
 
               <!-- TODO: tab: 손익계산서 -->
               <div
@@ -306,7 +1013,7 @@
                 >
                   <div class="req-hgrp">
                     <p class="ttl">
-                      {{ '손익계산서' }}
+                      항목 정보
                     </p>
                   </div>
                   <div class="common-info-graph">
@@ -556,7 +1263,7 @@
                   <div class="req-cats-point-grp">
                     <div class="req-cats-grp">
                       <span class="label">작성중인 항목</span>
-                      <span class="info">{{ '손익계산서' }}</span>
+                      <span class="info">손익계산서</span>
                       <btn-bd-light
                         class="btn-rounded btn-xsm"
                       >
@@ -605,6 +1312,1556 @@
               </div>
               <!-- TODO: tab: END 손익계산서 -->
 
+              <!-- TODO: tab: 매출추이 -->
+              <div
+                v-show="tabActive === 9"
+                class="etpr-profile-request-ftck-cont-wrap"
+              >
+                <!-- 항목 정보 -->
+                <div
+                  class="req-info-grp"
+                >
+                  <div class="req-hgrp">
+                    <p class="ttl">
+                      항목 정보
+                    </p>
+                  </div>
+                  <div class="common-info-graph">
+                    <div class="table-all-wrap">
+                      <div class="table-grp">
+                        <!-- 테이블 헤더 그룹 -->
+                        <ul class="table-hgrp">
+                          <li class="table-hlist flex-basis-20 txt-left">
+                            <span class="table-txt">항목</span>
+                          </li>
+                          <li class="table-hlist flex-basis-26 txt-right">
+                            <span class="table-txt">2019</span>
+                          </li>
+                          <li class="table-hlist flex-basis-26 txt-right">
+                            <span class="table-txt">2020</span>
+                          </li>
+                          <li class="table-hlist flex-basis-26 txt-right">
+                            <span class="table-txt">2021</span>
+                          </li>
+                        </ul>
+                        <!-- END 테이블 헤더 그룹 -->
+
+                        <!-- 테이블 내용 그룹 -->
+                        <!-- 내용이 없을 때 -->
+                        <div
+                          class="table-cont-wrap empty-cont-wrap"
+                        >
+                          <p class="empty-ment">
+                            내용이 없습니다.
+                          </p>
+                        </div>
+                        <!-- END 내용이 없을 때 -->
+
+                        <!-- 내용이 있을 때 -->
+                        <div
+                          class="table-cont-wrap"
+                        >
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">매출액</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">매출원가</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp f-bold"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">매출총이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">일반관리비</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">영업이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">영업외수익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">영업외비용</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">경상이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">특별이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">세전순이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">법인세</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp f-bold"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">당기순이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- END 내용이 있을 때 -->
+
+                        <!-- END 테이블 내용 그룹 -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 항목 정보 -->
+
+                <!-- 작성내용 -->
+                <div class="req-cont-grp">
+                  <div class="req-hgrp">
+                    <p class="ttl">
+                      요청 내용
+                    </p>
+                  </div>
+                  <div class="req-cats-point-grp">
+                    <div class="req-cats-grp">
+                      <span class="label">작성중인 항목</span>
+                      <span class="info">매출 추이</span>
+                      <btn-bd-light
+                        class="btn-rounded btn-xsm"
+                      >
+                        <i class="icon icon-trash" />항목 삭제하기
+                      </btn-bd-light>
+                    </div>
+                    <div class="point-grp">
+                      <span class="label">사용 포인트</span>
+                      <span class="point">5,000</span>
+                      <i class="icon icon-point" />
+                    </div>
+                  </div>
+                  <div class="inp-grp editor-inp-grp">
+                    <input
+                      type="text"
+                      class="inp editor-inp"
+                      placeholder="팩트체크 요청 제목을 입력하세요, (n자 입력)"
+                    >
+                  </div>
+                  <div
+                    class="editor-cont-grp"
+                    style="border: 1px solid #DDDEE6"
+                  >
+                    EDITOR 들어가는 부분
+                  </div>
+                  <div class="btn-all-grp">
+                    <div class="ment-grp">
+                      <i class="icon icon-i" />
+                      <span class="ment">요청한 팩트체크는 마이페이지 > 팩트체크 > 요청한 팩트체크에서 확인 가능합니다.</span>
+                    </div>
+                    <div class="btn-grp">
+                      <btn-solid-dark
+                        class="btn-md"
+                        @click="window.alert('검정버튼을 클릭하셨습니다.')"
+                      >
+                        <img
+                          src="@/assets/images/icon/icon-check-gn.svg"
+                          alt="체크"
+                          class="check-icon"
+                        > 팩트체크 요청완료
+                      </btn-solid-dark>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 작성내용 -->
+              </div>
+              <!-- TODO: tab: END 매출추이 -->
+
+              <!-- TODO: tab: 영업이익 추이 -->
+              <div
+                v-show="tabActive === 10"
+                class="etpr-profile-request-ftck-cont-wrap"
+              >
+                <!-- 항목 정보 -->
+                <div
+                  class="req-info-grp"
+                >
+                  <div class="req-hgrp">
+                    <p class="ttl">
+                      항목 정보
+                    </p>
+                  </div>
+                  <div class="common-info-graph">
+                    <div class="table-all-wrap">
+                      <div class="table-grp">
+                        <!-- 테이블 헤더 그룹 -->
+                        <ul class="table-hgrp">
+                          <li class="table-hlist flex-basis-20 txt-left">
+                            <span class="table-txt">항목</span>
+                          </li>
+                          <li class="table-hlist flex-basis-26 txt-right">
+                            <span class="table-txt">2019</span>
+                          </li>
+                          <li class="table-hlist flex-basis-26 txt-right">
+                            <span class="table-txt">2020</span>
+                          </li>
+                          <li class="table-hlist flex-basis-26 txt-right">
+                            <span class="table-txt">2021</span>
+                          </li>
+                        </ul>
+                        <!-- END 테이블 헤더 그룹 -->
+
+                        <!-- 테이블 내용 그룹 -->
+                        <!-- 내용이 없을 때 -->
+                        <div
+                          class="table-cont-wrap empty-cont-wrap"
+                        >
+                          <p class="empty-ment">
+                            내용이 없습니다.
+                          </p>
+                        </div>
+                        <!-- END 내용이 없을 때 -->
+
+                        <!-- 내용이 있을 때 -->
+                        <div
+                          class="table-cont-wrap"
+                        >
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">매출액</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">매출원가</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp f-bold"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">매출총이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">일반관리비</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">영업이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">영업외수익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">영업외비용</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">경상이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">특별이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">세전순이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">법인세</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp f-bold"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">당기순이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- END 내용이 있을 때 -->
+
+                        <!-- END 테이블 내용 그룹 -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 항목 정보 -->
+
+                <!-- 작성내용 -->
+                <div class="req-cont-grp">
+                  <div class="req-hgrp">
+                    <p class="ttl">
+                      요청 내용
+                    </p>
+                  </div>
+                  <div class="req-cats-point-grp">
+                    <div class="req-cats-grp">
+                      <span class="label">작성중인 항목</span>
+                      <span class="info">영업이익 추이</span>
+                      <btn-bd-light
+                        class="btn-rounded btn-xsm"
+                      >
+                        <i class="icon icon-trash" />항목 삭제하기
+                      </btn-bd-light>
+                    </div>
+                    <div class="point-grp">
+                      <span class="label">사용 포인트</span>
+                      <span class="point">5,000</span>
+                      <i class="icon icon-point" />
+                    </div>
+                  </div>
+                  <div class="inp-grp editor-inp-grp">
+                    <input
+                      type="text"
+                      class="inp editor-inp"
+                      placeholder="팩트체크 요청 제목을 입력하세요, (n자 입력)"
+                    >
+                  </div>
+                  <div
+                    class="editor-cont-grp"
+                    style="border: 1px solid #DDDEE6"
+                  >
+                    EDITOR 들어가는 부분
+                  </div>
+                  <div class="btn-all-grp">
+                    <div class="ment-grp">
+                      <i class="icon icon-i" />
+                      <span class="ment">요청한 팩트체크는 마이페이지 > 팩트체크 > 요청한 팩트체크에서 확인 가능합니다.</span>
+                    </div>
+                    <div class="btn-grp">
+                      <btn-solid-dark
+                        class="btn-md"
+                        @click="window.alert('검정버튼을 클릭하셨습니다.')"
+                      >
+                        <img
+                          src="@/assets/images/icon/icon-check-gn.svg"
+                          alt="체크"
+                          class="check-icon"
+                        > 팩트체크 요청완료
+                      </btn-solid-dark>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 작성내용 -->
+              </div>
+              <!-- TODO: tab: END 영업이익 추이 -->
+
+              <!-- TODO: tab: 당기순이익 추이 -->
+              <div
+                v-show="tabActive === 11"
+                class="etpr-profile-request-ftck-cont-wrap"
+              >
+                <!-- 항목 정보 -->
+                <div
+                  class="req-info-grp"
+                >
+                  <div class="req-hgrp">
+                    <p class="ttl">
+                      항목 정보
+                    </p>
+                  </div>
+                  <div class="common-info-graph">
+                    <div class="table-all-wrap">
+                      <div class="table-grp">
+                        <!-- 테이블 헤더 그룹 -->
+                        <ul class="table-hgrp">
+                          <li class="table-hlist flex-basis-20 txt-left">
+                            <span class="table-txt">항목</span>
+                          </li>
+                          <li class="table-hlist flex-basis-26 txt-right">
+                            <span class="table-txt">2019</span>
+                          </li>
+                          <li class="table-hlist flex-basis-26 txt-right">
+                            <span class="table-txt">2020</span>
+                          </li>
+                          <li class="table-hlist flex-basis-26 txt-right">
+                            <span class="table-txt">2021</span>
+                          </li>
+                        </ul>
+                        <!-- END 테이블 헤더 그룹 -->
+
+                        <!-- 테이블 내용 그룹 -->
+                        <!-- 내용이 없을 때 -->
+                        <div
+                          class="table-cont-wrap empty-cont-wrap"
+                        >
+                          <p class="empty-ment">
+                            내용이 없습니다.
+                          </p>
+                        </div>
+                        <!-- END 내용이 없을 때 -->
+
+                        <!-- 내용이 있을 때 -->
+                        <div
+                          class="table-cont-wrap"
+                        >
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">매출액</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">매출원가</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp f-bold"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">매출총이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">일반관리비</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">영업이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">영업외수익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">영업외비용</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">경상이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">특별이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">세전순이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">법인세</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp f-bold"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">당기순이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- END 내용이 있을 때 -->
+
+                        <!-- END 테이블 내용 그룹 -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 항목 정보 -->
+
+                <!-- 작성내용 -->
+                <div class="req-cont-grp">
+                  <div class="req-hgrp">
+                    <p class="ttl">
+                      요청 내용
+                    </p>
+                  </div>
+                  <div class="req-cats-point-grp">
+                    <div class="req-cats-grp">
+                      <span class="label">작성중인 항목</span>
+                      <span class="info">당기순이익 추이</span>
+                      <btn-bd-light
+                        class="btn-rounded btn-xsm"
+                      >
+                        <i class="icon icon-trash" />항목 삭제하기
+                      </btn-bd-light>
+                    </div>
+                    <div class="point-grp">
+                      <span class="label">사용 포인트</span>
+                      <span class="point">5,000</span>
+                      <i class="icon icon-point" />
+                    </div>
+                  </div>
+                  <div class="inp-grp editor-inp-grp">
+                    <input
+                      type="text"
+                      class="inp editor-inp"
+                      placeholder="팩트체크 요청 제목을 입력하세요, (n자 입력)"
+                    >
+                  </div>
+                  <div
+                    class="editor-cont-grp"
+                    style="border: 1px solid #DDDEE6"
+                  >
+                    EDITOR 들어가는 부분
+                  </div>
+                  <div class="btn-all-grp">
+                    <div class="ment-grp">
+                      <i class="icon icon-i" />
+                      <span class="ment">요청한 팩트체크는 마이페이지 > 팩트체크 > 요청한 팩트체크에서 확인 가능합니다.</span>
+                    </div>
+                    <div class="btn-grp">
+                      <btn-solid-dark
+                        class="btn-md"
+                        @click="window.alert('검정버튼을 클릭하셨습니다.')"
+                      >
+                        <img
+                          src="@/assets/images/icon/icon-check-gn.svg"
+                          alt="체크"
+                          class="check-icon"
+                        > 팩트체크 요청완료
+                      </btn-solid-dark>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 작성내용 -->
+              </div>
+              <!-- TODO: tab: END 당기순이익 추이 -->
+
+              <!-- TODO: tab: 투자유치 -->
+              <div
+                v-show="tabActive === 12"
+                class="etpr-profile-request-ftck-cont-wrap"
+              >
+                <!-- 항목 정보 -->
+                <div
+                  class="req-info-grp"
+                >
+                  <div class="req-hgrp">
+                    <p class="ttl">
+                      항목 정보
+                    </p>
+                  </div>
+                  <div class="common-info-graph">
+                    <div class="table-all-wrap">
+                      <div class="table-grp">
+                        <!-- 테이블 헤더 그룹 -->
+                        <ul class="table-hgrp">
+                          <li class="table-hlist flex-basis-20 txt-left">
+                            <span class="table-txt">항목</span>
+                          </li>
+                          <li class="table-hlist flex-basis-26 txt-right">
+                            <span class="table-txt">2019</span>
+                          </li>
+                          <li class="table-hlist flex-basis-26 txt-right">
+                            <span class="table-txt">2020</span>
+                          </li>
+                          <li class="table-hlist flex-basis-26 txt-right">
+                            <span class="table-txt">2021</span>
+                          </li>
+                        </ul>
+                        <!-- END 테이블 헤더 그룹 -->
+
+                        <!-- 테이블 내용 그룹 -->
+                        <!-- 내용이 없을 때 -->
+                        <div
+                          class="table-cont-wrap empty-cont-wrap"
+                        >
+                          <p class="empty-ment">
+                            내용이 없습니다.
+                          </p>
+                        </div>
+                        <!-- END 내용이 없을 때 -->
+
+                        <!-- 내용이 있을 때 -->
+                        <div
+                          class="table-cont-wrap"
+                        >
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">매출액</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">매출원가</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp f-bold"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">매출총이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">일반관리비</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">영업이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">영업외수익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">영업외비용</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">경상이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">특별이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">세전순이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">법인세</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp f-bold"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">당기순이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- END 내용이 있을 때 -->
+
+                        <!-- END 테이블 내용 그룹 -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 항목 정보 -->
+
+                <!-- 작성내용 -->
+                <div class="req-cont-grp">
+                  <div class="req-hgrp">
+                    <p class="ttl">
+                      요청 내용
+                    </p>
+                  </div>
+                  <div class="req-cats-point-grp">
+                    <div class="req-cats-grp">
+                      <span class="label">작성중인 항목</span>
+                      <span class="info">투자유치</span>
+                      <btn-bd-light
+                        class="btn-rounded btn-xsm"
+                      >
+                        <i class="icon icon-trash" />항목 삭제하기
+                      </btn-bd-light>
+                    </div>
+                    <div class="point-grp">
+                      <span class="label">사용 포인트</span>
+                      <span class="point">5,000</span>
+                      <i class="icon icon-point" />
+                    </div>
+                  </div>
+                  <div class="inp-grp editor-inp-grp">
+                    <input
+                      type="text"
+                      class="inp editor-inp"
+                      placeholder="팩트체크 요청 제목을 입력하세요, (n자 입력)"
+                    >
+                  </div>
+                  <div
+                    class="editor-cont-grp"
+                    style="border: 1px solid #DDDEE6"
+                  >
+                    EDITOR 들어가는 부분
+                  </div>
+                  <div class="btn-all-grp">
+                    <div class="ment-grp">
+                      <i class="icon icon-i" />
+                      <span class="ment">요청한 팩트체크는 마이페이지 > 팩트체크 > 요청한 팩트체크에서 확인 가능합니다.</span>
+                    </div>
+                    <div class="btn-grp">
+                      <btn-solid-dark
+                        class="btn-md"
+                        @click="window.alert('검정버튼을 클릭하셨습니다.')"
+                      >
+                        <img
+                          src="@/assets/images/icon/icon-check-gn.svg"
+                          alt="체크"
+                          class="check-icon"
+                        > 팩트체크 요청완료
+                      </btn-solid-dark>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 작성내용 -->
+              </div>
+              <!-- TODO: tab: END 투자유치 -->
+
+              <!-- TODO: tab: 보유특허 -->
+              <div
+                v-show="tabActive === 13"
+                class="etpr-profile-request-ftck-cont-wrap"
+              >
+                <!-- 항목 정보 -->
+                <div
+                  class="req-info-grp"
+                >
+                  <div class="req-hgrp">
+                    <p class="ttl">
+                      항목 정보
+                    </p>
+                  </div>
+                  <div class="common-info-graph">
+                    <div class="table-all-wrap">
+                      <div class="table-grp">
+                        <!-- 테이블 헤더 그룹 -->
+                        <ul class="table-hgrp">
+                          <li class="table-hlist flex-basis-20 txt-left">
+                            <span class="table-txt">항목</span>
+                          </li>
+                          <li class="table-hlist flex-basis-26 txt-right">
+                            <span class="table-txt">2019</span>
+                          </li>
+                          <li class="table-hlist flex-basis-26 txt-right">
+                            <span class="table-txt">2020</span>
+                          </li>
+                          <li class="table-hlist flex-basis-26 txt-right">
+                            <span class="table-txt">2021</span>
+                          </li>
+                        </ul>
+                        <!-- END 테이블 헤더 그룹 -->
+
+                        <!-- 테이블 내용 그룹 -->
+                        <!-- 내용이 없을 때 -->
+                        <div
+                          class="table-cont-wrap empty-cont-wrap"
+                        >
+                          <p class="empty-ment">
+                            내용이 없습니다.
+                          </p>
+                        </div>
+                        <!-- END 내용이 없을 때 -->
+
+                        <!-- 내용이 있을 때 -->
+                        <div
+                          class="table-cont-wrap"
+                        >
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">매출액</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">매출원가</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp f-bold"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">매출총이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">일반관리비</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">영업이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">영업외수익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">영업외비용</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">경상이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">특별이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">세전순이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">법인세</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                          <ul
+                            class="table-cont-grp f-bold"
+                          >
+                            <li class="table-cont-list flex-basis-20 txt-left">
+                              <span class="table-txt f-bold">당기순이익</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                            <li class="table-cont-list flex-basis-26 txt-right">
+                              <span class="table-txt">0,000,000,000</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- END 내용이 있을 때 -->
+
+                        <!-- END 테이블 내용 그룹 -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 항목 정보 -->
+
+                <!-- 작성내용 -->
+                <div class="req-cont-grp">
+                  <div class="req-hgrp">
+                    <p class="ttl">
+                      요청 내용
+                    </p>
+                  </div>
+                  <div class="req-cats-point-grp">
+                    <div class="req-cats-grp">
+                      <span class="label">작성중인 항목</span>
+                      <span class="info">보유특허</span>
+                      <btn-bd-light
+                        class="btn-rounded btn-xsm"
+                      >
+                        <i class="icon icon-trash" />항목 삭제하기
+                      </btn-bd-light>
+                    </div>
+                    <div class="point-grp">
+                      <span class="label">사용 포인트</span>
+                      <span class="point">5,000</span>
+                      <i class="icon icon-point" />
+                    </div>
+                  </div>
+                  <div class="inp-grp editor-inp-grp">
+                    <input
+                      type="text"
+                      class="inp editor-inp"
+                      placeholder="팩트체크 요청 제목을 입력하세요, (n자 입력)"
+                    >
+                  </div>
+                  <div
+                    class="editor-cont-grp"
+                    style="border: 1px solid #DDDEE6"
+                  >
+                    EDITOR 들어가는 부분
+                  </div>
+                  <div class="btn-all-grp">
+                    <div class="ment-grp">
+                      <i class="icon icon-i" />
+                      <span class="ment">요청한 팩트체크는 마이페이지 > 팩트체크 > 요청한 팩트체크에서 확인 가능합니다.</span>
+                    </div>
+                    <div class="btn-grp">
+                      <btn-solid-dark
+                        class="btn-md"
+                        @click="window.alert('검정버튼을 클릭하셨습니다.')"
+                      >
+                        <img
+                          src="@/assets/images/icon/icon-check-gn.svg"
+                          alt="체크"
+                          class="check-icon"
+                        > 팩트체크 요청완료
+                      </btn-solid-dark>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 작성내용 -->
+              </div>
+              <!-- TODO: tab: END 보유특허 -->
+
               <!-- TODO: tab: 구성원 -->
               <div
                 v-show="tabActive === 3"
@@ -616,7 +2873,7 @@
                 >
                   <div class="req-hgrp">
                     <p class="ttl">
-                      {{ '구성원' }}
+                      항목 정보
                     </p>
                   </div>
                   <div class="etpr-main-conts">
@@ -684,7 +2941,7 @@
                   <div class="req-cats-point-grp">
                     <div class="req-cats-grp">
                       <span class="label">작성중인 항목</span>
-                      <span class="info">{{ '구성원' }}</span>
+                      <span class="info">구성원</span>
                       <btn-bd-light
                         class="btn-rounded btn-xsm"
                       >
@@ -748,7 +3005,7 @@
                   <div class="req-cats-point-grp">
                     <div class="req-cats-grp">
                       <span class="label">작성중인 항목</span>
-                      <span class="info">{{ '추가 요청' }}</span>
+                      <span class="info">추가 요청</span>
                       <btn-bd-light
                         class="btn-rounded btn-xsm"
                       >
@@ -813,7 +3070,7 @@ export default {
   name: 'EtprProfileRequestFtck',
   data() {
     return {
-      tabActive: 1, // 1~4
+      tabActive: 5, // 1~4
     };
   },
   created() {
