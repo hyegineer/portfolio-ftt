@@ -58,7 +58,7 @@
         </article>
 
         <div class="board-list-grp-ttl">
-          <p class="txt">
+          <p class="ttl-txt">
             총 <span class="bold">15</span>개
           </p>
 

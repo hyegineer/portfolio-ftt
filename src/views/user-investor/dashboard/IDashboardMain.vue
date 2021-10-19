@@ -212,7 +212,7 @@
                   <div
                     class="graph-box"
                   >
-                    그래프 들어가는 부분
+                    <div class="custom-colchart-wrap" />
                   </div>
                   <!-- END 내용이 있을 때 -->
 
@@ -402,7 +402,7 @@
           </div>
         </div>
         <div class="board-list-grp-ttl">
-          <p class="txt">
+          <p class="ttl-txt">
             총 <span class="bold">15</span>개
           </p>
 

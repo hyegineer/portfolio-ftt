@@ -1100,7 +1100,7 @@ body{
   }
 }
 
-.column-chart-wrap{
+.column-chart-wrap{ // 구성요소: 추이 그래프 바차트
   max-width: 350px;
 }
 
@@ -1116,4 +1116,8 @@ body{
     font-size: 12px;
     font-weight: 500;
   }
+}
+
+.custom-colchart-wrap{ // 구성요소: 추이 그래프 커스텀
+  position: relative;
 }
