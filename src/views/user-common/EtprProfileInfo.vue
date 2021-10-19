@@ -426,7 +426,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   </div>
                 </div>
                 <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-                <p class="badge green">
+                <p class="badge badge-sm-square green">
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
@@ -558,7 +558,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   </div>
                 </div>
                 <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-                <p class="badge yellow">
+                <p class="badge badge-sm-square yellow">
                   {{ '자사 업데이트  2020.00.00' }}
                 </p>
               </div>
@@ -626,7 +626,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   </div>
                 </div>
                 <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-                <p class="badge">
+                <p class="badge badge-sm-square">
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
@@ -855,7 +855,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   </div>
                 </div>
                 <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-                <p class="badge yellow">
+                <p class="badge badge-sm-square yellow">
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
@@ -916,7 +916,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   </div>
                 </div>
                 <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-                <p class="badge yellow">
+                <p class="badge badge-sm-square yellow">
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
@@ -975,7 +975,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   </div>
                 </div>
                 <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-                <p class="badge yellow">
+                <p class="badge badge-sm-square yellow">
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
@@ -1036,7 +1036,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   </div>
                 </div>
                 <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-                <p class="badge yellow">
+                <p class="badge badge-sm-square yellow">
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
@@ -1095,7 +1095,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   </div>
                 </div>
                 <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-                <p class="badge yellow">
+                <p class="badge badge-sm-square yellow">
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
@@ -1154,7 +1154,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   </div>
                 </div>
                 <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-                <p class="badge yellow">
+                <p class="badge badge-sm-square yellow">
                   {{ '팩트체커 업데이트  2020.00.00' }}
                 </p>
               </div>
@@ -1190,7 +1190,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
             <!-- END 투자자가 들어오면 보이는 영역 -->
             투자유치 
             <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-            <p class="badge green">
+            <p class="badge badge-sm-square green">
               {{ '팩트체커 업데이트  2020.00.00' }}
             </p>
           </h2>
@@ -1243,7 +1243,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
             <!-- END 투자자가 들어오면 보이는 영역 -->
             보유특허 
             <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-            <p class="badge green">
+            <p class="badge badge-sm-square green">
               {{ '팩트체커 업데이트  2020.00.00' }}
             </p>
           </h2>
@@ -1274,7 +1274,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
             <!-- END 투자자가 들어오면 보이는 영역 -->
             구성원 
             <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-            <p class="badge green">
+            <p class="badge badge-sm-square green">
               {{ '팩트체커 업데이트  2020.00.00' }}
             </p>
           </h2>
