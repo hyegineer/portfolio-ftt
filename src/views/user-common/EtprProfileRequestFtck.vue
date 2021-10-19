@@ -139,7 +139,134 @@
                 class="req-info-grp"
                 style="height: 790px;"
               >
-                항목정보 들어갈 부분
+                <div class="etpr-panel-wrap flexable-inner">
+                  <div class="panel-ttl">
+                    <!-- TODO: 투자자가 들어오면 보이는 영역 -->
+                    <div class="flex-ttl">
+                      <!-- <div class="check-wrap">
+                        <input
+                          id="check-box"
+                          type="checkbox"
+                          class="is-none check-switch"
+                        >
+                        <label
+                          for="check-box"
+                          class="check-onoff"
+                        />
+                      </div> -->
+                      <!-- END 투자자가 들어오면 보이는 영역 -->
+                      <span>기업 기본정보</span>
+                      <!-- <div class="hover-desc">
+                        <span
+                          class="hover-overlay mb-show"
+                        />
+  
+                        <div
+                          class="badge-qus"
+                        >
+                          <span class="is-voice-only">기업 기본정보 툴팁 내용</span>
+                        </div>
+  
+                        <div
+                          class="hover-desc-box"
+                        >
+                          <span class="ttl">기업 기본정보</span>
+  
+                          <p class="desc">
+                            기업 기본정보에 대한 내용입니다.
+                          </p>
+                        </div>
+                      </div> -->
+                    </div>
+                    <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
+                    <!-- <p class="badge green">
+                      {{ '팩트체커 업데이트  2020.00.00' }}
+                    </p> -->
+                  </div>
+                  <div class="white-panel">
+                    <div class="common-info-container">
+                      <ul class="common-info-list-wrap">
+                        <!-- TODO: 정보가 없는 곳은 전부 - 로 표시 -->
+                        <li class="common-info-list">
+                          <h4 class="ttl">
+                            대표자
+                          </h4>
+                          <div class="dec">
+                            {{ '홍길동' }}
+                          </div>
+                        </li>
+                        <li class="common-info-list">
+                          <h4 class="ttl">
+                            사업자번호
+                          </h4>
+                          <div class="dec">
+                            {{ '000-00-00***' }}
+                          </div>
+                        </li>
+                        <li class="common-info-list">
+                          <h4 class="ttl">
+                            본사주소
+                          </h4>
+                          <div class="dec">
+                            {{ '서울특별시 강남구 테헤란로 312 13층 주소길어지면 최대 2줄 (우편번호)' }}
+                          </div>
+                        </li>
+                        <li class="common-info-list">
+                          <h4 class="ttl">
+                            전화번호
+                          </h4>
+                          <div class="dec">
+                            {{ '02-1234-5678' }}
+                          </div>
+                        </li>
+                        <li class="common-info-list">
+                          <h4 class="ttl">
+                            기업규모
+                          </h4>
+                          <div class="dec">
+                            {{ '소기업' }}
+                          </div>
+                        </li>
+                        <li class="common-info-list">
+                          <h4 class="ttl">
+                            산업분류
+                          </h4>
+                          <div class="dec">
+                            {{ 'ICT 서비스' }}
+                          </div>
+                        </li>
+                        <li class="common-info-list">
+                          <h4 class="ttl">
+                            산업분야
+                          </h4>
+                          <div class="dec">
+                            {{ '-' }}
+                          </div>
+                        </li>
+                        <li class="common-info-list">
+                          <h4 class="ttl">
+                            설립일
+                          </h4>
+                          <div class="dec">
+                            {{ '2021년 03월 10일' }}
+                          </div>
+                        </li>
+                        <li class="common-info-list tag-list">
+                          <h4 class="ttl">
+                            태그
+                          </h4>
+                          <div class="dec">
+                            <badge-rounded>태그최대여덟글자</badge-rounded>
+                            <badge-rounded>태그최대여덟글자</badge-rounded>
+                            <badge-rounded>태그최대여덟글자</badge-rounded>
+                            <badge-rounded>태그최대여덟글자</badge-rounded>
+                            <badge-rounded>태그최대여덟글자</badge-rounded>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
               <!-- END 항목 정보 -->
 
