@@ -434,12 +434,24 @@
     color: #5C5E70;
     -webkit-text-stroke: 0.3px #5C5E70;
 
+    @at-root .editing & {
+
+      .description {
+        font-size: 0;
+        user-select: none;
+      }
+    }
+
     .btns-wrap {
       display: none;
       margin-bottom: 17px;
 
       @at-root .my-review & {
         display: block;
+      }
+
+      @at-root .editing & {
+        display: none;
       }
 
       .btn-txt {
