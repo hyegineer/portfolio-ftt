@@ -182,6 +182,7 @@
               </p>
               <a
                 href="#"
+                target="_blank"
                 class="info"
               >
                 https://www.test.com

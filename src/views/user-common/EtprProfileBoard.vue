@@ -3,7 +3,6 @@
     <layout-header />
 
     <div class="page-container">
-
       <div class="wide-panel">
         <breadcrumb>
           <li class="txt">
@@ -49,6 +48,7 @@
                       <i class="icon icon-jump" />
                       <a
                         href="#"
+                        target="_blank"
                         class="txt"
                       >www.팩트컴퍼니.com</a>
                     </div>

@@ -86,6 +86,7 @@
                 <i class="icon icon-jump" />
                 <a
                   href="#"
+                  target="_blank"
                   class="txt"
                 >{{ 'www.naver.com' }}</a>
               </div>

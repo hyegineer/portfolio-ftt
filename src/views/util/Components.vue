@@ -885,6 +885,7 @@
             <i class="icon icon-jump" />
             <a
               href="#"
+              target="_blank"
               class="txt"
             >www.팩트컴퍼니.com</a>
           </div>
@@ -939,6 +940,7 @@
                     <i class="icon icon-jump" />
                     <a
                       href="#"
+                      target="_blank"
                       class="txt"
                     >{{ 'www.팩트컴퍼니.com' }}</a>
                   </div>
