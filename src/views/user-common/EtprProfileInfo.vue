@@ -83,11 +83,7 @@
                       class="btn-xlg btn-full"
                       @click="window.alert('관심기업 등록을 취소하셨습니다.')"
                     >
-                      <img
-                        src="@/assets/images/icon/icon-check-bl.svg"
-                        alt="체크"
-                        class="check-icon"
-                      > 관심기업 등록 완료
+                      <i class="icon icon-check-blue" /><span class="txt">관심기업 등록 완료</span>
                     </btn-bd-blue>
 
                     <div class="btn-grp">
@@ -201,7 +197,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
         </div>
         <!-- END 기업 간략 소개 -->
 
-        <div class="mgt-20 white-panel active-ttl-container">
+        <div class="mgt-10 white-panel active-ttl-container">
           <div class="active-ttl-inner">
             <div
               class="active-ttl active" 
@@ -543,20 +539,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
             </div>
             <div class="etpr-panel-wrap flexable-inner">
               <div class="panel-ttl">
-                <!-- TODO: 투자자가 들어오면 보이는 영역 -->
                 <div class="flex-ttl">
-                  <div class="check-wrap">
-                    <input
-                      id="check-box"
-                      type="checkbox"
-                      class="is-none check-switch"
-                    >
-                    <label
-                      for="check-box"
-                      class="check-onoff"
-                    />
-                  </div>
-                  <!-- END 투자자가 들어오면 보이는 영역 -->
                   <span>기업가치</span>
                   <div class="hover-desc">
                     <span
@@ -584,31 +567,11 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                     </div>
                   </div>
                 </div>
-                <!-- TODO: 업데이트 데이터. 팩트체커 green, 자사 yellow, 오래된 항목은 badge만 -->
-                <p class="badge badge-sm-square yellow">
-                  {{ '자사 업데이트  2020.00.00' }}
-                </p>
               </div>
-              <!-- TODO: 최상위 요소에 is-blur 주면 blur 처리되고 해당 데이터 더미 처리(-) -->
               <div
                 class="white-panel pd-0"
-                :class="{'is-blur': noUpdate}"
               >
-                <!-- 필터처리된 데이터 가운데 뜨는 영역 -->
-                <div class="cover-blur-container">
-                  <div class="cover-blur-inner">
-                    <img
-                      class="img"
-                      src="@/assets/images/icon/icon-noti.svg"
-                      alt="!"
-                    >
-                    <p class="text">
-                      최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
-                    </p>
-                  </div>
-                </div>
-                <!-- END 필터처리된 데이터 가운데 뜨는 영역 -->
-                <div class="common-info-container blur-filter-container">
+                <div class="common-info-container">
                   <!-- blur 처리용 더미 데이터 -->
                   <p
                     v-if="noUpdate"
@@ -2301,34 +2264,81 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
           </div>
           <div class="white-panel mgb-10">
             <div class="review-write-container">
-              <div class="write-ttl">종합 점수</div>
+              <div class="write-ttl">
+                종합 점수
+              </div>
               <div class="review-write-inner-star">
                 <div class="star-grp">
-                  <div class="ttl">기술성</div>
-                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                  <div class="ttl">
+                    기술성
+                  </div>
+                  <star-rating
+                    increment="0.5"
+                    star-size="17"
+                    rounded-corners="true"
+                    border-width="3.0"
+                    border-color="#d8d8d8"
+                    active-border-color="#ffd055"
+                  />
                 </div>
                 <div class="star-grp">
-                  <div class="ttl">시장성</div>
-                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                  <div class="ttl">
+                    시장성
+                  </div>
+                  <star-rating
+                    increment="0.5"
+                    star-size="17"
+                    rounded-corners="true"
+                    border-width="3.0"
+                    border-color="#d8d8d8"
+                    active-border-color="#ffd055"
+                  />
                 </div>
                 <div class="star-grp">
-                  <div class="ttl">팀역량</div>
-                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                  <div class="ttl">
+                    팀역량
+                  </div>
+                  <star-rating
+                    increment="0.5"
+                    star-size="17"
+                    rounded-corners="true"
+                    border-width="3.0"
+                    border-color="#d8d8d8"
+                    active-border-color="#ffd055"
+                  />
                 </div>
                 <div class="star-grp">
-                  <div class="ttl">실행역량</div>
-                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                  <div class="ttl">
+                    실행역량
+                  </div>
+                  <star-rating
+                    increment="0.5"
+                    star-size="17"
+                    rounded-corners="true"
+                    border-width="3.0"
+                    border-color="#d8d8d8"
+                    active-border-color="#ffd055"
+                  />
                 </div>
                 <div class="star-grp">
-                  <div class="ttl">아이템 우수성</div>
-                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                  <div class="ttl">
+                    아이템 우수성
+                  </div>
+                  <star-rating
+                    increment="0.5"
+                    star-size="17"
+                    rounded-corners="true"
+                    border-width="3.0"
+                    border-color="#d8d8d8"
+                    active-border-color="#ffd055"
+                  />
                 </div>
               </div>
               <div class="review-write-inner-inp">
                 <div class="inp-grp">
                   <div class="input-ttl">
                     <span class="ttl">내용</span>
-                    <span class="check-text">({{'0'}} / 1000)</span>
+                    <span class="check-text">({{ '0' }} / 1000)</span>
                   </div>
                   <textarea
                     id="#"
@@ -2359,7 +2369,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
           <empty-contents txt="내용이 없습니다." />
           <div class="review-container">
             <!-- card -->
-          <!-- TODO: 내가 쓴 리뷰일 때 my-review 붙고, 수정하기를 누르면 editing이 추가됨 -->
+            <!-- TODO: 내가 쓴 리뷰일 때 my-review 붙고, 수정하기를 누르면 editing이 추가됨 -->
             <div class="white-panel review-card">
               <div class="review-inner">
                 <div class="left-conts">
@@ -2442,60 +2452,109 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                     </div>
                   </div>
                 </div>
-              <div class="middle-conts">
-                <!-- TODO: 내가 쓴 리뷰에만 보임 -->
-                <div class="btns-wrap">
-                  <button
-                    type="button"
-                    class="btn-txt"
-                  >
-                    <i class="icon icon-pen" />
-                    <span class="txt">수정하기</span>
-                  </button>
-                  <button
-                    type="button"
-                    class="btn-txt btn-warning-txt"
-                  >
-                    <i class="icon icon-trash" />
-                    <span class="txt">삭제하기</span>
-                  </button>
+                <div class="middle-conts">
+                  <!-- TODO: 내가 쓴 리뷰에만 보임 -->
+                  <div class="btns-wrap">
+                    <button
+                      type="button"
+                      class="btn-txt"
+                    >
+                      <i class="icon icon-pen" />
+                      <span class="txt">수정하기</span>
+                    </button>
+                    <button
+                      type="button"
+                      class="btn-txt btn-warning-txt"
+                    >
+                      <i class="icon icon-trash" />
+                      <span class="txt">삭제하기</span>
+                    </button>
+                  </div>
+                  <p class="description">
+                    {{ '투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.' }}
+                  </p>
                 </div>
-                <p class="description">{{ '투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.' }}</p>
-              </div>
                 <div class="right-conts">
                   {{ '2021.00.00  00:00' }}
                 </div>
               </div>
               <!-- TODO: 리뷰카드 안에서는 editing의 안쪽일 때만 되어야 보임 -->
               <div class="review-write-container">
-                <div class="write-ttl">종합 점수</div>
+                <div class="write-ttl">
+                  종합 점수
+                </div>
                 <div class="review-write-inner-star">
                   <div class="star-grp">
-                    <div class="ttl">기술성</div>
-                    <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                    <div class="ttl">
+                      기술성
+                    </div>
+                    <star-rating
+                      increment="0.5"
+                      star-size="17"
+                      rounded-corners="true"
+                      border-width="3.0"
+                      border-color="#d8d8d8"
+                      active-border-color="#ffd055"
+                    />
                   </div>
                   <div class="star-grp">
-                    <div class="ttl">시장성</div>
-                    <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                    <div class="ttl">
+                      시장성
+                    </div>
+                    <star-rating
+                      increment="0.5"
+                      star-size="17"
+                      rounded-corners="true"
+                      border-width="3.0"
+                      border-color="#d8d8d8"
+                      active-border-color="#ffd055"
+                    />
                   </div>
                   <div class="star-grp">
-                    <div class="ttl">팀역량</div>
-                    <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                    <div class="ttl">
+                      팀역량
+                    </div>
+                    <star-rating
+                      increment="0.5"
+                      star-size="17"
+                      rounded-corners="true"
+                      border-width="3.0"
+                      border-color="#d8d8d8"
+                      active-border-color="#ffd055"
+                    />
                   </div>
                   <div class="star-grp">
-                    <div class="ttl">실행역량</div>
-                    <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                    <div class="ttl">
+                      실행역량
+                    </div>
+                    <star-rating
+                      increment="0.5"
+                      star-size="17"
+                      rounded-corners="true"
+                      border-width="3.0"
+                      border-color="#d8d8d8"
+                      active-border-color="#ffd055"
+                    />
                   </div>
                   <div class="star-grp">
-                    <div class="ttl">아이템 우수성</div>
-                    <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                    <div class="ttl">
+                      아이템 우수성
+                    </div>
+                    <star-rating
+                      increment="0.5"
+                      star-size="17"
+                      rounded-corners="true"
+                      border-width="3.0"
+                      border-color="#d8d8d8"
+                      active-border-color="#ffd055"
+                    />
                   </div>
                 </div>
                 <div class="review-write-inner-inp">
                   <div class="inp-grp">
                     <div class="input-ttl">
                       <span class="ttl">내용</span>
-                      <span class="check-text">({{'0'}} / 1000)</span>
+                      <span class="check-text">({{ '0' }} / 1000)</span>
                     </div>
                     <textarea
                       id="#"
@@ -2524,7 +2583,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
               </div>
             </div>
             <!-- // card -->
-          <!-- TODO: 내가 쓴 리뷰일 때 my-review 붙고, 수정하기를 누르면 editing이 추가됨 -->
+            <!-- TODO: 내가 쓴 리뷰일 때 my-review 붙고, 수정하기를 누르면 editing이 추가됨 -->
             <div class="white-panel review-card">
               <div class="review-inner">
                 <div class="left-conts">
@@ -2608,87 +2667,136 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                   </div>
                 </div>
                 <div class="middle-conts">
-                <!-- TODO: 내가 쓴 리뷰에만 보임 -->
-                <div class="btns-wrap">
-                  <button
-                    type="button"
-                    class="btn-txt"
-                  >
-                    <i class="icon icon-pen" />
-                    <span class="txt">수정하기</span>
-                  </button>
-                  <button
-                    type="button"
-                    class="btn-txt btn-warning-txt"
-                  >
-                    <i class="icon icon-trash" />
-                    <span class="txt">삭제하기</span>
-                  </button>
-                </div>
-                  <p class="description">{{'투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.'}}</p>
+                  <!-- TODO: 내가 쓴 리뷰에만 보임 -->
+                  <div class="btns-wrap">
+                    <button
+                      type="button"
+                      class="btn-txt"
+                    >
+                      <i class="icon icon-pen" />
+                      <span class="txt">수정하기</span>
+                    </button>
+                    <button
+                      type="button"
+                      class="btn-txt btn-warning-txt"
+                    >
+                      <i class="icon icon-trash" />
+                      <span class="txt">삭제하기</span>
+                    </button>
+                  </div>
+                  <p class="description">
+                    {{'투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.<br>투자자 리뷰 텍스트 자리입니다.'}}
+                  </p>
                 </div>
                 <div class="right-conts">
                   {{ '2021.00.00  00:00' }}
                 </div>
               </div>
               <!-- TODO: 리뷰카드 안에서는 editing의 안쪽일 때만 되어야 보임 -->
-            <div class="review-write-container">
-              <div class="write-ttl">종합 점수</div>
-              <div class="review-write-inner-star">
-                <div class="star-grp">
-                  <div class="ttl">기술성</div>
-                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+              <div class="review-write-container">
+                <div class="write-ttl">
+                  종합 점수
                 </div>
-                <div class="star-grp">
-                  <div class="ttl">시장성</div>
-                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
-                </div>
-                <div class="star-grp">
-                  <div class="ttl">팀역량</div>
-                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
-                </div>
-                <div class="star-grp">
-                  <div class="ttl">실행역량</div>
-                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
-                </div>
-                <div class="star-grp">
-                  <div class="ttl">아이템 우수성</div>
-                  <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
-                </div>
-              </div>
-              <div class="review-write-inner-inp">
-                <div class="inp-grp">
-                  <div class="input-ttl">
-                    <span class="ttl">내용</span>
-                    <span class="check-text">({{'0'}} / 1000)</span>
-                  </div>
-                  <textarea
-                    id="#"
-                    name="#"
-                    class="inp inp-textarea" 
-                    placeholder="해당 스타트업에 대한 리뷰를 작성해주세요."
-                  />
-                </div>
-                
-                <div class="review-write-btn-wrap">
-                  <div class="information-txt">
-                    <div class="icon-with-txt ai-center">
-                      <i class="icon icon-i" />
-                      <span class="txt">리뷰는 익명으로 작성됩니다.</span>
+                <div class="review-write-inner-star">
+                  <div class="star-grp">
+                    <div class="ttl">
+                      기술성
                     </div>
+                    <star-rating
+                      increment="0.5"
+                      star-size="17"
+                      rounded-corners="true"
+                      border-width="3.0"
+                      border-color="#d8d8d8"
+                      active-border-color="#ffd055"
+                    />
                   </div>
+                  <div class="star-grp">
+                    <div class="ttl">
+                      시장성
+                    </div>
+                    <star-rating
+                      increment="0.5"
+                      star-size="17"
+                      rounded-corners="true"
+                      border-width="3.0"
+                      border-color="#d8d8d8"
+                      active-border-color="#ffd055"
+                    />
+                  </div>
+                  <div class="star-grp">
+                    <div class="ttl">
+                      팀역량
+                    </div>
+                    <star-rating
+                      increment="0.5"
+                      star-size="17"
+                      rounded-corners="true"
+                      border-width="3.0"
+                      border-color="#d8d8d8"
+                      active-border-color="#ffd055"
+                    />
+                  </div>
+                  <div class="star-grp">
+                    <div class="ttl">
+                      실행역량
+                    </div>
+                    <star-rating
+                      increment="0.5"
+                      star-size="17"
+                      rounded-corners="true"
+                      border-width="3.0"
+                      border-color="#d8d8d8"
+                      active-border-color="#ffd055"
+                    />
+                  </div>
+                  <div class="star-grp">
+                    <div class="ttl">
+                      아이템 우수성
+                    </div>
+                    <star-rating
+                      increment="0.5"
+                      star-size="17"
+                      rounded-corners="true"
+                      border-width="3.0"
+                      border-color="#d8d8d8"
+                      active-border-color="#ffd055"
+                    />
+                  </div>
+                </div>
+                <div class="review-write-inner-inp">
+                  <div class="inp-grp">
+                    <div class="input-ttl">
+                      <span class="ttl">내용</span>
+                      <span class="check-text">({{ '0' }} / 1000)</span>
+                    </div>
+                    <textarea
+                      id="#"
+                      name="#"
+                      class="inp inp-textarea" 
+                      placeholder="해당 스타트업에 대한 리뷰를 작성해주세요."
+                    />
+                  </div>
+                
+                  <div class="review-write-btn-wrap">
+                    <div class="information-txt">
+                      <div class="icon-with-txt ai-center">
+                        <i class="icon icon-i" />
+                        <span class="txt">리뷰는 익명으로 작성됩니다.</span>
+                      </div>
+                    </div>
           
-                  <btn-bd-dark
-                    class="btn-md"
-                    @click="window.alert('수정완료 버튼을 클릭하셨습니다.')"
-                  >
-                    수정완료
-                  </btn-bd-dark>
+                    <btn-bd-dark
+                      class="btn-md"
+                      @click="window.alert('수정완료 버튼을 클릭하셨습니다.')"
+                    >
+                      수정완료
+                    </btn-bd-dark>
+                  </div>
                 </div>
               </div>
             </div>
-            </div>
-          <!-- TODO: 내가 쓴 리뷰일 때 my-review 붙고, 수정하기를 누르면 editing이 추가됨 -->
+            <!-- TODO: 내가 쓴 리뷰일 때 my-review 붙고, 수정하기를 누르면 editing이 추가됨 -->
             <div class="white-panel review-card my-review">
               <div class="review-inner">
                 <div class="left-conts">
@@ -2771,60 +2879,109 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                     </div>
                   </div>
                 </div>
-              <div class="middle-conts">
-                <!-- TODO: 내가 쓴 리뷰에만 보임 -->
-                <div class="btns-wrap">
-                  <button
-                    type="button"
-                    class="btn-txt"
-                  >
-                    <i class="icon icon-pen" />
-                    <span class="txt">수정하기</span>
-                  </button>
-                  <button
-                    type="button"
-                    class="btn-txt btn-warning-txt"
-                  >
-                    <i class="icon icon-trash" />
-                    <span class="txt">삭제하기</span>
-                  </button>
+                <div class="middle-conts">
+                  <!-- TODO: 내가 쓴 리뷰에만 보임 -->
+                  <div class="btns-wrap">
+                    <button
+                      type="button"
+                      class="btn-txt"
+                    >
+                      <i class="icon icon-pen" />
+                      <span class="txt">수정하기</span>
+                    </button>
+                    <button
+                      type="button"
+                      class="btn-txt btn-warning-txt"
+                    >
+                      <i class="icon icon-trash" />
+                      <span class="txt">삭제하기</span>
+                    </button>
+                  </div>
+                  <p class="description">
+                    {{ '투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.' }}
+                  </p>
                 </div>
-                <p class="description">{{ '투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.' }}</p>
-              </div>
                 <div class="right-conts">
                   {{ '2021.00.00  00:00' }}
                 </div>
               </div>
               <!-- TODO: 리뷰카드 안에서는 editing의 안쪽일 때만 되어야 보임 -->
               <div class="review-write-container">
-                <div class="write-ttl">종합 점수</div>
+                <div class="write-ttl">
+                  종합 점수
+                </div>
                 <div class="review-write-inner-star">
                   <div class="star-grp">
-                    <div class="ttl">기술성</div>
-                    <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                    <div class="ttl">
+                      기술성
+                    </div>
+                    <star-rating
+                      increment="0.5"
+                      star-size="17"
+                      rounded-corners="true"
+                      border-width="3.0"
+                      border-color="#d8d8d8"
+                      active-border-color="#ffd055"
+                    />
                   </div>
                   <div class="star-grp">
-                    <div class="ttl">시장성</div>
-                    <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                    <div class="ttl">
+                      시장성
+                    </div>
+                    <star-rating
+                      increment="0.5"
+                      star-size="17"
+                      rounded-corners="true"
+                      border-width="3.0"
+                      border-color="#d8d8d8"
+                      active-border-color="#ffd055"
+                    />
                   </div>
                   <div class="star-grp">
-                    <div class="ttl">팀역량</div>
-                    <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                    <div class="ttl">
+                      팀역량
+                    </div>
+                    <star-rating
+                      increment="0.5"
+                      star-size="17"
+                      rounded-corners="true"
+                      border-width="3.0"
+                      border-color="#d8d8d8"
+                      active-border-color="#ffd055"
+                    />
                   </div>
                   <div class="star-grp">
-                    <div class="ttl">실행역량</div>
-                    <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                    <div class="ttl">
+                      실행역량
+                    </div>
+                    <star-rating
+                      increment="0.5"
+                      star-size="17"
+                      rounded-corners="true"
+                      border-width="3.0"
+                      border-color="#d8d8d8"
+                      active-border-color="#ffd055"
+                    />
                   </div>
                   <div class="star-grp">
-                    <div class="ttl">아이템 우수성</div>
-                    <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                    <div class="ttl">
+                      아이템 우수성
+                    </div>
+                    <star-rating
+                      increment="0.5"
+                      star-size="17"
+                      rounded-corners="true"
+                      border-width="3.0"
+                      border-color="#d8d8d8"
+                      active-border-color="#ffd055"
+                    />
                   </div>
                 </div>
                 <div class="review-write-inner-inp">
                   <div class="inp-grp">
                     <div class="input-ttl">
                       <span class="ttl">내용</span>
-                      <span class="check-text">({{'0'}} / 1000)</span>
+                      <span class="check-text">({{ '0' }} / 1000)</span>
                     </div>
                     <textarea
                       id="#"
@@ -2852,7 +3009,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                 </div>
               </div>
             </div>
-          <!-- TODO: 내가 쓴 리뷰일 때 my-review 붙고, 수정하기를 누르면 editing이 추가됨 -->
+            <!-- TODO: 내가 쓴 리뷰일 때 my-review 붙고, 수정하기를 누르면 editing이 추가됨 -->
             <div class="white-panel review-card my-review editing">
               <div class="review-inner">
                 <div class="left-conts">
@@ -2935,60 +3092,109 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                     </div>
                   </div>
                 </div>
-              <div class="middle-conts">
-                <!-- TODO: 내가 쓴 리뷰에만 보임 -->
-                <div class="btns-wrap">
-                  <button
-                    type="button"
-                    class="btn-txt"
-                  >
-                    <i class="icon icon-pen" />
-                    <span class="txt">수정하기</span>
-                  </button>
-                  <button
-                    type="button"
-                    class="btn-txt btn-warning-txt"
-                  >
-                    <i class="icon icon-trash" />
-                    <span class="txt">삭제하기</span>
-                  </button>
+                <div class="middle-conts">
+                  <!-- TODO: 내가 쓴 리뷰에만 보임 -->
+                  <div class="btns-wrap">
+                    <button
+                      type="button"
+                      class="btn-txt"
+                    >
+                      <i class="icon icon-pen" />
+                      <span class="txt">수정하기</span>
+                    </button>
+                    <button
+                      type="button"
+                      class="btn-txt btn-warning-txt"
+                    >
+                      <i class="icon icon-trash" />
+                      <span class="txt">삭제하기</span>
+                    </button>
+                  </div>
+                  <p class="description">
+                    {{ '투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.' }}
+                  </p>
                 </div>
-                <p class="description">{{ '투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다. 투자자 리뷰 텍스트 자리입니다.' }}</p>
-              </div>
                 <div class="right-conts">
                   {{ '2021.00.00  00:00' }}
                 </div>
               </div>
               <!-- TODO: 리뷰카드 안에서는 editing의 안쪽일 때만 되어야 보임 -->
               <div class="review-write-container">
-                <div class="write-ttl">종합 점수</div>
+                <div class="write-ttl">
+                  종합 점수
+                </div>
                 <div class="review-write-inner-star">
                   <div class="star-grp">
-                    <div class="ttl">기술성</div>
-                    <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                    <div class="ttl">
+                      기술성
+                    </div>
+                    <star-rating
+                      increment="0.5"
+                      star-size="17"
+                      rounded-corners="true"
+                      border-width="3.0"
+                      border-color="#d8d8d8"
+                      active-border-color="#ffd055"
+                    />
                   </div>
                   <div class="star-grp">
-                    <div class="ttl">시장성</div>
-                    <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                    <div class="ttl">
+                      시장성
+                    </div>
+                    <star-rating
+                      increment="0.5"
+                      star-size="17"
+                      rounded-corners="true"
+                      border-width="3.0"
+                      border-color="#d8d8d8"
+                      active-border-color="#ffd055"
+                    />
                   </div>
                   <div class="star-grp">
-                    <div class="ttl">팀역량</div>
-                    <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                    <div class="ttl">
+                      팀역량
+                    </div>
+                    <star-rating
+                      increment="0.5"
+                      star-size="17"
+                      rounded-corners="true"
+                      border-width="3.0"
+                      border-color="#d8d8d8"
+                      active-border-color="#ffd055"
+                    />
                   </div>
                   <div class="star-grp">
-                    <div class="ttl">실행역량</div>
-                    <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                    <div class="ttl">
+                      실행역량
+                    </div>
+                    <star-rating
+                      increment="0.5"
+                      star-size="17"
+                      rounded-corners="true"
+                      border-width="3.0"
+                      border-color="#d8d8d8"
+                      active-border-color="#ffd055"
+                    />
                   </div>
                   <div class="star-grp">
-                    <div class="ttl">아이템 우수성</div>
-                    <star-rating increment="0.5" star-size="17" rounded-corners="true" border-width="3.0" border-color="#d8d8d8" active-border-color="#ffd055" />
+                    <div class="ttl">
+                      아이템 우수성
+                    </div>
+                    <star-rating
+                      increment="0.5"
+                      star-size="17"
+                      rounded-corners="true"
+                      border-width="3.0"
+                      border-color="#d8d8d8"
+                      active-border-color="#ffd055"
+                    />
                   </div>
                 </div>
                 <div class="review-write-inner-inp">
                   <div class="inp-grp">
                     <div class="input-ttl">
                       <span class="ttl">내용</span>
-                      <span class="check-text">({{'0'}} / 1000)</span>
+                      <span class="check-text">({{ '0' }} / 1000)</span>
                     </div>
                     <textarea
                       id="#"

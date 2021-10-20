@@ -373,88 +373,53 @@
                     </p>
                   </div>
                   <div class="etpr-panel-wrap flexable-inner">
-                    <div class="white-panel">
-                      <div class="common-info-container">
-                        <ul class="common-info-list-wrap">
-                          <!-- TODO: 정보가 없는 곳은 전부 - 로 표시 -->
-                          <li class="common-info-list">
-                            <h4 class="ttl">
-                              대표자
-                            </h4>
-                            <div class="dec">
-                              {{ '홍길동' }}
-                            </div>
-                          </li>
-                          <li class="common-info-list">
-                            <h4 class="ttl">
-                              사업자번호
-                            </h4>
-                            <div class="dec">
-                              {{ '000-00-00***' }}
-                            </div>
-                          </li>
-                          <li class="common-info-list">
-                            <h4 class="ttl">
-                              본사주소
-                            </h4>
-                            <div class="dec">
-                              {{ '서울특별시 강남구 테헤란로 312 13층 주소길어지면 최대 2줄 (우편번호)' }}
-                            </div>
-                          </li>
-                          <li class="common-info-list">
-                            <h4 class="ttl">
-                              전화번호
-                            </h4>
-                            <div class="dec">
-                              {{ '02-1234-5678' }}
-                            </div>
-                          </li>
-                          <li class="common-info-list">
-                            <h4 class="ttl">
-                              기업규모
-                            </h4>
-                            <div class="dec">
-                              {{ '소기업' }}
-                            </div>
-                          </li>
-                          <li class="common-info-list">
-                            <h4 class="ttl">
-                              산업분류
-                            </h4>
-                            <div class="dec">
-                              {{ 'ICT 서비스' }}
-                            </div>
-                          </li>
-                          <li class="common-info-list">
-                            <h4 class="ttl">
-                              산업분야
-                            </h4>
-                            <div class="dec">
-                              {{ '-' }}
-                            </div>
-                          </li>
-                          <li class="common-info-list">
-                            <h4 class="ttl">
-                              설립일
-                            </h4>
-                            <div class="dec">
-                              {{ '2021년 03월 10일' }}
-                            </div>
-                          </li>
-                          <li class="common-info-list tag-list">
-                            <h4 class="ttl">
-                              태그
-                            </h4>
-                            <div class="dec">
-                              <badge-rounded>태그최대여덟글자</badge-rounded>
-                              <badge-rounded>태그최대여덟글자</badge-rounded>
-                              <badge-rounded>태그최대여덟글자</badge-rounded>
-                              <badge-rounded>태그최대여덟글자</badge-rounded>
-                              <badge-rounded>태그최대여덟글자</badge-rounded>
-                            </div>
-                          </li>
-                        </ul>
+                    <!-- TODO: 최상위 요소에 is-blur 주면 blur 처리되고 해당 데이터 더미 처리(-) -->
+                    <div
+                      class="white-panel pd-0"
+                    >
+                      <!-- 필터처리된 데이터 가운데 뜨는 영역 -->
+                      <div class="cover-blur-container">
+                        <div class="cover-blur-inner">
+                          <img
+                            class="img"
+                            src="@/assets/images/icon/icon-noti.svg"
+                            alt="!"
+                          >
+                          <p class="text">
+                            최신 정보를 등록하지 않아<br>블라인드 처리 되었습니다.
+                          </p>
+                        </div>
                       </div>
+                      <!-- END 필터처리된 데이터 가운데 뜨는 영역 -->
+                      <div class="common-info-container blur-filter-container">
+                        <!-- blur 처리용 더미 데이터 -->
+                        <p
+                          v-if="noUpdate"
+                          class="common-info-graph"
+                        >
+                          <rader-chart
+                            :data="{'가능성': 0, '시장성': 0, '아이템 우수성': 0, '실행역량': 0, '팀역량': 0}"
+                          />
+                        </p>
+                        <!-- 일반 데이터 -->
+                        <p
+                          v-else
+                          class="common-info-graph"
+                        >
+                          <!-- [D] 별점 없을 때 -->
+                          <rader-chart
+                            :data="null"
+                          />
+
+                          <!-- [D] 별점 있을 때 -->
+                          <rader-chart
+                            :data="{'가능성': 5, '시장성': 3, '아이템 우수성': 1, '실행역량': 0, '팀역량': 5}"
+                          />
+                        </p>
+                      </div>
+                    </div>
+                    <div class="bot-txt">
+                      투자자가 작성한 리뷰 기반의 평균 지수입니다.
                     </div>
                   </div>
                 </div>
