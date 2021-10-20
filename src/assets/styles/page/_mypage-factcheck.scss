@@ -334,4 +334,267 @@
   }
 }
 
+/* ========== 마이페이지 > 팩트체크 (관수 작업 영역) ========== */
+// 공통
+.point-grp {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .label {
+    margin-right: 10px;
+    font-size: rem(12);
+    font-weight: 400;
+    color: #5C5E70;
+  }
+
+  .point {
+    margin-right: 6px;
+    font-size: rem(18);
+    font-weight: 600;
+    color: #171820;
+  }
+}
+
+// 마이페이지 > 요청한 팩트체크 > 팩트체크 상세 > 수정하기
+
+.ftck-edit-container {
+  
+  .big-ttl {
+    font-size: rem(18);
+    font-weight: 500;
+    color: #171820;
+    margin-bottom: 20px;
+  }
+}
+
+.ftck-edit-wrap {
+  background-color: #fff;
+}
+
+.ftck-edit-wrap {
+
+  &.ftck-all-request-wrap {
+    padding: 0 40px 40px 40px;
+  }
+
+  .req-hgrp {
+    margin-bottom: 20px;
+  }
+
+  .ttl {
+    font-size: rem(16);
+    font-weight: 600;
+    color: #171820;
+  }
+
+  .avatar-wrap {
+    padding: 40px 0 30px;
+    border-bottom: 1px solid #DDDEE6;
+  }
+
+  .req-select-grp {
+    padding-top: 30px;
+
+    .select-all-grp {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20px;
+
+      .select-grp {
+        width: 155px;
+      }
+    }
+  }
+
+  .req-cont-grp {
+    padding-top: 30px;
+
+    .editor-inp-grp {
+      border: 3px solid #171820;
+      margin-bottom: 20px;
+
+      .editor-inp {
+        padding: 26px 15px;
+        font-size: rem(16);
+        font-weight: 400;
+        color: #171820;
+      }
+    }
+
+    .editor-cont-grp {
+      height: 505px;
+    }
+  }
+}
+
+// 팩트체크 내용 작성(투자자만 해당)
+
+// 좌측 플로팅 메뉴
+.left-floating-menu-wrap {
+  padding-top: 40px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 175px;
+  background-color: #fff;
+
+  .floating-hgrp {
+    margin-bottom: 23px;
+  }
+
+  .selected-cats-ttl {
+    font-size: rem(16);
+    font-weight: 600;
+    color: #171820;
+
+    .selected-cats-connt {
+      color: #00CE6A;
+      padding-left: 5px;
+    }    
+  }
+
+  .point-grp {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 25px;
+
+    .inner-flex {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  .tab-list-grp {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+
+    .btn-tab {
+      width: 100%;
+      text-align: left;
+      padding: 12px 20px;
+      box-shadow: 0 0 0 1px #DDDEE6;
+
+      &.is-active {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.793' height='14.176' viewBox='0 0 17.793 14.176'%3E%3Cpath id='icon-check-gr' d='M5.115,11.5l5.437,4.956,9.563-10' transform='translate(-3.767 -5.076)' fill='none' stroke='%2353ff81' stroke-width='4'/%3E%3C/svg%3E%0A");
+        background-position: right 20px center;
+        background-repeat: no-repeat;
+        background-size: auto;
+        box-shadow: 0 0 0 1px #171820;
+      }
+    }
+  }
+}
+// END 좌측 플로팅 메뉴
+
+
+.mypage-etpr-profile-request-ftck-page {
+  background-color: #F9F9FB;
+
+  .ftck-caution-box {
+    margin-bottom: 10px;
+  }
+
+  .ftck-request-wrap {
+    padding: 40px 40px 50px 40px;
+  }
+
+  .avatar-wrap {
+    padding: 25px 0 20px;
+  }
+
+  .req-info-cont-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .etpr-profile-request-ftck-cont-wrap {
+    flex-grow: 1;
+  }
+
+  .req-info-grp {
+    padding: 40px 0 60px;
+    border-bottom: 1px solid #DDDEE6;
+    // border: 1px solid #000;
+  }
+
+  .req-cont-grp {
+    padding-top: 60px;
+  }
+
+  .req-cats-point-grp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+
+  .req-cats-grp {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+
+    .label {
+      font-size: rem(12);
+      font-weight: 400;
+      color: #5C5E70;
+    }
+
+    .info {
+      font-size: rem(18);
+      font-weight: 500;
+      color: #171820;
+    }
+
+    .icon-trash {
+      margin-right: 5px;
+    }
+  }
+
+  .btn-all-grp {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 50px;
+
+    .ment-grp {
+
+      .icon {
+        margin-right: 10px;
+      }
+     
+      .ment {
+        font-size: rem(14);
+        font-weight: 400;
+        color: #5C5E70;
+      }
+    }
+
+    .btn-md {
+      padding: 17.5px 15px;
+      font-size: rem(18);
+      font-weight: 500;
+      min-width: 245px;
+
+      .check-icon {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+/* ========== END 마이페이지 > 팩트체크 (관수 작업 영역) ========== */
+
 /* ========== END 마이페이지 > 팩트체크 ========== */
