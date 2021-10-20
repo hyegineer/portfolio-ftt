@@ -1,7 +1,6 @@
 <template>
   <!-- [D] 마이페이지 - 기업정보-기본정보 -->
   <div class="mypage-container mypage-rfixed-container">
-      
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>
@@ -36,6 +35,8 @@
             기업 프로필의 기본정보입니다.
           </p>
         </div>
+
+        <layout-right-fixed />
 
         <article class="guide-box">
           <div class="guide-box-cont">
@@ -105,7 +106,6 @@
         </div>
         
         <!-- 업데이트 내역 -->
-        <layout-right-fixed />
         <!-- // 업데이트 내역 -->
 
         <div class="article-wrap">

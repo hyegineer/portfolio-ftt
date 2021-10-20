@@ -72,7 +72,7 @@
               <btn-solid
                 class="btn-lg btn-full"
               >
-                작성완료
+                수정완료
               </btn-solid>
             </div>
           </div>

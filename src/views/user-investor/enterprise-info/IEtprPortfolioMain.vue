@@ -1,7 +1,6 @@
 <template>
   <!-- [D] 마이페이지 - 기업정보-포트폴리오 메인 -->
   <div class="mypage-container mypage-rfixed-container">
-      
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>
@@ -34,6 +33,8 @@
           </p>
         </div>
 
+        <layout-right-fixed />
+
         <article class="guide-box">
           <div class="guide-box-cont">
             <h6 class="lbel">
@@ -55,7 +56,6 @@
         </article>
         
         <!-- 업데이트 내역 -->
-        <layout-right-fixed />
         <!-- // 업데이트 내역 -->
 
         <div class="board-list-grp-ttl">

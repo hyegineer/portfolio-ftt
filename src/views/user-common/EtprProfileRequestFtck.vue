@@ -2317,8 +2317,8 @@ export default {
   name: 'EtprProfileRequestFtck',
   data() {
     return {
-      tabActive: 1, // 1~4
-      noUpdate: true,
+      tabActive: 1, // 1~12
+      noUpdate: true, // 3개월 동안 업데이트 없으면 blur 처리
     };
   },
   created() {
