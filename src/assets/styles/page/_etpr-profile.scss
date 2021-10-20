@@ -310,10 +310,20 @@
     display: none;
     padding: 30px 0 10px;
   }
+
   &.editing {
     .review-write-container {
       display: block;
     }
+  }
+
+  .btn-txt .txt {
+    font-weight: 500;
+    -webkit-text-stroke: 0.4px #171820;
+  }
+
+  .btn-warning-txt .txt {
+    -webkit-text-stroke: 0.4px #FF5175;
   }
 }
 
@@ -416,6 +426,7 @@
       font-size: rem(14);
       font-weight: 400;
       color: #5C5E70;
+      -webkit-text-stroke: 0.2px #5C5E70;
     }
   }
 
@@ -443,6 +454,7 @@
     font-size: rem(13);
     font-weight: 400;
     color: #171820;
+    -webkit-text-stroke: 0.2px #171820;
   }
 
   .check-text {
