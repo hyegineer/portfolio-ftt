@@ -3,7 +3,6 @@
     <layout-header id="header" />
 
     <div class="page-container">
-
       <div class="wide-panel">
         <breadcrumb>
           <li class="txt">

@@ -1,5 +1,7 @@
 <template>
   <div class="mypage-etpr-profile-request-ftck-page">
+    <layout-header id="header" />
+
     <div class="mypage-container">
       <!-- 마이페이지 페이지 제목 -->
       <div class="mypage-hgrp">
