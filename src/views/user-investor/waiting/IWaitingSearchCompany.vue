@@ -173,7 +173,7 @@
 
 <script>
 export default {
-  name: 'IWatingSearchCompany',
+  name: 'IWaitingSearchCompany',
   methods: {
     clickNext() {
       switch(this.$route.query.userType) {

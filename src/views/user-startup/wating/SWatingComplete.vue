@@ -93,7 +93,7 @@
 
 <script>
 export default {
-  name: 'SWatingComplete',
+  name: 'SWaitingComplete',
   data() {
     return {
       testApplyType: 'old', // new: 스타트업 신규등록, old: 기존 스타트업 신청 

@@ -212,7 +212,7 @@
 
 <script>
 export default {
-  name: 'SWatingCreate',
+  name: 'SWaitingCreate',
 };
 </script>
 

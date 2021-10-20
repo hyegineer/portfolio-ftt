@@ -212,7 +212,7 @@
 
 <script>
 export default {
-  name: 'IWatingCreate',
+  name: 'IWaitingCreate',
 };
 </script>
 

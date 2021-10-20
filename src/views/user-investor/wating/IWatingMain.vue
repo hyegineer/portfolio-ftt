@@ -1,7 +1,7 @@
 <template>
   <!-- [D] 마이페이지 - 신청대기중, 마이페이지 - 신청거절/그룹강퇴 -->
   <div
-    mypage="wating-page"
+    mypage="waiting-page"
     class="mypage-container"
   >
     <div class="narrow-panel">
@@ -51,13 +51,13 @@
         <div class="btn-wrap">
           <btn-bd-dark
             class="btn btn-md btn-full"
-            @click="$router.push('wating-create')"
+            @click="$router.push('waiting-create')"
           >
             신규 투자자 생성하기
           </btn-bd-dark>
           <btn-bd-dark
             class="btn btn-md btn-full"
-            @click="$router.push('wating-search-company')"
+            @click="$router.push('waiting-search-company')"
           >
             기존 투자자 신청하기
           </btn-bd-dark>
@@ -70,7 +70,7 @@
 
 <script>
 export default {
-  name: 'IWatingMain',
+  name: 'IWaitingMain',
 };
 </script>
 
