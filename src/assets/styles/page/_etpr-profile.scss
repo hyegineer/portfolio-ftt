@@ -397,8 +397,9 @@
   .review-write-container  {
     display: none;
     padding: 30px 0 10px;
-
-    &.is-active {
+  }
+  &.editing {
+    .review-write-container {
       display: block;
     }
   }

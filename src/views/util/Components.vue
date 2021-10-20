@@ -2678,7 +2678,7 @@
                 {{ '2021.00.00  00:00' }}
               </div>
             </div>
-            <!-- TODO: 리뷰카드 안에서는 is-active가 되어야 보임 -->
+              <!-- TODO: 리뷰카드 안에서는 editing의 안쪽일 때만 되어야 보임 -->
             <div class="review-write-container">
               <div class="write-ttl">종합 점수</div>
               <div class="review-write-inner-star">
@@ -2845,7 +2845,7 @@
                 {{ '2021.00.00  00:00' }}
               </div>
             </div>
-            <!-- TODO: 리뷰카드 안에서는 is-active가 되어야 보임 -->
+              <!-- TODO: 리뷰카드 안에서는 editing의 안쪽일 때만 되어야 보임 -->
             <div class="review-write-container">
               <div class="write-ttl">종합 점수</div>
               <div class="review-write-inner-star">
@@ -3013,8 +3013,8 @@
                 {{ '2021.00.00  00:00' }}
               </div>
             </div>
-            <!-- TODO: 리뷰카드 안에서는 is-active가 되어야 보임 -->
-            <div class="review-write-container is-active">
+              <!-- TODO: 리뷰카드 안에서는 editing의 안쪽일 때만 되어야 보임 -->
+            <div class="review-write-container">
               <div class="write-ttl">종합 점수</div>
               <div class="review-write-inner-star">
                 <div class="star-grp">
