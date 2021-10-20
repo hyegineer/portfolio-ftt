@@ -18,8 +18,8 @@
             <li class="mypage-snav-list">
               <router-link
                 class="mypage-snav-btn"
-                to="/fact-checker/mypage/wating-main"
-                :class="{'router-link-active': $route.path.startsWith(`/fact-checker/mypage/wating-`)}"
+                to="/fact-checker/mypage/waiting-main"
+                :class="{'router-link-active': $route.path.startsWith(`/fact-checker/mypage/waiting-`)}"
               >
                 <span class="txt">내 정보</span>
                 <i class="arrow" />

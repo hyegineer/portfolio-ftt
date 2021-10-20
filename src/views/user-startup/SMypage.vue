@@ -18,8 +18,8 @@
             <li class="mypage-snav-list">
               <router-link
                 class="mypage-snav-btn"
-                to="/startup/mypage/wating-main"
-                :class="{'router-link-active': $route.path.startsWith(`/startup/mypage/wating-`)}"
+                to="/startup/mypage/waiting-main"
+                :class="{'router-link-active': $route.path.startsWith(`/startup/mypage/waiting-`)}"
               >
                 <span class="txt">내 정보</span>
                 <i class="arrow" />

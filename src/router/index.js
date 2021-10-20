@@ -309,30 +309,30 @@ const routes = [
           // ===================== 기업정보 미확정 =====================
           // 신청대기중, 마이페이지 - 신청거절/그룹강퇴
           {
-            path: 'wating-main',
-            name: 'SWatingMain',
-            component: () => import('~@/views/user-startup/wating/SWatingMain'),
+            path: 'waiting-main',
+            name: 'SWaitingMain',
+            component: () => import('~@/views/user-startup/waiting/SWaitingMain'),
             // meta: { requiresAuth: true },
           },
           // 신규업체등록
           {
-            path: 'wating-create',
-            name: 'SWatingCreate',
-            component: () => import('~@/views/user-startup/wating/SWatingCreate'),
+            path: 'waiting-create',
+            name: 'SWaitingCreate',
+            component: () => import('~@/views/user-startup/waiting/SWaitingCreate'),
             // meta: { requiresAuth: true },
           },
           // 기존업체등록
           {
-            path: 'wating-search-company',
-            name: 'SWatingSearchCompany',
-            component: () => import('~@/views/user-startup/wating/SWatingSearchCompany'),
+            path: 'waiting-search-company',
+            name: 'SWaitingSearchCompany',
+            component: () => import('~@/views/user-startup/waiting/SWaitingSearchCompany'),
             // meta: { requiresAuth: true },
           },
           // 신규/기존업체 등록완료
           {
-            path: 'wating-complete',
-            name: 'SWatingComplete',
-            component: () => import('~@/views/user-startup/wating/SWatingComplete'),
+            path: 'waiting-complete',
+            name: 'SWaitingComplete',
+            component: () => import('~@/views/user-startup/waiting/SWaitingComplete'),
             // meta: { requiresAuth: true },
           },
           // ===================== 대시보드 =====================
@@ -523,30 +523,30 @@ const routes = [
           // ===================== 기업정보 미확정 =====================
           // 신청대기중, 마이페이지 - 신청거절/그룹강퇴
           {
-            path: 'wating-main',
-            name: 'IWatingMain',
-            component: () => import('~@/views/user-investor/wating/IWatingMain'),
+            path: 'waiting-main',
+            name: 'IWaitingMain',
+            component: () => import('~@/views/user-investor/waiting/IWaitingMain'),
             // meta: { requiresAuth: true },
           },
           // 신규업체등록
           {
-            path: 'wating-create',
-            name: 'IWatingCreate',
-            component: () => import('~@/views/user-investor/wating/IWatingCreate'),
+            path: 'waiting-create',
+            name: 'IWaitingCreate',
+            component: () => import('~@/views/user-investor/waiting/IWaitingCreate'),
             // meta: { requiresAuth: true },
           },
           // 기존업체등록
           {
-            path: 'wating-search-company',
-            name: 'IWatingSearchCompany',
-            component: () => import('~@/views/user-investor/wating/IWatingSearchCompany'),
+            path: 'waiting-search-company',
+            name: 'IWaitingSearchCompany',
+            component: () => import('~@/views/user-investor/waiting/IWaitingSearchCompany'),
             // meta: { requiresAuth: true },
           },
           // 신규/기존업체 등록완료
           {
-            path: 'wating-complete',
-            name: 'IWatingComplete',
-            component: () => import('~@/views/user-investor/wating/IWatingComplete'),
+            path: 'waiting-complete',
+            name: 'IWaitingComplete',
+            component: () => import('~@/views/user-investor/waiting/IWaitingComplete'),
             // meta: { requiresAuth: true },
           },
           // ===================== 대시보드 =====================
