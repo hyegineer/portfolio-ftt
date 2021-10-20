@@ -982,13 +982,13 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
                           <li class="table-hlist flex-basis-20 txt-left">
                             <span class="table-txt">항목</span>
                           </li>
-                          <li class="table-hlist flex-basis-25 txt-right">
+                          <li class="table-hlist flex-basis-26 txt-right">
                             <span class="table-txt">2019</span>
                           </li>
-                          <li class="table-hlist flex-basis-25 txt-right">
+                          <li class="table-hlist flex-basis-26 txt-right">
                             <span class="table-txt">2020</span>
                           </li>
-                          <li class="table-hlist flex-basis-25 txt-right">
+                          <li class="table-hlist flex-basis-26 txt-right">
                             <span class="table-txt">2021</span>
                           </li>
                         </ul>
@@ -3295,7 +3295,7 @@ export default {
         type: null, // 모바일일 때는 툴팁 팝업으로 할 때 타입 데이터
         visible: false, // 모바일일 때는 툴팁 팝업으로 할 때 보이게하는 속성
       },
-      noUpdate: true, // 3개월 동안 업데이트 없으면 blur 처리
+      noUpdate: false, // 3개월 동안 업데이트 없으면 blur 처리
     };
   },
   methods: {
