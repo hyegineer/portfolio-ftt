@@ -4,7 +4,6 @@
     class="mypage-container mypage-rfixed-container"
   >
     <!-- 업데이트 내역 -->
-    <layout-right-fixed />
     <!-- // 업데이트 내역 -->
 
     <!-- 마이페이지 페이지 제목 -->
@@ -41,6 +40,8 @@
             팩트체크에 필요한 서류를 관리합니다.
           </p>
         </div>
+
+        <layout-right-fixed />
 
         <form class="mypage-etpr-document-manage-form">
           <fieldset class="ffieldset">

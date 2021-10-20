@@ -2,7 +2,6 @@
   <!-- [D] 마이페이지 - 기업정보-상세정보 수정 -->
   <div class="mypage-container mypage-rfixed-container">
     <!-- 업데이트 내역 -->
-    <layout-right-fixed />
     <!-- // 업데이트 내역 -->
       
     <!-- 마이페이지 페이지 제목 -->
@@ -39,6 +38,8 @@
             기업 프로필의 상세정보를 수정합니다.
           </p>
         </div>
+        
+        <layout-right-fixed />
 
         <article class="guide-box">
           <div class="guide-box-cont">

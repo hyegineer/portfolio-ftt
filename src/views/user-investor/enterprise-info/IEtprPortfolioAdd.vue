@@ -4,7 +4,6 @@
     mypage="etpr-portfolio-add-page"
     class="mypage-container mypage-rfixed-container"
   >
-
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>
@@ -40,6 +39,8 @@
           </p>
         </div>
 
+        <layout-right-fixed />
+
         <div class="pflio-hd-info-box">
           <strong class="ttl">추가할 기업</strong>
 
@@ -51,7 +52,6 @@
         </div>
 
         <!-- 업데이트 내역 -->
-        <layout-right-fixed />
         <!-- // 업데이트 내역 -->
 
         <form>
