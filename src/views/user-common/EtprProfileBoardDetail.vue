@@ -3,9 +3,6 @@
     <layout-header />
 
     <div class="page-container">
-      <!-- 업데이트 내역 -->
-      <layout-right-fixed />
-      <!-- // 업데이트 내역 -->
 
       <div class="wide-panel">
         <breadcrumb>
@@ -105,6 +102,9 @@
               </div>
             </div>
           </div>
+          <!-- 업데이트 내역 -->
+          <layout-right-fixed />
+          <!-- // 업데이트 내역 -->
 
           <div class="mgt-30 white-panel etpr-dt-txt">
             <div class="label">

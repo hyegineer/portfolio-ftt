@@ -1,9 +1,6 @@
 <template>
   <!-- [D] 마이페이지 - 기업정보-상세정보 -->
   <div class="mypage-container mypage-rfixed-container">
-    <!-- 업데이트 내역 -->
-    <layout-right-fixed />
-    <!-- // 업데이트 내역 -->
       
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
@@ -59,6 +56,10 @@
             </btn-bd-light>
           </div>
         </article>
+        
+        <!-- 업데이트 내역 -->
+        <layout-right-fixed />
+        <!-- // 업데이트 내역 -->
 
         <div class="article-wrap">
           <div class="cont-wrap">

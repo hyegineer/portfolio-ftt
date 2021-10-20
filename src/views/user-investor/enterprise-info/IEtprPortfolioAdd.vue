@@ -4,9 +4,6 @@
     mypage="etpr-portfolio-add-page"
     class="mypage-container mypage-rfixed-container"
   >
-    <!-- 업데이트 내역 -->
-    <layout-right-fixed />
-    <!-- // 업데이트 내역 -->
 
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
@@ -52,6 +49,10 @@
             <span class="fc-gray fz-13">02-000-0000</span>
           </div>
         </div>
+
+        <!-- 업데이트 내역 -->
+        <layout-right-fixed />
+        <!-- // 업데이트 내역 -->
 
         <form>
           <fieldset class="ffieldset">
@@ -287,4 +288,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.page .right-fixed {
+  margin-bottom: 30px;
+}
 </style>
