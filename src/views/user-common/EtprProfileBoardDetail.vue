@@ -169,16 +169,16 @@
             </div>
             
             <div class="mypboard-btns">
-              <!-- 삭제 버튼 -->
+              <!-- 수정 버튼 -->
               <button
                 type="button"
                 class="btn-txt"
                 @click="$router.push('note-create')"
               >
                 <i class="icon icon-reply" />
-                <span class="txt">답장하기</span>
+                <span class="txt">수정하기</span>
               </button>
-              <!-- // 삭제 버튼 -->
+              <!-- // 수정 버튼 -->
 
               <!-- 삭제 버튼 -->
               <button
