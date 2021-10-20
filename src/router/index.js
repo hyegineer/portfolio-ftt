@@ -277,6 +277,13 @@ const routes = [
     component: () => import('~@/views/user-common/EtprProfileBoardCreate'),
     meta: { requiresResetScrollHeight: true },
   },
+  // 게시판 수정
+  {
+    path: '/etpr-profile-board-edit',
+    name: 'EtprProfileBoardEdit',
+    component: () => import('~@/views/user-common/EtprProfileBoardEdit'),
+    meta: { requiresResetScrollHeight: true },
+  },
   // 팩트체크 요청
   {
     path: '/etpr-profile-request-ftck',

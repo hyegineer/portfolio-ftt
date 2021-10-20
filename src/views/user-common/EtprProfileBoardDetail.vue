@@ -3,7 +3,6 @@
     <layout-header />
 
     <div class="page-container">
-
       <div class="wide-panel">
         <breadcrumb>
           <li class="txt">
@@ -173,7 +172,7 @@
               <button
                 type="button"
                 class="btn-txt"
-                @click="$router.push('note-create')"
+                @click="$router.push('/etpr-profile-board-edit')"
               >
                 <i class="icon icon-reply" />
                 <span class="txt">수정하기</span>
