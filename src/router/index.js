@@ -57,7 +57,7 @@ const routes = [
   },
   // 스타트업 찾기
   {
-    path: '/search-startup',
+    path: '/search-startup/:id',
     name: 'SearchStartup',
     component: () => import('~@/views/SearchStartup'),
   },

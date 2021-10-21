@@ -301,7 +301,7 @@
               class="sidemenu-wrap"
             >
               <router-link
-                to="/search-startup"
+                to="/search-startup/1"
                 class="sidemenu-link"
               >
                 <span class="sidemenu-txt">스타트업 찾기</span>
@@ -351,7 +351,7 @@
               class="sidemenu-wrap"
             >
               <router-link
-                to="/search-startup"
+                to="/search-startup/1"
                 class="sidemenu-link"
               >
                 <span class="sidemenu-txt">스타트업 찾기</span>
@@ -501,7 +501,7 @@
               class="sidemenu-wrap"
             >
               <router-link
-                to="/search-startup"
+                to="/search-startup/1"
                 class="sidemenu-link"
               >
                 <span class="sidemenu-txt">스타트업 찾기</span>
@@ -641,7 +641,7 @@
               class="sidemenu-wrap"
             >
               <router-link
-                to="/search-startup"
+                to="/search-startup/1"
                 class="sidemenu-link"
               >
                 <span class="sidemenu-txt">스타트업 찾기</span>
