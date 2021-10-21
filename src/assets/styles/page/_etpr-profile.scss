@@ -292,6 +292,19 @@
   }
 }
 
+.review-conts {
+  .member-list-grp-ttl {
+    justify-content: space-between;
+
+    .info {
+      font-size: rem(14);
+      font-weight: 400;
+      color: #5C5E70;
+      -webkit-text-stroke: 0.2px #5C5E70;
+    }
+  }
+}
+
 .review-container {
   padding-bottom: 100px;
 
@@ -461,6 +474,7 @@
     font-size: rem(12);
     font-weight: 400;
     color: #5C5E70;
+    -webkit-text-stroke: 0.2px #5C5E70;
   }
 
   .inp-textarea {
@@ -503,17 +517,6 @@
     line-height: 1.66;
   }
 }
-
-// .cover-blur {
-//   .cover-blur-container {
-//     display: block;
-//   }
-
-//   .common-info-container {
-//     filter: blur(10px);
-//     user-select: none;
-//   }
-// }
 
 .is-blur {
   position: relative;
