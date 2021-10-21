@@ -99,7 +99,6 @@
         </div>
       </section>
       <!-- END section-visual -->
-
       <!-- section-join -->
       <section
         class="section-join"
@@ -170,6 +169,131 @@
         </div>
       </section>
       <!-- END section-join -->
+
+      <!-- section-swp-wrap (swiper-wrap) -->
+      <section class="section-swp-wrap">
+        <div class="wide-panel test" />
+        <div class="wide-panel">
+          <div class="ttl">
+            팩트시트가 주목하는 기업
+          </div>
+        </div>
+
+        <div class="swiper-wide-panel">
+          <div class="main-swiper-container-frame">
+            <div
+              v-swiper:infoSlide1="swiperOptions.opt01"
+              class="swiper-container main-swiper-container"
+            >
+              <div class="swiper-wrapper">
+                <div
+                  v-for="(item, index) in 10"
+                  :key="index"
+                  class="swiper-slide"
+                >
+                  <info-card />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination swiper-pagination-opt01" />
+        </div>
+      </section>
+      <!-- // serction-swp-wrap (swiper-wrap) -->
+
+      <!-- section-swp-wrap (swiper-wrap) -->
+      <section class="section-swp-wrap">
+        <div class="wide-panel test" />
+        <div class="wide-panel">
+          <div class="ttl">
+            팩트체크가 많이 되고 있는 기업
+          </div>
+        </div>
+
+        <div class="swiper-wide-panel">
+          <div class="main-swiper-container-frame">
+            <div
+              v-swiper:infoSlide2="swiperOptions.opt02"
+              class="swiper-container main-swiper-container"
+            >
+              <div class="swiper-wrapper">
+                <div
+                  v-for="(item, index) in 10"
+                  :key="index"
+                  class="swiper-slide"
+                >
+                  <info-card />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination swiper-pagination-opt02" />
+        </div>
+      </section>
+      <!-- // serction-swp-wrap (swiper-wrap) -->
+
+      <!-- section-swp-wrap (swiper-wrap) -->
+      <section class="section-swp-wrap">
+        <div class="wide-panel test" />
+        <div class="wide-panel">
+          <div class="ttl">
+            최근 팩트체크가 완료된 기업
+          </div>
+        </div>
+
+        <div class="swiper-wide-panel">
+          <div class="main-swiper-container-frame">
+            <div
+              v-swiper:infoSlide3="swiperOptions.opt03"
+              class="swiper-container main-swiper-container"
+            >
+              <div class="swiper-wrapper">
+                <div
+                  v-for="(item, index) in 10"
+                  :key="index"
+                  class="swiper-slide"
+                >
+                  <info-card />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination swiper-pagination-opt03" />
+        </div>
+      </section>
+      <!-- // serction-swp-wrap (swiper-wrap) -->
+
+      <!-- section-swp-wrap (swiper-wrap) -->
+      <section class="section-swp-wrap">
+        <div class="wide-panel test" />
+        <div class="wide-panel">
+          <div class="ttl">
+            투자가 많이 진행되고 있는 기업
+          </div>
+        </div>
+
+        <div class="swiper-wide-panel">
+          <div class="main-swiper-container-frame">
+            <div
+              v-swiper:infoSlide4="swiperOptions.opt04"
+              class="swiper-container main-swiper-container"
+            >
+              <div class="swiper-wrapper">
+                <div
+                  v-for="(item, index) in 10"
+                  :key="index"
+                  class="swiper-slide"
+                >
+                  <info-card />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination swiper-pagination-opt04" />
+        </div>
+      </section>
+      <!-- // serction-swp-wrap (swiper-wrap) -->
+
       <!-- section-video -->
       <section class="section-video">
         <div class="wide-panel">
@@ -361,30 +485,6 @@ export default {
         depth02: null,
         keyword: '',
       },
-      // swiperOptions: {
-      //   grabCursor: true,
-      //   loop: true,
-      //   slidesPerView: 'auto',
-      //   centeredSlides: true,
-      //   direction: 'vertical',
-      //   effect: 'coverflow',
-      //   coverflowEffect: {
-      //     rotate: 0,
-      //     stretch: 435,
-      //     depth: 180,
-      //     modifier: 1,
-      //     slideShadows: false,
-      //   },
-      //   navigation: {
-      //     nextEl: '.swiper-button-next',
-      //     prevEl: '.swiper-button-prev',
-      //   },
-      //   pagination: {
-      //     el: '.swiper-pagination',
-      //     type: 'bullets',
-      //     clickable: true,
-      //   },
-      // },
       recentOptions: {
         autoplay: true,
         loop: true,
@@ -396,7 +496,49 @@ export default {
         },
 
       },
+      swiperOptions: {
+        opt01: null, // 팩트시트가 주목하는 기업
+        opt02: null, // 팩트체크가 많이 되고 있는 기업
+        opt03: null, // 최근 팩트체크가 완료된 기업
+        opt04: null, // 투자가 많이 진행되고 있는 기업
+      },
     };
+  },
+  created() {
+    // Object.keys(this.swiperOptions);
+    // Object.keys(this.swiperOptions).forEach(x => {
+    //   this.swiperOptions[x] = this.slideOptions;
+    //   console.log(x);
+    //   this.swiperOptions[x].pagination.test = `.swiper-pagination-${x}`;
+    // });
+    //
+    Object.keys(this.swiperOptions).forEach(x => {
+      this.swiperOptions[x] = {
+        // grabCursor: true,
+        loop: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        direction: 'vertical',
+        effect: 'coverflow',
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 435,
+          depth: 180,
+          modifier: 1.014,
+          slideShadows: false,
+        },
+        pagination: {
+          el: `.swiper-pagination-${x}`,
+          type: 'bullets',
+        },
+      };
+      // console.log(x);
+      // this.swiperOptions[x].pagination.test = `.swiper-pagination-${x}`;
+    });
+    // for(const key in this.swiperOptions) {
+    //   this.swiperOptions[key] = this.slideOptions;
+    //   this.swiperOptions[key].pagination.el = `.swiper-pagination-${key}`;
+    // }
   },
   methods: {
     viewSearchbarToggle() {

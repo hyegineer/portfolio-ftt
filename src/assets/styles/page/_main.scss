@@ -16,8 +16,8 @@
 .section-visual {
   position: relative;
   width: 100%;
-  height: 490px;
-  padding: 68px 0 181.5px;
+  height: 460px;
+  padding: 100px 0 181.5px;
   @include bg-url('img', 'img-main-visual.png');
   background-size: cover;
   overflow: hidden;
@@ -78,7 +78,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transform: translateY(-73px);
+    transform: translateY(-80px);
   }
 
   .join-list {
@@ -137,6 +137,109 @@
   }
 }
 /* ========== END section-join ========== */
+
+.section-swp-wrap{
+  width: 100%;
+  margin-bottom: 85px;
+  position: relative;
+
+  .wide-panel.test{
+    @include translate($l: 50%);
+
+    border-left: 1px solid aqua;
+    border-right: 1px solid aqua;
+    width: 90%;
+    max-width: 1090px;
+    height: 500px;
+  }
+}
+
+
+// 12. 슬라이드 관련 스타일
+.swiper-wide-panel{
+  width: 90%;
+  // max-width: 1130px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+
+  .swiper-pagination{
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    left: auto;
+  }
+
+  .swiper-pagination-bullet{
+    margin: 10px 0;
+    display: block;
+    background: #DDDEE6;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active{
+    background: #00EB79;    
+  }
+}
+
+.main-swiper-container-frame {
+  width: 100%;
+  height: 484px;
+  overflow: hidden;
+  position: relative;
+  transform: scale(0.94);
+
+  .swiper-container {
+    position: absolute;
+    top: -956.3%;
+    top: -956.3%;
+    width: 100%;
+  }
+
+  .swiper-pagination-bullet{
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .swiper-pagination-bullet-active{
+    background-color: #00EB79;
+  }
+}
+
+.main-swiper-container {
+  .swiper-slide {
+    padding: 0 20px;
+    .info-card {
+      position: relative;
+      border: 1px solid #dddee6;
+      box-shadow: none;
+      cursor: pointer;
+      z-index: 10;
+
+      @include make-before {
+        @include absolute($t: -1px, $l: -1px);
+
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        background-color: white;
+        z-index: 10;
+        opacity: 0.4;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  .swiper-slide-active {
+    .info-card {
+      box-shadow: 0 10px 20px rgb(23 24 32 / 8%);
+      z-index: 20;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
 
 // .swiper-wrapper {
 //   height: 485px;
