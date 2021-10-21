@@ -2225,7 +2225,7 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
         </div>
         <!-- END 관련 소식 -->
         <!-- 투자자 리뷰 -->
-        <div class="etpr-main-conts">
+        <div class="etpr-main-conts review-conts">
           <h2 class="section-ttl section-ttl-verti">
             투자자 리뷰
             <div class="ttl-dec">
@@ -2261,6 +2261,9 @@ ex) 대표자의 학력이 A대학교로 알고있는데, 왜 B대학교로 기�
             <p class="txt">
               총 <span class="bold">0</span>개
             </p>
+            <div class="info">
+              멤버십 회원은 모든 리뷰를 볼 수 있습니다.
+            </div>
           </div>
           <div class="white-panel mgb-10">
             <div class="review-write-container">
