@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="133.243" height="105.5" viewBox="0 0 133.243 105.5">
+  <g id="icon-comp-point" transform="translate(-223.525 -304.922)">
+    <g id="그룹_6372" data-name="그룹 6372">
+      <line id="선_1046" data-name="선 1046" y2="22.732" transform="translate(290.146 305.422)" fill="none" stroke="#171820" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="선_1051" data-name="선 1051" y2="12.5" transform="translate(290.146 397.422)" fill="none" stroke="#171820" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <g id="그룹_6370" data-name="그룹 6370">
+        <line id="선_1047" data-name="선 1047" y1="10.841" x2="33.094" transform="translate(323.043 334.886)" fill="none" stroke="#171820" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="선_1048" data-name="선 1048" x2="19.364" y2="8.419" transform="translate(320.518 376.984)" fill="none" stroke="#171820" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="그룹_6371" data-name="그룹 6371">
+        <line id="선_1049" data-name="선 1049" x1="33.094" y1="10.841" transform="translate(224.156 334.886)" fill="none" stroke="#171820" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="선_1050" data-name="선 1050" x1="19.364" y2="8.419" transform="translate(240.411 376.984)" fill="none" stroke="#171820" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="그룹_6373" data-name="그룹 6373">
+      <path id="패스_6881" data-name="패스 6881" d="M301.1,343.41l-7.984-2.658-1.6,4.808c-4.866,2.889-9.206,8.4-11.545,15.427s-2.168,14.04,0,19.269l-1.6,4.808,7.983,2.657c8.425,2.8,18.556-4.842,22.629-17.078S309.524,346.214,301.1,343.41Z" fill="#53ff81" stroke="#171820" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <ellipse id="타원_377" data-name="타원 377" cx="23.351" cy="16.076" rx="23.351" ry="16.076" transform="translate(263.269 380.038) rotate(-71.589)" fill="#53ff81" stroke="#171820" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="패스_6880" data-name="패스 6880" d="M290.347,352.988l-6.944-2.312-7.894,23.716,4,1.332,2.81-8.44,2.942.979c4.277,1.424,7.784-.579,9.376-5.362S294.624,354.411,290.347,352.988Zm.286,8.58c-.635,1.907-2.028,2.653-3.826,2.054l-2.942-.979,1.994-5.992,2.944.981a2.75,2.75,0,0,1,1.922,1.7A3.53,3.53,0,0,1,290.633,361.568Z" fill="#171820" stroke="#171820" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

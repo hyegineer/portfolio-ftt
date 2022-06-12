@@ -1,0 +1,15 @@
+<svg id="dft-profile" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <rect id="사각형_2084" data-name="사각형 2084" width="100" height="100" rx="50" fill="#ebecf5"/>
+  <g id="user_2_" data-name="user (2)" transform="translate(19.671 30)">
+    <g id="그룹_5726" data-name="그룹 5726" transform="translate(11.328 19.929)">
+      <g id="그룹_5725" data-name="그룹 5725" transform="translate(0)">
+        <path id="패스_6646" data-name="패스 6646" d="M30.329,257.323a19.022,19.022,0,0,0-19,19,.826.826,0,0,0,.826.826H48.5a.826.826,0,0,0,.826-.826A19.022,19.022,0,0,0,30.329,257.323Z" transform="translate(-11.328 -257.323)" fill="#dddef0"/>
+      </g>
+    </g>
+    <g id="그룹_5728" data-name="그룹 5728" transform="translate(21.241 0)">
+      <g id="그룹_5727" data-name="그룹 5727" transform="translate(0 0)">
+        <circle id="타원_348" data-name="타원 348" cx="9.087" cy="9.087" r="9.087" fill="#dddef0"/>
+      </g>
+    </g>
+  </g>
+</svg>
