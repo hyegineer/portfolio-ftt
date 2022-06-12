@@ -1,6 +1,6 @@
 <template>
   <!-- [D] 마이페이지 - 팩트체크-팩트체커신청 -->
-  <div class="mypage-container">
+  <div ref="mypageContainer" class="mypage-container">
     <!-- 마이페이지 페이지 제목 -->
     <div class="mypage-hgrp">
       <breadcrumb>
@@ -93,6 +93,17 @@
 <script>
 export default {
   name: 'IFtckApplyMain',
+  created () {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed () {
+    // this.$refs.mypageContainer.removeEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    handleScroll () {
+      console.log('하이')
+    }
+  }
 };
 </script>
 

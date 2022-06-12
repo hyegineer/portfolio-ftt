@@ -449,6 +449,7 @@ const routes = [
             path: 'ftck-apply-main',
             name: 'SFtckApplyMain',
             component: () => import('~@/views/user-startup/factcheck/SFtckApplyMain'),
+            meta: { requiresResetScrollHeight: true }, // 최상단 가게
             // meta: { requiresAuth: true },
           },
           // 팩트체크-팩트체커신청-신청서작성
@@ -642,6 +643,7 @@ const routes = [
             path: 'ftck-apply-main',
             name: 'IFtckApplyMain',
             component: () => import('~@/views/user-investor/factcheck/IFtckApplyMain'),
+            meta: { requiresResetScrollHeight: true }, // 최상단 가게
             // meta: { requiresAuth: true },
           },
           // 팩트체크-팩트체커신청-신청서작성
